@@ -102,6 +102,8 @@ h4 {
 	border-radius: 3px;
 	background: #ddd;
 	color: #999;
+	text-transform: none;
+	letter-spacing: normal;
 }
 .admin {
 	background: #efefef;
@@ -1830,6 +1832,7 @@ span.cls:active {
 .m-width {
 	margin: auto;
 	max-width: 500px;
+	padding: 1rem;
 }
 .default {
 	background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;
@@ -2047,6 +2050,52 @@ span.cls:active {
 
 .closet-main {
 	height: 350px;
+}
+
+}
+
+/**** closet head mobile ****/
+@media screen and (max-width: 600px){
+
+#admin-toggle, .profile-social, hr {
+	display: none;
+}
+
+.profile-pic {
+	margin: 1.5rem 0;
+	position: static;
+}
+.profile-pic img {
+	margin: auto;
+	max-width: 85px;
+}
+.profile-details {
+	position: static;
+	text-align: center;
+}
+.profile-details span + span {
+	display: none;
+}
+.profile-actions {
+	margin-top: 2rem;
+	position: static;
+	text-align: center;
+}
+.img-cover {
+	height: 100%;
+}
+.closet-sub {
+	height: auto;
+	text-align: center;
+}
+.closet-sub p, .closet-sub nav {
+	float: none;
+	margin: 0;
+	padding: 0;
+	max-width: none;
+}
+.closet-sub nav {
+	margin-top: 1.5rem;
 }
 
 }
