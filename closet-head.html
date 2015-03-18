@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">Tradesy Product Page Comp</title>
+
+		<link href="stylesheets/closet.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header class="cf">
+			<div class="width no-pad">
+				<img src="https://assets.tradesy.com/css/images/tradesy2xwhite.png" />
+			</div>
+		</header>
+
+		<div class="closet-header">
+			<div class="width">
+				<div class="closet-main">
+					<span class="chg back">Change Background</span>
+					<span class="chg pf">Change Image</span>
+					<div class="profile-pic">
+						<img src="https://pbs.twimg.com/profile_images/473111708735524864/kb0NFxZk_400x400.jpeg" alt="" />
+					</div>
+					<div class="profile-details">
+						<h1>Tradesy&rsquo;s Secret Closet</h1>
+						<h2>
+							Penny Lane
+							<span>Santa Monica, CA</span>
+							<span><a href="">www.tradesy.com</a></span>
+						</h2>
+					</div>
+					<div class="profile-actions" id="profile-actions">
+						<button class="btn">Follow</button>
+						<button class="btn line">Message</button>
+					</div>
+					<div class="profile-actions hide" id="profile-actions-seller">
+						<button class="btn" id="toggle-chg">Change Profile Images</button>
+						<button class="btn">Edit Profile</button>
+					</div>
+					<div class="profile-social">
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="closet-sub">
+				<div class="width">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem facilis natus, nemo in, mollitia et, fuga impedit <a href="">&hellip;more</a>
+					</p>
+					<nav>
+						<a href="">
+							200
+							<small>items</small>
+						</a>
+						<a href="">
+							55
+							<small>items</small>
+						</a>
+						<a href="">
+							25
+							<small>followers</small>
+						</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<div class="width">
+			<button class="btn toggle" id="admin-toggle">
+				Show Seller
+			</button>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+		$(function(){
+			$('#admin-toggle').on('click', function() {
+			    if($(this).hasClass('admin')) {
+			      $(this).removeClass('admin').text('Show Seller');
+			      $('#profile-actions').removeClass('hide');
+			      $('#profile-actions-seller').addClass('hide');
+			    }else{
+			      $(this).addClass('admin').text('Show Buyer');
+			      $('#profile-actions').addClass('hide');
+			      $('#profile-actions-seller').removeClass('hide');
+			    }
+			  });
+
+			$('#toggle-chg').on('click', function() {
+			    if($(this).text()=='Close'){
+			      $(this).text('Change Profile Images');
+			      $('.chg').removeClass('s');
+			      // $('#editProfile').addClass('hide');
+			      $('.closet-wrapper').removeClass('out');
+			      // $('body').removeClass('out');
+			    }else{
+			      $(this).text('Close');
+			      setTimeout(function(){
+			        $('.chg').addClass('s');
+			        $('.closet-wrapper').addClass('out');
+			      }, 125);
+			      // $('#editProfile').removeClass('hide');
+			      // $('body').addClass('out');
+			      // $('html,body').animate({
+			      //   scrollTop: $('#editProfile').offset().top - 100
+			      // }, 500);
+			    }
+			    return false;
+			  });
+
+		})
+		</script>
+
+	</body>
+</html>

@@ -211,4 +211,16 @@ $(function(){
     }
   });
 
+  $('#admin-toggle').on('click', function() {
+    if($(this).hasClass('admin')) {
+      $(this).removeClass('admin');
+      $('#profile-actions').removeClass('hide');
+      $('#profile-actions-seller').addClass('admin');
+    }else{
+      $(this).addClass('admin');
+      $('#profile-actions').addClass('hide');
+      $('#profile-actions-seller').removeClass('admin');
+    }
+  });
+
 });
