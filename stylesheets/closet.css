@@ -2047,7 +2047,12 @@ span.cls:active {
 	margin-bottom: 1.5rem;
 }
 .modal-wrap .chg {
+	box-shadow: none;
 	display: inline-block;
+}
+.modal-wrap .chg:active {
+	background: #ccc;
+	color: #999;
 }
 
 .m-only {
