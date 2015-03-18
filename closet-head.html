@@ -16,7 +16,7 @@
 			</div>
 		</header>
 
-		<div class="closet-header">
+		<div class="closet-header" id="closet-header">
 			<div class="width">
 				<div class="closet-main">
 					<span class="chg back">Change Background</span>
@@ -47,23 +47,28 @@
 					</div>
 				</div>
 			</div>
+			<div class="img-cover"></div>
 			<div class="closet-sub">
 				<div class="width">
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem facilis natus, nemo in, mollitia et, fuga impedit <a href="">&hellip;more</a>
 					</p>
 					<nav>
-						<a href="">
+						<a href="#">
 							200
 							<small>items</small>
 						</a>
-						<a href="">
+						<a href="##">
 							55
 							<small>items</small>
 						</a>
-						<a href="">
+						<a href="###">
 							25
 							<small>followers</small>
+						</a>
+						<a href="###">
+							25
+							<small>wants</small>
 						</a>
 					</nav>
 				</div>
@@ -76,6 +81,10 @@
 			<button class="btn toggle" id="admin-toggle">
 				Show Seller
 			</button>
+			<button class="btn toggle" id="hero-toggle">
+				Toggle hero image
+			</button>
+			<p>Note: user image includes a .img-cover div that adds a layer of transparency on top of it to help with readbility. This is not shown for default images.</p>
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -91,6 +100,11 @@
 			      $('#profile-actions').addClass('hide');
 			      $('#profile-actions-seller').removeClass('hide');
 			    }
+			  });
+
+			$('#hero-toggle').on('click', function() {
+				$(this).toggleClass('admin');
+			    $('#closet-header').toggleClass('default');
 			  });
 
 			$('#toggle-chg').on('click', function() {

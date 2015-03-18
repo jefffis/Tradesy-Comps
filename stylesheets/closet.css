@@ -1780,7 +1780,30 @@ span.cls:active {
 .closet-header {
 	/*margin: auto;
 	max-width: 1500px*/
+	/*background: url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;*/
+	background: url(https://assets.bezar.com/store/lookbook_images/attachments/000/000/084/full/1.jpg) no-repeat;
+	background-size: cover;
+	margin: auto;
+	max-width: 1500px;
+	position: relative;
+	border-bottom: 1px solid #ddd;
+}
+.default {
 	background: url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;
+}
+.img-cover {
+	margin: auto;
+	max-width: 1500px;
+	position: absolute;
+	background: rgba(97,30,27,0.35);
+	height: 400px;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.default .img-cover {
+	display: none;
 }
 .closet-main {
 	/*background: url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;*/
@@ -1860,7 +1883,7 @@ span.cls:active {
 
 .closet-sub {
 	background: white;
-	border-bottom: 1px solid #ddd;
+	/*border-bottom: 1px solid #ddd;*/
 	height: 100px;
 	position: relative;
 	z-index: 1;
@@ -1869,24 +1892,28 @@ span.cls:active {
 	position: relative;
 }
 .closet-sub p {
+	font-size: .85rem;
 	font-family: 'calluna-regular',serif;
 	color: #111;
 	position: absolute;
-	max-width: 30rem;
+	max-width: 25rem;
 	left: 160px;
-	top: .5rem;
+	top: .75rem;
+}
+.closet-sub p a {
+	color: #999;
 }
 .closet-sub nav {
 	position: absolute;
 	right: 0;
-	top: 1.65rem;
+	top: 1.75rem;
 }
 .closet-sub nav a {
 	color: #ddd;
 	display: inline-block;
-	font-size: 2rem;
+	font-size: 1.75rem;
 	line-height: 1;
-	padding: 0 2rem;
+	padding: 0 1.5rem 0 0;
 	text-decoration: none;
 }
 .closet-sub nav a:hover {
@@ -1895,12 +1922,24 @@ span.cls:active {
 .closet-sub nav a:active {
 	opacity: .65;
 }
-/*.closet-sub nav a + a {
-	margin-left: 3rem;
-}*/
+.closet-sub nav a + a {
+	padding: 0 1.5rem;
+}
+.closet-sub nav a:last-child {
+	padding-right: 0;
+}
 .closet-sub nav small {
 	display: block;
-	font-size: .85rem;
+	font-size: .8rem;
+}
+
+@media screen and (min-width: 1502px){
+
+.closet-header {
+	border: 1px solid #ddd;
+	border-top: 0;
+}
+
 }
 
 @media screen and (min-width: 75rem){
