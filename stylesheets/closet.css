@@ -85,6 +85,7 @@ h4 {
 .admin .btn {
 	background: #111;
 	border-radius: 3px;
+	/*box-shadow: 0 0 0 2px rgba(255,255,255,0.5);*/
 	font-size: .85rem;
 	letter-spacing: normal;
 	padding: .7rem .85rem;
@@ -100,7 +101,7 @@ h4 {
 .toggle {
 	box-shadow: 0 0 0 1px currentColor;
 	border-radius: 3px;
-	background: #ddd;
+	background: none;
 	color: #999;
 	text-transform: none;
 	letter-spacing: normal;
@@ -251,6 +252,7 @@ header img {
 	color: #111;
 	cursor: pointer;
 	border-radius: 3px;
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
 	/*box-shadow: 0 0 0 1px rgba(0,0,0,0), 0 0 0 2px white;*/
 	display: none;
 	font-size: .85rem;
@@ -281,7 +283,13 @@ header img {
 .chg:hover {
 	/*box-shadow: 0 0 0 1px rgba(0,0,0,0.25) inset;*/
 }
-.chg:active, .fb:active {
+/*.chg:active, .fb:active {
+	opacity: .5;
+}*/
+.chg:active {
+	background: #040407
+}
+.chg:active img {
 	opacity: .5;
 }
 .seller-actions .bk {
@@ -312,7 +320,7 @@ header img {
 .closet-header .pf {
 	top: auto;
 	bottom: -80px;
-	left: 52px;
+	left: 43px;
 	z-index: 3;
 	padding: .35rem .5rem;
 }
@@ -1956,7 +1964,7 @@ span.cls:active {
 	position: relative;
 }
 .closet-sub p {
-	font-size: .85rem;
+	/*font-size: .85rem;*/
 	font-family: 'calluna-regular',serif;
 	color: #111;
 	float: left;
@@ -1965,6 +1973,8 @@ span.cls:active {
 	max-width: 35rem;
 	/*left: 170px;
 	top: .75rem;*/
+	position: relative;
+	top: -.25rem;
 }
 .closet-sub p a {
 	color: #999;
@@ -2037,6 +2047,10 @@ span.cls:active {
 	display: inline-block;
 }
 
+.m-only {
+	display: none;
+}
+
 @media screen and (min-width: 1502px){
 
 .closet-header {
@@ -2050,6 +2064,49 @@ span.cls:active {
 
 .closet-main {
 	height: 350px;
+}
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px){
+
+.profile-pic {
+	bottom: 2rem;
+}
+.closet-header .pf {
+	bottom: 20px;
+	left: 30px;
+}
+.profile-pic img {
+	max-width: 100px;
+}
+.profile-details {
+	bottom: 3rem;
+	left: 120px;
+}
+.profile-actions {
+	right: auto;
+	left: 122px;
+}
+.closet-sub p {
+	max-width: 25rem;
+	padding-left: 0;
+}
+/*.closet-sub nav a {
+	padding-right: 1rem;
+}
+.closet-sub nav a + a {
+	padding: 0 1rem;
+}*/
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 700px){
+
+.closet-sub p {
+	max-width: 20rem;
+	position: relative;
+	top: -.75rem;
 }
 
 }
