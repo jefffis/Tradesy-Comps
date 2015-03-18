@@ -1804,8 +1804,9 @@ span.cls:active {
 .closet-header {
 	/*margin: auto;
 	max-width: 1500px*/
-	/*background: url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;*/
-	background: url(https://assets.bezar.com/store/lookbook_images/attachments/000/000/084/full/1.jpg) no-repeat;
+	/*background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;*/
+	/*background: #111 url(https://assets.bezar.com/store/lookbook_images/attachments/000/000/084/full/1.jpg) no-repeat;*/
+	background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/0v28362V3C0p0V0J222p/new-photo.jpg) no-repeat center center;
 	background-size: cover;
 	margin: auto;
 	max-width: 1500px;
@@ -1813,18 +1814,21 @@ span.cls:active {
 	border-bottom: 1px solid #ddd;
 }
 .default {
-	background: url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;
+	background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;
 }
 .img-cover {
 	margin: auto;
 	max-width: 1500px;
 	position: absolute;
-	background: rgba(97,30,27,0.35);
+	/*background: rgba(97,30,27,0.35);*/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(97,30,27,0.25)), color-stop(100%,rgba(54,14,12,0.5)));
 	height: 400px;
 	z-index: 1;
 	top: 0;
 	left: 0;
 	width: 100%;
+
+	/*-webkit-filter: blur(50px);*/
 }
 .default .img-cover {
 	display: none;
@@ -1955,7 +1959,7 @@ span.cls:active {
 	padding: 0 1.5rem 0 0;
 	text-decoration: none;
 }
-.closet-sub nav a:hover {
+.closet-sub nav a:hover, .closet-sub .active {
 	color: #111;
 }
 .closet-sub nav a:active {
@@ -1977,6 +1981,14 @@ span.cls:active {
 .closet-header {
 	border: 1px solid #ddd;
 	border-top: 0;
+}
+
+}
+
+@media screen and (min-width: 900px) and (min-height: 900px){
+
+.closet-main {
+	height: 350px;
 }
 
 }
