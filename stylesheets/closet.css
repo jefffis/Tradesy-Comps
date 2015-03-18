@@ -2104,9 +2104,8 @@ span.cls:active {
 @media screen and (min-width: 601px) and (max-width: 700px){
 
 .closet-sub p {
-	max-width: 20rem;
-	position: relative;
-	top: -.75rem;
+	max-width: 18rem;
+	top: -1rem;
 }
 
 }
