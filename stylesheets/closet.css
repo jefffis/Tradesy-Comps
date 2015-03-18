@@ -2057,7 +2057,7 @@ span.cls:active {
 /**** closet head mobile ****/
 @media screen and (max-width: 600px){
 
-#admin-toggle, .profile-social, hr {
+#admin-toggle, .profile-social, .closet-sub {
 	display: none;
 }
 
@@ -2096,7 +2096,7 @@ span.cls:active {
 .img-cover {
 	height: 100%;
 }
-.closet-sub {
+/*.closet-sub {
 	height: auto;
 	text-align: center;
 }
@@ -2108,6 +2108,32 @@ span.cls:active {
 }
 .closet-sub nav {
 	margin-top: 1.5rem;
+}*/
+.m-only {
+	display: block;
+}
+.tabs {
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+.tabs a {
+	display: inline-block;
+	float: left;
+	padding: .5rem;
+	text-decoration: none;
+	width: 33%;
+}
+.tabs a:active {
+	background: #efefef;
+}
+.tabs a + a {
+	border-left: 1px solid #ddd;
+}
+.tabs a:last-child {
+	width: 34%;
+}
+[data-num]:after {
+	/*content: " (" attr(data-num) ")";*/
 }
 
 }
