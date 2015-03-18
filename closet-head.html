@@ -16,11 +16,28 @@
 			</div>
 		</header>
 
+		<nav class="seller-nav hide" id="seller-nav">
+			<span class="active">
+				<a href="">Closet</a>
+			</span>
+			<span>
+				<a href="">Settings</a>
+			</span>
+			<span>
+				<a href="">Money</a>
+			</span>
+		</nav>
+
 		<div class="closet-header" id="closet-header">
 			<div class="width">
 				<div class="closet-main">
-					<span class="chg back">Change Background</span>
-					<span class="chg pf">Change Image</span>
+					<span class="chg back">
+						Change cover
+						<img src="images/icon-camera-24.png" alt="">
+					</span>
+					<span class="chg pf">
+						<img src="images/icon-camera-24.png" alt="">
+					</span>
 					<div class="profile-pic">
 						<img src="https://pbs.twimg.com/profile_images/473111708735524864/kb0NFxZk_400x400.jpeg" alt="" />
 					</div>
@@ -37,7 +54,7 @@
 						<button class="btn line">Message</button>
 					</div>
 					<div class="profile-actions hide" id="profile-actions-seller">
-						<button class="btn" id="toggle-chg">Change Profile Images</button>
+						<!-- <button class="btn" id="toggle-chg">Change Profile Images</button> -->
 						<button class="btn">Edit Profile</button>
 					</div>
 					<div class="profile-social">
@@ -60,16 +77,16 @@
 						</a>
 						<a href="##">
 							55
-							<small>items</small>
+							<small>sold</small>
 						</a>
 						<a href="###">
 							25
 							<small>followers</small>
 						</a>
-						<a href="###">
+						<!-- <a href="###">
 							25
 							<small>wants</small>
-						</a>
+						</a> -->
 					</nav>
 				</div>
 			</div>
@@ -95,10 +112,14 @@
 			      $(this).removeClass('admin').text('Show Seller');
 			      $('#profile-actions').removeClass('hide');
 			      $('#profile-actions-seller').addClass('hide');
+			      $('#closet-header').removeClass('admin');
+			      $('#seller-nav').addClass('hide');
 			    }else{
 			      $(this).addClass('admin').text('Show Buyer');
 			      $('#profile-actions').addClass('hide');
 			      $('#profile-actions-seller').removeClass('hide');
+			      $('#closet-header').addClass('admin');
+			      $('#seller-nav').removeClass('hide');
 			    }
 			  });
 

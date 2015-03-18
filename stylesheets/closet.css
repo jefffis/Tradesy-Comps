@@ -82,6 +82,14 @@ h4 {
 .btn + .btn {
 	margin-left: .75rem;
 }
+.admin .btn {
+	background: #111;
+	border-radius: 3px;
+	font-size: .85rem;
+	letter-spacing: normal;
+	padding: .7rem .85rem;
+	text-transform: none;
+}
 .line {
 	background: none;
 	border: 1px solid currentColor;
@@ -112,6 +120,8 @@ header img {
 
 .seller-nav {
 	background: #2a2a2a;
+	margin: auto;
+	max-width: 1498px;
 	text-align: center;
 }
 .seller-nav.fixed {
@@ -239,12 +249,17 @@ header img {
 	/*box-shadow: 0 0 0 1px rgba(0,0,0,0.1) inset;*/
 	display: none;
 	font-size: .85rem;
-	padding: .35rem .5rem;
+	padding: .35rem .65rem;
 	position: absolute;
 	z-index: 2;
 }
+.chg img {
+	display: inline-block;
+	margin: 0;
+	vertical-align: middle;
+}
 .closet-head .chg, .closet-header .chg{
-	background: rgba(0,0,0,0.75);
+	background: #111;
 	color: white;
 }
 .chg.s {
@@ -252,6 +267,11 @@ header img {
 	opacity: 1;
 	transform: scale(1);
 	-webkit-animation: grow .25s ease-in-out;
+}
+.admin .chg {
+	display: inline-block;
+	opacity: 1;
+	transform: scale(1);
 }
 .chg:hover {
 	/*box-shadow: 0 0 0 1px rgba(0,0,0,0.25) inset;*/
@@ -275,11 +295,15 @@ header img {
 	top: .5rem;
 	left: 10px;
 }
+.chg.back img {
+	margin: 0 0 0 3px;
+}
 .closet-header .pf {
 	top: auto;
-	bottom: -100px;
-	left: 10px;
+	bottom: -80px;
+	left: 52px;
 	z-index: 3;
+	padding: .35rem .5rem;
 }
 .fb {
 	display: inline-block;
@@ -1812,19 +1836,25 @@ span.cls:active {
 	z-index: 2;
 }
 .profile-pic {
+	padding: .5rem;
 	position: absolute;
-	bottom: -4rem;
+	bottom: -4.5rem;
 	left: 0;
+}
+.admin .profile-pic {
+	/*background: rgba(0,0,0,.25);*/
+	border-radius: 3px;
 }
 .profile-pic img {
 	border-radius: 100%;
 	/*box-shadow: 0 0 0 8px white;*/
+	display: block;
 	max-width: 125px;
 }
 .profile-details {
 	position: absolute;
 	bottom: 0;
-	left: 145px;
+	left: 155px;
 }
 .profile-details h1, .profile-details h2 {
 	color: white;
@@ -1872,13 +1902,22 @@ span.cls:active {
 	margin-left: 1rem;
 }
 .profile-social a:before {
-	background: rgba(255,255,255,0.25);
+	/*background: rgba(255,255,255,0.25);*/
 	box-shadow: 0 0 0 1px white;
 	border-radius: 100%;
-	content: "";
+	color: white;
+	content: "t";
 	display: inline-block;
-	height: 2rem;
+	height: 1.75rem;
+	padding-top: .25rem;
+	text-align: center;
 	width: 2rem;
+}
+.profile-social a:hover:before {
+	box-shadow: 0 0 0 1px white, 0 0 0 3px white;
+}
+.profile-social a:active {
+	opacity: .75;
 }
 
 .closet-sub {
@@ -1897,7 +1936,7 @@ span.cls:active {
 	color: #111;
 	position: absolute;
 	max-width: 25rem;
-	left: 160px;
+	left: 170px;
 	top: .75rem;
 }
 .closet-sub p a {
