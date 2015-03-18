@@ -1986,7 +1986,7 @@ span.cls:active {
 }
 
 .modal-wrap {
-	background: rgba(255,255,255,0.75);
+	background: rgba(0,0,0,0.5);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -2004,9 +2004,9 @@ span.cls:active {
 }
 .modal-wrap form {
 	background: white;
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+	/*border: 1px solid #ddd;*/
+	/*border-radius: 3px;*/
+	/*box-shadow: 0 0 0 2px rgba(0,0,0,0.1);*/
 	margin: auto;
 	max-width: 400px;
 	padding: 2rem;
