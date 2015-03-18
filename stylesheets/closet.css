@@ -94,6 +94,9 @@ h4 {
 	background: none;
 	border: 1px solid currentColor;
 }
+.line.d {
+	color: #111;
+}
 .toggle {
 	box-shadow: 0 0 0 1px currentColor;
 	border-radius: 3px;
@@ -120,8 +123,8 @@ header img {
 
 .seller-nav {
 	background: #2a2a2a;
-	margin: auto;
-	max-width: 1498px;
+	/*margin: auto;
+	max-width: 1498px;*/
 	text-align: center;
 }
 .seller-nav.fixed {
@@ -246,7 +249,7 @@ header img {
 	color: #111;
 	cursor: pointer;
 	border-radius: 3px;
-	/*box-shadow: 0 0 0 1px rgba(0,0,0,0.1) inset;*/
+	/*box-shadow: 0 0 0 1px rgba(0,0,0,0), 0 0 0 2px white;*/
 	display: none;
 	font-size: .85rem;
 	padding: .35rem .65rem;
@@ -298,6 +301,12 @@ header img {
 .chg.back img {
 	margin: 0 0 0 3px;
 }
+/*.chg.back:after {
+	content: "fefe";
+	position: absolute;
+	top: 0;
+	right: 0;
+}*/
 .closet-header .pf {
 	top: auto;
 	bottom: -80px;
@@ -1974,6 +1983,42 @@ span.cls:active {
 .closet-sub nav small {
 	display: block;
 	font-size: .8rem;
+}
+
+.modal-wrap {
+	background: rgba(255,255,255,0.75);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 101;
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+.modal-wrap > div {
+	display: table-cell;
+	height: 100%;
+	width: 100%;
+	padding: 1.5rem;
+	vertical-align: middle;
+}
+.modal-wrap form {
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+	margin: auto;
+	max-width: 400px;
+	padding: 2rem;
+}
+.modal-wrap fieldset {
+	float: none;
+}
+.modal-wrap h3 {
+	margin-bottom: 1.5rem;
+}
+.modal-wrap .chg {
+	display: inline-block;
 }
 
 @media screen and (min-width: 1502px){

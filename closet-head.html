@@ -104,6 +104,29 @@
 			<p>Note: user image includes a .img-cover div that adds a layer of transparency on top of it to help with readbility. This is not shown for default images.</p>
 		</div>
 
+		<div class="modal-wrap hide" id="modal-wrap">
+			<div>
+				<form id="modal-form-change">
+					<h3>Change Profile Image:</h3>
+					<fieldset>
+						<label for="heroPic">
+							<span class="r">Profile Picture</span>
+							<div class="hero-pic cf">
+								<span class="chg pf ri">Change</span>
+							</div>
+							<input type="file" id="heroPic" class="file" />
+							<small>This is a default background; why not use your own?</small>
+						</label>
+						<p>
+							We recommend ...
+						</p>
+						<button class="btn">Update my image</button>
+						<button class="btn line d" id="cls">Close</button>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
 		$(function(){
@@ -149,6 +172,14 @@
 			    }
 			    return false;
 			  });
+
+			$('.chg').on('click', function() {
+				$('#modal-wrap').removeClass('hide');
+			});
+
+			$('#cls').on('click', function() {
+				$('#modal-wrap').addClass('hide');
+			});
 
 		})
 		</script>
