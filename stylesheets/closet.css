@@ -94,6 +94,7 @@ h4 {
 .line {
 	background: none;
 	box-shadow: 0 0 0 1px currentColor inset;
+	cursor: pointer;
 }
 .line.d {
 	color: #111;
@@ -1900,23 +1901,25 @@ span.cls:active {
 	display: inline-block;
 	font-size: .75rem;
 	margin-left: .75rem;
-	padding-left: 10px;
 	position: relative;
 }
 .profile-details a {
 	color: white;
 }
-.profile-details span:before {
-	background: white;
+.profile-details [loc] {
+	padding-left: 15px;
+}
+.profile-details [loc]:before {
+	background: url(../images/location-alt-128.png) no-repeat center center;
+	background-size: contain;
 	content: "";
 	display: inline-block;
 	height: 10px;
-	/*margin-right: 5px;*/
 	position: absolute;
 	left: 0;
 	top: 1px;
-	opacity: .5;
-	width: 6px;
+	opacity: .75;
+	width: 10px;
 }
 .profile-actions {
 	position: absolute;
