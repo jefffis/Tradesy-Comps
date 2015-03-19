@@ -2059,11 +2059,38 @@ span.cls:active {
 	display: none;
 }
 
+.about h3 {
+	margin: 0 0 .5rem;
+}
+.about p {
+	margin: 0 0 .5rem;	
+}
+.about p + h3, .about h3 + h3 {
+	margin-top: 1.5rem;
+}
+
 @media screen and (min-width: 1502px){
 
 .closet-header {
 	border: 1px solid #ddd;
 	border-top: 0;
+}
+
+}
+
+@media screen and (min-width: 901px) and (max-width: 1100px){
+
+.profile-actions {
+	right: auto;
+	bottom: auto;
+	top: .5rem;
+	left: 0;
+}
+.admin .profile-actions {
+	right: 0;
+	bottom: 0;
+	top: auto;
+	left: auto;
 }
 
 }
@@ -2125,7 +2152,7 @@ span.cls:active {
 
 .closet-sub p {
 	max-width: 18rem;
-	top: -1rem;
+	/*top: -1rem;*/
 }
 
 }
@@ -2160,7 +2187,7 @@ span.cls:active {
 .profile-details {
 	font-size: .75rem;
 	clear: both;
-	margin: 1rem 0 0 1rem;
+	margin: 1rem 1rem 0 1rem;
 	padding-top: 1rem;
 	position: static;
 }
@@ -2241,6 +2268,9 @@ span.cls:active {
 	/*padding-top: 1;*/
 	position: static;
 	text-align: center;
+}
+.profile-details h1 {
+	padding: 0 1rem;
 }
 .profile-details span + span {
 	display: none;
