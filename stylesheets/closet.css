@@ -2154,6 +2154,9 @@ span.cls:active {
 	max-width: 18rem;
 	/*top: -1rem;*/
 }
+.profile-details {
+	font-size: .85rem;
+}
 
 }
 
@@ -2261,7 +2264,7 @@ span.cls:active {
 	max-width: 85px;
 }
 .profile-details {
-	font-size: 1rem;
+	font-size: .85rem;
 	float: none;
 	/*max-width: 250px;*/
 	margin-top: 1rem;
