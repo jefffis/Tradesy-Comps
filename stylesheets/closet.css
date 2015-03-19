@@ -2131,7 +2131,82 @@ span.cls:active {
 }
 
 /**** closet head mobile ****/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 400px){
+
+#admin-toggle, .profile-social, .closet-sub {
+	display: none;
+}
+
+.table {
+	display: table;
+	height: 250px;
+	width: 100%;
+	padding: 0;
+}
+.table > div {
+	display: table-cell;
+	height: 250px;
+	vertical-align: middle;
+}
+
+.profile-pic {
+	float: left;
+	position: static;
+}
+.profile-pic img {
+	margin: 0 0 0 1rem;
+	max-width: 50px;
+}
+.profile-details {
+	font-size: .75rem;
+	clear: both;
+	margin: 1rem 0 0 1rem;
+	padding-top: 1rem;
+	position: static;
+}
+.profile-details span + span {
+	display: none;
+}
+.profile-actions {
+	clear: both;
+	margin: 0 0 0 1rem;
+	padding-top: 1rem;
+	position: static;
+}
+.img-cover {
+	height: 100%;
+}
+.m-only {
+	display: block;
+}
+.tabs {
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+.tabs a {
+	display: inline-block;
+	float: left;
+	padding: .5rem;
+	text-decoration: none;
+	width: 33%;
+}
+.tabs a:active {
+	background: #efefef;
+}
+.tabs a + a {
+	border-left: 1px solid #ddd;
+}
+.tabs a:last-child {
+	width: 34%;
+}
+[data-num]:after {
+	/*content: " (" attr(data-num) ")";*/
+}
+
+}
+
+/**** closet head mobile ****/
+@media screen and (min-width: 401px) and (max-width: 600px){
 
 #admin-toggle, .profile-social, .closet-sub {
 	display: none;
@@ -2145,12 +2220,13 @@ span.cls:active {
 }
 .table > div {
 	display: table-cell;
-	height: 300px;
+	height: 350px;
 	vertical-align: middle;
 }
 
 .profile-pic {
-	margin: 0 0 1.5rem;
+	/*margin: 0 0 1.5rem;*/
+	float: none;
 	position: static;
 }
 .profile-pic img {
@@ -2158,6 +2234,11 @@ span.cls:active {
 	max-width: 85px;
 }
 .profile-details {
+	font-size: 1rem;
+	float: none;
+	/*max-width: 250px;*/
+	margin-top: 1rem;
+	/*padding-top: 1;*/
 	position: static;
 	text-align: center;
 }
@@ -2165,7 +2246,9 @@ span.cls:active {
 	display: none;
 }
 .profile-actions {
-	margin-top: 2rem;
+	clear: none;
+	margin: 2rem 0 0 0;
+	padding-top: 0;
 	position: static;
 	text-align: center;
 }
