@@ -40,7 +40,7 @@
 						<img src="images/icon-camera-24.png" alt="">
 					</span>
 					<div class="profile-pic">
-						<img src="https://pbs.twimg.com/profile_images/473111708735524864/kb0NFxZk_400x400.jpeg" alt="" />
+						<img src="https://pbs.twimg.com/profile_images/473111708735524864/kb0NFxZk_400x400.jpeg" id="user" alt="" />
 					</div>
 					<div class="profile-details">
 						<h1>Simply Chic Jewelry Designs-by Pat McLaughlin</h1>
@@ -311,8 +311,17 @@
 			  });
 
 			$('#hero-toggle').on('click', function() {
-				$(this).toggleClass('admin');
-			    $('#closet-header').toggleClass('default');
+				var src = $('#user').attr('src'),
+					defaultSrc = 'images/default-user.png';
+			    if($(this).hasClass('admin')){
+			    	$(this).removeClass('admin');
+				    $('#closet-header').removeClass('default');
+				    $('#user').attr('src',src);
+			    }else{
+			    	$(this).addClass('admin');
+				    $('#closet-header').addClass('default');
+				    $('#user').attr('src',defaultSrc);
+			    }
 			  });
 
 			$('#toggle-chg').on('click', function() {
