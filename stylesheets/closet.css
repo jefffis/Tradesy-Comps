@@ -1193,6 +1193,22 @@ div.brand, .brnd {
 	padding: 0 .5rem;
 	width: 20%;
 }
+/*div.brand + .brand + .brand {
+	margin-top: 1rem;
+}*/
+div.brand.show {
+	display: inline-block !important;
+	margin-top: 1rem;
+}
+#brand-toggle {
+	cursor: pointer;
+}
+#brand-toggle:active {
+	opacity: .65;
+}
+#brand-toggle.show {
+	border: 0;
+}
 /*.brand + .brand {
 	padding-left: .5rem;
 }*/
