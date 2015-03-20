@@ -111,7 +111,7 @@ $(function(){
           featured.find('.empty-set').fadeOut().addClass('hide');
           featured.append(content_all);
         }
-      }, 1500);
+      }, 1000);
 
   });
 
@@ -130,7 +130,7 @@ $(function(){
         featured.find('#'+id).remove();
         featured_num--;
         if(featured_num < 1){
-          featured.find('.empty-set').removeClass('hide');
+          featured.find('.empty-set').fadeIn().removeClass('hide');
         }
       }, 750);
 
