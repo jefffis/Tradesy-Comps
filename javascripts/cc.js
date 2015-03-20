@@ -156,8 +156,10 @@ $(function(){
   });
 
   if(window.location.hash){
+    $('.product').removeClass('s');
     $('.product .analytics').hide();
     $('.product .ctls').hide();
+    $('.sale').removeClass('hide');
     $('.brand.hide:first').removeClass('hide');
     $('.empty').hide();
     $('.chg').hide();
