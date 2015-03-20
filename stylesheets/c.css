@@ -231,8 +231,16 @@ header img {
 	position: relative;
 	text-align: center;
 }
-.product:hover {
+.product:hover, .s {
 	border-color: #ddd;
+}
+.s {
+	/*border-collapse: collapse;*/
+	border: 0;
+	box-shadow: 0 0 0 1px #ddd;
+}
+.s + .s + .s {
+	margin-top: 1rem;
 }
 .showing, .showing:hover {
 	border-color: #888;
@@ -419,6 +427,9 @@ figure div {
 	top: 1rem;
 	left: 1rem;
 }
+.showing .sale {
+	display: none;
+}
 .brand-name {
 	box-shadow: none;
 	color: #111;
@@ -430,7 +441,7 @@ figure div {
 	text-transform: uppercase;
 }
 .product .tag {
-	font-size: .75rem;
+	font-size: .85rem;
 }
 .analytics .tag {
 	box-shadow: none;
@@ -453,17 +464,18 @@ figure div {
 
 /***** microanalytics ****/
 .analytics {
-	background: white;
-	display: none;
-	padding: .5rem 0 0;
-	position: absolute;
-	top: 2.3rem;
+	/*background: white;*/
+	/*display: none;*/
+	padding: .75rem 0 0;
+	/*position: absolute;*/
+	/*top: 2.3rem;
 	left: 0;
 	width: 100%;
-	z-index: 11;
+	z-index: 11;*/
 	/*text-align: right;*/
 }
 .ctls {
+	display: none;
 	float: right;
 	margin: 1rem 1rem 0 0;
 	padding: .325rem;
@@ -473,22 +485,42 @@ figure div {
 .ctls:active, .showing .ctls {
 	background: #efefef;
 }
-.showing .analytics {
-	display: block;
+.showing .ctls {
+	/*right: 1rem;*/
 }
+.showing .ctls:after {
+	content: "\2715";
+	display: inline-block;
+	padding-left: .5rem;
+	position: relative;
+	/*right: 1rem;*/
+	top: 1px;
+}
+/*.showing .analytics {
+	display: block;
+}*/
 .product-actions {
 	/*border-top: 1px solid #efefef;*/
 	border-bottom: 1px solid #ddd;
-	margin-top: .5rem;
-	padding: .5rem 0;
+	/*margin-top: .5rem;*/
+	padding: .25rem 0 .75rem;
 }
 .product-actions a {
 	cursor: pointer;
 	font-size: .85rem;
 	padding: 0;
 	opacity: 1;
+	text-decoration: underline;
 }
-
+.product-actions a:active {
+	opacity: .65;
+}
+.analytics .tag, .product-actions a {
+	display: inline-block;
+}
+.analytics .tag + .tag, .product-actions a + a {
+	margin-left: 2rem;
+}
 
 
 
@@ -568,13 +600,16 @@ figure div {
 	z-index: 2;
 }
 .product.empty {
+	border: 0;
 	display: table;
-	height: 356px;
+	height: 398px;
+	position: relative;
+	top: -1px;
 }
 .product.empty a {
 	display: table-cell;
 	font-size: 1.25rem;
-	height: 355px;
+	height: 398px;
 	padding: 0 1rem;
 	vertical-align: middle;
 }
@@ -970,22 +1005,38 @@ form, fieldset {
 .product {
 	width: 33%;
 }
+.s + .s + .s {
+	margin-top: 0;
+}
 .index .product + .product + .product + .product {
 	display: none;
 }
-.analytics .tag, .product-actions a {
-	display: inline-block;
-}
-.analytics .tag + .tag, .product-actions a + a {
-	margin-left: 2rem;
-}
-.analytics {
+/*.analytics {
+	clear: both;
+	position: static;
 	padding-top: .75rem;
+	padding-bottom: .75rem;
+	display: block;
+	border-bottom: 1px solid #ddd;
+}
+.showing .analytics {
+	border: 0;
+	padding-bottom: 0;
 }
 .product-actions {
+	display: none;
 	margin-top: 0;
 	padding-top: .25rem;
 }
+.ctls {
+	float: left;
+	margin: 0;
+	left: 1rem;
+	top: 1rem;
+}*/
+/*.showing .product-actions {
+	display: block;
+}*/
 .brand, .brand + .brand + .brand + .brand + .brand {
 	display: inline-block;
 	float: left;
@@ -1296,5 +1347,28 @@ hr.min {
 .seller-nav span + span a {
 	border-top: 1px solid #111;
 }
+
+}
+
+
+@media screen and (max-width: 500px){
+
+.analytics .tag, .product-actions a {
+	display: block;
+	text-align: left;
+}
+.product-actions {
+	padding-top: 1rem;
+}
+.analytics .tag, .product-actions a, .analytics .tag + .tag, .product-actions a + a {
+	margin-left: 1rem;
+}
+
+/*.analytics .tag, .product-actions a {
+	display: block;
+}
+.analytics .tag + .tag, .product-actions a + a {
+	margin-left: 0;
+}*/
 
 }
