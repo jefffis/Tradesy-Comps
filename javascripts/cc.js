@@ -136,4 +136,25 @@ $(function(){
 
   });
 
+  $('.ctls').on('click', function() {
+    if($(this).parent().hasClass('showing')){
+      $(this).parent().removeClass('showing');
+    }else{
+      $('.product').removeClass('showing');
+      $(this).parent().addClass('showing');
+    }
+  });
+
+  if(window.location.hash){
+    $('.product .analytics').hide();
+    $('.product .ctls').hide();
+    $('.brand.hide:first').removeClass('hide');
+    $('.empty').hide();
+    $('.chg').hide();
+    $('#closet-header').removeClass('admin');
+    $('#profile-actions-seller').hide();
+    $('#profile-actions').removeClass('hide');
+    $('#seller-nav').addClass('hide');
+  }
+
 });

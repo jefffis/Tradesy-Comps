@@ -7,7 +7,7 @@
 
 		<title dir="ltr">Tradesy Product Page Comp</title>
 
-		<link href="stylesheets/closet.css" rel="stylesheet" type="text/css" />
+		<link href="stylesheets/c.css" rel="stylesheet" type="text/css" />
 		<script>document.addEventListener('touchstart', function() {},false);</script>
 	</head>
 	<body>
@@ -38,11 +38,11 @@
 		<div class="closet-header admin" id="closet-header">
 			<div class="c-width table">
 				<div class="closet-main">
-					<span class="chg back">
+					<span class="chg back t-up">
 						Change cover
 						<img src="images/icon-camera-24.png" alt="">
 					</span>
-					<span class="chg pf">
+					<span class="chg pf t-up">
 						<img src="images/icon-camera-24.png" alt="">
 					</span>
 					<div class="profile-pic">
@@ -55,6 +55,10 @@
 							<span loc>Santa Monica, CA</span>
 							<span><a href="">www.tradesy.com</a></span>
 						</h2>
+					</div>
+					<div class="profile-actions hide" id="profile-actions">
+						<button class="btn">Follow</button>
+						<button class="btn line">Message</button>
 					</div>
 					<div class="profile-actions" id="profile-actions-seller">
 						<a href="#" class="btn">Edit Profile</a>
@@ -102,35 +106,112 @@
 			</nav>
 		</div>
 
-		<hr class="min" />
+		<hr class="min">
 
-		<div class="racks width" id="like1">
+		<div class="racks index width" id="like1">
 
 			<div class="rack no-b cf" id="featured">
 				<h2 data-num="6">
 					Featured
-					<!-- <a href="##">Shop all</a> -->
+					<a href="##">Shop all</a>
 				</h2>
-				<div class="product v2 v3 v5 s1" id="prod_id2">
+				<div class="product s1 on-sale" id="prod_id2">
+					<span class="ctls tag">Manage</span>
 					<div class="analytics a2">
-						<span class="tag wanted no-inc n" data-want="23"></span>
-						<span class="tag wanted no-inc vw n" data-want="123"></span>
-						<span class="tag wanted no-inc shr n" data-want="5"></span>
-						<button class="tag ctls">
-							Manage
-							<nav class="product-actions">
-								<a class="unfeature-this" data-id="prod_id2">Unfeature</a>
-								<a href="###">Edit</a>
-								<a href="###">Delete</a>
-							</nav>
-						</button>
+						<span class="tag wanted no-inc n" data-want="1,246"></span>
+						<span class="tag wanted no-inc vw n" data-want="2,000"></span>
+						<span class="tag wanted no-inc shr n" data-want="33"></span>
+						<nav class="product-actions">
+							<a class="unfeature-this" data-id="prod_id2">Unfeature</a>
+							<a href="###">Edit</a>
+							<a href="###">Delete</a>
+						</nav>
 					</div>
 					<a href="##">
 						<figure><div>
 							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
 						</div></figure>
 						<div class="details">
-							<span class="tag brand pill">Louis Vuitton</span>
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+					<span class="tag sale ss">10% off</span>
+				</div>
+				<div class="product" id="prod_id2">
+					<span class="ctls tag">Manage</span>
+					<div class="analytics a2">
+						<span class="tag wanted no-inc n" data-want="1,246"></span>
+						<span class="tag wanted no-inc vw n" data-want="2,000"></span>
+						<span class="tag wanted no-inc shr n" data-want="33"></span>
+						<nav class="product-actions">
+							<a class="unfeature-this" data-id="prod_id2">Unfeature</a>
+							<a href="###">Edit</a>
+							<a href="###">Delete</a>
+						</nav>
+					</div>
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<span class="ctls tag">Manage</span>
+					<div class="analytics a2">
+						<span class="tag wanted no-inc n" data-want="1,246"></span>
+						<span class="tag wanted no-inc vw n" data-want="2,000"></span>
+						<span class="tag wanted no-inc shr n" data-want="33"></span>
+						<nav class="product-actions">
+							<a class="unfeature-this" data-id="prod_id2">Unfeature</a>
+							<a href="###">Edit</a>
+							<a href="###">Delete</a>
+						</nav>
+					</div>
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<span class="ctls tag">Manage</span>
+					<div class="analytics a2">
+						<span class="tag wanted no-inc n" data-want="1,246"></span>
+						<span class="tag wanted no-inc vw n" data-want="2,000"></span>
+						<span class="tag wanted no-inc shr n" data-want="33"></span>
+						<nav class="product-actions">
+							<a class="unfeature-this" data-id="prod_id2">Unfeature</a>
+							<a href="###">Edit</a>
+							<a href="###">Delete</a>
+						</nav>
+					</div>
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
 							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
 							<h4>
 								<sup>$</sup>493
@@ -152,7 +233,7 @@
 						<a id="brand-toggle">Show all</a>
 					</h2>
 					<div class="brands" id="brands">
-						<div class="brand epty">
+						<div class="brand empty">
 							<a href="###">Add new brand</a>
 						</div>
 						<div class="brand _louis-vouitton">
@@ -193,38 +274,36 @@
 
 			<hr>
 
-			<div class="rack no-b cf">
+			<div class="rack no-b cf" id="featured">
 				<h2 data-num="6">
-					Bags
-					<a href="##">Shop all</a>
+					Featured
+					<!-- <a href="##">Shop all</a> -->
 				</h2>
-				<div class="product s1 s2 empty">
+				<div class="product empty">
 					<div>
 						<a href="####">
 							<em>Add new [department] [subcat] [item]</em>
 						</a>
 					</div>
 				</div>
-				<div class="product v2 v3 v5 s1" id="prod_id1">
+				<div class="product" id="prod_id2222">
+					<span class="ctls tag">Manage</span>
 					<div class="analytics a2">
-						<span class="tag wanted no-inc n" data-want="123"></span>
-						<span class="tag wanted no-inc vw n" data-want="1,023"></span>
-						<span class="tag wanted no-inc shr n" data-want="98"></span>
-						<button class="tag ctls">
-							Manage
-							<nav class="product-actions">
-								<a class="feature-this" data-id="prod_id1">Feature</a>
-								<a href="###">Edit</a>
-								<a href="###">Delete</a>
-							</nav>
-						</button>
+						<span class="tag wanted no-inc n" data-want="1,246"></span>
+						<span class="tag wanted no-inc vw n" data-want="2,000"></span>
+						<span class="tag wanted no-inc shr n" data-want="33"></span>
+						<nav class="product-actions">
+							<a class="feature-this" data-id="prod_id2222">Feature</a>
+							<a href="###">Edit</a>
+							<a href="###">Delete</a>
+						</nav>
 					</div>
 					<a href="##">
 						<figure><div>
 							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
 						</div></figure>
 						<div class="details">
-							<span class="tag brand pill">Louis Vuitton</span>
+							<span class="tag brand-name">Louis Vuitton</span>
 							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
 							<h4>
 								<sup>$</sup>493
@@ -237,31 +316,18 @@
 
 			<hr>
 
-			<div class="rack no-b cf">
+			<div class="rack no-b cf" id="featured">
 				<h2 data-num="6">
-					Draft Listings
-					<!-- <a href="##">View all</a> -->
+					Sold
+					<!-- <a href="##">Shop all</a> -->
 				</h2>
-				<div class="product v2 v3 v5 s1" id="prod_id1">
-					<div class="analytics a2">
-						<!-- <span class="tag wanted no-inc n" data-want="123"></span>
-						<span class="tag wanted no-inc vw n" data-want="1,023"></span>
-						<span class="tag wanted no-inc shr n" data-want="98"></span> -->
-						<button class="tag ctls">
-							Manage
-							<nav class="product-actions">
-								<a data-id="prod_id1">Publish</a>
-								<a href="###">Edit</a>
-								<a href="###">Delete</a>
-							</nav>
-						</button>
-					</div>
+				<div class="product" id="prod_id2">
 					<a href="##">
 						<figure><div>
 							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
 						</div></figure>
 						<div class="details">
-							<span class="tag brand pill">Louis Vuitton</span>
+							<span class="tag brand-name">Louis Vuitton</span>
 							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
 							<h4>
 								<sup>$</sup>493
@@ -269,62 +335,7 @@
 							</h4>
 						</div>
 					</a>
-				</div>
-				<div class="product v2 v3 v5 s1" id="prod_id1">
-					<div class="analytics a2">
-						<!-- <span class="tag wanted no-inc n" data-want="123"></span>
-						<span class="tag wanted no-inc vw n" data-want="1,023"></span>
-						<span class="tag wanted no-inc shr n" data-want="98"></span> -->
-						<button class="tag ctls">
-							Manage
-							<nav class="product-actions">
-								<a data-id="prod_id1">Publish</a>
-								<a href="###">Edit</a>
-								<a href="###">Delete</a>
-							</nav>
-						</button>
-					</div>
-					<a href="##">
-						<figure><div>
-							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
-						</div></figure>
-						<div class="details">
-							<span class="tag brand pill">Louis Vuitton</span>
-							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
-							<h4>
-								<sup>$</sup>493
-								<span><sup>$</sup>1,210</span>
-							</h4>
-						</div>
-					</a>
-				</div>
-				<div class="product v2 v3 v5 s1" id="prod_id1">
-					<div class="analytics a2">
-						<!-- <span class="tag wanted no-inc n" data-want="123"></span>
-						<span class="tag wanted no-inc vw n" data-want="1,023"></span>
-						<span class="tag wanted no-inc shr n" data-want="98"></span> -->
-						<button class="tag ctls">
-							Manage
-							<nav class="product-actions">
-								<a data-id="prod_id1">Publish</a>
-								<a href="###">Edit</a>
-								<a href="###">Delete</a>
-							</nav>
-						</button>
-					</div>
-					<a href="##">
-						<figure><div>
-							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
-						</div></figure>
-						<div class="details">
-							<span class="tag brand pill">Louis Vuitton</span>
-							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
-							<h4>
-								<sup>$</sup>493
-								<span><sup>$</sup>1,210</span>
-							</h4>
-						</div>
-					</a>
+					<span class="tag want wanted n" data-want="3"></span>
 				</div>
 			</div>
 
