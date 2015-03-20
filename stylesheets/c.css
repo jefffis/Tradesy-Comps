@@ -441,12 +441,15 @@ figure div {
 	display: block;
 	font-family: 'proxima-nova-semi', sans-serif;
 	letter-spacing: 1.5px;
-	margin: 1rem 0 .25rem;
+	margin: 1rem 0 .5rem;
 	padding: 0;
 	text-transform: uppercase;
 }
 .product .tag {
 	font-size: .85rem;
+}
+.product .brand-name {
+	font-size: .75rem;
 }
 .analytics .tag {
 	box-shadow: none;
