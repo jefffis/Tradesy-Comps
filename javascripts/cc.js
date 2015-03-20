@@ -103,10 +103,12 @@ $(function(){
       setTimeout(function() {
         $('#'+id).find('.cover').remove();
         $('#'+id).find('.feature-this').removeClass('feature-this').addClass('unfeature-this').text('Unfeature');
+        featured_num++;
       }, 750);
 
       setTimeout(function() {
         if(featured_num < 4){
+          featured.find('.empty-set').fadeOut().addClass('hide');
           featured.append(content_all);
         }
       }, 1500);
@@ -126,6 +128,10 @@ $(function(){
         $('#'+id).find('.cover').remove();
         $('#'+id).find('.unfeature-this').removeClass('unfeature-this').addClass('feature-this').text('Feature');
         featured.find('#'+id).remove();
+        featured_num--;
+        if(featured_num < 1){
+          featured.find('.empty-set').removeClass('hide');
+        }
       }, 750);
 
   });
