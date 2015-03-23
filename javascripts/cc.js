@@ -187,7 +187,7 @@ $(function(){
     $('.chg').remove();
     $('#closet-header').removeClass('admin');
     $('#profile-actions-seller').remove();
-    $('#profile-actions').remove();
+    $('#profile-actions').removeClass('hide');
     $('#seller-nav').remove();
     // $('#closet-search-wrap form').removeClass('hide');
   }
