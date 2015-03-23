@@ -67,6 +67,9 @@ hr {
 h4 {
 	margin-bottom: 1.5rem;
 }
+.left {
+	float: left;
+}
 .right {
 	float: right;
 }
@@ -854,7 +857,7 @@ figure div {
 	right: 0;
 	top: 1.75rem;*/
 	float: right;
-	padding-top: 1rem;
+	padding-top: .85rem;
 }
 .closet-sub nav a {
 	color: #ddd;
@@ -1014,6 +1017,7 @@ form, fieldset {
 	color: #111;
 	padding: 0;
 	position: relative;
+	top: .25rem;
 	z-index: 111;
 }
 .has-drop + .has-drop {
@@ -1074,6 +1078,41 @@ form, fieldset {
 }
 
 
+
+
+/**** search form ****/
+.closet-search {
+	/*min-width: 20rem;*/
+	/*max-width: 30rem;*/
+	/*margin-bottom: 1rem;*/
+	width: 100%;
+	max-width: 50%
+}
+.closet-search label {
+	display: block;
+	position: relative;
+}
+.closet-search span {
+	display: none;
+}
+.si {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	box-shadow: 0 2px 0 #efefef inset;
+	padding: .5rem;
+	width: 100%;
+}
+.sb {
+	background: white url(../images/search.png) no-repeat 0 0;
+	background-size: contain;
+	border: 1px solid white;
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	right: .5rem;
+	text-indent: -9999px;
+	top: .6rem;
+}
 
 /**** about ****/
 .about {
@@ -1305,10 +1344,10 @@ form, fieldset {
 @media screen and (min-width: 601px) and (max-width: 800px){
 
 .closet-sub nav a {
-	padding-right: 1rem;
+	padding-right: .75rem;
 }
 .closet-sub nav a + a {
-	padding: 0 1rem;
+	padding: 0 .75rem;
 }
 
 }
