@@ -67,6 +67,15 @@ hr {
 h4 {
 	margin-bottom: 1.5rem;
 }
+.right {
+	float: right;
+}
+.pad-t {
+	padding-top: 2rem !important;
+}
+.pad-b {
+	padding-bottom: 2rem !important;
+}
 
 .btn {
 	border: 0;
@@ -179,6 +188,11 @@ header img {
 	margin-bottom: 2rem;
 	/*text-align: center;*/
 	text-transform: uppercase;
+}
+.rack h2 {
+	font-size: 1.1rem;
+	font-family: 'proxima-nova-semi';
+	letter-spacing: 2px;
 }
 .racks h1 {
 	text-align: center;
@@ -992,6 +1006,72 @@ form, fieldset {
 	left: -99999px;
 }
 
+
+
+
+/**** has drops ****/
+.has-drop {
+	color: #111;
+	padding: 0;
+	position: relative;
+	z-index: 111;
+}
+.has-drop + .has-drop {
+	margin-right: 1rem;
+}
+.has-drop nav {
+	background: white;
+	border-radius: 2px;
+	border: 1px solid #ddd;
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+}
+.has-drop.showing nav {
+	display: block;
+}
+.has-drop a {
+	color: #111;
+	display: block;
+	line-height: 1;
+	padding: .5rem;
+	text-decoration: none;
+}
+.has-drop nav a:hover {
+	background: #efefef;
+}
+.has-drop nav span {
+	display: block;
+}
+.has-drop nav span + span {
+	border-top: 1px solid #ddd;
+}
+.has-drop > span {
+	display: block;
+	padding: .5rem 2.5rem .5rem .75rem;
+	position: relative;
+}
+.has-drop > span:after {
+	content: "\25BC";
+	cursor: pointer;
+	font-size: .75rem;
+	position: absolute;
+	right: .75rem;
+	top: .75rem;
+}
+.has-drop.showing a {
+	opacity: 1;
+}
+.has-drop.showing > span:after {
+	content: "\25B2";
+	top: .8rem;
+}
+.ckb:active {
+	background: #efefef;
+}
 
 
 

@@ -153,12 +153,29 @@ $(function(){
   //   }
   // });
 
-  // $(document).on('click', function(e) {
-  //   if(!$(e.target).closest('.product').length){
-  //     $('.ctls').text('Manage');
-  //     $('.product').removeClass('showing');
-  //   }
-  // });
+  $(document).on('click', function(e) {
+    // if(!$(e.target).closest('.product').length){
+    //   $('.ctls').text('Manage');
+    //   $('.product').removeClass('showing');
+    // }
+    if(!$(e.target).closest('.has-drop').length){
+      $('.has-drop').removeClass('showing');
+    }
+  });
+
+  hasDrops = $('.has-drop'),
+    hasDropsOpen = hasDrops.find('span:first'),
+    hasDropLinks = hasDrops.find('a'),
+    hasDropsClose = hasDrops.find('em');
+
+  hasDropsOpen.on('click', function() {
+    $('.has-drop').removeClass('showing');
+    if(!!$(this).parent().hasClass('showing')){
+      $(this).parent().removeClass('showing');
+    }else{
+      $(this).parent().addClass('showing');
+    }
+  });
 
   if(window.location.hash){
     $('.product').removeClass('s');
