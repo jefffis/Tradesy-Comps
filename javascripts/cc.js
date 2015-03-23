@@ -136,22 +136,22 @@ $(function(){
 
   });
 
-  $('.ctls').on('click', function() {
-    if($(this).parent().hasClass('showing')){
-      $(this).text('Manage');
-      $(this).parent().removeClass('showing');
-    }else{
-      $('.ctls').text('Manage');
-      $('.product').removeClass('showing');
-      $(this).text('Close');
-      $(this).parent().addClass('showing');
-    }
-  });
+  // $('.ctls').on('click', function() {
+  //   if($(this).parent().hasClass('showing')){
+  //     $(this).text('Manage');
+  //     $(this).parent().removeClass('showing');
+  //   }else{
+  //     $('.ctls').text('Manage');
+  //     $('.product').removeClass('showing');
+  //     $(this).text('Close');
+  //     $(this).parent().addClass('showing');
+  //   }
+  // });
 
   $(document).on('click', function(e) {
     if(!$(e.target).closest('.product').length){
-      $('.ctls').text('Manage');
-      $('.product').removeClass('showing');
+      // $('.ctls').text('Manage');
+      // $('.product').removeClass('showing');
     }
   });
 
