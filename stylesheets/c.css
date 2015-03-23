@@ -140,13 +140,19 @@ header img {
 	z-index: 100;
 }
 .seller-nav a {
-	display: inline-block;
+	/*display: inline-block;*/
 	color: white;
+	float: left;
 	font-size: .85rem;
-	letter-spacing: 1px;
-	padding: 1rem;
+	/*letter-spacing: 1px;*/
+	padding: .5rem 0;
 	text-decoration: none;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
+	width: 20%;
+}
+.seller-nav em {
+	display: none;
+	font-style: normal;
 }
 .seller-nav a:hover, .seller-nav .active a {
 	background: #111;
@@ -982,6 +988,15 @@ form, fieldset {
 	padding-left: 2rem;
 	padding-right: 2rem;
 }
+.seller-nav a {
+	display: inline-block;
+	float: none;
+	padding: 1rem;
+	width: auto;
+}
+.seller-nav em {
+	display: inline;
+}
 .product a {
 	padding: 1rem 2rem;
 }
@@ -1365,12 +1380,12 @@ hr.min {
 /*.seller-nav .active {
 	display: none;
 }*/
-.seller-nav a {
+/*.seller-nav a {
 	display: block;
 	letter-spacing: normal;
 	padding: .5rem;
 	text-transform: none;
-}
+}*/
 .seller-nav span + span a {
 	border-top: 1px solid #111;
 }
