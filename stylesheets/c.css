@@ -73,11 +73,17 @@ h4 {
 .right {
 	float: right;
 }
-.pad-t {
+/*.pad-t {
 	padding-top: 2rem !important;
 }
 .pad-b {
 	padding-bottom: 2rem !important;
+}*/
+.mar-t {
+	margin-top: 1rem;
+}
+.mar-b-min {
+	margin-bottom: .25rem;
 }
 
 .btn {
@@ -1086,7 +1092,7 @@ form, fieldset {
 	/*max-width: 30rem;*/
 	/*margin-bottom: 1rem;*/
 	width: 100%;
-	max-width: 50%
+	max-width: 30rem;
 }
 .closet-search label {
 	display: block;
