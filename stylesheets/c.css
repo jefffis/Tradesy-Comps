@@ -1441,6 +1441,12 @@ hr.min {
 .analytics .tag/*, .product-actions a*/, .analytics .tag + .tag/*, .product-actions a + a*/ {
 	margin-left: 1rem;
 }
+.product.empty {
+	height: 454px;
+}
+.product.empty a {
+	height: 400px;
+}
 
 /*.analytics .tag, .product-actions a {
 	display: block;
