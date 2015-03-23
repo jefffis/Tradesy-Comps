@@ -1384,9 +1384,9 @@ hr.min {
 	display: block;
 	text-align: left;
 }
-.product-actions {
+/*.product-actions {
 	padding-top: 1rem;
-}
+}*/
 .analytics .tag/*, .product-actions a*/, .analytics .tag + .tag/*, .product-actions a + a*/ {
 	margin-left: 1rem;
 }
