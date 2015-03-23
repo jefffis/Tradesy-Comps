@@ -91,6 +91,11 @@ $(function(){
     return false;
   });
 
+  $('#brand-cls').on('click', function() {
+    $('#brand-toggle').removeClass('show').text('Show all');
+    $('#brands .hide').removeClass('show');
+  });
+
   $('body').on('click', '.feature-this', function() {
     var featured = $('#featured'),
         featured_num = featured.find('.product').length,
@@ -148,25 +153,25 @@ $(function(){
   //   }
   // });
 
-  $(document).on('click', function(e) {
-    if(!$(e.target).closest('.product').length){
-      // $('.ctls').text('Manage');
-      // $('.product').removeClass('showing');
-    }
-  });
+  // $(document).on('click', function(e) {
+  //   if(!$(e.target).closest('.product').length){
+  //     $('.ctls').text('Manage');
+  //     $('.product').removeClass('showing');
+  //   }
+  // });
 
   if(window.location.hash){
     $('.product').removeClass('s');
-    $('.product .analytics').hide();
-    $('.product .ctls').hide();
+    $('.product .analytics').remove();
+    $('.product .ctls').remove();
     $('.sale').removeClass('hide');
     $('.brand.hide:first').removeClass('hide');
-    $('.empty').hide();
-    $('.chg').hide();
+    $('.empty').remove();
+    $('.chg').remove();
     $('#closet-header').removeClass('admin');
-    $('#profile-actions-seller').hide();
-    $('#profile-actions').removeClass('hide');
-    $('#seller-nav').addClass('hide');
+    $('#profile-actions-seller').remove();
+    $('#profile-actions').remove();
+    $('#seller-nav').remove();
   }
 
 });

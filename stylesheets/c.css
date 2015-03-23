@@ -577,11 +577,20 @@ figure div {
 	color: white;
 	display: block;
 	font-family: 'proxima-nova-regular', sans-serif;
-	padding: 1.25rem 0;
+	padding: .75rem;
 	line-height: 1;
 	text-align: center;
 	text-decoration: none;
 	vertical-align: middle;
+}
+.brand.cls a {
+	background: white;
+	color: #111;
+	padding: 1.25rem 0;
+	/*text-align: right;*/
+}
+.brand.cls a:hover {
+	box-shadow: none;
 }
 .brand.empty a {
 	color: #ee7873;
@@ -595,9 +604,16 @@ figure div {
 }
 .brand a:after {
 	/*content: ' / 'attr(data-num);*/
-	content: ' 'attr(data-num);
+	content: ' x'attr(data-num);
+	display: block;
 	font-family: 'proxima-nova-regular', sans-serif;
 	opacity: .5;
+	/*padding-top: .25rem;*/
+}
+.brand.cls a:after {
+	content: "\2715";
+	display: inline-block;
+	padding-left: .5rem;
 }
 .brand a:hover {
 	/*background: #efefef;*/
@@ -614,11 +630,12 @@ figure div {
 .empty, .brand.empty a {
 	background: #f3f5f9;
 	/*border: 1px solid white;*/
+	padding: 1.25rem 0;
 }
 .brand.empty {
 	background: none;
 	border: 0;
-	margin-bottom: 1rem;
+	/*margin-bottom: 1rem;*/
 }
 .empty:hover, .empty:hover a {
 	background: none;
@@ -642,7 +659,7 @@ figure div {
 .product.empty a {
 	display: table-cell;
 	font-size: 1.25rem;
-	height: 412px;
+	height: 372px;
 	padding: 0 1rem;
 	vertical-align: middle;
 }
