@@ -182,13 +182,14 @@ $(function(){
     $('.product .analytics').remove();
     $('.product .ctls').remove();
     $('.sale').removeClass('hide');
-    $('.brand.hide:first').removeClass('hide');
+    // $('.brand.hide:first').removeClass('hide');
     $('.empty').remove();
     $('.chg').remove();
     $('#closet-header').removeClass('admin');
     $('#profile-actions-seller').remove();
     $('#profile-actions').remove();
     $('#seller-nav').remove();
+    // $('#closet-search-wrap form').removeClass('hide');
   }
 
 });

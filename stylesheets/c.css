@@ -621,7 +621,7 @@ figure div {
 .brand.empty a:after {
 	display: none;
 }
-.brand + .brand + .brand a {
+.brand + .brand a {
 	/*border-top: 0;*/
 	margin-top: 1px;
 }
@@ -1099,25 +1099,72 @@ form, fieldset {
 	position: relative;
 }
 .closet-search span {
-	display: none;
+	/*display: inline-block;
+	float: left;
+	padding: .425rem .75rem .5rem 0;*/
+	display: block;
+	padding-bottom: .5rem;
+}
+.closet-search input:focus {
+	outline: 1px dotted currentColor;
 }
 .si {
 	border: 1px solid #ddd;
-	border-radius: 3px;
+	border-radius: 3px 0 0 3px;
 	box-shadow: 0 2px 0 #efefef inset;
+	float: left;
+	min-width: 75%;
+	position: relative;
+	width: auto;
+	outline: none;
 	padding: .5rem;
-	width: 100%;
+	/*width: 100%;*/
+}
+.si:focus {
+	border-color: #111;
+	box-shadow: none;
+	z-index: 10;
 }
 .sb {
-	background: white url(../images/search.png) no-repeat 0 0;
-	background-size: contain;
-	border: 1px solid white;
-	position: absolute;
-	height: 20px;
-	width: 20px;
-	right: .5rem;
-	text-indent: -9999px;
-	top: .6rem;
+	/*background: white url(../images/search.png) no-repeat center center;*/
+	/*background-size: contain;*/
+	background: #efefef;
+	border: 1px solid #ddd;
+	/*border-left: 0;*/
+	border-radius: 0 3px 3px 0;
+	color: #666;
+	display: inline-block;
+	float: left;
+	/*font-family: 'proxima-nova-semi', sans-serif;*/
+	/*font-size: .85rem;*/
+	line-height: 1;
+	margin-left: -1px;
+	min-width: 15%;
+	outline: none;
+	/*left: .5rem;*/
+	/*margin-left: -.5rem;*/
+	padding: .65rem;
+	position: relative;
+	/*height: 20px;*/
+	/*width: 20px;*/
+	/*right: .5rem;*/
+	/*text-indent: -9999px;*/
+	/*top: .5rem;*/
+	/*text-transform: uppercase;*/
+}
+.sb:hover {
+	background: #333;
+	border-color: #333;
+	color: white;
+}
+.sb:active {
+	background: #111;
+	border-color: #111;
+	color: rgba(255,255,255,0.75);
+}
+.sb:focus {
+	border-color: #111;
+	z-index: 10;
 }
 
 /**** about ****/
@@ -1191,6 +1238,18 @@ form, fieldset {
 
 .chg {
 	display: inline-block;
+}
+
+.closet-search span {
+	display: inline-block;
+	float: left;
+	padding: .425rem .75rem 0 0;
+}
+.si {
+	min-width: 15rem;
+}
+.sb {
+	min-width: 0;
 }
 
 }
