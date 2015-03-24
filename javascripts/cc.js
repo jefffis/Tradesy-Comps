@@ -205,16 +205,53 @@ $(function(){
     }
   });
 
+  $('#apply-filters').on('click', function() {
+    loading();
+  });
+
+  function loading() {
+    var height = $('#products').height(),
+      loading = '<div class="loading" id="loading" style="height: '+height+'px;"><span></span></div>';
+      if($(window).width() <= 900){
+        $('#filter-list').addClass('hide');
+        $('#filterssss').text('Show filters').removeClass('a');
+      }
+      $('#loading').remove();
+      $('#products').prepend(loading);
+      setTimeout(function() {
+        unLoading();
+      }, 1000);
+  }
+
+  function unLoading() {
+    $('#loading').remove();
+  }
+
+  function showFilters() {
+    $('#filter-list').removeClass('hide');
+    $('#filterssss').text('Hide filters').addClass('a');
+  }
+
+  if($(window).width() > 900){
+    showFilters();
+  }
+
   $('#filter-cls').on('click', function() {
     $('#filter-list').addClass('hide');
     $('#filterssss').text('Show filters').removeClass('a');
   });
 
   $('.filter-list .tag').on('click', function() {
-    if($(this).hasClass('atv')){
+    if($(this).hasClass('spn')){
+      return;
+    }
+   if($(this).hasClass('atv')){
       $(this).removeClass('atv');
     }else{
       $(this).addClass('atv');
+    }
+    if($(window).width() > 900){
+      loading();
     }
   });
 
