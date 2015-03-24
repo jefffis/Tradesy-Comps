@@ -197,7 +197,7 @@ $(function(){
       $('#filter-list').removeClass('hide');
       $(this).text('Hide filters').addClass('a');
       $('html,body').animate({
-        scrollTop: $('#filter-list').offset().top - 50
+        scrollTop: $('#first-filter').offset().top - 20
       }, 500);
     }else{
       $('#filter-list').addClass('hide');
