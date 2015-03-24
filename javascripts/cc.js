@@ -244,6 +244,9 @@ $(function(){
   $('#filter-cls').on('click', function() {
     $('#filter-list').addClass('hide');
     $('#filterssss').text('Show filters').removeClass('a');
+    $('html,body').animate({
+      scrollTop: $('#products').offset().top - 30
+    }, 500);
   });
 
   $('.filter-list .tag').on('click', function() {

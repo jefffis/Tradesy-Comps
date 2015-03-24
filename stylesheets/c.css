@@ -1223,7 +1223,7 @@ form, fieldset {
 	border-bottom: 1px solid #ddd;
 	border-top: 1px solid #ddd;
 	clear: both;	
-	margin: 2rem -1rem;
+	margin: 2rem -1rem 0;
 	padding: 1rem;
 	position: relative;
 }
@@ -1269,7 +1269,7 @@ form, fieldset {
 	padding-right: 30px;
 	z-index: 10;
 }
-.filter-set [disabled], .filter-set [disabled]:active {
+.filter-set [disabled], .filter-set [disabled]:hover, .filter-set [disabled]:active {
 	background: white;
 	border-color: white;
 	color: #ccc;
