@@ -1221,11 +1221,11 @@ form, fieldset {
 .filter-list {
 	/*border-bottom: 1px solid #ddd;*/
 	clear: both;
-	padding: 2rem 0 2rem;
+	padding: 3rem 0 2rem;
 	position: relative;
 }
 .filter-set + .filter-set, .filter-set + .btn {
-	margin-top: 1rem;
+	margin-top: 2rem;
 }
 .filter-set .tag {
 	border: 1px solid #ddd;
@@ -1235,12 +1235,15 @@ form, fieldset {
 }
 .filter-set .spn {
 	border: 0;
+	color: #111;
 	display: block;
+	letter-spacing: 1.5px;
 	padding: 0 0 .25rem;
+	text-transform: uppercase;
 }
-.spn:before {
-	content: "by ";
-}
+/*.spn:before {
+	content: "Filter by ";
+}*/
 .spn:after {
 	content: ":";
 }
@@ -1272,6 +1275,7 @@ form, fieldset {
 	/*background: rgba(0,0,0,0.0125);*/
 	background: white;
 	border-top: 1px solid #ddd;
+	color: #111;
 	cursor: pointer;
 	display: block;
 	/*padding: 0 .25rem;*/
@@ -1286,12 +1290,16 @@ form, fieldset {
 .filter-list .cls:before {
 	content: "Hide filters ";
 	/*color: #111;*/
-	font-size: .8rem;
+	/*font-size: .8rem;*/
 	position: relative;
 	top: -2px;
 }
 .filter-list .cls:after {
+	color: #888;
 	content: " \2715";
+}
+.filter-list .cls:active {
+	opacity: .5;
 }
 .filter-set .atv:after {
 	background: #fdebcb url(../images/chk-b.png) no-repeat center center;
@@ -1310,8 +1318,13 @@ form, fieldset {
 	width: 18px;
 }
 .filter-set .atv:hover:after {
-	background: #111 url(../images/cls-w.png) no-repeat center center;
+	background: transparent url(../images/cls-w.png) no-repeat center center;
 	background-size: 14px;
+}
+.filter-list .btn {
+	font-size: inherit;
+	letter-spacing: normal;
+	text-transform: none;
 }
 
 
@@ -1346,12 +1359,21 @@ form, fieldset {
 #apply-filters {
 	display: none
 }
+.filter-list {
+	padding-right: 3rem;
+}
+.filter-list .cls:before {
+	display: none;
+}
+.filter-list .cls:after {
+	font-size: 2rem;
+}
 .filter-list .cls {
 	border: 0;
 	display: inline-block;
 	position: absolute;
 	padding: 0;
-	top: 1rem;
+	top: 4rem;
 	bottom: auto;
 	width: auto;
 	text-align: left;

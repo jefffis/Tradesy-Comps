@@ -217,6 +217,11 @@ $(function(){
         $('#filterssss').text('Show filters').removeClass('a');
       }
       $('#loading').remove();
+      if($(window).width() <= 900){
+        $('html,body').animate({
+          scrollTop: $('#products').offset().top - 50
+        }, 500);
+      }
       $('#products').prepend(loading);
       setTimeout(function() {
         unLoading();
