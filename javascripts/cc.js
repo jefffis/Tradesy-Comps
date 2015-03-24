@@ -230,6 +230,10 @@ $(function(){
 
   function unLoading() {
     $('#loading').remove();
+    $('#first-filter .tag.add:first').fadeOut();
+    setTimeout(function() {
+      $('#first-filter .tag.add:first').remove();
+    }, 250);
   }
 
   function showFilters() {

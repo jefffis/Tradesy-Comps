@@ -1348,6 +1348,10 @@ form, fieldset {
 	letter-spacing: normal;
 	text-transform: none;
 }
+.filter-list .btn:active {
+	background: #B8504B;
+	color: rgba(255,255,255,0.75);
+}
 
 
 /**** loading ****/
@@ -1368,6 +1372,49 @@ form, fieldset {
 	content: "Loading...";
 	color: #111;
 	font-size: 1.5rem;
+}
+
+
+
+
+
+/**** paginatin ****/
+.pagination {
+	padding: 0 2rem;
+	position: relative;
+	text-align: center;
+}
+.pagination:before {
+	background: #efefef;
+	content: "";
+	height: 1px;
+	left: 0;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	z-index: 1;
+}
+.pagination span, .pagination a {
+	background: white;
+	display: inline-block;
+	line-height: 1;
+	padding: .5rem;
+	position: relative;
+	text-decoration: none;
+	z-index: 2;
+}
+.pagination a {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	color: #888;
+	text-align: center;
+	min-width: 2rem;
+}
+.pagination a + a {
+	margin-left: .25rem;
+}
+.pagination a:active {
+	background: #efefef;
 }
 
 
