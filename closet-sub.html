@@ -7,7 +7,8 @@
 
 		<title dir="ltr">Tradesy Product Page Comp</title>
 
-		<link href="stylesheets/closet.css" rel="stylesheet" type="text/css" />
+		<link href="stylesheets/c.css" rel="stylesheet" type="text/css" />
+		<script>document.addEventListener('touchstart', function() {},false);</script>
 	</head>
 	<body>
 		<header class="cf">
@@ -16,405 +17,370 @@
 			</div>
 		</header>
 
-		<nav class="seller-nav" id="seller-nav">
-			<span class="active">
-				<a href="">Closet</a>
-			</span>
-			<span>
-				<a href="">Settings</a>
-			</span>
-			<span>
-				<a href="">Money</a>
-			</span>
-		</nav>
-
-		<div class="closet-head mn"></div>
-
-		<div class="closet-wrapper">
-
-			<div class="width cf">
-
-				<div class="meta cf">
-				
-					<form>
-						<fieldset>
-							<label for="closet-search">
-								<span>Enter a search in {storename}</span>
-								<input type="search" id="closet-search" placeholder="Search for bags, clothing, etc." />
-								<input type="submit" value="Search" />
-							</label>
-						</fieldset>
-					</form>
-
-					<div class="breadcrumbs">
-						<a href="closet.html">{storename} Home</a>
-						<span>Bags</span>
+		<div class="closet-header" id="closet-header">
+			<div class="c-width table">
+				<div class="closet-main">
+					<div class="profile-pic">
+						<img src="https://pbs.twimg.com/profile_images/473111708735524864/kb0NFxZk_400x400.jpeg" id="user" d-src="images/default-user.png" />
 					</div>
-
+					<div class="profile-details">
+						<h1>Simply Chic Jewelry Designs-by Pat McLaughlin</h1>
+						<h2>
+							@penny_lane
+							<span loc>Santa Monica, CA</span>
+							<span><a href="">www.tradesy.com</a></span>
+						</h2>
+					</div>
+					<div class="profile-actions" id="profile-actions">
+						<button class="btn">Follow</button>
+						<button class="btn line">Message</button>
+					</div>
+					<div class="profile-social">
+						<a href=""></a>
+						<a href=""></a>
+						<a href=""></a>
+					</div>
 				</div>
-
-				<!-- <div class="sub-view-details cf">
-					<div class="filters" id="filters">
-						<button class="tag bags applied">Bags</button>
-						<button class="tag bags applied">Totes</button>
-					</div>
-				</div> -->
-
-				<!-- <div class="filter-toggles cf">
-					<div class="drops">
-						<div class="drops-wrap">
-							<nav>
-								<span>
-									<span>Browse Brands</span>
-								</span>
-								<span>
-									<a href="##http://yahoo.com/">Prada</a>
-								</span>
-								<span>
-									<a href="#http://yahoo.com/">Gucci</a>
-								</span>
-								<span>
-									<a href="###">Tory Burch</a>
-								</span>
-								<span>
-									<a href="###">Louis Vuitton</a>
-								</span>
-								<span>
-									<a href="###">Hm</a>
-								</span>
-							</nav>
-							<em></em>
-						</div>
-					</div>
-					<div class="drops">
-						<div class="drops-wrap">
-							<nav>
-								<span>
-									<span>Browse Styles</span>
-								</span>
-								<span>
-									<a href="##http://yahoo.com/">Hobos</a>
-								</span>
-								<span>
-									<a href="#http://yahoo.com/">Clutches</a>
-								</span>
-								<span>
-									<a href="###">Totes</a>
-								</span>
-							</nav>
-							<em></em>
-						</div>
-					</div>
-					<div class="drops">
-						<div class="drops-wrap">
-							<nav>
-								<span>
-									<span>Browse Price</span>
-								</span>
-								<span>
-									<a href="##http://yahoo.com/">Under $25</a>
-								</span>
-								<span>
-									<a href="#http://yahoo.com/">$25 and up</a>
-								</span>
-							</nav>
-							<em></em>
-						</div>
-					</div>
-				</div> -->
-
-					<!-- <div class="drops right">
-						<div class="drops-wrap">
-							<nav>
-								<span>
-									<span>Sort by:</span>
-								</span>
-								<span>
-									<a href="##http://yahoo.com/">Lowest price</a>
-								</span>
-								<span>
-									<a href="#http://yahoo.com/">Highest price</a>
-								</span>
-								<span>
-									<a href="###">Most favorited</a>
-								</span>
-								<span>
-									<a href="###">Recently listed</a>
-								</span>
-							</nav>
-							<em></em>
-						</div>
-					</div> -->
-	
-				</div>
-
 			</div>
-
-			<!-- <hr class="min" /> -->
-
-			<div class="racks width subs" id="like1">
-
-				<div class="rack sub cf">
-					<h2 data-num="26" class="left">
-						Bags
-					</h2>
-					<div class="tag right has-drop ckb">
-						<span>Sort listings by</span>
-						<nav>
-							<span>
-								<a href="#">Price: Low to high</a>
-							</span>
-							<span>
-								<a href="#">Price: High to low</a>
-							</span>
-							<span>
-								<a href="#">Most favorited</a>
-							</span>
-							<span>
-								<a href="#">Recently listed</a>
-							</span>
-						</nav>
-					</div>
-					<button class="tag right show showing ckb" id="filterssss">Hide filters</button>					
-
-					<div class="_product filter-list view clr cf" id="filter-list">
-						<!-- <h5>Filter by:</h5> -->
-						<div _class="fleft">
-							<div class="lg">
-								<!-- <p>Brands</p> -->
-								<span class="tag spn">Brands</span>
-								<button class="tag bags add" data-num="4">Gucci</button>
-								<button class="tag bags add" data-num="2">Prada</button>
-								<button class="tag bags add" data-num="1">Louis Vuitton</button>
-							</div>
-							<div class="lg l">
-								<!-- <p>Styles</p> -->
-								<span class="tag spn">Styles</span>
-								<button class="tag bags add" data-num="4">Tops</button>
-								<button class="tag bags add" data-num="2">Sweaters</button>
-								<button class="tag bags add atv" data-num="1">Totes</button>
-								<button class="tag bags add" data-num="1">Shorts</button>
-							</div>
-						</div>
-						<div _class="fleft">
-							<div class="sm">
-								<!-- <p>Sizes</p> -->
-								<span class="tag spn">Sizes</span>
-								<button class="tag bags add" data-num="4">M</button>
-								<button class="tag bags add" data-num="2">Size 6</button>
-								<button class="tag bags add" data-num="1">XS</button>
-							</div>
-							<div class="sm">
-								<!-- <p>Sizes</p> -->
-								<span class="tag spn">Condition</span>
-								<button class="tag bags add" data-num="4">Like New</button>
-								<button class="tag bags add" data-num="2">Gently Used</button>
-							</div>
-						</div>
-						
-						<span class="cls" id="filter-cls"></span>
-					</div>
-
-					<!-- <span class="tag right">
-						<div class="drops right">
-							<div class="drops-wrap">
-								<nav>
-									<span>
-										<span>Sort by:</span>
-									</span>
-									<span>
-										<a href="##http://yahoo.com/">Lowest price</a>
-									</span>
-									<span>
-										<a href="#http://yahoo.com/">Highest price</a>
-									</span>
-									<span>
-										<a href="###">Most favorited</a>
-									</span>
-									<span>
-										<a href="###">Recently listed</a>
-									</span>
-								</nav>
-								<em></em>
-							</div>
-						</div>
-					</span> -->
-					<!-- <div class="product filter-list" id="filter-list">
-						<div>
-							<h5>Filter by:</h5>
-							<p>Styles</p>
-							<span class="shown">
-								<a href="">Totes</a>
-							</span>
-							<span>
-								<a href="">Hobos</a>
-							</span>
-							<p>Brands</p>
-							<span>
-								<a href="">Gucci</a>
-							</span>
-							<span>
-								<a href="">Prada</a>
-							</span>
-							<p>Price</p>
-							<span class="rd">
-								<a href="">Under $25</a>
-							</span>
-							<span class="rd">
-								<a href="">Over $25</a>
-							</span>
-							<span class="no">
-								<a href="">View all filters</a>
-							</span>
-						</div>
-					</div> -->
-					<div class="product v2 v3 has-alt-img red on-sale clr">
-						<a href="##">
-							<figure><div>
-								<img data-src="https://item1.tradesy.com/r/c49f3b038304ca5e18b37b601ae806ad96667acffc7ebe7309ba6b45c98a0a43/355/355/bags/gucci/totes/gucci-canvas-silk-silver-hardware-tote-bag-navy-blue-and-red-1531235.jpg" data-o-src="https://item1.tradesy.com/r/2eafefdf6c5c625fd8534864687237bedf34eacde1d9456e5be6218390a5d719/355/355/bags/gucci/totes/gucci-canvas-silk-silver-hardware-tote-bag-navy-blue-and-red-1531235.jpg" src="https://item1.tradesy.com/r/2eafefdf6c5c625fd8534864687237bedf34eacde1d9456e5be6218390a5d719/355/355/bags/gucci/totes/gucci-canvas-silk-silver-hardware-tote-bag-navy-blue-and-red-1531235.jpg" alt="product name image" />
-							</div></figure>
-							<div class="details">
-								<span class="tag brand pill">Gucci</span>
-								<h3>
-									Canvas Positano Extra Large Navy Blue And Red Tote Bag
-								</h3>
-								<h4>
-									<sup>$</sup>1,697.50
-									<span><sup>$</sup>3,550</span>
-								</h4>
-								<p>
-									<!-- <span class="tag savings pill">10% off</span> -->
-									<span class="tag brand size"><em>Size:</em> 16 x 12.5 x 5.5</span>
-								</p>
-							</div>
+			<div class="img-cover"></div>
+			<div class="closet-sub">
+				<div class="c-width">
+					<p>
+						I'm a 27 year old Graduate Student living the life in Miami, FL. I've lived all &hellip; <a href="#about">more</a>
+					</p>
+					<nav>
+						<a href="#" class="active">
+							200
+							<small>items</small>
 						</a>
-						<!-- <span class="tag want action">Want</span> -->
-						<!-- <span class="tag want wanted">Wanted by 6</span> -->
-						<span class="tag want wanted n" data-want="60"></span>
-						<span class="tag sale ss">10% off</span>
-						<!-- <a href="#####" class="tag cart">Add to cart</a> -->
-					</div>
-					<div class="product v2 v3">
 						<a href="##">
-							<figure><div>
-								<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
-							</div></figure>
-							<div class="details">
-								<span class="tag brand pill">Louis Vuitton</span>
-								<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
-								<h4>
-									<sup>$</sup>493
-									<span><sup>$</sup>1,210</span>
-								</h4>
-								<p>
-									<span class="tag brand size"><em>Size:</em> 7.5 x 5.75 x 3.5</span>
-								</p>
-							</div>
+							8
+							<small>following</small>
 						</a>
-						<!-- <span class="tag want action">Want</span>
-						<span class="tag want wanted"></span>
-						<a href="#####" class="tag cart">Add to cart</a> -->
-						<span class="tag want wanted n" data-want="3"></span>
-					</div>
-					<div class="product v2 v3 _has-sold">
-						<a href="##">
-							<figure><div>
-								<img src="https://item5.tradesy.com/r/95c40fa0f0a96fee909d1690e228480eb874e2ca21c2a8e8de93c21d151987d3/203/307/bags/givenchy/os/givenchy-tote-bag-black-852424.jpg" alt="product name image" />
-							</div></figure>
-							<div class="details">
-								<span class="tag brand pill">Prada</span>
-								<h3>Rottweiler Antigona Black Tote Bag</h3>
-								<h4>
-									Sold for <sup>$</sup>1,350
-								</h4>
-								<p>
-									<!-- <span class="tag brand">Louis Vuitton</span> -->
-									<span class="tag brand size"><em>Size:</em> 9</span>
-								</p>
-							</div>
+						<a href="###">
+							2
+							<small>followers</small>
 						</a>
-						<!-- <span class="tag sold">Sold</span> -->
-						<!-- <span class="tag want action">Want</span>
-						<span class="tag want wanted">Wanted by 2</span>
-						<a href="#####" class="tag cart">Add to cart</a> -->
-						<span class="tag want wanted n" data-want="1"></span>
-					</div>
-					<div class="product v2 v3 has-alt-img">
-						<a href="##">
-							<figure><div>
-								<img data-src="https://item4.tradesy.com/r/267d042369dc81b5dc5ad7e071368ac476c3d9d6fd5deda789d61b1d3944ccf3/355/355/bags/gucci/clutches/gucci-clutch-black-983273.jpg" data-o-src="https://item4.tradesy.com/r/d07c72b913ee232814ea824258fc2ffe70f5ada52cb2fcadeace0ac6fbb828d8/203/307/bags/gucci/clutches/gucci-clutch-black-983273.jpg" src="https://item4.tradesy.com/r/d07c72b913ee232814ea824258fc2ffe70f5ada52cb2fcadeace0ac6fbb828d8/203/307/bags/gucci/clutches/gucci-clutch-black-983273.jpg" alt="product name image" />
-							</div></figure>
-							<div class="details">
-								<span class="tag brand pill">Tory Burch</span>
-								<h3>Sequin Buckled Handbag Black Clutch</h3>
-								<h4>
-									<sup>$</sup>723
-									<span><sup>$</sup>1,790</span>
-								</h4>
-								<p>
-									<!-- <span class="tag brand">Louis Vuitton</span> -->
-									<span class="tag brand size"><em>Size:</em> 8.5</span>
-								</p>
-							</div>
+						<a href="###">
+							65
+							<small>favs</small>
 						</a>
-						<!-- <span class="tag want action">Want</span>
-						<span class="tag want wanted"></span>
-						<a href="#####" class="tag cart">Add to cart</a> -->
-						<span class="tag want wanted n" data-want="0"></span>
-					</div>
-					<div class="product v2 v3 has-alt-img">
-						<a href="##">
-							<figure><div>
-								<img data-src="https://item4.tradesy.com/r/267d042369dc81b5dc5ad7e071368ac476c3d9d6fd5deda789d61b1d3944ccf3/355/355/bags/gucci/clutches/gucci-clutch-black-983273.jpg" data-o-src="https://item4.tradesy.com/r/d07c72b913ee232814ea824258fc2ffe70f5ada52cb2fcadeace0ac6fbb828d8/203/307/bags/gucci/clutches/gucci-clutch-black-983273.jpg" src="https://item4.tradesy.com/r/d07c72b913ee232814ea824258fc2ffe70f5ada52cb2fcadeace0ac6fbb828d8/203/307/bags/gucci/clutches/gucci-clutch-black-983273.jpg" alt="product name image" />
-							</div></figure>
-							<div class="details">
-								<span class="tag brand pill">Tory Burch</span>
-								<h3>Sequin Buckled Handbag Black Clutch</h3>
-								<h4>
-									<sup>$</sup>723
-									<span><sup>$</sup>1,790</span>
-								</h4>
-								<p>
-									<!-- <span class="tag brand">Louis Vuitton</span> -->
-									<span class="tag brand size"><em>Size:</em> 8.5</span>
-								</p>
-							</div>
-						</a>
-						<!-- <span class="tag want action">Want</span>
-						<span class="tag want wanted"></span>
-						<a href="#####" class="tag cart">Add to cart</a> -->
-						<span class="tag want wanted n" data-want="0"></span>
-					</div>
-					<div class="product v2 v3 has-alt-img">
-						<a href="##">
-							<figure><div>
-								<img data-src="https://item4.tradesy.com/r/267d042369dc81b5dc5ad7e071368ac476c3d9d6fd5deda789d61b1d3944ccf3/355/355/bags/gucci/clutches/gucci-clutch-black-983273.jpg" data-o-src="https://item4.tradesy.com/r/d07c72b913ee232814ea824258fc2ffe70f5ada52cb2fcadeace0ac6fbb828d8/203/307/bags/gucci/clutches/gucci-clutch-black-983273.jpg" src="https://item4.tradesy.com/r/d07c72b913ee232814ea824258fc2ffe70f5ada52cb2fcadeace0ac6fbb828d8/203/307/bags/gucci/clutches/gucci-clutch-black-983273.jpg" alt="product name image" />
-							</div></figure>
-							<div class="details">
-								<span class="tag brand pill">Tory Burch</span>
-								<h3>Sequin Buckled Handbag Black Clutch</h3>
-								<h4>
-									<sup>$</sup>723
-									<span><sup>$</sup>1,790</span>
-								</h4>
-								<p>
-									<!-- <span class="tag brand">Louis Vuitton</span> -->
-									<span class="tag brand size"><em>Size:</em> 8.5</span>
-								</p>
-							</div>
-						</a>
-						<!-- <span class="tag want action">Want</span>
-						<span class="tag want wanted"></span>
-						<a href="#####" class="tag cart">Add to cart</a> -->
-						<span class="tag want wanted n" data-want="0"></span>
-					</div>
+					</nav>
 				</div>
-
 			</div>
-
 		</div>
 
+		<div class="m-only">
+			<nav class="tabs cf">
+				<a href="#" data-num="200">Listings</a>
+				<a href="" data-num="55">Sold</a>
+				<a href="#about">About</a>
+			</nav>
+		</div>
+
+		<!-- <div class="breadcrumbs width">
+			<a href="closet.html">&laquo; Back to {storename}&rsquo;s Closet</a>
+		</div> -->
+
+		<div class="width cf _mar-t _mar-b-min" id="closet-search-wrap">
+			<form class="left closet-search cf">
+				<fieldset>
+					<label for="closet-search">
+						<span>Search for</span>
+						<input type="search" id="closet-search" class="si" placeholder="bags, clothing, etc." />
+						<input type="submit" class="sb" value="Search" />
+					</label>
+				</fieldset>
+			</form>
+		</div>
+
+		<div class="racks width" id="like1">
+
+			<div class="rack sub no-b cf" id="featured">
+				
+				<!-- <button class="tag right show ckb" id="filterssss">Show filters</button> -->
+				<!-- <button class="tag left ckb">Search</button> -->
+
+				<h2 data-num="26">
+					Department Name
+					<!-- <a href="##">Shop all</a> -->
+				</h2>
+
+				<button class="tag left show ckb" id="filterssss">Show filters</button>
+				<div class="tag right has-drop ckb">
+					<span>Sort by</span>
+					<nav>
+						<span>
+							<a href="#">Price: Low to high</a>
+						</span>
+						<span>
+							<a href="#">Price: High to low</a>
+						</span>
+						<span>
+							<a href="#">Most favorited</a>
+						</span>
+						<span>
+							<a href="#">Recently listed</a>
+						</span>
+					</nav>
+				</div>
+
+				<hr class="uber-min clr" />
+
+				<div class="filter-list hide cf" id="filter-list">
+					<div class="filter-set lg">
+						<span class="tag spn">Brands</span>
+						<button class="tag add" disabled data-num="4">Gucci</button>
+						<button class="tag add" data-num="2">Prada</button>
+						<button class="tag add" data-num="1">Louis Vuitton</button>
+						<button class="tag add" data-num="4">Tops</button>
+						<button class="tag add" data-num="2">Sweaters</button>
+						<button class="tag add atv" data-num="1">Totes</button>
+						<button class="tag add" data-num="1">Shorts</button>
+						<button class="tag add" data-num="4">Gucci</button>
+						<button class="tag add" data-num="2">Prada</button>
+						<button class="tag add" data-num="1">Louis Vuitton</button>
+					</div>
+					<div class="filter-set lg l">
+						<span class="tag spn">Styles</span>
+						<button class="tag add" disabled data-num="4">Tops</button>
+						<button class="tag add" data-num="2">Sweaters</button>
+						<button class="tag add atv" data-num="1">Totes</button>
+						<button class="tag add" data-num="1">Shorts</button>
+					</div>
+					<div class="filter-set sm">
+						<span class="tag spn">Sizes</span>
+						<button class="tag add" data-num="4">M</button>
+						<button class="tag add" data-num="2">Size 6</button>
+						<button class="tag add" data-num="1">XS</button>
+					</div>
+					<div class="filter-set sm">
+						<span class="tag spn">Condition</span>
+						<button class="tag add" data-num="4">Like New</button>
+						<button class="tag add" data-num="2">Gently Used</button>
+					</div>				
+					<button class="btn">Apply filters</button>
+					<span class="cls ckb" id="filter-cls"></span>
+				</div>
+
+				<div class="product clr on-sale" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+					<span class="tag sale hide">10% off</span>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+				<div class="product" id="prod_id2">
+					<a href="##">
+						<figure><div>
+							<img src="https://item4.tradesy.com/r/f6b553c8e543455e43ae18fea94fd88feaa89b055b34bb44358c0f44e31ef354/203/307/bags/louis-vuitton/shoulder-bags/louis-vuitton-perforated-leather-shoulder-bag-monogram-1702288.jpg" alt="product name image" />
+						</div></figure>
+						<div class="details">
+							<span class="tag brand-name">Louis Vuitton</span>
+							<h3>2006 Ltd Edition Perforated Mini Trocadero Shoulder Bag</h3>
+							<h4>
+								<sup>$</sup>493
+								<span><sup>$</sup>1,210</span>
+							</h4>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- <hr class="min"> -->
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="javascripts/c.js"></script>
+		<script src="javascripts/cc.js"></script>
+
 	</body>
 </html>

@@ -192,4 +192,30 @@ $(function(){
     // $('#closet-search-wrap form').removeClass('hide');
   }
 
+  $('#filterssss').on('click', function() {
+    if($('#filter-list').hasClass('hide')){
+      $('#filter-list').removeClass('hide');
+      $(this).text('Hide filters').addClass('a');
+      $('html,body').animate({
+        scrollTop: $('#filter-list').offset().top - 50
+      }, 500);
+    }else{
+      $('#filter-list').addClass('hide');
+      $(this).text('Show filters').removeClass('a');
+    }
+  });
+
+  $('#filter-cls').on('click', function() {
+    $('#filter-list').addClass('hide');
+    $('#filterssss').text('Show filters').removeClass('a');
+  });
+
+  $('.filter-list .tag').on('click', function() {
+    if($(this).hasClass('atv')){
+      $(this).removeClass('atv');
+    }else{
+      $(this).addClass('atv');
+    }
+  });
+
 });
