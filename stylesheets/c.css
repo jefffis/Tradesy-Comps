@@ -1116,16 +1116,27 @@ form, fieldset {
 
 
 /**** search form ****/
+.closet-search-wrap {
+	background: rgba(0,0,0,0.0125);
+	border-bottom: 1px solid #ddd;
+	/*border-top: 0;*/
+	margin: auto auto 1.5rem;
+	max-width: 1500px;
+	padding: .75rem 1rem 1rem;
+	text-align: center;
+}
 .closet-search {
 	/*min-width: 20rem;*/
 	/*max-width: 30rem;*/
 	/*margin-bottom: 1rem;*/
 	width: 100%;
+	display: inline-block;
 	max-width: 30rem;
 }
 .closet-search label {
 	display: block;
 	position: relative;
+	text-align: left;
 }
 .closet-search span {
 	/*display: inline-block;
@@ -1143,9 +1154,9 @@ form, fieldset {
 	border-radius: 3px 0 0 3px;
 	box-shadow: 0 2px 0 #efefef inset;
 	float: left;
-	min-width: 75%;
+	width: 75%;
 	position: relative;
-	width: auto;
+	/*width: auto;*/
 	outline: none;
 	padding: .5rem;
 	/*width: 100%;*/
@@ -1169,7 +1180,7 @@ form, fieldset {
 	/*font-size: .85rem;*/
 	line-height: 1;
 	margin-left: -1px;
-	min-width: 15%;
+	width: 25%;
 	outline: none;
 	/*left: .5rem;*/
 	/*margin-left: -.5rem;*/
@@ -1454,16 +1465,21 @@ form, fieldset {
 	display: inline-block;
 }
 
+.closet-search-wrap {
+	padding: 1rem 1rem .7rem;
+}
 .closet-search span {
 	display: inline-block;
 	float: left;
 	padding: .425rem .75rem 0 0;
 }
 .si {
-	min-width: 15rem;
+	min-width: 20rem;
+	width: auto;
 }
 .sb {
 	min-width: 0;
+	width: auto;
 }
 
 }
@@ -1554,7 +1570,7 @@ form, fieldset {
 /**** closet head mobile ****/
 @media screen and (min-width: 1502px){
 
-.closet-header {
+.closet-header, .closet-search-wrap {
 	border: 1px solid #ddd;
 	border-top: 0;
 }
