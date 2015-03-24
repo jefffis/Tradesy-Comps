@@ -1120,7 +1120,7 @@ form, fieldset {
 	background: rgba(0,0,0,0.0125);
 	border-bottom: 1px solid #ddd;
 	/*border-top: 0;*/
-	margin: auto auto 1.5rem;
+	margin: auto;
 	max-width: 1500px;
 	padding: .75rem 1rem 1rem;
 	text-align: center;
@@ -1421,6 +1421,25 @@ form, fieldset {
 }
 
 
+
+
+/**** breadcrumbs ****/
+.breadcrumbs {
+	font-size: .85rem;
+	padding-bottom: 1rem;
+}
+.breadcrumbs span {
+	display: inline-block;
+}
+.breadcrumbs span:before {
+	content: "/";
+	padding: 0 .5rem;
+	opacity: .5;
+}
+
+
+
+
 /***** tablet & up ****/
 .t-up, .m-only, .chg {
 	display: none;
@@ -1516,6 +1535,7 @@ form, fieldset {
 }
 
 .closet-search-wrap {
+	margin-bottom: 1rem;
 	padding: 1rem 1rem .7rem;
 }
 .closet-search span {
@@ -1759,24 +1779,35 @@ form, fieldset {
 	display: block;
 }
 .tabs {
-	text-align: center;
+	/*position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;*/
 	border-bottom: 1px solid #ddd;
+	text-align: center;
+	/*border-top: 1px solid #ddd;*/
+	/*background: white;
+	z-index: 1100;*/
 }
 .tabs a {
 	display: inline-block;
 	float: left;
+	font-size: .85rem;
 	padding: .5rem;
 	text-decoration: none;
-	width: 33%;
+	width: 25%;
 }
-.tabs a:active {
+.tabs a:active, .tabs .active {
 	background: #efefef;
+}
+.tabs .active {
+	color: #888;
 }
 .tabs a + a {
 	border-left: 1px solid #ddd;
 }
 .tabs a:last-child {
-	width: 34%;
+	/*width: 34%;*/
 }
 hr.min {
 	margin: 1rem 0;
@@ -1860,7 +1891,7 @@ hr.min {
 	float: left;
 	padding: .5rem;
 	text-decoration: none;
-	width: 33%;
+	width: 25%;
 }
 .tabs a:active {
 	background: #efefef;
@@ -1868,9 +1899,9 @@ hr.min {
 .tabs a + a {
 	border-left: 1px solid #ddd;
 }
-.tabs a:last-child {
+/*.tabs a:last-child {
 	width: 34%;
-}
+}*/
 
 }
 
