@@ -1274,6 +1274,9 @@ form, fieldset {
 	border-color: white;
 	color: #ccc;
 }
+.filter-set [disabled]:after {
+	display: none;
+}
 .filter-list .cls {
 	/*background: rgba(0,0,0,0.0125);*/
 	/*background: white;
@@ -1284,6 +1287,7 @@ form, fieldset {
 	display: inline-block;
 	padding: .25rem;
 	margin-left: 1rem;
+	cursor: pointer;
 	/*padding: .5rem;
 	position: fixed;
 	bottom: 0;
@@ -1304,6 +1308,7 @@ form, fieldset {
 	content: " \2715";
 }*/
 .filter-list .cls:active {
+	background: none;
 	opacity: .5;
 }
 .filter-set .atv:after, .filter-set .atv:focus:after {
