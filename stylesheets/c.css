@@ -1338,10 +1338,10 @@ form, fieldset {
 	right: .35rem;
 	width: 18px;
 }
-.filter-set .atv:hover:after {
+/*.filter-set .atv:hover:after {
 	background: transparent url(../images/cls-w.png) no-repeat center center;
 	background-size: 14px;
-}
+}*/
 .filter-list .btn {
 	border-radius: 3px;
 	font-size: inherit;
@@ -1476,6 +1476,10 @@ form, fieldset {
 .filter-list .cls:after {
 	color: #888;
 	content: " \2715";
+}
+.filter-set .atv:hover:after {
+	background: transparent url(../images/cls-w.png) no-repeat center center;
+	background-size: 14px;
 }
 
 }

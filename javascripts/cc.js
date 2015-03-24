@@ -241,6 +241,11 @@ $(function(){
     $('#filterssss').text('Hide filters').addClass('a');
   }
 
+  // function clickOff(e) {
+  //   $(e).append('<input type="radio" id="clickable" />');
+  //   $('#clickable').click().blur();
+  // }
+
   if($(window).width() > 900){
     showFilters();
   }
@@ -261,6 +266,7 @@ $(function(){
       $(this).removeClass('atv');
     }else{
       $(this).addClass('atv');
+      // clickOff('body');
     }
     if($(window).width() > 900){
       loading();
