@@ -245,7 +245,7 @@ header img {
 	text-decoration: none;
 }
 .rack h2[data-num]:after {
-	content: 'x'attr(data-num);
+	content: '('attr(data-num)')';
 	letter-spacing: normal;
 	opacity: .5;
 	text-transform: none;
@@ -686,6 +686,7 @@ figure div {
 .empty-set {
 	color: #111;
 	font-size: 1.5rem;
+	line-height: 1.2;
 	margin: auto;
 	max-width: 40rem;
 	padding: 2rem 0 1rem;
@@ -704,6 +705,7 @@ figure div {
 	color: #888;
 	display: block;
 	font-size: .85rem;
+	padding-top: .25rem;
 }
 .product.ex {
 	height: 150px;
@@ -776,12 +778,12 @@ figure div {
 	margin-top: 1px;
 }
 .brand a:after {
-	/*content: ' / 'attr(data-num);*/
-	content: ' x'attr(data-num);
-	display: block;
+	content: '('attr(data-num)')';
+	/*content: ' x'attr(data-num);*/
+	display: inline-block;
 	font-family: 'proxima-nova-regular', sans-serif;
 	opacity: .5;
-	/*padding-top: .25rem;*/
+	padding-left: .25rem;
 }
 .brand.cls a:after {
 	content: "\2715";
@@ -1257,7 +1259,7 @@ form, fieldset {
 	background: rgba(0,0,0,0.0125);
 	border-bottom: 1px solid #ddd;
 	/*border-top: 0;*/
-	margin: auto;
+	margin: auto auto .75rem;
 	max-width: 1500px;
 	padding: .75rem 1rem 1rem;
 	text-align: center;
@@ -1696,6 +1698,10 @@ form, fieldset {
 	float: left;
 	padding: 0 .5rem;
 	width: 25%;
+}
+.brand a:after {
+	display: block;
+	padding-left: 0;
 }
 .brand.show {
 	display: inline-block !important;
