@@ -208,7 +208,7 @@ $(function(){
       }, 500);
     }else{
       $('#filter-list').addClass('hide');
-      $(this).text('Show filters').removeClass('a');
+      $(this).text('Filter').removeClass('a');
     }
   });
 
@@ -221,7 +221,7 @@ $(function(){
       loading = '<div class="loading" id="loading" style="height: '+height+'px;"><span></span></div>';
       if($(window).width() <= 900){
         $('#filter-list').addClass('hide');
-        $('#filterssss').text('Show filters').removeClass('a');
+        $('#filterssss').text('Filter').removeClass('a');
       }
       $('#loading').remove();
       if($(window).width() <= 900){
@@ -257,7 +257,7 @@ $(function(){
       var that = this;
       setTimeout(function() {
         $(that).fadeIn().addClass('show');
-      }, 15 * i);
+      }, 5 * i);
     });
   }
 
@@ -276,7 +276,7 @@ $(function(){
 
   $('#filter-cls').on('click', function() {
     $('#filter-list').addClass('hide');
-    $('#filterssss').text('Show filters').removeClass('a');
+    $('#filterssss').text('Filter').removeClass('a');
     $('html,body').animate({
       scrollTop: $('#products').offset().top - 30
     }, 500);
