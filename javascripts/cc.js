@@ -145,23 +145,26 @@ $(function(){
 
   });
 
-  // $('.ctls').on('click', function() {
-  //   if($(this).parent().hasClass('showing')){
-  //     $(this).text('Manage');
-  //     $(this).parent().removeClass('showing');
-  //   }else{
-  //     $('.ctls').text('Manage');
-  //     $('.product').removeClass('showing');
-  //     $(this).text('Close');
-  //     $(this).parent().addClass('showing');
-  //   }
-  // });
+  $('.ctls').on('click', function() {
+    if($(this).parent().hasClass('show')){
+      // $(this).text('Manage');
+      $(this).parent().removeClass('show');
+    }else{
+      // $('.ctls').text('Manage');
+      $('.product').removeClass('show');
+      // $(this).text('Close');
+      $(this).parent().addClass('show');
+    }
+  });
 
   $(document).on('click', function(e) {
     // if(!$(e.target).closest('.product').length){
     //   $('.ctls').text('Manage');
     //   $('.product').removeClass('showing');
     // }
+    if(!$(e.target).closest('.ctls').length){
+      $('.product').removeClass('show');
+    }
     if(!$(e.target).closest('.has-drop').length){
       $('.has-drop').removeClass('showing');
     }

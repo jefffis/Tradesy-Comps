@@ -290,7 +290,7 @@ header img {
 .s {
 	/*border-collapse: collapse;*/
 	border: 0;
-	box-shadow: 0 0 0 1px #ddd;
+	/*box-shadow: 0 0 0 1px #ddd;*/
 }
 .s:hover {
 	box-shadow: 0 0 0 1px #888;
@@ -545,6 +545,7 @@ figure div {
 	/*background: white;*/
 	/*display: none;*/
 	border-top: 1px solid #ddd;
+	margin: 0 .75rem;
 	padding: .75rem 0;
 	/*position: absolute;*/
 	/*top: 2.3rem;
@@ -565,7 +566,7 @@ figure div {
 }
 .ctls:after {
 	background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-chevron-down-256.png) no-repeat center center;
-	background-size: 24px;
+	background-size: 18px;
 	content: "";
 	display: inline-block;
 	height: 15px;
@@ -612,7 +613,7 @@ figure div {
 	text-align: left;
 	/*padding: .25rem 0 .75rem;*/
 }
-.product:hover .product-actions {
+.product.show .product-actions {
 	display: block;
 }
 .product .product-actions a {
