@@ -853,8 +853,9 @@ figure div {
 	max-width: 1500px*/
 	/*background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;*/
 	/*background: #111 url(https://assets.bezar.com/store/lookbook_images/attachments/000/000/084/full/1.jpg) no-repeat;*/
-	background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/0v28362V3C0p0V0J222p/new-photo.jpg) no-repeat center center;
-	background-size: cover;
+	/*background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/0v28362V3C0p0V0J222p/new-photo.jpg) no-repeat center center;*/
+	background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/24132I0x3z073m1o1Q20/default-back-crop-b.png);
+	background-size: 100px;
 	margin: auto;
 	max-width: 1500px;
 	position: relative;
