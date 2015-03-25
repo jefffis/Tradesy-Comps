@@ -612,7 +612,7 @@ figure div {
 
 /***** empty set ****/
 .empty-set {
-	color: #999;
+	color: #111;
 	font-size: 1.5rem;
 	margin: auto;
 	max-width: 40rem;
@@ -629,7 +629,7 @@ figure div {
 	border: 1px solid #ddd;
 }
 .empty-set small {
-	color: #111;
+	color: #888;
 	display: block;
 	font-size: .85rem;
 }
