@@ -406,49 +406,52 @@ figure div {
 	top: -.175rem;
 }
 .on-sale a h4 {
-	  color: #ee7873;
+	color: #ee7873;
 	font-family: 'proxima-nova-semi', sans-serif;
+}
+.product .n {
+	color: #111;
 }
 .product .n:before {
 	content: "";
 	background: url(../images/heart.png) no-repeat 0 -19px;
 	background-size: 20px;
-	display: inline-block;
+	display: block;
 	height: 20px;
 	opacity: .5;
-	position: relative;
-	top: 3px;
+	margin: auto auto .25rem;
 	width: 20px;
 }
-.product .wanted.n:after {
-	content: attr(data-want);
-	display: inline-block;
+.product .n:after {
+	/*content: attr(data-want);*/
+	color: #888;
+	content: "wants";
+	display: block;
+	font-size: .75rem;
+	text-align: center;
+	/*padding-left: 1.275rem;*/
 	/* font-family: 'proxima-nova-semi', sans-serif; */
-	margin-left: .15rem;
+	/*margin-left: .15rem;
 	position: relative;
 	top: -.15rem;
 	text-align: left;
-	width: 1rem;
+	width: 1rem;*/
 }
 .product .vw:before {
 	background: url(../images/view.png) no-repeat 0 -19px;
 	background-size: 20px;
-	display: inline-block;
-	height: 20px;
-	opacity: .5;
-	position: relative;
-	top: 3px;
-	width: 20px;
+}
+.product .vw:after {
+	content: "views";
+	/*padding-left: .9rem;*/
 }
 .product .shr:before {
 	background: url(../images/share.png) no-repeat 0 -19px;
 	background-size: 20px;
-	display: inline-block;
-	height: 20px;
-	opacity: .5;
-	position: relative;
-	top: 2px;
-	width: 20px;
+}
+.product .shr:after {
+	content: "shares";
+	/*padding-left: 2.5rem;*/
 }
 .product .want.n:hover {
 	color: #ee7873;
@@ -567,7 +570,7 @@ figure div {
 	font-size: .85rem;
 	width: 100%;
 	margin: 5px 0 0;
-	text-align: left;
+	/*text-align: left;*/
 	transition: all .25s ease-in-out;
 }
 .analytic-details:before {
@@ -1507,7 +1510,7 @@ form, fieldset {
 	border: 1px solid #ddd;
 	border-radius: 20px;
 	box-shadow: none;
-	margin-bottom: .25rem;
+	margin-bottom: .35rem;
 	position: relative;
 }
 .filter-set [data-num]:after {
@@ -2306,11 +2309,22 @@ hr.min {
 /*.product-actions {
 	display: block;
 }*/
+.product .n:before {
+	display: none;
+}
+.product .n:after {
+	display: inline-block;
+	/*font-size: 1rem;*/
+	padding-left: .25rem;
+}
 .search {
 	display: none;
 }
 .analytics .tag/*, .product-actions a*/, .analytics .tag + .tag/*, .product-actions a + a*/ {
-	margin-left: 1rem;
+	margin-left: 0;
+}
+.analytics .tag + .tag {
+	margin-top: .5rem;
 }
 .product.empty {
 	height: 454px;
