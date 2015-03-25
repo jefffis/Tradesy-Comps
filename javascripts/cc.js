@@ -184,7 +184,7 @@ $(function(){
     }
   });
 
-  if(window.location.hash){
+  if(window.location.hash && !!$('#closet-header-hero-toggle').length){
     $('.product').removeClass('s');
     $('.product .analytics').remove();
     $('.product .ctls').remove();
@@ -252,13 +252,19 @@ $(function(){
     $('#filterssss').text('Hide filters').addClass('a');
   }
 
-  function showAllFilters() {
-    $('#first-filter .hide').each(function(i) {
-      var that = this;
-      setTimeout(function() {
-        $(that).fadeIn().addClass('show');
-      }, 5 * i);
-    });
+  function showAllFilters(e) {
+    // e.clone().removeClass('hide').text('Loading...');
+    setTimeout(function() {
+      $('#first-filter .hide').each(function(i) {
+        var that = this;
+        setTimeout(function() {
+          $(that).fadeIn().addClass('show');
+        }, 5 * i);
+      });
+    }, 750);
+    setTimeout(function() {
+      e.addClass('all').text('');
+    }, 1500);
   }
 
   function unShowAllFilters() {
@@ -302,8 +308,19 @@ $(function(){
       $(this).removeClass('all hide show');
       unShowAllFilters();
     }else{
-      $(this).addClass('all hide');
-      showAllFilters();
+      $(this).text('Loading...');
+      showAllFilters($(this));
+    }
+  });
+
+  $('#searching').on('click', function() {
+    if($(this).hasClass('a')){
+      $(this).removeClass('a').text('Search');
+      $('#closet-search-wrap').hide();
+    }else{
+      $(this).addClass('a').text('Hide search');
+      $('#closet-search-wrap').show();
+      $('#closet-search').focus();
     }
   });
 

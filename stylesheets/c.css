@@ -1306,6 +1306,12 @@ form, fieldset {
 	right: .4rem;
 	width: 18px;
 }
+.a.search {
+	padding-right: .75rem;
+}
+.a.search:after {
+	display: none;
+}
 
 
 
@@ -1537,9 +1543,9 @@ form, fieldset {
 	text-decoration: underline;
 	/*border-top: 1px solid currentColor;*/
 }
-.filter-set .more:before {
+/*.filter-set .more:before {
 	content: "Show";
-}
+}*/
 .filter-set .more:after {
 	/*content: "View all"*/
 	/*content: "\2026";*/
@@ -1560,7 +1566,7 @@ form, fieldset {
 	width: 20px;
 }
 .filter-set .all:before {
-	content: "Hide";
+	content: "Show less";
 	font-size: 1rem;
 	line-height: inherit;
 	position: relative;
