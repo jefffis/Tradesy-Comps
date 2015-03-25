@@ -221,6 +221,10 @@ $(function(){
         $('html,body').animate({
           scrollTop: $('#products').offset().top - 50
         }, 500);
+      }else if($(window).scrollTop() < $('#filter-list').offset().top){
+        $('html,body').animate({
+          scrollTop: $('#filter-list').offset().top - 50
+        }, 500);
       }
       $('#products').prepend(loading);
       setTimeout(function() {
