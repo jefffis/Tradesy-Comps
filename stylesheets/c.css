@@ -1264,6 +1264,28 @@ form, fieldset {
 	margin-bottom: .25rem;
 	position: relative;
 }
+.filter-set .tag.show {
+	display: inline-block !important;
+}
+.filter-set .more {
+	background: #efefef;
+	position: relative;
+}
+.filter-set .more:before {
+	content: "View all"
+	/*content: "\2026";
+	font-size: 1.5rem;
+	line-height: 0;
+	position: relative;
+	top: -3px;*/
+}
+.filter-set .all:before {
+	content: "Hide";
+	font-size: 1rem;
+	line-height: inherit;
+	position: relative;
+	top: 0;
+}
 .filter-set .spn {
 	border: 0;
 	color: #111;
@@ -1288,7 +1310,7 @@ form, fieldset {
 }
 .filter-set .spn:active {
 	background: white;
-	color: currentColor;	
+	color: #111;
 }
 .filter-set .atv {
 	background: #111;
@@ -1471,7 +1493,7 @@ form, fieldset {
 }
 .filter-list {
 	/*padding-top: 1rem;*/
-	padding-right: 3rem;
+	padding-right: 4rem;
 }
 .filter-list .cls:before {
 	display: none;
@@ -1484,8 +1506,8 @@ form, fieldset {
 	display: inline-block;
 	position: absolute;
 	padding: 0;
-	top: 1.5rem;
-	right: 1rem;
+	top: .85rem;
+	right: .85rem;
 	bottom: auto;
 	width: auto;
 	text-align: left;
@@ -1497,6 +1519,22 @@ form, fieldset {
 .filter-set .atv:hover:after {
 	background: transparent url(../images/cls-w.png) no-repeat center center;
 	background-size: 14px;
+}
+.filter-set .spn {
+	display: inline-block;
+	float: left;
+	padding-right: .75rem;
+	padding-top: .65rem;
+	width: 12%;
+}
+.filter-set + .filter-set {
+	clear: both;
+	padding-top: 1rem;
+}
+.pills {
+	display: block;
+	float: right;
+	width: 88%;
 }
 
 }
