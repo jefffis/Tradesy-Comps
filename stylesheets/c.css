@@ -244,7 +244,7 @@ header img {
 	text-transform: uppercase;
 	text-decoration: none;
 }
-.rack [data-num]:after {
+.rack h2[data-num]:after {
 	content: 'x'attr(data-num);
 	letter-spacing: normal;
 	opacity: .5;
