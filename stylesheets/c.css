@@ -1400,12 +1400,38 @@ form, fieldset {
 	display: inline-block !important;
 }
 .filter-set .more {
-	background: #efefef;
-	border-radius: 3px;
+	/*background: #efefef;*/
+	border-radius: 0;
+	border: 0;
+	color: #111;
+	display: inline-block;
 	position: relative;
+	/*padding-top: .5rem;*/
+	margin-top: .5rem;
+	text-decoration: underline;
+	/*border-top: 1px solid currentColor;*/
 }
 .filter-set .more:before {
-	content: "View all"
+	content: "Show";
+}
+.filter-set .more:after {
+	/*content: "View all"*/
+	/*content: "\2026";*/
+	/*font-size: 1.5rem;
+	line-height: 0;
+	position: relative;
+	top: -.2rem;*/
+	background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-chevron-down-256.png) no-repeat center center;
+	background-size: 18px;
+	content: "";
+	display: none;
+	height: 15px;
+	/*padding-left: .15rem;*/
+	position: relative;
+	line-height: 0;
+	/*opacity: .25;*/
+	top: 4px;
+	width: 20px;
 }
 .filter-set .all:before {
 	content: "Hide";
@@ -1413,6 +1439,10 @@ form, fieldset {
 	line-height: inherit;
 	position: relative;
 	top: 0;
+}
+.filter-set .all:after {
+	transform: rotate(180deg);
+	top: 1px;
 }
 .filter-set .spn {
 	border: 0;
@@ -1439,6 +1469,14 @@ form, fieldset {
 .filter-set .spn:active {
 	background: white;
 	color: #111;
+}
+.filter-set .more:active {
+	background: none;
+	color: #111;
+	opacity: .25;
+}
+.filter-set .more:active:after {
+	opacity: .5;
 }
 .filter-set .atv {
 	background: #111;
