@@ -267,8 +267,14 @@ $(function(){
     }, 1500);
   }
 
-  function unShowAllFilters() {
+  function unShowAllFilters(e) {
     $('#first-filter .hide.show').removeClass('show');
+    if($(window).scrollTop() > ($('#filter-list').offset().top)){
+      $('html,body').animate({
+        scrollTop: $('#filter-list').offset().top - 50
+      }, 500);
+    }
+    e.text('Show 132 more');
   }
 
   // function clickOff(e) {
@@ -306,7 +312,7 @@ $(function(){
   $('.filter-list .more').on('click', function() {
     if($(this).hasClass('all')){
       $(this).removeClass('all hide show');
-      unShowAllFilters();
+      unShowAllFilters($(this));
     }else{
       $(this).text('Loading...');
       showAllFilters($(this));
