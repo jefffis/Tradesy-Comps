@@ -554,6 +554,42 @@ figure div {
 	z-index: 11;*/
 	/*text-align: right;*/
 }
+.analytic-details {
+	/*display: none;*/
+	opacity: 0;
+	border-radius: 3px;
+	background: #2a2a2a;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	padding: .75rem;
+	line-height: 1;
+	font-size: .85rem;
+	width: 100%;
+	margin: 5px 0 0;
+	text-align: left;
+	transition: all .25s ease-in-out;
+}
+.analytic-details:before {
+	border-bottom: 10px solid #2a2a2a;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	content: "";
+	display: block;
+	height: 0;
+	width: 0;
+	position: absolute;
+	top: -10px;
+	right: 50%;
+	margin-right: -5px;
+}
+.product:hover .analytic-details {
+	/*display: block;*/
+	opacity: 1;
+}
+.analytic-details strong {
+	color: white;
+}
 .ctls {
 	border: 0;
 	box-shadow: none;
@@ -2076,9 +2112,9 @@ hr.min {
 	display: block;
 	text-align: left;
 }
-.product-actions {
+/*.product-actions {
 	display: block;
-}
+}*/
 .analytics .tag/*, .product-actions a*/, .analytics .tag + .tag/*, .product-actions a + a*/ {
 	margin-left: 1rem;
 }
