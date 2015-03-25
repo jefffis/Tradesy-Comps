@@ -96,6 +96,8 @@ $(function(){
     $('#brands .hide').removeClass('show');
   });
 
+  var featureHTML = '<span class="tag featured">Featured</span>';
+
   $('body').on('click', '.feature-this', function() {
     var featured = $('#featured'),
         featured_num = featured.find('.product').length,
@@ -109,6 +111,7 @@ $(function(){
         $('#'+id).find('.cover').remove();
         $('#'+id).find('.feature-this').removeClass('feature-this').addClass('unfeature-this').text('Unfeature');
         featured_num++;
+        $('#'+id).append(featureHTML);
       }, 750);
 
       setTimeout(function() {
@@ -134,6 +137,7 @@ $(function(){
         $('#'+id).find('.unfeature-this').removeClass('unfeature-this').addClass('feature-this').text('Feature');
         featured.find('#'+id).remove();
         featured_num--;
+        $('#'+id+' .featured').remove();
         if(featured_num < 1){
           featured.find('.empty-set').fadeIn().removeClass('hide');
         }
