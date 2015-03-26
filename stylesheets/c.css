@@ -1862,6 +1862,9 @@ form, fieldset {
 	/*margin: 1rem 0 0;*/
 	display: none;
 }
+.inline input[type=search] {
+	min-width: 20rem;
+}
 /*.filter-list .cls:after {
 	font-size: 2rem;
 }
