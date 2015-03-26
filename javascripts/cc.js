@@ -168,11 +168,16 @@ $(function(){
     if(!$(e.target).closest('.has-drop').length){
       $('.has-drop').removeClass('showing');
     }
-    // if(!$(e.target).closest('#closet-search-wrap').length){
-    //   if(!!e.target.hasClass('search')){
-    //     $('#closet-search-wrap').hide();
-    //   }
-    // }
+    if((!$(e.target).closest('.search').length) && (!$(e.target).closest('.inline').length)){
+      if($(window).width() <= 500){
+        $('.inline').hide();
+        $('.search').removeClass('a');
+      }
+    }
+    if((!$(e.target).closest('.filters').length) && (!$(e.target).closest('#filter-list').length)){
+      $('#filter-list').addClass('hide');
+      $('.filters').removeClass('a').text('Filter');
+    }
   });
 
   hasDrops = $('.has-drop'),
@@ -181,7 +186,7 @@ $(function(){
     hasDropsClose = hasDrops.find('em');
 
   hasDropsOpen.on('click', function() {
-    $('.has-drop').removeClass('showing');
+    // $('.has-drop').removeClass('showing');
     // $('#filterssss').removeClass('a').text('Filter');
     // $('#filter-list').addClass('hide');
     if(!!$(this).parent().hasClass('showing')){
@@ -209,13 +214,13 @@ $(function(){
   $('#filterssss').on('click', function() {
     if($('#filter-list').hasClass('hide')){
       $('#filter-list').removeClass('hide');
-      $(this).text('Hide filters').addClass('a');
+      $(this).addClass('a');
       $('html,body').animate({
         scrollTop: $('#first-filter').offset().top - 20
       }, 500);
     }else{
       $('#filter-list').addClass('hide');
-      $(this).text('Filter').removeClass('a');
+      $(this).removeClass('a');
     }
   });
 
@@ -256,7 +261,7 @@ $(function(){
 
   function showFilters() {
     $('#filter-list').removeClass('hide');
-    $('#filterssss').text('Hide filters').addClass('a');
+    $('#filterssss').addClass('a');
   }
 
   function showAllFilters(e) {

@@ -1225,8 +1225,8 @@ form, fieldset {
 	border: 1px solid #ddd;
 	display: none;
 	position: absolute;
-	top: 0;
-	/*margin-top: 10%;*/
+	top: 100%;
+	margin-top: 10%;
 	right: 0;
 	width: 100%;
 	min-width: 150px;
@@ -1234,12 +1234,13 @@ form, fieldset {
 }
 .has-drop.showing nav {
 	display: block;
+	/*box-shadow: 0 0 0 2px white;*/
 }
 .has-drop a {
 	color: #111;
 	display: block;
 	line-height: 1;
-	padding: .5rem;
+	padding: .45rem .5rem;
 	text-decoration: none;
 }
 .has-drop nav a:hover {
@@ -1280,21 +1281,23 @@ form, fieldset {
 	opacity: 1;
 }
 .has-drop.showing > span:after {
-	content: "\25B2";
-	top: .8rem;
+	/*content: "\25B2";*/
+	top: 8px;
+	transform: rotate(180deg);
 }
-/*.has-drop.showing > span {
+.has-drop.showing > span {
 	background: #111;
 	border-radius: 2px;
 	color: white;
-	padding-right: .75rem;
+	/*padding-right: .75rem;*/
 }
-.has-drop.showing > span:before {
+/*.has-drop.showing > span:before {
 	content: "Hide ";
-}
-.has-drop.showing > span:after {
-	display: none;
 }*/
+.has-drop.showing > span:after {
+	/*display: none;*/
+	background-color: white;
+}
 
 .ckb:active {
 	background: #efefef;
@@ -1543,13 +1546,15 @@ form, fieldset {
 	width: 20px;
 }
 .a.filters {
-	padding-right: .75rem;
+	/*padding-right: .75rem;*/
 	/*content: "\2715";
 	position: relative;
 	top: 1px;*/
 }
 .a.filters:after {
-	display: none;
+	/*display: none;*/
+	background-color: white;
+	background-image: url(https://cdn0.iconfinder.com/data/icons/glyphpack/50/minus-rounded-256.png);
 }
 
 /**** show more ****/
@@ -2402,6 +2407,10 @@ hr.min {
 	display: inline-block;
 	/*font-size: 1rem;*/
 	padding-left: .25rem;
+}
+.has-drop nav {
+	/*top: 0;
+	margin-top: 0;*/
 }
 .search {
 	display: inline-block;
