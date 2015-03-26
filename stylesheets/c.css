@@ -1604,9 +1604,9 @@ form, fieldset {
 }
 .filter-set [data-num]:after {
 	content: attr(data-num);
+	color: #888;
 	display: inline-block;
 	font-size: .8rem;
-	opacity: .5;
 	padding-left: 5px;
 	position: relative;
 	top: 0;
@@ -1928,7 +1928,8 @@ form, fieldset {
 }
 .filter-set .color.atv:hover:after {
 	display: inline-block;
-	right: .4rem;
+	right: .35rem;
+	top: .4rem;
 }
 .inline input[type=search] {
 	min-width: 20rem;
