@@ -412,7 +412,7 @@ figure div {
 .product .n {
 	color: #111;
 }
-.product .n:before {
+.product .n:before, .product .want:before {
 	content: "";
 	background: url(../images/heart.png) no-repeat 0 -19px;
 	background-size: 20px;
@@ -421,6 +421,19 @@ figure div {
 	opacity: .5;
 	margin: auto auto .25rem;
 	width: 20px;
+}
+.product .want:before {
+	display: inline-block;
+	margin-bottom: 0;
+}
+.product .want:after {
+	content: attr(data-want);
+	font-size: .75rem;
+	margin-left: .15rem;
+	position: relative;
+	top: -.3rem;
+	text-align: left;
+	width: 1rem;
 }
 .product .n:after {
 	/*content: attr(data-want);*/
@@ -456,7 +469,7 @@ figure div {
 .product .want.n:hover {
 	color: #ee7873;
 }
-.product .want.n:hover:before {
+.product .n:hover:before, .product .want:hover:before {
 	background-position: 0 0;
 	opacity: 1;
 }
@@ -536,7 +549,7 @@ figure div {
 	cursor: pointer;
 	padding: 0;
 	position: absolute;
-	right: .25rem;
+	right: 1rem;
 	top: 1rem;
 	z-index: 2;
 }
@@ -830,7 +843,7 @@ figure div {
 .product.empty {
 	border: 0;
 	display: table;
-	height: 417px;
+	height: 444px;
 	position: relative;
 	top: -1px;
 }
@@ -838,7 +851,7 @@ figure div {
 	color: #666;
 	display: table-cell;
 	font-size: 1.25rem;
-	height: 372px;
+	height: 400px;
 	padding: 0 1rem;
 	vertical-align: middle;
 }
