@@ -1213,6 +1213,7 @@ form, fieldset {
 	display: none;
 	position: absolute;
 	top: 0;
+	/*margin-top: 10%;*/
 	right: 0;
 	width: 100%;
 	min-width: 150px;
@@ -1269,6 +1270,19 @@ form, fieldset {
 	content: "\25B2";
 	top: .8rem;
 }
+/*.has-drop.showing > span {
+	background: #111;
+	border-radius: 2px;
+	color: white;
+	padding-right: .75rem;
+}
+.has-drop.showing > span:before {
+	content: "Hide ";
+}
+.has-drop.showing > span:after {
+	display: none;
+}*/
+
 .ckb:active {
 	background: #efefef;
 }
@@ -1288,8 +1302,10 @@ form, fieldset {
 /**** show search ****/
 .search {
 	margin-left: 1rem;
-	padding-right: 1.75rem;
+	/*padding-right: 1.75rem;*/
+	padding: .5rem .85rem;
 	position: relative;
+	display: none;
 }
 .search:after {
 	background: url(../images/search.png) no-repeat center center;
@@ -1306,12 +1322,12 @@ form, fieldset {
 	right: .4rem;
 	width: 18px;
 }
-.a.search {
+/*.a.search {
 	padding-right: .75rem;
-}
-.a.search:after {
+}*/
+/*.a.search:after {
 	display: none;
-}
+}*/
 
 
 
@@ -1407,6 +1423,50 @@ form, fieldset {
 .sb:focus {
 	border-color: #111;
 	z-index: 10;
+}
+
+.inline {
+	float: right;
+	/*margin-right: 1rem;*/
+	display: inline-block;
+	padding-right: 1rem;
+	position: relative;
+	/*width: 100%;
+	margin-top: 1rem;*/
+}
+.inline span {
+	/*display: none;*/
+	position: absolute;
+	left: -3.65rem;
+	top: .25rem;
+}
+.inline input[type=search] {
+	display: inline-block;
+	width: 100%;
+	/*max-width: 15rem;*/
+	padding: .325rem;
+	border-radius: 2px;
+	border: 1px solid #ddd;
+	/*margin-right: 1rem;*/
+	outline: none;
+}
+.inline input[type=search]:focus {
+	border-color: #111;
+}
+.inline input[type=submit] {
+	border: 0;
+	background: url(../images/search.png) no-repeat center center;
+	background-size: 12px;
+	text-indent: -9999px;
+	padding: 0;
+	width: 12px;
+	position: absolute;
+	right: 1.5rem;
+	top: .375rem;
+	outline: none;
+}
+.inline input[type=submit]:focus {
+	outline: 1px dotted #111;
 }
 
 /**** about ****/
@@ -1791,9 +1851,9 @@ form, fieldset {
 #apply-filters {
 	display: none;
 }
-/*#filterssss {
-	float: right;
-	margin-left: 1rem;
+/*.filters {
+	float: right !important;
+	margin-right: 1rem;
 }*/
 .filter-list {
 	padding-right: 4rem;
@@ -2324,7 +2384,20 @@ hr.min {
 	padding-left: .25rem;
 }
 .search {
+	display: inline-block;
+}
+.inline {
+	width: 100%;
+	margin-top: 1rem;
+	padding-right: 0;
 	display: none;
+}
+.inline span {
+	position: static;
+}
+.inline input[type=submit] {
+	right: .5rem;
+	top: 1.875rem;
 }
 .analytics .tag/*, .product-actions a*/, .analytics .tag + .tag/*, .product-actions a + a*/ {
 	margin-left: 0;
