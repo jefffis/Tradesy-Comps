@@ -1283,6 +1283,7 @@ form, fieldset {
 .has-drop.showing > span:after {
 	/*content: "\25B2";*/
 	top: 8px;
+	-webkit-transform: rotate(180deg);
 	transform: rotate(180deg);
 }
 .has-drop.showing > span {
