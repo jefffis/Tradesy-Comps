@@ -1449,6 +1449,7 @@ form, fieldset {
 	border: 1px solid #ddd;
 	/*margin-right: 1rem;*/
 	outline: none;
+	-webkit-appearance: none !important;
 }
 .inline input[type=search]:focus {
 	border-color: #111;
