@@ -170,6 +170,9 @@ $(function(){
     }
     if((!$(e.target).closest('.search').length) && (!$(e.target).closest('.inline').length)){
       if($(window).width() <= 500){
+        if($('.inline input[type=search]').val()!=''){
+          return;
+        }
         $('.inline').hide();
         $('.search').removeClass('a');
       }
