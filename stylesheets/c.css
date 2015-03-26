@@ -1797,6 +1797,10 @@ form, fieldset {
 	background: orchid;
 	color: orchid;
 }
+.filter-set .orange, .filter-set .orange:active {
+	background: orange;
+	color: orange;
+}
 .filter-set .color:active {
 	opacity: .75;
 }
