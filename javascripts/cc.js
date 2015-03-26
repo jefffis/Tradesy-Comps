@@ -174,10 +174,10 @@ $(function(){
         $('.search').removeClass('a');
       }
     }
-    if((!$(e.target).closest('.filters').length) && (!$(e.target).closest('#filter-list').length)){
-      $('#filter-list').addClass('hide');
-      $('.filters').removeClass('a').text('Filter');
-    }
+    // if((!$(e.target).closest('.filters').length) && (!$(e.target).closest('#filter-list').length)){
+    //   $('#filter-list').addClass('hide');
+    //   $('.filters').removeClass('a').text('Filter');
+    // }
   });
 
   hasDrops = $('.has-drop'),
