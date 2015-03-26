@@ -261,17 +261,26 @@ $(function(){
 
   function showAllFilters(e) {
     // e.clone().removeClass('hide').text('Loading...');
-    setTimeout(function() {
-      $('#first-filter .hide').each(function(i) {
-        var that = this;
-        setTimeout(function() {
-          $(that).fadeIn().addClass('show');
-        }, 5 * i);
-      });
-    }, 750);
-    setTimeout(function() {
-      e.addClass('all').text('');
-    }, 1500);
+    if($(window).width() > 900){
+      setTimeout(function() {
+        $('#first-filter .hide').each(function(i) {
+          var that = this;
+          setTimeout(function() {
+            $(that).fadeIn().addClass('show');
+          }, 5 * i);
+        });
+      }, 750);
+      setTimeout(function() {
+        e.addClass('all').text('');
+      }, 1500);
+    }else{
+      setTimeout(function() {
+        $('#first-filter .hide').addClass('show');
+      }, 750);
+      setTimeout(function() {
+        e.addClass('all').text('');
+      }, 1500);
+    }
   }
 
   function unShowAllFilters(e) {
