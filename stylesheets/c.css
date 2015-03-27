@@ -528,9 +528,9 @@ figure div {
 	content: "* Sale percentage is paid by Tradesy.";
 	display: block;
 	font-size: .6rem;
-	margin-top: 5px;
+	margin-top: 2px;
 	position: absolute;
-	left: -23px;
+	left: -21px;
 	top: 100%;
 	width: 200px;
 }
