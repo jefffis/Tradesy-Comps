@@ -199,20 +199,18 @@ $(function(){
     }
   });
 
-  if(window.location.hash && !!$('#closet-header-hero-toggle').length){
-    $('.product').removeClass('s');
-    $('.product .analytics').remove();
-    $('.product .ctls').remove();
-    $('.sale').removeClass('hide');
-    // $('.brand.hide:first').removeClass('hide');
-    $('.empty').remove();
-    $('.chg').remove();
-    $('#closet-header').removeClass('admin');
-    $('#profile-actions-seller').remove();
-    $('#profile-actions').removeClass('hide');
-    $('#seller-nav').remove();
-    // $('#closet-search-wrap form').removeClass('hide');
-  }
+  // if(window.location.hash && !!$('#closet-header-hero-toggle').length){
+  //   $('.product').removeClass('s');
+  //   $('.product .analytics').remove();
+  //   $('.product .ctls').remove();
+  //   $('.sale').removeClass('hide');
+  //   $('.empty').remove();
+  //   $('.chg').remove();
+  //   $('#closet-header').removeClass('admin');
+  //   $('#profile-actions-seller').remove();
+  //   $('#profile-actions').removeClass('hide');
+  //   $('#seller-nav').remove();
+  // }
 
   $('#filterssss').on('click', function() {
     if($('#filter-list').hasClass('hide')){
