@@ -141,9 +141,12 @@ header {
 }
 header.cf:after {
 	background: white;
+	border-bottom: 1px solid #ebebeb;
 	color: #888;
 	content: "Site Subnav";
 	display: block;
+	font-size: .85rem;
+	letter-spacing: 1.5px;
 	padding: .75rem 0;
 	text-align: center;
 	text-transform: uppercase;
@@ -176,10 +179,10 @@ header img {
 	color: white;
 	float: left;
 	font-size: .85rem;
-	/*letter-spacing: 1px;*/
+	letter-spacing: 1px;
 	padding: .5rem 0;
 	text-decoration: none;
-	/*text-transform: uppercase;*/
+	text-transform: uppercase;
 	width: 20%;
 }
 .seller-nav em {
