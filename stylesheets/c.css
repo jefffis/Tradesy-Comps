@@ -1985,7 +1985,7 @@ form, fieldset {
 
 #closet-footer .user-profile div {
 	margin-left : .65rem;
-	padding-top: .275rem;
+	padding-top: .45rem;
 }
 #closet-footer .user-profile .user-actions {
 	display: block;
@@ -2009,21 +2009,21 @@ form, fieldset {
 }
 
 #closet-footer p {
-	color : black;
+	color : #888;
 	font-family : 'calluna-regular';
 }
 
 #closet-footer .user-bio {
-	width : 60%;
+	/*width : 60%;
 	display : block;
-	float: left;
+	float: left;*/
 	/*padding-left : 1rem;*/
 }
 
-#closet-footer .user-shop-links {
+/*#closet-footer .user-shop-links {
 	width : 35%;
 	float: left;
-}
+}*/
 
 #closet-footer h3 {
 	/*font-family: 'proxima-nova-semi';*/
@@ -2036,18 +2036,23 @@ form, fieldset {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size : .8rem;
-	margin : 1rem 0 0;
+	margin : 0;
 	padding : 0;
 	color : #111;
 }
 
 #closet-footer .user-shop-links ul {
 	margin-left : 0;
-	margin-right : 1rem;
+	/*margin-right : 1rem;*/
 	padding : 0;
-	display : inline-block;
+	/*display : inline-block;
 	float: left;
-	width : 45%;
+	width : 45%;*/
+	width: 45%;
+	float: left;
+}
+#closet-footer .user-shop-links ul + ul {
+	float: right;
 }
 
 #closet-footer .user-shop-links li {
@@ -2276,6 +2281,15 @@ form, fieldset {
 	width: auto;
 }
 
+#closet-footer .user-shop-links, #closet-footer .user-bio {
+	float: right;
+	width: 50%;
+}
+#closet-footer .user-shop-links {
+	float: left;
+	width: 45%;
+}
+
 }
 
 @media screen and (min-width: 45rem) {
@@ -2341,6 +2355,15 @@ form, fieldset {
 	display: block;
 	position: static;
 }*/
+
+#closet-footer .user-shop-links, #closet-footer .user-bio {
+	float: right;
+	width: 60%;
+}
+#closet-footer .user-shop-links {
+	float: left;
+	width: 35%;
+}
 
 
 }
