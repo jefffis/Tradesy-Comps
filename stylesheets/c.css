@@ -106,7 +106,7 @@ h4 {
 	margin-left: .75rem;
 }
 .admin .btn {
-	background: #111;
+	/*background: #111;*/
 	/*border-radius: 3px;*/
 	/*box-shadow: 0 0 0 2px rgba(255,255,255,0.5);*/
 	/*font-size: .85rem;
@@ -136,22 +136,32 @@ h4 {
 
 header {
 	background: #040407;
-	padding: .5em;
+	padding: .5em 0 0;
 	position: relative;
+}
+header.cf:after {
+	background: white;
+	color: #888;
+	content: "Site Subnav";
+	display: block;
+	padding: .75rem 0;
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
 }
 .mar-b {
 	margin-bottom: 2rem;
 }
 header img {
 	display: block;
-	margin: auto;
+	margin: auto auto .5rem;
 	max-width: 150px;
 }
 
 .seller-nav {
 	background: #2a2a2a;
-	/*margin: auto;
-	max-width: 1498px;*/
+	margin: auto;
+	max-width: 1498px;
 	text-align: center;
 }
 .seller-nav.fixed {
@@ -923,7 +933,8 @@ figure div {
 	max-width: 1500px*/
 	/*background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;*/
 	/*background: #111 url(https://assets.bezar.com/store/lookbook_images/attachments/000/000/084/full/1.jpg) no-repeat;*/
-	background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/0v28362V3C0p0V0J222p/new-photo.jpg) no-repeat center center;
+	/*background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/0v28362V3C0p0V0J222p/new-photo.jpg) no-repeat center center;*/
+	background: #111 url(http://hdwyn.com/wallpaper_gray/gray_material_fabric_background_texture_hd-wallpaper-48598.jpg) no-repeat center center;
 	background-size: cover;
 	/*background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/24132I0x3z073m1o1Q20/default-back-crop-b.png);*/
 	/*background-size: 100px;*/
@@ -1139,7 +1150,7 @@ figure div {
 	color: white;
 	cursor: pointer;
 	border-radius: 3px;
-	box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+	/*box-shadow: 0 0 0 2px rgba(255,255,255,0.25);*/
 	display: inline-block;
 	font-size: .85rem;
 	padding: .35rem .65rem;
