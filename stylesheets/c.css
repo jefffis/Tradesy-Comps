@@ -244,12 +244,21 @@ header img {
 	text-transform: uppercase;
 	text-decoration: none;
 }
+.rack h2 a:hover {
+	border-color: white;
+}
+.rack h2 a:active {
+	opacity: .75;
+}
 .rack h2[data-num]:after {
 	content: '('attr(data-num)')';
 	letter-spacing: normal;
 	opacity: .5;
 	text-transform: none;
 }
+/*.rack [data-plus]:after {
+	content: " +";
+}*/
 /*.sub h2:after {
 	display: block;
 	padding-top: .25rem;
