@@ -473,6 +473,11 @@ figure div {
 	background-position: 0 0;
 	opacity: 1;
 }
+.s .n:hover:before, .s .want:hover:before {
+	background-position: 0 -19px;
+	cursor: default;
+	opacity: .5;
+}
 .want:active {
 	opacity: .5;
 }
@@ -500,6 +505,17 @@ figure div {
 	position: absolute;
 	top: 1rem;
 	left: 1rem;
+}
+.s .sale:after {
+	color: #999;
+	content: "* Sale percentage is paid by Tradesy.";
+	display: block;
+	font-size: .6rem;
+	margin-top: 5px;
+	position: absolute;
+	left: -23px;
+	top: 100%;
+	width: 200px;
 }
 .featured {
 	background: white;
