@@ -1584,9 +1584,9 @@ form, fieldset {
 
 /**** filter list ****/
 .filter-list {
-	/*background: ;*/
-	border-bottom: 1px solid #ddd;
-	border-top: 1px solid #ddd;
+	background: #f9f9f9;
+	border-bottom: 1px solid #efefef;
+	border-top: 1px solid #efefef;
 	clear: both;	
 	margin: 2rem -1rem 0;
 	padding: 1rem;
@@ -1596,6 +1596,7 @@ form, fieldset {
 	margin-top: 1rem;
 }
 .filter-set .tag {
+	background: white;
 	border: 1px solid #ddd;
 	border-radius: 20px;
 	box-shadow: none;
@@ -1615,7 +1616,7 @@ form, fieldset {
 	display: inline-block !important;
 }
 .filter-set .more {
-	/*background: #efefef;*/
+	background: none;
 	border-radius: 0;
 	border: 0;
 	color: #111;
@@ -1660,6 +1661,7 @@ form, fieldset {
 	top: 1px;
 }
 .filter-set .spn {
+	background: none;
 	border: 0;
 	color: #111;
 	display: block;
@@ -1715,6 +1717,7 @@ form, fieldset {
 	color: #111;
 	cursor: pointer;
 	display: block;*/
+	color: #111;
 	display: inline-block;
 	padding: .25rem;
 	margin-left: 1rem;
@@ -1726,6 +1729,7 @@ form, fieldset {
 	width: 100%;
 	text-align: center;
 	z-index: 101;*/
+	text-decoration: underline;
 }
 .filter-list .cls:before {
 	content: "Hide filters ";
@@ -1807,6 +1811,9 @@ form, fieldset {
 .filter-set .color.atv {
 	box-shadow: 0 0 0 1px white, 0 0 0 2px currentColor;
 	padding-left: 0;
+}
+.filter-set .color:hover {
+	box-shadow: 0 0 0 1px white, 0 0 0 2px currentColor;
 }
 .filter-set .color.atv:hover:after {
 	display: none;
@@ -1918,8 +1925,12 @@ form, fieldset {
 	float: right !important;
 	margin-right: 1rem;
 }*/
-.filter-list {
+/*.filter-list {
 	padding-right: 4rem;
+}*/
+.filter-list {
+	border: 1px solid #efefef;
+	padding: 1.5rem;
 }
 .filter-list .cls {
 	margin: 1rem 0 0;
@@ -1928,7 +1939,7 @@ form, fieldset {
 }
 .filter-set .color.atv:hover:after {
 	display: inline-block;
-	right: .35rem;
+	right: .375rem;
 	top: .4rem;
 }
 .inline input[type=search] {
@@ -2157,6 +2168,10 @@ form, fieldset {
 .closet-header, .closet-search-wrap {
 	border: 1px solid #ddd;
 	border-top: 0;
+}
+.filter-list {
+	margin: 2rem -3rem;
+	padding: 2rem 3rem;
 }
 
 }
