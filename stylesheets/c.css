@@ -2886,6 +2886,17 @@ hr.min {
 .product.empty a {
 	height: 400px;
 }
+.product.empty em:before {
+	background: #888;
+	border-radius: 100%;
+	color: white;
+	content: "+";
+	display: block;
+	font-size: 2rem;
+	height: 1rem;
+	margin-bottom: .5rem;
+	width: 1rem;
+}
 
 /*.analytics .tag, .product-actions a {
 	display: block;
