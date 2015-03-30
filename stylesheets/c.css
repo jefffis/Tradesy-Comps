@@ -2938,4 +2938,11 @@ hr.min {
 	margin-left: 0;
 }*/
 
+/**:hover {
+	pointer-events: none;
+}
+*:active {
+	pointer-events: inherit;
+}*/
+
 }
