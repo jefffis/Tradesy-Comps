@@ -202,11 +202,11 @@ header img {
 	display: inline-block;
 	font-size: .75rem;
 	line-height: 1;
-	padding: .25rem 0;
+	padding: .325rem .05rem;
 	text-align: center;
-	width: 1.25rem;
+	width: 1.3rem;
 	position: relative;
-	top: 0;
+	top: -1px;
 	right: auto;
 	left: 10px;
 }
@@ -2355,9 +2355,9 @@ header.cf:after {
 }
 .seller-nav [data-num]:after {
 	position: absolute;
-	top: .5rem;
+	top: .35rem;
 	left: auto;
-	right: -.25rem;
+	right: -.3rem;
 }
 .seller-nav a + a, .seller-nav .last {
 	box-shadow: none;
