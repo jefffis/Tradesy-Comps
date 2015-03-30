@@ -119,6 +119,10 @@ h4 {
 	box-shadow: 0 0 0 1px currentColor inset;
 	cursor: pointer;
 }
+form .line.btn:active {
+	background: #efefef;
+	color: #888;
+}
 .line.d {
 	color: #111;
 }
@@ -163,6 +167,8 @@ header img {
 
 .seller-nav {
 	background: #2a2a2a;
+	border-bottom: 1px solid #111;
+	box-shadow: 0 2px 0 rgba(0,0,0,0.25);
 	margin: auto;
 	max-width: 1498px;
 	text-align: center;
@@ -176,28 +182,61 @@ header img {
 }
 .seller-nav a {
 	/*display: inline-block;*/
+	display: none;
 	color: white;
-	float: left;
+	/*float: left;*/
 	font-size: .85rem;
-	letter-spacing: 1px;
-	padding: .5rem 0;
+	/*letter-spacing: 1px;*/
+	padding: .5rem;
 	text-decoration: none;
-	text-transform: uppercase;
-	width: 20%;
+	/*text-transform: uppercase;*/
+	/*width: 20%;*/
 }
 .seller-nav em {
 	display: none;
 	font-style: normal;
 }
-.seller-nav a:hover, .seller-nav .active a {
+.seller-nav span {
+	display: inline-block;
+	color: white;
+	cursor: pointer;
+	font-size: .85rem;
+	padding: .5rem 1rem .5rem .5rem;
+	position: relative;
+}
+.seller-nav span:active {
+	opacity: .65;
+}
+.seller-nav.open a {
+	display: block;
+}
+.seller-nav span:after {
+	background: url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-chevron-down-256.png) no-repeat center center;
+	background-size: 18px;
+	content: "";
+	display: inline-block;
+	height: 15px;
+	/* padding-left: .15rem; */
+	position: absolute;
+	line-height: 0;
+	opacity: .5;
+	top: 11px;
+	right: -.5rem;
+	width: 20px;
+}
+.seller-nav.open span:after {
+	transform: rotate(180deg);
+	top: 10px;
+}
+.seller-nav a:hover, .seller-nav .active {
 	background: #111;
 }
 .seller-nav a:active {
 	background: #040407;
 	color: rgba(255,255,255,0.75);
 }
-.seller-nav .active a {
-	color: rgba(255,255,255,0.5);
+.seller-nav .active {
+	/*color: rgba(255,255,255,0.5);*/
 	cursor: default;
 }
 .seller-nav .active a:active {
@@ -947,7 +986,7 @@ figure div {
 	border-bottom: 1px solid #ddd;
 }
 .closet-header.default {
-	background: #ddd;
+	/*background: #ddd;*/
 }
 .c-width {
 	margin: auto;
@@ -960,7 +999,7 @@ figure div {
 	padding: 1rem;
 }
 .default {
-	background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;
+	/*background: #111 url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;*/
 }
 .img-cover {
 	margin: auto;
@@ -977,7 +1016,7 @@ figure div {
 	/*-webkit-filter: blur(50px);*/
 }
 .default .img-cover {
-	display: none;
+	background: rgba(0,0,0,0.75);
 }
 .closet-main {
 	/*background: url(https://s3.amazonaws.com/f.cl.ly/items/2j293a2t0t0Z271C2d28/default-back-green.png) repeat center center;*/
@@ -985,9 +1024,9 @@ figure div {
 	position: relative;
 	z-index: 2;
 }
-.default .closet-main {
+/*.default .closet-main {
 	height: 175px;
-}
+}*/
 .profile-pic {
 	/*padding: .5rem;*/
 	position: absolute;
@@ -1012,9 +1051,9 @@ figure div {
 .profile-details h1, .profile-details h2 {
 	color: white;
 }
-.default .profile-details h1, .default .profile-details h2 {
+/*.default .profile-details h1, .default .profile-details h2 {
 	color: #111;
-}
+}*/
 .profile-details h2 {
 	font-size: 1rem;
 	padding-left: 2px;
@@ -1056,6 +1095,7 @@ figure div {
 	position: absolute;
 	top: 1rem;
 	right: 0;
+	display: none;
 }
 .profile-social:before {
 	color: white;
@@ -1849,13 +1889,13 @@ form, fieldset {
 	background: transparent url(../images/cls-w.png) no-repeat center center;
 	background-size: 14px;
 }*/
-.filter-list .btn {
+.filter-list .btn, form .btn {
 	border-radius: 3px;
 	font-size: inherit;
 	letter-spacing: normal;
 	text-transform: none;
 }
-.filter-list .btn:active {
+.filter-list .btn:active, form .btn:active {
 	background: #B8504B;
 	color: rgba(255,255,255,0.75);
 }
@@ -2240,6 +2280,9 @@ form, fieldset {
 .product .product-actions a {
 	padding: .5rem;
 }
+.profile-social {
+	display: block;
+}
 
 }
 
@@ -2252,8 +2295,11 @@ form, fieldset {
 .seller-nav a {
 	display: inline-block;
 	float: none;
-	padding: 1rem;
+	padding: 1rem .5rem;
 	width: auto;
+}
+.seller-nav span {
+	display: none;
 }
 .seller-nav em {
 	display: inline;
@@ -2354,6 +2400,9 @@ form, fieldset {
 }
 .index .product + .product + .product + .product {
 	display: none;
+}
+.seller-nav a {
+	padding: 1rem;
 }
 /*.analytics {
 	clear: both;

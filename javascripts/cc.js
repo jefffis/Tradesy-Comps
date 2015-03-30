@@ -300,6 +300,16 @@ $(function(){
     e.text('Show 132 more');
   }
 
+  $('#seller-nav span').on('click', function() {
+    if($('#seller-nav').hasClass('open')){
+      $('#seller-nav').removeClass('open');
+      $(this).text('Show menu');
+    }else{
+      $('#seller-nav').addClass('open');
+      $(this).text('Hide menu');
+    }
+  });
+
   // function clickOff(e) {
   //   $(e).append('<input type="radio" id="clickable" />');
   //   $('#clickable').click().blur();
