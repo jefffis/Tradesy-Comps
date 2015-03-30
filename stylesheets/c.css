@@ -148,7 +148,7 @@ header.cf:after {
 	border-bottom: 1px solid #ebebeb;
 	color: #888;
 	content: "Site Subnav";
-	display: block;
+	display: none;
 	font-size: .85rem;
 	letter-spacing: 1.5px;
 	padding: .75rem 0;
@@ -2206,6 +2206,9 @@ form, fieldset {
 
 @media screen and (min-width: 900px) {
 
+header.cf:after {
+	display: block;
+}
 .sub .product {
 	margin: 1.5rem 0;
 }
