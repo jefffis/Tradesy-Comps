@@ -1025,6 +1025,10 @@ figure div {
 	margin-left: .75rem;
 	position: relative;
 }
+.profile-details span + span {
+	display: block;
+	margin: .5rem 0;
+}
 .profile-details a {
 	color: white;
 }
@@ -1659,11 +1663,11 @@ form, fieldset {
 	position: relative;
 }
 .filter-set + .filter-set, .filter-set + .btn {
-	margin-top: 1rem;
+	margin-top: .75rem;
 }
 .filter-set + .filter-set {
-	padding-top: 1rem;
-	border-top: 1px solid #ddd;
+	padding-top: .75rem;
+	/*border-top: 1px solid #ddd;*/
 }
 .filter-set .tag {
 	background: white;
@@ -2218,11 +2222,11 @@ form, fieldset {
 	float: left;
 	padding-right: .75rem;
 	padding-top: .5rem;
-	width: auto;
+	width: 5.5rem;
 }
 .filter-set + .filter-set {
 	/*clear: both;*/
-	padding-top: 1.5rem;
+	/*padding-top: 1rem;*/
 }
 .pills {
 	display: block;
@@ -2427,6 +2431,14 @@ form, fieldset {
 
 }
 
+@media screen and (min-width: 601px){
+
+.profile-details span + span {
+	display: none;
+}
+
+}
+
 
 
 /**** closet head mobile ****/
@@ -2562,9 +2574,6 @@ form, fieldset {
 	padding-top: 1rem;
 	position: static;
 }
-.profile-details span + span {
-	display: none;
-}
 .profile-actions {
 	clear: both;
 	margin: 0 0 0 1rem;
@@ -2666,9 +2675,9 @@ hr.min {
 .profile-details h1 {
 	padding: 0 1rem;
 }
-.profile-details span + span {
+/*.profile-details span + span {
 	display: none;
-}
+}*/
 .profile-actions {
 	clear: none;
 	margin: 2rem 0 0 0;
