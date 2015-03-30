@@ -1892,6 +1892,17 @@ form, fieldset {
 .filter-set .color.atv:hover:after {
 	display: none;
 }
+.filter-set .color:before {
+	content: "";
+	display: inline-block;
+	height: 18px;
+	position: absolute;
+	padding-left: 0;
+	opacity: 1;
+	top: .45rem;
+	left: .475rem;
+	width: 18px;
+}
 
 
 /**** loading ****/
