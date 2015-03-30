@@ -187,8 +187,9 @@ header img {
 	/*float: left;*/
 	font-size: .85rem;
 	/*letter-spacing: 1px;*/
-	padding: .5rem;
+	padding: .5rem 1rem;
 	position: relative;
+	text-align: left;
 	text-decoration: none;
 	/*text-transform: uppercase;*/
 	/*width: 20%;*/
