@@ -548,11 +548,11 @@ nav.open {
 .lbl {
 	border-radius: 3px;
 	line-height: 1;
-	padding: 8px 8px 6px 0;
+	padding: 8px 8px 6px;
 }
 .circle {
 	border: 1px solid #ccc;
-	box-shadow: 0 0 0 1px #efefef;
+	/*box-shadow: 0 0 0 1px #efefef;*/
 	cursor: pointer;
 	font-size: 24px;
 	line-height: 1;
@@ -639,7 +639,15 @@ h2 .del {
 }
 
 .heart:after {
-	content: "\2665";
+	/*content: "\2665";*/
+	content: "";
+	background: url(../images/heart.png) no-repeat 0 -19px;
+	background-size: 20px;
+	display: block;
+	height: 23px;
+	opacity: .5;
+	margin: auto auto .25rem;
+	width: 20px;
 }
 
 .note {
