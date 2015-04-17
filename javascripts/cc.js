@@ -204,6 +204,9 @@ $(function(){
     $('.product .analytics').remove();
     $('.product .ctls').remove();
     $('.sale').removeClass('hide');
+    $('.want').removeClass('hide');
+    $('.note').remove();
+    $('.note-hr').remove();
     $('.empty').remove();
     $('.chg').remove();
     $('#closet-header').removeClass('admin');
