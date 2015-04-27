@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Tradesy Responsive Email Template</title>
+
+		<style type="text/css">
+
+		/*@font-face{font-family:'proxima-nova-semi';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.svg#proxima-nova-semi") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}*/
+
+		body, div, table {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		td { -webkit-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0,0,0,0); margin: 0; padding: 0; border: 0; }
+		#ForceOutlook2010BrowserLink span { padding:0px; }
+		.content {
+			color: #777;
+			font-family: 'Helvetica Neue', Arial, sans-serif;
+			font-size: 15px;
+			line-height: 22px;
+		}
+		.h1 {
+			color: #040407;
+			display: block;
+			font-family: 'Helvetica Neue', Arial, sans-serif;
+			font-size: 22px;
+			/*letter-spacing: 2.5px;*/
+			/*text-transform: uppercase;*/
+		}
+		.h2 {
+			color: #040407;
+			display: block;
+			font-family: 'Helvetica Neue', Arial, sans-serif;
+			font-size: 17px;
+			/*letter-spacing: 2.5px;*/
+			/*text-transform: uppercase;*/
+		}
+		.lg .h1 {
+			font-size: 25px;
+			line-height: 31px;
+		}
+		b, b {
+			color: #040407;
+			/*font-family: 'proxima-nova-semi', sans-serif;*/
+			/*font-weight: normal;*/
+		}
+		.subtle {
+			color: #ccc;
+		}
+		.warn {
+			color: #fd670c;
+		}
+		.warn b {
+			color: #c54c02;
+		}
+		.logo {
+			display: block;
+			margin: 0 auto;
+		}
+		a {
+			color: #ee7874;
+			/*font-family: 'proxima-nova-semi', sans-serif;*/
+			font-weight: bold;
+		}
+		a.btn {
+			background: #ee7874;
+			/*border-radius: 4px;*/
+			color: white;
+			display: inline-block;
+			font-size: 20px;
+			font-weight: normal;
+			line-height: 30px;		
+			mso-hide: all;
+			padding: 10px 15px;
+			text-decoration: none;		
+		}
+		#wrapper {
+			/*background: #f8f8f8*/
+			background: white;
+			border: 1px solid #ddd;
+			/*box-shadow: 0 0 0 1px rgba(0,0,0,0.1);*/
+			/*border-radius: 4px;*/
+		}
+		body {
+			background: #f7f7f7;
+			padding: 0 0 20px;
+		}
+		.pad {
+			padding: 30px;
+		}
+		.min-pad {
+			padding: 10px;
+		}
+		.bot {
+			padding-bottom: 40px;
+		}
+		.bd {
+			display: block;
+		}
+		center {
+			color: #999999;
+			font-family: 'Helvetica Neue', Arial, sans-serif;
+			font-size: 12px;
+			line-height: 17px;
+		}
+		center a {
+			color: #111111;
+		}
+		.left {
+			display: block;
+			text-align: left;
+		}
+		.top {
+			background: #54302f;
+			padding: 10px;
+			color: #e3cac9;
+		}
+		.top a {
+			color: #e3cac9;	
+		}
+		.c {
+			text-align: center;
+		}
+		.cap a {
+			color: white;
+			font-weight: normal;
+		}
+		hr {
+			background: white;
+			border: 0;
+			height: 20px;
+			margin: 0;
+		}
+		.line {
+			background: #dddddd;
+			height: 2px;
+		}
+		@media screen and (max-width: 600px) {
+
+			body {
+				padding: 0 0 15px !important;
+			}
+			#wrapper {
+				padding: 0 !important;
+			}
+			.pad {
+				padding: 20px !important;
+			}
+			.bot {
+				padding-bottom: 30px !important;
+			}
+			.hide {
+				display: none !important;
+			}
+			.bd {
+				max-width: 100% !important;
+			}
+			.c, center {
+				text-align: left !important;
+			}
+			/*.logo {
+				margin: 0 !important;
+			}*/
+			.mobile-wrap {
+				padding: 0 15px !important;
+			}
+			.min-pad {
+				padding: 10px 0 !important;
+			}
+
+		}
+		</style>
+	</head>
+
+	<body marginwidth="0" marginheight="0" bgcolor="#f7f7f7" leftmargin="0" topmargin="0" offset="0">
+
+		<!-- customize Gmail / iOS content begin -->
+		<table width="100%" cellspacing="0" cellpadding="0"><tr><td style="font-size: 0;height: 0;display:none;">
+			This is some more detailed info about this email, even different than the subject line.
+		</td></tr>
+		<!-- customize Gmail / iOS content end -->
+
+		<!-- <center class="top">
+			Free shipping &amp; returns
+			&nbsp;&nbsp;<span class="hide">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			Authenticiy guaranteed
+			&nbsp;&nbsp;<span class="hide">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<a href="">Web<span class="hide"> version</span></a>
+		</center> -->
+
+		<!-- <table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table> -->
+ 
+		<!--[if (gte mso 9)|(IE)]>
+			<table width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td>
+		<![endif]-->
+
+		<div class="mobile-wrap">
+
+			<table width="100%" cellspacing="0" cellpadding="0" class="hide"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
+
+			<table style="margin:auto;max-width:550px;" id="wrapper" cellpadding="0" cellspacing="0"><tr><td>
+
+				<table width="100%" cellpadding="0" cellspacing="0" class="_hide"><tr><td height="50" style="font-size: 1px; line-height: 1px;" bgcolor="#111111">
+					<a href="https://www.tradesy.com/?utm_source=welcome_email_1&utm_medium=email&utm_campaign=first_touch"><img src="http://wtf.jefff.co/Tradesy-Comps/images/logo.gif" alt="Tradesy: buy &amp; sell clothes online" height="30" class="logo" /></a>
+				</td></tr></table>
+
+				<table class="content" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="body pad lg">
+							
+							<span class="h1">
+								Please login by <b>May 20th</b> to keep your 5 listings active!
+							</span>
+							<hr />
+							<hr class="line" />
+							<hr />
+
+							Hi <b>{buyer_first_name}</b>,
+							<br /><br />
+							It&rsquo;s been way too long&hellip; you haven&rsquo;t loged into Tradesy for over 2 months. Right now, you have <a href="">{num} active listings on Tradesy that will expire in 30 days</a> unless you login soon.
+							<br /><br />
+							All you need to do to keep your listings active and have a chance at earning <b>${num}</b> is login sometime within the next 30 days.
+							<br /><br />
+							<!--[if mso]>
+							<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:40px;v-text-anchor:middle;width:200px;" stroke="f" fillcolor="#ee7874">
+							<w:anchorlock/>
+							<center>
+							<a href="http://"
+							style="background-color:#ee7874;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">Login Today</a>
+							</center>
+							</v:rect>
+							<![endif]-->
+							<a href="http://www.tradesy.com/your-purchases" class="btn">Login Today</a>
+							<hr />
+							XOXO
+							<br />
+							Team Tradesy
+
+						</td>
+					</tr>
+				</table>
+
+			</td></tr></table>
+
+			<!-- <table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20">&nbsp;</td></tr></table> -->
+
+			<center class="pad">
+				This message was sent to you by <a href="">Tradesy.com</a>.
+				<br />
+				1217 2nd Street FL 3, Santa Monica, CA 90401
+				<br />
+				Call Us: <a href="">(310) 912-7966</a>
+			</center>
+
+		</div>
+
+		<!--[if (gte mso 9)|(IE)]>
+			</td></tr></table>
+		<![endif]-->
+	 
+	</body>
+</html>
