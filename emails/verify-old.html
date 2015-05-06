@@ -130,15 +130,18 @@
 		.top a {
 			color: #e3cac9;	
 		}
-		.c {
+		.c, .center {
 			text-align: center;
+		}
+		.center {
+			display: block;
 		}
 		.cap a {
 			color: white;
 			font-weight: normal;
 		}
 		hr {
-			background: white;
+			background: #ffffff;
 			border: 0;
 			height: 20px;
 			margin: 0;
@@ -149,6 +152,9 @@
 		.line {
 			background: #dddddd;
 			height: 2px;
+		}
+		.white {
+			background: #ffffff;
 		}
 		@media screen and (max-width: 600px) {
 
@@ -172,6 +178,9 @@
 			}
 			.c, center {
 				text-align: left !important;
+			}
+			.center {
+				text-align: center !important;
 			}
 			/*.logo {
 				margin: 0 !important;
@@ -208,8 +217,8 @@
 
 			<table style="margin:auto;max-width:550px;" id="wrapper" cellpadding="0" cellspacing="0"><tr><td>
 
-				<table width="100%" cellpadding="0" cellspacing="0" class="_hide"><tr><td height="50" style="font-size: 1px; line-height: 1px;" bgcolor="#111111">
-					<a href="https://www.tradesy.com/?utm_source=verify_identity&utm_medium=email&utm_campaign=verify_identity"><img src="https://raw.githubusercontent.com/jefffis/Tradesy-Comps/gh-pages/images/logo.gif" alt="Tradesy: buy &amp; sell clothes online" height="30" class="logo" /></a>
+				<table width="100%" cellpadding="0" cellspacing="0" class="_hide"><tr><td height="50" style="font-size: 1px; line-height: 1px;" bgcolor="#111111" align="center">
+					<a href="https://www.tradesy.com/?utm_source=verify_identity&utm_medium=email&utm_campaign=verify_identity"><img src="https://raw.githubusercontent.com/jefffis/Tradesy-Comps/gh-pages/images/logo.gif" alt="Tradesy: buy &amp; sell clothes online" height="30" class="logo" border="0" /></a>
 				</td></tr></table>
 
 				<table class="content" width="100%" align="center" cellpadding="0" cellspacing="0" border="0">
@@ -219,31 +228,35 @@
 							<span class="h1">
 								Heads up: verify your identity to complete your cash transfer.
 							</span>
-							<hr />
+							<br />
 							<hr class="line" />
-							<hr />
+							<br />
 
 							<span class="left">
-								Hi {user_name},
+								Hi {first_name},
 								<br /><br />
 								Based on your transaction volume, we're required by law to verify your identity before we can transfer additional cash to you.
 								<br /><br />
 							</span>
-							<!--[if mso]>
-							<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.tradesy.com/tradesy-cash?utm_source=verify_identity&utm_medium=email&utm_campaign=verify_identity" style="height:40px;v-text-anchor:middle;width:200px;" stroke="f" fillcolor="#ee7874">
-							<w:anchorlock/>
-							<center>
-							<a href="https://www.tradesy.com/tradesy-cash?utm_source=verify_identity&utm_medium=email&utm_campaign=verify_identity"
-							style="background-color:#ee7874;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">Verify now</a>
-							</center>
-							</v:rect>
-							<![endif]-->
-							<a href="https://www.tradesy.com/tradesy-cash?utm_source=verify_identity&utm_medium=email&utm_campaign=verify_identity" class="btn">Verify now</a>
+							<span class="center">
+								<!--[if mso]>
+								<v:rect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.tradesy.com/tradesy-cash?utm_source=verify_identity&utm_medium=email&utm_campaign=verify_identity" style="height:40px;v-text-anchor:middle;width:200px;" stroke="f" fillcolor="#ee7874">
+								<w:anchorlock/>
+								<center>
+								<a href="https://www.tradesy.com/tradesy-cash?utm_source=verify_identity&utm_medium=email&utm_campaign=verify_identity"
+								style="background-color:#ee7874;color:#ffffff;display:inline-block;font-family:sans-serif;font-size:13px;font-weight:bold;line-height:40px;text-align:center;text-decoration:none;width:200px;-webkit-text-size-adjust:none;">Verify now</a>
+								</center>
+								</v:rect>
+								<![endif]-->
+								<a href="https://www.tradesy.com/tradesy-cash?utm_source=verify_identity&utm_medium=email&utm_campaign=verify_identity" class="btn">Verify now</a>
+								<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
+							</span>
 							<span class="left">
-								<br />
 								Once verified, you'll also get these additional benefits on Tradesy.com:
-								<hr class="fifteen" />
 								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td height="20"></td>
+									</tr>
 									<tr>
 										<td>
 											<table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -252,33 +265,33 @@
 														<img src="https://raw.githubusercontent.com/jefffis/Tradesy-Comps/gh-pages/images/verify-email/verified.gif" height="35" alt="Get verified today!" />	
 													</td>
 													<td width="25" class="ten"></td>
-													<td>
+													<td class="content">
 														<b>Verified Badge &mdash;</b>
 														Get a verified seller badge on your closet page. Verified sellers sell their items 2-5x faster than non-verified sellers.
 													</td>
 												</tr>
 											</table>
-											<hr class="fifteen" />
+											<br />
 											<table width="100%" cellpadding="0" cellspacing="0" border="0">
 												<tr>
 													<td>
 														<img src="https://raw.githubusercontent.com/jefffis/Tradesy-Comps/gh-pages/images/verify-email/form.gif" height="35" alt="Automatic tax forms!" />	
 													</td>
 													<td width="25" class="ten"></td>
-													<td>
+													<td class="content">
 														<b>1099 Forms &mdash;</b>
 														Automatically get 1099 forms when next tax season comes around.
 													</td>
 												</tr>
 											</table>
-											<hr class="fifteen" />
+											<br />
 											<table width="100%" cellpadding="0" cellspacing="0" border="0">
 												<tr>
 													<td>
 														<img src="https://raw.githubusercontent.com/jefffis/Tradesy-Comps/gh-pages/images/verify-email/trust.gif" height="35" alt="Tradesy Trust == more sales." />	
 													</td>
 													<td width="25" class="ten"></td>
-													<td>
+													<td class="content">
 														<b>Tradesy Trust &mdash;</b>
 														Help Tradesy continue to be the safest place to buy and sell designer fashion. When people trust Tradesy, you get a bigger potential market for your listings.
 													</td>
@@ -286,8 +299,10 @@
 											</table>	
 										</td>
 									</tr>
+									<tr>
+										<td height="20"></td>
+									</tr>
 								</table>
-								<hr class="fifteen" />
 								When you <a href="https://www.tradesy.com/tradesy-cash?utm_source=verify_identity&utm_medium=email&utm_campaign=verify_identity">verify your identity</a>, people trust Tradesy. When people trust Tradesy, you sell more.
 							</span>
 
@@ -297,12 +312,14 @@
 
 			</td></tr></table>
 
-			<center class="pad">
-				This message was sent to you by <a href="">Tradesy.com</a>.
+			<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
+
+			<center>
+				This message was sent to you by <a href="https://www.tradesy.com/?utm_source=verify_identity&utm_medium=email&utm_campaign=verify_identity">Tradesy.com</a>.
 				<br />
 				1217 2nd Street FL 3, Santa Monica, CA 90401
 				<br />
-				Call Us: <a href="">(310) 912-7966</a>
+				Call Us: <a href="tel:(310) 912-7966">(310) 912-7966</a>
 			</center>
 
 		</div>
