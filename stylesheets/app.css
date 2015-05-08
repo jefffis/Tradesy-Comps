@@ -412,6 +412,7 @@ nav a {
 	line-height: 1.2;
 	min-height: 3em;
 	padding: .35em .35em .5rem;
+	position: relative;
 	text-align: center;
 	width: 100%;
 }
@@ -436,10 +437,24 @@ nav a {
 	margin: 0 auto .15em;
 	width: 30px;
 }
+.tabs .alerts:after {
+	content: attr(data-num);
+	background: #ee7873;
+	border-radius: 100%;
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
+	height: 15px;
+	line-height: 1.2;
+	overflow: hidden;
+	padding-top: .2rem;
+	position: absolute;
+	top: .25rem;
+	left: .55rem;
+	width: 18px;
+}
 .tabs .av {
 	border-radius: 100%;
-	box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
-	margin: .25rem auto .5em;
+	/*box-shadow: 0 0 0 1px rgba(0,0,0,0.5);*/
+	margin: .25rem auto .4em;
 	width: 25px;
 }
 .tabs span span {
@@ -449,14 +464,14 @@ nav a {
 	display: block;
 	float: none;
 	height: 25px;
-	margin: .15rem auto .6em;
+	margin: .25rem auto .4em;
 	padding-top: .3rem;
 	text-align: center;
 	width: 25px;
 }
 .tabs span .long {
 	letter-spacing: 1px;
-	/*text-indent: 1px;*/
+	text-indent: 1.5px;
 }
 
 nav.open {
