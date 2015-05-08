@@ -139,12 +139,22 @@ hr {
 .text-center {
 	text-align: center;
 }
+.no-pad {
+	padding: 0;
+}
 
 header {
 	background: #040407;
 	/*border-bottom: 2px solid #efefef;*/
 	padding: .5em;
 	position: relative;
+}
+/*header img {
+	float: left;
+	max-width: 100px;
+}*/
+.alt {
+	display: none;
 }
 .logo {
 	float: left;
@@ -159,7 +169,11 @@ header {
 	text-indent: -9999px;
 	width: 150px;
 }
+/*.search {
+	float: left;
+}*/
 .search fieldset {
+	/*float: left;*/
 	border: 0;
 	max-width: 40em;
 	margin-right: 3em;
@@ -381,6 +395,8 @@ nav a {
 	width: auto;
 }
 .tabs {
+	background: #2a2a2a;
+	/*background: #111;*/
 	padding: 0;
 }
 .tabs span {
@@ -389,29 +405,58 @@ nav a {
 	width: 25%;
 }
 .tabs a {
+	color: rgba(255,255,255,0.75);
 	display: block;
 	font-size: .75em;
 	height: 100%;
 	line-height: 1.2;
 	min-height: 3em;
-	padding: .75em .35em;
+	padding: .35em .35em .5rem;
 	text-align: center;
 	width: 100%;
 }
+.five span {
+	width: 20%;
+}
+.five a {
+	font-size: .7em;
+}
 .tabs span + span a {
-	box-shadow: -1px 0 0 #ddd;
+	box-shadow: -1px 0 0 rgba(0,0,0,0.5);
 }
 .tabs a:active {
-	background: #efefef;
+	background: #111;
 }
 .tabs a:active img {
 	opacity: .5;
 }
 .tabs img {
+	/*border-radius: 100%;*/
+	display: block;
+	margin: 0 auto .15em;
+	width: 30px;
+}
+.tabs .av {
+	border-radius: 100%;
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+	margin: .25rem auto .5em;
+	width: 25px;
+}
+.tabs span span {
+	/*background: white;*/
+	border: 1px solid rgba(255,255,255,0.5);
 	border-radius: 100%;
 	display: block;
-	margin: .15em auto;
-	width: 30px;
+	float: none;
+	height: 25px;
+	margin: .15rem auto .6em;
+	padding-top: .3rem;
+	text-align: center;
+	width: 25px;
+}
+.tabs span .long {
+	letter-spacing: 1px;
+	/*text-indent: 1px;*/
 }
 
 nav.open {
@@ -992,7 +1037,7 @@ h2 .del {
 	bottom: 0;
 	margin: 0;
 	width: 100%;
-	z-index: 10;
+	z-index: 100;
 }
 .circle {
 	float: right;
