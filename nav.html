@@ -72,13 +72,25 @@
 						<img src="images/note.png" />
 					</a>
 				</span>
-				<span>
-					<a href="">
+				<span class="has-nav" id="user-toggle">
+					<a>
 						<!-- Tuna -->
 						<span class="long">JD</span>
 						<!-- <img src="https://pbs.twimg.com/profile_images/473111708735524864/kb0NFxZk_bigger.jpeg" alt="" class="av"> -->
 					</a>
 				</span>
+				<div class="sub-nav hide" id="user-menu">
+					<div>
+						<a href="###">Your Wants</a>
+						<a href="###">Your Closet</a>
+						<a href="###">Your Listings</a>
+						<a href="###">Your Sales</a>
+						<a href="###">Manage Payouts</a>
+						<a href="###">Edit Settings</a>
+						<hr />
+						<a href="###">Logout</a>
+					</div>
+				</div>
 			</nav>
 			<form class="search hide focusd" id="search-form">
 				<fieldset>
@@ -103,7 +115,9 @@
 				searchToggle = $('#search-toggle'),
 				searchForm = $('#search-form'),
 				bagToggle = $('#bag-toggle'),
-				bag = $('#bag');
+				bag = $('#bag'),
+				userMenu = $('#user-menu'),
+				userToggle = $('#user-toggle');
 
 				win.scroll(function() {
 					var scrollTop = win.scrollTop();
@@ -114,9 +128,20 @@
 					}
 				});
 
+				userToggle.on('click', function() {
+					searchForm.addClass('hide');
+					searchToggle.removeClass('active');
+					bag.addClass('hide');
+					bagToggle.removeClass('active');
+					userMenu.toggleClass('hide');
+					$(this).toggleClass('active');
+				});
+
 				searchToggle.on('click', function() {
 					bag.addClass('hide');
 					bagToggle.removeClass('active');
+					userMenu.addClass('hide');
+					userToggle.removeClass('active');
 					searchForm.toggleClass('hide');
 					$(this).toggleClass('active');
 					focusSearch($(this));
@@ -125,6 +150,8 @@
 				bagToggle.on('click', function() {
 					searchForm.addClass('hide');
 					searchToggle.removeClass('active');
+					userMenu.addClass('hide');
+					userToggle.removeClass('active');
 					bag.toggleClass('hide');
 					$(this).toggleClass('active');
 				});
