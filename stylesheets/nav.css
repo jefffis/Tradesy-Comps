@@ -31,6 +31,9 @@ strong, h1, h2, h3 {
 a {
 	color: #ee7873;
 }
+.hide {
+	display: none;
+}
 
 header {
 	background: #040407;
@@ -71,20 +74,23 @@ header {
 .user-ind + .user-ind + .user-ind {
 	right: 6.5em;
 }
-.user-ind:active, .srch:active {
+.user-ind:active, .srch:active, .active {
 	opacity: .5;
 }
 .bag, .msg, .notes, .usr, .gear, .srch {
 	background: url(../images/bag.png) no-repeat center center;
-	background-size: 35px;
+	background-size: 30px;
 }
 .msg {
 	background-image: url(../images/msg.png);
 }
 .srch {
 	background-image: url(../images/search-w.png);
-	opacity: .5;
+	/*opacity: .5;*/
 }
+/*.srch.active {
+	opacity: 1;
+}*/
 .usr {
 	background-image: url(../images/more.png);
 }
@@ -95,7 +101,7 @@ header {
 }
 .notes {
 	background: url(../images/note.png) no-repeat center center;
-	background-size: 34px;
+	/*background-size: 25px;*/
 }
 .bag-items {
 	background: #ee7873;
@@ -141,9 +147,10 @@ header {
 	/*height: 100%;*/
 	/*min-height: 3em;*/
 	/*padding: .35em .35em .5rem;*/
-	padding:  .5rem;
+	padding:  .65rem .5rem;
 	position: relative;
 	text-align: center;
+	text-decoration: none;
 	width: 100%;
 }
 /*.logged-in a {
@@ -166,7 +173,6 @@ header {
 }
 .tabs a:active {
 	background: #111;
-	text-decoration: none;
 }
 .tabs a:active img {
 	opacity: .5;
@@ -210,24 +216,108 @@ header {
 .tabs .av {
 	border-radius: 100%;
 	/*box-shadow: 0 0 0 1px rgba(0,0,0,0.5);*/
-	margin: .25rem auto .4em;
-	width: 25px;
+	/*margin: .25rem auto .4em;
+	width: 25px;*/
 }
 .tabs span span {
 	/*background: white;*/
 	border: 1px solid rgba(255,255,255,0.5);
 	border-radius: 100%;
 	display: block;
+	font-size: .75rem;
 	float: none;
 	height: 25px;
-	margin: .25rem auto .4em;
-	padding-top: .3rem;
+	margin: auto;
+	/*margin: .25rem auto .4em;*/
+	padding-top: .2rem;
 	text-align: center;
 	width: 25px;
 }
 .tabs span .long {
 	letter-spacing: 1px;
 	text-indent: 1.5px;
+}
+
+.search {
+	background: white;
+	clear: both;
+	border-bottom: 1px solid #ddd;
+	margin: 0 -.5rem -.5rem;
+	padding: .75rem;
+}
+.search fieldset {
+	/*float: left;*/
+	border: 0;
+	max-width: 40em;
+	/*margin-right: 3em;*/
+	/*padding: .5em;*/
+	padding: 0;
+	position: relative;
+	z-index: 10;
+	transition: margin .25s ease-in-out;
+}
+.search.two fieldset {
+	margin-right: 5.75rem;
+}
+.search.three fieldset {
+	margin-right: 8.5rem;
+}
+.search.focusd fieldset {
+	margin-right: 0;
+}
+.search.no-r-m fieldset {
+	margin-right: 0;
+}
+.search input[type=search] {
+	background: white;
+	border: 0;
+	-webkit-appearance: none;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	/*box-shadow: 0 0 0 1px #ddd;*/
+	padding: 0;
+	/*outline: 2px solid #ee7873;*/
+	outline: none;
+	width: 100%;
+}
+.search input[type=search]:focus {
+	/*box-shadow: 0 0 0 1px #111;*/
+}
+.search input[type=submit] {
+	background: white;
+	border: 0;
+	color: #999;
+	padding: 0;
+	position: absolute;
+	right: .5em;
+	top: .25rem;
+}
+.search .btn {
+	background: url(../images/search.png) no-repeat 0 0;
+	background-size: 16px;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	height: 16px;
+	text-indent: -9999px;
+	padding: 0;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	width: 16px;
+}
+.search .btn:active {
+	opacity: .5;
+	outline: 1px dotted #ee7873;
+}
+
+.my-bag {
+	background: white;
+	border-bottom: 1px solid #ddd;
+	clear: both;
+	margin: 0 -.5rem -.5rem;
+	padding: 1rem;
+	text-align: center;
 }
 
 .placeholder {

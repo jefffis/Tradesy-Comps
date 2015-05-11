@@ -17,12 +17,6 @@
 					<a href="">Tradesy</a>
 				</h1>
 				<!-- <img src="https://www.tradesy.com/css/images/tradesy2xwhite.png" alt="Tradesy logo" /> -->
-				<!-- <form class="search _no-r-m _two focusd" id="search-form">
-					<fieldset>
-						<input type="search" id="search" />
-						<input type="submit" value="Search" class="btn" />
-					</fieldset>
-				</form> -->
 				<!--<div class="user">
 					<a href="">
 						<img src="https://item1.tradesy.com/images/user-default-image.jpg" />
@@ -30,10 +24,11 @@
 						Login
 					</a>
 				</div>-->
-				<a href="#" class="bag user-ind">
+				<a class="bag user-ind" id="bag-toggle">
 					<span class="bag-items zero">0</span>
 				</a>
 				<span id="search-toggle" class="srch user-ind"></span>
+
 				<!-- <div id="more-user-actions" class="usr user-ind">
 					<span class="bag-items">2</span>
 				</div> -->
@@ -79,30 +74,21 @@
 				</span>
 				<span>
 					<a href="">
-						Tuna
-					</a>
-				</span>
-			</nav>
-				<!-- <span>
-					<a href="#full-menu" class="alerts" data-num="13">
-						<img src="images/msg.png" />
-						Messages
-					</a>
-				</span>
-				<span>
-					<a href="#full-menu" class="alerts" data-num="1">
-						<img src="images/note.png" />
-						Alerts
-					</a>
-				</span> -->
-				<!-- <span>
-					<a href="#full-menu">
+						<!-- Tuna -->
 						<span class="long">JD</span>
-						<img src="https://pbs.twimg.com/profile_images/473111708735524864/kb0NFxZk_bigger.jpeg" alt="" class="av">
-						Tuna
+						<!-- <img src="https://pbs.twimg.com/profile_images/473111708735524864/kb0NFxZk_bigger.jpeg" alt="" class="av"> -->
 					</a>
-				</span> -->
+				</span>
 			</nav>
+			<form class="search hide focusd" id="search-form">
+				<fieldset>
+					<input type="search" id="search" />
+					<input type="submit" value="Search" _class="btn" />
+				</fieldset>
+			</form>
+			<div class="my-bag hide" id="bag">
+				Your bag is empty, start shopping!
+			</div>
 		</header>
 		<div class="placeholder">
 			<span></span>
@@ -113,7 +99,11 @@
 			var win = $(window),
 				header = $('header'),
 				nav = $('nav'),
-				navTop = nav.offset().top;
+				navTop = nav.offset().top,
+				searchToggle = $('#search-toggle'),
+				searchForm = $('#search-form'),
+				bagToggle = $('#bag-toggle'),
+				bag = $('#bag');
 
 				win.scroll(function() {
 					var scrollTop = win.scrollTop();
@@ -123,6 +113,29 @@
 						nav.removeClass('fixed');
 					}
 				});
+
+				searchToggle.on('click', function() {
+					bag.addClass('hide');
+					bagToggle.removeClass('active');
+					searchForm.toggleClass('hide');
+					$(this).toggleClass('active');
+					focusSearch($(this));
+				});
+
+				bagToggle.on('click', function() {
+					searchForm.addClass('hide');
+					searchToggle.removeClass('active');
+					bag.toggleClass('hide');
+					$(this).toggleClass('active');
+				});
+
+				function focusSearch(el) {
+					if(!!el.hasClass('active')){
+						setTimeout(function() {
+							searchForm.find('input[type=search]').focus();
+						}, 100);
+					}
+				}
 		});
 		</script>
 	</body>
