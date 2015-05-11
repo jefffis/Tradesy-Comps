@@ -34,11 +34,25 @@ a {
 .hide {
 	display: none;
 }
+.btn {
+	background: #ee7873;
+	/*border-radius: 4px;*/
+	box-shadow: 0 0 0 1px rgba(0,0,0,0.15) inset;
+	color: inherit;
+	display: inline-block;
+	font-size: 1.25em;
+	line-height: 1;
+	outline: none;
+	padding: .75em;
+	position: relative;
+	text-decoration: none;
+}
 
 header {
 	background: #040407;
 	padding: .5em;
 	position: relative;
+	z-index: 3;
 }
 .logo {
 	/*display: inline-block;*/
@@ -390,21 +404,93 @@ header {
 	border-bottom: 1px solid #ddd;
 	clear: both;
 	margin: 0 -.5rem -.5rem;
-	padding: 1rem;
+	padding: .86rem 1rem;
 	/*text-align: center;*/
 }
 
-.placeholder {
+.promo, .profile {
+	background: #111;
+	color: white;
 	display: table;
-	height: 700px;
+	overflow: hidden;
+	position: relative;
+	height: 250px;
 	width: 100%;
 }
-.placeholder span {
+.promo > div, .profile > div {
 	display: table-cell;
-	/*height: 1000px;*/
+	height: 100%;
+	line-height: 1;
+	padding: 0 1em;
+	position: relative;
+	text-align: center;
 	vertical-align: middle;
+}
+.promo h1, .profile h1 {
+	/*font-family: 'calluna-regular', serif;*/
+	/*letter-spacing: 2.5px;*/
+	color: white;
+	margin: 0 0 .5em;
+	position: relative;
+	/*text-transform: uppercase;*/
+	z-index: 2;
+}
+.promo img, .profile .hero {
+	left: 0;
+	min-height: 250px;
+	max-width: 100%;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+.promo .btn {
+	position: relative;
+	z-index: 2;
+}
+
+.template {
+	padding: .5em 0 1rem;
+}
+.template h3 {
+	color: #111;
+	margin-bottom: 0;
 	text-align: center;
 }
-.placeholder span:before {
-	content: "some content here";
+.i-tpt {
+	display: inline-block;
+	float: left;
+	padding: 1em 1em 0;
+	width: 50%;
+}
+.i-tpt:nth-child(2n+1) {
+	padding-left: .5em;
+}
+.i-tpt:nth-child(2n+2) {
+	padding-right: .5em;
+}
+.i-tpt + .i-tpt + .i-tpt {
+	padding-top: 1.5em;
+}
+.i-tpt:last-child {
+	float: none;
+}
+.i-tpt div {
+	background: #efefef;
+	/*background: white url(https://images.tradesy.com/images/home_placeholder_550x250.jpg) no-repeat center center;*/
+	/*background-size: 200%;*/
+	box-shadow: 0 0 0 1px #efefef;
+	height: 8em;
+	margin-bottom: .75em;
+}
+.i-tpt span {
+	background: #999;
+	display: block;
+	height: 1em;
+	margin-bottom: .5em;
+}
+.i-tpt span + span {
+	height: .5em;
+	margin: auto;
+	width: 60%;
 }
