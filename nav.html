@@ -63,13 +63,15 @@
 					</a>
 				</span>
 				<span>
-					<a href="#full-menu">
-						<img src="images/msg.png" />
+					<a href="#full-menu" class="alerts">
+						<!-- <img src="images/msg.png" /> -->
+						<em class="msg" data-num="1"></em>
 					</a>
 				</span>
 				<span>
-					<a href="#full-menu" class="alerts" data-num="2">
-						<img src="images/note.png" />
+					<a href="#full-menu" class="alerts">
+						<!-- <img src="images/note.png" /> -->
+						<em class="note" data-num="2"></em>
 					</a>
 				</span>
 				<span class="has-nav" id="user-toggle">
@@ -80,16 +82,13 @@
 					</a>
 				</span>
 				<div class="sub-nav hide" id="user-menu">
-					<div>
-						<a href="###">Your Wants</a>
-						<a href="###">Your Closet</a>
-						<a href="###">Your Listings</a>
-						<a href="###">Your Sales</a>
-						<a href="###">Manage Payouts</a>
-						<a href="###">Edit Settings</a>
-						<hr />
-						<a href="###">Logout</a>
-					</div>
+					<a href="###">Your Wants</a>
+					<a href="###">Your Closet</a>
+					<a href="###">Your Listings</a>
+					<a href="###">Your Sales</a>
+					<a href="###">Manage Payouts</a>
+					<a href="###">Edit Settings</a>
+					<a href="###">Logout</a>
 				</div>
 			</nav>
 			<form class="search hide focusd" id="search-form">
@@ -155,6 +154,11 @@
 					bag.toggleClass('hide');
 					$(this).toggleClass('active');
 				});
+
+				if(window.location.hash){
+					searchForm.toggleClass('hide');
+					searchToggle.toggleClass('active');
+				}
 
 				function focusSearch(el) {
 					if(!!el.hasClass('active')){

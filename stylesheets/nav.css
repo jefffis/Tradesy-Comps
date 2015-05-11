@@ -147,7 +147,7 @@ header {
 	/*height: 100%;*/
 	/*min-height: 3em;*/
 	/*padding: .35em .35em .5rem;*/
-	padding:  .65rem .5rem;
+	padding:  1rem .5rem .9rem;
 	position: relative;
 	text-align: center;
 	text-decoration: none;
@@ -175,23 +175,39 @@ header {
 .tabs a:active, .tabs .active {
 	background: #111;
 }
+.tabs .active {
+	opacity: .5;
+}
 .tabs a:active img {
 	opacity: .5;
 }
-.tabs img {
+.tabs img, .tabs em {
 	/*border-radius: 100%;*/
 	display: inline;
 	/*margin: 0 auto .15em;*/
-	/*position: relative;
-	top: -.125rem;*/
-	width: 25px;
-	max-height: 25px;
+	position: relative;
+	top: -.125rem;
+	max-width: 30px;
+	max-height: 30px;
 	vertical-align: top
+}
+.tabs em {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
+.msg {
+	background: url(../images/msg.png) no-repeat center center;
+	background-size: 30px;
+}
+.note {
+	background: url(../images/note.png) no-repeat center center;
+	background-size: 30px;
 }
 .tabs .alerts {
 	text-decoration: none;
 }
-.tabs .alerts:after {
+.tabs .alerts em:after {
 	content: attr(data-num);
 /*	font-size: .75rem;
 	position: absolute;
@@ -200,21 +216,23 @@ header {
 	/*color: #ee7873;*/
 	background: #ee7873;
 	border-radius: 100%;
-	box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
+	/*box-shadow: 0 0 0 1px rgba(0,0,0,0.25);*/
 	font-size: .7rem;
+	font-style: normal;
 	height: 15px;
 	line-height: 1.2;
 	overflow: hidden;
 	padding-top: .2rem;
 	position: absolute;
-	top: .85rem;
-	right: 1rem;
+	top: 0;
+	right: -.5rem;
 	width: 18px;
 	text-align: center;
 }
 .sub-nav {
 	/*display: none;*/
 	/*background: #efefef;*/
+	background: white;
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -246,6 +264,11 @@ header {
 	color: #777;
 	padding: .5rem;
 	text-align: left;
+}
+.sub-nav a:last-child {
+	border-top: 0;
+	border-bottom: 1px solid #ddd;
+	margin-top: .5rem;
 }
 .sub-nav a:after {
 	content: '\25B6';
@@ -284,12 +307,14 @@ header {
 	display: block;
 	font-size: .75rem;
 	float: none;
-	height: 25px;
+	height: 30px;
 	margin: auto;
 	/*margin: .25rem auto .4em;*/
-	padding-top: .2rem;
+	padding-top: .3rem;
 	text-align: center;
-	width: 25px;
+	width: 30px;
+	position: relative;
+	top: -.125rem;
 }
 .tabs span .long {
 	letter-spacing: 1px;
