@@ -90,18 +90,22 @@
 					<a href="###">Edit Settings</a>
 					<a href="###">Logout</a>
 				</div>
-			</nav>
 
-			<form class="search hide focusd" id="search-form">
+				<form class="search hide focusd" id="search-form">
 				<fieldset>
 					<input type="search" id="search" />
 					<input type="submit" value="Search" />
+					<del></del>
 				</fieldset>
 			</form>
 
 			<div class="my-bag hide" id="bag">
-				Your bag is empty, start shopping!
+				<img src="images/bag-d.png" alt="" />
+				Your bag is empty, <a href="">start shopping</a>!
+				<del></del>
 			</div>
+
+			</nav>
 
 		</header>
 		
@@ -186,9 +190,11 @@
 				nav = $('nav'),
 				navTop = nav.offset().top,
 				searchToggle = $('#search-toggle'),
-				searchForm = $('#search-form'),
+				searchForm = $('#search-form')
+				searchDel = searchForm.find('del'),
 				bagToggle = $('#bag-toggle'),
-				bag = $('#bag'),
+				bag = $('#bag')
+				bagDel = bag.find('del'),
 				userMenu = $('#user-menu'),
 				userToggle = $('#user-toggle');
 
@@ -220,6 +226,11 @@
 					focusSearch($(this));
 				});
 
+				searchDel.on('click', function() {
+					searchForm.addClass('hide');
+					searchToggle.removeClass('active');
+				});
+
 				bagToggle.on('click', function() {
 					searchForm.addClass('hide');
 					searchToggle.removeClass('active');
@@ -227,6 +238,11 @@
 					userToggle.removeClass('active');
 					bag.toggleClass('hide');
 					$(this).toggleClass('active');
+				});
+
+				bagDel.on('click', function() {
+					bag.addClass('hide');
+					bagToggle.removeClass('active');
 				});
 
 				if(window.location.hash){

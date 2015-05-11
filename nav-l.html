@@ -66,9 +66,80 @@
 				Your bag is empty, start shopping!
 			</div>
 		</header>
-		<div class="placeholder">
-			<span></span>
+		
+		<div class="promo">
+			<div>
+				<h1>The Dream Bag Sale</h1>
+				<a href="#" class="btn">Shop Now</a>
+				<img src="http://i.huffpost.com/gen/1269864/thumbs/o-WOMEN-DESIGNER-BAGS-facebook.jpg" />
+			</div>
 		</div>
+
+		<div class="template">
+			<h3>Some headline here</h3>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="i-tpt">
+				<div></div>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+
+		<script>document.addEventListener('touchstart', function() {},false);</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
 		$(function() {
@@ -79,7 +150,9 @@
 				searchToggle = $('#search-toggle'),
 				searchForm = $('#search-form'),
 				bagToggle = $('#bag-toggle'),
-				bag = $('#bag');
+				bag = $('#bag'),
+				userMenu = $('#user-menu'),
+				userToggle = $('#user-toggle');
 
 				win.scroll(function() {
 					var scrollTop = win.scrollTop();
@@ -90,9 +163,20 @@
 					}
 				});
 
+				userToggle.on('click', function() {
+					searchForm.addClass('hide');
+					searchToggle.removeClass('active');
+					bag.addClass('hide');
+					bagToggle.removeClass('active');
+					userMenu.toggleClass('hide');
+					$(this).toggleClass('active');
+				});
+
 				searchToggle.on('click', function() {
 					bag.addClass('hide');
 					bagToggle.removeClass('active');
+					userMenu.addClass('hide');
+					userToggle.removeClass('active');
 					searchForm.toggleClass('hide');
 					$(this).toggleClass('active');
 					focusSearch($(this));
@@ -101,9 +185,16 @@
 				bagToggle.on('click', function() {
 					searchForm.addClass('hide');
 					searchToggle.removeClass('active');
+					userMenu.addClass('hide');
+					userToggle.removeClass('active');
 					bag.toggleClass('hide');
 					$(this).toggleClass('active');
 				});
+
+				if(window.location.hash){
+					searchForm.toggleClass('hide');
+					searchToggle.toggleClass('active');
+				}
 
 				function focusSearch(el) {
 					if(!!el.hasClass('active')){
