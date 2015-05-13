@@ -278,8 +278,8 @@ header {
 .sub-nav a {
 	background: white;
 	color: #777;
-	font-size: 1.15rem;
-	padding: .5rem;
+	font-size: 1rem;
+	padding: .5rem .75rem .5rem 1rem;
 	text-align: left;
 }
 .sub-nav a:last-child {
@@ -289,12 +289,12 @@ header {
 }
 .sub-nav a:after {
 	content: '\25B6';
-	color: #ddd;
+	color: #999;
 	display: inline-block;
 	float: right;
-	font-size: .7rem;
+	/*font-size: 1rem;*/
 	position: relative;
-	top: .35rem;
+	top: .1rem;
 }
 .sub-nav a + a {
 	border-top: 1px solid #ddd;
@@ -514,4 +514,97 @@ del:after {
 	height: .5em;
 	margin: auto;
 	width: 60%;
+}
+
+.menu {
+	margin: 0;
+	padding: 0;
+}
+.menu span {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+.menu a {
+	color: #666;
+	display: block;
+	padding: .5em 1em;
+	position: relative;
+	text-decoration: none;
+	z-index: 1;
+}
+.r a {
+	display: inline-block;
+	float: right;
+	/*margin-bottom: 1rem;*/
+	text-align: right;
+}
+/*.r a:before {
+	content: "\25B2";
+	position: relative;
+	left: -.25rem;
+	top: 1px;
+}*/
+.menu a:active {
+	background: #efefef;
+	opacity: .75;
+}
+.menu span + span {
+	box-shadow: 0 1px 0 rgba(0,0,0,0.125) inset;
+}
+.menu em {
+	cursor: pointer;
+	display: block;
+	height: 3em;
+	font-size: 15px;
+	font-style: normal;
+	overflow: hidden;
+	padding-top: .8em;
+	position: absolute;
+	top: -1px;
+	right: 0;
+	text-align: center;
+	width: 3em;
+	z-index: 2;
+}
+.menu em:active {
+	opacity: .65;
+}
+.menu em:after {
+	content: "\25BC";
+}
+.menu .sub-nav {
+	display: none;
+	position: static;
+}
+.menu .sub-nav a {
+	font-size: 1rem;
+}
+.menu .sub-nav a:after {
+	color: #999;
+	font-size: 1rem;
+	top: .1rem;	
+}
+.menu .sub-nav.open  {
+	border-left: 8px solid #ddd;
+	border-top: 1px solid #ddd;
+	/*box-shadow: 0 1px 0 rgba(0,0,0,0.125) inset;*/
+	display: block;
+}
+.sub-nav.open  span + span {
+	box-shadow: 0 1px 0 rgba(0,0,0,0.125) inset;
+}
+.menu .sub-nav a:last-child {
+	border-bottom: 0;
+	border-top: 1px solid #ddd;
+	margin-top: 0;
+}
+.menu .sub-nav a:active {
+	color: #999;
+}
+.menu .active {
+	top: -2px;
+}
+.menu .active:after {
+	content: "\25B2";
 }

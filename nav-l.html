@@ -41,17 +41,17 @@
 			</div>
 			<nav class="tabs three cf">
 				<span>
-					<a href="#full-menu">
+					<a href="#menu">
 						Shop
 					</a>
 				</span>
 				<span>
-					<a href="#full-menu">
+					<a href="##">
 						Sell
 					</a>
 				</span>
 				<span>
-					<a href="">
+					<a href="###">
 						Log In
 					</a>
 				</span>
@@ -145,6 +145,100 @@
 			</div>
 		</div>
 
+		<menu class="menu" id="menu">
+			<span class="r">
+				<a href="#">Back to Top</a>
+			</span>
+			<span>
+				<a href="">Clothing</a>
+				<em></em>
+				<div class="sub-nav">
+					<a href="">Sub Clothing</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+				</div>
+			</span>
+			<span>
+				<a href="">Bags</a>
+				<em></em>
+				<div class="sub-nav">
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+				</div>
+			</span>
+			<span>
+				<a href="">Shoes</a>
+				<em></em>
+				<div class="sub-nav">
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+				</div>
+			</span>
+			<span>
+				<a href="">Accessories</a>
+				<em></em>
+				<div class="sub-nav">
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+				</div>
+			</span>
+			<span>
+				<a href="">Weddings</a>
+				<em></em>
+				<div class="sub-nav">
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+				</div>
+			</span>
+			<span>
+				<a href="">Style Feed</a>
+				<em></em>
+				<div class="sub-nav">
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+				</div>
+			</span>
+			<span>
+				<a href="">Designers</a>
+				<em></em>
+				<div class="sub-nav">
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+				</div>
+			</span>
+			<span>
+				<a href="">Editor&rsquo;s Picks</a>
+				<em></em>
+				<div class="sub-nav">
+					<a href="">Sub Clothing</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+				</div>
+			</span>
+		</menu>
+
 		<script>document.addEventListener('touchstart', function() {},false);</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
@@ -160,7 +254,10 @@
 				bag = $('#bag')
 				bagDel = bag.find('del'),
 				userMenu = $('#user-menu'),
-				userToggle = $('#user-toggle');
+				userToggle = $('#user-toggle'),
+				menu = $('#menu')
+			    menu_link = menu.find('em'),
+			    menu_sub = menu.find('.sub-nav');
 
 				win.scroll(function() {
 					var scrollTop = win.scrollTop();
@@ -207,6 +304,20 @@
 				bagDel.on('click', function() {
 					bag.addClass('hide');
 					bagToggle.removeClass('active');
+				});
+
+				menu_link.on('click', function(){
+					var $this = $(this);
+					var sub = $this.parent().find('.sub-nav');
+					if(sub.hasClass('open')){
+						$this.removeClass('active');
+						sub.removeClass('open');
+					}else{
+						menu_link.removeClass('active');
+						menu_sub.removeClass('open');
+						$this.addClass('active');
+						sub.addClass('open');
+					}
 				});
 
 				if(window.location.hash){
