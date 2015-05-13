@@ -46,7 +46,7 @@
 					</a>
 				</span>
 				<span>
-					<a href="##">
+					<a href="##" id="sellll">
 						Sell
 					</a>
 				</span>
@@ -239,6 +239,17 @@
 			</span>
 		</menu>
 
+		<div id="interstitial">
+			<div class="logo"></div>
+			<div>
+				<img src="https://item5.tradesy.com/r/c8cf84cb7401990072955268e6bac0e9f24a4d0f1e9b1842e20557aa1380102c/355/355/bags/chanel/shoulder-bags/chanel-vintage-classic-maxi-xl-255-shoulder-bag-black-2825734.jpg" />
+				<h1>Want to sell that old Chanel bag?</h1>
+				<p>Try listing with our app: it&rsquo;s free, easy, and fun!</p>
+				<a href="##" class="btn nopeee">Sell in App</a>
+				<a href="####" class="nopeee">No thanks, web is fine.</a>
+			</div>
+		</div>
+
 		<script>document.addEventListener('touchstart', function() {},false);</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
@@ -257,7 +268,10 @@
 				userToggle = $('#user-toggle'),
 				menu = $('#menu')
 			    menu_link = menu.find('em'),
-			    menu_sub = menu.find('.sub-nav');
+			    menu_sub = menu.find('.sub-nav'),
+			    sellll = $('#sellll'),
+			    interstitial = $('#interstitial'),
+			    nopeee = $('.nopeee');
 
 				win.scroll(function() {
 					var scrollTop = win.scrollTop();
@@ -318,6 +332,20 @@
 						$this.addClass('active');
 						sub.addClass('open');
 					}
+				});
+
+				sellll.on('click', function(){
+					setTimeout(function() {
+						interstitial.addClass('show');
+						$('html').addClass('no-scroll');
+					}, 250);
+				});
+
+				nopeee.on('click', function(){
+					setTimeout(function() {
+						interstitial.removeClass('show');
+						$('html').removeClass('no-scroll');
+					}, 250);
 				});
 
 				if(window.location.hash){
