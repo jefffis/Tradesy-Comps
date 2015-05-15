@@ -63,13 +63,13 @@
 					</a>
 				</span>
 				<span>
-					<a href="#full-menu" class="alerts">
+					<a href="#" class="alerts">
 						<!-- <img src="images/msg.png" /> -->
 						<em class="msg" data-num="1"></em>
 					</a>
 				</span>
 				<span>
-					<a href="#full-menu">
+					<a href="#">
 						<!-- <img src="images/note.png" /> -->
 						<em class="note"></em>
 					</a>
@@ -111,9 +111,9 @@
 		
 		<div class="promo">
 			<div>
-				<h1>The Dream Bag Sale</h1>
+				<!-- <h1>The Dream Bag Sale</h1>
 				<a href="#" class="btn">Shop Now</a>
-				<img src="http://i.huffpost.com/gen/1269864/thumbs/o-WOMEN-DESIGNER-BAGS-facebook.jpg" />
+				<img src="http://i.huffpost.com/gen/1269864/thumbs/o-WOMEN-DESIGNER-BAGS-facebook.jpg" /> -->
 			</div>
 		</div>
 
@@ -275,6 +275,19 @@
 			</span>
 		</menu>
 
+		<footer></footer>
+
+		<div id="interstitial">
+			<div class="logo"></div>
+			<div>
+				<img src="images/email-btn.png" />
+				<h1>Try messaging in our app.</h1>
+				<p>It&rsquo;s much easier, faster and free!</p>
+				<a href="##" class="btn nopeee">Get the App</a>
+				<a href="####" class="nopeee">No thanks, web is fine.</a>
+			</div>
+		</div>
+
 		<script>document.addEventListener('touchstart', function() {},false);</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
@@ -293,7 +306,10 @@
 				userToggle = $('#user-toggle'),
 				menu = $('#menu')
 			    menu_link = menu.find('em'),
-			    menu_sub = menu.find('.sub-nav');
+			    menu_sub = menu.find('.sub-nav'),
+			    sellll = $('.alerts'),
+			    interstitial = $('#interstitial'),
+			    nopeee = $('.nopeee');
 
 				// win.scroll(function() {
 				// 	var scrollTop = win.scrollTop();
@@ -353,7 +369,24 @@
 						menu_sub.removeClass('open');
 						$this.addClass('active');
 						sub.addClass('open');
+						$('html,body').animate({
+							scrollTop: $this.offset().top
+						}, 500)
 					}
+				});
+
+				sellll.on('click', function(){
+					setTimeout(function() {
+						interstitial.addClass('show');
+						$('html').addClass('no-scroll');
+					}, 250);
+				});
+
+				nopeee.on('click', function(){
+					setTimeout(function() {
+						interstitial.removeClass('show');
+						$('html').removeClass('no-scroll');
+					}, 250);
 				});
 
 				if(window.location.hash){
