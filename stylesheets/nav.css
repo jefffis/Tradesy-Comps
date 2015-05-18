@@ -681,6 +681,7 @@ del:after {
 	max-width: 300px;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: left;
 }
 .interstitial strong {
 	color: #333;
