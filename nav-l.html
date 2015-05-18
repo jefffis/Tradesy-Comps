@@ -239,7 +239,7 @@
 			</span>
 		</menu>
 
-		<div id="interstitial">
+		<div id="interstitial" class="interstitial">
 			<div class="logo"></div>
 			<div>
 				<img src="https://item5.tradesy.com/r/c8cf84cb7401990072955268e6bac0e9f24a4d0f1e9b1842e20557aa1380102c/355/355/bags/chanel/shoulder-bags/chanel-vintage-classic-maxi-xl-255-shoulder-bag-black-2825734.jpg" />
@@ -247,6 +247,37 @@
 				<p>Try listing with our app: it&rsquo;s free, easy, and fun!</p>
 				<a href="##" class="btn nopeee">Sell in App</a>
 				<a href="####" class="nopeee">No thanks, web is fine.</a>
+			</div>
+		</div>
+
+		<div id="login-it" class="interstitial login show">
+			<div class="logo"></div>
+			<div>
+				<!-- <img src="http://media.sailthru.com/37w/1jz/2/i/54e52fdcbbdb1.jpg" /> -->
+				<h2>The easiest place to <strong>Buy &amp; Sell authentic</strong> luxury goods. Already <a href="">have an account</a>?</h2>
+				<form>
+					<fieldset>
+						<label>
+							<span>Email Address</span>
+							<input type="email" placeholder="Enter your email address" />
+						</label>
+						<label class="no-bot">
+							<span>Password</span>
+							<small>Has to be at least 4 characters</small>
+							<input type="text" id="pass-shown" placeholder="Choose a password" />
+							<input type="password" id="pass-hidden" class="hide" />
+						</label>
+						<label class="check bot right-align check">
+							<input type="checkbox" id="pass-toggle" />
+							<em></em>
+							Hide password
+						</label>
+						<button class="btn">Get 10% off!</button>
+						<a href="####" class="nopeee">No thanks.</a>
+					</fieldset>
+				</form>
+				<!-- <a href="##" class="btn nopeee">Sell in App</a>
+				<a href="####" class="nopeee">No thanks, web is fine.</a> -->
 			</div>
 		</div>
 
@@ -271,7 +302,10 @@
 			    menu_sub = menu.find('.sub-nav'),
 			    sellll = $('#sellll'),
 			    interstitial = $('#interstitial'),
-			    nopeee = $('.nopeee');
+			    nopeee = $('.nopeee'),
+			    passHidden = $('#pass-hidden'),
+			    passShown = $('#pass-shown'),
+			    passToggle = $('#pass-toggle');
 
 				// win.scroll(function() {
 				// 	var scrollTop = win.scrollTop();
@@ -281,6 +315,16 @@
 				// 		nav.removeClass('fixed');
 				// 	}
 				// });
+
+				passToggle.on('click', function() {
+					if(passShown.hasClass('hide')){
+						passShown.removeClass('hide').val(passHidden.val());
+						passHidden.addClass('hide');
+					}else{
+						passShown.addClass('hide');
+						passHidden.removeClass('hide').val(passShown.val());
+					}
+				});
 
 				userToggle.on('click', function() {
 					searchForm.addClass('hide');
