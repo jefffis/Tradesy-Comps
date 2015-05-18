@@ -656,6 +656,13 @@ del:after {
 .login {
 	position: absolute;
 }
+.in-canvas {
+	border-top: 2px solid #ddd;
+	display: block;
+	margin-top: 2rem;
+	padding: 2rem 1rem 1rem;
+	position: static;
+}
 .interstitial.show {
 	display: block;
 }
@@ -673,7 +680,7 @@ del:after {
 	color: #999;
 	margin-bottom: 1.5rem;
 }
-.login h2 {
+.login h2, .in-canvas h2 {
 	color: #666;
 	font-size: 18px;
 	font-family: 'proxima-nova-regular', sans-serif;
@@ -683,6 +690,9 @@ del:after {
 	margin-right: auto;
 	text-align: left;
 }
+.in-canvas h2 {
+	max-width: none;
+}
 .interstitial strong {
 	color: #333;
 }
@@ -691,16 +701,28 @@ del:after {
 	display: block;
 	margin-bottom: 1rem;
 }
-.login .nopeee {
+.login .nopeee, .in-canvas .nopeee {
 	display: inline-block;
-	padding: .75em;
-	margin: 1.25rem 0 0 .1rem;
+	float: left;
+	padding: .65em;
+	margin: 1.25rem 0 0 1rem;
+}
+.interstitial button.btn {
+	display: inline-block;
+	float: left;
+	line-height: 1;
+	width: auto;
+	margin: 1.25rem 0 0;
+	padding: .65rem;
 }
 .interstitial img {
 	border-radius: 100%;
 	display: block;
 	margin: 1rem auto;
 	max-width: 125px;
+}
+.in-canvas img {
+	max-width: 150px;
 }
 .interstitial .logo {
 	background: url(http://media.sailthru.com/37w/1jz/2/i/54e52fdcbbdb1.jpg) no-repeat center center;
@@ -718,12 +740,6 @@ del:after {
 	padding: 1rem 0 0;
 	border: 0;
 	border-top: 1px solid #ddd;
-}
-.interstitial button.btn {
-	display: inline-block;
-	width: auto;
-	margin: 1.25rem 0 0;
-	float: left;
 }
 .interstitial label {
 	display: block;
@@ -814,6 +830,9 @@ footer:before {
 	}*/
 	#interstitial img {
 		max-width: 200px;
+	}
+	.in-canvas {
+		padding: 1.5rem;
 	}
 
 }
