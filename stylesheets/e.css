@@ -1,0 +1,184 @@
+@font-face{font-family:'proxima-nova-semi';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.svg#proxima-nova-semi") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,main,.desk-nav,section,summary{display:block}audio,canvas,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a{background:transparent}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}code,kbd,pre,samp{font-family:monospace,serif;font-size:1em}pre{white-space:pre-wrap}q{quotes:"\201C" "\201D" "\2018" "\2019"}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}.cf:before,.cf:after{content:" ";display:table}.cf:after{clear:both}.cf{*zoom:1}*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after, .clr {
+    clear: both;
+}
+
+html, body {
+	background: white;
+	color: #949d99;
+	font: normal 100%/1.5 'proxima-nova-regular', sans-serif;
+	height: auto;
+	min-height: 100%;
+	width: 100%;
+}
+strong, h1, h2, h3 {
+	font-family: 'proxima-nova-semi', sans-serif;
+	font-weight: normal;
+}
+a {
+	color: #ee7873;
+}
+
+body {
+	max-width: 1200px;
+	margin: auto;
+	padding: 1rem;
+}
+.clr {
+	clear: both;
+}
+
+.product {
+	display: inline-block;
+	float: left;
+	position: relative;
+	text-align: center;
+	width: 50%;
+}
+.product a {
+	color: #111;
+	display: block;
+	padding: 1rem;
+	position: relative;
+	text-decoration: none;
+}
+.is-sold a {
+	color: #999;
+}
+.is-sold:after, .on-sale:after {
+	background: #111;
+	border-radius: 3px;
+	color: white;
+	content: "Sold";
+	display: inline-block;
+	font-size: 13px;
+	line-height: 1;
+	padding: .3rem .35rem .225rem;
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/*letter-spacing: 1.25px;
+	text-transform: uppercase;*/
+}
+.on-sale:after {
+	background: #ee7873;
+	content: "On sale"
+}
+.product:hover a {
+	box-shadow: 0 0 0 1px #ccc;
+}
+.product figure {
+	display: table;
+	width: 100%;
+}
+.product div {
+	display: table-cell;
+	height: 170px;
+	max-width: 150px;
+	vertical-align: middle;
+}
+/*.is-sold div:after {
+	background: white;
+	color: #111;
+	content: "Item sold";
+	letter-spacing: 1.5px;
+	line-height: 1;
+	position: absolute;
+	top: 102px;
+	left: 0;
+	padding: .15rem 0 .125rem;
+	width: 100%;
+	text-transform: uppercase;
+}*/
+.product img {
+	display: block;
+	max-height: 120px;
+	max-width: 100%;
+	margin: auto;
+}
+.product:active img {
+	opacity: .5;
+	position: relative;
+	top: 1px;
+}
+.is-sold img {
+	opacity: .5;
+}
+.product h2, .product h3, .product h4 {
+	font-size: 15px;
+	margin: 0;
+	padding: 0;
+	margin: auto;
+	max-width: 90%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.on-sale h4 {
+	color: #ee7873;
+}
+.product h2 {
+	/*letter-spacing: 1.5px;*/
+	line-height: 1.2;
+	/*text-transform: uppercase;*/
+}
+.product h3 {
+	display: none;
+	font-family: 'proxima-nova-regular', sans-serif;
+	line-height: 1.2;
+	margin-bottom: .5rem;
+}
+.product h4 span {
+	color: #999;
+	padding-left: .25rem;
+	text-decoration: line-through;
+}
+.is-sold h4:before {
+	content: "Sold for ";
+}
+
+@media screen and (min-width: 401px){
+	/*.product {
+		display: inline-block;
+		width: 50%;
+		float: left;
+	}*/
+	.product a {
+		padding: 1.5rem;
+	}
+}
+@media screen and (min-width: 551px){
+	.product h2 {
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
+	}
+	.product h3 {
+		display: block;
+	}
+}
+@media screen and (min-width: 731px){
+	/*body {
+		padding: 2rem;
+	}*/
+	.product {
+		width: 33%;
+	}
+}
+@media screen and (min-width: 1001px){
+	.product {
+		width: 25%;
+	}
+}
