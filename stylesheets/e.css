@@ -55,14 +55,14 @@ body {
 	position: relative;
 	text-decoration: none;
 }
-.is-sold a {
+/*.is-sold a {
 	color: #999;
-}
+}*/
 .is-sold:after, .on-sale:after {
 	background: #111;
 	border-radius: 3px;
 	color: white;
-	content: "Sold";
+	content: "Item sold";
 	display: inline-block;
 	font-size: 13px;
 	line-height: 1;
@@ -170,14 +170,14 @@ body {
 	}
 }
 @media screen and (min-width: 731px){
-	/*body {
-		padding: 2rem;
-	}*/
 	.product {
 		width: 33%;
 	}
 }
 @media screen and (min-width: 1001px){
+	body {
+		padding: 2rem;
+	}
 	.product {
 		width: 25%;
 	}

@@ -660,7 +660,7 @@ del:after {
 	border-top: 2px solid #ddd;
 	display: block;
 	margin-top: 2rem;
-	padding: 2rem 1rem 1rem;
+	padding: 2rem 1rem 3rem;
 	position: static;
 }
 .interstitial.show {
@@ -713,7 +713,10 @@ del:after {
 	line-height: 1;
 	width: auto;
 	margin: 1.25rem 0 0;
-	padding: .65rem;
+	padding: .75rem;
+}
+.interstitial button.wide {
+	width: 100%;
 }
 .interstitial img {
 	border-radius: 100%;
@@ -773,7 +776,7 @@ del:after {
 	background: white;
 	border: 1px solid #ccc;
 	width: 100%;
-	padding: .35rem;
+	padding: .5rem;
 	outline: none;
 }
 .interstitial input[type=email]:focus, .interstitial input[type=text]:focus, .interstitial input[type=password]:focus {
