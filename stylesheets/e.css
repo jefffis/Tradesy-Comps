@@ -65,10 +65,10 @@ header {
 	position: relative;
 	text-decoration: none;
 }
-.is-sold a {
-	/*color: #999;*/
+/*.is-sold a {
+	color: #999;
 	box-shadow: 0 0 0 1px #efefef inset;
-}
+}*/
 /*span.is-sold, span.on-sale {
 	position: absolute;
 	top: 1px;
