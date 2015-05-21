@@ -37,6 +37,11 @@ body {
 	margin: auto;
 	padding: 1rem;
 }
+header {
+	background: #111;
+	height: 3rem;
+	margin: -1rem -1rem 3rem;
+}
 .clr {
 	clear: both;
 }
@@ -44,11 +49,13 @@ body {
 .product {
 	display: inline-block;
 	float: left;
+	padding: 3px;
 	position: relative;
 	text-align: center;
 	width: 50%;
 }
 .product a {
+	box-shadow: 0 0 0 1px #efefef inset;
 	color: #111;
 	display: block;
 	padding: 1rem;
@@ -60,25 +67,27 @@ body {
 }*/
 .is-sold:after, .on-sale:after {
 	background: #111;
-	border-radius: 3px;
+	/*border-radius: 3px;*/
 	color: white;
+	/*color: #111;*/
 	content: "Item sold";
 	display: inline-block;
 	font-size: 13px;
 	line-height: 1;
 	padding: .3rem .35rem .225rem;
 	position: absolute;
-	top: 1rem;
-	left: 1rem;
+	top: 3px;
+	left: 3px;
 	/*letter-spacing: 1.25px;
 	text-transform: uppercase;*/
 }
 .on-sale:after {
 	background: #ee7873;
+	/*color: #ee7873;*/
 	content: "On sale"
 }
 .product:hover a {
-	box-shadow: 0 0 0 1px #ccc;
+	box-shadow: 0 0 0 1px #ccc inset;
 }
 .product figure {
 	display: table;
@@ -114,9 +123,6 @@ body {
 	position: relative;
 	top: 1px;
 }
-.is-sold img {
-	opacity: .5;
-}
 .product h2, .product h3, .product h4 {
 	font-size: 15px;
 	margin: 0;
@@ -145,6 +151,13 @@ body {
 	color: #999;
 	padding-left: .25rem;
 	text-decoration: line-through;
+}
+
+.is-sold img {
+	opacity: .5;
+}
+.is-sold:hover img {
+	opacity: 1;
 }
 .is-sold h4:before {
 	content: "Sold for ";
@@ -176,9 +189,22 @@ body {
 }
 @media screen and (min-width: 1001px){
 	body {
-		padding: 2rem;
+		padding: 2rem 0;
+	}
+	header {
+		margin: -2rem 0 2rem;
 	}
 	.product {
 		width: 25%;
+	}
+	.products {
+		float: right;
+		width: 82.5%;
+	}
+	aside {
+		background: #ddd;
+		float: left;
+		height: 500px;
+		width: 15%;
 	}
 }
