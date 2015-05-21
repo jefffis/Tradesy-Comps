@@ -70,7 +70,7 @@ header {
 	/*border-radius: 3px;*/
 	color: white;
 	/*color: #111;*/
-	content: "Item sold";
+	content: "Item Sold";
 	display: inline-block;
 	font-size: 13px;
 	line-height: 1;
@@ -84,7 +84,7 @@ header {
 .on-sale:after {
 	background: #ee7873;
 	/*color: #ee7873;*/
-	content: "On sale"
+	content: "On Sale"
 }
 .product:hover a {
 	box-shadow: 0 0 0 1px #ccc inset;
@@ -153,14 +153,17 @@ header {
 	text-decoration: line-through;
 }
 
-.is-sold img {
+/*.is-sold img {
 	opacity: .5;
 }
 .is-sold:hover img {
 	opacity: 1;
-}
+}*/
 .is-sold h4:before {
 	content: "Sold for ";
+}
+.is-sold h4 {
+	color: #999;
 }
 
 @media screen and (min-width: 401px){
