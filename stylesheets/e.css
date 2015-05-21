@@ -33,7 +33,7 @@ a {
 }
 
 body {
-	max-width: 1200px;
+	max-width: 1400px;
 	margin: auto;
 	padding: 1rem;
 }
@@ -55,7 +55,7 @@ header {
 	width: 50%;
 }
 .product a {
-	box-shadow: 0 0 0 1px #efefef inset;
+	/*box-shadow: 0 0 0 1px #efefef inset;*/
 	color: #111;
 	display: block;
 	padding: 1rem;
@@ -196,7 +196,12 @@ header {
 	}
 	.product {
 		width: 25%;
+		/*padding: 10px;*/
 	}
+	/*.is-sold:after, .on-sale:after {
+		top: 10px;
+		left: 10px;
+	}*/
 	.products {
 		float: right;
 		width: 82.5%;
@@ -206,5 +211,14 @@ header {
 		float: left;
 		height: 500px;
 		width: 15%;
+	}
+}
+@media screen and (min-width: 1201px){
+	.product {
+		padding: 10px;
+	}
+	.is-sold:after, .on-sale:after {
+		top: 10px;
+		left: 10px;
 	}
 }
