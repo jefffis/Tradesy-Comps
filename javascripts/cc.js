@@ -75,10 +75,10 @@ $(function(){
 
   $('#brand-toggle').on('click', function() {
     if($(this).hasClass('show')){
-      $(this).removeClass('show').text('Show all');
+      $(this).removeClass('show').text('Show 20 more');
       $('#brands .hide').removeClass('show');
     }else{
-      $(this).addClass('show').text('Hide all');
+      $(this).addClass('show').text('Show less');
       $('#brands .hide').each(function(i) {
         var that = this;
         setTimeout(function() {

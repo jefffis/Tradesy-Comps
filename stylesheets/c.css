@@ -334,6 +334,46 @@ header img {
 	text-transform: uppercase;
 	text-decoration: none;
 }
+#brand-toggle, #brand-toggle-all {
+	border: 0;
+	display: inline-block;
+	clear: left;
+	color: #111;
+	font-family: 'proxima-nova-regular', sans-serif;
+	font-size: .85rem;
+	letter-spacing: normal;
+	margin: 1rem 1.25rem 0 0;
+	position: relative;
+	text-transform: none;
+	text-decoration: underline;
+}
+#brand-toggle:active, #brand-toggle-all:active {
+	opacity: .65;
+}
+#brand-toggle:after {
+	background: url(https://cdn0.iconfinder.com/data/icons/arrows-android-l-lollipop-icon-pack/24/expand2-128.png) no-repeat center;
+	background-size: contain;
+	display: block;
+	height: 1rem;
+	/*margin-left: .5rem;*/
+	position: absolute;
+	top: .1rem;
+	right: -1.25rem;
+	width: 1rem;
+	content: "";
+}
+#brand-toggle.show:after {
+	top: .2rem;
+	transform: rotate(180deg);
+}
+#brand-toggle-all {
+	color: #ee7873;
+	font-size: 1rem;
+	/*float: right;*/
+	margin: 0;
+	position: relative;
+	top: -.5rem;
+}
 .rack h2 a:hover {
 	border-color: white;
 }
@@ -920,6 +960,12 @@ figure div {
 	color: #111;
 	padding: 1.25rem 0;
 	/*text-align: right;*/
+}
+#brand-cls {
+	clear: left;
+	display: block;
+	padding: 1rem .5rem;
+	text-decoration: underline;
 }
 .brand.cls a:hover {
 	box-shadow: none;
