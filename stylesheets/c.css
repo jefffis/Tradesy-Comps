@@ -1398,6 +1398,10 @@ form, fieldset {
 	top: .25rem;
 	right: 1rem;
 	font-size: 2rem;
+	cursor: pointer;
+}
+.all-brands span:active {
+	opacity: .65;
 }
 .all-brands span:before {
 	content: "\2715";
