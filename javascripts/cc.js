@@ -91,19 +91,19 @@ $(function(){
     return false;
   });
 
-  $('#brand-toggle-all').on('click', function() {
-    $('#brand-modal-wrap').removeClass('hide');
-    return false;
-  });
+  // $('#brand-toggle-all').on('click', function() {
+  //   $('#brand-modal-wrap').removeClass('hide');
+  //   return false;
+  // });
 
-  $('#all-brands-cls').on('click', function() {
-    $('#brand-modal-wrap').addClass('hide');
-  });
+  // $('#all-brands-cls').on('click', function() {
+  //   $('#brand-modal-wrap').addClass('hide');
+  // });
 
-  $('#brand-cls').on('click', function() {
-    $('#brand-toggle').removeClass('show').text('Show all');
-    $('#brands .hide').removeClass('show');
-  });
+  // $('#brand-cls').on('click', function() {
+  //   $('#brand-toggle').removeClass('show').text('Show all');
+  //   $('#brands .hide').removeClass('show');
+  // });
 
   var featureHTML = '<span class="tag featured">Featured</span>';
 
