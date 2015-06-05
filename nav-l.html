@@ -11,327 +11,393 @@
 	</head>
 	<body>
 
-		<header>
-			<div class="cf">
-				<h1 class="logo">
-					<a href="">Tradesy</a>
-				</h1>
-				<!-- <img src="https://www.tradesy.com/css/images/tradesy2xwhite.png" alt="Tradesy logo" /> -->
-				<!--<div class="user">
-					<a href="">
-						<img src="https://item1.tradesy.com/images/user-default-image.jpg" />
-						{user}
-						Login
-					</a>
-				</div>-->
-				<a class="bag user-ind" id="bag-toggle">
-					<span class="bag-items zero">0</span>
-				</a>
-				<span id="search-toggle" class="srch user-ind"></span>
-
-				<!-- <div id="more-user-actions" class="usr user-ind">
-					<span class="bag-items">2</span>
-				</div> -->
-				<!-- <a href="#" class="msg user-ind">
-					<span class="bag-items">2</span>
-				</a>
-				<a href="#" class="notes user-ind">
-					<span class="bag-items">2</span>
-				</a> -->
-			</div>
-			<nav class="tabs three cf">
-				<span>
-					<a href="#menu">
-						Shop
-					</a>
-				</span>
-				<span>
-					<a href="##" id="sellll">
-						Sell
-					</a>
-				</span>
-				<span>
-					<a href="###" id="login">
-						Log In
-					</a>
-				</span>
-
-				<form class="search hide focusd" id="search-form">
+		<div id="login-it" class="interstitial login">
+			<!-- <div class="logo"></div> -->
+			<div>
+				<img src="http://media.sailthru.com/37w/1jz/2/i/54e52fdcbbdb1.jpg" />
+				<div class="account-btns">
+					<h2>The easiest way to <strong>Buy &amp; Sell authentic luxury goods</strong> online.</h2>
+					<a href="#login-form" class="btn">Login to your account</a>
+					<a href="#signup-form" class="btn">Create an account</a>
+				</div>
+				<form class="hide" id="login-form">
 					<fieldset>
-						<input type="search" id="search" />
-						<input type="submit" value="Search" />
-						<del></del>
+						<label>
+							<span>Email address</span>
+							<input type="email" placeholder="Enter your email address" />
+						</label>
+						<label class="no-bot">
+							<span>Password</span>
+							<!-- <small>Has to be at least 4 characters</small> -->
+							<input type="text" id="pass-shown" placeholder="Choose a password" />
+							<input type="password" id="pass-hidden" class="hide" />
+						</label>
+						<label class="check bot right-align check">
+							<input type="checkbox" id="pass-toggle" />
+							<em></em>
+							<span id="pass-text">Hide password</span>
+						</label>
+						<button class="btn wide">Login now</button>
+						<a href="#signup-form" class="go-back">Create account</a>
+						&nbsp;&nbsp;
+						<a href="####" class="cls-login nopeee">Cancel</a>
 					</fieldset>
 				</form>
-
-				<div class="my-bag hide" id="bag">
-					<img src="images/bag-d.png" alt="" />
-					Your bag is empty, <a href="">start shopping</a>!
-					<del></del>
-				</div>
-
-			</nav>
-		</header>
-
-		<div class="template cf">
-			<h3>
-				The Basement Sale
-				<small>Ends Sunday @ noon</small>
-			</h3>
-			<div class="product">
-				<a href="###">
-					<figure>
-						<div>
-							<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
-						</div>
-					</figure>
-					<h2>Louis Vuitton</h2>
-					<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
-					<h4>
-						$123.97
-						<span>$699.99</span>
-					</h4>
-				</a>
-			</div>
-			<div class="product is-sold">
-				<a href="###">
-					<figure>
-						<div>
-							<img src="https://item3.tradesy.com/r/80d6e6ab5cd53c3213aba8ab245602b71acfce360eac768dfd57adeaddfc65f5/203/307/dresses/prada/8-m/prada-black-dress-2956747.jpg"  />
-						</div>
-					</figure>
-					<h2>Louis Vuitton</h2>
-					<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
-					<h4>$123.97</h4>
-				</a>
-				<!-- <span class="is-sold"></span> -->
-			</div>
-			<div class="product">
-				<a href="###">
-					<figure>
-						<div>
-							<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
-						</div>
-					</figure>
-					<h2>Louis Vuitton</h2>
-					<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
-					<h4>
-						$123.97
-						<span>$699.99</span>
-					</h4>
-				</a>
-			</div>
-			<div class="product on-sale">
-				<a href="###">
-					<figure>
-						<div>
-							<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
-						</div>
-					</figure>
-					<h2>Louis Vuitton</h2>
-					<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
-					<h4>
-						<span class="sale">Sale</span>
-						$123.97
-						<span>$699.99</span>
-					</h4>
-				</a>
+				<form class="hide" id="signup-form">
+					<fieldset>
+						<label>
+							<span>Email address</span>
+							<input type="email" placeholder="pennylane@tradesy.com" />
+						</label>
+						<label>
+							<span>Full name</span>
+							<input type="text" placeholder="Penny Lane" />
+						</label>
+						<label class="no-bot">
+							<span>Choose a password</span>
+							<small>Has to be at least 4 characters</small>
+							<input type="text" id="pass-shown2" placeholder="Choose a password" />
+							<input type="password" id="pass-hidden2" class="hide" />
+						</label>
+						<label class="check bot right-align check">
+							<input type="checkbox" id="pass-toggle2" />
+							<em></em>
+							<span id="pass-text2">Hide password</span>
+						</label>
+						<button class="btn wide">Join now</button>
+						<a href="#login-form" class="go-back">Login now</a>
+						&nbsp;&nbsp;
+						<a href="####" class="cls-login nopeee">Cancel</a>
+					</fieldset>
+				</form>
 			</div>
 		</div>
-		<a href="###" class="all">Shop all in The Basement</a>
 
-		<hr />
+		<div id="content">
 
-		<div class="template cf">
-			<h3>
-				Editor&rsquo;s Picks
-				<small>Our Curated Selections</small>
-			</h3>
-			<div class="product">
+			<header>
+				<div class="cf">
+					<h1 class="logo">
+						<a href="">Tradesy</a>
+					</h1>
+					<!-- <img src="https://www.tradesy.com/css/images/tradesy2xwhite.png" alt="Tradesy logo" /> -->
+					<!--<div class="user">
+						<a href="">
+							<img src="https://item1.tradesy.com/images/user-default-image.jpg" />
+							{user}
+							Login
+						</a>
+					</div>-->
+					<a class="bag user-ind" id="bag-toggle">
+						<span class="bag-items zero">0</span>
+					</a>
+					<span id="search-toggle" class="srch user-ind"></span>
+
+					<!-- <div id="more-user-actions" class="usr user-ind">
+						<span class="bag-items">2</span>
+					</div> -->
+					<!-- <a href="#" class="msg user-ind">
+						<span class="bag-items">2</span>
+					</a>
+					<a href="#" class="notes user-ind">
+						<span class="bag-items">2</span>
+					</a> -->
+				</div>
+				<nav class="tabs three cf">
+					<span>
+						<a href="#menu">
+							Shop
+						</a>
+					</span>
+					<span>
+						<a href="##" id="sellll">
+							Sell
+						</a>
+					</span>
+					<span>
+						<a href="###" id="login">
+							Log In
+						</a>
+					</span>
+
+					<form class="search hide focusd" id="search-form">
+						<fieldset>
+							<input type="search" id="search" />
+							<input type="submit" value="Search" />
+							<del></del>
+						</fieldset>
+					</form>
+
+					<div class="my-bag hide" id="bag">
+						<img src="images/bag-d.png" alt="" />
+						Your bag is empty, <a href="">start shopping</a>!
+						<del></del>
+					</div>
+
+				</nav>
+			</header>
+
+			<div class="template cf">
+				<h3>
+					The Basement Sale
+					<small>Ends Sunday @ noon</small>
+				</h3>
+				<div class="product">
+					<a href="###">
+						<figure>
+							<div>
+								<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
+							</div>
+						</figure>
+						<h2>Louis Vuitton</h2>
+						<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
+						<h4>
+							$123.97
+							<span>$699.99</span>
+						</h4>
+					</a>
+				</div>
+				<div class="product is-sold">
+					<a href="###">
+						<figure>
+							<div>
+								<img src="https://item3.tradesy.com/r/80d6e6ab5cd53c3213aba8ab245602b71acfce360eac768dfd57adeaddfc65f5/203/307/dresses/prada/8-m/prada-black-dress-2956747.jpg"  />
+							</div>
+						</figure>
+						<h2>Louis Vuitton</h2>
+						<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
+						<h4>$123.97</h4>
+					</a>
+					<!-- <span class="is-sold"></span> -->
+				</div>
+				<div class="product">
+					<a href="###">
+						<figure>
+							<div>
+								<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
+							</div>
+						</figure>
+						<h2>Louis Vuitton</h2>
+						<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
+						<h4>
+							$123.97
+							<span>$699.99</span>
+						</h4>
+					</a>
+				</div>
+				<div class="product on-sale">
+					<a href="###">
+						<figure>
+							<div>
+								<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
+							</div>
+						</figure>
+						<h2>Louis Vuitton</h2>
+						<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
+						<h4>
+							<span class="sale">Sale</span>
+							$123.97
+							<span>$699.99</span>
+						</h4>
+					</a>
+				</div>
+			</div>
+			<a href="###" class="all">Shop all in The Basement</a>
+
+			<hr />
+
+			<div class="template cf">
+				<h3>
+					Editor&rsquo;s Picks
+					<small>Our Curated Selections</small>
+				</h3>
+				<div class="product">
+					<a href="###">
+						<figure>
+							<div>
+								<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
+							</div>
+						</figure>
+						<h2>Louis Vuitton</h2>
+						<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
+						<h4>
+							$123.97
+							<span>$699.99</span>
+						</h4>
+					</a>
+				</div>
+				<div class="product">
+					<a href="###">
+						<figure>
+							<div>
+								<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
+							</div>
+						</figure>
+						<h2>Louis Vuitton</h2>
+						<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
+						<h4>
+							$123.97
+							<span>$699.99</span>
+						</h4>
+					</a>
+				</div>
+				<div class="product is-sold">
+					<a href="###">
+						<figure>
+							<div>
+								<img src="https://item3.tradesy.com/r/80d6e6ab5cd53c3213aba8ab245602b71acfce360eac768dfd57adeaddfc65f5/203/307/dresses/prada/8-m/prada-black-dress-2956747.jpg"  />
+							</div>
+						</figure>
+						<h2>Louis Vuitton</h2>
+						<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
+						<h4>$123.97</h4>
+					</a>
+					<!-- <span class="is-sold"></span> -->
+				</div>
+				<div class="product on-sale">
+					<a href="###">
+						<figure>
+							<div>
+								<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
+							</div>
+						</figure>
+						<h2>Louis Vuitton</h2>
+						<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
+						<h4>
+							<span class="sale">Sale</span>
+							$123.97
+							<span>$699.99</span>
+						</h4>
+					</a>
+				</div>
+			</div>
+			<a href="###" class="all">Shop all Editor&rsquo;s Picks</a>
+
+			<hr />
+
+			<div class="template support cf">
+				<h3>
+					Real People, Real Help
+					<small>{hours&amp;whatnot}</small>
+				</h3>
 				<a href="###">
-					<figure>
-						<div>
-							<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
-						</div>
-					</figure>
-					<h2>Louis Vuitton</h2>
-					<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
-					<h4>
-						$123.97
-						<span>$699.99</span>
-					</h4>
+					<img src="images/email-btn.png" />
+					Email us
+				</a>
+				<a href="###">
+					<img src="images/email-btn.png" />
+					Call us
+				</a>
+				<a href="###">
+					<img src="images/email-btn.png" />
+					Chat now
 				</a>
 			</div>
-			<div class="product">
-				<a href="###">
-					<figure>
-						<div>
-							<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
-						</div>
-					</figure>
-					<h2>Louis Vuitton</h2>
-					<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
-					<h4>
-						$123.97
-						<span>$699.99</span>
-					</h4>
-				</a>
+
+			<!-- <hr /> -->
+
+			<div class="get-the-app cf">
+				Try our free iOS app today
+				<a href="#">Get</a>
 			</div>
-			<div class="product is-sold">
-				<a href="###">
-					<figure>
-						<div>
-							<img src="https://item3.tradesy.com/r/80d6e6ab5cd53c3213aba8ab245602b71acfce360eac768dfd57adeaddfc65f5/203/307/dresses/prada/8-m/prada-black-dress-2956747.jpg"  />
-						</div>
-					</figure>
-					<h2>Louis Vuitton</h2>
-					<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
-					<h4>$123.97</h4>
-				</a>
-				<!-- <span class="is-sold"></span> -->
-			</div>
-			<div class="product on-sale">
-				<a href="###">
-					<figure>
-						<div>
-							<img src="https://item5.tradesy.com/r/0b6bf65ba6ef23f3e05b249830e3543783a680130304af2f25336df2d35940d5/203/307/accessories/louis-vuitton/wallets/louis-vuitton-authentic-louis-vuitton-monogram-double-snap-m61652-wallet-bi-fold-2229789.jpg"  />
-						</div>
-					</figure>
-					<h2>Louis Vuitton</h2>
-					<h3>Damier Ebene Portefeuille 2 Fold Sarah Wallet (Authentic Pre Owned)</h3>
-					<h4>
-						<span class="sale">Sale</span>
-						$123.97
-						<span>$699.99</span>
-					</h4>
-				</a>
-			</div>
+
+			<menu class="menu" id="menu">
+				<span class="r">
+					<a href="#">Back to Top</a>
+				</span>
+				<span>
+					<a href="">Clothing</a>
+					<em></em>
+					<div class="sub-nav">
+						<a href="">Sub Clothing</a>
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+					</div>
+				</span>
+				<span>
+					<a href="">Bags</a>
+					<em></em>
+					<div class="sub-nav">
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+					</div>
+				</span>
+				<span>
+					<a href="">Shoes</a>
+					<em></em>
+					<div class="sub-nav">
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+					</div>
+				</span>
+				<span>
+					<a href="">Accessories</a>
+					<em></em>
+					<div class="sub-nav">
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+					</div>
+				</span>
+				<span>
+					<a href="">Weddings</a>
+					<em></em>
+					<div class="sub-nav">
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+					</div>
+				</span>
+				<span>
+					<a href="">Style Feed</a>
+					<em></em>
+					<div class="sub-nav">
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+					</div>
+				</span>
+				<span>
+					<a href="">Designers</a>
+					<em></em>
+					<div class="sub-nav">
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+						<a href="">Sub Clothing</a>
+					</div>
+				</span>
+				<span>
+					<a href="">Editor&rsquo;s Picks</a>
+					<em></em>
+					<div class="sub-nav">
+						<a href="">Sub Clothing</a>
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+						<a href="#">Sub Ish</a>
+					</div>
+				</span>
+			</menu>
+
+			<footer></footer>
+
 		</div>
-		<a href="###" class="all">Shop all Editor&rsquo;s Picks</a>
-
-		<hr />
-
-		<div class="template support cf">
-			<h3>
-				Real People, Real Help
-				<small>{hours&amp;whatnot}</small>
-			</h3>
-			<a href="###">
-				<img src="images/email-btn.png" />
-				Email us
-			</a>
-			<a href="###">
-				<img src="images/email-btn.png" />
-				Call us
-			</a>
-			<a href="###">
-				<img src="images/email-btn.png" />
-				Chat now
-			</a>
-		</div>
-
-		<!-- <hr /> -->
-
-		<div class="get-the-app cf">
-			Try our free iOS app today
-			<a href="#">Get</a>
-		</div>
-
-		<menu class="menu" id="menu">
-			<span class="r">
-				<a href="#">Back to Top</a>
-			</span>
-			<span>
-				<a href="">Clothing</a>
-				<em></em>
-				<div class="sub-nav">
-					<a href="">Sub Clothing</a>
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-				</div>
-			</span>
-			<span>
-				<a href="">Bags</a>
-				<em></em>
-				<div class="sub-nav">
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-				</div>
-			</span>
-			<span>
-				<a href="">Shoes</a>
-				<em></em>
-				<div class="sub-nav">
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-				</div>
-			</span>
-			<span>
-				<a href="">Accessories</a>
-				<em></em>
-				<div class="sub-nav">
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-				</div>
-			</span>
-			<span>
-				<a href="">Weddings</a>
-				<em></em>
-				<div class="sub-nav">
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-				</div>
-			</span>
-			<span>
-				<a href="">Style Feed</a>
-				<em></em>
-				<div class="sub-nav">
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-				</div>
-			</span>
-			<span>
-				<a href="">Designers</a>
-				<em></em>
-				<div class="sub-nav">
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-					<a href="">Sub Clothing</a>
-				</div>
-			</span>
-			<span>
-				<a href="">Editor&rsquo;s Picks</a>
-				<em></em>
-				<div class="sub-nav">
-					<a href="">Sub Clothing</a>
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-					<a href="#">Sub Ish</a>
-				</div>
-			</span>
-		</menu>
-
-		<footer></footer>
 
 		<div id="interstitial" class="interstitial">
 			<div class="logo"></div>
@@ -341,35 +407,6 @@
 				<p>Try listing with our app: it&rsquo;s free, easy, and fun!</p>
 				<a href="##" class="btn nopeee">Sell in App</a>
 				<a href="####" class="nopeee">No thanks, web is fine.</a>
-			</div>
-		</div>
-
-		<div id="login-it" class="interstitial login">
-			<!-- <div class="logo"></div> -->
-			<div>
-				<img src="http://media.sailthru.com/37w/1jz/2/i/54e52fdcbbdb1.jpg" />
-				<h2>The easiest place to <strong>Buy &amp; Sell authentic</strong> luxury goods. Already <a href="">have an account</a>?</h2>
-				<form>
-					<fieldset>
-						<label>
-							<span>Email Address</span>
-							<input type="email" placeholder="Enter your email address" />
-						</label>
-						<label class="no-bot">
-							<span>Password</span>
-							<small>Has to be at least 4 characters</small>
-							<input type="text" id="pass-shown2" placeholder="Choose a password" />
-							<input type="password" id="pass-hidden2" class="hide" />
-						</label>
-						<label class="check bot right-align check">
-							<input type="checkbox" id="pass-toggle2" />
-							<em></em>
-							Hide password
-						</label>
-						<button class="btn">Get 10% off!</button>
-						<a href="####" class="nopeee">No thanks.</a>
-					</fieldset>
-				</form>
 			</div>
 		</div>
 
@@ -440,15 +477,46 @@
 				// 	}
 				// });
 
-				// $('#login').on('click', function() {
-				// 	$('#login-it').addClass('show');
-				// });
+				$('#login').on('click', function() {
+					$('#login-it').addClass('show');
+					$('#content').hide();
+				});
+
+				$('.go-back').on('click', function() {
+					var id = $(this).attr('href'),
+						par = $(this).parent().parent();
+
+					par.addClass('hide');
+					$(id).removeClass('hide');
+					// $('#login-it').find('img').hide();
+					return false;
+				});
+
+				$('.account-btns').find('.btn').on('click', function() {
+					var id = $(this).attr('href'),
+						par = $(this).parent();
+
+					par.hide();
+					$(id).removeClass('hide');
+					// $('#login-it').find('img').hide();
+					return false;
+				});
+
+				$('.cls-login').on('click', function() {
+					$('#login-it').find('form').addClass('hide');
+					$('#login-it').find('.account-btns').show();
+					$('#login-it').removeClass('show');
+					$('#content').show();
+					// $('#login-it').find('img').show();
+				});
 
 				passToggle.on('click', function() {
 					if(passShown.hasClass('hide')){
+						$('#pass-text').text('Hide password');
 						passShown.removeClass('hide').val(passHidden.val());
 						passHidden.addClass('hide');
 					}else{
+						$('#pass-text').text('Show password');
 						passShown.addClass('hide');
 						passHidden.removeClass('hide').val(passShown.val());
 					}
@@ -456,9 +524,11 @@
 
 				passToggle2.on('click', function() {
 					if(passShown2.hasClass('hide')){
+						$('#pass-text2').text('Hide password');
 						passShown2.removeClass('hide').val(passHidden2.val());
 						passHidden2.addClass('hide');
 					}else{
+						$('#pass-text2').text('Show password');
 						passShown2.addClass('hide');
 						passHidden2.removeClass('hide').val(passShown2.val());
 					}
