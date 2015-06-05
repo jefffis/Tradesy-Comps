@@ -898,6 +898,9 @@ a.r {
 label.check {
 	color: #666;
 }
+.check a {
+	float: left;
+}
 .interstitial input[type=checkbox] + em {
 	display: none;
 	color: #ccc;
