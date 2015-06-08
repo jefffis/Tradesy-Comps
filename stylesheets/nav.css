@@ -37,9 +37,9 @@ hr {
 	height: 1px;
 	margin: 1.5rem 0;
 }
-.clr {
+hr.clr {
 	background: white;
-	margin-bottom: 1rem;
+	margin: 0;
 }
 a {
 	color: #ee7873;
@@ -616,6 +616,21 @@ p.cf a {
 	margin-bottom: .5rem;
 	max-width: 100%;
 }
+
+.notify {
+	background: #ffefd1;
+	margin: -.5rem -.5rem 1.75rem;
+	padding: 1rem;
+	text-align: center;
+}
+.notify p {
+	margin: 0;
+}
+.notify a {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
 .i-tpt {
 	display: inline-block;
 	float: left;
