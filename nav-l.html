@@ -11,8 +11,7 @@
 	</head>
 	<body>
 
-		<div id="login-it" class="interstitial login">
-			<!-- <div class="logo"></div> -->
+		<!-- <div id="login-it" class="interstitial login">
 			<div>
 				<img src="http://media.sailthru.com/37w/1jz/2/i/54e52fdcbbdb1.jpg" />
 				<div class="account-btns">
@@ -28,7 +27,6 @@
 						</label>
 						<label class="no-bot">
 							<span>Password</span>
-							<!-- <small>Has to be at least 4 characters</small> -->
 							<input type="text" id="pass-shown" placeholder="Enter your password" />
 							<input type="password" id="pass-hidden" class="hide" />
 						</label>
@@ -72,7 +70,7 @@
 					</fieldset>
 				</form>
 			</div>
-		</div>
+		</div> -->
 
 		<div id="content">
 
@@ -89,10 +87,11 @@
 							Login
 						</a>
 					</div>-->
+					<a href="nav-login.html" class="login-btn">Login</a>
 					<a class="bag user-ind" id="bag-toggle">
 						<span class="bag-items zero">0</span>
 					</a>
-					<span id="search-toggle" class="srch user-ind"></span>
+					<span id="search-toggle" class="srch user-ind login-screen"></span>
 
 					<!-- <div id="more-user-actions" class="usr user-ind">
 						<span class="bag-items">2</span>
@@ -104,7 +103,7 @@
 						<span class="bag-items">2</span>
 					</a> -->
 				</div>
-				<nav class="tabs three cf">
+				<nav class="tabs two cf">
 					<span>
 						<a href="#menu">
 							Shop
@@ -115,11 +114,11 @@
 							Sell
 						</a>
 					</span>
-					<span>
+					<!-- <span>
 						<a href="###" id="login">
 							Log In
 						</a>
-					</span>
+					</span> -->
 
 					<form class="search hide focusd" id="search-form">
 						<fieldset>
@@ -584,6 +583,9 @@
 						menu_sub.removeClass('open');
 						$this.addClass('active');
 						sub.addClass('open');
+						$('html,body').animate({
+							scrollTop: $this.offset().top
+						}, 500)
 					}
 				});
 
