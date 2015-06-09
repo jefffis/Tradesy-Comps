@@ -29,7 +29,7 @@
 		margin: auto 0;
 		/*padding: 15px;*/
 	}
-	.copy {
+	.copy, li {
 		color: #444;
 		font-family: 'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif;
 		font-size: 15px;
@@ -68,13 +68,26 @@
 	}
 	.h2 {
 		font-size: 17px;
-		letter-spacing: 1px;
-		text-align: center;
-		text-transform: uppercase;
+		/*letter-spacing: 1px;*/
+		/*text-align: center;*/
+		/*text-transform: uppercase;*/
 	}
 	.h3 {
 		color: #999;
 		font-size: 17px;
+	}
+	ul {
+		padding-left: 5px;
+	}
+	ul li {
+		list-style: none;
+	}
+	ul li:before {
+		content: "•";
+		color: #999;
+		display: inline-block;
+		width: 20px;
+		text-align: center;
 	}
 	small {
 		display: block;
@@ -144,6 +157,9 @@
 		em {
 			margin: auto;
 		}
+		body {
+			padding: 20px;
+		}
 		/*.le .img-wrapper {
 			padding: 0 15px;
 		}*/
@@ -163,10 +179,19 @@
 		</div>
 		<div class="email-wrapper">
 			<div class="copy">
-				Heya [name],
-				<hr />
+				<span class="h2">Heya [name],</span>
+				<!-- <hr /> -->
 				<hr />
 				It's been way too long…you haven’t logged into Tradesy for over 2 months. Right now, you have <a href="">5 active listings on Tradesy that will expire</a> if you don’t login within the next 30 days. We do this to protect our millions of users from purchasing an item that a seller no longer wants to part with (hey, it happens!).
+				<hr />
+				<hr />
+				<span class="h2">Sub headline reads like:</span>
+				<ul>
+					<li>All you need to do to keep updated,</li>
+					<li>All you to do to keep,</li>
+					<li>All you need to keep,</li>
+					<li>All you need to do to.</li>
+				</ul>
 				<hr />
 				<hr />
 				All you need to do to keep your listings active is <a href="">login sometime within the next 30 days</a>. We don’t want you to miss the chance at <u>earning $1050</u> from your listings!
