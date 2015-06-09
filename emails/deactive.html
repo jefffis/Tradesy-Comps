@@ -13,7 +13,7 @@
 	}
 	body {
 		background: white;
-		padding: 20px 0;
+		padding: 20px 15px;
 		text-align: center;
 	}
 	.le {
@@ -21,13 +21,13 @@
 	}
 	.img-wrapper {
 		max-width: 450px;
-		margin: auto;
+		/*margin: auto;*/
 	}
 	.email-wrapper {
 		/* border: 1px solid #ddd; */
 		max-width: 450px;
-		margin: auto auto 30px;
-		padding: 15px;
+		margin: auto 0;
+		/*padding: 15px;*/
 	}
 	.copy {
 		color: #444;
@@ -130,6 +130,9 @@
 		text-decoration: none;
 		text-transform: uppercase;
 	}
+	.btn:active {
+		background: #2a2a2a;
+	}
 
 	@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
 
@@ -141,9 +144,9 @@
 		em {
 			margin: auto;
 		}
-		.le .img-wrapper {
+		/*.le .img-wrapper {
 			padding: 0 15px;
-		}
+		}*/
 
 	}
 
@@ -156,7 +159,7 @@
 			<a href="###"><img src="../images/email-logo.gif" height="35" /></a>
 			<hr class="l" />
 			<hr />
-			<!-- <hr /> -->
+			<hr />
 		</div>
 		<div class="email-wrapper">
 			<div class="copy">
@@ -190,6 +193,9 @@
 					This message was sent to you by <a href="">Tradesy.com</a>.
 					<br />
 					1217 2nd Street FL 3, Santa Monica, CA 90401
+					<br />
+					<br />
+					Want to stop receiving these emails? <a href="">Unsubscribe</a> now.
 				</div>
 				<!-- <span class="h3">Some subcopy goes here:</span>
 				<hr />
