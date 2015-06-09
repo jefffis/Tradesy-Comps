@@ -338,7 +338,7 @@ button, .login-btn {
 	border-bottom: 1px solid #ddd;
 	/*margin-top: .5rem;*/
 }
-.sub-nav a:after {
+.sub-nav a:after, .top a:after {
 	content: '\25B6';
 	color: #999;
 	display: inline-block;
