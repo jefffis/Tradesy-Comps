@@ -46,6 +46,17 @@ header {
 	clear: both;
 }
 
+h1 {
+	color: #111;
+	font-family: 'proxima-nova-regular', sans-serif;
+	margin: 0 0 1rem;
+}
+h1 small {
+	color: #666;
+	display: block;
+	font-size: 13px;
+}
+
 .product {
 	display: inline-block;
 	float: left;
@@ -65,10 +76,13 @@ header {
 	position: relative;
 	text-decoration: none;
 }
-/*.is-sold a {
+.is-sold a {
 	color: #999;
-	box-shadow: 0 0 0 1px #efefef inset;
-}*/
+	/*box-shadow: 0 0 0 1px #efefef inset;*/
+}
+.is-sold a:hover {
+	color: #111;
+}
 /*span.is-sold, span.on-sale {
 	position: absolute;
 	top: 1px;
@@ -126,11 +140,7 @@ header {
 	max-width: 100%;
 	margin: auto;
 }
-.product:active img {
-	opacity: .5;
-	position: relative;
-	top: 1px;
-}
+
 .product h2, .product h3, .product h4 {
 	font-size: 15px;
 	margin: 0;
@@ -142,7 +152,7 @@ header {
 	white-space: nowrap;
 }
 .on-sale h4 {
-	color: #ee7873;
+	color: #7dccad;
 }
 .product h2 {
 	/*letter-spacing: 1.5px;*/
@@ -155,21 +165,35 @@ header {
 	line-height: 1.2;
 	margin-bottom: .5rem;
 }
+.product h4 {
+	font-family: 'proxima-nova-semi', sans-serif;
+	font-weight: normal;
+	height: 23px;
+}
 .product h4 span {
 	color: #999;
-	padding-left: .25rem;
+	font-family: 'proxima-nova-regular', sans-serif;
+	padding-left: .15rem;
 	text-decoration: line-through;
 }
-.product h4 .sale {
-	background: #ee7873;
+.product h4 .tag {
 	color: white;
 	display: inline-block;
 	font-size: .75rem;
+	/*letter-spacing: 1.5px;*/
 	line-height: 1;
+	margin-right: .15rem;
 	padding: .25rem .35rem;
 	position: relative;
 	top: -1px;
 	text-decoration: none;
+	/*text-transform: uppercase;*/
+}
+.sale {
+	background: #7dccad;
+}
+.reserved {
+	background: #111;
 }
 
 .is-sold img {
@@ -185,6 +209,37 @@ header {
 	content: "Sold for ";
 }
 
+.product:active img, .is-sold:active img {
+	opacity: .5;
+	position: relative;
+	top: 1px;
+}
+
+@media screen and (max-width: 400px){
+	h1 {
+		font-size: 24px;
+		margin-top: -1rem;
+		text-align: center;
+	}
+	.product a {
+		padding: .75rem;
+	}
+	.product:nth-child(n+3) {
+		margin-top: .5rem;
+	}
+	.product div {
+		height: 120px;
+		/*vertical-align: top;*/
+	}
+	.product img {
+		max-height: 100px;
+		max-width: 100%;
+	}
+	.product h2, .product h3, .product h4{
+		font-size: 13px;
+	}
+}
+
 @media screen and (min-width: 401px){
 	/*.product {
 		display: inline-block;
@@ -193,6 +248,10 @@ header {
 	}*/
 	.product a {
 		padding: 1.5rem;
+	}
+	.product h4 .tag {
+		letter-spacing: 1.5px;
+		text-transform: uppercase;
 	}
 }
 @media screen and (min-width: 551px){
@@ -243,8 +302,10 @@ header {
 	aside {
 		background: #ddd;
 		float: left;
-		height: 500px;
+		height: 600px;
 		width: 15%;
+		position: relative;
+		top: -4.5rem;
 	}
 }
 @media screen and (min-width: 1201px){
