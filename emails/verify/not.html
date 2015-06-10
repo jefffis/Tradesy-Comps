@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Boom! You&rsquo;re verified.</title>
+		<title>We couldn&rsquo;t verify your identity.</title>
 
 		<style>
 		body, div, table {
@@ -26,8 +26,11 @@
 			font-size: 15px;
 			line-height: 22px;
 		}
+		.bullet {
+			line-height: 18px;
+		}
 		.h1, .h2, .h3 {
-			color: #111;
+			color: #111111;
 			display: block;
 			font-size: 24px;
 			line-height: 1.2;
@@ -35,9 +38,9 @@
 		}
 		.h2 {
 			font-size: 17px;
-			letter-spacing: 1px;
-			text-align: center;
-			text-transform: uppercase;
+			/*letter-spacing: 1px;*/
+			/*text-align: center;*/
+			/*text-transform: uppercase;*/
 		}
 		.h3 {
 			color: #999;
@@ -52,7 +55,7 @@
 			color: #ee7873;
 		}
 		.tel {
-			color: #111;
+			color: #111111;
 			text-decoration: none;
 		}
 		.btn {
@@ -76,6 +79,10 @@
 		.light .content {
 			font-size: 13px;
 			line-height: 18px;
+		}
+		.top {
+			color: #999999;
+			vertical-align: top;
 		}
 		</style>
 	</head>
@@ -106,10 +113,54 @@
 				</tr>
 				<tr>
 					<td class="content" align="left">
-						<span class="h1 warn">Boom! You&rsquo;re verified.</span>
+						<span class="h1 warn">We couldn&rsquo;t verify your identity.</span>
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="15"></td></tr></table>
-						Now that you&rsquo;re verified, you can cash in on these perks:
+						You can try again from your <a href="https://www.tradesy.com/tradesy-cash">Manage Payouts</a> page. {If over $1k limit} In the meantime, you can still attempt to make withdrawals and we&rsquo;ll let you know if they don&rsquo;t go through. {If attempted with photo upload} To get verified faster, make sure you&rsquo;ve uploaded a clear photo or try using your Tax ID. {/if} {if attempted ssn verification} Feel free to <a href="https://www.tradesy.com/contact/">contact us</a> if you need extra help getting verified.
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
+
+						<!--[if mso]>
+						<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://leagueapps.com/get-started/?d=true" arcsize="0%" strokecolor="#111111" fillcolor="#111111" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);height:40px;v-text-anchor:middle;width:300px;" >
+						<w:anchorlock style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);" />
+						<center style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">Try Again</center>
+						</v:roundrect>
+						<![endif]-->
+						<a href="##" class="btn">Try Again</a>
+						<br /><br />
+						
+						{If over $1k limit} 
+							<span class="h2">Why we need this:</span>
+							<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="8"></td></tr></table>
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<tr>
+									<td class="top">&bull;</td>
+									<td width="4"></td>
+									<td class="content bullet" align="left">To protect your identity and secure this account</td>
+								</tr>
+							</table>
+							<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="8"></td></tr></table>
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<tr>
+									<td class="top">&bull;</td>
+									<td width="4"></td>
+									<td class="content bullet" align="left">To protect your identity and secure this account</td>
+								</tr>
+							</table>
+							<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="8"></td></tr></table>
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<tr>
+									<td class="top">&bull;</td>
+									<td width="4"></td>
+									<td class="content bullet" align="left">To comply with U.S. &lsquo;Know Your Customer&rsquo; anti-money laundering laws</td>
+								</tr>
+							</table>
+							<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="10"></td></tr></table>
+						{If under $1k limit}
+							You can make up to $2,000 of withdrawals before our payment processor requires identity verification.
+						{/if}
+
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
+						<span class="h2">Perks of verifying your account:</span>
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="10"></td></tr></table>
 						<table width="100%" cellpadding="0" cellspacing="0">
 							<tr>
 								<td>
@@ -146,14 +197,6 @@
 							</tr>
 						</table>
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="30"></td></tr></table>
-						<!--[if mso]>
-						<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://leagueapps.com/get-started/?d=true" arcsize="0%" strokecolor="#111111" fillcolor="#111111" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);height:40px;v-text-anchor:middle;width:300px;" >
-						<w:anchorlock style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);" />
-						<center style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">Withdraw Earnings</center>
-						</v:roundrect>
-						<![endif]-->
-						<a href="##" class="btn">Withdraw Earnings</a>
-						<br /><br />
 						When you verify your identity, people trust Tradesy. When people trust Tradesy, you sell more.
 						<br /><br />
 						Team Tradesy
