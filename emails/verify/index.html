@@ -18,6 +18,11 @@
 		body {
 			padding: 0 15px;
 		}
+		img {
+			display: block;
+			margin: 0;
+			border: 0;
+		}
 		td { -webkit-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0,0,0,0); margin: 0; padding: 0; border: 0; }
 		#ForceOutlook2010BrowserLink span { padding:0px; }
 		.content {
@@ -77,13 +82,64 @@
 			font-size: 13px;
 			line-height: 18px;
 		}
+		.card-holder {
+			background: #efefef;
+			mso-hide: all;
+		}
+		.card {
+			background: #cccccc;
+		}
+		.card-content {
+			background: #ffffff;
+		}
+		.card-content-top {
+			background: url(https://item1.tradesy.com/r/a511e802cf71d28b64966703edbfc55ab567322292f6ecf8630ef721623033fc/1200/600/temp/temp.jpg) no-repeat center center;
+			background-color : #111111;
+		    background-size : cover;
+		    color: #ffffff;
+		}
+		.card-content-bottom {
+			background: #ffffff;
+		}
+		.profile {
+			border-radius: 100%;
+			color: #111111;
+			font-weight: bold;
+			letter-spacing: 1px;
+			/*line-height: 50px;*/
+			height: 50px;
+			text-align: center;
+			width: 50px;
+		}
+		table.profile {
+			background: #ffffff;
+		}
+		.card .h2 {
+			color: #ffffff;
+			font-size: 22px;
+			letter-spacing: normal;
+			margin-bottom: 0;
+			text-align: left;
+			text-transform: none;
+		}
+		.card-content-bottom .h2 {
+			color: #111111;
+			display: inline;
+			font-size: 24px;
+		}
+		.card .badge {
+			display: inline;
+		}
+		.card .greyed, .card .greyed .h2 {
+			color: #888;
+		}
 		</style>
 	</head>
 </html>
 	<body marginwidth="0" marginheight="0" bgcolor="#ffffff" leftmargin="0" topmargin="0" offset="0">
 
 		<!-- customize Gmail / iOS content begin -->
-		<table width="100%" cellspacing="0" cellpadding="0"><tr><td style="font-size: 0;height: 0;display:none;"></td></tr>
+		<table width="100%" cellspacing="0" cellpadding="0"><tr><td style="font-size: 0; height: 0; display:none;"></td></tr></table>
 		<!-- customize Gmail / iOS content end -->
  
 		<!--[if (gte mso 9)|(IE)]>
@@ -92,7 +148,7 @@
 
 		<table width="100%" cellspacing="0" cellpadding="0"><tr><td height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td></tr></table>
 
-		<table style="margin:auto;max-width:450px;" id="wrapper" cellpadding="0" cellspacing="0"><tr><td>
+		<table style="margin:auto; max-width:450px;" id="wrapper" cellpadding="0" cellspacing="0"><tr><td>
 
 			<table width="100%" cellpadding="0" cellspacing="0"><tr><td align="left">
 				<a href="#"><img src="http://media.sailthru.com/37w/1jz/2/i/54e52fdcbbdb1.jpg" alt="Tradesy: buy &amp; sell clothes online" height="35" border="0" /></a>
@@ -106,46 +162,164 @@
 				</tr>
 				<tr>
 					<td class="content" align="left">
-						<span class="h1 warn">Boom! You&rsquo;re verified.</span>
+						<span class="h1 warn">You&rsquo;re verified on Tradesy!</span>
+
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="15"></td></tr></table>
-						Now that you&rsquo;re verified, you can cash in on these perks:
+
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" class="card-holder">
+							<tr>
+								<td height="25"></td>
+								<td height="25"></td>
+								<td height="25"></td>
+							</tr>
+							<tr>
+								<td width="15"></td>
+								<td align="center">
+									<div style="max-width: 350px;">
+										<table width="100%" cellpadding="0" cellspacing="0" border="0" class="card">
+											<tr>
+												<td width="1" height="1"></td>
+												<td height="1"></td>
+												<td width="1" height="1"></td>
+											</tr>
+											<tr>
+												<td width="1" height="1"></td>
+												<td height="1">
+													<table width="100%" cellpadding="0" cellspacing="0" border="0" class="card-content">
+														<tr>
+															<td>
+																<table width="100%" cellpadding="0" cellspacing="0" border="0" class="card-content-top">
+																	<tr>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																	</tr>
+																	<tr>
+																		<td width="25"></td>
+																		<td width="50">
+																			<img class="profile" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/p200x200/10616615_4402390475458_2777810277232546008_n.jpg?oh=273cf157909bcf6d445403682a4d847f&oe=563082BA&__gda__=1446143501_64fff9cb4f49c3ecad754f5761f39ab9" height="50" width="50" alt="" />
+																			<!-- <table width="50" cellpadding="0" cellspacing="0" border="0" class="profile">
+																				<tr>
+																					<td width="50" height="50">JD</td>
+																				</tr>
+																			</table> -->
+																		</td>
+																		<td width="20"></td>
+																		<td>
+																			<span class="h2">
+																				display name
+																				<img src="https://assets.tradesy.com/images/profile/verified-badge.png" height="18" class="badge" />
+																			</span>
+																			@username
+																		</td>
+																		<td width="25"></td>
+																	</tr>
+																	<tr>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																	</tr>
+																</table>
+																<table width="100%" cellpadding="0" cellspacing="0" border="0" class="card-content-bottom">
+																	<tr>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																	</tr>
+																	<tr>
+																		<td width="25"></td>
+																		<td width="80">
+																			<span class="h2">{num}</span>
+																			<br />
+																			items
+																		</td>
+																		<td width="20"></td>
+																		<td class="greyed">
+																			<span class="h2">{num}</span>
+																			<br />
+																			loves
+																		</td>
+																		<td></td>
+																	</tr>
+																	<tr>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																		<td height="25"></td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+												<td width="1" height="1"></td>
+											</tr>
+											<tr>
+												<td width="1" height="1"></td>
+												<td height="1"></td>
+												<td width="1" height="1"></td>
+											</tr>
+										</table>
+									</div>
+								</td>
+								<td width="15"></td>
+							</tr>
+							<tr>
+								<td height="25"></td>
+								<td height="25"></td>
+								<td height="25"></td>
+							</tr>
+						</table>
+
+						<!--[if (gte mso 9)|(IE)]>
+							<img src="/images/closet-card.jpg" alt="" />
+						<![endif]-->
+
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="25"></td></tr></table>
+						Now that you&rsquo;re verified, enjoy these perks:
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
 						<table width="100%" cellpadding="0" cellspacing="0">
 							<tr>
 								<td>
-									<img src="http://wtf.jefff.co/Tradesy-Comps/images/verify.gif" class="nums" height="35" alt="1" />	
+									<img src="/images/money.gif" height="45" alt="Get your money" />	
 								</td>
-								<td width="15"></td>
 								<td class="content" align="left">
-									<b>Verified Badge&mdash;</b>Automatically get a verified account badge on <a href="">your closet</a>.
+									<b>No Payout Limits&mdash;</b>Withdraw earnings quick and easy
 								</td>
 							</tr>
 						</table>
-						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="10"></td></tr></table>
 						<table width="100%" cellpadding="0" cellspacing="0">
 							<tr>
 								<td>
-									<img src="http://wtf.jefff.co/Tradesy-Comps/images/money.gif" class="nums" height="35" alt="1" />	
+									<img src="/images/shield.gif" height="45" alt="Increased fraud protection" />
 								</td>
-								<td width="15"></td>
 								<td class="content" align="left">
-									<b>Money Transfers&mdash;</b>Get unlimited ACH/Debit withdrawals.
+									<b>Increased Security&mdash;</b>You&rsquo;re protected from fraud
 								</td>
 							</tr>
 						</table>
-						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="10"></td></tr></table>
 						<table width="100%" cellpadding="0" cellspacing="0">
 							<tr>
 								<td>
-									<img src="http://wtf.jefff.co/Tradesy-Comps/images/shield.gif" class="nums" height="35" alt="1" />
+									<img src="/images/verify.gif" height="45" alt="Verified Account badge" />	
 								</td>
-								<td width="15"></td>
 								<td class="content" align="left">
-									<b>Tradesy Trust&mdash;</b>Help Tradesy continue to be the safest place to buy and sell designer fashion.
+									<b>Verified Account Badge&mdash;</b>Show it off (<a href="">check yours out</a>)
 								</td>
 							</tr>
 						</table>
-						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="30"></td></tr></table>
+						
+						Thanks for helping Tradesy continue to be the safest place to buy and sell designer fashion.
+						<br /><br />
 						<!--[if mso]>
 						<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://leagueapps.com/get-started/?d=true" arcsize="0%" strokecolor="#111111" fillcolor="#111111" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);height:40px;v-text-anchor:middle;width:300px;" >
 						<w:anchorlock style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);" />
@@ -153,8 +327,6 @@
 						</v:roundrect>
 						<![endif]-->
 						<a href="##" class="btn">Withdraw Earnings</a>
-						<br /><br />
-						When you verify your identity, people trust Tradesy. When people trust Tradesy, you sell more.
 						<br /><br />
 						Team Tradesy
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="30"></td></tr></table>
