@@ -84,7 +84,6 @@
 		}
 		.card-holder {
 			background: #efefef;
-			mso-hide: all;
 		}
 		.card {
 			background: #cccccc;
@@ -97,6 +96,7 @@
 			background-color : #111111;
 		    background-size : cover;
 		    color: #ffffff;
+		    text-shadow: 0 1px 1px rgba(0,0,0,0.25);
 		}
 		.card-content-bottom {
 			background: #ffffff;
@@ -116,6 +116,7 @@
 		}
 		.card .h2 {
 			color: #ffffff;
+			display: inline-block;
 			font-size: 22px;
 			letter-spacing: normal;
 			margin-bottom: 0;
@@ -130,8 +131,19 @@
 		.card .badge {
 			display: inline;
 		}
+		.card .content {
+			color: #111111;
+		}
+		.card-content-top .content {
+			color: #ffffff;
+		}
 		.card .greyed, .card .greyed .h2 {
-			color: #888;
+			color: #888888;
+		}
+		@media screen and (max-width: 600px) {
+			.slim {
+				height: 15px !important;
+			}
 		}
 		</style>
 	</head>
@@ -168,9 +180,9 @@
 
 						<table width="100%" cellpadding="0" cellspacing="0" border="0" class="card-holder">
 							<tr>
-								<td height="25"></td>
-								<td height="25"></td>
-								<td height="25"></td>
+								<td height="25" class="slim"></td>
+								<td height="25" class="slim"></td>
+								<td height="25" class="slim"></td>
 							</tr>
 							<tr>
 								<td width="15"></td>
@@ -178,12 +190,12 @@
 									<div style="max-width: 350px;">
 										<table width="100%" cellpadding="0" cellspacing="0" border="0" class="card">
 											<tr>
-												<td width="1" height="1"></td>
-												<td height="1"></td>
-												<td width="1" height="1"></td>
+												<td width="1" height="1" style="font-size: 1px; line-height: 1px;"></td>
+												<td height="1" style="font-size: 1px; line-height: 1px;"></td>
+												<td width="1" height="1" style="font-size: 1px; line-height: 1px;"></td>
 											</tr>
 											<tr>
-												<td width="1" height="1"></td>
+												<td width="1" height="1" style="font-size: 1px; line-height: 1px;"></td>
 												<td height="1">
 													<table width="100%" cellpadding="0" cellspacing="0" border="0" class="card-content">
 														<tr>
@@ -207,11 +219,12 @@
 																			</table> -->
 																		</td>
 																		<td width="20"></td>
-																		<td>
+																		<td class="content" align="left">
 																			<span class="h2">
 																				display name
 																				<img src="https://assets.tradesy.com/images/profile/verified-badge.png" height="18" class="badge" />
 																			</span>
+																			<br />
 																			@username
 																		</td>
 																		<td width="25"></td>
@@ -234,13 +247,13 @@
 																	</tr>
 																	<tr>
 																		<td width="25"></td>
-																		<td width="80">
+																		<td width="80" class="content">
 																			<span class="h2">{num}</span>
 																			<br />
 																			items
 																		</td>
 																		<td width="20"></td>
-																		<td class="greyed">
+																		<td class="greyed content">
 																			<span class="h2">{num}</span>
 																			<br />
 																			loves
@@ -259,12 +272,12 @@
 														</tr>
 													</table>
 												</td>
-												<td width="1" height="1"></td>
+												<td width="1" height="1" style="font-size: 1px; line-height: 1px;"></td>
 											</tr>
 											<tr>
-												<td width="1" height="1"></td>
-												<td height="1"></td>
-												<td width="1" height="1"></td>
+												<td width="1" height="1" style="font-size: 1px; line-height: 1px;"></td>
+												<td height="1" style="font-size: 1px; line-height: 1px;"></td>
+												<td width="1" height="1" style="font-size: 1px; line-height: 1px;"></td>
 											</tr>
 										</table>
 									</div>
@@ -272,15 +285,11 @@
 								<td width="15"></td>
 							</tr>
 							<tr>
-								<td height="25"></td>
-								<td height="25"></td>
-								<td height="25"></td>
+								<td height="25" class="slim"></td>
+								<td height="25" class="slim"></td>
+								<td height="25" class="slim"></td>
 							</tr>
 						</table>
-
-						<!--[if (gte mso 9)|(IE)]>
-							<img src="http://wtf.jefff.co/Tradesy-Comps//images/closet-card.jpg" alt="" />
-						<![endif]-->
 
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="25"></td></tr></table>
 						Now that you&rsquo;re verified, enjoy these perks:
@@ -317,7 +326,7 @@
 								</td>
 							</tr>
 						</table>
-						
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
 						Thanks for helping Tradesy continue to be the safest place to buy and sell designer fashion.
 						<br /><br />
 						<!--[if mso]>
