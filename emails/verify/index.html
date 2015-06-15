@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Boom! You&rsquo;re verified.</title>
+		<title>You&rsquo;re verified.</title>
 
 		<style>
 		body, div, table {
@@ -92,11 +92,28 @@
 			background: #ffffff;
 		}
 		.card-content-top {
-			background: url(https://item1.tradesy.com/r/a511e802cf71d28b64966703edbfc55ab567322292f6ecf8630ef721623033fc/1200/600/temp/temp.jpg) no-repeat center center;
+			background: url(<<verified_account\cover_image>>) no-repeat center center;
 			background-color : #111111;
 		    background-size : cover;
 		    color: #ffffff;
+		    position: relative;
+		    z-index: 1;
 		    text-shadow: 0 1px 1px rgba(0,0,0,0.25);
+		}
+		.card-content-top:after {
+			background : rgba(0,0,0,0.25);
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			z-index: 2;
+			content : "";
+		}
+		.card-content-top td {
+			position: relative;
+			z-index: 3;
+			text-shadow: 0 1px 0 rgba(0,0,0,0.25),0 2px 1px rgba(0,0,0,0.1);
 		}
 		.card-content-bottom {
 			background: #ffffff;
@@ -106,7 +123,6 @@
 			color: #111111;
 			font-weight: bold;
 			letter-spacing: 1px;
-			/*line-height: 50px;*/
 			height: 50px;
 			text-align: center;
 			width: 50px;
@@ -211,21 +227,16 @@
 																	<tr>
 																		<td width="25"></td>
 																		<td width="50">
-																			<img class="profile" src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xaf1/v/t1.0-1/p200x200/10616615_4402390475458_2777810277232546008_n.jpg?oh=273cf157909bcf6d445403682a4d847f&oe=563082BA&__gda__=1446143501_64fff9cb4f49c3ecad754f5761f39ab9" height="50" width="50" alt="" />
-																			<!-- <table width="50" cellpadding="0" cellspacing="0" border="0" class="profile">
-																				<tr>
-																					<td width="50" height="50">JD</td>
-																				</tr>
-																			</table> -->
+																			[[DCC:verifed_profile_image]]
 																		</td>
 																		<td width="20"></td>
 																		<td class="content" align="left">
 																			<span class="h2">
-																				display name
+																				<<verified_account\display_name>>
 																				<img src="https://assets.tradesy.com/images/profile/verified-badge.png" height="18" class="badge" />
 																			</span>
 																			<br />
-																			@username
+																			<<verified_account\user_name>>
 																		</td>
 																		<td width="25"></td>
 																	</tr>
@@ -248,13 +259,13 @@
 																	<tr>
 																		<td width="25"></td>
 																		<td width="80" class="content">
-																			<span class="h2">{num}</span>
+																			<span class="h2"><<verified_account\item_count>></span>
 																			<br />
 																			items
 																		</td>
 																		<td width="20"></td>
 																		<td class="greyed content">
-																			<span class="h2">{num}</span>
+																			<span class="h2"><<verified_account\loves>></span>
 																			<br />
 																			loves
 																		</td>
@@ -296,7 +307,7 @@
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
 						<table width="100%" cellpadding="0" cellspacing="0">
 							<tr>
-								<td>
+								<td width="55">
 									<img src="http://wtf.jefff.co/Tradesy-Comps//images/money.gif" height="45" alt="Get your money" />	
 								</td>
 								<td class="content" align="left">
@@ -307,7 +318,7 @@
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="10"></td></tr></table>
 						<table width="100%" cellpadding="0" cellspacing="0">
 							<tr>
-								<td>
+								<td width="55">
 									<img src="http://wtf.jefff.co/Tradesy-Comps//images/shield.gif" height="45" alt="Increased fraud protection" />
 								</td>
 								<td class="content" align="left">
@@ -318,11 +329,11 @@
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="10"></td></tr></table>
 						<table width="100%" cellpadding="0" cellspacing="0">
 							<tr>
-								<td>
+								<td width="55">
 									<img src="http://wtf.jefff.co/Tradesy-Comps//images/verify.gif" height="45" alt="Verified Account badge" />	
 								</td>
 								<td class="content" align="left">
-									<b>Verified Account Badge&mdash;</b>Show it off (<a href="">check yours out</a>)
+									<b>Verified Account Badge&mdash;</b>Show it off
 								</td>
 							</tr>
 						</table>
@@ -330,12 +341,12 @@
 						Thanks for helping Tradesy continue to be the safest place to buy and sell designer fashion.
 						<br /><br />
 						<!--[if mso]>
-						<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://leagueapps.com/get-started/?d=true" arcsize="0%" strokecolor="#111111" fillcolor="#111111" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);height:40px;v-text-anchor:middle;width:300px;" >
+						<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.tradesy.com/tradesy-cash" arcsize="0%" strokecolor="#111111" fillcolor="#111111" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);height:40px;v-text-anchor:middle;width:300px;" >
 						<w:anchorlock style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);" />
 						<center style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);color:#ffffff;font-family:sans-serif;font-size:16px;font-weight:bold;">Withdraw Earnings</center>
 						</v:roundrect>
 						<![endif]-->
-						<a href="##" class="btn">Withdraw Earnings</a>
+						<a href="https://www.tradesy.com/tradesy-cash" class="btn">Withdraw Earnings</a>
 						<br /><br />
 						Team Tradesy
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="30"></td></tr></table>
