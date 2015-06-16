@@ -147,6 +147,26 @@ h1 small {
 .on-sale h4 {
 	color: #7dccad;
 }
+.product a:after {
+	display: inline-block;
+	content : "";
+	position: absolute;
+	top: 1rem;
+	right: 1.55rem;
+	background: url(https://cdn4.iconfinder.com/data/icons/48-bubbles/48/39.Heart-128.png) no-repeat center;
+	background-size: cover;
+	height: 15px;
+	width: 15px;
+	opacity: .5;
+}
+.product a:before {
+	position: absolute;
+	top: 1.05rem;
+	right: 1rem;
+	font-size : .65rem;
+	content : attr(data-num);
+	color: #999;
+}
 .product h2 {
 	/*letter-spacing: 1.5px;*/
 	line-height: 1.2;
@@ -289,6 +309,12 @@ h1 small {
 		letter-spacing: normal;
 		text-transform: none;
 	}
+	.product a:before {
+		display: none;
+	}
+	.product a:after {
+		right: 1rem;
+	}
 }
 
 @media screen and (min-width: 401px){
@@ -340,7 +366,7 @@ h1 small {
 		margin-top: 0;
 	}
 	.product:nth-child(n+5) {
-		margin-top: 1rem;
+		margin-top: 2rem;
 	}
 	/*.is-sold:after, .on-sale:after {
 		top: 10px;
