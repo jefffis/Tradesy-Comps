@@ -169,23 +169,43 @@ h1 small {
 	padding-left: .15rem;
 	text-decoration: line-through;
 }
-.product h4 .tag {
+/*.product h4 .tag {
 	color: white;
 	display: inline-block;
 	font-size: .75rem;
-	/*letter-spacing: 1.5px;*/
+	letter-spacing: 1.5px;
 	line-height: 1;
 	margin-right: .15rem;
 	padding: .25rem .35rem;
 	position: relative;
 	top: -1px;
 	text-decoration: none;
-	/*text-transform: uppercase;*/
+	text-transform: uppercase;
+}*/
+.tag {
+	color: white;
+	display: inline-block;
+	font-size: .75rem;
+	/*border-radius: 3px;*/
+	/*letter-spacing: 1.5px;*/
+	line-height: 1;
+	margin-right: .15rem;
+	padding: .25rem .25rem .25rem .35rem;
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	letter-spacing: 1.5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	z-index: 10;
 }
 .sale {
 	background: #7dccad;
 }
 .reserved {
+	background: #111;
+}
+.sold {
 	background: #111;
 }
 
@@ -249,7 +269,7 @@ h1 small {
 		text-align: center;
 	}
 	.product a {
-		padding: .75rem;
+		padding: 2rem .75rem .75rem;
 	}
 	.product:nth-child(n+3) {
 		margin-top: .5rem;
@@ -265,7 +285,7 @@ h1 small {
 	.product h2, .product h3, .product h4{
 		font-size: 13px;
 	}
-	.is-sold div span {
+	.tag {
 		letter-spacing: normal;
 		text-transform: none;
 	}
