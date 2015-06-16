@@ -165,7 +165,10 @@ h1 small {
 	right: 1rem;
 	font-size : .65rem;
 	content : attr(data-num);
-	color: #999;
+	opacity: .5;
+}
+.product:hover a:after, .product:hover a:before {
+	opacity: 1;
 }
 .product h2 {
 	/*letter-spacing: 1.5px;*/
