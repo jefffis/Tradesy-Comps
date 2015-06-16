@@ -265,6 +265,10 @@ h1 small {
 	.product h2, .product h3, .product h4{
 		font-size: 13px;
 	}
+	.is-sold div span {
+		letter-spacing: normal;
+		text-transform: none;
+	}
 }
 
 @media screen and (min-width: 401px){
