@@ -7,21 +7,16 @@
 
 		<title dir="ltr">Tradesy Product Page Comp</title>
 
-		<link href="stylesheets/app.css" rel="stylesheet" type="text/css" />
+		<link href="stylesheets/nav.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 
-		<header class="cf">
-			<div class="width no-pad">
+		<header>
+			<div class="cf">
 				<h1 class="logo">
 					<a href="">Tradesy</a>
 				</h1>
-				<form class="search hide _no-r-m two" id="search-form">
-					<fieldset>
-						<input type="search" id="search" />
-						<input type="submit" value="Search" class="btn" />
-					</fieldset>
-				</form>
+				<!-- <img src="https://www.tradesy.com/css/images/tradesy2xwhite.png" alt="Tradesy logo" /> -->
 				<!--<div class="user">
 					<a href="">
 						<img src="https://item1.tradesy.com/images/user-default-image.jpg" />
@@ -29,325 +24,149 @@
 						Login
 					</a>
 				</div>-->
-				<a href="#" class="bag user-ind">
+				<a class="bag user-ind" id="bag-toggle">
 					<span class="bag-items zero">0</span>
 				</a>
-				<div id="more-user-actions" class="usr user-ind">
-					<!-- <span class="bag-items">2</span> -->
-				</div>
-				<span id="search-toggle" class="srch user-ind"></span>
+				<span id="search-toggle" class="srch user-ind login-screen"></span>
+
+				<!-- <div id="more-user-actions" class="usr user-ind">
+					<span class="bag-items">2</span>
+				</div> -->
 				<!-- <a href="#" class="msg user-ind">
 					<span class="bag-items">2</span>
 				</a>
 				<a href="#" class="notes user-ind">
 					<span class="bag-items">2</span>
 				</a> -->
-				<nav class="m tabs">
-					<span>
-						<a href="#full-menu">
-							<!-- <img src="https://item1.tradesy.com/images/user-default-image.jpg" /> -->
-							Shop by
-							<br>
-							Department
-						</a>
-					</span>
-					<!-- <span>
-						<a href=""><img src="https://item1.tradesy.com/images/user-default-image.jpg" />Designers</a>
-					</span> -->
-					<span>
-						<a href="">
-							<!-- <img src="https://item1.tradesy.com/images/user-default-image.jpg" /> -->
-							Sell on
-							<br>
-							Tradesy
-						</a>
-					</span>
-					<span>
-						<a href="">
-							<!-- <img src="https://item1.tradesy.com/images/user-default-image.jpg" /> -->
-							How it
-							<br>
-							Works
-						</a>
-					</span>
-					<span>
-						<a href="">
-							<!-- <img src="https://item1.tradesy.com/images/user-default-image.jpg" /> -->
-							Login /
-							<br>
-							Sign Up
-						</a>
-					</span>
-					<!-- <div class="links-wrap">
-						<div class="links">
-							<span>
-								<a href="">Clothing</a>
-							</span>
-							<span>
-								<a href="">Bags</a>
-							</span>
-							<span>
-								<a href="">Shoes</a>
-							</span>
-							<span>
-								<a href="">Accessories</a>
-							</span>
-							<span>
-								<a href="">Weddings</a>
-							</span>
-							<span>
-								<a href="">Style Feed</a>
-							</span>
-							<span>
-								<a href="">Designers</a>
-							</span>
-							<span>
-								<a href="">Editor&rsquo;s Picks</a>
-							</span>
-							<span class="scroll m">
-								View all
-							</span>
-						</div>
-					</div> -->
-				</nav>
 			</div>
-			<nav class="t d">
-				<div class="links-wrap">
-					<span>
-						<a href="">Clothing</a>
-					</span>
-					<span>
-						<a href="">Bags</a>
-					</span>
-					<span>
-						<a href="">Shoes</a>
-					</span>
-					<span>
-						<a href="">Accessories</a>
-					</span>
-					<span>
-						<a href="">Weddings</a>
-					</span>
-					<span>
-						<a href="">Style Feed</a>
-					</span>
-					<span>
-						<a href="">Designers</a>
-					</span>
-					<span>
-						<a href="">Editor&rsquo;s Picks</a>
-					</span>
-					<!-- <span class="scroll m">
-						View all
-					</span> -->
-					<span class="fr">
-						<a href="">
-							Sell
-						</a>
-					</span>
-					<span class="fr">
-						<a href="">
-							About
-						</a>
-					</span>
+			<!-- <nav class="tabs three cf">
+				<span>
+					<a href="#full-menu">
+						Shop
+					</a>
+				</span>
+				<span>
+					<a href="#full-menu">
+						Sell
+					</a>
+				</span>
+				<span>
+					<a href="">
+						Log In
+					</a>
+				</span>
+			</nav> -->
+			<nav class="tabs logged-in cf">
+				<span>
+					<a href="#menu">
+						Shop
+					</a>
+				</span>
+				<span>
+					<a href="#" class="alerts">
+						<!-- <img src="images/msg.png" /> -->
+						<em class="msg" data-num="1"></em>
+					</a>
+				</span>
+				<span>
+					<a href="#">
+						<!-- <img src="images/note.png" /> -->
+						<em class="note"></em>
+					</a>
+				</span>
+				<span class="has-nav" id="user-toggle">
+					<a>
+						<!-- Tuna -->
+						<!-- <span class="long">JD</span> -->
+						<img src="https://pbs.twimg.com/profile_images/473111708735524864/kb0NFxZk_bigger.jpeg" alt="" class="av">
+					</a>
+				</span>
+				<div class="sub-nav hide" id="user-menu">
+					<a href="###">Your Wants</a>
+					<a href="###">Your Closet</a>
+					<a href="###">Your Listings</a>
+					<a href="###">Your Sales</a>
+					<a href="###">Manage Payouts</a>
+					<a href="###">Edit Settings</a>
+					<a href="###">Logout</a>
 				</div>
+
+				<form class="search hide focusd" id="search-form">
+					<fieldset>
+						<input type="search" id="search" />
+						<input type="submit" value="Search" />
+						<del></del>
+					</fieldset>
+				</form>
+
+				<div class="my-bag hide" id="bag">
+					<img src="images/bag-d.png" alt="" />
+					Your bag is empty, <a href="">start shopping</a>!
+					<del></del>
+				</div>
+
 			</nav>
+
 		</header>
-
-		<div id="user-actions" class="user-actions cf">
-			<a href="#" class="msg _user-ind">
-				<span class="bag-items zero">0</span>
-			</a>
-			<a href="#" class="notes _user-ind">
-				<span class="bag-items zero">0</span>
-			</a>
-			<a href="#" class="gear"></a>
-		</div>
-
-		<!-- <div class="note text-center">
-			<strong>$25 WELCOME GIFT</strong>
-			Use code GIFT25 for $25 off any first purchase over $199.
-		</div> -->
-
-		<div class="width cf">
-
-			<div class="right">
-
-				<div class="product-details m">
-					<span class="i-b tag t d">{category}</span>
-					<h1>Love Moschino Belt - Patchwork Suede Belt</h1>
-					<span class="i-b lbl">{brand}</span>
-					<span class="i-b lbl _none">New with tags</span>
-					<span class="i-b lbl"><strong>60%</strong> off retail</span>
-				</div>
-
-				<!-- product images -->
-				<div class="product-gallery cf" id="product-gallery">
-					<!-- <div class="text-center t d">
-						<span class="i-b lbl circle heart"></span>
-						<span class="i-b lbl circle heart"></span>
-						<span class="i-b lbl circle heart"></span>
-						<span class="i-b lbl circle heart"></span>
-					</div> -->
-					<div class="product-image">
-						<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" alt="Moschino Love Moschino Belt - Patchwork Suede Belt"  />
-						<small class="text-center t d">Click to zoom</small>
-					</div>
-					<div class="product-thumbs text-center m dots">
-						<span class="active"></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-						<span></span>
-					</div>
-					<div class="product-thumbs text-center t d">
-						<div class="product-thumbs-table">
-							<div class="product-thumbs-table-cell">
-								<div class="thumbs-row">
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-								</div>
-								<div class="thumbs-row">
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-								</div>
-								<div class="thumbs-row">
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-									<img src="https://item3.tradesy.com/r/cdcc1776836a9d9114a1d6225f20ec40/355/355/accessories/moschino/belts/moschino-love-moschino-belt-patchwork-suede-belt-908772.jpg" />
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- <div class="text-center mar-top">
-						<p>
-							Free shipping both ways &amp; Free, easy returns.
-						</p>
-					</div> -->
-				</div>
-				<!--/ product image -->
-			</div>
-			<div class="left">
-				<div class="product-details t d">
-					<span class="i-b tag">{category}</span>
-					<h1>Love Moschino Belt - Patchwork Suede Belt</h1>
-					<span class="i-b lbl">{brand}</span>
-					<span class="i-b lbl _none">New with tags</span>
-					<span class="i-b lbl"><strong>60%</strong> off retail</span>
-				</div>
-				<div class="product-price">
-					<h2 class="no-bot">
-						<span class="i-b price no-bot">599.99</span>
-						<span class="i-b del price no-bot sm">1,999.99</span>
-					</h2>
-					<span class="i-b _lbl sale">Sale! 10% off Seller's List Price.</span>
-				</div>
-				<div class="product-actions">
-					<a href="#" class="btn main">Buy</a>
-					<!-- <a href="#" class="btn none">Want</a> -->
-					<span class="i-b lbl circle heart m sm-m"></span>
-				</div>
-				<small>
-					Free shipping &amp; free, easy returns! <a href="#">Details</a>
-				</small>
-				<!--<div class="mar-top m">
-						<span class="i-b lbl circle heart"></span>
-						<span class="i-b lbl circle heart"></span>
-						<span class="i-b lbl circle heart"></span>
-						<span class="i-b lbl circle heart"></span>
-					</div>-->
-				<hr class="clr" />
-				<div class="product-sub-details">
-					<h3 class="active">Condition: <strong>{condition}</strong></h3>
-					<p class="open"><strong>Note:</strong> This item has original tags and shows no visible signs of wear.</p>
-				</div>
-				<hr />
-				<div class="product-sub-details">
-					<h3>Details</h3>
-					<p>{details}</p>
-				</div>
-				<hr />
-				<div class="product-sub-details">
-					<h3>Hassle-free returns</h3>
-					<p>This item is returnable. See <a href="#">Tradesy's Return Policy</a> for details.</p>
-				</div>
-				<hr />
-				<div class="product-sub-details">
-					<h3>Listed by <strong>{user}</strong></h3>
-					<p>Make a Statement! This playful patchwork suede belt by Love Moschino capitalizes on color-block chic with its color palette of red, white, blue and black! Black, blue, red and white suede. Oversized blue suede buckle. Gold metal hardware. Contrasting white top stitching. European belt size 75. Approx. retail price $225. 3" wide, fits waist 32" - 37.5".</p>
-				</div>
-				<hr />
-			</div>
-
-		</div>
-
-		<p class="mar-top text-center no-bot clr t d">
-			<a href="#" class="btn grey">Back to top</a>
-		</p>
-
-		<!-- <div class="note text-center fixed bottom">
-			<strong>Always:</strong> get free shipping both ways &amp; Free, easy returns.
-		</div> -->
-
-		<hr class="t d" />
-
-		<!-- <div class="width text-center">
-			<h2>Related items</h2>
-			// item
-			<div class="item">
-				<a href="#">
-					<div class="item-image">
-						<img src="https://item4.tradesy.com/r/609dc621b3ab649916f3c8f0805a78cb6c78527a42b054acfa96a576c99c5bea/203/307/accessories/moschino/os/moschino-1606623.jpg" />
-					</div>
-					<div class="item-body">
-						<div class="item-name">
-							Moschino Italian Cow iPhone 5/5S Cover
-						</div>
-						<div class="item-price">
-							<p>
-								<span class="item-current i-b price">32.00</span> 
-								<span class="item-original i-b price del">85.00</span>
-							</p>
-						</div>
-					</div>
+		
+		<!-- <div class="promo">
+			<h1>
+				<a href="">
+					Free shipping &amp; Returns
 				</a>
-			</div>
-			// item
+			</h1>
 		</div> -->
 
-		<form class="search ftr" id="full-menu">
-			<h4>Search or Shop by Department:</h4>
-			<fieldset>
-				<input type="search" />
-				<input type="submit" value="Search" class="btn" />
-			</fieldset>
-		</form>
+		<div class="template idv cf">
+			<h1>
+				<strong>Louis Vuitton</strong>
+				Monogram Canvas Limited Edition Neverfull<!--  Mm Ramages Multicolor Tote Bag -->
+			</h1>
+
+			<figure>
+				<img src="https://item2.tradesy.com/r/ae4b8cbff3ab0569ad59d452d4ac67b3d0f0f108df4a7eba0073408875e32965/355/355/bags/louis-vuitton/totes/louis-vuitton-lv-tote-bag-multicolor-2190771.jpg" alt="" />
+				<button></button>
+			</figure>
+
+			<ul>
+				<li class="active"></li>
+				<li></li>
+				<li></li>
+			</ul>
+
+			<div id="price">
+				<h2>
+					$2,037.50
+					<span>$5,037.50</span>
+				</h2>
+				<button>Add to Bag</button>
+			</div>
+
+			<div class="specs">
+				<span>Size: <strong>12.6 x 11.4 x 6.7</strong></span>
+				<span>Condition: <strong>Gently used</strong></span>
+			</div>
+
+		</div>
 
 		<menu class="menu" id="menu">
 			<span class="r">
 				<a href="#">Back to Top</a>
 			</span>
 			<span>
-				<a href="">My Account</a>
-				<em></em>
-				<div class="sub-nav">
-					<a href="">Inbox</a>
-					<a href="">Closet</a>
-					<a href="">Payouts</a>
-				</div>
-			</span>
-			<span>
 				<a href="">Clothing</a>
 				<em></em>
 				<div class="sub-nav">
 					<a href="">Sub Clothing</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
 				</div>
 			</span>
 			<span>
@@ -364,12 +183,20 @@
 				<em></em>
 				<div class="sub-nav">
 					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
 				</div>
 			</span>
 			<span>
 				<a href="">Accessories</a>
 				<em></em>
 				<div class="sub-nav">
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
 					<a href="">Sub Clothing</a>
 				</div>
 			</span>
@@ -378,12 +205,18 @@
 				<em></em>
 				<div class="sub-nav">
 					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
 				</div>
 			</span>
 			<span>
 				<a href="">Style Feed</a>
 				<em></em>
 				<div class="sub-nav">
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
 					<a href="">Sub Clothing</a>
 				</div>
 			</span>
@@ -392,6 +225,10 @@
 				<em></em>
 				<div class="sub-nav">
 					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
+					<a href="">Sub Clothing</a>
 				</div>
 			</span>
 			<span>
@@ -399,12 +236,140 @@
 				<em></em>
 				<div class="sub-nav">
 					<a href="">Sub Clothing</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
+					<a href="#">Sub Ish</a>
 				</div>
 			</span>
 		</menu>
 
+		<footer></footer>
+
+		<div id="interstitial" class="interstitial">
+			<div class="logo"></div>
+			<div>
+				<img src="images/email-btn.png" />
+				<h1>Try messaging in our app.</h1>
+				<p>It&rsquo;s much easier, faster and free!</p>
+				<a href="##" class="btn nopeee">Get the App</a>
+				<a href="####" class="nopeee">No thanks, web is fine.</a>
+			</div>
+		</div>
+
 		<script>document.addEventListener('touchstart', function() {},false);</script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script src="javascripts/app.js"></script>
+		<script>
+		$(function() {
+			var win = $(window),
+				header = $('header'),
+				nav = $('nav'),
+				navTop = nav.offset().top,
+				searchToggle = $('#search-toggle'),
+				searchForm = $('#search-form')
+				searchDel = searchForm.find('del'),
+				bagToggle = $('#bag-toggle'),
+				bag = $('#bag')
+				bagDel = bag.find('del'),
+				userMenu = $('#user-menu'),
+				userToggle = $('#user-toggle'),
+				menu = $('#menu')
+			    menu_link = menu.find('em'),
+			    menu_sub = menu.find('.sub-nav'),
+			    sellll = $('.alerts'),
+			    interstitial = $('#interstitial'),
+			    nopeee = $('.nopeee');
+
+				// win.scroll(function() {
+				// 	var scrollTop = win.scrollTop();
+				// 	if(scrollTop >= navTop){
+				// 		nav.addClass('fixed');
+				// 	}else{
+				// 		nav.removeClass('fixed');
+				// 	}
+				// });
+
+				userToggle.on('click', function() {
+					searchForm.addClass('hide');
+					searchToggle.removeClass('active');
+					bag.addClass('hide');
+					bagToggle.removeClass('active');
+					userMenu.toggleClass('hide');
+					$(this).toggleClass('active');
+				});
+
+				searchToggle.on('click', function() {
+					bag.addClass('hide');
+					bagToggle.removeClass('active');
+					userMenu.addClass('hide');
+					userToggle.removeClass('active');
+					searchForm.toggleClass('hide');
+					$(this).toggleClass('active');
+					focusSearch($(this));
+				});
+
+				searchDel.on('click', function() {
+					searchForm.addClass('hide');
+					searchToggle.removeClass('active');
+				});
+
+				bagToggle.on('click', function() {
+					searchForm.addClass('hide');
+					searchToggle.removeClass('active');
+					userMenu.addClass('hide');
+					userToggle.removeClass('active');
+					bag.toggleClass('hide');
+					$(this).toggleClass('active');
+				});
+
+				bagDel.on('click', function() {
+					bag.addClass('hide');
+					bagToggle.removeClass('active');
+				});
+
+				menu_link.on('click', function(){
+					var $this = $(this);
+					var sub = $this.parent().find('.sub-nav');
+					if(sub.hasClass('open')){
+						$this.removeClass('active');
+						sub.removeClass('open');
+					}else{
+						menu_link.removeClass('active');
+						menu_sub.removeClass('open');
+						$this.addClass('active');
+						sub.addClass('open');
+						$('html,body').animate({
+							scrollTop: $this.offset().top
+						}, 500)
+					}
+				});
+
+				sellll.on('click', function(){
+					setTimeout(function() {
+						interstitial.addClass('show');
+						$('html').addClass('no-scroll');
+					}, 250);
+				});
+
+				nopeee.on('click', function(){
+					setTimeout(function() {
+						interstitial.removeClass('show');
+						$('html').removeClass('no-scroll');
+					}, 250);
+				});
+
+				if(window.location.hash){
+					searchForm.toggleClass('hide');
+					searchToggle.toggleClass('active');
+				}
+
+				function focusSearch(el) {
+					if(!!el.hasClass('active')){
+						setTimeout(function() {
+							searchForm.find('input[type=search]').focus();
+						}, 100);
+					}
+				}
+		});
+		</script>
 	</body>
 </html>
