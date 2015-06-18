@@ -1,0 +1,390 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Super template</title>
+
+		<style>
+		@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
+		html, body {
+			margin: 0;
+			padding: 0;
+		}
+		body, div, table {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-ms-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+		img {
+			display: block;
+			margin: 0;
+			border: 0;
+		}
+		td { -webkit-text-size-adjust:none; -webkit-tap-highlight-color: rgba(0,0,0,0); margin: 0; padding: 0; border: 0; }
+		#ForceOutlook2010BrowserLink span { padding:0px; }
+		td, div {
+			color: #111;
+			font-family: 'proxima-nova-regular', 'Helvetica Neue', Arial, sans-serif;
+			font-size: 15px;
+			line-height: 22px;
+		}
+		.h1, .h2, .h3 {
+			color: #111;
+			display: block;
+			font-size: 24px;
+			line-height: 1.2;
+			margin-bottom: 10px;
+		}
+		.h1 span, .h2 span {
+			display: block;
+			color: #999;
+			font-size: 14px;
+			padding-top: 8px;
+			letter-spacing: normal;
+			text-transform: none;
+		}
+		a {
+			color: #ee7873;
+		}
+		/*.btn {
+			background: #111111;
+			color: #ffffff;
+			display: inline-block;
+			font-size: 15px;
+			font-weight: normal;
+			letter-spacing: 1.5px;
+			padding: 10px 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+			mso-hide: all;
+		}
+		.btn:active {
+			background: #2a2a2a;
+		}*/
+
+		.cf:before,
+		.cf:after {
+		    content: " "; /* 1 */
+		    display: table; /* 2 */
+		}
+		.cf:after {
+		    clear: both;
+		}
+		#wrapper {
+		    max-width: 600px;
+		    margin: auto;
+		}
+		#logo {
+		    height: 35px;
+		    float: left;
+		}
+		.right {
+		    float: right;
+		}
+		hr {
+		    clear: both;
+		    background: #ddd;
+		    border: 0;
+		    height: 2px;
+		    margin: 35px 15px;
+		}
+		.t {
+		    margin-top: 10px;
+		}
+		.n {
+			background: white;
+		}
+		.tt a {
+		    color: #777;
+		    display: inline-block;
+			/*letter-spacing: 1.5px;*/
+		    margin-top: 8px;
+		    margin-left: 15px;
+			/*text-transform: uppercase; */
+		}
+		.head {
+			display: block;
+			padding: 10px 10px 5px 5px;
+		}
+		#main {
+			padding-top: 5px;
+		}
+		#main img {
+		    max-width: 100%;
+		}
+		#sub {
+		    padding-top: 15px;
+		    padding-bottom: 15px;
+		    text-align: center;
+		}
+		#sub > .h2 {
+			margin-top: 10px;
+		    /*margin-bottom: 0;*/
+		    letter-spacing: 1.5px;
+		    text-transform: uppercase;
+		}
+		#sub > .top {
+			clear: both;
+			margin-top: 30px;
+		}
+		.item {
+			min-width: 290px;
+		    max-width: 300px;
+		    display: inline-block;
+		    padding: 10px 0 0;
+		}
+		.item a {
+		    display: block;
+		    padding: 5px 15px;
+		    border: 1px solid #fff;
+		    text-align: center;
+		    text-decoration: none;
+		}
+		.item a:active {
+			opacity: .65
+		}
+		.item img {
+		    max-height: 150px;
+		    max-width: 150px;
+		    margin: auto;
+		}
+		.item div {
+		    height: 150px;
+		    margin-bottom: 15px;
+		}
+		.item .h3 {
+		    color: #111;
+		    font-size: 14px;
+		    margin-bottom: 5px;
+		}
+		.item .title {
+		    letter-spacing: 1.5px;
+		    text-transform: uppercase;
+		}
+		.item .h3 span {
+			color: #999;
+			text-decoration: line-through;
+		}
+		.micro {
+			font-size: 11px;
+			text-align: right;
+		}
+		#footer {
+			text-align: center;
+		}
+		#footer .h3 {
+			color: #777;
+		}
+		#footer img {
+			display: inline-block;
+		}
+		@media screen and (max-width: 500px) {
+			#sub > .h2 {
+				font-size: 18px;
+				/*text-align: left;
+				padding-left: 15px;*/
+			}
+			.item {
+				min-width: 45%;
+			}
+		}
+		@media screen and (max-width: 320px) {
+			.item {
+				  min-width: 0;
+				  max-width: 160px;
+				  float: left;
+			}
+			.item img {
+			    max-height: 100px;
+			    max-width: 100px;
+			    margin: auto;
+			}
+			.item div {
+			    height: 100px;
+			    margin-bottom: 15px;
+			}
+		}
+		</style>
+	</head>
+</html>
+	<body>
+
+		<div id="wrapper">
+
+			<!-- <div class="micro">
+				<a href="##">View on web</a>
+			</div> -->
+
+		    <span class="head cf">
+		        <a href="##"><img src="http://media.tradesy.com/7826/email-logo.jpeg" alt="" id="logo" /></a>
+		        <div class="right tt">
+		            <a href="##">Shop</a>
+		            <a href="##">Sell</a>
+		            <!-- <a href="##">My Closet</a> -->
+		        </div>
+		    </span>
+		    <!-- <hr class="t n" /> -->
+		    <div id="main">
+		        <a href="##">
+		        	<img src="../images/super-sale.gif" alt="" />
+		        	<img src="../images/SHORTS.jpg" alt="" />
+		        </a>
+		    </div>
+		    <div id="sub">
+		        
+		        <span class="h2">
+		        	Featured Items
+		        	<span>(a cheeky message here)</span>
+		        </span>
+		        
+		        <span class="cf">
+			        
+			        <!-- item -->
+			        <div class="item">
+			            <a href="">
+			                <div>
+			                    <img src="https://item4.tradesy.com/r/fa77d9c95f227143e1e3a06aa70a88e7f79fb763f23793379fb08892463a47b4/203/307/bags/louis-vuitton/totes/louis-vuitton-neverfull-gm-tote-bag-brown-pink-3566338.jpg" />
+			                </div>
+			                <span class="h3 title">Louis Vuitton</span>
+			                <span class="h3">Neverfull Gm Monogram</span>
+			                <span class="h3">$2,335</span>
+			            </a>
+			        </div>
+
+			        <!-- item -->
+			        <div class="item">
+			            <a href="">
+			                <div>
+			                    <img src="https://item4.tradesy.com/r/fa77d9c95f227143e1e3a06aa70a88e7f79fb763f23793379fb08892463a47b4/203/307/bags/louis-vuitton/totes/louis-vuitton-neverfull-gm-tote-bag-brown-pink-3566338.jpg" />
+			                </div>
+			                <span class="h3 title">Louis Vuitton</span>
+			                <span class="h3">Neverfull Gm Monogram</span>
+			                <span class="h3">
+			                	$2,335
+			                	&nbsp;
+			                	<span>$5,999</span>
+			                </span>
+			            </a>
+			        </div>
+
+			        <!-- item -->
+			        <div class="item">
+			            <a href="">
+			                <div>
+			                    <img src="https://item4.tradesy.com/r/fa77d9c95f227143e1e3a06aa70a88e7f79fb763f23793379fb08892463a47b4/203/307/bags/louis-vuitton/totes/louis-vuitton-neverfull-gm-tote-bag-brown-pink-3566338.jpg" />
+			                </div>
+			                <span class="h3 title">Louis Vuitton</span>
+			                <span class="h3">Neverfull Gm Monogram</span>
+			                <span class="h3">$2,335</span>
+			            </a>
+			        </div>
+
+			        <!-- item -->
+			        <div class="item">
+			            <a href="">
+			                <div>
+			                    <img src="https://item4.tradesy.com/r/fa77d9c95f227143e1e3a06aa70a88e7f79fb763f23793379fb08892463a47b4/203/307/bags/louis-vuitton/totes/louis-vuitton-neverfull-gm-tote-bag-brown-pink-3566338.jpg" />
+			                </div>
+			                <span class="h3 title">Louis Vuitton</span>
+			                <span class="h3">Neverfull Gm Monogram</span>
+			                <span class="h3">
+			                	$2,335
+			                	&nbsp;
+			                	<span>$5,999</span>
+			                </span>
+			            </a>
+			        </div>
+
+		        </span>
+
+		        <hr />
+
+		        <span class="h2">
+		        	Featured Items
+		        	<span>(a cheeky message here)</span>
+		        </span>
+		        
+				<span class="cf">
+
+			        <!-- item -->
+			        <div class="item">
+			            <a href="">
+			                <div>
+			                    <img src="https://item4.tradesy.com/r/fa77d9c95f227143e1e3a06aa70a88e7f79fb763f23793379fb08892463a47b4/203/307/bags/louis-vuitton/totes/louis-vuitton-neverfull-gm-tote-bag-brown-pink-3566338.jpg" />
+			                </div>
+			                <span class="h3 title">Louis Vuitton</span>
+			                <span class="h3">Neverfull Gm Monogram</span>
+			                <span class="h3">$2,335</span>
+			            </a>
+			        </div>
+
+			        <!-- item -->
+			        <div class="item">
+			            <a href="">
+			                <div>
+			                    <img src="https://item4.tradesy.com/r/fa77d9c95f227143e1e3a06aa70a88e7f79fb763f23793379fb08892463a47b4/203/307/bags/louis-vuitton/totes/louis-vuitton-neverfull-gm-tote-bag-brown-pink-3566338.jpg" />
+			                </div>
+			                <span class="h3 title">Louis Vuitton</span>
+			                <span class="h3">Neverfull Gm Monogram</span>
+			                <span class="h3">
+			                	$2,335
+			                	&nbsp;
+			                	<span>$5,999</span>
+			                </span>
+			            </a>
+			        </div>
+
+			        <!-- item -->
+			        <div class="item">
+			            <a href="">
+			                <div>
+			                    <img src="https://item4.tradesy.com/r/fa77d9c95f227143e1e3a06aa70a88e7f79fb763f23793379fb08892463a47b4/203/307/bags/louis-vuitton/totes/louis-vuitton-neverfull-gm-tote-bag-brown-pink-3566338.jpg" />
+			                </div>
+			                <span class="h3 title">Louis Vuitton</span>
+			                <span class="h3">Neverfull Gm Monogram</span>
+			                <span class="h3">$2,335</span>
+			            </a>
+			        </div>
+
+			        <!-- item -->
+			        <div class="item">
+			            <a href="">
+			                <div>
+			                    <img src="https://item4.tradesy.com/r/fa77d9c95f227143e1e3a06aa70a88e7f79fb763f23793379fb08892463a47b4/203/307/bags/louis-vuitton/totes/louis-vuitton-neverfull-gm-tote-bag-brown-pink-3566338.jpg" />
+			                </div>
+			                <span class="h3 title">Louis Vuitton</span>
+			                <span class="h3">Neverfull Gm Monogram</span>
+			                <span class="h3">
+			                	$2,335
+			                	&nbsp;
+			                	<span>$5,999</span>
+			                </span>
+			            </a>
+			        </div>
+
+		        </span>
+
+		        <hr />
+
+		        <div id="footer">
+		        	<a href="##"><img src="../images/instagram.gif" height="30" alt="" /></a>
+		        	&nbsp;
+		        	<a href="##"><img src="../images/instagram.gif" height="30" alt="" /></a>
+		        	&nbsp;
+		        	<a href="##"><img src="../images/instagram.gif" height="30" alt="" /></a>
+		        	&nbsp;
+		        	<a href="##"><img src="../images/instagram.gif" height="30" alt="" /></a>
+		        	<br /><br />
+		        	<span class="h3">Footer stuff</span>
+		        </div>
+		        
+		    </div>
+		</div>
+	 
+	</body>
+</html>
