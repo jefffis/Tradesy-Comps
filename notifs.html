@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">Tradesy Product Page Comp</title>
+
+		<link href="stylesheets/nav.css" rel="stylesheet" type="text/css" />
+		<style>
+		header > div {
+			position: relative;
+			max-width: 1200px;
+			margin: auto;
+		}
+		.logo a {
+			background: url(https://assets.tradesy.com/css/images/tradesy2xwhite.png) no-repeat;
+			background-size: contain;
+			height: 35px;
+			width: 150px;
+			top: 11px;
+			left: 0;
+		}
+		.actions {
+			padding-top: .7rem;
+			float: right;
+		}
+		.bag-items {
+			top: -22px;
+			right: 16px;
+		}
+		/*.user-ind {
+			position: relative;
+			top: .9rem;
+		}
+		.user-ind + .user-ind {
+			right: 6rem;
+		}*/
+		.actions > a, .actions > span {
+			display: inline-block;
+			position: relative;
+			cursor: pointer;
+			float: right;
+			text-decoration: none;
+		}
+		.actions > a:active:before, .actions > span:active:before {
+			opacity: .65;
+		}
+		.actions > a:before, .actions > span:before {
+			display: inline-block;
+			height: 2rem;
+			width: 2rem;
+			/*background: white;*/
+			border-radius: 3px;
+			content: "";
+		}
+		.in-my-bag:before {
+			background: url(../images/bag.png) no-repeat center;
+			background-size: 35px;
+		}
+		.messages:before {
+			background: url(../images/msg.png) no-repeat center;
+			background-size: 35px;
+		}
+		.alerts:before {
+			background: url(../images/note.png) no-repeat center;
+			background-size: 35px;
+		}
+		.actions > a + a, .actions > a + span, .actions > span + a, .actions > span + span {
+			margin-right: 1rem;
+		}
+		.actions > span div {
+			display: none;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			background: white;
+			min-width: 15rem;
+			max-width: 20rem;
+			padding: .75rem 1rem;
+			margin: 10px 1.4rem 0 0;
+			border-radius: 3px;
+			box-shadow: 0 0 0 1px rgba(0,0,0,0.25), 0 2px 1px rgba(0,0,0,0.1);
+			opacity: 0;
+		}
+		.actions > span div:before {
+			position: absolute;
+			top: -9px;
+			right: 7px;
+			z-index: 2;
+			height: 0;
+			width: 0;
+			border-bottom: 10px solid white;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			content: "";
+		}
+		.actions > span.show div {
+			display: block;
+			top: 100%;
+			opacity: 1;
+			-webkit-animation: fadeIn .25s ease-in-out; 
+		}
+		.actions > span a {
+			display: block;
+			padding: .5rem 1rem;
+			margin: 0 -1rem;
+			color: #777;
+			line-height: 1.2;
+			overflow: hidden;
+			text-decoration: none;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.actions > span a:hover {
+			background: #efefef;
+		}
+		.actions > span .m {
+			color: #ee7873;
+			text-decoration: underline;
+		}
+		.actions > span .a {
+			margin-top: .5rem;
+			font-size: .85rem;
+		}
+		.actions > span em {
+			color: #111;
+			font-style: normal;
+		}
+		.actions > span div span {
+			color: #ee7873;
+			text-decoration: underline;
+		}
+		/*.actions > span a + a {
+			margin-top: .5rem;	
+		}*/
+		.actions > span h3 {
+			margin: 0 0 .5rem;
+			color: #777;
+			font-size: 15px;
+			line-height: 1.2;
+		}
+		.actions > span strong {
+			color: #111;
+		}
+		.actions > span hr {
+			/*height: 2px;*/
+			margin: 1rem -1rem;
+		}
+		@-webkit-keyframes fadeIn {
+			0% {
+				display: none;
+				top: 50%;
+				opacity: 0;
+			}
+			100% {
+				display: block;
+				top: 100%;
+				opacity: 1;
+			}
+		}
+		</style>
+	</head>
+	<body>
+
+		<header>
+			<div class="cf">
+				<h1 class="logo">
+					<a href="">Tradesy</a>
+				</h1>
+
+				<div class="actions">
+					<a href="###" class="in-my-bag" id="bag-toggle">
+						<span class="bag-items zero">0</span>
+					</a>
+
+					<span id="toggleNotes" class="messages">
+						<span class="bag-items">3</span>
+						<div>
+							<h3><strong>3</strong> new messages</h3>
+							<a href=""><span>From: Penny Lane:</span>&nbsp;<em>Is your Louis Vuitton Neverfull still available?</em></a>
+							<a href=""><span>From: Janey Jones:</span>&nbsp;<em>Have you shipped my shoes yet?!?</em></a>
+							<a href=""><span>From: Abe Lolz:</span>&nbsp;<em>LOVE LOVE LOVE the new bag; thanks so much!</em></a>
+							<a href="" class="m a">View all messages</a>
+							<hr />
+							<h3><strong>No</strong> new sales</h3>
+							<a href="" class="m a">View all sales</a>
+						</div>
+					</span>
+
+					<span id="toggleAlerts" class="alerts">
+						<span class="bag-items">2</span>
+						<div>
+							<h3><strong>2</strong> new alerts</h3>
+							<a href="" class="m">Your shipping address is needed</a>
+							<a href="" class="m">Please verify your account</a>
+							<a href="" class="m a">View all alerts</a>
+						</div>
+					</span>
+				</div>
+			</div>
+		</header>
+
+		<script>
+			var toggleNotes = document.getElementById('toggleNotes'),
+				toggleAlerts = document.getElementById('toggleAlerts');
+
+			toggleNotes.onclick = function() {
+				toggleAlerts.classList.remove('show');
+				this.classList.toggle('show');
+			}
+
+			toggleAlerts.onclick = function() {
+				toggleNotes.classList.remove('show');
+				this.classList.toggle('show');
+			}
+		</script>
+
+	</body>
+</html>

@@ -163,7 +163,7 @@ button, .login-btn {
 }
 .notes {
 	background: url(../images/note.png) no-repeat center center;
-	/*background-size: 25px;*/
+	background-size: 25px;
 }
 .bag-items {
 	background: #ee7873;
