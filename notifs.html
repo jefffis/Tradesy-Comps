@@ -9,6 +9,9 @@
 
 		<link href="stylesheets/nav.css" rel="stylesheet" type="text/css" />
 		<style>
+		html, body {
+			height: 100%;
+		}
 		header > div {
 			position: relative;
 			max-width: 1200px;
@@ -79,10 +82,20 @@
 			min-width: 15rem;
 			max-width: 20rem;
 			padding: .75rem 1rem;
-			margin: 10px 1.4rem 0 0;
+			margin: 8px 1.4rem 0 0;
 			border-radius: 3px;
 			box-shadow: 0 0 0 1px rgba(0,0,0,0.25), 0 2px 1px rgba(0,0,0,0.1);
+			cursor: default;
 			opacity: 0;
+		}
+		.actions > span .c {
+			padding: 2rem 1rem;
+			text-align: center;
+		}
+		.c img {
+			display: block;
+			margin: 2rem auto;
+			max-width: 50px;
 		}
 		.actions > span div:before {
 			position: absolute;
@@ -162,7 +175,7 @@
 		}
 		</style>
 	</head>
-	<body>
+	<body id="body">
 
 		<header>
 			<div class="cf">
@@ -171,9 +184,14 @@
 				</h1>
 
 				<div class="actions">
-					<a href="###" class="in-my-bag" id="bag-toggle">
+					<span class="in-my-bag" id="bag-toggle">
 						<span class="bag-items zero">0</span>
-					</a>
+						<div class="c">
+							<h3>Your bag is <strong>empty</strong>.</h3>
+							<img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/shopping_bag-128.png" alt="" />
+							<a href="" class="m a">Start shopping now</a>
+						</div>
+					</span>
 
 					<span id="toggleNotes" class="messages">
 						<span class="bag-items">3</span>
@@ -203,17 +221,39 @@
 		</header>
 
 		<script>
-			var toggleNotes = document.getElementById('toggleNotes'),
+			var body = document.getElementById('body'),
+				bagToggle = document.getElementById('bag-toggle'),
+				toggleNotes = document.getElementById('toggleNotes'),
 				toggleAlerts = document.getElementById('toggleAlerts');
 
 			toggleNotes.onclick = function() {
+				bagToggle.classList.remove('show');
 				toggleAlerts.classList.remove('show');
 				this.classList.toggle('show');
 			}
 
 			toggleAlerts.onclick = function() {
+				bagToggle.classList.remove('show');
 				toggleNotes.classList.remove('show');
 				this.classList.toggle('show');
+			}
+
+			bagToggle.onclick = function() {
+				bagToggle.classList.remove('show');
+				toggleAlerts.classList.remove('show');
+				this.classList.toggle('show');
+			}
+
+			body.onclick = function(e) {
+				if(e.target != toggleNotes) {
+					toggleNotes.classList.remove('show');
+				}
+				if(e.target != toggleAlerts) {
+					toggleAlerts.classList.remove('show');
+				}
+				if(e.target != bagToggle) {
+					bagToggle.classList.remove('show');
+				}
 			}
 		</script>
 
