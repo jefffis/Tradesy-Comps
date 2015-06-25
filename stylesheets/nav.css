@@ -918,7 +918,8 @@ a.r {
 	padding: 1.5rem 1.5rem 2rem;
 	width: 100%;
 	z-index: 2;
-	background: white;
+	background: #2a272b;
+	color: white;
 }
 .login > div {
 	position: relative;
@@ -937,8 +938,11 @@ a.r {
 	display: none;
 }
 .interstitial p {
-	color: #999;
+	/*color: #999;*/
 	margin-bottom: 1.5rem;
+}
+.interstitial a {
+	color: white;
 }
 .login h2, .in-canvas h2 {
 	color: #666;
@@ -962,9 +966,12 @@ a.r {
 	color: #333;
 }
 .interstitial .btn {
-	color: white;
+	color: #2a272b;
+	background: white;
 	display: block;
 	margin-bottom: 1rem;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
 }
 .login .nopeee, .in-canvas .nopeee, .go-back {
 	color: #666;
@@ -994,9 +1001,10 @@ a.r {
 	max-width: 125px;
 }
 .interstitial > img {
-	max-width: 150%;
+	/*max-width: 150%;
 	margin: 0 0 1rem -35%;
-	min-height: 300px;
+	min-height: 300px;*/
+	max-width: 100%;
 }
 .in-canvas img, .login img {
 	max-width: 150px;
