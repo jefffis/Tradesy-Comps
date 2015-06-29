@@ -915,12 +915,23 @@ a.r {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	padding: 1.5rem 1.5rem 2rem;
+	padding: 1.5rem;
 	width: 100%;
 	z-index: 2;
 	background: #2a272b;
 	color: white;
 }
+/*.interstitial div:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	margin-top: -50px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,#2a272b));
+}*/
 .login > div {
 	position: relative;
 	background: white;
