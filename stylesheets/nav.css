@@ -1333,7 +1333,7 @@ footer:before {
 	.interstitial div {
 		background: #2a272b;
 		height: 100%;
-		padding: 2rem;
+		padding: 2.25rem 2rem 2rem 2rem;
 	}
 	.interstitial > img {
 		display: none
@@ -1348,7 +1348,7 @@ footer:before {
 @media screen and (orientation: landscape) and (min-width: 667px) {
 
 	.interstitial div {
-		padding: 20vh 3rem 3rem;
+		padding: 22.5vh 3rem 3rem;
 	}
 
 }
