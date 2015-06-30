@@ -79,6 +79,15 @@
 			display: block;
 			text-align: center;
 		}
+		.center img {
+			margin: auto;
+		}
+		.tb img {
+			margin: 0;
+		}
+		.center .content {
+			text-align: left;
+		}
 		.light {
 			background: #efefef;
 		}
@@ -86,9 +95,18 @@
 			font-size: 13px;
 			line-height: 18px;
 		}
+		.light-b {
+			border-bottom: 2px solid #dddddd;
+		}
 		@media screen and (max-width: 600px) {
 			.slim {
 				height: 15px !important;
+			}
+			.center img {
+				height: 150px !important;
+			}
+			.tb img {
+				height: 60px !important;
 			}
 		}
 		</style>
@@ -122,14 +140,36 @@
 					<td class="content" align="left">
 						Hi {{name}},
 						<br /><br />
+			
+						It takes us a few days to review your returned item. Here&rsquo;s what&rsquo;s happening now with:
 
-						It takes us a few days to review your return for <a href="https://www.tradesy.com/your-purchases/">{{item name}}</a>. Here&rsquo;s what&rsquo;s happening now:
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="10"></td></tr></table>
+
+						<span class="center light-b tb">
+							<table width="100%" cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<td width="80">
+										<a href="https://www.tradesy.com/your-purchases">
+											<img src="https://item3.tradesy.com/r/ce6df316c9ad7b07f472b8fb89cda01ec82365e47da42b450981a5b43ae0e462/203/307/bags/balenciaga/shoulder-bags/balenciaga-city-blue-shoulder-bag-bleu-paon-2412352.jpg" height="60" />
+										</a>
+									</td>
+									<td class="content">
+										<a href="https://www.tradesy.com/your-purchases">{{item name}}</a>
+									</td>
+								</tr>
+							</table>
+							<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="15"></td></tr></table>
+						</span>
+
+						<!-- <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
+
+						Here&rsquo;s what&rsquo;s happening now: -->
 
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
 
 						<table width="100%" cellpadding="0" cellspacing="0">
 							<tr>
-								<td width="45">
+								<td width="45" valign="top">
 									<img src="http://wtf.jefff.co/Tradesy-Comps/images/1.gif" height="30" />
 								</td>
 								<td class="content" align="left">
@@ -140,7 +180,7 @@
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
 						<table width="100%" cellpadding="0" cellspacing="0">
 							<tr>
-								<td width="45">
+								<td width="45" valign="top">
 									<img src="http://wtf.jefff.co/Tradesy-Comps/images/2.gif" height="30" />
 								</td>
 								<td class="content" align="left">
@@ -151,7 +191,7 @@
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
 						<table width="100%" cellpadding="0" cellspacing="0">
 							<tr>
-								<td width="45">
+								<td width="45" valign="top">
 									<img src="http://wtf.jefff.co/Tradesy-Comps/images/3.gif" height="30" />
 								</td>
 								<td class="content" align="left">
@@ -162,7 +202,7 @@
 
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
 
-						If we decide in your favor, you&rsquo;ll get a refund of {{amount}} less any site credit you&rsquo;ve used. If we find that the item was not misrepresented by the seller after all, you still get to keep the credit.
+						If we decide in your favor, you&rsquo;ll get a refund of <b>{{amount}}</b> less any site credit you&rsquo;ve used. If we find that the item was not misrepresented by the seller after all, you still get to keep the credit.
 						<br /><br />
 
 						We&rsquo;re here to help if you have any questions about this process,

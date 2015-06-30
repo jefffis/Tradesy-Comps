@@ -1325,6 +1325,20 @@ footer:before {
 	.interstitial h1 span {
 		display: inline;
 	}
+	.interstitial h1 {
+		padding: 0 2rem;
+	}
+	.interstitial p {
+		padding: 0 3rem;
+	}
+
+}
+
+@media screen and (min-width: 414px) {
+
+	.interstitial h1 {
+		padding: 0 3rem;
+	}
 
 }
 
