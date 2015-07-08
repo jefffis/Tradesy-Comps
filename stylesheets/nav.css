@@ -1349,7 +1349,7 @@ footer:before {
 		height: 100%;
 		padding: 2.25rem 2rem 2rem 2rem;
 	}
-	.interstitial > img {
+	.interstitial > img, .interstitial br {
 		display: none
 	}
 	.interstitial .btn {
