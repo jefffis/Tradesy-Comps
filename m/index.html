@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">Tradesy Product Page Comp</title>
+
+		<link href="../stylesheets/m.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+
+		<header>
+		    <a href="###" data-num="0"></a>
+		    <button></button>
+		    <button class="menu">Menu</button>
+		</header>
+		<div>
+		    <a href="###">Bags</a>
+		    <a href="###">Clothing</a>
+		    <a href="###">Shoes</a>
+		    <a href="###">Accessories</a>
+		    <a href="###">Weddings</a>
+		    <a href="###">Designers</a>
+		    <span>
+		        <a href="###">Login</a>
+		        <a href="###">Contact</a>
+		        <a href="###">Returns</a>
+		    </span> 
+		    <div>
+				<a href="###">
+					<span>Get the App</span>
+				</a>
+				<a href="###">Tradesy Reviews<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
+				<a href="###">How Tradesy Works<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
+				<a href="###">Help / FAQs<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
+				<a href="###">The Tradesy Blog<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
+				<a href="###">About Tradesy<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
+				<a href="###">Careers at Tradesy<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
+				<a href="###">Press<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
+				<a href="###">Terms<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
+				<a href="###">Privacy<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
+		    </div>
+		    <a href="##" class="text">View full menu</a>
+		</div>
+		<nav class="cf">
+		    <a href="##">Shop</a>
+		    <a href="##">Sell</a>
+		    <a href="##" data-num="1" style="display: none;"></a>
+		</nav>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			$(function(){
+			    $('.menu').on('click', function(){
+			        //$('.text').text('View all menu items').removeClass('ld');
+			        hideDiv('.text');
+			        if($(this).parent().next('div').hasClass('show')) {
+			            $(this).text('Menu');
+			            $(this).parent().next('div').removeClass('show');
+			        } else {
+			            $('.menu').text('Menu');
+			            $('div').removeClass('show');
+			            $(this).text('Hide');
+			            $(this).parent().next('div').addClass('show');
+			        }
+			    });
+			    $('.text').on('click', function(){
+			        if ($(this).hasClass('sh')) {
+			            hideDiv(this);
+			            $('html,body').animate({
+			            	scrollTop: $('body').offset().top
+			            }, 250);
+			        } else {
+			            $(this).text('').addClass('ld');
+			            showDiv(this);
+			        }
+			    });
+			    if(window.location.hash) {
+			    	$('nav').addClass('logged');
+			    	$('nav').find('a:last-child').css('display','inherit');
+			    }
+			});
+
+			function showDiv(el) {
+			    setTimeout(function(){
+			        $(el).prev('div').addClass('show');
+			        $(el).removeClass('ld').addClass('sh').text('Hide these');
+			        console.log($(el).text());
+			    }, 150);
+			}
+			function hideDiv(el) {
+			    $(el).prev('div').removeClass('show');
+			    $(el).text('View full menu').removeClass('sh');
+			}
+		</script>
+
+	</body>
+</html>

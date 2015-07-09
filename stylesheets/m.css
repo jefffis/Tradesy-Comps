@@ -1,0 +1,416 @@
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+body {
+    background: white;
+    font: normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
+    /*max-width: 320px;*/
+    /*margin: auto;*/
+}
+h1, h2 {
+    font-weight: normal;
+}
+h2 {
+    color: #999;
+    margin: 0;
+}
+small {
+    color: #999;
+    display: block;
+    font-size: 13px;
+    line-height: 1.2;
+    margin-top: -1rem;
+    position: relative;
+    z-index: 2;
+}
+header {
+    background: #111;
+    height: 55px;
+    position: relative;
+}
+header a {
+    background: url(http://wtf.jefff.co/Tradesy-Comps/images/bag.png) no-repeat center;
+    background-size: 30px;
+    display: block;
+    height: 30px;
+    position: absolute;
+    top: .825rem;
+    right: 1rem;
+    width: 30px;
+}
+/* header:active:before,  */header a:active, button:active {
+    opacity: .65;
+}
+button {
+    background: url(http://wtf.jefff.co/Tradesy-Comps/images/search-w.png) no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    position: absolute;
+    top: .75rem;
+    /*right: 8.5rem;*/
+    left: 3.5rem;
+    outline: none;
+    width: 30px;
+}
+.menu {
+    background: white;
+    color: #111;
+    font-size: 15px;
+    height: auto;
+    /*left: 1rem;*/
+    top: 1rem;
+    right: 3.75rem;
+    left: auto;
+    padding: .175rem .25rem;
+    width: auto;
+    letter-spacing: 1.5px;
+    text-indent: 1.5px;
+    text-transform: uppercase;
+}
+header a:after {
+    background: #999;
+    border-radius: 100%;
+    color: white;
+    content: attr(data-num);
+    font-size: 12px;
+    line-height: 1;
+    padding: .25rem 0;
+    position: absolute;
+    top: -.125rem;
+    right: -.5rem;
+    /* height: 1.25rem; */
+    width: 1.25rem;
+    text-align: center;
+    /* display: none; */
+}
+/* header:after {
+    background: white;
+    content: "";
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    position: absolute;
+    opacity: .5;
+    top: .5rem;
+    right: .5rem;
+    width: 30px;
+} */
+header:before {
+    background: url(http://wtf.jefff.co/Tradesy-Comps/images/gem-white.png) no-repeat center;
+    background-size: 35px;
+    content: "";
+    cursor: pointer;
+    display: block;
+    height: 35px;
+    position: absolute;
+    top: .625rem;
+    left: .625rem;
+    width: 35px;
+}
+nav {
+    background: #2a2a2a;
+    position: relative;
+    text-align: center;
+}
+/*nav:before {
+    background: -webkit-linear-gradient(top, transparent 0%, white 75%);
+    display: block !important;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+nav:after {
+    background: white;
+    box-shadow: 0 0 0 1px #ddd inset;
+    color: #777;
+    content: "content here..." !important;
+    display: block;
+    height: 200px;
+    padding-top: 100px;
+    text-align: center;
+    width: 100%;
+}*/
+nav a {
+    color: rgba(255,255,255,0.75);
+    display: block;
+    float: left;
+    letter-spacing: 1.5px;
+    padding: .825rem 0;
+    text-decoration: none;
+    text-indent: 1.5px;
+    text-transform: uppercase;
+    width: 50%;
+}
+nav a:active {
+    background: rgba(0,0,0,0.25);
+    color: rgba(255,255,255,0.5);
+}
+nav a:active:before {
+    opacity: .65;
+}
+.three a {
+    width: 35%;
+}
+.logged a {
+    width: 40%;
+}
+.three a:last-child {
+    width: 30%;
+}
+.logged a:last-child {
+    width: 20%;
+}
+nav a:nth-child(n+2) {
+    box-shadow: 1px 0 0 rgba(0,0,0,0.25) inset;
+}
+ .logged a:last-child {
+    position: relative;
+    height: 100%;
+    min-height: 3.1375rem;
+} 
+.logged a:last-child:before {
+    background: url(https://item1.tradesy.com/r/9fca2d94ea38c2395f614eb5a1c84983a02c9d50ca070519c2df813c47998dc9/200/200/temp/temp.jpg) no-repeat center center;
+    background-size: 115%;
+    border-radius: 100%;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
+    position: absolute;
+    top: 20%;
+    left: 27.5%;
+    content: "";
+    display: block;
+    height: 30px;
+    margin: auto;
+    width: 30px;
+    z-index: 1;
+}
+.logged a:last-child:after {
+    background: #ee7873;
+    border-radius: 100%;
+    color: white;
+    content: attr(data-num);
+    font-size: 12px;
+    line-height: 1;
+    /*padding: .25rem 0;*/
+    padding-top: .25rem;
+    position: absolute;
+    top: .5rem;
+    left: 55%;
+    height: 1rem;
+    width: 1.25rem;
+    text-align: center;
+    z-index: 2;
+}
+
+div {
+    background: white;
+    /* box-shadow: 1px 0 0 #111; */
+    /*border-left: 1px solid #111;
+    border-right: 1px solid #111;*/
+    clear: both;
+    display: none;
+    text-align: center;
+}
+div.show {
+    display: block;
+}
+div div {
+    /* background: #efefef; */
+    border: 0;
+    border-top: 1px solid #ddd;
+    /* text-align: left; */
+}
+div div a {
+    float: none;
+    letter-spacing: normal;
+    padding: .5rem 1rem;
+    text-align: left;
+    /* text-decoration: underline; */
+    text-transform: none;
+    width: 100%;
+}
+div div a:nth-child(n+2) img {
+    display: block;
+    max-width: 10px;
+    float: right;
+    position: relative;
+    top: 6px;
+}
+div div a:nth-child(n+3) {
+    border-top: 1px solid #ddd;
+}
+div div a:first-child {
+    margin: .5rem 0 .125rem;
+}
+div div a:first-child:active {
+    background: none;
+}
+div div a span {
+    /* background: #2a2a2a; */
+    background: #ee7873;
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    letter-spacing: 1.5px;
+    padding: .65rem 0 .85rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    /*width: 90%;*/
+}
+div div a span:active {
+    opacity: .65;
+}
+div div a span:before {
+    background: url(https://s3.amazonaws.com/f.cl.ly/items/2f0H0W1S0Y1P3t1Y121n/apple-logo-clr.png) no-repeat center;
+    background-size: 25px;
+    border-radius: 3px;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    margin-right: 5px;
+    padding: 2px;
+    position: relative;
+    top: 4px;
+    left: -4px;
+    width: 20px;
+}
+div a {
+    background: white;
+    /* border-bottom: 1px solid #111; */
+    /* box-shadow: 0 0 0 1px #111 inset; */
+    color: #111;
+    display: block;
+    float: left;
+    letter-spacing: 1.5px;
+    padding: .825rem 0;
+    text-decoration: none;
+    text-indent: 1.5px;
+    text-transform: uppercase;
+    width: 50%;
+}
+div a:active {
+    background: #efefef;
+    color: #777;
+    text-decoration: none;
+}
+div hr {
+    height: 1px;
+    width: 100%;
+    background: #ddd;
+}
+div span {
+    border-top: 1px solid #ddd;
+    clear: both;
+    display: block;
+}
+div span a {
+    /* letter-spacing: normal; */
+    /* text-decoration: underline; */
+    /* text-transform: none; */
+    width: 33%;
+}
+div span a:last-child {
+    width: 34%;
+}
+/* div a:nth-child(odd) {
+    border-right: 1px solid #111;
+} */
+div .text {
+    border-top: 1px solid #ddd;
+    clear: both;
+    color: #777;
+    float: none;
+    letter-spacing: normal;
+    text-transform: none;
+    text-decoration: underline;
+    width: 100%;
+}
+.ld {
+    /* background: #efefef; */
+}
+.ld:after {
+    background: url(https://stage.tradesy.com/images/loading.gif) no-repeat center;
+    background-size: 75px;
+    border-radius: 100%;
+    content: "";
+    display: inline-block;
+    height: 15px;
+    /* margin-left: 5px; */
+    position: relative;
+    top: 1px;
+    width: 15px;
+}
+.sh {
+    background: #efefef;
+}
+section {
+    border: 1px solid #ddd;
+    padding: .5rem;
+    text-align: center;
+}
+section a {
+    color: #111;
+    display: block;
+    float: left;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    padding: .5rem;
+    text-decoration: none;
+    text-indent: 1.5px;
+    text-transform: uppercase;
+    width: 50%;
+}
+.thk {
+    padding: 0;
+}
+.thk a {
+    /* border-bottom: 1px solid #111; */
+    font-size: 100%;
+    padding: 1rem;
+    text-decoration: none;
+}
+.thk a:active {
+    background: #efefef;
+    color: #999;
+    text-decoration: none;
+}
+.thk a:nth-child(odd) {
+    /* border-right: 1px solid #111; */
+}
+section a:nth-child(n+3) {
+    margin-top: .5rem;
+}
+.thk a:nth-child(n+3) {
+    margin-top: 0;
+}
+section a img {
+    display: block;
+    margin: auto auto 1rem;
+    max-width: 50px;
+}
+section + section {
+    border-top: 0;
+}
+section h1 {
+    clear: both;
+    font-weight: normal;
+    padding: .5rem;
+    text-align: left;
+}
