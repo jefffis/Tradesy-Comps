@@ -39,7 +39,7 @@ small {
 }
 header {
     background: #111;
-    height: 55px;
+    height: 64px;
     position: relative;
 }
 header a {
@@ -48,7 +48,7 @@ header a {
     display: block;
     height: 30px;
     position: absolute;
-    top: .825rem;
+    top: 1.125rem;
     right: 1rem;
     width: 30px;
 }
@@ -62,7 +62,7 @@ button {
     display: block;
     height: 30px;
     position: absolute;
-    top: .75rem;
+    top: 1rem;
     /*right: 8.5rem;*/
     left: 3.5rem;
     outline: none;
@@ -74,10 +74,11 @@ button {
     font-size: 15px;
     height: auto;
     /*left: 1rem;*/
-    top: .85rem;
+    top: 1.125rem;
     right: 4rem;
     left: auto;
-    padding: .25rem .35rem;
+    padding: 0 .5rem;
+    height: 30px;
     width: auto;
     letter-spacing: 1.5px;
     text-indent: 1.5px;
@@ -88,8 +89,8 @@ button {
 }
 .menu.c:before {
     position: absolute;
-    top: .1rem;
-    left: .3rem;
+    top: .35rem;
+    left: .35rem;
     content: "\2715";
     font-size: 1rem;
 }
@@ -129,7 +130,7 @@ header:before {
     display: block;
     height: 35px;
     position: absolute;
-    top: .625rem;
+    top: .85rem;
     left: .625rem;
     width: 35px;
 }
