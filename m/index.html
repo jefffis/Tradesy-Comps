@@ -58,12 +58,12 @@
 			        //$('.text').text('View all menu items').removeClass('ld');
 			        hideDiv('.text');
 			        if($(this).parent().next('div').hasClass('show')) {
-			            $(this).text('Menu');
+			            $(this).text('Menu').removeClass('c');
 			            $(this).parent().next('div').removeClass('show');
 			        } else {
-			            $('.menu').text('Menu');
+			            $('.menu').text('Menu').removeClass('c');
 			            $('div').removeClass('show');
-			            $(this).text('Hide');
+			            $(this).text('Hide').addClass('c');
 			            $(this).parent().next('div').addClass('show');
 			        }
 			    });

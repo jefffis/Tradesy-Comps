@@ -74,14 +74,24 @@ button {
     font-size: 15px;
     height: auto;
     /*left: 1rem;*/
-    top: .8rem;
-    right: 3.75rem;
+    top: .85rem;
+    right: 4rem;
     left: auto;
     padding: .25rem .35rem;
     width: auto;
     letter-spacing: 1.5px;
     text-indent: 1.5px;
     text-transform: uppercase;
+}
+.menu.c {
+    padding-left: 1.5rem;
+}
+.menu.c:before {
+    position: absolute;
+    top: .1rem;
+    left: .3rem;
+    content: "\2715";
+    font-size: 1rem;
 }
 header a:after {
     background: #999;
