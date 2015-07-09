@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title dir="ltr">Tradesy Buttons, Colors &amp; Type</title>
+
+        <link href="css/jefff.css" rel="stylesheet" type="text/css" />
+        <script>document.addEventListener('touchstart', function() {},false);</script>
+    </head>
+    <body>
+    
+        <small>High</small>
+        <button>Primary</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="secondary">Secondary</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="tertiary">Tertiary</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button disabled>Disabled</button>
+
+        <hr />
+
+        <small>Low</small>
+        <button class="low">Primary</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="low secondary">Secondary</button>
+
+        <hr />
+        
+        <small>Sizing</small>
+        <button class="secondary">Large</button>
+        <br /><br />
+        <button class="secondary med">Medium</button>
+        <br /><br />
+        <button class="secondary sml">Small</button>
+        <br /><br />
+        <button class="secondary wide">Wide</button>
+
+        <hr />
+        
+        <small>Clicked / Tapped</small>
+        <div id="actionables">
+            <button class="active" disabled data-text="Submit Me Now">Working&hellip;</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="secondary active" disabled data-text="Me As Well">Working&hellip;</button>
+        </div>
+        <br />
+        <a href="##" id="reset">Reset these buttons</a>
+
+        <hr />
+        
+        <small>w/ Icon</small>
+        <button class="low">
+            <img src="img/chevron-right-128.png" class="b" />
+            Let&rsquo;s do this
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="low icon-a secondary">
+            Let&rsquo;s do this
+            <img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" />
+        </button>
+
+        <hr />
+
+        <small>Type</small>
+        <h1>Return Policy</h1>
+        <p class="short">
+            Return for any reason, with free return shipping. Non-wedding items only.
+        </p>
+        <p>
+            A return request form is available in <a href="##">Your Purchases</a> for four (4) days following your receipt of an order. Contact us via phone or email if you're not able to process your return online. Please include any important details in the return request, including an explanation of how the item was misrepresented by the seller.
+        </p>
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script>
+        $(function(){
+            $('#reset').on('click', function() {
+                $('.active').each(function(){
+                    $(this).removeClass('active').prop('disabled', false).text($(this).data('text'));
+                });
+                $('#reset').hide();
+                return false;
+            });
+            $('#actionables').find('button').on('click', function() {
+                actionInit(this);
+            });
+        });
+        function actionInit(el) {
+            setTimeout(function() {
+                $(el).addClass('active').prop('disabled', true).html('Working&hellip;');
+                $('#reset').show();
+            }, 150);
+        }
+        </script>
+
+    </body>
+</html>
