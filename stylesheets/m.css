@@ -3,6 +3,8 @@
     border: 0;
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
 }
 @font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
 .cf:before,
@@ -72,10 +74,10 @@ button {
     font-size: 15px;
     height: auto;
     /*left: 1rem;*/
-    top: 1rem;
+    top: .8rem;
     right: 3.75rem;
     left: auto;
-    padding: .175rem .25rem;
+    padding: .25rem .35rem;
     width: auto;
     letter-spacing: 1.5px;
     text-indent: 1.5px;
@@ -210,12 +212,16 @@ nav a:nth-child(n+2) {
     /*padding: .25rem 0;*/
     padding-top: .25rem;
     position: absolute;
-    top: .5rem;
+    top: .35rem;
     left: 55%;
     height: 1rem;
     width: 1.25rem;
     text-align: center;
     z-index: 2;
+}
+.logged a:last-child:active:after {
+    background: #e94e47;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 div {
