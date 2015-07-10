@@ -14,7 +14,7 @@
 
 		<header>
 		    <a href="###" data-num="0"></a>
-		    <button></button>
+		    <button id="search-toggle"></button>
 		    <button class="menu">Menu</button>
 		</header>
 		<div>
@@ -43,7 +43,7 @@
 				<a href="###">Terms<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
 				<a href="###">Privacy<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
 		    </div>
-		    <a href="##" class="text">View full menu</a>
+		    <a href="#footer" class="text">View full menu</a>
 		</div>
 		<nav class="cf">
 		    <a href="##">Shop</a>
@@ -51,11 +51,48 @@
 		    <a href="##" data-num="1" style="display: none;"></a>
 		</nav>
 
+		<div id="my-bag">
+			<img src="../images/bag-d.png" alt="" />
+			<p>Your bag is empty; <a href="#/all">Start Shopping</a> now.</p>
+			<del></del>
+		</div>
+
+		<form id="search-form">
+			<fieldset>
+				<input type="search" id="search" />
+				<input type="submit" value="Search" />
+				<del></del>
+			</fieldset>
+		</form>
+
+		<section role="main">
+			<small>Generic site content</small>
+		</section>
+
+		<footer id="footer">
+			<small>Normal nav items here</small>
+		</footer>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
 			$(function(){
+				$('#search-toggle').on('click', function(e){
+					toggleDiv($('#search-form'), 'show');
+					$('#my-bag').removeClass('show');
+				});
+				$('header a').on('click', function(e){
+					e.preventDefault();
+			    	e.stopPropagation();
+
+					toggleDiv($('#my-bag'), 'show');
+					$('#search-form').removeClass('show');
+				});
+				$('#my-bag del').on('click', function(){
+					$('#my-bag').removeClass('show');
+				});
 			    $('.menu').on('click', function(){
-			        //$('.text').text('View all menu items').removeClass('ld');
+					$('#search-form').removeClass('show');
+			        $('#my-bag').removeClass('show');
 			        hideDiv('.text');
 			        if($(this).parent().next('div').hasClass('show')) {
 			            $(this).text('Menu').removeClass('c');
@@ -67,22 +104,36 @@
 			            $(this).parent().next('div').addClass('show');
 			        }
 			    });
-			    $('.text').on('click', function(){
-			        if ($(this).hasClass('sh')) {
-			            hideDiv(this);
-			            $('html,body').animate({
-			            	scrollTop: $('body').offset().top
-			            }, 250);
-			        } else {
-			            $(this).text('').addClass('ld');
-			            showDiv(this);
-			        }
+			    $('.text').on('click', function(e){
+			    	e.preventDefault();
+			    	e.stopPropagation();
+
+			    	$('html,body').animate({
+		            	scrollTop: $($(this).attr('href')).offset().top
+		            }, 625);
+			        // if ($(this).hasClass('sh')) {
+			        //     hideDiv(this);
+			        //     $('html,body').animate({
+			        //     	scrollTop: $('body').offset().top
+			        //     }, 250);
+			        // } else {
+			        //     $(this).text('').addClass('ld');
+			        //     showDiv(this);
+			        // }
 			    });
 			    if(window.location.hash) {
 			    	$('nav').addClass('logged');
 			    	$('nav').find('a:last-child').css('display','inherit');
 			    }
 			});
+
+			function toggleDiv(el, cls) {
+				if(el.hasClass(cls)) {
+					el.removeClass(cls);
+				} else {
+					el.addClass(cls);
+				}
+			}
 
 			function showDiv(el) {
 			    setTimeout(function(){

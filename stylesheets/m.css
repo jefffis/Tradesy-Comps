@@ -48,7 +48,7 @@ header a {
     display: block;
     height: 30px;
     position: absolute;
-    top: 1.125rem;
+    top: 1.075rem;
     right: 1rem;
     width: 30px;
 }
@@ -72,6 +72,7 @@ button {
     background: white;
     color: #111;
     font-size: 15px;
+    border-radius: 3px;
     height: auto;
     /*left: 1rem;*/
     top: 1rem;
@@ -378,7 +379,7 @@ div .text {
     background: #efefef;
 }
 section {
-    border: 1px solid #ddd;
+    /*border: 1px solid #ddd;*/
     padding: .5rem;
     text-align: center;
 }
@@ -430,4 +431,95 @@ section h1 {
     font-weight: normal;
     padding: .5rem;
     text-align: left;
+}
+
+#my-bag {
+    position: relative;
+    padding: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+#my-bag p {
+    font-size: 13px;
+}
+#my-bag a {
+    display: inline;
+    float: none;
+    width: 100%;
+    padding: 0;
+    color: #ee7873;
+    letter-spacing: normal;
+    text-decoration: underline;
+    text-transform: none;
+}
+#my-bag img {
+    display: block;
+    max-width: 35px;
+    margin: 2rem auto 1rem;
+}
+#my-bag del {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    text-decoration: none;
+}
+#my-bag del:after {
+    color: #999;
+    content: "\2715";
+    font-size: 1.5rem;
+}
+#my-bag del:active {
+    opacity: .65;
+}
+
+#search-form {
+    display: none;
+    border-bottom: 1px solid #111;
+}
+#search-form.show {
+    display: block;
+}
+#search-form fieldset {
+    position: relative;
+}
+#search-form input {
+    font-family: inherit;
+}
+#search-form input[type=search] {
+    background: white;
+    border: 0;
+    width: 100%;
+    font-size: 16px;
+    padding: .75rem;
+}
+#search-form input[type=submit] {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    background: #111;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: .75rem 1rem;
+    font-size: 1rem;
+    /*letter-spacing: 1.5px;
+    text-indent: 1.5px;
+    text-transform: uppercase;*/
+}
+#search-form input[type=submit]:active {
+
+}
+
+footer {
+    background: #111;
+    margin-top: 1000px;
+    text-align: center;
+}
+footer small, [role=main] small {
+    display: block;
+    padding: 10rem 0;
+    color: white;
+}
+[role=main] small {
+    color: #111;
 }
