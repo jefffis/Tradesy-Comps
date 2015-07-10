@@ -17,19 +17,27 @@
 		    <button id="search-toggle"></button>
 		    <button class="menu">Menu</button>
 		</header>
-		<div>
+		<div class="cf">
 		    <a href="###">Bags</a>
 		    <a href="###">Clothing</a>
+		    <hr />
 		    <a href="###">Shoes</a>
 		    <a href="###">Accessories</a>
+		    <hr />
 		    <a href="###">Weddings</a>
 		    <a href="###">Designers</a>
-		    <span>
+		    <hr />
+		    <a href="###">Contact</a>
+	        <a href="###">Returns</a>
+	        <hr />
+	        <a href="###">Reviews</a>
+	        <a href="#footer" id="view-menu">Full Menu</a>
+		    <!-- <span>
 		        <a href="###">Login</a>
 		        <a href="###">Contact</a>
 		        <a href="###">Returns</a>
-		    </span> 
-		    <div>
+		    </span> -->
+		    <!-- <div>
 				<a href="###">
 					<span>Get the App</span>
 				</a>
@@ -42,13 +50,20 @@
 				<a href="###">Press<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
 				<a href="###">Terms<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
 				<a href="###">Privacy<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" /></a>
-		    </div>
-		    <a href="#footer" class="text">View full menu</a>
+		    </div> -->
+		    <!-- <a href="#footer" class="text">View full menu</a> -->
 		</div>
-		<nav class="cf">
+		<nav class="cf logged">
 		    <a href="##">Shop</a>
 		    <a href="##">Sell</a>
-		    <a href="##" data-num="1" style="display: none;"></a>
+		    <!-- <a href="###" id="join">Join</a> -->
+		    <a href="##" id="view-my-account">
+		    	<span>
+		    		<span>
+		    			<em data-num="3" style="background-image: url(https://item1.tradesy.com/r/9fca2d94ea38c2395f614eb5a1c84983a02c9d50ca070519c2df813c47998dc9/200/200/temp/temp.jpg);"></em>
+		    		</span>
+		    	</span>
+		    </a>
 		</nav>
 
 		<div id="my-bag">
@@ -65,6 +80,21 @@
 			</fieldset>
 		</form>
 
+		<div id="my-account">
+			<a href="###">
+				Inbox (2)
+				<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" />
+			</a>
+			<a href="###">
+				Alerts (1)
+				<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" />
+			</a>
+			<a href="###">
+				Messages (0)
+				<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" />
+			</a>
+		</div>
+
 		<section role="main">
 			<small>Generic site content</small>
 		</section>
@@ -76,6 +106,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
 			$(function(){
+				$('#view-my-account').on('click', function(e){
+					toggleDiv($('#my-account'), 'show');
+				});
 				$('#search-toggle').on('click', function(e){
 					toggleDiv($('#search-form'), 'show');
 					$(this).toggleClass('show');
@@ -109,7 +142,7 @@
 			            $(this).parent().next('div').addClass('show');
 			        }
 			    });
-			    $('.text').on('click', function(e){
+			    $('.text, #view-menu').on('click', function(e){
 			    	e.preventDefault();
 			    	e.stopPropagation();
 
@@ -126,10 +159,11 @@
 			        //     showDiv(this);
 			        // }
 			    });
-			    if(window.location.hash) {
-			    	$('nav').addClass('logged');
-			    	$('nav').find('a:last-child').css('display','inherit');
-			    }
+			    // if(window.location.hash) {
+			    // 	$('nav').addClass('logged').removeClass('three');
+			    // 	$('nav').find('a:last-child').removeClass('hide');
+			    // 	$('#join')
+			    // }
 			});
 
 			function toggleDiv(el, cls) {
