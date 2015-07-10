@@ -75,28 +75,39 @@ button:active, header a:active {
     opacity: .5;
 }
 .menu {
-    background: #111;
-    box-shadow: 0 0 0 1px currentColor inset;
-    color: white;
+    background: white;
+    /*box-shadow: 0 0 0 1px currentColor inset;*/
+    color: #111;
     font-size: 15px;
     border-radius: 3px;
     height: auto;
-    /*left: 1rem;*/
     top: 1rem;
     right: .875rem;
     left: auto;
     padding: 0 .5rem;
     height: 30px;
     width: 4.25rem;
+
+    /*background: white;
+    color: #111;
+    font-size: 15px;
+    border-radius: 0;
+    height: 64px;
+    top: 0;
+    right: 0;
+    left: auto;
+    padding: 0 .5rem;
+    width: 4.5rem;*/
+
     letter-spacing: 1.5px;
     text-indent: 1.5px;
     text-transform: uppercase;
+
 }
 .menu.c {
-    /*background: white;
-    box-shadow: none;
-    color: #111;*/
-    /*padding-left: 1.5rem;*/
+    background: #111;
+    box-shadow: 0 0 0 1px currentColor inset;
+    color: white;
 }
 /*.menu.c:before {
     position: absolute;
@@ -176,7 +187,7 @@ nav a {
     display: block;
     float: left;
     letter-spacing: 1.5px;
-    padding: .825rem 0;
+    padding: 1rem 0;
     text-decoration: none;
     text-indent: 1.5px;
     text-transform: uppercase;
@@ -207,7 +218,7 @@ nav a:nth-child(n+2) {
  .logged a:last-child {
     position: relative;
     height: 100%;
-    min-height: 3.1375rem;
+    min-height: 3.5rem;
 } 
 .logged a:last-child:before {
     background: url(https://item1.tradesy.com/r/9fca2d94ea38c2395f614eb5a1c84983a02c9d50ca070519c2df813c47998dc9/200/200/temp/temp.jpg) no-repeat center center;
@@ -215,7 +226,7 @@ nav a:nth-child(n+2) {
     border-radius: 100%;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 27.5%;
     content: "";
     display: block;
@@ -234,7 +245,7 @@ nav a:nth-child(n+2) {
     /*padding: .25rem 0;*/
     padding-top: .25rem;
     position: absolute;
-    top: .35rem;
+    top: .5rem;
     left: 55%;
     height: 1rem;
     width: 1.25rem;
