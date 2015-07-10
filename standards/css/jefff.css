@@ -108,7 +108,7 @@ button:active, .btn:active {
 	color: rgba(255, 255, 255, 0.75);
 }
 button:focus, .btn:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 4px #E4E8EB;
+	box-shadow: 0 0 0 1px white, 0 0 0 3px #E4E8EB;
 }
 
 /*** disabled ***/
@@ -139,7 +139,7 @@ button[disabled] {
 	color: #2a2a2a;
 }
 .tertiary:focus, .low.secondary:focus {
-	box-shadow: 0 0 0 1px #c1c1c1 inset, 0 0 0 2px white, 0 0 0 4px #E4E8EB;
+	box-shadow: 0 0 0 1px #c1c1c1 inset, 0 0 0 1px white, 0 0 0 3px #E4E8EB;
 }
 .tertiary:active, .low.secondary:active {
 	background: white;
