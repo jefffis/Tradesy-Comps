@@ -78,21 +78,26 @@
 			$(function(){
 				$('#search-toggle').on('click', function(e){
 					toggleDiv($('#search-form'), 'show');
-					$('#my-bag').removeClass('show');
+					$(this).toggleClass('show');
+					$('#my-bag, header a').removeClass('show');
+					$('.menu').text('Menu').removeClass('c');
+		            $('div').removeClass('show');
 				});
 				$('header a').on('click', function(e){
 					e.preventDefault();
 			    	e.stopPropagation();
 
 					toggleDiv($('#my-bag'), 'show');
-					$('#search-form').removeClass('show');
+					$(this).toggleClass('show');
+					$('#search-form, #search-toggle').removeClass('show');
+					$('.menu').text('Menu').removeClass('c');
+		            $('nav div').removeClass('show');
 				});
 				$('#my-bag del').on('click', function(){
 					$('#my-bag').removeClass('show');
 				});
 			    $('.menu').on('click', function(){
-					$('#search-form').removeClass('show');
-			        $('#my-bag').removeClass('show');
+					$('#search-form, #my-bag, header a, #search-toggle').removeClass('show');
 			        hideDiv('.text');
 			        if($(this).parent().next('div').hasClass('show')) {
 			            $(this).text('Menu').removeClass('c');
@@ -128,11 +133,7 @@
 			});
 
 			function toggleDiv(el, cls) {
-				if(el.hasClass(cls)) {
-					el.removeClass(cls);
-				} else {
-					el.addClass(cls);
-				}
+				el.toggleClass(cls);
 			}
 
 			function showDiv(el) {
