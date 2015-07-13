@@ -96,9 +96,9 @@
 			font-size: 13px;
 			line-height: 18px;
 		}
-		.light-b {
+		/*.light-b {
 			border-bottom: 2px solid #dddddd;
-		}
+		}*/
 		@media screen and (max-width: 600px) {
 			.slim {
 				height: 15px !important;
@@ -143,9 +143,9 @@
 						Hi {{name}},
 						<br /><br />
 			
-						It takes us a few days to review your returned item. Here&rsquo;s what&rsquo;s happening now with:
+						Your item, {{item name}}, has been received at Tradesy HQ, and our Returns Specialists are reviewing your Misrepresentation Claim.
 
-						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="10"></td></tr></table>
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
 
 						<span class="center light-b tb">
 							<table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -163,25 +163,11 @@
 							<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="15"></td></tr></table>
 						</span>
 
-						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="5"></td></tr></table>
 
-						<!-- <span class="center light-b tb">
-							<table width="100%" cellpadding="0" cellspacing="0" border="0">
-								<tr>
-									<td width="100">
-										<a href="https://www.tradesy.com/your-purchases">
-											<img src="https://item5.tradesy.com/r/53bd23702fa8746ee4ae58d11d17a4fc3c25dab5369f1344f38c1b7b38e90bf7/203/307/dresses/isabel-marant/10-m/isabel-marant-dress-3218689.jpg" width="85" />
-										</a>
-									</td>
-									<td class="content">
-										<a href="https://www.tradesy.com/your-purchases">{{item name}}</a>
-									</td>
-								</tr>
-							</table>
-							<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="15"></td></tr></table>
-						</span>
+						Here&rsquo;s what happens next:
 
-						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table> -->
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="25"></td></tr></table>
 
 						<table width="100%" cellpadding="0" cellspacing="0">
 							<tr>
@@ -189,7 +175,7 @@
 									<img src="http://wtf.jefff.co/Tradesy-Comps/images/1.gif" height="30" />
 								</td>
 								<td class="content" align="left">
-									There&rsquo;s <a href="https://www.tradesy.com/tradesy-cash">site credit of {{amount}}</a> in your account which you can use now to get something you love <a href="https://www.tradesy.com/trend/the-basement/">on Tradesy</a>
+									There&rsquo;s now a <a href="https://www.tradesy.com/tradesy-cash">site credit of {{amount}}</a> in your account. You can <a href="https://www.tradesy.com/trend/the-basement/">use it now</a> or wait for the result of your Claim
 								</td>
 							</tr>
 						</table>
@@ -200,7 +186,7 @@
 									<img src="http://wtf.jefff.co/Tradesy-Comps/images/2.gif" height="30" />
 								</td>
 								<td class="content" align="left">
-									We investigate the seller, thoroughly review the item&rsquo;s authenticity, and make sure the original listing meets our <a href="http://help.tradesy.com/article/94-community-guidelines">community guidelines</a>
+									We investigate the item, the seller, the original listing, and any other relevant information provided
 								</td>
 							</tr>
 						</table>
@@ -211,15 +197,13 @@
 									<img src="http://wtf.jefff.co/Tradesy-Comps/images/3.gif" height="30" />
 								</td>
 								<td class="content" align="left">
-									We make a fair decision to protect both you and the seller
+									Tradesy makes a fair decision to protect both you and the seller.
+									If we decide in your favor, you&rsquo;ll get a refund of <b>{{amount}}</b>, less any site credit you&rsquo;ve used. If we find that the item was not misrepresented by the seller after all, you&rsquo;ll still get to keep the credit.
 								</td>
 							</tr>
 						</table>
 
 						<table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td height="20"></td></tr></table>
-
-						If we decide in your favor, you&rsquo;ll get a refund of <b>{{amount}}</b> less any site credit you&rsquo;ve used. If we find that the item was not misrepresented by the seller after all, you still get to keep the credit.
-						<br /><br />
 
 						We&rsquo;re here to help if you have any questions about this process,
 
