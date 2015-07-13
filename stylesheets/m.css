@@ -289,10 +289,10 @@ nav a:nth-child(n+2) {
     position: absolute;
     left: 23px;
     top: 100%;
-    margin-top: -9px;
-    border-bottom: 10px solid white;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
+    margin-top: -8px;
+    border-bottom: 15px solid white;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
     content: "";
 }
 /*.logged a:last-child:before {
@@ -327,9 +327,8 @@ nav a:nth-child(n+2) {
     text-align: center;
     z-index: 2;
 }
-.logged a:last-child:active:after {
-    /*background: #e94e47;*/
-    /*color: rgba(255, 255, 255, 0.75);*/
+.logged a:last-child:active em {
+    opacity: .65;
 }
 .logged .show:active:after {
     background: none;
