@@ -6,7 +6,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -webkit-tap-highlight-color: transparent; /* For some Androids */
 }
-@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:'proxima-nova-semi';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.svg#proxima-nova-semi") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
 .cf:before,
 .cf:after {
     content: " "; /* 1 */
@@ -61,8 +61,8 @@ header a {
     height: 40px;
     position: absolute;
     top: 1.075rem;
-    /*right: 10rem;*/
-    left: 4rem;
+    right: 8rem;
+    /*left: 4rem;*/
     width: 40px;
 }
 header a:after {
@@ -105,13 +105,15 @@ button:active, header a:active {
 }
 .menu {
     /*background: white;*/
+    /*position: relative;*/
     background: none;
     /*box-shadow: 0 0 0 1px currentColor inset;*/
     color: white;
-    font-size: 15px;
+    font-family: 'proxima-nova-semi';
+    font-size: 18px;
     border-radius: 3px;
     height: auto;
-    top: 1rem;
+    top: 1.125rem;
     right: .625rem;
     left: auto;
     padding: 0 .5rem;
@@ -129,10 +131,39 @@ button:active, header a:active {
     padding: 0 .5rem;
     width: 4.5rem;*/
 
-    letter-spacing: 1.5px;
+    /*letter-spacing: 1.5px;
     text-indent: 1.5px;
-    text-transform: uppercase;
+    text-transform: uppercase;*/
 
+}
+.menu:before {
+    display: block;
+    position: absolute;
+    left: -23px;
+    top: 5px;
+    background: url(http://wtf.jefff.co/Tradesy-Comps/images/search-w.png) no-repeat;
+    background-size: 27px;
+    height: 30px;
+    width: 30px;
+    content: "";
+}
+.menu:after {
+    display: none;
+    background: white;
+    height: 2px;
+    width: 2.5rem;
+    margin: auto;
+    content: "";
+}
+.c:before {
+    background: none;
+    content: "\2715";
+    color: currentColor;
+    font-size: 2rem;
+    top: -5px;
+}
+.c:after {
+    width: 2.15rem;
 }
 /*.menu.c {
     background: #111;
@@ -208,13 +239,13 @@ nav a:active:before {
     width: 35%;
 }
 .logged a {
-    width: 37.5%;
+    width: 32.5%;
 }
 .three a:last-child {
     width: 30%;
 }
 .logged a:last-child {
-    width: 25%;
+    width: 35%;
 }
 nav a:nth-child(n+2) {
     box-shadow: 1px 0 0 rgba(0,0,0,0.25) inset;
@@ -233,17 +264,36 @@ nav a:nth-child(n+2) {
     display: table-cell;
     height: 4.3rem;
     vertical-align: middle;
+    font-size: .75rem;
+    letter-spacing: normal;
+    text-transform: none;
 }
 .logged a:last-child em {
     display: block;
     position: relative;
     margin: auto;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
+    float: left;
+    left: 1rem;
     background: #111 no-repeat center;
     background-size: 100%;
     border-radius: 100%;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
+}
+.logged abbr {
+    position: relative;
+    top: .5rem;
+}
+.logged .show:after {
+    position: absolute;
+    left: 23px;
+    top: 100%;
+    margin-top: -9px;
+    border-bottom: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    content: "";
 }
 /*.logged a:last-child:before {
     background: url(https://item1.tradesy.com/r/9fca2d94ea38c2395f614eb5a1c84983a02c9d50ca070519c2df813c47998dc9/200/200/temp/temp.jpg) no-repeat center center;
@@ -268,18 +318,21 @@ nav a:nth-child(n+2) {
     font-size: 14px;
     font-style: normal;
     line-height: 1;
-    padding: .35rem 0;
+    padding: .3rem 0 .25rem;
     position: absolute;
-    top: -.35rem;
-    right: -.35rem;
+    top: -.5rem;
+    right: -.45rem;
     /*height: 1rem;*/
-    width: 1.5rem;
+    width: 1.4rem;
     text-align: center;
     z-index: 2;
 }
 .logged a:last-child:active:after {
-    background: #e94e47;
-    color: rgba(255, 255, 255, 0.75);
+    /*background: #e94e47;*/
+    /*color: rgba(255, 255, 255, 0.75);*/
+}
+.logged .show:active:after {
+    background: none;
 }
 
 div {
@@ -484,7 +537,7 @@ section h1 {
 
 #my-bag {
     position: relative;
-    padding: 2rem;
+    padding: 1.5rem;
     border-bottom: 1px solid #ddd;
 }
 #my-bag p {
@@ -506,9 +559,12 @@ section h1 {
     margin: 2rem auto 1rem;
 }
 #my-bag del {
-    position: absolute;
+    /*position: absolute;
     top: 1rem;
-    right: 1rem;
+    right: 1rem;*/
+    display: block;
+    margin: 1.5rem 0 0;
+    text-align: center;
     text-decoration: none;
 }
 #my-bag del:after {
@@ -529,7 +585,11 @@ section h1 {
     text-transform: none;
     width: 100%;
 }
-#my-account  img {
+#my-account em {
+    color: #999;
+    font-style: normal;
+}
+#my-account img {
     display: block;
     max-width: 10px;
     float: right;
@@ -538,8 +598,9 @@ section h1 {
 }
 
 #search-form {
-    display: none;
-    border-bottom: 1px solid #111;
+    clear: both;
+    /*display: none;*/
+    border-top: 1px solid #111;
 }
 #search-form.show {
     display: block;

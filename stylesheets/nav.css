@@ -37,6 +37,9 @@ hr {
 	height: 1px;
 	margin: 1.5rem 0;
 }
+hr.min {
+	margin: -.5rem 0 1rem;
+}
 hr.clr {
 	background: white;
 	margin: 0;
@@ -1311,6 +1314,57 @@ footer:before {
 	text-transform: uppercase;
 }
 
+/**** login screen w/ item ****/
+.item {
+	margin-bottom: 1rem;
+}
+.item img {
+	display: block;
+	max-width: 70px;
+	margin: auto;
+}
+.item figure {
+	display: table;
+	width: 100px;
+	float: left;
+}
+.item figure div {
+	display: table-cell;
+	height: 80px;
+	vertical-align: middle;
+}
+.item h2, .item h3 {
+	margin: 0;
+}
+.item h2 {
+	color: #111;
+	/*font-family: 'proxima-nova-regular';*/
+	font-size: 17px;
+	line-height: 1.2;
+}
+.item h3 {
+	padding: .5rem 0 0;
+	font-family: 'proxima-nova-regular';
+	font-size: 14px;
+	letter-spacing: normal;
+	text-align: left;
+}
+.item h3 span {
+	padding-left: .5rem;
+	color: #999;
+	text-decoration: line-through;
+}
+.item > div {
+	display: table;
+	max-width: 200px;
+	float: left;
+}
+.item div div {
+	display: table-cell;
+	height: 80px;
+	vertical-align: middle;
+}
+
 @media screen and (min-width: 375px) {
 
 	/*#interstitial .logo {
@@ -1330,6 +1384,10 @@ footer:before {
 	}
 	.interstitial p {
 		padding: 0 3rem;
+	}
+
+	.item > div {
+		max-width: 255px;
 	}
 
 }

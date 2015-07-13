@@ -14,7 +14,7 @@
 
 		<header>
 		    <a href="###" data-num="0"></a>
-		    <button id="search-toggle"></button>
+		    <!-- <button id="search-toggle"></button> -->
 		    <button class="menu">Menu</button>
 		</header>
 		<div class="cf">
@@ -32,6 +32,13 @@
 	        <hr />
 	        <a href="###">Reviews</a>
 	        <a href="#footer" id="view-menu">Full Menu</a>
+	        <form id="search-form">
+				<fieldset>
+					<input type="search" id="search" />
+					<input type="submit" value="Search" />
+					<del></del>
+				</fieldset>
+			</form>
 		    <!-- <span>
 		        <a href="###">Login</a>
 		        <a href="###">Contact</a>
@@ -53,7 +60,7 @@
 		    </div> -->
 		    <!-- <a href="#footer" class="text">View full menu</a> -->
 		</div>
-		<nav class="cf logged">
+		<nav class="cf _three logged">
 		    <a href="##">Shop</a>
 		    <a href="##">Sell</a>
 		    <!-- <a href="###" id="join">Join</a> -->
@@ -61,6 +68,7 @@
 		    	<span>
 		    		<span>
 		    			<em data-num="3" style="background-image: url(https://item1.tradesy.com/r/9fca2d94ea38c2395f614eb5a1c84983a02c9d50ca070519c2df813c47998dc9/200/200/temp/temp.jpg);"></em>
+		    			<abbr>Tony P.</abbr>
 		    		</span>
 		    	</span>
 		    </a>
@@ -72,25 +80,17 @@
 			<del></del>
 		</div>
 
-		<form id="search-form">
-			<fieldset>
-				<input type="search" id="search" />
-				<input type="submit" value="Search" />
-				<del></del>
-			</fieldset>
-		</form>
-
 		<div id="my-account">
 			<a href="###">
-				Inbox (2)
+				Inbox <em>2 unread</em>
 				<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" />
 			</a>
 			<a href="###">
-				Alerts (1)
+				Alerts <em>1 new</em>
 				<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" />
 			</a>
 			<a href="###">
-				Messages (0)
+				View my profile
 				<img src="https://cdn1.iconfinder.com/data/icons/material-core/12/chevron-right-128.png" />
 			</a>
 		</div>
@@ -108,6 +108,7 @@
 			$(function(){
 				$('#view-my-account').on('click', function(e){
 					toggleDiv($('#my-account'), 'show');
+					$(this).toggleClass('show');
 				});
 				$('#search-toggle').on('click', function(e){
 					toggleDiv($('#search-form'), 'show');
