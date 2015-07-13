@@ -111,6 +111,10 @@ button:focus, .btn:focus {
 	box-shadow: 0 0 0 1px white, 0 0 0 3px #E4E8EB;
 }
 
+#actionables button {
+	min-width: 15rem;
+}
+
 /*** disabled ***/
 button[disabled] {
 	background: #F2F3F3;

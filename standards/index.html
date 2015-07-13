@@ -48,9 +48,9 @@
         
         <small>Clicked / Tapped</small>
         <div id="actionables">
-            <button class="active" disabled data-text="Submit Me Now">Working&hellip;</button>
+            <button class="active" disabled data-text="Add to Bag" data-submitting="Adding&hellip;">Adding&hellip;</button>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <button class="secondary active" disabled data-text="Me As Well">Working&hellip;</button>
+            <button class="secondary active" disabled data-text="Publish Listing" data-submitting="Publishing&hellip;">Publishing&hellip;</button>
         </div>
         <br />
         <a href="##" id="reset">Reset these buttons</a>
@@ -84,18 +84,19 @@
         $(function(){
             $('#reset').on('click', function() {
                 $('.active').each(function(){
-                    $(this).removeClass('active').prop('disabled', false).text($(this).data('text'));
+                    $(this).removeClass('active').prop('disabled', false).css('width','auto').text($(this).data('text'));
                 });
                 $('#reset').hide();
                 return false;
             });
+            // console.log($('#primero').outerWidth());
             $('#actionables').find('button').on('click', function() {
-                actionInit(this);
+                actionInit(this, $(this).outerWidth());
             });
         });
-        function actionInit(el) {
+        function actionInit(el, width) {
             setTimeout(function() {
-                $(el).addClass('active').prop('disabled', true).html('Working&hellip;');
+                $(el).addClass('active').prop('disabled', true).css('width', width).html($(el).data('submitting'));
                 $('#reset').show();
             }, 150);
         }
