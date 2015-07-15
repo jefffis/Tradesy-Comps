@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">Tradesy Product Page Comp</title>
+
+		<link href="css/m.css" rel="stylesheet" type="text/css" />
+		<script>document.addEventListener('touchstart', function() {},false);</script>
+	</head>
+	<body>
+
+		<header id="logged-out">
+
+			<div class="sub-header">
+				
+				<a href="###">
+					<img src="http://wtf.jefff.co/Tradesy-Comps/images/gem-white.png" alt="Tradesy: buy & sell authentic designer fashion." />
+				</a>
+			    <a href="###" data-num="0">Your Bag</a>
+			    <button>Join</button>
+
+		    </div>
+	
+			<nav class="cf">
+
+			    <a href="##">Shop</a>
+			    <a href="##">Sell</a>
+			    <button>
+			    	<span>Menu</span>
+			    </button>
+
+			</nav>
+
+		</header>
+
+		<header id="logged" style="display: none;">
+
+			<div class="sub-header">
+				
+				<a href="###">
+					<img src="http://wtf.jefff.co/Tradesy-Comps/images/gem-white.png" alt="Tradesy: buy & sell authentic designer fashion." />
+				</a>
+			    <a href="###" data-num="0">Your Bag</a>
+			    <a href="###" data-num="2" class="a">Your Inbox</a>
+			    <a href="###">Your Sales</a>
+			    <a href="###" style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_bigger.jpg);">Your Account</a>
+
+		    </div>
+	
+			<nav class="cf">
+
+			    <a href="##">Shop</a>
+			    <a href="##">Sell</a>
+			    <button>
+			    	<span>Menu</span>
+			    </button>
+
+			</nav>
+
+		</header>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+		$(function(){
+			if(window.location.hash) {
+				$('#logged-out').hide();
+				$('#logged').show();
+			}
+		})
+		</script>
+
+	</body>
+</html>
