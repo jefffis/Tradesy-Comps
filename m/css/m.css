@@ -125,6 +125,7 @@ nav {
 nav > a, nav > button {
     display: block;
     background: #2a2a2a;
+    height: 60px;
     width: 35%;
     padding: 1.25rem 0;
     color: white;
