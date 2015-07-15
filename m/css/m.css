@@ -130,7 +130,7 @@ nav > a, nav > button {
     display: block;
     background: #2a2a2a;
     height: 60px;
-    width: 33.3%;
+    width: 33%;
     padding: 1.25rem 0;
     color: white;
     float: left;
@@ -150,7 +150,7 @@ nav > a:nth-child(2), nav > button {
     box-shadow: 1px 0 0 rgba(0,0,0,0.25) inset;
 }
 nav > button {
-    width: 33.4%;
+    width: 34%;
     /*padding: 1.4rem 0  1.35rem 1.25rem;*/
     /*padding-left: 0;*/
     /*font-size: 1rem;*/
