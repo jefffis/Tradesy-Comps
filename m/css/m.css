@@ -62,11 +62,11 @@ header img {
 }
 .sub-header a:nth-child(3) {
     background-image: url(http://wtf.jefff.co/Tradesy-Comps/images/msg.png);
-    right: 7.25rem;
+    right: 7.35rem;
 }
 .sub-header a:nth-child(4) {
     background-image: url(http://wtf.jefff.co/Tradesy-Comps/images/note.png);
-    right: 10.5rem;
+    right: 10.75rem;
 }
 .sub-header a:nth-child(5) {
     border-radius: 100%;
@@ -97,21 +97,25 @@ header img {
 .sub-header a.a[data-num]:after {
     background: #ee7873;
 }
-.sub-header button {
+.sub-header a.btn {
     position: absolute;
     top: 1rem;
     right: 4.5rem;
     background: none;
+    height: auto;
+    width: auto;
     /*background: rgba(255,255,255,0.125);*/
-    padding: .525rem .65rem .375rem;
+    padding: .53rem .65rem .37rem;
     /*border-radius: 3px;*/
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.25) inset;
+    box-shadow: 0 0 0 1px currentColor inset;
     /*color: #111;*/
     color: white;
     font-family: 'proxima-nova-semi';
     font-size: 1rem;
     letter-spacing: 1.75px;
     line-height: 1;
+    text-decoration: none;
+    text-indent: 0;
     text-transform: uppercase;
 }
 .sub-header *:active {
