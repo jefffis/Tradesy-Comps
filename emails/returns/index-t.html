@@ -125,7 +125,7 @@
 				</tr>
 				<tr>
 					<td class="content" align="left" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;color:#111111;font-family:'Helvetica Neue', Arial, sans-serif;font-size:15px;line-height:22px;" >
-						Hi {{name}},
+						Hi <<returns_emails\first_name>>,
 						<br /><br />
 
 						We&rsquo;ve received your return request:
@@ -134,11 +134,11 @@
 
 						<span class="center light-b" style="display:block;text-align:center;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#dddddd;" >
 							<a href="https://www.tradesy.com/your-purchases" style="color:#ee7873;" >
-								<img src="https://item3.tradesy.com/r/ce6df316c9ad7b07f472b8fb89cda01ec82365e47da42b450981a5b43ae0e462/203/307/bags/balenciaga/shoulder-bags/balenciaga-city-blue-shoulder-bag-bleu-paon-2412352.jpg" height="200" style="display:block;border-width:0;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;" />
+								<img src="<<returns_emails\item_image>>" height="200" style="display:block;border-width:0;margin-top:auto;margin-bottom:auto;margin-right:auto;margin-left:auto;" />
 							</a>
 							<span class="h3" style="display:block;line-height:1.2;margin-bottom:10px;color:#777777;font-size:17px;" >
-								<a href="https://www.tradesy.com/your-purchases" style="color:#ee7873;" >{{item name}}</a>
-								{{amount}}
+								<a href="https://www.tradesy.com/your-purchases" style="color:#ee7873;" ><<returns_emails\item_name>></a>
+								<<returns_emails\purchase_amount>>
 							</span>
 							<table width="100%" cellpadding="0" cellspacing="0" border="0" style="-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;" ><tr><td height="15" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;" ></td></tr></table>
 						</span>

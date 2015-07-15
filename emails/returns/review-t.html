@@ -134,10 +134,10 @@
 				</tr>
 				<tr>
 					<td class="content" align="left" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;color:#111111;font-family:'Helvetica Neue', Arial, sans-serif;font-size:15px;line-height:22px;" >
-						Hi {{name}},
+						Hi <<returns_emails\first_name>>,
 						<br /><br />
 			
-						Your item, {{item name}}, has been received at Tradesy HQ, and our Returns Specialists are reviewing your Misrepresentation Claim.
+						Your item, <<returns_emails\item_name>>, has been received at Tradesy HQ, and our Returns Specialists are reviewing your Misrepresentation Claim.
 
 						<table width="100%" cellpadding="0" cellspacing="0" border="0" style="-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;" ><tr><td height="20" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;" ></td></tr></table>
 
@@ -146,11 +146,11 @@
 								<tr>
 									<td width="100" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;" >
 										<a href="https://www.tradesy.com/your-purchases" style="color:#ee7873;" >
-											<img src="https://item1.tradesy.com/r/7cb89422e41e1d5813d48fd213c595a3281bb0ffb56b34be50fc92251bdb518c/355/355/accessories/ralph-lauren/miscellaneous/ralph-lauren-quilted-black-leather-gloves-12645.jpg" width="85" style="display:block;border-width:0;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" />
+											<img src="<<returns_emails\item_image>>" width="85" style="display:block;border-width:0;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;" />
 										</a>
 									</td>
 									<td class="content" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;color:#111111;font-family:'Helvetica Neue', Arial, sans-serif;font-size:15px;line-height:22px;text-align:left;" >
-										<a href="https://www.tradesy.com/your-purchases" style="color:#ee7873;" >{{item name}}</a>
+										<a href="https://www.tradesy.com/your-purchases" style="color:#ee7873;" ><<returns_emails\item_name>></a>
 									</td>
 								</tr>
 							</table>
@@ -169,7 +169,7 @@
 									<img src="http://wtf.jefff.co/Tradesy-Comps/images/1.gif" height="30" style="display:block;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;border-width:0;" />
 								</td>
 								<td class="content" align="left" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;color:#111111;font-family:'Helvetica Neue', Arial, sans-serif;font-size:15px;line-height:22px;" >
-									There&rsquo;s now a <a href="https://www.tradesy.com/tradesy-cash" style="color:#ee7873;" >site credit of {{amount}}</a> in your account. You can <a href="https://www.tradesy.com/trend/the-basement/" style="color:#ee7873;" >use it now</a> or wait for the result of your Claim
+									There&rsquo;s now a <a href="https://www.tradesy.com/tradesy-cash" style="color:#ee7873;" >site credit of <<returns_emails\return_processed_credit>></a> in your account. You can <a href="https://www.tradesy.com/trend/the-basement/" style="color:#ee7873;" >use it now</a> or wait for the result of your Claim
 								</td>
 							</tr>
 						</table>
@@ -192,7 +192,7 @@
 								</td>
 								<td class="content" align="left" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;color:#111111;font-family:'Helvetica Neue', Arial, sans-serif;font-size:15px;line-height:22px;" >
 									Tradesy makes a fair decision to protect both you and the seller.
-									If we decide in your favor, you&rsquo;ll get a refund of <b>{{amount}}</b>, less any site credit you&rsquo;ve used. If we find that the item was not misrepresented by the seller after all, you&rsquo;ll still get to keep the credit.
+									If we decide in your favor, you&rsquo;ll get a refund of <b><<returns_emails\return_processed_credit>></b>, less any site credit you&rsquo;ve used. If we find that the item was not misrepresented by the seller after all, you&rsquo;ll still get to keep the credit.
 								</td>
 							</tr>
 						</table>
