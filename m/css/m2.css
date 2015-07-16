@@ -19,6 +19,9 @@ body {
     background: white;
     font: normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 }
+.hide {
+	display: none;
+}
 button, input {
 	font-family: inherit;
 	font-size: inherit;
@@ -345,15 +348,16 @@ input[type=submit]:active {
 	font-size: 1rem;
 	text-align: left;
 }
-input[type=text], input[type=email] {
+input[type=text], input[type=email], input[type=password] {
 	width: 100%;
 	background: none;
-	margin-top: .25rem;
-	padding: .75rem;
+	margin-top: .5rem;
+	padding: .5rem;
 	border: 1px solid rgba(0,0,0,0.125);
 	color: #111;
+	font-family: 'proxima-nova-regular';
 }
-input[type=text]:focus, input[type=email]:focus {
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
 	border-color: #333;
 	box-shadow: 0 3px 0 rgba(0,0,0,0.075) inset;
 }
@@ -378,6 +382,9 @@ label small {
 }
 small button {
 	float: right;
+}
+small button:active {
+	opacity: .65;
 }
 .micro {
 	display: block;

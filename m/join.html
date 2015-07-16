@@ -46,9 +46,10 @@
 						<label for="password">
 							<span>Password</span>
 							<input type="text" id="password" />
+							<input type="password" id="passwordD" class="hide" />
 							<small>
 								At least 4 characters
-								<button class="toggle">Hide</button>
+								<button id="toggle">Hide</button>
 							</small>
 						</label>
 					</fieldset>
@@ -69,12 +70,13 @@
 							<span>Email Address</span>
 							<input type="email" id="email" />
 						</label>
-						<label for="password">
+						<label for="password2">
 							<span>Password</span>
-							<input type="text" id="password" />
+							<input type="text" id="password2" />
+							<input type="password" id="passwordD2" class="hide" />
 							<small>
 								At least 4 characters
-								<button class="toggle">Hide</button>
+								<button id="toggle2">Hide</button>
 							</small>
 						</label>
 					</fieldset>
@@ -101,6 +103,36 @@
 					$('#join').hide();
 					$('#login').show();
 					$('#login-toggle').text('Join');
+				}
+			});
+
+			$('#toggle2').on('click', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+
+				if ($('#passwordD2').hasClass('hide')) {
+					$(this).text('Show');
+					$('#passwordD2').removeClass('hide').val($('#password2').val());
+					$('#password2').addClass('hide');
+				} else {
+					$(this).text('Hide');
+					$('#password2').removeClass('hide').val($('#passwordD2').val());
+					$('#passwordD2').addClass('hide');
+				}
+			});
+
+			$('#toggle').on('click', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+
+				if ($('#passwordD').hasClass('hide')) {
+					$(this).text('Show');
+					$('#passwordD').removeClass('hide').val($('#password').val());
+					$('#password').addClass('hide');
+				} else {
+					$(this).text('Hide');
+					$('#password').removeClass('hide').val($('#passwordD').val());
+					$('#passwordD').addClass('hide');
 				}
 			});
 		})
