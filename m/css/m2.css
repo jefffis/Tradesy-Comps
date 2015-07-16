@@ -100,7 +100,8 @@ header img {
     background: #ee7873;
 }
 .backs a.l {
-	top: 1.125rem;
+	top: 1.05rem;
+	right: 4rem;
 	background: none;
 	height: auto;
 	width: auto;

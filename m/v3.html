@@ -21,7 +21,7 @@
 				</a>
 				<span class="backs">
 				    <a href="###" data-num="0">Your Bag</a>
-				    <!-- <a href="###" class="l">Join Today</a> -->
+				    <a href="###" class="l" id="log-in">Log In</a>
 			    </span>
 
 		    </div>
@@ -129,7 +129,7 @@
 		<script>
 		$(function(){
 			if(window.location.hash) {
-				$('#logged-out, #logged-in-cta').hide();
+				$('#logged-out, #logged-in-cta, #log-in').hide();
 				$('#logged-in').show();
 				$('#main').css('margin-top','2rem');
 			}
