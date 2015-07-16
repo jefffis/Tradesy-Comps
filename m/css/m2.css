@@ -157,7 +157,7 @@ nav > .show span {
 }
 nav > .show span:after {
 	display: block;
-	background: currentColor;
+	background: #ee7873;
 	height: 3px;
 	width: 2.75rem;
 	margin: auto;
