@@ -12,7 +12,7 @@
 	</head>
 	<body>
 
-		<header id="logged-out">
+		<header class="cf" id="logged-out">
 
 			<div class="sub-header">
 				
@@ -33,14 +33,6 @@
 			    	<span>Menu</span>
 			    </button> -->
 
-			    <form>
-					<fieldset>
-						<input type="search" id="search" />
-						<input type="submit" value="Search" />
-						<del></del>
-					</fieldset>
-				</form>
-
 			    <menu class="cf">
 			    	<a href="###">Bags</a>
 				    <a href="###">Clothing</a>
@@ -64,11 +56,20 @@
 			        </span> -->
 			    </menu>
 
+			    <form>
+					<fieldset>
+						<!-- <label for="search">Search Louis Vuitton, Tory Burch, or Shoes</label> -->
+						<input type="search" id="search" placeholder="Search Louis Vuitton, Tory Burch, or Shoes" />
+						<input type="submit" value="Search" />
+						<del></del>
+					</fieldset>
+				</form>
+
 			</nav>
 
 		</header>
 
-		<header id="logged" style="display: none;">
+		<header id="logged" class="cf" style="display: none;">
 
 			<div class="sub-header">
 				
@@ -77,7 +78,7 @@
 				</a>
 				<button>Menu</button>
 			    <a href="###" data-num="0">Your Bag</a>
-			    <a href="###" data-num="2" class="a">Your Inbox</a>
+			    <a href="###" _data-num="2" class="a">Your Inbox</a>
 			    <a href="###">Your Sales</a>
 			    <a href="###" style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_bigger.jpg);">Your Account</a>
 
@@ -91,14 +92,6 @@
 			    	<span>Menu</span>
 			    </button> -->
 
-			    <form>
-					<fieldset>
-						<input type="search" id="search" />
-						<input type="submit" value="Search" />
-						<del></del>
-					</fieldset>
-				</form>
-
 			    <menu class="cf">
 			    	<a href="###">Bags</a>
 				    <a href="###">Clothing</a>
@@ -122,9 +115,41 @@
 			        </span> -->
 			    </menu>
 
+			    <form>
+					<fieldset>
+						<input type="search" id="search" placeholder="Search Louis Vuitton, Tory Burch, or Shoes" />
+						<input type="submit" value="Search" />
+						<del></del>
+					</fieldset>
+				</form>
+
 			</nav>
 
 		</header>
+
+		<div id="main" class="cf">
+			<h3></h3>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
@@ -135,15 +160,15 @@
 			}
 			$('button').on('click', function() {
 				if($(this).hasClass('show')) {
-					$(this).removeClass('show').find('span').text('Menu');
+					$(this).removeClass('show').text('Menu');
 					$('menu').removeClass('show');
 					$('form').removeClass('show');
 				} else {
-					$(this).addClass('show').find('span').text('Hide');
+					$(this).addClass('show').text('Hide');
 					$('menu').addClass('show');
 					$('form').addClass('show');
 				}
-			})
+			});
 		})
 		</script>
 
