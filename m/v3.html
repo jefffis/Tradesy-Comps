@@ -133,7 +133,10 @@
 				$('#logged-in').show();
 				$('#main').css('margin-top','2rem');
 			}
-			$('#menu-toggle').on('click', function() {
+			$('#menu-toggle').on('click', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+				
 				if($(this).hasClass('show')) {
 					$(this).removeClass('show').html('Menu<span/>');
 					$('menu').removeClass('show');
