@@ -317,11 +317,11 @@ input[type=submit]:active {
 .main h1 {
 	margin: .5rem 0;
 	font-size: 20px;
-    letter-spacing: 1.5px;
+    /*letter-spacing: 1.5px;*/
     line-height: 1.2;
     text-align: center;
     /*text-indent: 1.75px;*/
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 .main p {
 	color: #777;
