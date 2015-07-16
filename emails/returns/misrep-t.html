@@ -82,6 +82,9 @@
 			font-size: 13px;
 			line-height: 18px;
 		}
+		.light-b {
+			border-bottom: 2px solid #dddddd;
+		}
 		@media screen and (max-width: 600px) {
 			.slim {
 				height: 15px !important;
@@ -119,8 +122,22 @@
 						Hi <<returns_emails\first_name>>,
 						<br /><br />
 
-						We&rsquo;ve received your return request for <a href="https://www.tradesy.com/your-purchases" style="color:#ee7873;" ><<returns_emails\item_name>></a> and have opened a Misrepresentation Case for you. Your Claim Number is {{purchase-id}}.
-						<br /><br />
+						We&rsquo;ve received your return request for <a href="https://www.tradesy.com/your-purchases" style="color:#ee7873;" ><<returns_emails\item_name>></a> and have opened a Misrepresentation Case for you. Your Claim Number is <<returns_emails\purchase_id>>.
+						
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" style="-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;" ><tr><td height="10" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;" ></td></tr></table>
+
+						<span class="center light-b" style="display:block;text-align:center;border-bottom-width:2px;border-bottom-style:solid;border-bottom-color:#dddddd;" >
+							<a href="https://www.tradesy.com/your-purchases" style="color:#ee7873;" >
+								<img src="<<returns_emails\item_image style="display:block;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;border-width:0;" >>" height="200" />
+							</a>
+							<span class="h3" style="display:block;line-height:1.2;margin-bottom:10px;color:#777777;font-size:17px;" >
+								<a href="https://www.tradesy.com/your-purchases" style="color:#ee7873;" ><<returns_emails\item_name>></a>
+								<<returns_emails\return_processed_credit>>
+							</span>
+							<table width="100%" cellpadding="0" cellspacing="0" border="0" style="-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;" ><tr><td height="15" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;" ></td></tr></table>
+						</span>
+
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" style="-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;" ><tr><td height="20" style="-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0);margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;border-width:0;" ></td></tr></table>
 
 						We take Misrepresentation Claims very seriously, and our team will carefully review your item after you've sent it to us.
 						<br /><br />
