@@ -48,6 +48,16 @@ header img {
     left: .75rem;
     max-width: 40px;
 }
+.focussed {
+    min-height: 0;
+    padding: 1rem 0;
+}
+.focussed img {
+    display: block;
+    position: static;
+    max-width: 150px;
+    margin: auto;
+}
 
 .sub-header a:nth-child(n+2) {
     display: block;
@@ -313,6 +323,9 @@ input[type=submit]:active {
     padding: 90px 0 20px;
     /*overflow-x: hidden;*/
 }
+.focussed + #main {
+    padding: 20px;
+}
 #main > h3 {
     background: #ddd;
     height: .75rem;
@@ -341,3 +354,98 @@ input[type=submit]:active {
     max-width: 60%;
     margin-top: .5rem;
 }
+
+
+#main h1 {
+    font-size: 20px;
+    letter-spacing: 1.75px;
+    line-height: 1.2;
+    text-align: center;
+    text-indent: 1.75px;
+    text-transform: uppercase;
+}
+#main h1 small {
+    display: block;
+    margin-top: .75rem;
+    letter-spacing: normal;
+    text-transform: none;
+}
+
+#main form {
+    display: block;
+    /*margin: 0 -20px;*/
+    padding: 2rem 0 0;
+    background: none;
+    border: 0;
+}
+#main label {
+    display: block;
+    text-align: left;
+}
+#main label:nth-child(n+2) {
+    margin-top: 2rem;
+}
+#main label span {
+    display: inline-block;
+    /*padding-left: 1rem;*/
+    padding-bottom: .5rem;
+    font-size: 1rem;
+    letter-spacing: 1.75px;
+    /*text-indent: 1.5px;*/
+    text-transform: uppercase;
+}
+#main input[type=text], #main input[type=email] {
+    display: block;
+    /*background: rgba(0,0,0,0.05);*/
+    width: 100%;
+    padding: .65rem;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+#main input[type=text]:focus, #main input[type=email]:focus {
+    background: rgba(0,0,0,0.05);
+    border-color: #333;
+}
+label small {
+    margin-top: .5rem;
+}
+label button {
+    display: inline;
+    float: right;
+    text-decoration: underline;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+}
+#submit {
+    display: block;
+    background: #111;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    color: white;
+    font-family: inherit;
+    font-size: 1.25rem;
+    letter-spacing: 1.75px;
+    text-transform: uppercase;
+}
+#submit + small {
+    margin-top: 1rem;
+}
+#main .right {
+    display: block;
+    width: 100%;
+    margin: -.5rem 0 .75rem;
+    /*float: right;*/
+    /*color: #333;*/
+    font-family: inherit;
+    font-size: 1rem;
+    text-align: right;
+    /*text-decoration: underline;*/
+}
+#main .right span {
+    color: #ee7873;
+}
+
+
+

@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">Tradesy Product Page Comp</title>
+
+		<link href="css/m2.css" rel="stylesheet" type="text/css" />
+		<script>document.addEventListener('touchstart', function() {},false);</script>
+	</head>
+	<body>
+
+		<header class="cf">
+
+			<div class="sub-header" id="logged-out">
+				
+				<a href="###">
+					<img src="http://wtf.jefff.co/Tradesy-Comps/images/gem-white.png" alt="Tradesy: buy & sell authentic designer fashion." />
+				</a>
+				<span class="backs">
+				    <a href="###" data-num="0">Your Bag</a>
+				    <!-- <a href="###" class="l">Join Today</a> -->
+			    </span>
+
+		    </div>
+
+		    <div class="sub-header" id="logged-in" style="display: none;">
+				
+				<a href="###">
+					<img src="http://wtf.jefff.co/Tradesy-Comps/images/gem-white.png" alt="Tradesy: buy & sell authentic designer fashion." />
+				</a>
+				<span class="backs">
+				    <a href="###" data-num="0">Your Bag</a>
+				    <a href="###" style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_bigger.jpg);">Your Account</a>
+				    <a href="###" data-num="2" class="a">Your Inbox</a>
+				    <a href="###">Your Sales</a>
+			    </span>
+
+		    </div>
+	
+			<nav class="cf">
+
+			    <a href="##">Shop</a>
+			    <a href="##">Sell</a>
+			    <a href="##" id="menu-toggle">
+			    	Menu
+			    	<span></span>
+			    </a>
+
+			</nav>
+
+			<menu class="cf">
+		    	<a href="###">Bags</a>
+			    <a href="###">Clothing</a>
+			    <a href="###">Shoes</a>
+			    <a href="###">Accessories</a>
+			    <a href="###">Weddings</a>
+			    <a href="###">Designers</a>
+			    <a href="###">Contact</a>
+		        <a href="###">Returns</a>
+		        <a href="###">How It Works</a>
+		        <a href="###">Reviews</a>
+		        <a href="#footer" id="view-menu">Full Menu</a>
+		    </menu>
+
+		    <form>
+				<fieldset>
+					<input type="search" id="search" placeholder="Louis Vuitton, shoes, hobo" />
+					<input type="submit" value="Search" />
+					<del></del>
+				</fieldset>
+			</form>
+
+		</header>
+
+		<p class="cta" id="logged-in-cta">
+			First timer? <a href="###">Join today</a> for free.
+		</p>
+
+		<div id="main" class="cf">
+			<h3></h3>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+		</div>
+
+		<footer id="footer">footer links</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+		$(function(){
+			if(window.location.hash) {
+				$('#logged-out, #logged-in-cta').hide();
+				$('#logged-in').show();
+				$('#main').css('margin-top','2rem');
+			}
+			$('#menu-toggle').on('click', function() {
+				if($(this).hasClass('show')) {
+					$(this).removeClass('show').html('Menu<span/>');
+					$('menu').removeClass('show');
+					$('form').removeClass('show');
+				} else {
+					$(this).addClass('show').html('Hide<span/>');
+					$('menu').addClass('show');
+					$('form').addClass('show');
+				}
+			});
+			$('#view-menu').on('click', function(e) {
+				var anchor = $(this).attr('href'); 
+				e.preventDefault();
+				e.stopPropagation();
+
+				$('html,body').animate({
+					scrollTop: $(anchor).offset().top
+				}, 625)
+			});
+		})
+		</script>
+
+	</body>
+</html>

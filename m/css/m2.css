@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+@font-face{font-family:'proxima-nova-semi';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.svg#proxima-nova-semi") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+body {
+    background: white;
+    font: normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
+}
+h1, h2 {
+    font-weight: normal;
+}
+h2 {
+    color: #999;
+    margin: 0;
+}
+header {
+	position: relative;
+    background: #111;
+    min-height: 64px;
+    /*margin-bottom: 20px;*/
+}
+header img {
+    position: absolute;
+    top: .75rem;
+    left: .75rem;
+    max-width: 40px;
+}
+
+.sub-header a:active {
+	opacity: .65;
+}
+.backs {
+	display: block;
+	position: relative;
+}
+.backs a {
+    display: block;
+    position: absolute;
+    top: .75rem;
+    right: .75rem;
+    background: transparent no-repeat center;
+    background-size: 30px;
+    height: 40px;
+    width: 40px;
+    text-indent: -9999px;
+}
+.backs a:first-child {
+    background-image: url(http://wtf.jefff.co/Tradesy-Comps/images/bag.png);
+    right: .75rem;
+}
+.backs a:nth-child(2) {
+	border-radius: 100%;
+    background-size: 100%;
+    top: 1.125rem;
+    right: 4.5rem;
+    height: 28px;
+    width: 28px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
+}
+.backs a:nth-child(3) {
+	background-image: url(http://wtf.jefff.co/Tradesy-Comps/images/msg.png);
+    right: 7.5rem;
+}
+.backs a:nth-child(4) {
+	background-image: url(http://wtf.jefff.co/Tradesy-Comps/images/note.png);
+    right: 10.75rem;
+}
+.backs a[data-num]:after {
+    display: block;
+    background: #999;
+    border-radius: 100%;
+    color: white;
+    content: attr(data-num);
+    font-family: 'proxima-nova-semi';
+    font-size: 14px;
+    line-height: 1.15;
+    padding: .2rem 0;
+    position: absolute;
+    top: .125rem;
+    right: -.125rem;
+    height: .85rem;
+    width: 1.25rem;
+    text-align: center;
+    text-indent: 0;
+}
+.backs a.a[data-num]:after {
+    background: #ee7873;
+}
+.backs a.l {
+	top: 1.125rem;
+	background: none;
+	height: auto;
+	width: auto;
+	padding: .35rem .45rem;
+	border: 1px solid currentColor;
+	border-radius: 3px;
+	color: white;
+	line-height: 1;
+	text-decoration: none;
+	text-indent: 0;
+}
+
+nav {
+	position: relative;
+	top: 64px;
+	background: white;
+	margin-bottom: 64px;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+}
+nav > a {
+	display: block;
+	position: relative;
+	height: 49px;
+	width: 33.3%;
+	padding: 1rem 1rem .9rem;
+	color: #2a2a2a;
+	float: left;
+	/*font-family: 'proxima-nova-semi';*/
+	line-height: 1;
+	text-decoration: none;
+}
+/*nav > a:nth-child(n+2) {
+	border-left: 1px solid rgba(0,0,0,0.125);
+}*/
+nav > a:active {
+	background: #efefef;
+	/*color: #ee7873;*/
+}
+nav > a:last-child {
+	width: 33.4%;
+	/*color: #ee7873;*/
+}
+nav > .show {
+	color: #ee7873;
+}
+nav > .show span {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%
+}
+nav > .show span:after {
+	display: block;
+	background: currentColor;
+	height: 3px;
+	width: 2.75rem;
+	margin: auto;
+	content: "";
+}
+
+menu {
+	display: none;
+	background: white;
+	text-align: center;
+}
+menu.show {
+	display: block;
+}
+menu a {
+	display: block;
+	width: 50%;
+	padding: .85rem;
+	border-bottom: 1px solid #ddd;
+	color: #2a2a2a;
+	float: left;
+	line-height: 1;
+	text-decoration: none;
+}
+menu a:active {
+	background: #efefef;
+}
+menu a:nth-child(even) {
+	border-left: 1px solid #ddd;
+}
+menu a:last-child {
+	width: 100%;
+	padding: .75rem;
+	float: none;
+	clear: left;
+}
+
+form {
+    display: none;
+    background: #efefef;
+    border-bottom: 1px solid #ddd;
+    /*border-top: 1px solid #2a2a2a;*/
+    /*border-bottom: 1px solid #2a2a2a;*/
+    clear: left;
+    padding: .75rem;
+}
+form.show {
+    display: block;
+}
+fieldset {
+    position: relative;
+}
+label {
+   display: block;
+   padding-bottom: .5rem;
+   font-size: .85rem;
+   line-height: 1.2;
+   text-align: center;
+}
+input {
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    font-family: inherit;
+    font-size: 16px;
+}
+input[type=search] {
+    display: block;
+    background: white;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.125) inset;
+    width: 100%;
+    padding: .75rem;
+}
+input[type=search]:focus {
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.175) inset, 0 3px 0 rgba(0,0,0,0.075) inset;
+}
+input[type=submit] {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+    background: #111;
+    padding: .25rem .35rem;
+    border-left: 7px solid white;
+    color: white;
+    /*letter-spacing: 1.5px;*/
+    /*text-indent: 1.5px;*/
+    /*text-transform: uppercase;*/
+}
+input[type=submit]:active {
+    opacity: .65;
+}
+
+
+#main > h3 {
+    background: #ddd;
+    height: .75rem;
+    max-width: 80%;
+    margin: auto auto 1rem;
+}
+.item {
+    width: 50%;
+    padding: 0 15px 15px;
+    float: left;
+}
+.item:nth-child(n+3) {
+	/*padding: ;*/
+}
+.item img {
+    display: block;
+    max-width: 90%;
+    margin: auto auto 10px;
+    /*margin-left: -50%;*/
+}
+.item h2, .item h3 {
+    background: #999;
+    height: .5rem;
+    max-width: 80%;
+    margin: auto;
+}
+.item h3 {
+    background: #ddd;;
+    max-width: 60%;
+    margin-top: .5rem;
+}
+
+
+.cta {
+	background: #fff9e2;
+	margin-bottom: 1.5rem;
+	padding: .5rem;
+	text-align: center;
+}
+.cta a {
+	color: #ee7873;
+}
+
+footer {
+	background: #111;
+	margin-top: 1.5rem;
+	padding: 8rem 0;
+	color: white;
+	font-size: .85rem;
+	text-align: center;
+}
