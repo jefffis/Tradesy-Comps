@@ -61,11 +61,11 @@ header img {
     background-image: url(http://wtf.jefff.co/Tradesy-Comps/images/bag.png);
     right: .75rem;
 }
-.backs a:nth-child(2) {
+.backs a:nth-child(4) {
 	border-radius: 100%;
     background-size: 100%;
     top: 1.125rem;
-    right: 4.5rem;
+    right: 11.25rem;
     height: 28px;
     width: 28px;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.5);
@@ -74,9 +74,9 @@ header img {
 	background-image: url(http://wtf.jefff.co/Tradesy-Comps/images/msg.png);
     right: 7.5rem;
 }
-.backs a:nth-child(4) {
+.backs a:nth-child(2) {
 	background-image: url(http://wtf.jefff.co/Tradesy-Comps/images/note.png);
-    right: 10.75rem;
+    right: 4rem;
 }
 .backs a[data-num]:after {
     display: block;
