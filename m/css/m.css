@@ -367,6 +367,7 @@ input[type=submit]:active {
 #main h1 small {
     display: block;
     margin-top: .75rem;
+    color: #777;
     letter-spacing: normal;
     text-transform: none;
 }

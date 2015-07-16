@@ -19,6 +19,10 @@ body {
     background: white;
     font: normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 }
+button, input {
+	font-family: inherit;
+	font-size: inherit;
+}
 h1, h2 {
     font-weight: normal;
 }
@@ -38,8 +42,18 @@ header img {
     left: .75rem;
     max-width: 40px;
 }
+/*.focussed {
+    min-height: 0;
+    padding: 1rem 0;
+}
+.focussed img {
+    display: block;
+    position: static;
+    max-width: 150px;
+    margin: auto;
+}*/
 
-.sub-header a:active {
+.sub-header a:active, .focussed a:active {
 	opacity: .65;
 }
 .backs {
@@ -112,6 +126,9 @@ header img {
 	line-height: 1;
 	text-decoration: none;
 	text-indent: 0;
+}
+.focussed a.l {
+	right: 1rem;
 }
 
 nav {
@@ -291,6 +308,100 @@ input[type=submit]:active {
 }
 .cta a {
 	color: #ee7873;
+}
+
+/*** body ***/
+.main {
+	padding: 1.25rem;
+}
+.main h1 {
+	margin: .5rem 0;
+	font-size: 20px;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    text-align: center;
+    /*text-indent: 1.75px;*/
+    text-transform: uppercase;
+}
+.main p {
+	color: #777;
+	text-align: center;
+}
+.main form {
+	display: block;
+	background: none;
+	margin: 1.5rem -1.25rem 0;
+	padding: 1.5rem 1.25rem .5rem;
+	border-top: 1px solid #ddd;
+	border-bottom: 0;
+}
+.main fieldset:nth-child(n+2) {
+	margin-top: 2rem;
+}
+.main label, .main label span {
+	display: block;
+	color: #777;
+	font-family: 'proxima-nova-semi';
+	font-size: 1rem;
+	text-align: left;
+}
+input[type=text], input[type=email] {
+	width: 100%;
+	background: none;
+	margin-top: .25rem;
+	padding: .75rem;
+	border: 1px solid rgba(0,0,0,0.125);
+	color: #111;
+}
+input[type=text]:focus, input[type=email]:focus {
+	border-color: #333;
+	box-shadow: 0 3px 0 rgba(0,0,0,0.075) inset;
+}
+#submit {
+	width: 100%;
+	background: #ee7873;
+	margin-bottom: 1rem;
+	padding: 1.25rem 1rem 1.15rem;
+	color: white;
+	font-size: 1.5rem;
+	letter-spacing: 1.5px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+#submit:active {
+	opacity: .65;
+}
+label small {
+	display: block;
+	padding-top: .5rem;
+	font-family: 'proxima-nova-regular';
+}
+small button {
+	float: right;
+}
+.micro {
+	display: block;
+	color: #777;
+	line-height: 1.2;
+	text-align: center;
+}
+.main label:nth-child(n+2) {
+	margin-top: 1.5rem;
+}
+
+.right {
+    display: block;
+    width: 100%;
+    margin: -.5rem 0 1.25rem;
+    /*float: right;*/
+    /*color: #333;*/
+    font-family: inherit;
+    font-size: .85rem;
+    text-align: right;
+    /*text-decoration: underline;*/
+}
+.right span {
+    color: #ee7873;
 }
 
 footer {
