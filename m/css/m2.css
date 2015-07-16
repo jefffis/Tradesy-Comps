@@ -23,6 +23,8 @@ body {
 	display: none;
 }
 button, input {
+	-webkit-appearance: none;
+	background: none;
 	font-family: inherit;
 	font-size: inherit;
 }
