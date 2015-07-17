@@ -44,36 +44,32 @@
 
 			    <a href="##">Shop</a>
 			    <a href="##">Sell</a>
-			    <a href="##" id="menu-toggle">
-			    	Menu
-			    	<span></span>
-			    </a>
+			    <a href="##" id="menu-toggle">Menu<span></span></a>
 
 			</nav>
 
-			<menu class="cf">
-		    	<a href="###">Bags</a>
-			    <a href="###">Clothing</a>
-			    <a href="###">Shoes</a>
-			    <a href="###">Accessories</a>
-			    <a href="###">Weddings</a>
-			    <a href="###">Designers</a>
-			    <!-- <hr />
-			    <hr /> -->
-			    <a href="###">Contact</a>
-		        <a href="###">Returns</a>
-		        <a href="###">How It Works</a>
-		        <a href="###">Reviews</a>
-		        <!-- <a href="#footer" id="view-menu">Full Menu</a> -->
-		    </menu>
-
-		    <form>
-				<fieldset>
-					<input type="search" id="search" placeholder="Louis Vuitton, shoes, hobo" />
-					<input type="submit" value="Search" />
-					<del></del>
-				</fieldset>
-			</form>
+			<div class="menu">
+				<menu class="cf">
+			    	<a href="###">Bags</a>
+				    <a href="###">Clothing</a>
+				    <a href="###">Shoes</a>
+				    <a href="###">Accessories</a>
+				    <a href="###">Weddings</a>
+				    <a href="###">Designers</a>
+				    <a href="###">Contact</a>
+			        <a href="###">Returns</a>
+			        <a href="###">How It Works</a>
+			        <a href="###">Reviews</a>
+			    </menu>
+			    <form>
+					<fieldset>
+						<label for="search">Search: Louis Vuitton, shoes, hobo</label>
+						<input type="search" id="search" />
+						<input type="submit" value="Search" />
+						<del></del>
+					</fieldset>
+				</form>
+			</div>
 
 		</header>
 
@@ -140,15 +136,26 @@
 				e.stopPropagation();
 
 				if($(this).hasClass('show')) {
-					$(this).removeClass('show').html('Menu<span/>');
-					$('menu').removeClass('show');
-					$('form').removeClass('show');
+					hideMenu($(this), $('.menu'));
 				} else {
-					$(this).addClass('show').html('Hide<span/>');
-					$('menu').addClass('show');
-					$('form').addClass('show');
+					showMenu($(this), $('.menu'));
 				}
 			});
+
+			function showMenu(el, ell) {
+				ell.addClass('show');
+				setTimeout(function() {
+					el.addClass('show').html('Hide<span/>');
+				}, 250);
+			}
+
+			function hideMenu(el, ell) {
+				ell.removeClass('show');
+				setTimeout(function() {
+					el.removeClass('show').html('Menu<span/>');
+				}, 250);
+			}
+
 			$('#view-menu').on('click', function(e) {
 				var anchor = $(this).attr('href'); 
 				e.preventDefault();

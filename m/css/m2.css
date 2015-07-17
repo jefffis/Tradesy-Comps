@@ -178,10 +178,11 @@ nav > a:last-child:after {
 	display: inline-block;
 	position: relative;
 	top: -2px;
-	left: 3px;
-	border-top: 5px solid currentColor;
-	border-left: 4px solid transparent;
-	border-right: 4px solid transparent;
+	left: 5px;
+	border-top: 6px solid currentColor;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	-webkit-transition: -webkit-transform .25s ease-in-out;
 	content: "";
 }
 nav > .show {
@@ -189,7 +190,8 @@ nav > .show {
 }
 nav > .show:last-child:after {
 	-webkit-transform: rotate(180deg);
-	left: 4px;
+	/*top: -1px;*/
+	left: 6px;
 }
 nav > .show span {
 	display: block;
@@ -208,12 +210,18 @@ nav > .show span:after {
 }
 
 menu {
-	display: none;
+	/*display: none;*/
 	background: white;
 	text-align: center;
 }
-menu.show {
-	display: block;
+.menu {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.5s ease-in-out;
+}
+.menu.show {
+	/*display: block;*/
+	max-height: 350px;
 }
 menu a {
 	display: block;
@@ -243,7 +251,7 @@ menu hr {
 }
 
 form {
-    display: none;
+    /*display: none;*/
     background: #efefef;
     border-bottom: 1px solid #ddd;
     /*border-top: 1px solid #2a2a2a;*/
@@ -282,7 +290,8 @@ input[type=search]:focus {
 }
 input[type=submit] {
     position: absolute;
-    top: .5rem;
+    /*top: .5rem;*/
+    top: 2rem;
     right: .5rem;
     background: #111;
     padding: .25rem .35rem;
