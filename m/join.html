@@ -41,10 +41,12 @@
 						<label for="fullname">
 							<span>Full Name</span>
 							<input type="text" id="fullname" />
+							<small class="hidden">Please use your first and last name</small>
 						</label>
 						<label for="email">
 							<span>Email Address</span>
 							<input type="email" id="email" />
+							<small class="hidden">Do we need email microcopy?</small>
 						</label>
 						<label for="password">
 							<span>Password</span>
@@ -81,7 +83,7 @@
 							<input type="text" id="password2" />
 							<input type="password" id="passwordD2" class="hide" />
 							<small>
-								At least 4 characters
+								<a href="pass.html">Forgot password?</a>
 								<button id="toggle2">Hide</button>
 							</small>
 						</label>
@@ -97,6 +99,11 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
 		$(function(){
+
+			if(window.location.hash) {
+				$('#join').hide();
+				$('#login').show();
+			}
 
 			$('a.right').on('click', function(e) {
 				e.preventDefault();

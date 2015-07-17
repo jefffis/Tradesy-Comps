@@ -382,11 +382,22 @@ label small {
 	padding-top: .5rem;
 	font-family: 'proxima-nova-regular';
 }
+label .hidden {
+	display: none;
+}
+input:focus + .hidden {
+	display: inherit;
+}
 small button {
 	float: right;
 }
-small button:active {
+small button:active, small a:active {
 	opacity: .65;
+}
+small a {
+	display: inline;
+	color: #666;
+	/*text-decoration: none;*/
 }
 .micro {
 	display: block;
