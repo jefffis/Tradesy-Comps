@@ -58,7 +58,7 @@ header img {
     margin: auto;
 }
 
-.sub-header a:active, .focussed a:active {
+.sub-header a:active, .focussed a:active img {
 	opacity: .65;
 }
 .backs {
