@@ -291,6 +291,7 @@ input {
 	width: 60px;
 	border: 1px solid #ddd;
 	overflow: hidden;
+	/*-webkit-transition: all .25s ease-in-out;*/
 }
 #search-type div:before {
 	position: absolute;
@@ -309,19 +310,22 @@ input {
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 	content: "";
-	-webkit-transition: -webkit-transform .25s ease-in-out;
+	/*-webkit-transition: -webkit-transform .25s ease-in-out;*/
 }
 #search-type div:active:after {
 	opacity: .5;
 }
-#search-type .open:active:after {
+/*#search-type .open:active:after {
 	opacity: 1;
-}
+}*/
 #search-type .open:before {
 	display: none;
 }
 #search-type .open:after {
-	-webkit-transform: rotate(180deg);
+	/*-webkit-transform: rotate(180deg);*/
+	top: .55rem;
+	border: 0;
+	content: "\2715";
 }
 #search-type span {
 	display: none;
@@ -332,6 +336,7 @@ input {
 	display: block;
 }
 #search-type .open {
+	top: -78px;
 	width: 100px;
 }
 #search-type .open span:active {
