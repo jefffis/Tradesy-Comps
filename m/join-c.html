@@ -18,20 +18,40 @@
 				<img src="http://wtf.jefff.co/Tradesy-Comps/images/logo.gif" alt="Tradesy: buy & sell authentic designer fashion." />
 			</a>
 
+			<!-- <span class="backs">
+			    <a href="###" class="l" id="login-toggle">Login</a>
+		    </span> -->
+
 		</header>
 
 		<div id="main" class="main cf">
 			<div id="join">
 
 				<p class="cta">
-					Already a member? <a href="###">Login</a>
+					Already a member? <a href="join.html###">Login</a>
 				</p>
 
+				<div class="item-ctx cf">
+					<figure>
+						<div>
+							<img src="https://item2.tradesy.com/r/e5dc7d58a3c9e15eb6a3e095809ed50cc15036c743a097f24f28e93a30a6fcd3/355/355/accessories/marc-jacobs/os/marc-jacobs-marc-jacobs-mj012s-sunglasses-3558646.jpg" alt="" />
+						</div>
+					</figure>
+					<div>
+						<div>
+							<h2>Marc Jacobs MJ012/S Sunglasses</h2>
+							<h3>$221.00 <span>$475.00</span></h3>	
+						</div>
+					</div>
+				</div>
+
+				<hr class="min" />
+
 				<h1>
-					Join Tradesy: the best place to buy &amp; sell <!-- authentic --> designer goods.
+					Save $25 on this by joining Tradesy now
 				</h1>
 				<p>
-					Sign up now to join millions of others!
+					You&rsquo;ll also get access to millions of other authentic, designer bargains!
 				</p>
 
 				<form>
@@ -62,39 +82,6 @@
 					</fieldset>
 				</form>
 			</div>
-			<div id="login" style="display: none;">
-				
-				<p class="cta">
-					Not a member yet?!? <a href="###">Join Now</a>
-				</p>
-
-				<h1>
-					Login to your account
-				</h1>
-				<p>Microcopy?</p>
-
-				<form>
-					<fieldset>
-						<label for="email">
-							<span>Email Address</span>
-							<input type="email" id="email" />
-						</label>
-						<label for="password2">
-							<span>Password</span>
-							<input type="text" id="password2" />
-							<input type="password" id="passwordD2" class="hide" />
-							<small>
-								<a href="pass.html">Forgot password?</a>
-								<button id="toggle2">Hide</button>
-							</small>
-						</label>
-					</fieldset>
-					<fieldset>
-						<button id="submit">Login</button>
-						<small class="micro">Some mouse copy goes here.</small>
-					</fieldset>
-				</form>
-			</div>
 		</div>
 
 		<footer id="footer">footer links</footer>
@@ -102,42 +89,6 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
 		$(function(){
-
-			if(window.location.hash) {
-				$('#join').hide();
-				$('#login').show()//.find('p.cta').hide();
-			}
-
-			$('p.cta a').on('click', function(e) {
-				e.preventDefault();
-				e.stopPropagation();
-
-				if ($(this).parent().parent().attr('id') === 'join') {
-					delayToggle($('#join'), $('#login'));
-				} else {
-					delayToggle($('#login'), $('#join'));
-				}
-			});
-
-			function delayToggle(oldEl, newEl) {
-				oldEl.hide();
-				newEl.show();
-			}
-
-			$('#toggle2').on('click', function(e) {
-				e.preventDefault();
-				e.stopPropagation();
-
-				if ($('#passwordD2').hasClass('hide')) {
-					$(this).text('Show');
-					$('#passwordD2').removeClass('hide').val($('#password2').val());
-					$('#password2').addClass('hide');
-				} else {
-					$(this).text('Hide');
-					$('#password2').removeClass('hide').val($('#passwordD2').val());
-					$('#passwordD2').addClass('hide');
-				}
-			});
 
 			$('#toggle').on('click', function(e) {
 				e.preventDefault();
