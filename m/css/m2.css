@@ -23,7 +23,7 @@ body {
 	display: none;
 }
 hr {
-	background: #ccc;
+	background: #ddd;
 	border: 0;
 	height: 1px;
 	margin: 1.5rem 0;
@@ -345,6 +345,7 @@ input[type=submit]:active {
 }
 .main p {
 	color: #777;
+	line-height: 1.25;
 	text-align: center;
 }
 .main form {
@@ -419,6 +420,9 @@ small a {
 	color: #777;
 	line-height: 1.2;
 	text-align: center;
+}
+.micro a {
+	color: #ee7873;
 }
 .main label:nth-child(n+2) {
 	margin-top: 1.5rem;
