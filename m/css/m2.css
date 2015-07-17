@@ -361,10 +361,35 @@ input[type=submit]:active {
 }
 .main label, .main label span {
 	display: block;
+	position: relative;
 	color: #777;
 	font-family: 'proxima-nova-semi';
 	font-size: 1rem;
 	text-align: left;
+}
+label.bad input {
+	border-color: red;
+}
+label.bad span {
+	color: red;
+}
+.good:after, .bad:after {
+	display: block;
+	position: absolute;
+	top: 2.175rem;
+	right: .875rem;
+	color: #74a623;
+	content: "\2713";
+	font-family: 'proxima-nova-semi';
+	font-size: 1.25rem;
+	/*font-weight: bold;*/
+}
+.bad:after {
+	top: 2rem;
+	right: .95rem;
+	color: red;
+	content: "!";
+	font-family: 'proxima-nova-regular';
 }
 input[type=text], input[type=email], input[type=password] {
 	width: 100%;

@@ -36,12 +36,12 @@
 
 				<form>
 					<fieldset>
-						<label for="fullname">
+						<label for="fullname" class="good">
 							<span>Full Name</span>
-							<input type="text" id="fullname" />
+							<input type="text" id="fullname" value="Jefffff Doan" />
 							<small class="hidden">Please use your first and last name</small>
 						</label>
-						<label for="email">
+						<label for="email" class="bad">
 							<span>Email Address</span>
 							<input type="email" id="email" />
 							<small class="hidden">Do we need email microcopy?</small>
@@ -77,7 +77,7 @@
 					<fieldset>
 						<label for="email">
 							<span>Email Address</span>
-							<input type="email" id="email" />
+							<input type="email" id="email2" />
 						</label>
 						<label for="password2">
 							<span>Password</span>
@@ -116,6 +116,16 @@
 					delayToggle($('#join'), $('#login'));
 				} else {
 					delayToggle($('#login'), $('#join'));
+				}
+			});
+
+			$('input').on('blur', function() {
+				if ($(this).val()!='') {
+					$(this).parent().addClass('good');
+					$(this).parent().removeClass('bad');
+				} else {
+					$(this).parent().addClass('bad');
+					$(this).parent().removeClass('good');
 				}
 			});
 
