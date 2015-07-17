@@ -62,18 +62,25 @@
 			        <a href="###">Reviews</a>
 			    </menu>
 			    <form>
-					<fieldset>
+					<fieldset class="cf">
 						<!-- <label for="search">Search Tradesy: Louis Vuitton, shoes, hobo</label> -->
-						<input type="search" id="search" placeholder="Louis Vuitton, shoes, hobo" />
+						<div id="search-type">
+							<div>
+								<span class="selected" data-value="All">All</span>
+								<span data-value="Products">Products</span>
+								<span data-value="Closets">Closets</span>
+							</div>
+						</div>
+						<input type="search" id="search" placeholder="Louis Vuitton, shoes" />
 						<input type="submit" value="Search" />
 						<del></del>
-						<div id="results">
-							<a href="###"><span>Louis Vuitton</span> in bags</a>
-							<a href="###"><span>Louis Vuitton</span> in clothing</a>
-							<a href="###"><span>Louis Vuitton</span> in accessories</a>
-						</div>
 					</fieldset>
 				</form>
+				<div id="results">
+					<a href="###"><span>Louis Vuitton</span> in bags</a>
+					<a href="###"><span>Louis Vuitton</span> in clothing</a>
+					<a href="###"><span>Louis Vuitton</span> in accessories</a>
+				</div>
 			</div>
 
 		</header>
@@ -144,6 +151,27 @@
 					hideMenu($(this), $('.menu'));
 				} else {
 					showMenu($(this), $('.menu'));
+				}
+			});
+
+			// $('div', '#search-type').on('click', function() {
+			// 	if ($(this).hasClass('open')){
+			// 		$(this).removeClass('open');
+			// 	} else {
+			// 		$(this).addClass('open');
+			// 	}
+			// });
+
+			$('span', '#search-type').on('click', function() {
+				var par = $(this).parent(),
+					sibs = $(this).siblings();
+
+				if (par.hasClass('open')){
+					sibs.removeClass('selected');
+					$(this).addClass('selected');
+					par.removeClass('open');
+				} else {
+					par.addClass('open');
 				}
 			});
 
