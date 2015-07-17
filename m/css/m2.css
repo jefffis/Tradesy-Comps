@@ -216,7 +216,7 @@ nav > .show span:after {
 	display: block;
 	position: absolute;
 	bottom: 0;
-	right: -1px;
+	right: -2px;
 	background: green;
 	height: 3px;
 	width: 4px;
