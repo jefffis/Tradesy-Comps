@@ -372,7 +372,7 @@ input {
 	display: block;
 }
 #search-type .open {
-	top: -78px;
+	top: -75px;
 	width: 100px;
 }
 #search-type .open span:active {
