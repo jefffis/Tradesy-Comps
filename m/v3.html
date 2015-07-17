@@ -78,8 +78,10 @@
 				</form>
 				<div id="results">
 					<a href="###"><span>Louis Vuitton</span> in bags</a>
+					<a href="###"><span>Louis Vuitton</span> in shoes</a>
 					<a href="###"><span>Louis Vuitton</span> in clothing</a>
 					<a href="###"><span>Louis Vuitton</span> in accessories</a>
+					<a href="###"><span>Louis Vuitton</span> in designers</a>
 				</div>
 			</div>
 
@@ -151,6 +153,14 @@
 					hideMenu($(this), $('.menu'));
 				} else {
 					showMenu($(this), $('.menu'));
+				}
+			});
+
+			$('#search').on('keyup', function() {
+				if ($(this).val()!='') {
+					$('#results').addClass('show');
+				} else {
+					$('#results').removeClass('show');
 				}
 			});
 

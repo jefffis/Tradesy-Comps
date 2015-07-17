@@ -368,10 +368,14 @@ input[type=submit]:active {
 
 /*** autocomplete ***/
 #results {
+	display: none;
 	background: #2a2a2a;
 	margin: 0 -.75rem 0;
 	padding: 0 .75rem;
 	clear: left;
+}
+#results.show {
+	display: inherit;
 }
 #results a {
 	display: block;
