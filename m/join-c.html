@@ -56,15 +56,15 @@
 
 				<form>
 					<fieldset>
-						<label for="fullname">
+						<label for="fullname" class="good">
 							<span>Full Name</span>
-							<input type="text" id="fullname" />
+							<input type="text" id="fullname" value="Jefffff Doan" />
 							<small class="hidden">Please use your first and last name</small>
 						</label>
 						<label for="email">
 							<span>Email Address</span>
 							<input type="email" id="email" />
-							<small class="hidden">Do we need email microcopy?</small>
+							<small class="hidden">We won&rsquo;t ever share your email address</small>
 						</label>
 						<label for="password">
 							<span>Password</span>
@@ -89,6 +89,16 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
 		$(function(){
+
+			$('input').on('blur', function() {
+				if ($(this).val()!='') {
+					$(this).parent().addClass('good');
+					$(this).parent().removeClass('bad');
+				} else {
+					$(this).parent().addClass('bad');
+					$(this).parent().removeClass('good');
+				}
+			});
 
 			$('#toggle').on('click', function(e) {
 				e.preventDefault();
