@@ -270,7 +270,7 @@ label {
    padding-bottom: .5rem;
    font-size: .85rem;
    line-height: 1.2;
-   text-align: center;
+   /*text-align: center;*/
 }
 input {
     -webkit-appearance: none;
