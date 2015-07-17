@@ -212,6 +212,16 @@ nav > .show span:before {
 	width: 1px;
 	content: "";
 }
+nav > .show span:after {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: -1px;
+	background: blue;
+	height: 3px;
+	width: 2px;
+	content: "";
+}
 /*nav > .show span:after {
 	display: block;
 	position: relative;
