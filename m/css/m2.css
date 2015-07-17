@@ -18,6 +18,7 @@
 body {
     background: white;
     font: normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
+    overflow-x: hidden;
 }
 .hide {
 	display: none;
@@ -216,7 +217,7 @@ nav > .show span:after {
 	top: 1px;
 	background: #ee7873;
 	height: 3px;
-	width: 100%;
+	width: 105%;
 	margin: auto;
 	content: "";
 }
