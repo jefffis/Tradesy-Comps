@@ -221,7 +221,7 @@ menu {
 }
 .menu.show {
 	/*display: block;*/
-	max-height: 350px;
+	max-height: 600px;
 }
 menu a {
 	display: block;
@@ -253,7 +253,7 @@ menu hr {
 form {
     /*display: none;*/
     background: #efefef;
-    border-bottom: 1px solid #ddd;
+    /*border-bottom: 1px solid #ddd;*/
     /*border-top: 1px solid #2a2a2a;*/
     /*border-bottom: 1px solid #2a2a2a;*/
     clear: left;
@@ -270,7 +270,7 @@ label {
    padding-bottom: .5rem;
    font-size: .85rem;
    line-height: 1.2;
-   /*text-align: center;*/
+   text-align: center;
 }
 input {
     -webkit-appearance: none;
@@ -290,8 +290,8 @@ input[type=search]:focus {
 }
 input[type=submit] {
     position: absolute;
-    /*top: .5rem;*/
-    top: 2rem;
+    top: .5rem;
+    /*top: 2rem;*/
     right: .5rem;
     background: #111;
     padding: .25rem .35rem;
@@ -303,6 +303,30 @@ input[type=submit] {
 }
 input[type=submit]:active {
     opacity: .65;
+}
+
+/*** autocomplete ***/
+#results {
+	background: #2a2a2a;
+	margin: .75rem -.75rem -.75rem;
+	padding: .5rem 0;
+}
+#results a {
+	display: block;
+	padding: .75rem 1rem;
+	clear: left;
+	color: #ccc;
+	float: none;
+	text-decoration: none;
+}
+#results span {
+	display: inline-block;
+	color: white;
+	text-decoration: underline;
+}
+#results a:active {
+	background: #111;
+	/*color: #ddd;*/
 }
 
 
