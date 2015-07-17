@@ -108,19 +108,30 @@ header img {
 }
 .backs a[data-num]:after {
     display: block;
-    background: #999;
-    border-radius: 100%;
-    color: white;
-    content: attr(data-num);
-    font-family: 'proxima-nova-semi';
-    font-size: 14px;
-    line-height: 1.15;
-    padding: .2rem 0;
     position: absolute;
     top: .125rem;
-    right: -.125rem;
-    height: .85rem;
-    width: 1.25rem;
+    right: 0;
+    z-index: 1;
+    background: #999;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 100%;
+    content: "";
+    line-height: 1;
+}
+.backs a[data-num]:before {
+	display: block;
+	position: absolute;
+    top: .125rem;
+    right: 0;
+    z-index: 2;
+    height: 1rem;
+    width: 1rem;
+    color: white;
+	content: attr(data-num);
+	font-family: 'proxima-nova-semi';
+    font-size: 12px;
+    line-height: 1.65;
     text-align: center;
     text-indent: 0;
 }
@@ -217,7 +228,7 @@ nav > .show span:after {
 	position: absolute;
 	bottom: 0;
 	right: -2px;
-	background: green;
+	background: #ee7873;
 	height: 3px;
 	width: 4px;
 	content: "";
