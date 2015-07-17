@@ -47,7 +47,7 @@ header img {
     left: .75rem;
     max-width: 40px;
 }
-/*.focussed {
+.focussed {
     min-height: 0;
     padding: 1rem 0;
 }
@@ -56,7 +56,7 @@ header img {
     position: static;
     max-width: 150px;
     margin: auto;
-}*/
+}
 
 .sub-header a:active, .focussed a:active {
 	opacity: .65;
@@ -353,7 +353,7 @@ input[type=submit]:active {
 input[type=text], input[type=email], input[type=password] {
 	width: 100%;
 	background: none;
-	margin-top: .5rem;
+	margin-top: .35rem;
 	padding: .5rem;
 	border: 1px solid rgba(0,0,0,0.125);
 	color: #111;
@@ -403,11 +403,14 @@ small button:active {
     width: 100%;
     margin: -.5rem 0 1.25rem;
     /*float: right;*/
-    /*color: #333;*/
+    color: inherit;
     font-family: inherit;
     font-size: .85rem;
     text-align: right;
-    /*text-decoration: underline;*/
+    text-decoration: none;
+}
+.right:active {
+	opacity: .65;
 }
 .right span {
     color: #ee7873;
