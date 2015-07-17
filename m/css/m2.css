@@ -165,19 +165,31 @@ nav > a {
 	line-height: 1;
 	text-decoration: none;
 }
-/*nav > a:nth-child(n+2) {
-	border-left: 1px solid rgba(0,0,0,0.125);
-}*/
 nav > a:active {
 	background: #efefef;
 	/*color: #ee7873;*/
 }
 nav > a:last-child {
 	width: 33.4%;
+	border-left: 1px solid rgba(0,0,0,0.125);
 	/*color: #ee7873;*/
+}
+nav > a:last-child:after {
+	display: inline-block;
+	position: relative;
+	top: -2px;
+	left: 3px;
+	border-top: 5px solid currentColor;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	content: "";
 }
 nav > .show {
 	color: #ee7873;
+}
+nav > .show:last-child:after {
+	-webkit-transform: rotate(180deg);
+	left: 4px;
 }
 nav > .show span {
 	display: block;
@@ -219,11 +231,15 @@ menu a:active {
 menu a:nth-child(even) {
 	border-left: 1px solid #ddd;
 }
-menu a:last-child {
+/*menu a:last-child {
 	width: 100%;
 	padding: .75rem;
 	float: none;
 	clear: left;
+}*/
+menu hr {
+	clear: left;
+	margin: 0;
 }
 
 form {
