@@ -44,33 +44,21 @@
 
 			    <a href="##">Shop</a>
 			    <a href="##">Sell</a>
-			    <a href="##" id="menu-toggle">Menu<span></span></a>
+			    <a href="##" id="menu-toggle"><span></span></a>
 
 			</nav>
 
 			<div class="menu">
-				<menu class="cf">
-			    	<a href="###">Bags</a>
-				    <a href="###">Clothing</a>
-				    <a href="###">Shoes</a>
-				    <a href="###">Accessories</a>
-				    <a href="###">Weddings</a>
-				    <a href="###">Designers</a>
-				    <a href="###">Contact</a>
-			        <a href="###">Returns</a>
-			        <a href="###">How It Works</a>
-			        <a href="###">Reviews</a>
-			    </menu>
-			    <form>
+				<form>
 					<fieldset class="cf">
 						<!-- <label for="search">Search Tradesy: Louis Vuitton, shoes, hobo</label> -->
-						<div id="search-type">
+						<!-- <div id="search-type">
 							<div>
 								<span class="selected" data-value="All">All</span>
 								<span data-value="Fashion">Fashion</span>
 								<span data-value="Closets">Closets</span>
 							</div>
-						</div>
+						</div> -->
 						<input type="search" id="search" placeholder="Louis Vuitton, shoes" />
 						<input type="submit" value="Search" />
 						<del></del>
@@ -83,6 +71,18 @@
 					<a href="###"><span>Louis Vuitton</span> in accessories</a>
 					<a href="###"><span>Louis Vuitton</span> in designers</a>
 				</div>
+				<menu class="cf">
+			    	<a href="###">Bags</a>
+				    <a href="###">Clothing</a>
+				    <a href="###">Shoes</a>
+				    <a href="###">Accessories</a>
+				    <a href="###">Weddings</a>
+				    <a href="###">Designers</a>
+				    <!-- <a href="###">Contact</a>
+			        <a href="###">Returns</a>
+			        <a href="###">How It Works</a>
+			        <a href="###">Reviews</a> -->
+			    </menu>
 			</div>
 
 		</header>
@@ -188,14 +188,14 @@
 			function showMenu(el, ell) {
 				ell.addClass('show');
 				setTimeout(function() {
-					el.addClass('show').html('Hide<span/>');
+					el.addClass('show')//.html('Hide<span/>');
 				}, 125);
 			}
 
 			function hideMenu(el, ell) {
 				ell.removeClass('show');
 				setTimeout(function() {
-					el.removeClass('show').html('Menu<span/>');
+					el.removeClass('show')//.html('Menu<span/>');
 				}, 250);
 			}
 
