@@ -202,7 +202,7 @@ nav > a:last-child {
 nav > a:last-child span {
 	display: inline-block;
 	position: relative;
-	top: 28.25%;
+	top: 15px;
 	left: -1px;
 	height: 16px;
 	width: 16px;
@@ -220,6 +220,7 @@ nav > a:last-child span:after {
 	background: #999;
 	height: 8px;
 	width: 2px;
+	border-radius: 0 0 3px 3px;
 	-webkit-transform: rotate(-38deg);
 	content: "";
 }
@@ -250,7 +251,8 @@ nav > a:last-child:after {
 	content: "";
 }*/
 nav > .show {
-	color: #ee7873;
+	/*background: #efefef;*/
+	/*color: #ee7873;*/
 }
 /*nav > .show:last-child:after {
 	-webkit-transform: rotate(180deg);
@@ -264,6 +266,7 @@ nav > a.show span {
 	background: #ee7873;
 	height: 3px;
 	width: 100%;*/
+	top: 13px;
 	left: -4px;
 	border: 0;
 }
@@ -275,6 +278,7 @@ nav > a.show span:before {
 	background: #999;
 	height: 20px;
 	width: 2px;
+	border-radius: 2px;
 	-webkit-transform: rotate(45deg);
 	content: "";
 	/*display: block;
@@ -294,6 +298,7 @@ nav > a.show span:after {
 	background: #999;
 	height: 20px;
 	width: 2px;
+	border-radius: 2px;
 	-webkit-transform: rotate(-45deg);
 	content: "";
 }
@@ -313,12 +318,12 @@ menu {
 	background: white;
 	text-align: center;
 }
-.menu {
+.menu, #my-bag {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.5s ease-in-out;
 }
-.menu.show {
+.menu.show, #my-bag.show {
 	/*display: block;*/
 	max-height: 600px;
 }
@@ -504,6 +509,50 @@ input[type=submit]:active {
 #results a:active {
 	background: #111;
 	/*color: #ddd;*/
+}
+
+#my-bag {
+    position: relative;
+}
+#my-bag.show {
+	/*padding: 1rem;*/
+    border-bottom: 1px solid #ddd;
+}
+#my-bag p {
+    font-size: 14px;
+    text-align: center;
+}
+#my-bag a {
+    display: inline;
+    float: none;
+    width: 100%;
+    padding: 0;
+    color: #ee7873;
+    letter-spacing: normal;
+    text-decoration: underline;
+    text-transform: none;
+}
+#my-bag img {
+    display: block;
+    max-width: 35px;
+    margin: 2rem auto 1rem;
+}
+#my-bag del {
+    /*position: absolute;
+    top: 1rem;
+    right: 1rem;*/
+    display: block;
+    margin: 1.5rem 0 1rem;
+    text-align: center;
+    text-decoration: none;
+}
+#my-bag del:after {
+    color: #999;
+    content: "\2715";
+    font-size: 2rem;
+}
+#my-bag del:active {
+    opacity: .65;
 }
 
 
