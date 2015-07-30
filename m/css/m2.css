@@ -662,8 +662,8 @@ input[type=submit]:active {
 .main label, .main label span {
 	display: block;
 	position: relative;
-	color: #777;
-	font-family: 'proxima-nova-regular';
+	/*color: #777;*/
+	/*font-family: 'proxima-nova-regular';*/
 	font-size: 1rem;
 	text-align: left;
 }
@@ -721,6 +721,7 @@ input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
 label small {
 	display: block;
 	padding-top: .5rem;
+	color: #777;
 	font-family: 'proxima-nova-regular';
 }
 label .hidden {
