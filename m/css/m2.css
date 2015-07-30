@@ -699,6 +699,7 @@ input[type=text], input[type=email], input[type=password] {
 	border: 1px solid rgba(0,0,0,0.125);
 	color: #111;
 	font-family: 'proxima-nova-regular';
+	outline: none;
 }
 input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
 	border-color: #333;
@@ -794,16 +795,16 @@ small a {
 }
 .item-ctx h2, .item-ctx h3 {
 	margin: 0;
+	font-weight: normal;
 }
 .item-ctx h2 {
 	color: #111;
-	/*font-family: 'proxima-nova-regular';*/
 	font-size: 17px;
 	line-height: 1.2;
 }
 .item-ctx h3 {
 	padding: .5rem 0 0;
-	font-family: 'proxima-nova-regular';
+	/*font-family: 'proxima-nova-semi';*/
 	font-size: 14px;
 	letter-spacing: normal;
 	text-align: left;
@@ -811,6 +812,7 @@ small a {
 .item-ctx h3 span {
 	padding-left: .5rem;
 	color: #999;
+	/*font-family: 'proxima-nova-regular';*/
 	text-decoration: line-through;
 }
 .item-ctx > div {
