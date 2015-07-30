@@ -58,7 +58,7 @@ header img {
 }
 .focussed {
     min-height: 0;
-    padding: 1rem 0;
+    padding: 1rem;
 }
 .focussed img {
     display: block;
@@ -66,6 +66,17 @@ header img {
     max-width: 150px;
     margin: auto;
 }
+/*.focussed a {
+	float: left
+}
+.focussed a:last-child {
+	position: relative;
+	top: .5rem;
+	color: white;
+	float: right;
+	font-size: .85rem;
+	text-decoration: none;
+}*/
 
 .sub-header a:active, .focussed a:active img {
 	opacity: .5;
@@ -594,15 +605,20 @@ input[type=submit]:active {
 
 
 .cta {
-	background: #fff9e2;
+	/*background: #FFFCF2;*/
 	margin-bottom: 1.5rem;
 	padding: .5rem;
+	border-bottom: 1px solid #ddd;
 	text-align: center;
 }
 .main .cta {
 	margin: -1.25rem -1.25rem 1.5rem;
-	padding-right: .75rem;
-	text-align: right;
+	padding: .75rem;
+	/*color: #999;*/
+	text-align: left;
+}
+.skip {
+	float: right;
 }
 .cta a {
 	color: #ee7873;
@@ -715,6 +731,7 @@ input:focus + .hidden {
 }
 small button {
 	float: right;
+	text-decoration: underline;
 }
 small button:active, small a:active {
 	opacity: .65;
@@ -734,7 +751,7 @@ small a {
 	color: #ee7873;
 }
 .main label:nth-child(n+2) {
-	margin-top: 1.5rem;
+	margin-top: 1rem;
 }
 
 .right {
