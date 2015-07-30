@@ -629,6 +629,9 @@ input[type=submit]:active {
 	line-height: 1.25;
 	/*text-align: center;*/
 }
+.cta a {
+	text-decoration: none;
+}
 .main form {
 	display: block;
 	background: none;
