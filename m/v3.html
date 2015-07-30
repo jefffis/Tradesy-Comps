@@ -155,7 +155,7 @@
 				e.preventDefault();
 				e.stopPropagation();
 
-				$('#my-bag').removeClass('show');
+				$('#my-bag, .your-bag').removeClass('show');
 
 				if($(this).hasClass('show')) {
 					hideMenu($(this), $('.menu'));
@@ -173,7 +173,7 @@
 			});
 
 			$('del', '#my-bag').on('click', function() {
-				$('#my-bag').removeClass('show');
+				$('#my-bag, .your-bag').removeClass('show');
 			});
 
 			$('.your-bag').on('click', function(e) {
@@ -182,6 +182,7 @@
 
 				$('.menu, #menu-toggle').removeClass('show');
 
+				$(this).toggleClass('show');
 				$('#my-bag').toggleClass('show');
 			});
 
