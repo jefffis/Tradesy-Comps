@@ -612,8 +612,8 @@ input[type=submit]:active {
 	text-align: center;
 }
 .main .cta {
-	margin: -1.25rem -1.25rem 1.5rem;
-	padding: .75rem;
+	margin: -1rem -1rem 1.25rem;
+	padding: .75rem 1rem;
 	/*color: #999;*/
 	text-align: left;
 }
@@ -629,7 +629,7 @@ input[type=submit]:active {
 
 /*** body ***/
 .main {
-	padding: 1.25rem;
+	padding: 1rem;
 }
 .main h1 {
 	margin: .5rem 0;
