@@ -906,6 +906,59 @@ faux-closet
 	border-radius: 100%;
 }
 
+/********
+cat
+********/
+.banner-header img {
+	max-width: 100%;
+}
+.banner-header h1 {
+	margin: .5rem 0 1rem;
+	padding: 0 1rem;
+	font-family: Georgia;
+	font-size: 1.25rem;
+	/*line-height: 1.2;*/
+	text-align: center;
+}
+.departments {
+	margin-bottom: 1rem;
+	border-top: 1px solid #ccc;
+}
+.departments a {
+	background: none;
+	padding: .65rem .5rem;
+	/*border: 0;*/
+	color: #111;
+	font-size: .85rem;
+}
+.departments a:active {
+	background: #efefef;
+}
+.departments a img {
+	display: block;
+	max-width: 25px;
+	margin: auto auto .25rem;
+}
+/*.departments a:nth-child(even) {
+	border-left: 0;
+}*/
+.subs {
+	/*margin: 0 1rem;*/
+	padding: 0 1rem 1.5rem;
+	/*border-top: 1px solid #ccc;*/
+	color: #999;
+}
+.subs small:after {
+	display: block;
+	position: relative;
+	top: 3px;
+	background: #ddd;
+	height: 1rem;
+	width: 3rem;
+	content: "";
+	float: right;
+}
+
 footer {
 	background: #111;
 	margin-top: 1.5rem;

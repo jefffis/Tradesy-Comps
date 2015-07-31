@@ -14,19 +14,7 @@
 
 		<header class="cf">
 
-			<div class="sub-header" id="logged-out">
-				
-				<a href="###">
-					<img src="http://wtf.jefff.co/Tradesy-Comps/images/gem-white.png" alt="Tradesy: buy & sell authentic designer fashion." />
-				</a>
-				<span class="backs">
-				    <a href="###" data-num="0" class="your-bag">Your Bag</a>
-				    <a href="join.html###" class="l" id="log-in">Log In</a>
-			    </span>
-
-		    </div>
-
-		    <div class="sub-header" id="logged-in" style="display: none;">
+		    <div class="sub-header" id="logged-in">
 				
 				<a href="###">
 					<img src="http://wtf.jefff.co/Tradesy-Comps/images/gem-white.png" alt="Tradesy: buy & sell authentic designer fashion." />
@@ -51,14 +39,6 @@
 			<div class="menu">
 				<form>
 					<fieldset class="cf">
-						<!-- <label for="search">Search Tradesy: Louis Vuitton, shoes, hobo</label> -->
-						<!-- <div id="search-type">
-							<div>
-								<span class="selected" data-value="All">All</span>
-								<span data-value="Fashion">Fashion</span>
-								<span data-value="Closets">Closets</span>
-							</div>
-						</div> -->
 						<input type="search" id="search" placeholder="Louis Vuitton, shoes" />
 						<input type="submit" value="Search" />
 						<del></del>
@@ -78,10 +58,6 @@
 				    <a href="###">Accessories</a>
 				    <a href="###">Weddings</a>
 				    <a href="###">Designers</a>
-				    <!-- <a href="###">Contact</a>
-			        <a href="###">Returns</a>
-			        <a href="###">How It Works</a>
-			        <a href="###">Reviews</a> -->
 			    </menu>
 			</div>
 
@@ -93,12 +69,43 @@
 			<del></del>
 		</div>
 
-		<p class="cta" id="logged-in-cta">
-			First timer? <a href="join.html">Join today</a> for free.
-		</p>
-
 		<div id="main" class="cf">
-			<h3></h3>
+			<!-- current stuff -->
+			<div class="banner-header">
+				<a href="###"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=advert&w=480&h=100" alt=""></a>
+				<h1>All Designer Clothing, Bags, Shoes &amp; More!</h1>
+			</div>
+			<div class="departments">
+				<menu class="cf">
+			    	<a href="###">
+			    		<img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/09.Handbag-128.png" alt="">
+			    		Clothing
+			    	</a>
+				    <a href="###">
+			    		<img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/09.Handbag-128.png" alt="">
+			    		Bags
+			    	</a>
+			    	<a href="###">
+			    		<img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/09.Handbag-128.png" alt="">
+			    		Shoes
+			    	</a>
+			    	<a href="###">
+			    		<img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/09.Handbag-128.png" alt="">
+			    		Accessories
+			    	</a>
+			    	<a href="###">
+			    		<img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/09.Handbag-128.png" alt="">
+			    		Weddings
+			    	</a>
+			    	<a href="###">
+			    		<img src="https://cdn4.iconfinder.com/data/icons/48-bubbles/48/09.Handbag-128.png" alt="">
+			    		Designers
+			    	</a>
+			    </menu>
+			</div>
+			<div class="subs">
+				<small>Showing 1-24 of ...</small>
+			</div>
 			<div class="item">
 				<img src="../images/louis-vuitton-bag.jpg" alt="" />
 				<h2></h2>
@@ -193,6 +200,17 @@
 			// 		$(this).addClass('open');
 			// 	}
 			// });
+
+			$('.main h1').on('click', function() {
+				// if(!$('.closet nav').hasClass('show')){
+				// 	$('html,body').animate({
+				// 		scrollTop: $('.closet nav').offset().top - 30
+				// 	}, 500);
+				// }
+
+				$(this).toggleClass('show');
+				$('.closet nav').toggleClass('show');
+			});
 
 			$('span', '#search-type').on('click', function() {
 				var par = $(this).parent(),
