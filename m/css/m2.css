@@ -934,6 +934,20 @@ cat
 .departments a:active {
 	background: #efefef;
 }
+.odd a:last-child {
+	width: 100%;
+}
+.il {
+	border-bottom: 1px solid #ccc;
+}
+.il a {
+	border: 0;
+	width: 25%;
+	font-size: .75rem;
+}
+.il a:nth-child(even) {
+	border: 0;
+}
 .departments a img {
 	display: block;
 	max-width: 25px;

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">Tradesy Product Page Comp</title>
+
+		<link href="css/m2.css" rel="stylesheet" type="text/css" />
+		<script>document.addEventListener('touchstart', function() {},false);</script>
+	</head>
+	<body>
+
+		<header class="cf">
+
+		    <div class="sub-header" id="logged-in">
+				
+				<a href="###">
+					<img src="http://wtf.jefff.co/Tradesy-Comps/images/gem-white.png" alt="Tradesy: buy & sell authentic designer fashion." />
+				</a>
+				<span class="backs">
+				    <a href="###" data-num="0" class="your-bag">Your Bag</a>
+				    <a href="###" data-num="1" class="a">Your Sales</a>
+				    <a href="###" data-num="2" class="a">Your Inbox</a>
+				    <a href="closet.html" style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_bigger.jpg);">Your Account</a>
+			    </span>
+
+		    </div>
+	
+			<nav class="cf">
+
+			    <a href="cat.html">Shop</a>
+			    <a href="##">Sell</a>
+			    <a href="##" id="menu-toggle"><span></span></a>
+
+			</nav>
+
+			<div class="menu">
+				<form>
+					<fieldset class="cf">
+						<input type="search" id="search" placeholder="Louis Vuitton, shoes" />
+						<input type="submit" value="Search" />
+						<del></del>
+					</fieldset>
+				</form>
+				<div id="results">
+					<a href="###"><span>Louis Vuitton</span> in bags</a>
+					<a href="###"><span>Louis Vuitton</span> in shoes</a>
+					<a href="###"><span>Louis Vuitton</span> in clothing</a>
+					<a href="###"><span>Louis Vuitton</span> in accessories</a>
+					<a href="###"><span>Louis Vuitton</span> in designers</a>
+				</div>
+				<menu class="cf">
+			    	<a href="###">Bags</a>
+				    <a href="###">Clothing</a>
+				    <a href="###">Shoes</a>
+				    <a href="###">Accessories</a>
+				    <a href="###">Weddings</a>
+				    <a href="###">Designers</a>
+			    </menu>
+			</div>
+
+		</header>
+
+		<div id="my-bag">
+			<img src="../images/bag-d.png" alt="" />
+			<p>Your bag is empty; <a href="#/all">Start Shopping</a> now.</p>
+			<del></del>
+		</div>
+
+		<div id="main" class="cf">
+			<!-- current stuff -->
+			<div class="banner-header">
+				<a href="###"><img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=advert&w=480&h=100" alt=""></a>
+				<h1>Women&rsquo;s Accessories</h1>
+			</div>
+			<div class="departments">
+				<menu class="cf odd">
+			    	<a href="#/accessories/subtype:jewelry/">Jewelry</a>
+                    <a href="#/accessories/subtype:watches/">Watches</a>
+                    <a href="#/accessories/subtype:belts/">Belts</a>
+                    <a href="#/accessories/subtype:wallets/">Wallets</a>
+                    <a href="#/accessories/subtype:sunglasses/">Sunglasses</a>
+                    <a href="#/accessories/subtype:hats/">Hats</a>
+                    <a href="#/accessories/subtype:scarves-and-wraps/">Scarves &amp; Wraps</a>
+                    <a href="#/accessories/subtype:fragrance/">Fragrance</a>
+                    <a href="#/accessories/subtype:tech-accessories/">Tech Accessories</a>
+                    <a href="#/accessories/subtype:cosmetic-bags/">Cosmetic Bags</a>
+                    <a href="#/accessories/subtype:hair-accessories/">Hair Accessories</a>
+                    <a href="#/accessories/subtype:hosiery/">Hosiery</a>
+                    <a href="#/accessories/subtype:miscellaneous/">Miscellaneous</a>
+			    </menu>
+			</div>
+			<div class="subs">
+				<small>Showing 1-24 of ...</small>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+			<div class="item">
+				<img src="../images/louis-vuitton-bag.jpg" alt="" />
+				<h2></h2>
+				<h3></h3>
+			</div>
+		</div>
+
+		<footer id="footer">footer links</footer>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+		$(function(){
+			if(window.location.hash) {
+				$('#logged-out, #logged-in-cta, #log-in').hide();
+				$('#logged-in').show();
+				$('#main').css('margin-top','2rem');
+			}
+			$('#menu-toggle').on('click', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+
+				$('#my-bag, .your-bag').removeClass('show');
+
+				if($(this).hasClass('show')) {
+					hideMenu($(this), $('.menu'));
+				} else {
+					showMenu($(this), $('.menu'));
+				}
+			});
+
+			$('#search').on('keyup', function() {
+				if ($(this).val()!='') {
+					$('#results').addClass('show');
+				} else {
+					$('#results').removeClass('show');
+				}
+			});
+
+			$('del', '#my-bag').on('click', function() {
+				$('#my-bag, .your-bag').removeClass('show');
+			});
+
+			$('.your-bag').on('click', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+
+				$('.menu, #menu-toggle').removeClass('show');
+
+				$(this).toggleClass('show');
+				$('#my-bag').toggleClass('show');
+			});
+
+			// $('div', '#search-type').on('click', function() {
+			// 	if ($(this).hasClass('open')){
+			// 		$(this).removeClass('open');
+			// 	} else {
+			// 		$(this).addClass('open');
+			// 	}
+			// });
+
+			$('.main h1').on('click', function() {
+				// if(!$('.closet nav').hasClass('show')){
+				// 	$('html,body').animate({
+				// 		scrollTop: $('.closet nav').offset().top - 30
+				// 	}, 500);
+				// }
+
+				$(this).toggleClass('show');
+				$('.closet nav').toggleClass('show');
+			});
+
+			$('span', '#search-type').on('click', function() {
+				var par = $(this).parent(),
+					sibs = $(this).siblings();
+
+				if (par.hasClass('open')){
+					sibs.removeClass('selected');
+					$(this).addClass('selected');
+					par.removeClass('open');
+				} else {
+					par.addClass('open');
+				}
+			});
+
+			function showMenu(el, ell) {
+				ell.addClass('show');
+				setTimeout(function() {
+					el.addClass('show')//.html('Hide<span/>');
+				}, 125);
+			}
+
+			function hideMenu(el, ell) {
+				ell.removeClass('show');
+				setTimeout(function() {
+					el.removeClass('show')//.html('Menu<span/>');
+				}, 250);
+			}
+
+			$('#view-menu').on('click', function(e) {
+				var anchor = $(this).attr('href'); 
+				e.preventDefault();
+				e.stopPropagation();
+
+				$('html,body').animate({
+					scrollTop: $(anchor).offset().top
+				}, 625)
+			});
+		})
+		</script>
+
+	</body>
+</html>
