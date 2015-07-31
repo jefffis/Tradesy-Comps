@@ -35,8 +35,21 @@
 				    <a href="###" data-num="0" class="your-bag">Your Bag</a>
 				    <a href="###" data-num="1" class="a">Your Sales</a>
 				    <a href="###" data-num="2" class="a">Your Inbox</a>
-				    <a href="###" style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_bigger.jpg);">Your Account</a>
+				    <span id="account-toggle" style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_bigger.jpg);">Your Account</span>
 			    </span>
+
+			    <div id="my-account">
+			    	<div class="profile">
+			    		<span style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_bigger.jpg);"></span>
+			    		<h3>theJeffDoan</h3>
+			    		<a href="###">View Closet</a>
+			    	</div>
+					<a href="###">My Purchases</a>
+					<a href="###">My Sales</a>
+					<a href="###">Manage Payouts</a>
+					<a href="###">Account Settings</a>
+					<a href="###">Sign out</a>
+				</div>
 
 		    </div>
 	
@@ -184,6 +197,11 @@
 
 				$(this).toggleClass('show');
 				$('#my-bag').toggleClass('show');
+			});
+
+			$('#account-toggle').on('click', function() {
+				$(this).toggleClass('show');
+				$('#my-account').toggleClass('show');
 			});
 
 			// $('div', '#search-type').on('click', function() {

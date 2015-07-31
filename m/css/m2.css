@@ -84,11 +84,78 @@ header img {
 .sub-header .show {
 	opacity: .65;	
 }
+.sub-header > div {
+	position: relative;
+	top: 63px;
+	background: white;
+	margin-bottom: -1px;
+	/*padding-bottom: 3px;*/
+	border-bottom: 1px solid #ddd;
+}
+.sub-header div a {
+	display: block;
+	padding: 8px 15px;
+	color: #111;
+	text-decoration: none;
+}
+.sub-header div a:active {
+	background: #efefef;
+	opacity: 1;
+}
+.sub-header div a:after {
+	display: block;
+	position: relative;
+	right: -4px;
+	background: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_right_48px-128.png) no-repeat center;
+	background-size: 100%;
+	height: 25px;
+	width: 25px;
+	content: "";
+	float: right;
+}
+.sub-header div a:nth-child(n+2) {
+	border-top: 1px solid #ddd;
+}
+/*.sub-header div a:last-child {
+	padding-bottom: 10px;
+}*/
+.sub-header div div {
+	padding: 15px 15px 18px;
+}
+.sub-header div span {
+	display: block;
+	border-radius: 100%;
+    background-size: 100%;
+    height: 50px;
+    width: 50px;
+    margin-right: 1rem;
+    /*box-shadow: 0 0 0 1px rgba(0,0,0,0.25);*/
+    float: left;
+}
+.sub-header div h3 {
+	margin: 0;
+	padding: 8px 0 2px;
+	font-weight: normal;
+	line-height: 1;
+}
+.sub-header div div a:last-child {
+	padding: 0;
+	border: 0;
+	color: #ee7873;
+	font-size: .75rem;
+}
+.sub-header div div a:active {
+	background: none;
+	opacity: .65;
+}
+.sub-header div div a:after {
+	display: none;
+}
 .backs {
 	display: block;
 	position: relative;
 }
-.backs a {
+.backs a, .backs span {
     display: block;
     position: absolute;
     top: .75rem;
@@ -97,13 +164,14 @@ header img {
     background-size: 30px;
     height: 40px;
     width: 40px;
+    cursor: pointer;
     text-indent: -9999px;
 }
 .backs a:first-child {
     background-image: url(http://wtf.jefff.co/Tradesy-Comps/images/bag.png);
     right: .75rem;
 }
-.backs a:nth-child(4) {
+.backs span:nth-child(4) {
 	border-radius: 100%;
     background-size: 100%;
     top: 1.125rem;
@@ -168,6 +236,24 @@ header img {
 }
 .focussed a.l {
 	right: 1rem;
+}
+
+.backs span.show {
+	opacity: 1;
+}
+.backs span:active {
+	opacity: .65;
+}
+.backs span.show:after {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 5px;
+	margin-top: 8px;
+	border-bottom: 10px solid white;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	content: "";
 }
 
 nav {
@@ -332,14 +418,15 @@ menu {
 	background: white;
 	text-align: center;
 }
-.menu, #my-bag {
+.menu, #my-bag, .sub-header > div {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.5s ease-in-out;
 }
-.menu.show, #my-bag.show {
+.menu.show, #my-bag.show, .sub-header > div.show {
 	/*display: block;*/
 	max-height: 600px;
+	opacity: 1;
 }
 menu a {
 	display: block;
@@ -605,7 +692,7 @@ input[type=submit]:active {
 
 
 .cta {
-	/*background: #FFFCF2;*/
+	background: #FFFCF2;
 	margin-bottom: 1.5rem;
 	padding: .5rem;
 	border-bottom: 1px solid #ddd;
