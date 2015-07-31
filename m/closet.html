@@ -14,19 +14,7 @@
 
 		<header class="cf">
 
-			<div class="sub-header" id="logged-out">
-				
-				<a href="###">
-					<img src="http://wtf.jefff.co/Tradesy-Comps/images/gem-white.png" alt="Tradesy: buy & sell authentic designer fashion." />
-				</a>
-				<span class="backs">
-				    <a href="###" data-num="0" class="your-bag">Your Bag</a>
-				    <a href="join.html###" class="l" id="log-in">Log In</a>
-			    </span>
-
-		    </div>
-
-		    <div class="sub-header" id="logged-in" style="display: none;">
+		    <div class="sub-header" id="logged-in">
 				
 				<a href="###">
 					<img src="http://wtf.jefff.co/Tradesy-Comps/images/gem-white.png" alt="Tradesy: buy & sell authentic designer fashion." />
@@ -35,7 +23,7 @@
 				    <a href="###" data-num="0" class="your-bag">Your Bag</a>
 				    <a href="###" data-num="1" class="a">Your Sales</a>
 				    <a href="###" data-num="2" class="a">Your Inbox</a>
-				    <a href="closet.html" style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_bigger.jpg);">Your Account</a>
+				    <a href="###" style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_bigger.jpg);">Your Account</a>
 			    </span>
 
 		    </div>
@@ -51,14 +39,6 @@
 			<div class="menu">
 				<form>
 					<fieldset class="cf">
-						<!-- <label for="search">Search Tradesy: Louis Vuitton, shoes, hobo</label> -->
-						<!-- <div id="search-type">
-							<div>
-								<span class="selected" data-value="All">All</span>
-								<span data-value="Fashion">Fashion</span>
-								<span data-value="Closets">Closets</span>
-							</div>
-						</div> -->
 						<input type="search" id="search" placeholder="Louis Vuitton, shoes" />
 						<input type="submit" value="Search" />
 						<del></del>
@@ -78,10 +58,6 @@
 				    <a href="###">Accessories</a>
 				    <a href="###">Weddings</a>
 				    <a href="###">Designers</a>
-				    <!-- <a href="###">Contact</a>
-			        <a href="###">Returns</a>
-			        <a href="###">How It Works</a>
-			        <a href="###">Reviews</a> -->
 			    </menu>
 			</div>
 
@@ -93,32 +69,32 @@
 			<del></del>
 		</div>
 
-		<p class="cta" id="logged-in-cta">
-			First timer? <a href="join.html">Join today</a> for free.
-		</p>
+		<div class="main closet cf">
+			<h1>Manage Account</h1>
+			<nav id="closet-links">
+				<a href="###">Account Settings</a>
+				<a href="###">Manage Payouts</a>
+				<a href="###">My Purchases</a>
+				<a href="###">My Sales</a>
+				<a href="###">My Listings</a>
+				<a href="###" class="active">My Closet</a>
+				<!-- <a href="###">Active Listings</a> -->
+				<a href="###">Draft Listings</a>
+				<a href="###">Removed Listings</a>
+				<a href="###">Sold Items</a>
+				<!-- <a href="###">Manage Payouts</a>
+				<a href="###">Shipping Info</a>
+				<a href="###">Billing Info</a>
+				<a href="###">Account Settings</a>
+				<a href="###">Payout Settings</a>
+				<a href="###">Redeem Coupon</a>
+				<a href="###">Invite Friends</a> -->
+			</nav>
 
-		<div id="main" class="cf">
-			<h3></h3>
-			<div class="item">
-				<img src="../images/louis-vuitton-bag.jpg" alt="" />
-				<h2></h2>
-				<h3></h3>
-			</div>
-			<div class="item">
-				<img src="../images/louis-vuitton-bag.jpg" alt="" />
-				<h2></h2>
-				<h3></h3>
-			</div>
-			<div class="item">
-				<img src="../images/louis-vuitton-bag.jpg" alt="" />
-				<h2></h2>
-				<h3></h3>
-			</div>
-			<div class="item">
-				<img src="../images/louis-vuitton-bag.jpg" alt="" />
-				<h2></h2>
-				<h3></h3>
-			</div>
+			<div class="closet-header"><span></span></div>
+
+			<br><br>
+
 			<div class="item">
 				<img src="../images/louis-vuitton-bag.jpg" alt="" />
 				<h2></h2>
@@ -193,6 +169,17 @@
 			// 		$(this).addClass('open');
 			// 	}
 			// });
+
+			$('.main h1').on('click', function() {
+				// if(!$('.closet nav').hasClass('show')){
+				// 	$('html,body').animate({
+				// 		scrollTop: $('.closet nav').offset().top - 30
+				// 	}, 500);
+				// }
+
+				$(this).toggleClass('show');
+				$('.closet nav').toggleClass('show');
+			});
 
 			$('span', '#search-type').on('click', function() {
 				var par = $(this).parent(),

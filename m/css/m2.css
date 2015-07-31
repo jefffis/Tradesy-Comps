@@ -332,12 +332,12 @@ menu {
 	background: white;
 	text-align: center;
 }
-.menu, #my-bag {
+.menu, #my-bag, .closet nav {
 	max-height: 0;
 	overflow: hidden;
 	transition: max-height 0.5s ease-in-out;
 }
-.menu.show, #my-bag.show {
+.menu.show, #my-bag.show, .closet nav.show {
 	/*display: block;*/
 	max-height: 600px;
 }
@@ -824,6 +824,86 @@ small a {
 	display: table-cell;
 	height: 80px;
 	vertical-align: middle;
+}
+
+/********
+faux-closet
+********/
+.closet h1 {
+	margin: 0;
+	cursor: pointer;
+	font-size: 1rem;
+	text-align: center;
+}
+.closet h1:active {
+	opacity: .65;
+}
+.closet h1:after {
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	left: 5px;
+	background: url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-128.png) no-repeat center;
+	background-size: 120%;
+	height: 1rem;
+	width: 1rem;
+	content: "";
+}
+.closet h1.show:after {
+	transform: rotate(180deg);
+}
+.closet nav {
+	position: static;
+	/*max-width: 90%;*/
+	margin: auto -1rem;
+	/*padding-top: .5rem;*/
+	border: 0;
+}
+.closet nav a {
+	height: auto;
+	width: 100%;
+	padding: .75rem;
+	border-top: 1px solid #ddd;
+	color: #777;
+	float: none;
+	font-size: .9rem;
+	line-height: 1;
+	/*text-align: left;*/
+}
+.closet nav .active {
+	color: #ee7873;
+}
+.closet nav a:first-child {
+	margin-top: 1rem;
+}
+/*.closet nav a:nth-child(n+2) {
+	border-top: 1px solid #ddd;
+}*/
+.closet nav > a:nth-child(2):before {
+	display: none;
+}
+.closet nav > a:last-child {
+	border-left: 0;
+	border-bottom: 1px solid #ddd;
+	color: #777;
+}
+.closet-header {
+	background: #2a2a2a no-repeat center;
+    /*background-size: cover;*/
+	/*height: 600px;*/
+	margin: 1rem -1rem 0;
+	padding: 10rem 0;
+}
+.show + .closet-header {
+	margin-top: 0;
+}
+.closet-header span {
+	display: block;
+	background: white;
+	height: 75px;
+	width: 75px;
+	margin: auto;
+	border-radius: 100%;
 }
 
 footer {
