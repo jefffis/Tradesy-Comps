@@ -1,0 +1,137 @@
+* {
+    box-sizing : border-box;
+    border : 0;
+    margin : 0;
+    padding : 0;
+    font : normal 100%/1.5 sans-serif;
+}
+.cf:before,
+.cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
+body {
+    min-height : 200vh;
+    max-width : 768px;
+    background : white;
+    margin : auto;
+}
+nav {
+    position : relative;
+    z-index : 2;
+    border-bottom : 1px solid #999;
+}
+hr {
+	height : 64px;
+	background : #111;
+}
+hr + hr {
+	height : 50px;
+	background : white;
+	border-bottom : 1px solid #999;
+}
+nav a, div a {
+    display : block;
+    padding : 1rem;
+    color : #333;
+    cursor : pointer;
+    text-align : center;
+    text-decoration : none;
+}
+nav span {
+    display : block;
+    position : relative;
+    width : 33%;
+    float : left;
+}
+nav span:nth-child(2) {
+    z-index : 3;
+}
+nav span:nth-child(2):before {
+    display : block;
+    position : absolute;
+    top : 0;
+    left : -1px;
+    height : 100%;
+    width : 1px;
+    background : #999;
+    content : "";
+}
+nav span:nth-child(2):after {
+    display : block;
+    position : absolute;
+    top : 0;
+    right : 0;
+    height : 100%;
+    width : 1px;
+    background : #999;
+    content : "";
+}
+nav .closet:after {
+    right : -1px;
+    height : 100%;
+    width : 1px;
+    background : #999;
+    content : "";
+}
+nav a:active {
+    background : #efefef;
+}
+.show {
+	/*background: -moz-linear-gradient(top, #efefef 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #efefef 0%,#ffffff 100%);*/
+    color : #111;
+}
+.active {
+	color : rgb(238, 120, 115);
+	text-decoration: none;
+}
+.show:after {
+    display : block;
+    position : absolute;
+    top : 100%;
+    left : -1px;
+    height : 1px;
+    width : 100%;
+    background : white;
+    content : "";
+}
+.show:active:after {
+    background : #efefef;
+}
+nav span:last-child {
+    width : 34%;
+    border : 0;
+}
+div {
+    background : white;
+    /* margin : 0 -1px; */
+    border-bottom : 1px solid #999;
+    /* box-shadow : 0 0 0 1px #999; */
+}
+div a {
+    display : inline-block;
+    text-decoration : underline;
+}
+div a:active {
+    color : #ccc;
+}
+section {
+    padding : 5rem;
+    text-align : center;
+}
+em {
+	font-style : normal;
+}
+@media screen and (max-width : 600px) {
+	em {
+		display : none;
+	}
+	div {
+		text-align : center;
+	}
+	div a {
+		display : block;
+		width : 50%;
+		float : left;
+	}
+}
