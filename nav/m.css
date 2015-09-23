@@ -1,19 +1,15 @@
+@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
 * {
     box-sizing : border-box;
     border : 0;
     margin : 0;
     padding : 0;
-    font : normal 100%/1.5 sans-serif;
+    font : normal 100%/1.5 'proxima-nova-regular', sans-serif;
+    -webkit-tap-highlight-color : rgba(0, 0, 0, 0);
 }
 .cf:before,
 .cf:after { content: " "; display: table; }
 .cf:after { clear: both; }
-body {
-    min-height : 200vh;
-    max-width : 768px;
-    background : white;
-    margin : auto;
-}
 nav {
     position : relative;
     z-index : 2;
@@ -36,6 +32,11 @@ nav a, div a {
     text-align : center;
     text-decoration : none;
 }
+/*nav > span {
+	letter-spacing : 1.5px;
+	text-indent : 1.5px;
+	text-transform : uppercase;
+}*/
 nav span {
     display : block;
     position : relative;
@@ -67,42 +68,53 @@ nav span:nth-child(2):after {
 }
 nav .closet:after {
     right : -1px;
-    height : 100%;
-    width : 1px;
-    background : #999;
-    content : "";
 }
 nav a:active {
-    background : #efefef;
+    background : #F5F9FA;
 }
 .show {
 	/*background: -moz-linear-gradient(top, #efefef 0%, #ffffff 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(100%,#ffffff));
 	background: -webkit-linear-gradient(top, #efefef 0%,#ffffff 100%);*/
+	/*background : #F5F9FA;*/
+    background : white;
     color : #111;
 }
 .active {
 	color : rgb(238, 120, 115);
 	text-decoration: none;
 }
-.show:after {
+.active:active {
+	background : none;
+}
+.show:after, .show:before {
     display : block;
     position : absolute;
     top : 100%;
-    left : -1px;
+    left : 0;
     height : 1px;
     width : 100%;
+    /*background : #F5F9FA;*/
     background : white;
     content : "";
 }
+.show:before {
+    left : auto;
+    right : 0;
+    z-index : 2;
+    height : 1px;
+    width : 1px;
+    background : #999;
+}
 .show:active:after {
-    background : #efefef;
+    background : #F5F9FA;
 }
 nav span:last-child {
     width : 34%;
     border : 0;
 }
 div {
+    /*background : #F5F9FA;*/
     background : white;
     /* margin : 0 -1px; */
     border-bottom : 1px solid #999;
@@ -110,10 +122,12 @@ div {
 }
 div a {
     display : inline-block;
-    text-decoration : underline;
+    /*text-decoration : underline;*/
 }
 div a:active {
-    color : #ccc;
+	/*background : rgba(0, 0, 0, 0.05);*/
+	background : #F5F9FA;
+    /*color : #ccc;*/
 }
 section {
     padding : 5rem;
@@ -122,16 +136,50 @@ section {
 em {
 	font-style : normal;
 }
+
+h2 {
+	display : none;
+	width : 80%;
+	margin : auto;
+	padding : 1rem 0 .25rem;
+	border-bottom : 1px solid #ccc;
+	font-size : 20px;
+	font-weight : bold;
+	text-align : center;
+}
+
+div hr {
+	display : none;
+	height : 10px;
+	background : none;
+}
+
 @media screen and (max-width : 600px) {
+	h2 {
+		display : inline-block;
+	}
+	div hr {
+		display : block;
+	}
 	em {
 		display : none;
 	}
 	div {
+		/*border-bottom : 0;*/
 		text-align : center;
 	}
 	div a {
 		display : block;
 		width : 50%;
 		float : left;
+		/*border-bottom : 1px solid #999;*/
+	}
+	/*div a:nth-child(even) {
+		border-left : 1px solid #999;
+	}*/
+}
+@media screen and (min-width : 1024px) {
+	.acct div, .acct .show:before, .acct .show:after {
+		display : none; 
 	}
 }
