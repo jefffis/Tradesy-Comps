@@ -10,9 +10,9 @@
 .cf:before,
 .cf:after { content: " "; display: table; }
 .cf:after { clear: both; }
-body {
+/*body {
 	background : rgba(0, 0, 0, 0.025);
-}
+}*/
 nav {
     position : relative;
     z-index : 2;
@@ -53,9 +53,9 @@ nav span:nth-child(2) {
 nav span:nth-child(2):before {
     display : block;
     position : absolute;
-    top : 0;
+    top : 33.5%;
     left : -1px;
-    height : 100%;
+    height : 18px;
     width : 1px;
     background : #999;
     content : "";
@@ -63,9 +63,9 @@ nav span:nth-child(2):before {
 nav span:nth-child(2):after {
     display : block;
     position : absolute;
-    top : 0;
+    top : 33.5%;
     right : 0;
-    height : 100%;
+    height : 18px;
     width : 1px;
     background : #999;
     content : "";
@@ -91,14 +91,13 @@ nav a:active {
 .active:active {
 	background : none;
 }
-.show:after, .show:before {
+/*.show:after, .show:before {
     display : block;
     position : absolute;
     top : 100%;
     left : 0;
     height : 1px;
     width : 100%;
-    /*background : #F5F9FA;*/
     background : white;
     content : "";
 }
@@ -112,7 +111,7 @@ nav a:active {
 }
 .show:active:after {
     background : #F5F9FA;
-}
+}*/
 nav span:last-child {
     width : 34%;
     border : 0;
@@ -121,6 +120,7 @@ div {
     /*background : #F5F9FA;*/
     background : white;
     /* margin : 0 -1px; */
+    /*margin-top : 1rem;*/
     border-bottom : 1px solid #999;
     box-shadow : 0 2px 0 rgba(0, 0, 0, 0.025);
     text-align : center;
@@ -164,6 +164,16 @@ div hr {
 	height : 10px;
 	background : none;
 }
+
+header {
+	height : 20rem;
+	background : #111;
+}
+
+
+/*h1 {
+	font-size : 30px;
+}*/
 
 @media screen and (max-width : 600px) {
 	h2 {

@@ -1,0 +1,205 @@
+@font-face{font-family:'proxima-nova-semi';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.svg#proxima-nova-semi") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
+
+* {
+    box-sizing : border-box;
+    border : 0;
+    margin : 0;
+    padding : 0;
+    font : normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
+}
+.cf:before,
+.cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
+html {
+    background : #ddd;
+}
+body {
+    background : white;
+}
+header {
+    position : relative;
+    height : 64px;
+    background : #111;
+}
+header > a {
+    display : block;
+    position : absolute;
+    top : 15px;
+    left : 15px;
+    height : 34px;
+    width : 34px;
+    background : white;
+    border-radius : 100%;
+}
+nav {
+    height : 50px;
+    border-bottom : 1px solid rgba(0,0,0,0.25);
+    text-align : center
+}
+#items {
+    background : #efefef;
+    padding : .5rem;
+    text-align : center;
+}
+#items div {
+    position : relative;
+    background : white;
+    padding : 1rem;
+}
+#items div + div {
+    border-top : 2px solid #efefef;
+}
+#items.collection div + div {
+    border-top : .5rem solid #efefef;
+}
+#items .msg {
+    margin : 1.5rem 0;
+}
+#items small {
+    display : inline-block;
+    color : #999;
+    font-size : 13px;
+    text-decoration : underline;
+}
+#items a {
+    display : block;
+    position : relative;
+    z-index : 1;
+    color : inherit;
+    text-decoration : none;
+}
+#items .btn {
+    display : inline-block;
+    background : #111;
+    /*margin-top : 1.25rem;*/
+    /*padding-top : 1rem;*/
+    margin-bottom : .5rem;
+    /*border : 2px solid #ccc;*/
+    padding : .5rem 1rem;
+    color : white;
+}
+#items hr {
+    height : 1.25rem;
+    background : 0;
+    border : 0;
+}
+#items figure {
+    display : table;
+    height : 150px;
+    width : 100%;
+    margin-bottom : 1rem;
+}
+#items figure div {
+    display : table-cell;
+    height : 150px;
+    padding : 0;
+    vertical-align : middle;
+}
+#items img {
+    display : block;
+    max-height : 150px;
+    max-width : 100%;
+    margin : auto;
+}
+#items.collection img {
+    display : inline-block;
+}
+#items.collection img:nth-child(2) {
+    margin-left : 2rem;
+}
+#items h2 {
+    /*margin-bottom : .125rem;*/
+    font-size : 18px;
+    font-weight : bold;
+    letter-spacing : 1.5px;
+    text-indent : 1.5px;
+    text-transform : uppercase;
+}
+#items h3 {
+    max-width : 90%;
+    overflow : hidden;
+    margin : 0 auto;
+    font-size : 18px;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+}
+#items h4 {
+    font-size : 18px;
+    font-weight : bold;
+}
+#items h5 {
+    /*position : absolute;
+    z-index : 1;
+    top : 1rem;
+    left : 1rem;*/
+    display : none;
+    background : white;
+    padding : .5rem .5rem 0;
+    /*margin-bottom : .25rem;*/
+    color : #999;
+    letter-spacing : 1.5px;
+    text-align : left; 
+    text-indent : 1.5px;
+    text-transform : uppercase;
+}
+#items span {
+    margin-left : .5rem;
+    color : #999;
+    font-weight : normal;
+    text-decoration : line-through;
+}
+#items button {
+    position : absolute;
+    top : 1rem;
+    right : 1rem;
+    z-index : 2;
+    height : 24px;
+    width : 22px;
+    background : url(https://cdn0.iconfinder.com/data/icons/octicons/1024/heart-128.png) no-repeat center;
+    background-size : contain;
+    opacity : .5;
+}
+#items.collection .title {
+    background : #111;
+    margin : 0 -1rem -1rem;
+    padding : 1rem;
+}
+.title h3 {
+    color : #999;
+}
+#items .title h2 {
+    color : white;
+    letter-spacing : normal;
+    text-indent : 0;
+    text-transform : none;
+}
+@media screen and (min-width : 414px) {
+
+    #items div {
+        padding : 1.5rem;
+    }
+    #item button {
+        top : 1.5rem;
+        right : 1.5rem;
+    }
+
+}
+
+@media screen and (min-width : 600px) {
+
+    #items > div {
+        width : 50%;
+        float : left;
+    }
+    #items div + div, #items.collection div + div {
+        border-top : 0;
+        border-left : 2px solid #efefef;
+    } 
+    #items hr, #items .btn {
+        display : none;
+    }
+    #items .msg {
+        clear : both;
+    }
+
+}
