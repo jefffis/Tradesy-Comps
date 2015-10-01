@@ -157,7 +157,11 @@ nav {
     width : 22px;
     background : url(https://cdn0.iconfinder.com/data/icons/octicons/1024/heart-128.png) no-repeat center;
     background-size : contain;
+    outline : none;
     opacity : .5;
+}
+#items button:active {
+    opacity : .25;
 }
 #items.collection .title {
     background : #111;
@@ -173,6 +177,22 @@ nav {
     text-indent : 0;
     text-transform : none;
 }
+
+.block {
+    display : block;
+    background : rgba(0,0,0,0.5);
+    height : 300px;
+}
+.footer {
+    background : #111;
+}
+#items .block {
+    margin : .5rem 0;
+}
+#items .footer {
+    margin : .5rem 0 0;
+}
+
 @media screen and (min-width : 414px) {
 
     #items div {
