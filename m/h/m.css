@@ -83,7 +83,7 @@ h2, h3, h4, h5 {
     color : white;*/
     /*margin-top : .5rem;*/
 
-    background : white;
+    background : rgba(255, 255, 255, 0.75);
     /*background : white url(img/arrow-right.png) no-repeat 95% 15px;
     background-size : 10px;*/
     margin : 1px 0 .5rem;
@@ -189,6 +189,20 @@ h2, h3, h4, h5 {
 }
 #items button:active {
     opacity : .25;
+}
+#items button[data-num] {
+    margin-right : 1.25rem;
+}
+[data-num]:after {
+    display : inline-block;
+    position : absolute;
+    top : .2rem;
+    right : -1.25rem;
+    width : 1rem;
+    /*color : #ccc;*/
+    content : attr(data-num);
+    font-size : 12px;
+    text-align : center;
 }
 #items.collection .title {
     background : #111;
