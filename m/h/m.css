@@ -59,6 +59,9 @@ h2, h3, h4, h5 {
 #items .msg {
     margin : 1.5rem 0;
 }
+#items .b {
+    margin : .75rem 0 1rem;
+}
 #items small {
     display : inline-block;
     color : #999;
@@ -91,6 +94,14 @@ h2, h3, h4, h5 {
     /*border-top : 1px solid #ddd;*/
     text-align : left;
 }
+#items .cta {
+    background : #111;
+    color : white;
+    letter-spacing : 1.5px;
+    text-align : center;
+    text-indent : 1.5px;
+    text-transform : uppercase;
+}
 .btn:after {
     display : block;
     position : relative;
@@ -101,11 +112,14 @@ h2, h3, h4, h5 {
     background : white url(img/arrow-right.png) no-repeat center;
     background-size : 70%;
     border-radius : 100%;
-    border : 1px solid #ddd;
+    border : 1px solid rgba(0, 0, 0, 0.125);
     content : "";
 }
+.cta:after {
+    display : none; 
+}
 #items hr {
-    height : 1.25rem;
+    height : .5rem;
     background : 0;
     border : 0;
 }
