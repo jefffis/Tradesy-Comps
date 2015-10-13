@@ -59,6 +59,9 @@ h2, h3, h4, h5 {
 #items .msg {
     margin : 1.5rem 0;
 }
+#item-container-tbl .msg {
+    margin : 0;
+}
 #items .b {
     margin : .75rem 0 1rem;
 }
@@ -78,6 +81,41 @@ h2, h3, h4, h5 {
 #items a:active {
     opacity : .65;
 }
+#items .mkt-cta {
+    background : #2a2a2a;
+    /*background : url(https://item1.tradesy.com/images/homepage/2283bb4e-d902-fe63-9c3d-1632607849ab_The-October-Issue-600x620.jpg) no-repeat top center;
+    background-size : cover;*/
+    /*text-align : left;*/
+}
+#items .mkt-cta span {
+    display : block;
+    /*background : rgba(0, 0, 0, 0.8);*/
+    max-width : 20rem;
+    margin : 0 auto .5rem;
+    padding : 1rem 1rem .85rem;
+    color : white;
+    line-height : 1;
+    text-decoration : none;
+}
+#items em {
+    display : block;
+    margin : .5rem 0 0;
+    color : white;
+    font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+    letter-spacing : 1.5px; 
+    text-indent : 1.5px;
+    text-transform : uppercase;
+}
+/*#items .mkt-cta em:after {
+    display : block;
+    position : relative;
+    top : -4px;
+    left : 1px;
+    height : 1px;
+    width : 98%;
+    background : currentColor;
+    content : "";
+}*/
 #items .btn {
     /*display : inline-block;
     background : #111;
@@ -97,6 +135,7 @@ h2, h3, h4, h5 {
 #items .cta {
     background : #111;
     color : white;
+    /*box-shadow : 0 0 0 1px #ddd inset;*/
     letter-spacing : 1.5px;
     text-align : center;
     text-indent : 1.5px;
@@ -119,8 +158,9 @@ h2, h3, h4, h5 {
     display : none; 
 }
 #items hr {
-    height : .5rem;
-    background : 0;
+    height : 1px;
+    background : #ddd;
+    margin : 1.5rem 0;
     border : 0;
 }
 #items figure {
@@ -133,7 +173,7 @@ h2, h3, h4, h5 {
     display : table-cell;
     height : 150px;
     padding : 0;
-    vertical-align : middle;
+    vertical-align : bottom;
 }
 #items img {
     display : block;
@@ -250,6 +290,10 @@ h2, h3, h4, h5 {
     margin : .5rem -.5rem 0;
 }
 
+#item-container-tbl {
+    display : none;
+}
+
 @media screen and (min-width : 375px) {
 
     #items.collection img:nth-child(2) {
@@ -270,9 +314,9 @@ h2, h3, h4, h5 {
 
 }
 
-/*@media screen and (min-width : 600px) {
+@media screen and (min-width : 768px) {
 
-    #items > div {
+    /*#items > div {
         width : 50%;
         float : left;
     }
@@ -282,9 +326,38 @@ h2, h3, h4, h5 {
     } 
     #items hr, #items .btn {
         display : none;
+    }*/
+    #items {
+        padding : 1.5rem 1.5rem 0;
     }
-    #items .msg {
+    #items .btn, #items .mkt-cta {
+        margin-bottom : 1.5rem;
+    }
+    #items .mkt-cta span {
+        max-width : 100%;
+    }
+    #item-container .msg {
+        display : none;
+    }
+    #items .cta {
+        margin-bottom : 1.5rem;
+    }
+    #item-container {
+        max-width : 400px;
+        float : left;
+    }
+    #items .block {
+        margin : 1.5rem 0;
+    }
+    #items .footer {
+        margin : 1.5rem -1.5rem 0;
         clear : both;
     }
+    #item-container-tbl {
+        display : block;
+        float : right;
+        width : 300px;
+        padding-top : 1.5rem;
+    }
 
-}*/
+}

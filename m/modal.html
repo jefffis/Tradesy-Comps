@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">Tradesy Product Page Comp</title>
+
+		<link href="css/modal.css" rel="stylesheet" type="text/css" />
+		<script>document.addEventListener('touchstart', function() {},false);</script>
+	</head>
+	<body>
+		
+	    <section id="content">
+	        <h1>
+            	Some Page
+            </h1>
+	        <p>
+	            This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content.
+	        </p>
+	        <p>
+	            This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content.
+	        </p>
+	        <button id="modal-show">
+	            Fire that modal
+	        </button>
+	        <p>
+	            This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content.
+	        </p>
+	        <p>
+	            This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content.
+	        </p>
+	        <p>
+	            This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content.
+	        </p>
+	        <p>
+	            This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content.
+	        </p>
+	    </section>
+	    <div id="modal">
+            <h2>
+            	Send a Message to {sellername}
+            </h2>
+            <p>
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore suscipit, labore officia beatae itaque veritatis, doloribus in ullam harum neque optio ipsa hic. Voluptatibus sint recusandae, esse, numquam itaque corporis!
+            </p>
+            <p>
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore suscipit, labore officia beatae itaque veritatis, doloribus in ullam harum neque optio ipsa hic. Voluptatibus sint recusandae, esse, numquam itaque corporis!
+            </p>
+            <p>
+            	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore suscipit, labore officia beatae itaque veritatis, doloribus in ullam harum neque optio ipsa hic. Voluptatibus sint recusandae, esse, numquam itaque corporis!
+            </p>
+            <p>
+	            This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content.
+	        </p>
+	        <p>
+	            This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content.
+	        </p>
+	        <p>
+	            This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content. This is in-canvas content.
+	        </p>
+            <button id="modal-cls">
+	            Close me
+	        </button>
+	    </div>
+
+	    <script>
+	    var html = document.documentElement,
+		    showModal = document.getElementById('modal-show'),
+	    	modal = document.getElementById('modal'),
+	    	closeModal = document.getElementById('modal-cls');
+
+	    showModal.onclick = function() {
+	    	modal.className = 'show';
+	    	html.className = 'no-scroll';
+	    }
+	    closeModal.onclick = function() {
+    		modal.className = 'show fade-out';
+	    	html.className = '';
+	    	clearModalClass();
+	    }
+	    function clearModalClass() {
+	    	setTimeout(function() {
+	    		modal.className = '';
+	    	}, 376);
+	    }
+	    </script>
+
+	</body>
+</html>
