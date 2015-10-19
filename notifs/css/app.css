@@ -63,6 +63,10 @@ span a:before {
 span a:nth-child(n+2) {
 	right : 2.5rem;
 }
+span .none:before, span .none:after {
+	/*background : #999;*/
+	display : none;
+}
 span a:focus {
 	background : rgba(255, 255, 255, 0.65);
 }
@@ -99,7 +103,7 @@ span a:focus {
 }*/
 #notifs-wrapper a {
 	display : block;
-	padding : .75rem;
+	padding : 1.5rem 1rem;
 	color : #111;
 	line-height : 1.2;
 	text-decoration : none;
@@ -107,17 +111,34 @@ span a:focus {
 #notifs-wrapper a:nth-child(n+1) {
 	border-bottom : 1px solid #ddd;
 }
-#notifs-wrapper a.cta {
-	position : absolute;
-	bottom : 0;
-	width : 100%;
+#notifs-wrapper a.empty {
+	padding : 3rem 1rem;
+	color : #999;
 	text-align : center;
-	border-top : 1px solid #ddd;
-	border-bottom : 0;
+}
+#notifs-wrapper .empty .msg:before {
+	display : block;
+	height : 5rem;
+	width : 5rem;
+	background : #efefef;
+	margin : auto auto 1rem;
+	border-radius: 4px;
+	content : "";
+}
+#notifs-wrapper a.cta {
+	/*position : absolute;
+	bottom : 0;
+	width : 100%;*/
+	/*text-align : center;*/
+	border-bottom : 1px solid #ddd;
+	/*border-bottom : 0;*/
 }
 #notifs-wrapper a:active {
 	background : #efefef;
 	opacity : 1;
+}
+#notifs-wrapper a.empty:active {
+	background : white; 
 }
 #notifs-wrapper .user {
 	display : block;
@@ -193,6 +214,9 @@ span a:focus {
 		/*box-shadow : 0 1px 0 rgba(0, 0, 0, .125);*/
 		opacity : 0;
 	}
+	#notifs-wrapper #notifs2 {
+		right : 3rem;
+	}
 	#notifs-wrapper > .show {
 		display : block;
 		top : -30px;
@@ -202,9 +226,8 @@ span a:focus {
 		animation : fadeInLg .25s ease-in-out;
 	}
 	#notifs-wrapper a.cta {
-		position : static;
-		border-top : 0;
-		/*text-align : left;*/
+		/*position : static;*/
+		border-bottom : 0;
 	}
 	#sub-wrapper {
 		max-height : 300px;
