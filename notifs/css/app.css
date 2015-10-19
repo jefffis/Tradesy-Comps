@@ -1,0 +1,261 @@
+@font-face{font-family:'proxima-nova-semi';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.svg#proxima-nova-semi") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
+
+* {
+	margin : 0;
+	padding : 0;
+	border : 0;
+	box-sizing : border-box;
+	font : normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
+}
+a:active, button:active {
+	opacity : .65;
+}
+header {
+	position : relative;
+	z-index : 1;
+	background : #111;
+	padding : .75rem;
+}
+header > a {
+	display : block;
+	/*position : absolute;
+	top : .75rem;
+	left : .75rem;*/
+	height : 2rem;
+	width : 2rem;
+	background : white;
+	border-radius : 100%;
+}
+header > span {
+	display : block;
+	position : absolute;
+	top : .75rem;
+	right : .75rem;
+}
+span a {
+	display : block;
+	position : absolute; 
+	top : .175rem;
+	right : 0;
+	height : 1.75rem;
+	width : 1.25rem;
+	background : white;
+	text-align : center;
+}
+span a:before, span a:after {
+	display : block;
+	position : absolute;
+	top : -5px;
+	right : -8px;
+	height : 20px;
+	width : 20px;
+	background : #ee7873;
+	border-radius : 100%;
+	color : white;
+	content : "";
+	font-size : 12px;
+	line-height : 1.6;
+}
+span a:before {
+	z-index : 2;
+	content : attr(data-num);
+}
+span a:nth-child(n+2) {
+	right : 2.5rem;
+}
+span a:focus {
+	background : rgba(255, 255, 255, 0.65);
+}
+#notifs-wrapper {
+	position : relative;
+}
+#notifs-wrapper > div {
+	/*display : none;*/
+	position : fixed;
+	bottom : -100vh;
+	left : 0;
+	z-index : 2;
+	height : 100vh;
+	width : 100%;
+	background : white;
+	/*padding : 0 .5rem;*/
+	/*opacity : 0;*/
+}
+#notifs-wrapper > .show {
+	/*display : block;*/
+	bottom : 0;
+	/*opacity : 1;*/
+	animation : fadeIn .25s ease-in-out;
+}
+/*#notifs-wrapper div:before {
+	display : block;
+	position : absolute;
+	top : -6px;
+	right : 12px;
+	border-bottom : 10px solid white;
+	border-left : 10px solid transparent;
+	border-right : 10px solid transparent;
+	content : "";
+}*/
+#notifs-wrapper a {
+	display : block;
+	padding : .75rem;
+	color : #111;
+	line-height : 1.2;
+	text-decoration : none;
+}
+#notifs-wrapper a:nth-child(n+1) {
+	border-bottom : 1px solid #ddd;
+}
+#notifs-wrapper a.cta {
+	position : absolute;
+	bottom : 0;
+	width : 100%;
+	text-align : center;
+	border-top : 1px solid #ddd;
+	border-bottom : 0;
+}
+#notifs-wrapper a:active {
+	background : #efefef;
+	opacity : 1;
+}
+#notifs-wrapper .user {
+	display : block;
+	float : left;
+	height : 35px;
+	width : 35px;
+	background : none no-repeat center;
+	background-size : contain;
+	margin-right : 1rem;
+	border-radius : 100%;
+	border : 1px solid #111;
+	/*box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.175);*/
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+	letter-spacing : 1.5px;
+	line-height : 37px;
+	text-align : center;
+	text-indent : 1.5px;
+	text-transform : uppercase;
+}
+#notifs-wrapper .msg {
+	display : block;
+	overflow : hidden;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+    line-height : 1.2;
+}
+#notifs-wrapper h3 {
+	/*margin-top : 2rem;*/
+	/*background : #efefef;*/
+	padding : 15px;
+	border-bottom : 1px solid #ddd;
+	font-size : 20px;
+	line-height : 1.3;
+	/*text-align : center;*/
+}
+#notifs-wrapper small {
+	display : block;
+	color : #999;
+	font-size : 12px;
+}
+#notifs-wrapper button {
+	position : absolute;
+	top : .6rem;
+	right : 1rem;
+	background : none;
+	outline : none;
+	color : #333;
+	font-size : 28px;
+}
+#notifs-wrapper button:before {
+	content : "\2715";
+}
+
+#main {
+	min-height : 2000px;
+	/*background : #efefef;*/
+}
+
+@media screen and (min-width : 768px) {
+
+	#notifs-wrapper > div {
+		display : none;
+		position : absolute;
+		bottom : auto;
+		top : -50px;
+		left : auto;
+		right : .75rem;
+		z-index : 3;
+		height : auto;
+		width : 25rem;
+		border : 1px solid #ddd;
+		border-top : 0;
+		/*box-shadow : 0 1px 0 rgba(0, 0, 0, .125);*/
+		opacity : 0;
+	}
+	#notifs-wrapper > .show {
+		display : block;
+		top : -30px;
+		bottom : auto;
+		opacity : 1;
+		animation : fadeIn 0 linear;
+		animation : fadeInLg .25s ease-in-out;
+	}
+	#notifs-wrapper a.cta {
+		position : static;
+		border-top : 0;
+		/*text-align : left;*/
+	}
+	#sub-wrapper {
+		max-height : 300px;
+		overflow : auto;
+	}
+	/*#notifs-wrapper div:before {
+		display : block;
+		position : absolute;
+		top : -6px;
+		right : 0;
+		border-bottom : 10px solid white;
+		border-left : 8px solid transparent;
+		border-right : 8px solid transparent;
+		content : "";
+	}*/
+
+	#focusss.show {
+		position : fixed;
+		z-index : 2;
+		top : 0;
+		left : 0;
+		height : 100%;
+		width : 100%;
+		background : rgba(0, 0, 0, 0.25);
+	}
+
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		/*display : none;*/
+		bottom : -100vh;
+		/*opacity : 0;*/
+	}
+	100% {
+		/*display : block;
+		top : 0;
+		opacity : 1;*/
+		bottom : 0;
+	}
+}
+
+@-webkit-keyframes fadeInLg {
+	0% {
+		display : none;
+		top : -50px;
+		opacity : 0;
+	}
+	100% {
+		display : block;
+		top : -30px;
+		opacity : 1;
+	}
+}

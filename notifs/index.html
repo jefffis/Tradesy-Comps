@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">Tradesy Product Page Comp</title>
+
+		<link href="css/app.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+
+		<header>
+			<a href="###"></a>
+			<span>
+				<a data-id="#notifs" data-num="2"></a>
+				<!-- <a data-id="#notifs2" data-num="3"></a> -->
+			</span>
+		</header>
+	
+		<section id="notifs-wrapper">
+			<div id="notifs">
+				<button></button>
+				<h3>
+					New Messages (2)
+				</h3>
+				<div id="sub-wrapper">
+					<a href="###">
+						<span class="user" style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_400x400.jpg); text-indent: -9999px; border: 0;">
+							JD
+						</span>
+						<span class="msg">
+							Some link from someone if new, will we want to create a new view to show all these notifications?
+						</span>
+						<small>
+							When this happened
+						</small>
+					</a>
+					<a href="###">
+						<span class="user">
+							ZA
+						</span>
+						<span class="msg">
+							Some link from someone if new, will we want to create a new view to show all these notifications?
+						</span>
+						<small>
+							When this happened
+						</small>
+					</a>
+					<a href="###">
+						<span class="user" style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_400x400.jpg); text-indent: -9999px; border: 0;">
+							JD
+						</span>
+						<span class="msg">
+							Some link from someone if new, will we want to create a new view to show all these notifications?
+						</span>
+						<small>
+							When this happened
+						</small>
+					</a>
+					<a href="###">
+						<span class="user">
+							ZA
+						</span>
+						<span class="msg">
+							Some link from someone if new, will we want to create a new view to show all these notifications?
+						</span>
+						<small>
+							When this happened
+						</small>
+					</a>
+				</div>
+				<a href="###" class="cta">View all New Messages</a>
+			</div>
+			<!-- <div id="notifs2">
+				<button></button>
+				<h3>
+					New Messages
+				</h3>
+				<a href="###">
+					<span style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_400x400.jpg); text-indent: -9999px; border: 0;">
+						JD
+					</span>
+					Some link from someone
+					<small>
+						When this happened
+					</small>
+				</a>
+				<a href="###">
+					<span>
+						ZA
+					</span>
+					Some link from someone
+					<small>
+						When this happened
+					</small>
+				</a>
+				<a href="###">View all Notifications</a>
+			</div> -->
+		</section>
+
+		<div id="main"></div>
+
+		<div id="focusss"></div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+			$(function() {
+				$('header span a').on('click', function() {
+					var id = $(this).data('id');
+
+					$(id).toggleClass('show');
+					$('#focusss').toggleClass('show');
+				});
+
+				$('button').on('click', function() {
+					$(this).parent().removeClass('show');
+					$('#focusss').removeClass('show');
+				});
+			});
+		</script>
+
+	</body>
+</html>
