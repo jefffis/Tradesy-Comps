@@ -12,163 +12,209 @@
 
 	<body>
 
-		<h1>Form Markup</h1>
+		<aside></aside>
 
-		<hr />
+		<section>
 
-		<form>
-			
-			<fieldset>
+			<h1>Form Markup</h1>
 
-				<h3 class="opt">Section Header</h3>
+			<hr />
+
+			<form>
 				
-				<label class="good">
-					<span>Input Label Text</span>
-					<input type="text" />
-					<small>Some contextual hints</small>
-				</label>
+				<fieldset>
 
-				<hr />
-
-				<label class="bad">
-					<span>Input Label Text</span>
-					<input type="text" />
-					<small>Some contextual hints</small>
-					<small class="error">Error message</small>
-				</label>
-
-				<hr />
-
-				<label>
-					<span class="opt">Input Label Text</span>
-					<input type="text" />
-					<small>Some contextual hints</small>
-				</label>
-
-				<hr />
-
-				<div class="two cf">
-
-					<label>
-						<span>Two Label UI</span>
+					<h3 class="opt">Section Header</h3>
+					
+					<label class="good">
+						<span>Input Label Text</span>
 						<input type="text" />
 						<small>Some contextual hints</small>
 					</label>
 
-					<label>
-						<span>Two Label UI</span>
+					<hr />
+
+					<label class="bad">
+						<span>Input Label Text</span>
 						<input type="text" />
+						<small>Some contextual hints</small>
+						<small class="error">Error message</small>
 					</label>
 
-				</div>
+					<hr />
 
-				<hr />
+					<label class="toggleable">
+						<span>Toggleable</span>
+						<span class="cf">
+							<input type="password" />
+							<em>Show</em>
+						</span>
+						<small class="note">Some contextual hints</small>
+					</label>
 
-				<div class="three cf">
+					<hr />
 
-					<h3 class="l">
-						Three Label UI
-					</h3>
+					<label data-content="@">
+						<span>Disable Input Label Text</span>
+						<input type="text" value="username" disabled />
+						<small>Some contextual hints</small>
+					</label>
+
+					<hr />
 
 					<label>
+						<span class="opt">Input Label Text</span>
 						<input type="text" />
+						<small>Some contextual hints</small>
 					</label>
+
+					<hr />
+
+					<div class="two cf">
+
+						<label>
+							<span>Two Label UI</span>
+							<input type="text" />
+							<small>Some contextual hints</small>
+						</label>
+
+						<label>
+							<span>Two Label UI</span>
+							<input type="text" />
+						</label>
+
+					</div>
+
+					<hr />
+
+					<div class="three cf">
+
+						<h3 class="l">
+							Three Label UI
+						</h3>
+
+						<label>
+							<input type="text" />
+						</label>
+
+						<label>
+							<input type="text" />
+						</label>
+
+						<label>
+							<input type="text" />
+						</label>
+
+					</div>
+
+					<hr />
 
 					<label>
-						<input type="text" />
+						<span>Textarea</span>
+						<textarea></textarea>
+						<small>Some contextual hints</small>
 					</label>
 
-					<label>
-						<input type="text" />
-					</label>
+					<hr />
 
-				</div>
-
-				<hr />
-
-				<label>
-					<span>Textarea</span>
-					<textarea></textarea>
-					<small>Some contextual hints</small>
-				</label>
-
-				<hr />
-
-				<div class="label">
-					<label>
-						<input type="checkbox" />
-						<span>Do you want to receive email updates?</span>
-					</label>
-				</div>
-
-				<hr />
-
-				<!-- <div class="multi"> -->
-
-					<h3>Is this right or wrong?</h3>
-					
 					<div class="label">
 						<label>
-							<input type="radio" name="foo" id="_" />
-							<span>Yes, it definitely is!</span>
+							<input type="checkbox" />
+							<span>Do you want to receive email updates?</span>
 						</label>
 					</div>
 
-					<hr class="min" />
+					<hr />
 
-					<div class="label">
-						<label>
-							<input type="radio" name="foo" id="__" />
-							<span>Nope</span>
-						</label>
+					<!-- <div class="multi"> -->
+
+						<h3>Is this right or wrong?</h3>
+						
+						<div class="label">
+							<label>
+								<input type="radio" name="foo" id="_" />
+								<span>Yes, it definitely is!</span>
+							</label>
+						</div>
+
+						<hr class="min" />
+
+						<div class="label">
+							<label>
+								<input type="radio" name="foo" id="__" />
+								<span>Nope</span>
+							</label>
+						</div>
+
+					<!-- </div> -->
+
+					<hr />
+
+					<div class="toggle">
+
+						<h3>Is this right or wrong?</h3>
+						
+						<div class="label">
+							<label>
+								<input type="radio" name="bar" id="___" />
+								<span>Yes</span>
+							</label>
+						</div>
+
+						<div class="label">
+							<label>
+								<input type="radio" name="bar" id="____" />
+								<span>No</span>
+							</label>
+						</div>
+
 					</div>
 
-				<!-- </div> -->
+					<hr />
 
-				<hr />
-
-				<div class="toggle">
-
-					<h3>Is this right or wrong?</h3>
-					
-					<div class="label">
-						<label>
-							<input type="radio" name="bar" id="___" />
-							<span>Yes</span>
-						</label>
+					<h3>Select your State:</h3>
+					<div class="select-wrap">
+						<select>
+							<option>California (CA)</option>
+							<option>Nevada (NV)</option>
+							<option>New Jersey (NJ)</option>
+							<option>Some Long Name Goes Here</option>
+						</select>
 					</div>
 
-					<div class="label">
-						<label>
-							<input type="radio" name="bar" id="____" />
-							<span>No</span>
-						</label>
-					</div>
+					<small class="note">We should strive to never use these unless no other option.</small>
 
-				</div>
+				</fieldset>
 
-				<hr />
+				<fieldset>
+					<button>
+						Submit Me
+					</button>
+				</fieldset>
 
-				<h3>Select your State:</h3>
-				<div class="select-wrap">
-					<select>
-						<option>California (CA)</option>
-						<option>Nevada (NV)</option>
-						<option>New Jersey (NJ)</option>
-					</select>
-				</div>
+			</form>
 
-				<small class="note">We should strive to never use these unless no other option.</small>
+		</section>
 
-			</fieldset>
-
-			<fieldset>
-				<button>
-					Submit Me
-				</button>
-			</fieldset>
-
-		</form>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+		$(function() {
+			$('input[type=radio], input[type=checkbox]').on('focus', function() {
+				$(this).parent().parent().addClass('focus');
+			});
+			$('input[type=radio], input[type=checkbox]').on('blur', function() {
+				$(this).parent().parent().removeClass('focus');
+			});
+			$('button').on('click', function() {
+				$(this).prop('disabled', true);
+				return false;
+			});
+			$('form').on('submit', function() {
+				$('button').prop('disabled', true);
+				return false;
+			});
+		});
+		</script>
 		
 	</body>
 </html>
