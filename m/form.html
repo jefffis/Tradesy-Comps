@@ -24,7 +24,7 @@
 				
 				<fieldset>
 
-					<h3 class="opt">Section Header</h3>
+					<!-- <h3 class="opt">Section Header</h3> -->
 					
 					<label class="good">
 						<span>Input Label Text</span>
@@ -37,8 +37,8 @@
 					<label class="bad">
 						<span>Input Label Text</span>
 						<input type="text" />
-						<small>Some contextual hints</small>
 						<small class="error">Error message</small>
+						<small>Some contextual hints</small>
 					</label>
 
 					<hr />
@@ -65,7 +65,7 @@
 					<label data-content="$">
 						<span>Monitary Input Label Text</span>
 						<input type="text" value="username" />
-						<small>Some contextual hints</small>
+						<!-- <small>Some contextual hints</small> -->
 					</label>
 
 					<hr />
@@ -73,7 +73,7 @@
 					<label>
 						<span class="opt">Optional Input Label Text</span>
 						<input type="text" />
-						<small>Some contextual hints</small>
+						<!-- <small>Some contextual hints</small> -->
 					</label>
 
 					<hr />
@@ -167,19 +167,26 @@
 
 					</div>
 
-					<hr />
+					<!-- <hr />
 
 					<h3>Select your State:</h3>
 					<div class="select-wrap">
-						<select>
-							<option>California (CA)</option>
-							<option>Nevada (NV)</option>
-							<option>New Jersey (NJ)</option>
-							<option>Some Long Name Goes Here</option>
-						</select>
+						<ul>
+							<li class="selected">California (CA)</li>
+							<li>Nevada (NV)</li>
+							<li>New Jersey (NJ)</li>
+							<li>Nevada (NV)</li>
+							<li>New Jersey (NJ)</li>
+							<li>Nevada (NV)</li>
+							<li>New Jersey (NJ)</li>
+							<li>Nevada (NV)</li>
+							<li>New Jersey (NJ)</li>
+							<li>Nevada (NV)</li>
+							<li>New Jersey (NJ)</li>
+						</ul>
 					</div>
 
-					<small class="note">We should strive to never use these unless no other option.</small>
+					<small class="note">We should strive to never use these unless no other option.</small> -->
 
 					<hr />
 
@@ -219,6 +226,17 @@
 				$('button').prop('disabled', true);
 				return false;
 			});
+			// $('.select-wrap li').on('click', function() {
+			// 	var par = $(this).parent().parent();
+
+			// 	if ( par.hasClass('open') ) {
+			// 		par.removeClass('open');
+			// 		$(this).addClass('selected');
+			// 	} else {
+			// 		par.addClass('open');
+			// 		par.find('li').removeClass('selected');
+			// 	}
+			// });
 		});
 		</script>
 		

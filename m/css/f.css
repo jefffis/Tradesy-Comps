@@ -33,10 +33,10 @@ h2 {
 h2 {
 	margin-bottom : .5rem;	
 }
-h2, h3 {
+h2/*, h3*/ {
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 }
-h3 {
+/*h3 {
 	letter-spacing : 1px;
 	text-indent : 1px;
 	text-transform : uppercase;
@@ -47,7 +47,7 @@ h3.l {
 	letter-spacing : normal;
 	text-indent : 0;
 	text-transform : none;
-}
+}*/
 
 hr {
 	height : 1px;
@@ -114,28 +114,34 @@ label span {
 	display : block;
 	cursor : pointer;
 }
-.toggleable input {
+/*.toggleable input {
 	max-width : 85%;
 	float : left;
-}
+	border-left : 0;
+}*/
 .toggleable em {
-	min-width : 15%;
+	/*min-width : 15%;
 	width : 2rem;
 	float : right;
 	padding : .55rem .75rem;
-	border: 1px solid #ddd;
-	border-left : 0;
+	border : 1px solid #ccc;
+	border-left : 0;*/
+	position : absolute;
+	top : 2.55rem;
+	right : 1rem;
+	color : #ee7873;
 	cursor : pointer;
-	/*font-size : 16px;*/
-	line-height : 1.4;
+	/*line-height : 1.4;*/
 	text-align : center;
 }
 .toggleable em:active {
-	background : #efefef;
-	color : rgba(0, 0, 0, .65);
+	opacity : .65;
 }
 label span, h3 {
-	margin-bottom : .35rem;
+	margin-bottom : .5rem;
+}
+label .cf {
+	margin-bottom : 0;
 }
 .opt:after {
 	display : inline-block;
@@ -155,7 +161,7 @@ label span, h3 {
 .good:after, .bad:after {
 	display : inline-block;
 	position : absolute;
-	top : 2.45rem;
+	top : 2.7rem;
 	right : .8rem;
 	height : 20px;
 	width : 20px;
@@ -164,7 +170,7 @@ label span, h3 {
 	content : "";
 }
 .bad:after {
-	top : 2.225rem;
+	top : 2.45rem;
 	right : .3rem;
 	background : none;
 	color : red;
@@ -175,25 +181,26 @@ label span, h3 {
 	border-color : red;
 }
 [data-content] {
-	padding-left : 2rem;
+	/*padding-left : 2rem;*/
 }
-[data-content] span {
-	margin-left : -2rem;
+[data-content] input[type=text] {
+	/*margin-left : -2rem;*/
+	padding-left : 2rem;
 }
 [data-content]:before {
 	display : block;
 	position : absolute;
-	top : 1.85rem;
-	left : 0;
-	height: 40px;
-	width : 1.99rem;
+	top : 2.6rem;
+	left : .75rem;
+	/*height: 40px;*/
+	/*width : 1.99rem;*/
 	/*background : #efefef;*/
-	border : 1px solid #ddd;
-	border-right : 0;
+	/*border : 1px solid #ddd;
+	border-right : 0;*/
 	color : #999;
 	content : attr(data-content);
-	line-height : 2.6; 
-	text-align : center;
+	/*line-height : 2.6; */
+	/*text-align : center;*/
 }
 
 /*** text inputs ***/
@@ -204,29 +211,39 @@ input[type=text], input[type=password] {
 }
 input[type=text]:disabled {
 	background : #efefef;
+	color : #999;
 	cursor : not-allowed;
 }
 small {
-	display : none;
+	display : block;
+	/*visibility : hidden;*/
 	margin-top : .25rem;
 	color : #999;
-	font-size: 12px;
+	font-size: 13px;
+}
+small + small {
+	margin-top: 0;
 }
 .error {
-	display : block;
+	/*display : block;
+	visibility : visible;*/
 	color : red;
 }
-.note {
+/*.note {
 	display : block;
-}
-input:focus + small, textarea:focus + small {
+	visibility : visible;
+}*/
+/*input:focus + small, textarea:focus + small {
 	display : block;
-}
+	visibility : visible;
+}*/
 
 /*** textarea ***/
 textarea {
 	display : block;
 	min-height : 75px;
+	max-height : 300px;
+	max-width : 480px;
 	width : 100%;
 	padding : .5rem;
 }
@@ -236,21 +253,22 @@ textarea {
 	position : relative;
 	max-width : 10rem;
 	overflow : hidden;
-	padding : .5rem;
-	border : 1px solid #999;
+	/*padding : .5rem .75rem;*/
+	border : 1px solid #ccc;
 }
-.select-wrap:after, .select-wrap:before {
+.select-wrap:after/*, .select-wrap:before*/ {
 	display : block;
 	position : absolute;
-	top : 1.125rem;
+	top : 1.325rem;
 	right : .5rem;
-	z-index : 2;
-	border-top : 6px solid #111;
+	z-index : 1;
+	border-top : 7px solid #111;
 	border-left : 6px solid transparent;
 	border-right : 6px solid transparent;
 	content : "";
 }
-.select-wrap:before {
+/*.select-wrap:before {
+	display : none;
 	top: 0;
 	right : 0;
 	z-index : 1;
@@ -258,6 +276,37 @@ textarea {
 	width : 30px;
 	background : white;
 	border : 0;
+}*/
+.select-wrap.open:after {
+	/*transform : rotate(180deg);
+	top : 1.2rem;*/
+	display : none;
+}
+.select-wrap ul {
+	position : relative;
+	z-index : 2;
+	max-height : 250px;
+	overflow : auto;
+}
+.select-wrap li {
+	display : none;
+	padding : .75rem;
+	cursor : pointer;
+}
+.open li:nth-child(n+2) {
+	border-top : 1px solid #ddd;
+}
+.select-wrap li:hover {
+	background : rgba(0, 0, 0, 0.05);
+}
+.select-wrap li:active {
+	opacity : .65;
+}
+.select-wrap .selected {
+	display : block;
+}
+.open li {
+	display : block;
 }
 select {
 	position : relative;
@@ -301,9 +350,9 @@ input[type=radio], input[type=checkbox] {
 input[type=checkbox] + span:before, input[type=radio] + span:before {
 	display : inline-block;
 	position : relative;
-	top : 3px;
-	height : 18px;
-	width : 18px;
+	top : 2px;
+	height : 16px;
+	width : 16px;
 	margin-right : .5rem;
 	box-shadow : 0 0 0 1px #111;
 	border-radius : 3px;
@@ -317,13 +366,16 @@ input[type=checkbox] + span:before, input[type=radio] + span:before {
 }
 input[type=checkbox]:checked + span:before, input[type=radio]:checked + span:before {
 	background : #2a2a2a url(../img/check-white.png) no-repeat center;
-	background-size: 14px;
+	background-size: 12px;
 }
 input[type=radio] + span:before {
-	top : 2px;
-	height : 14px;
-	width : 14px;
+	top : 0;
+	height : 12px;
+	width : 12px;
+	background : white;
 	border-radius : 100%;
+	box-shadow : 0 0 0 2px white, 0 0 0 3px #111;
+	margin-left : 2px;
 }
 /*input[type=checkbox]:focus + span:before,
 input[type=radio]:focus + span:before {
@@ -332,7 +384,6 @@ input[type=radio]:focus + span:before {
 }*/
 input[type=radio]:checked + span:before {
 	background : #111;
-	box-shadow : 0 0 0 2px white, 0 0 0 3px #111;
 }
 
 /*** toggle ***/
@@ -343,7 +394,7 @@ input[type=radio]:checked + span:before {
 	display : inline-block;
 	min-width : 5rem;
 	/*background : #efefef;*/
-	box-shadow : 0 0 0 1px #999 inset;
+	box-shadow : 0 0 0 1px #ccc inset;
 	margin : 0;
 	padding : .5rem .75rem;
 	/*color : inherit;*/
@@ -364,14 +415,14 @@ input[type=radio]:checked + span:before {
 /*** button ***/
 button {
 	background : #111;
-	min-width : 15rem;
-	padding : 1rem 1.25rem;
+	min-width : 12.5rem;
+	padding : 1rem;
 	color : white;
 	cursor : pointer;
 	font-size : 18px;
-	letter-spacing : 2.5px;
-	text-indent : 2.5px;
-	text-transform : uppercase;
+	letter-spacing : 1px;
+	text-indent : 1px;
+	/*text-transform : uppercase;*/
 }
 button:disabled {
 	background : #2a2a2a;
@@ -416,12 +467,12 @@ button:active {
 
 @media screen and (max-width : 500px) {
 
-	.toggleable input {
+	/*.toggleable input {
 		max-width : 75%;
 	}
 	.toggleable em {
 		width : 25%;
-	}
+	}*/
 	button {
 		max-width : 300px;
 		width : 100%;
