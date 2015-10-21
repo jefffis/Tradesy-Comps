@@ -455,6 +455,14 @@ button:active {
 		max-width : 15rem;
 	}
 
+	.select-wrap:after {
+		right : .95rem;
+	}
+
+	.select-wrap:before {
+		width : 40px;
+	}
+
 	select {
 		width : 17rem;
 	}
