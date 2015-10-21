@@ -32,15 +32,35 @@ header > span {
 	top : .75rem;
 	right : .75rem;
 }
-span a {
+span a, .sep {
 	display : block;
-	position : absolute; 
+	position : absolute;
 	top : .175rem;
 	right : 0;
 	height : 1.75rem;
 	width : 1.25rem;
 	background : white;
 	text-align : center;
+}
+span a:nth-child(n+2) {
+	right : 2.5rem;
+}
+.sep {
+	background : none;
+}
+.sep a {
+	position : relative;
+	top : 0;
+	right : 1.75rem;
+}
+.sep a:first-child:before, .sep a:first-child:after {
+	display : none;
+}
+.sep a:last-child {
+	position : absolute;
+	height : auto;
+	top : .5rem;
+	right : .5rem;
 }
 span a:before, span a:after {
 	display : block;
@@ -59,9 +79,6 @@ span a:before, span a:after {
 span a:before {
 	z-index : 2;
 	content : attr(data-num);
-}
-span a:nth-child(n+2) {
-	right : 2.5rem;
 }
 span .none:before, span .none:after {
 	/*background : #999;*/

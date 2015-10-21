@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">Tradesy Forms</title>
+
+		<link href="css/f.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+
+		<h1>Form Markup</h1>
+
+		<hr />
+
+		<form>
+			
+			<fieldset>
+				
+				<label class="good">
+					<span>Input Label Text</span>
+					<input type="text" />
+					<small>Some contextual hints</small>
+				</label>
+
+				<hr />
+
+				<label class="bad">
+					<span>Input Label Text</span>
+					<input type="text" />
+					<small>Some contextual hints</small>
+					<small class="error">Error message</small>
+				</label>
+
+				<hr />
+
+				<label>
+					<span class="opt">Input Label Text</span>
+					<input type="text" />
+					<small>Some contextual hints</small>
+				</label>
+
+				<hr />
+
+				<label>
+					<span>Textarea</span>
+					<textarea></textarea>
+					<small>Some contextual hints</small>
+				</label>
+
+				<hr />
+
+				<h3>Select something</h3>
+				<div class="select-wrap">
+					<select>
+						<option>Something</option>
+						<option>Something</option>
+						<option>Something</option>
+					</select>
+				</div>
+
+				<hr />
+
+				<div class="label">
+					<label>
+						<input type="checkbox" />
+						<span>Checkbox Label Text</span>
+					</label>
+				</div>
+
+				<hr />
+
+				<!-- <div class="multi"> -->
+
+					<h3>Is this right or wrong?</h3>
+					
+					<div class="label">
+						<label>
+							<input type="radio" name="foo" />
+							<span>Radio Label Text</span>
+						</label>
+					</div>
+
+					<hr class="min" />
+
+					<div class="label">
+						<label>
+							<input type="radio" name="foo" />
+							<span>Radio Label Text</span>
+						</label>
+					</div>
+
+				<!-- </div> -->
+
+				<hr />
+
+				<div class="toggle">
+
+					<h3>Is this right or wrong?</h3>
+					
+					<div class="label">
+						<label>
+							<input type="radio" name="bar" />
+							<span>Yes</span>
+						</label>
+					</div>
+
+					<div class="label">
+						<label>
+							<input type="radio" name="bar" />
+							<span>No</span>
+						</label>
+					</div>
+
+				</div>
+
+			</fieldset>
+
+			<fieldset>
+				<button>
+					Submit Me
+				</button>
+			</fieldset>
+
+		</form>
+		
+	</body>
+</html>
