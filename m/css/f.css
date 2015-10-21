@@ -122,10 +122,11 @@ label span {
 	min-width : 15%;
 	width : 2rem;
 	float : right;
-	padding : .5rem .75rem;
+	padding : .55rem .75rem;
 	border: 1px solid #ddd;
 	border-left : 0;
 	cursor : pointer;
+	/*font-size : 16px;*/
 	line-height : 1.4;
 	text-align : center;
 }
@@ -174,17 +175,25 @@ label span, h3 {
 	border-color : red;
 }
 [data-content] {
-	padding-left : 1.25rem;
+	padding-left : 2rem;
 }
 [data-content] span {
-	margin-left : -1.25rem;
-	cursor : default;
+	margin-left : -2rem;
 }
 [data-content]:before {
+	display : block;
 	position : absolute;
-	top : 2.35rem;
+	top : 1.85rem;
 	left : 0;
+	height: 40px;
+	width : 1.99rem;
+	/*background : #efefef;*/
+	border : 1px solid #ddd;
+	border-right : 0;
+	color : #999;
 	content : attr(data-content);
+	line-height : 2.6; 
+	text-align : center;
 }
 
 /*** text inputs ***/
@@ -230,16 +239,25 @@ textarea {
 	padding : .5rem;
 	border : 1px solid #999;
 }
-.select-wrap:after {
+.select-wrap:after, .select-wrap:before {
 	display : block;
 	position : absolute;
-	top : 0;
+	top : 1.125rem;
+	right : .5rem;
+	z-index : 2;
+	border-top : 6px solid #111;
+	border-left : 6px solid transparent;
+	border-right : 6px solid transparent;
+	content : "";
+}
+.select-wrap:before {
+	top: 0;
 	right : 0;
+	z-index : 1;
 	height : 100%;
 	width : 30px;
-	background : white url(https://cdn0.iconfinder.com/data/icons/arrows-android-l-lollipop-icon-pack/24/expand2-128.png) no-repeat center;
-	background-size : 16px;
-	content : "";
+	background : white;
+	border : 0;
 }
 select {
 	position : relative;
@@ -298,7 +316,7 @@ input[type=checkbox] + span:before, input[type=radio] + span:before {
 	opacity : .65;
 }
 input[type=checkbox]:checked + span:before, input[type=radio]:checked + span:before {
-	background : url(../img/check-black.png) no-repeat center;
+	background : #2a2a2a url(../img/check-white.png) no-repeat center;
 	background-size: 14px;
 }
 input[type=radio] + span:before {
@@ -330,9 +348,6 @@ input[type=radio]:checked + span:before {
 	padding : .5rem .75rem;
 	/*color : inherit;*/
 	text-align : center;
-}
-.toggle .label + .label span {
-	margin-left : -5px;
 }
 .toggle span:active {
 	opacity : .65;
@@ -394,7 +409,7 @@ button:active {
 @media screen and (max-width : 374px) {
 	
 	body {
-		padding : 1.5rem;
+		padding : 1.25rem;
 	}
 
 }
@@ -406,6 +421,11 @@ button:active {
 	}
 	.toggleable em {
 		width : 25%;
+	}
+	button {
+		max-width : 300px;
+		width : 100%;
+		/*margin : auto;*/
 	}
 }
 
@@ -426,9 +446,17 @@ button:active {
 
 	section {
 		width : 60%;
-		max-width : 27rem;
+		max-width : 30rem;
 		float : left;
 		padding-bottom : 2rem;
+	}
+
+	.select-wrap {
+		max-width : 15rem;
+	}
+
+	select {
+		width : 17rem;
 	}
 
 }

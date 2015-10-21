@@ -16,7 +16,7 @@
 
 		<section>
 
-			<h1>Form Markup</h1>
+			<h1>Sample Form</h1>
 
 			<hr />
 
@@ -44,12 +44,12 @@
 					<hr />
 
 					<label class="toggleable">
-						<span>Toggleable</span>
+						<span>Toggleable Password</span>
 						<span class="cf">
 							<input type="password" />
 							<em>Show</em>
 						</span>
-						<small class="note">Some contextual hints</small>
+						<small class="note">Persistent contextual hints</small>
 					</label>
 
 					<hr />
@@ -62,8 +62,16 @@
 
 					<hr />
 
+					<label data-content="$">
+						<span>Monitary Input Label Text</span>
+						<input type="text" value="username" />
+						<small>Some contextual hints</small>
+					</label>
+
+					<hr />
+
 					<label>
-						<span class="opt">Input Label Text</span>
+						<span class="opt">Optional Input Label Text</span>
 						<input type="text" />
 						<small>Some contextual hints</small>
 					</label>
@@ -117,15 +125,6 @@
 
 					<hr />
 
-					<div class="label">
-						<label>
-							<input type="checkbox" />
-							<span>Do you want to receive email updates?</span>
-						</label>
-					</div>
-
-					<hr />
-
 					<!-- <div class="multi"> -->
 
 						<h3>Is this right or wrong?</h3>
@@ -161,6 +160,8 @@
 							</label>
 						</div>
 
+						&nbsp;
+
 						<div class="label">
 							<label>
 								<input type="radio" name="bar" id="____" />
@@ -183,6 +184,15 @@
 					</div>
 
 					<small class="note">We should strive to never use these unless no other option.</small>
+
+					<hr />
+
+					<div class="label">
+						<label>
+							<input type="checkbox" />
+							<span>Do you want to receive email updates?</span>
+						</label>
+					</div>
 
 				</fieldset>
 
