@@ -19,6 +19,8 @@
 		<form>
 			
 			<fieldset>
+
+				<h3 class="opt">Section Header</h3>
 				
 				<label class="good">
 					<span>Input Label Text</span>
@@ -45,6 +47,45 @@
 
 				<hr />
 
+				<div class="two cf">
+
+					<label>
+						<span>Two Label UI</span>
+						<input type="text" />
+						<small>Some contextual hints</small>
+					</label>
+
+					<label>
+						<span>Two Label UI</span>
+						<input type="text" />
+					</label>
+
+				</div>
+
+				<hr />
+
+				<div class="three cf">
+
+					<h3 class="l">
+						Three Label UI
+					</h3>
+
+					<label>
+						<input type="text" />
+					</label>
+
+					<label>
+						<input type="text" />
+					</label>
+
+					<label>
+						<input type="text" />
+					</label>
+
+				</div>
+
+				<hr />
+
 				<label>
 					<span>Textarea</span>
 					<textarea></textarea>
@@ -53,21 +94,10 @@
 
 				<hr />
 
-				<h3>Select something</h3>
-				<div class="select-wrap">
-					<select>
-						<option>Something</option>
-						<option>Something</option>
-						<option>Something</option>
-					</select>
-				</div>
-
-				<hr />
-
 				<div class="label">
 					<label>
 						<input type="checkbox" />
-						<span>Checkbox Label Text</span>
+						<span>Do you want to receive email updates?</span>
 					</label>
 				</div>
 
@@ -79,8 +109,8 @@
 					
 					<div class="label">
 						<label>
-							<input type="radio" name="foo" />
-							<span>Radio Label Text</span>
+							<input type="radio" name="foo" id="_" />
+							<span>Yes, it definitely is!</span>
 						</label>
 					</div>
 
@@ -88,8 +118,8 @@
 
 					<div class="label">
 						<label>
-							<input type="radio" name="foo" />
-							<span>Radio Label Text</span>
+							<input type="radio" name="foo" id="__" />
+							<span>Nope</span>
 						</label>
 					</div>
 
@@ -103,19 +133,32 @@
 					
 					<div class="label">
 						<label>
-							<input type="radio" name="bar" />
+							<input type="radio" name="bar" id="___" />
 							<span>Yes</span>
 						</label>
 					</div>
 
 					<div class="label">
 						<label>
-							<input type="radio" name="bar" />
+							<input type="radio" name="bar" id="____" />
 							<span>No</span>
 						</label>
 					</div>
 
 				</div>
+
+				<hr />
+
+				<h3>Select your State:</h3>
+				<div class="select-wrap">
+					<select>
+						<option>California (CA)</option>
+						<option>Nevada (NV)</option>
+						<option>New Jersey (NJ)</option>
+					</select>
+				</div>
+
+				<small class="note">We should strive to never use these unless no other option.</small>
 
 			</fieldset>
 
