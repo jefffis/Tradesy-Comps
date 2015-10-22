@@ -349,7 +349,7 @@
 
 					<div class="pills">
 						
-						<a href="##">Miller</a>
+						<a href="##" class="active">Miller</a>
 						<a href="##">Frank Miller</a>
 						<a href="##">Cooper</a>
 						<a href="##">Miller Lite</a>
@@ -385,10 +385,7 @@
 
 				itemList.each(function() {
 					var items = $(this).find('li').length,
-					itemHeight = $(this).find('li:first').outerHeight();//,
-					// itemBorder = (items - 1) * 1;
-
-					// $(this).css('max-height', (items * itemHeight) + itemBorder);
+					itemHeight = $(this).find('li:first').outerHeight();
 					$(this).css('max-height', items * itemHeight);
 				});
 

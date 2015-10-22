@@ -328,6 +328,10 @@ textarea {
 .select-wrap .selected {
 	display : block;
 }
+/*.open ul {
+	position : absolute;
+	width : 100%;
+}*/
 .open li {
 	display : block;
 }
@@ -531,6 +535,9 @@ button:active {
 	cursor : pointer;
 	text-align : center;
 }
+.tile:hover {
+	background : #efefef;
+}
 .tile + .tile {
 	border-left : 0;
 }
@@ -551,7 +558,7 @@ button:active {
 	margin: auto auto 1.5rem;
 }
 .tile:active path {
-	fill : rgba(255, 255, 255, 0.65);
+	fill : rgba(255, 255, 255, 0.5);
 }
 .tile.checked path {
 	fill : white;
@@ -567,24 +574,25 @@ button:active {
 .pills a {
 	display : inline-block;
 	position : relative;
-	/*background : white;*/
-	background : #111;
+	background : white;
+	/*background : #111;*/
 	margin : 5px;
 	padding : .5rem 2rem;
 	border-radius : 20px;
-	/*box-shadow : 0 0 0 1px #111 inset;*/
-	color : white;
+	box-shadow : 0 0 0 1px #111 inset;
+	color : #111;
 	text-decoration : none;
 }
 .pills a:before {
 	position : absolute;
 	top : .59rem;
     left : .85rem;
-	color : #111;
+	color : white;
 	content : "\2715";
 	font-size : 15px;
 }
-.pills a:hover {
+.pills a:hover, .pills .active {
+	background : #111;
 	color : white;
 }
 .pills a:hover:before {
@@ -604,10 +612,11 @@ button:active {
 	position : relative;
 	background : white;
 	margin : 5px;
-	padding : .5rem 2rem;
+	padding : .35rem .75rem;
 	border-radius : 5px;
 	border : 1px solid #ccc;
 	color : #111;
+	font-size : 13px;
 	text-decoration : none;
 }
 .tags a:hover {
