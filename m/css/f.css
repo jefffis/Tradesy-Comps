@@ -324,6 +324,9 @@ select {
 	/*min-width : 10rem;
 	border : 1px solid #ccc;*/
 }
+select:active {
+	opacity : .65;
+}
 
 /*** non-text input focus states ***/
 /*button:focus,*/
