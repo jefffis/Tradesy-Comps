@@ -99,7 +99,6 @@
 					<label data-content="$">
 						<span>Monitary Input Label Text</span>
 						<input type="text" value="4,275.00" />
-						<!-- <small>Some contextual hints</small> -->
 					</label>
 
 					<hr />
@@ -107,7 +106,22 @@
 					<label>
 						<span class="opt">Optional Input Label Text</span>
 						<input type="text" />
-						<!-- <small>Some contextual hints</small> -->
+					</label>
+
+					<hr />
+
+					<label>
+						<span>Upload a File</span>
+						<input type="file" accept="image/*" />
+						<em>Add file</em>
+					</label>
+
+					<hr />
+
+					<label class="photo">
+						<span>Multiple Image Upload</span>
+						<input type="file" accept="image/*" />
+						<em>Add image</em>
 					</label>
 
 					<hr />
@@ -392,6 +406,13 @@
 				if ( $(this).hasClass('no-focus') ) return;
 
 				$(this).parent().parent().removeClass('focus focusable');
+			});
+
+			// file upload
+			$('input[type=file]').on('change', function() {
+				if ( $(this).parent().hasClass('photo') ) return $(this).parent().addClass('added').find('input').prop('disabled', true).next('em').html('Loading&hellip;');
+
+				$(this).parent().after('<hr class="min" /><small class="success">Selected ' + $(this).val() + '</small>');
 			});
 
 			// item tile

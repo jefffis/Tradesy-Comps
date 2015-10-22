@@ -43,6 +43,10 @@ h2 {
 	text-transform : uppercase;
 }
 
+.hide {
+	display : none;
+}
+
 hr {
 	height : 1px;
 	background : #ddd;
@@ -357,7 +361,7 @@ select:focus {
 	display : inline;
 	/*color : #666;*/
 }
-input[type=radio], input[type=checkbox] {
+input[type=radio], input[type=checkbox], input[type=file] {
 	position : absolute;
 	left : -9999px;
 }
@@ -391,13 +395,72 @@ input[type=radio] + span:before {
 	box-shadow : 0 0 0 2px white, 0 0 0 3px #111;
 	/*margin-left : 2px;*/
 }
-/*input[type=checkbox]:focus + span:before,
-input[type=radio]:focus + span:before {
-	background : white;
-	box-shadow : 0 0 0 2px white, 0 0 0 3px #111, , 0 0 0 4px #ee7873;
-}*/
 input[type=radio]:checked + span:before {
 	background : #111;
+}
+
+/*** File Upload ***/
+input[type=file] + em {
+	display : inline-block;
+	min-width : 5rem;
+	background : #111;
+	padding : .5rem .75rem;
+	color : white;
+	cursor : pointer;
+	/*letter-spacing : .5px;*/
+	text-align : center;
+	/*text-indent : .5px;*/
+	text-transform : capitalize;
+}
+input[type=file]:active + em {
+	background-color : #2a2a2a;
+	color : rgba(255, 255, 255, 0.65);
+}
+
+/*** photo card ***/
+.photo {
+	display : inline-block;
+	width : 150px;
+	padding : 0;
+	border : 1px solid #ccc;
+	cursor : pointer;
+	text-align : center;
+}
+.photo span {
+	/*position : relative;
+	top : -2.5rem;*/
+	height : 80px;
+	width : 80px;
+	background : url(../img/image.png) no-repeat center;
+	background-size : contain;
+	margin : 2.5rem auto;
+	text-indent : -9999px;
+}
+.photo:active span {
+	opacity : .65;
+}
+.added span {
+	transform : rotate(360deg);
+	animation : spin 1s linear infinite;
+	border-top : 6px solid #ddd;
+    border-right : 6px solid #ddd;
+    border-bottom : 6px solid rgba(0, 0, 0, 0.5);
+    border-left : 6px solid rgba(0, 0, 0, 0.5);
+	border-radius : 100%;
+	background : none;
+}
+.photo input[type=file] + em {
+	width : 100%;
+	background : none;
+	border-top : 1px solid #ccc;
+	color : #ee7873;
+}
+.photo:active input + em {
+	background : transparent;
+	opacity : .65;
+}
+.added input[type=file] + em {
+	opacity : .65;
 }
 
 /*** toggle ***/
@@ -407,11 +470,9 @@ input[type=radio]:checked + span:before {
 .toggle span {
 	display : inline-block;
 	min-width : 5rem;
-	/*background : #efefef;*/
 	box-shadow : 0 0 0 1px #ccc inset;
 	margin : 0;
 	padding : .5rem .75rem;
-	/*color : inherit;*/
 	text-align : center;
 }
 .toggle span:active {
@@ -420,7 +481,6 @@ input[type=radio]:checked + span:before {
 .toggle input:checked + span {
 	background : #111;
 	box-shadow : none;
-	/*margin-left : 0;*/
 	color : white;
 }
 
@@ -431,10 +491,10 @@ button {
 	padding : 1rem;
 	color : white;
 	cursor : pointer;
+	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 	font-size : 18px;
-	letter-spacing : 1px;
-	text-indent : 1px;
-	/*text-transform : uppercase;*/
+	letter-spacing : .5px;
+	text-indent : .5px;
 }
 button:disabled {
 	background-color : #2a2a2a;
