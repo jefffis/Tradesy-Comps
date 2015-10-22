@@ -219,9 +219,65 @@
 				</fieldset>
 
 				<fieldset>
-					<button data-submitted="Submitting">
+				
+					<button id="submit" data-submitted="Submitting">
 						Submit Me
 					</button>
+				
+				</fieldset>
+
+				<fieldset id="search">
+
+					<h2>Search</h2>
+
+					<div class="search">
+						
+						<label>
+							<input type="text" id="search" />
+							<small>Search Tradesy.com for &rsquo;Louis Vuitton&lsquo;, or &rsquo;Tory Burch&lsquo;, or &rsquo;shoes&lsquo;; for example.</small>
+							<button id="search-submit">Search</button>
+						</label>
+
+						<div id="komplete">
+							<a href="##">Miller <span>in Clothing</span></a>
+							<a href="##">Frank Miller <span>in Cloting</span></a>
+							<a href="##">Cooper <span>in Clothing</span></a>
+							<a href="##">Miller Lite <span>in Clothing</span></a>
+							<a href="##">Mueller <span>in Clothing</span></a>
+						</div>
+
+					</div>
+
+				</fieldset>
+
+				<fieldset id="misc">
+
+					<h2>Pills</h2>
+
+					<div class="pills">
+						
+						<a href="##">Miller</a>
+						<a href="##">Frank Miller</a>
+						<a href="##">Cooper</a>
+						<a href="##">Miller Lite</a>
+						<a href="##">Mueller</a>
+
+					</div>
+
+					<hr />
+
+					<h2>Tags</h2>
+
+					<div class="tags">
+						
+						<a href="##">Miller</a>
+						<a href="##">Frank Miller</a>
+						<a href="##">Cooper</a>
+						<a href="##">Miller Lite</a>
+						<a href="##">Mueller</a>
+
+					</div>
+				
 				</fieldset>
 
 			</form>
@@ -251,6 +307,10 @@
 				$(this).parent().parent().removeClass('focus');
 			});
 
+			// $('#search').on('keyup', function() {
+			// 	if ( $(this).val() !== '' ) $('#komplete').show();
+			// });
+
 			$('.toggleable em').on('click', function() {
 				var input = $(this).prev(),
 					name = input.attr('name'),
@@ -268,12 +328,16 @@
 				}
 			});
 
-			$('button').on('click', function() {
+			$('#search-submit').on('click', function() {
+				return false;
+			});
+
+			$('#submit').on('click', function() {
 				$(this).prop('disabled', true).text($(this).data('submitted'));
 				return false;
 			});
 			$('form').on('submit', function() {
-				$('button').prop('disabled', true);
+				$('#submit').prop('disabled', true);
 				return false;
 			});
 			
