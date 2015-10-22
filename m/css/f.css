@@ -16,6 +16,7 @@
 	border : 0;
 	box-sizing : border-box;
 	font : normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
+	-webkit-tap-highlight-color : rgba(0, 0, 0, 0);
 }
 body {
 	max-width : 30rem;
@@ -207,7 +208,7 @@ label .cf {
 input[type=text], input[type=password] {
 	display : block;
 	width : 100%;
-	padding : .5rem;
+	padding : .5rem .6rem;
 }
 input[type=text]:disabled {
 	background : #efefef;
@@ -251,7 +252,6 @@ textarea {
 /*** select ***/
 .select-wrap {
 	position : relative;
-	/*max-width : 10rem;*/
 	overflow : hidden;
 	/*padding : .5rem .75rem;*/
 	border : 1px solid #ccc;
@@ -260,7 +260,7 @@ textarea {
 	display : block;
 	position : absolute;
 	top : 1.05rem;
-	right : .5rem;
+	right : .75rem;
 	z-index : 1;
 	border-top : 7px solid #111;
 	border-left : 6px solid transparent;
@@ -315,10 +315,10 @@ textarea {
 }
 select {
 	position : relative;
-	left : .25rem;
+	left : .75rem;
 	z-index: 2;
 	height : 2.5rem;
-	width : 20rem;
+	width : 110%;
 	background : none;
 	outline : none;
 	/*min-width : 10rem;
@@ -436,6 +436,7 @@ button {
 }
 button:disabled {
 	background : #2a2a2a;
+	cursor : default;
 }
 button:disabled:before {
 	transform : rotate(360deg);
@@ -490,6 +491,14 @@ button:active {
 	}
 }
 
+@media screen and (min-width : 501px) {
+	
+	select {
+		left : .25rem;
+	}
+
+}
+
 @media screen and (min-width : 769px) {
 
 	body {
@@ -523,10 +532,6 @@ button:active {
 	.select-wrap:before {
 		width : 40px;
 	}
-
-	/*select {
-		width : 17rem;
-	}*/
 
 }
 

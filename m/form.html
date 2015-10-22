@@ -8,6 +8,7 @@
 		<title dir="ltr">Tradesy Forms</title>
 
 		<link href="css/f.css" rel="stylesheet" type="text/css" />
+		<script>document.addEventListener("touchstart", function() {},false);</script>
 	</head>
 
 	<body>
@@ -169,7 +170,7 @@
 
 					<hr />
 
-					<h3>Native select your State:</h3>
+					<h3>Please select your State:</h3>
 					<div class="select-wrap">
 						<select>
 							<option value="">California (CA)</option>
@@ -190,19 +191,21 @@
 
 					<hr />
 
-					<h3>Custom select your State:</h3>
+					<h3>Please select your Country:</h3>
 					<div class="select-wrap">
 						<ul>
-							<li class="selected">California (CA)</li>
-							<li>Nevada (NV)</li>
-							<li>New Jersey (NJ)</li>
-							<li>Nevada (NV)</li>
-							<li>New Jersey (NJ)</li>
+							<li class="selected">United States (USA)</li>
+							<li>United Kingdom (UK)</li>
+							<li>France (FR)</li>
+							<li>Australia (AUS)</li>
+							<li>Canada (CA)</li>
+							<li>Other</li>
 						</ul>
 						<span></span>
+						<input type="hidden" />
 					</div>
 
-					<small>We should probably limit these to 5 options at the max.</small>
+					<small>We should probably limit these to 5/6 options at the max.</small>
 
 					<hr />
 
@@ -216,7 +219,7 @@
 				</fieldset>
 
 				<fieldset>
-					<button>
+					<button data-submitted="Submitting">
 						Submit Me
 					</button>
 				</fieldset>
@@ -247,23 +250,48 @@
 			$('input[type=radio], input[type=checkbox]').on('blur', function() {
 				$(this).parent().parent().removeClass('focus');
 			});
+
+			$('.toggleable em').on('click', function() {
+				var input = $(this).prev(),
+					name = input.attr('name'),
+					id = input.attr('id'),
+					val = input.val();
+
+				if ( $(this).text() === 'Show' ) {
+					$(this).text('Hide');
+					$(input).after('<input type="text" name="' + name + '" id="' + id + '" value="' + val + '" />');
+					$(input).remove();
+				} else {
+					$(this).text('Show');
+					$(input).after('<input type="password" name="' + name + '" id="' + id + '" value="' + val + '" />');
+					$(input).remove();
+				}
+			});
+
 			$('button').on('click', function() {
-				$(this).prop('disabled', true);
+				$(this).prop('disabled', true).text($(this).data('submitted'));
 				return false;
 			});
 			$('form').on('submit', function() {
 				$('button').prop('disabled', true);
 				return false;
 			});
+			
+			// custom selects
 			$('.select-wrap li').on('click', function() {
-				var par = $(this).parent().parent();
+				var par = $(this).parent().parent(),
+					input = par.find('input');
 
 				if ( par.hasClass('open') ) {
 					par.removeClass('open');
 					par.find('li').removeClass('selected');
 					$(this).addClass('selected');
+					input.val($(this).text());
 				} else {
 					par.addClass('open');
+					// $('html, body').animate({
+					// 	scrollTop : par.offset().top - 30
+					// }, 1000)
 				}
 			});
 			$('form').on('click', function (e) {
