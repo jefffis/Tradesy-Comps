@@ -102,7 +102,7 @@
 						</h3>
 
 						<label>
-							<input type="text" />
+							<input type="text" value="USA" disabled />
 						</label>
 
 						<label>
@@ -130,7 +130,7 @@
 					<div class="label">
 						<label>
 							<input type="radio" name="foo" id="_" />
-							<span>Yes, it definitely is!</span>
+							&nbsp;&nbsp;<span>Yes, it definitely is!</span>
 						</label>
 					</div>
 
@@ -139,7 +139,7 @@
 					<div class="label">
 						<label>
 							<input type="radio" name="foo" id="__" />
-							<span>Nope</span>
+							&nbsp;&nbsp;<span>Nope</span>
 						</label>
 					</div>
 
@@ -147,7 +147,7 @@
 
 					<div class="toggle">
 
-						<h3>Is this right or wrong?</h3>
+						<h3>Does this item still have tags attached?</h3>
 						
 						<div class="label">
 							<label>
@@ -167,9 +167,30 @@
 
 					</div>
 
-					<!-- <hr />
+					<hr />
 
-					<h3>Select your State:</h3>
+					<h3>Native select your State:</h3>
+					<div class="select-wrap">
+						<select>
+							<option value="">California (CA)</option>
+							<option value="">California (CA)</option>
+							<option value="">California (CA)</option>
+							<option value="">California (CA)</option>
+							<option value="">California (CA)</option>
+							<option value="">California (CA)</option>
+							<option value="">California (CA)</option>
+							<option value="">California (CA)</option>
+							<option value="">California (CA)</option>
+							<option value="">California (CA)</option>
+							<option value="">California (CA)</option>
+						</select>
+					</div>
+
+					<small>We should strive to never use these unless no other option.</small>
+
+					<hr />
+
+					<h3>Custom select your State:</h3>
 					<div class="select-wrap">
 						<ul>
 							<li class="selected">California (CA)</li>
@@ -184,9 +205,10 @@
 							<li>Nevada (NV)</li>
 							<li>New Jersey (NJ)</li>
 						</ul>
+						<span></span>
 					</div>
 
-					<small class="note">We should strive to never use these unless no other option.</small> -->
+					<small>We should probably limit these to 5 options at the max.</small>
 
 					<hr />
 
@@ -212,6 +234,19 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 		$(function() {
+
+			var itemList = $('.select-wrap');
+
+				itemList.each(function() {
+					var items = $(this).find('li').length,
+					itemHeight = $(this).find('li:first').outerHeight(),
+					itemBorder = (items - 1) * 1;
+
+					console.log(items, itemHeight, items * itemHeight, itemBorder);
+
+					$(this).css('max-height', (items * itemHeight) + itemBorder);
+				});
+
 			$('input[type=radio], input[type=checkbox]').on('focus', function() {
 				$(this).parent().parent().addClass('focus');
 			});
@@ -226,17 +261,20 @@
 				$('button').prop('disabled', true);
 				return false;
 			});
-			// $('.select-wrap li').on('click', function() {
-			// 	var par = $(this).parent().parent();
+			$('.select-wrap li').on('click', function() {
+				var par = $(this).parent().parent();
 
-			// 	if ( par.hasClass('open') ) {
-			// 		par.removeClass('open');
-			// 		$(this).addClass('selected');
-			// 	} else {
-			// 		par.addClass('open');
-			// 		par.find('li').removeClass('selected');
-			// 	}
-			// });
+				if ( par.hasClass('open') ) {
+					par.removeClass('open');
+					par.find('li').removeClass('selected');
+					$(this).addClass('selected');
+				} else {
+					par.addClass('open');
+				}
+			});
+			$('form').on('click', function (e) {
+				!$(e.target).closest($('.select-wrap')).length && $('.select-wrap').removeClass('open');
+			});
 		});
 		</script>
 		

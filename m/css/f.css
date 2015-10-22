@@ -165,8 +165,8 @@ label .cf {
 	right : .8rem;
 	height : 20px;
 	width : 20px;
-	background : url(../img/check-green.png) no-repeat center;
-	background-size : contain;
+	background : url(../img/check-green.svg) no-repeat center;
+	background-size : 16px;
 	content : "";
 }
 .bad:after {
@@ -185,7 +185,7 @@ label .cf {
 }
 [data-content] input[type=text] {
 	/*margin-left : -2rem;*/
-	padding-left : 2rem;
+	padding-left : 1.75rem;
 }
 [data-content]:before {
 	display : block;
@@ -251,15 +251,15 @@ textarea {
 /*** select ***/
 .select-wrap {
 	position : relative;
-	max-width : 10rem;
+	/*max-width : 10rem;*/
 	overflow : hidden;
 	/*padding : .5rem .75rem;*/
 	border : 1px solid #ccc;
 }
-.select-wrap:after/*, .select-wrap:before*/ {
+.select-wrap:after {
 	display : block;
 	position : absolute;
-	top : 1.325rem;
+	top : 1.05rem;
 	right : .5rem;
 	z-index : 1;
 	border-top : 7px solid #111;
@@ -277,20 +277,25 @@ textarea {
 	background : white;
 	border : 0;
 }*/
-.select-wrap.open:after {
-	/*transform : rotate(180deg);
-	top : 1.2rem;*/
-	display : none;
+.open:after {
+	transform : rotate(180deg);
+	top : 1rem;
+	/*top : .85rem;
+	right : -2rem;
+	border : 0;
+	content : "\2715";
+	font-size : 20px;*/
+	/*display : none;*/
 }
 .select-wrap ul {
 	position : relative;
 	z-index : 2;
-	max-height : 250px;
+	/*max-height : 250px;*/
 	overflow : auto;
 }
 .select-wrap li {
 	display : none;
-	padding : .75rem;
+	padding : .5rem .75rem;
 	cursor : pointer;
 }
 .open li:nth-child(n+2) {
@@ -310,10 +315,14 @@ textarea {
 }
 select {
 	position : relative;
-	left : -.25rem;
-	width : 12rem;
+	left : .25rem;
+	z-index: 2;
+	height : 2.5rem;
+	width : 20rem;
 	background : none;
 	outline : none;
+	/*min-width : 10rem;
+	border : 1px solid #ccc;*/
 }
 
 /*** non-text input focus states ***/
@@ -365,7 +374,7 @@ input[type=checkbox] + span:before, input[type=radio] + span:before {
 	opacity : .65;
 }
 input[type=checkbox]:checked + span:before, input[type=radio]:checked + span:before {
-	background : #2a2a2a url(../img/check-white.png) no-repeat center;
+	background : #2a2a2a url(../img/check-white.svg) no-repeat center;
 	background-size: 12px;
 }
 input[type=radio] + span:before {
@@ -375,7 +384,7 @@ input[type=radio] + span:before {
 	background : white;
 	border-radius : 100%;
 	box-shadow : 0 0 0 2px white, 0 0 0 3px #111;
-	margin-left : 2px;
+	/*margin-left : 2px;*/
 }
 /*input[type=checkbox]:focus + span:before,
 input[type=radio]:focus + span:before {
@@ -406,6 +415,7 @@ input[type=radio]:checked + span:before {
 .toggle input:checked + span {
 	background : #111;
 	box-shadow : none;
+	/*margin-left : 0;*/
 	color : white;
 }
 /*.toggle input:checked + span:active {
@@ -514,9 +524,9 @@ button:active {
 		width : 40px;
 	}
 
-	select {
+	/*select {
 		width : 17rem;
-	}
+	}*/
 
 }
 
