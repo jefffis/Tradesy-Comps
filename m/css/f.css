@@ -34,8 +34,7 @@ h2 {
 h2 {
 	margin-bottom : .5rem;	
 }
-h2/*, h3*/ {
-	/*margin-top : 1rem;*/
+h2 {
 	padding-top : 2rem;
 	border-top : 1px solid #ddd;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
@@ -43,18 +42,6 @@ h2/*, h3*/ {
 	text-indent : 1px;
 	text-transform : uppercase;
 }
-/*h3 {
-	letter-spacing : 1px;
-	text-indent : 1px;
-	text-transform : uppercase;
-}
-h3.l {
-	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
-	font-size : 15px;
-	letter-spacing : normal;
-	text-indent : 0;
-	text-transform : none;
-}*/
 
 hr {
 	height : 1px;
@@ -204,6 +191,12 @@ small {
 	color : #999;
 	font-size: 13px;
 }
+small a {
+	color : #333;
+}
+small a:active {
+	opacity : .65;
+}
 small + small {
 	margin-top: 0;
 }
@@ -350,7 +343,7 @@ select:active {
 /*** non-text input focus states ***/
 .focus,
 select:focus {
-	outline : 1px dotted #ee7873;
+	outline : 1px dotted #111;
 }
 
 /*** radio / checkbox ***/
@@ -473,7 +466,7 @@ button:active {
 	display : inline-block;
 	width : 33%;
 	float : left;
-	padding : 1.5rem 1rem 1rem;
+	padding : 3rem 1rem 1rem;
 	border : 1px solid rgba(0, 0, 0, 0.2);
 	cursor : pointer;
 	text-align : center;
@@ -495,7 +488,7 @@ button:active {
 .tile svg {
 	display : block;
 	max-width : 70px;
-	margin: auto auto 1rem;
+	margin: auto auto 1.5rem;
 }
 .tile:active path {
 	fill : rgba(255, 255, 255, 0.65);
@@ -641,6 +634,10 @@ button:active {
 
 	.select-wrap:before {
 		width : 40px;
+	}
+
+	.tile svg {
+		max-width : 90px;
 	}
 
 }

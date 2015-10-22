@@ -70,8 +70,21 @@
 							<input type="password" />
 							<em>Show</em>
 						</span>
-						<small class="note">Persistent contextual hints</small>
+						<small>Must be at least 4 characters</small>
 					</label>
+
+					<hr />
+
+					<label class="toggleable">
+						<span>Toggleable Password (Login Form)</span>
+						<span class="cf">
+							<input type="password" />
+							<em>Show</em>
+						</span>
+					</label>
+					<small>
+						<a href="##">Reset Password</a>
+					</small>
 
 					<hr />
 
@@ -85,7 +98,7 @@
 
 					<label data-content="$">
 						<span>Monitary Input Label Text</span>
-						<input type="text" value="username" />
+						<input type="text" value="4,275.00" />
 						<!-- <small>Some contextual hints</small> -->
 					</label>
 
@@ -375,13 +388,28 @@
 
 				$(this).parent().parent().removeClass('focus focusable');
 			});
+			$('input[type=radio], input[type=checkbox]').on('click', function() {
+				if ( $(this).hasClass('no-focus') ) return;
+
+				$(this).parent().parent().removeClass('focus focusable');
+			});
 
 			// item tile
 			$('input[type=radio].no-focus').on('focus', function() {
 				var par = $(this).parent();
 
+				par.addClass('focus');
+			});
+			$('input[type=radio].no-focus').on('blur', function() {
+				var par = $(this).parent();
+
+				par.removeClass('focus');
+			});
+			$('input[type=radio].no-focus').on('click', function() {
+				var par = $(this).parent();
+
 				$('label.tile').removeClass('checked');
-				par.addClass('checked');
+				par.addClass('checked').removeClass('focus');
 			});
 
 			// $('#search').on('keyup', function() {
