@@ -121,24 +121,12 @@ label span {
 	display : block;
 	cursor : pointer;
 }
-/*.toggleable input {
-	max-width : 85%;
-	float : left;
-	border-left : 0;
-}*/
 .toggleable em {
-	/*min-width : 15%;
-	width : 2rem;
-	float : right;
-	padding : .55rem .75rem;
-	border : 1px solid #ccc;
-	border-left : 0;*/
 	position : absolute;
 	top : 2.55rem;
 	right : 1rem;
 	color : #ee7873;
 	cursor : pointer;
-	/*line-height : 1.4;*/
 	text-align : center;
 }
 .toggleable em:active {
@@ -187,11 +175,7 @@ label .cf {
 .bad input {
 	border-color : red;
 }
-[data-content] {
-	/*padding-left : 2rem;*/
-}
 [data-content] input[type=text] {
-	/*margin-left : -2rem;*/
 	padding-left : 1.75rem;
 }
 [data-content]:before {
@@ -199,15 +183,8 @@ label .cf {
 	position : absolute;
 	top : 2.6rem;
 	left : .75rem;
-	/*height: 40px;*/
-	/*width : 1.99rem;*/
-	/*background : #efefef;*/
-	/*border : 1px solid #ddd;
-	border-right : 0;*/
 	color : #999;
 	content : attr(data-content);
-	/*line-height : 2.6; */
-	/*text-align : center;*/
 }
 
 /*** text inputs ***/
@@ -223,7 +200,6 @@ input[type=text]:disabled {
 }
 small {
 	display : block;
-	/*visibility : hidden;*/
 	margin-top : .25rem;
 	color : #999;
 	font-size: 13px;
@@ -232,18 +208,25 @@ small + small {
 	margin-top: 0;
 }
 .error {
-	/*display : block;
-	visibility : visible;*/
-	color : red;
+	color : #d10b24;
 }
-/*.note {
-	display : block;
-	visibility : visible;
-}*/
-/*input:focus + small, textarea:focus + small {
-	display : block;
-	visibility : visible;
-}*/
+p.error {
+	background : #ffedef;
+	padding : .5rem;
+	text-align : center;
+}
+.success {
+	background : #d9efc2;
+	padding : .5rem;
+	color : #437414;
+	text-align : center;
+}
+.warning {
+	background : #fff9e2;
+	padding : .5rem;
+	color : #583c20;
+	text-align : center;
+}
 
 /*** search ***/
 .search {
@@ -263,8 +246,6 @@ small + small {
 }
 .search button:active {
 	background-color: transparent;
-	/*background : url(../img/search.svg) no-repeat center;
-	background-size : 26px;*/
 	opacity : .5;
 }
 #komplete {
@@ -324,30 +305,13 @@ textarea {
 	border-right : 6px solid transparent;
 	content : "";
 }
-/*.select-wrap:before {
-	display : none;
-	top: 0;
-	right : 0;
-	z-index : 1;
-	height : 100%;
-	width : 30px;
-	background : white;
-	border : 0;
-}*/
 .open:after {
 	transform : rotate(180deg);
 	top : 1rem;
-	/*top : .85rem;
-	right : -2rem;
-	border : 0;
-	content : "\2715";
-	font-size : 20px;*/
-	/*display : none;*/
 }
 .select-wrap ul {
 	position : relative;
 	z-index : 2;
-	/*max-height : 250px;*/
 	overflow : auto;
 }
 .select-wrap li {
@@ -355,9 +319,9 @@ textarea {
 	padding : .5rem .75rem;
 	cursor : pointer;
 }
-.open li:nth-child(n+2) {
+/*.open li:nth-child(n+2) {
 	border-top : 1px solid #ddd;
-}
+}*/
 .select-wrap li:hover {
 	background : rgba(0, 0, 0, 0.05);
 }
@@ -378,28 +342,16 @@ select {
 	width : 110%;
 	background : none;
 	outline : none;
-	/*min-width : 10rem;
-	border : 1px solid #ccc;*/
 }
 select:active {
 	opacity : .65;
 }
 
 /*** non-text input focus states ***/
-/*button:focus,*/
 .focus,
 select:focus {
 	outline : 1px dotted #ee7873;
 }
-/*input[type=checkbox]:focus + span:before {
-
-}
-input[type=radio]:focus + span:before {
-	outline : 1px dotted #111;
-}
-.toggle input:focus + span {
-
-}*/
 
 /*** radio / checkbox ***/
 .label {
@@ -478,9 +430,6 @@ input[type=radio]:checked + span:before {
 	/*margin-left : 0;*/
 	color : white;
 }
-/*.toggle input:checked + span:active {
-	opacity : 1;
-}*/
 
 /*** button ***/
 button {
@@ -517,6 +466,45 @@ button:disabled:before {
 button:active {
 	background-color : #2a2a2a;
 	color : rgba(255, 255, 255, 0.65);
+}
+
+/*** item tile ***/
+.tile {
+	display : inline-block;
+	width : 33%;
+	float : left;
+	padding : 1.5rem 1rem 1rem;
+	border : 1px solid rgba(0, 0, 0, 0.2);
+	cursor : pointer;
+	text-align : center;
+}
+.tile + .tile {
+	border-left : 0;
+}
+.tile:last-child {
+	width : 34%;
+}
+.tile:active {
+	background-color : #2a2a2a;
+	color : rgba(255, 255, 255, 0.65);
+}
+.tile.checked {
+	background : #111;
+	color : white;
+}
+.tile svg {
+	display : block;
+	max-width : 70px;
+	margin: auto auto 1rem;
+}
+.tile:active path {
+	fill : rgba(255, 255, 255, 0.65);
+}
+.tile.checked path {
+	fill : white;
+}
+.tile span {
+	margin : 0;
 }
 
 /*** pills & tags ***/
@@ -591,6 +579,9 @@ button:active {
 	
 	body {
 		padding : 1.25rem;
+	}
+	.tile svg {
+		max-width : 50px;
 	}
 
 }

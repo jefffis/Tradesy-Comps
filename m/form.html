@@ -22,6 +22,26 @@
 			<hr />
 
 			<form>
+
+				<fieldset>
+					
+					<p class="success">
+						Your changes have been saved!
+					</p>
+
+					<hr class="min" />
+
+					<p class="warning">
+						This is just a warning.
+					</p>
+
+					<hr class="min" />
+
+					<p class="error">
+						We had an issue saving your changes.
+					</p>
+
+				</fieldset>
 				
 				<fieldset>
 
@@ -192,7 +212,7 @@
 					<hr />
 
 					<h3>Please select your Country:</h3>
-					<div class="select-wrap">
+					<div class="select-wrap cs">
 						<ul>
 							<li class="selected">United States (USA)</li>
 							<li>United Kingdom (UK)</li>
@@ -224,6 +244,52 @@
 						Submit Me
 					</button>
 				
+				</fieldset>
+
+				<fieldset id="tile-select">
+
+					<h2>Icon Tile Selection</h2>
+
+					<label class="tile">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+							<g>
+								<g>
+									<path fill="#111111" d="M32.8,15.7c-0.5,0-0.9-0.4-0.9-0.8c0-5.1-3.4-9.3-7.6-9.3c-4.1,0-7.5,4.1-7.5,9.3c0,0.4-0.4,0.8-0.9,0.8
+										c-0.5,0-0.9-0.4-0.9-0.8c0-6.1,4.2-11.1,9.4-11.1c5.2,0,9.4,5,9.4,11.1C33.6,15.3,33.3,15.7,32.8,15.7z M42,17
+										c0.3,0,0.7,0.2,0.7,0.7v26.8c0,0.4-0.3,0.7-0.7,0.7H8.1c-0.4,0-0.7-0.3-0.7-0.7V17.6c0-0.4,0.3-0.7,0.7-0.7H42z"/>
+								</g>
+							</g>
+						</svg>
+						<span>Bags</span>
+						<input type="radio" name="item-type" value="bag" class="no-focus" />
+					</label>
+					<label class="tile">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+							<g>
+								<g>
+									<path fill="#111111" d="M32.8,15.7c-0.5,0-0.9-0.4-0.9-0.8c0-5.1-3.4-9.3-7.6-9.3c-4.1,0-7.5,4.1-7.5,9.3c0,0.4-0.4,0.8-0.9,0.8
+										c-0.5,0-0.9-0.4-0.9-0.8c0-6.1,4.2-11.1,9.4-11.1c5.2,0,9.4,5,9.4,11.1C33.6,15.3,33.3,15.7,32.8,15.7z M42,17
+										c0.3,0,0.7,0.2,0.7,0.7v26.8c0,0.4-0.3,0.7-0.7,0.7H8.1c-0.4,0-0.7-0.3-0.7-0.7V17.6c0-0.4,0.3-0.7,0.7-0.7H42z"/>
+								</g>
+							</g>
+						</svg>
+						<span>Bags</span>
+						<input type="radio" name="item-type" value="bag" class="no-focus" />
+					</label>
+					<label class="tile">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+							<g>
+								<g>
+									<path fill="#111111" d="M32.8,15.7c-0.5,0-0.9-0.4-0.9-0.8c0-5.1-3.4-9.3-7.6-9.3c-4.1,0-7.5,4.1-7.5,9.3c0,0.4-0.4,0.8-0.9,0.8
+										c-0.5,0-0.9-0.4-0.9-0.8c0-6.1,4.2-11.1,9.4-11.1c5.2,0,9.4,5,9.4,11.1C33.6,15.3,33.3,15.7,32.8,15.7z M42,17
+										c0.3,0,0.7,0.2,0.7,0.7v26.8c0,0.4-0.3,0.7-0.7,0.7H8.1c-0.4,0-0.7-0.3-0.7-0.7V17.6c0-0.4,0.3-0.7,0.7-0.7H42z"/>
+								</g>
+							</g>
+						</svg>
+						<span>Bags</span>
+						<input type="radio" name="item-type" value="bag" class="no-focus" />
+					</label>
+
 				</fieldset>
 
 				<fieldset id="search">
@@ -288,27 +354,45 @@
 		<script>
 		$(function() {
 
-			var itemList = $('.select-wrap');
+			var itemList = $('.select-wrap.cs');
 
 				itemList.each(function() {
 					var items = $(this).find('li').length,
-					itemHeight = $(this).find('li:first').outerHeight(),
-					itemBorder = (items - 1) * 1;
+					itemHeight = $(this).find('li:first').outerHeight();//,
+					// itemBorder = (items - 1) * 1;
 
-					console.log(items, itemHeight, items * itemHeight, itemBorder);
-
-					$(this).css('max-height', (items * itemHeight) + itemBorder);
+					// $(this).css('max-height', (items * itemHeight) + itemBorder);
+					$(this).css('max-height', items * itemHeight);
 				});
 
 			$('input[type=radio], input[type=checkbox]').on('focus', function() {
-				$(this).parent().parent().addClass('focus');
+				if ( $(this).hasClass('no-focus') ) return;
+
+				$(this).parent().parent().addClass('focus focusable');
 			});
 			$('input[type=radio], input[type=checkbox]').on('blur', function() {
-				$(this).parent().parent().removeClass('focus');
+				if ( $(this).hasClass('no-focus') ) return;
+
+				$(this).parent().parent().removeClass('focus focusable');
+			});
+
+			// item tile
+			$('input[type=radio].no-focus').on('focus', function() {
+				var par = $(this).parent();
+
+				$('label.tile').removeClass('checked');
+				par.addClass('checked');
 			});
 
 			// $('#search').on('keyup', function() {
 			// 	if ( $(this).val() !== '' ) $('#komplete').show();
+			// });
+
+			// $('input[type=text], input[type=password]').on('focus', function() {
+			// 	$(this).parent().addClass('focus');
+			// });
+			// $('input[type=text], input[type=password]').on('blur', function() {
+			// 	$(this).parent().removeClass('focus');
 			// });
 
 			$('.toggleable em').on('click', function() {
