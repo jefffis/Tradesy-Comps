@@ -124,6 +124,28 @@
 						<em>Add image</em>
 					</label>
 
+					<div class="photo-attached hide">
+						<span>
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50" enable-background="new 0 0 50 50" xml:space="preserve">
+								<g>
+									<g>
+										<path fill="#DDDDDD" d="M43.7,18.6c0.3,0,0.5,0.2,0.7,0.5c0.1,0.2,0,0.5-0.2,0.8l-11,8.6l4.7,14.6c0.1,0.2,0,0.5-0.2,0.7
+											c-0.1,0.1-0.2,0.2-0.4,0.2c-0.2,0-0.2-0.1-0.4-0.2l-11.8-8.6l-11.8,8.6c-0.2,0.2-0.5,0.2-0.8,0c-0.2-0.2-0.3-0.5-0.2-0.7l4.7-14.1
+											l-11-9.2c-0.2-0.2-0.3-0.5-0.2-0.7c0.1-0.2,0.3-0.5,0.6-0.5h13.6l4.4-12.8c0.1-0.3,0.3-0.5,0.6-0.5c0.3,0,0.5,0.2,0.6,0.5
+											l4.4,12.8H43.7z"/>
+									</g>
+								</g>
+							</svg>
+						</span>
+						<figure>
+							<img src="https://item2.tradesy.com/r/1bc90bde58f34ae66aa524915c9c51387f4ed318c388bde818c55195f35b71f1/355/355/bags/coach/cross-body-bags/coach-occasion-limited-edition-cross-body-bag-7900411.jpg" />
+						</figure>
+						<div>
+							<span>Rotate</span>
+							<span>Delete</span>
+						</div>
+					</div>
+
 					<hr />
 
 					<div class="two cf">
@@ -381,6 +403,13 @@
 		<script>
 		$(function() {
 
+			function showLoaded() {
+				setTimeout(function() {
+					$('.photo').addClass('hide');
+					$('.photo-attached').removeClass('hide');
+				}, 2000);
+			}
+
 			var itemList = $('.select-wrap.cs');
 
 				itemList.each(function() {
@@ -407,9 +436,11 @@
 
 			// file upload
 			$('input[type=file]').on('change', function() {
-				if ( $(this).parent().hasClass('photo') ) return $(this).parent().addClass('added').find('input').prop('disabled', true).next('em').html('Loading&hellip;');
+				var fileName = $(this).val().replace('C:\\fakepath\\', '');
 
-				$(this).parent().after('<hr class="min" /><small class="success">Selected ' + $(this).val() + '</small>');
+				if ( $(this).parent().hasClass('photo') ) return $(this).parent().addClass('added').find('input').prop('disabled', true).next('em').html('Loading&hellip;') && showLoaded();;
+
+				$(this).parent().after('<small class="note">Selected &lsquo;' + fileName + '&rsquo;</small>');
 			});
 
 			// item tile
