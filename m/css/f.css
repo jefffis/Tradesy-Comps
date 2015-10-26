@@ -15,6 +15,7 @@
 	padding : 0;
 	border : 0;
 	box-sizing : border-box;
+	color : #111;
 	font : normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 	-webkit-tap-highlight-color : rgba(0, 0, 0, 0);
 }
@@ -144,7 +145,7 @@ label .cf {
 }
 
 /*** validation ***/
-.good:after, .bad:after {
+.good:after, .bad:after, .prefilled:after {
 	display : inline-block;
 	position : absolute;
 	top : 2.7rem;
@@ -176,6 +177,28 @@ label .cf {
 	left : .75rem;
 	color : #999;
 	content : attr(data-content);
+}
+
+/*** prefilled ***/
+.prefilled {
+	background : #fff9e2;
+	margin : 0 -1rem;
+	padding : .75rem 1rem;
+	/*color : #583c20;*/
+}
+.prefilled span {
+	/*margin-bottom : .35rem;*/
+	color : #583c20;
+}
+.prefilled small {
+	margin-top : .35rem;
+}
+.prefilled:after {
+	/*display : none;*/
+	top : 3.4rem;
+	right : 1.6rem;
+	background : url(../img/alert.svg) no-repeat center;
+	background-size : 24px;
 }
 
 /*** text inputs ***/
@@ -610,6 +633,9 @@ button:active {
 	background-color : #2a2a2a;
 	color : rgba(255, 255, 255, 0.65);
 }
+.tile:active span {
+	color : rgba(255, 255, 255, 0.65);
+}
 .tile.checked {
 	background : #111;
 	color : white;
@@ -627,6 +653,9 @@ button:active {
 }
 .tile span {
 	margin : 0;
+}
+.checked span {
+	color : white;
 }
 
 /*** pills & tags ***/
@@ -707,6 +736,9 @@ button:active {
 	.tile svg {
 		max-width : 50px;
 	}
+	.prefilled {
+		margin : 0 -1.25rem;
+	}
 
 }
 
@@ -770,6 +802,10 @@ button:active {
 	.tile svg {
 		max-width : 90px;
 	}
+
+	/*.prefilled {
+		margin : 0 -1rem;
+	}*/
 
 }
 
