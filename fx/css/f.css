@@ -127,6 +127,14 @@ button:last-child {
 	border-radius : 0 3px 3px 0;
 }
 
+@media screen and ( max-width : 567px ) {
+
+	.button-wrap {
+		display : none;
+	}
+
+}
+
 @media screen and ( min-width : 1000px ) {
 
 	.item {
