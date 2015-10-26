@@ -167,6 +167,9 @@ label .cf {
 .bad input {
 	border-color : red;
 }
+[data-content] {
+	position : relative;
+}
 [data-content] input[type=text] {
 	padding-left : 1.75rem;
 }
@@ -379,7 +382,7 @@ select:active {
 }
 
 /*** non-text input focus states ***/
-.focus,
+label.focus,
 select:focus {
 	outline : 1px dotted #111;
 }
@@ -698,13 +701,23 @@ button:active {
 	color : currentColor;
 }
 
+.tags {
+	background : rgba(0, 0, 0, 0.035);
+	margin-left : 0;
+	margin-right : 0;
+	padding : .75rem;
+	border : 1px solid rgba(0, 0, 0, 0.125);
+	border-bottom : 0;
+	/*box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.125) inset;*/
+	/*text-align : center;*/
+}
 .tags a {
 	display : inline-block;
 	position : relative;
 	background : white;
 	margin : 5px;
 	padding : .35rem .75rem;
-	border-radius : 5px;
+	border-radius : 8px;
 	border : 1px solid #ccc;
 	color : #111;
 	font-size : 13px;
@@ -717,6 +730,60 @@ button:active {
 }
 .tags a:active {
 	opacity : .65;
+}
+.tags .selected, .tags .selected:hover {
+	background : #2a2a2a;
+	border-color : #111;
+	color : white;
+}
+.tags small {
+	margin : 0 0 .5rem;
+	text-align : center;
+}
+
+/*** add UI ***/
+.add {
+	/*padding : .5rem .75rem 0;*/
+	border : 1px solid #ddd;
+	/*border-top : 0;*/
+}
+.add.focus {
+	border-color : #111;
+}
+.add input, .add button {
+	float : left;
+	width : 75%;
+	/*background : red;*/
+	margin : 0;
+	border : 0;
+}
+/*.add input {
+	padding-left : 1rem;
+}*/
+.add button {
+	float : right;
+	width : 25%;
+	max-width : 5rem;
+	min-width : 0;
+	background : white;
+	padding : .5rem .75rem .5rem .5rem;
+	color : #ee7873;
+	font-size : 16px;
+	text-align : right;
+}
+.add button:before {
+	position : relative;
+	top : 3px;
+	left : -4px;
+	content : "+";
+	font-size : 1.5rem;
+	line-height : 0;
+}
+.add button:active {
+	opacity : .65;
+}
+.add[data-content]:before {
+	top : .6rem;
 }
 
 @keyframes spin {

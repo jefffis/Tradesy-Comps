@@ -389,16 +389,35 @@
 
 					<hr />
 
-					<h2>Tags</h2>
+					<h2>Suggested Tags</h2>
 
 					<div class="tags">
+
+						<small>Click the tags you want to add to this item:</small>
 						
 						<a href="##">Miller</a>
 						<a href="##">Frank Miller</a>
 						<a href="##">Cooper</a>
 						<a href="##">Miller Lite</a>
+						<a href="##">Mueller </a>
+						<a href="##">Frank Miller Cooper</a>
+						<a href="##">Miller Lite</a>
 						<a href="##">Mueller</a>
 
+					</div>
+
+					<div class="add cf">
+						<input type="text" placeholder="Create your own tag" />
+						<button>Add</button>
+					</div>
+
+					<hr />
+
+					<h2>Describe</h2>
+
+					<div class="add cf" data-content="●">
+						<input type="text" />
+						<button>Add</button>
 					</div>
 				
 				</fieldset>
@@ -442,13 +461,26 @@
 				$(this).parent().parent().removeClass('focus focusable');
 			});
 
+			$('input').on('focus', function() {
+				if ( $(this).attr('type') === 'radio' || $(this).attr('type') === 'checkox' ) return;
+
+				$(this).parent().addClass('focus');
+			});
+
+			$('input').on('blur', function() {
+				if ( $(this).attr('type') === 'radio' || $(this).attr('type') === 'checkox' ) return;
+
+				$(this).parent().removeClass('focus');
+			});
+
 			// file upload
 			$('input[type=file]').on('change', function() {
 				var fileName = $(this).val().replace('C:\\fakepath\\', '');
 
 				if ( $(this).parent().hasClass('photo') ) return $(this).parent().addClass('added').find('input').prop('disabled', true).next('em').html('Loading&hellip;') && showLoaded();;
 
-				$(this).parent().after('<small class="note">Selected &lsquo;' + fileName + '&rsquo;</small>');
+				if ( $('#uploaded').length ) $('#uploaded').remove();
+				$(this).parent().after('<small class="note" id="uploaded">Selected &lsquo;' + fileName + '&rsquo;</small>');
 			});
 
 			// item tile
@@ -468,6 +500,10 @@
 				$('label.tile').removeClass('checked');
 				par.addClass('checked').removeClass('focus');
 			});
+
+			$('.tags a').on('click', function() {
+				$(this).toggleClass('selected');
+			})
 
 			// $('#search').on('keyup', function() {
 			// 	if ( $(this).val() !== '' ) $('#komplete').show();
