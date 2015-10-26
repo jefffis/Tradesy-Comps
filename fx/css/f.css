@@ -20,11 +20,11 @@
 	-webkit-tap-highlight-color : rgba(0, 0, 0, 0);
 }
 
-.container {
-	/* flex stuff*/
+#container {
+	/* flex stuff */
 	display : flex;
 	flex-flow : row wrap;
-	align-items : center;
+	align-items : flex-start;
 	justify-content : center;
 
 	max-width : 1200px;
@@ -32,42 +32,113 @@
 	margin : auto;
 	text-align : center;
 }
+#container.baseline {
+	align-items : baseline;
+}
+#container.center {
+	align-items : center;
+}
+#container.top {
+	align-items : flex-start;
+}
+#container .item:last-child {
+	flex : 0 0 5%;
+}
 
 .item {
-	display : inline-block;
-	/*width : 25%;*/
 	min-width : 200px;
 	max-width : 250px;
 	background : white;
 	margin : 1rem;
 	padding : 1rem;
 }
+.item:hover {
+	box-shadow : 0 0 0 1px #ddd inset;
+}
 .item figure {
+	/*display : table-cell;*/ 
+	height : 150px;
+	width : 150px;
+	margin : auto auto 1rem;
+	/*vertical-align : middle;*/
+}
+.item figure div {
+	display : block;
 	height : 150px;
 	width : 100px;
 	background : #333;
-	margin : auto auto 1rem;
+	margin : auto;
 }
-.item .s {
+.item .s div {
+	position : relative;
+	top : 50px;
 	height : 50px;
 	width : 150px;
 }
 .item h2, h3, p {
-	height : 1rem;
+	height : .85rem;
 	max-width : 90%;
-	background : #efefef;
+	background : #ddd;
 }
 .item h2 {
 	width : 10rem;
-	background : #999;
+	background : #111;
 	margin : auto auto .5rem;
 }
 .item h3 {
 	width : 12rem;
-	background : #ccc;
+	background : #999;
 	margin : auto auto .5rem;
 }
 .item p {
 	width : 6rem;
 	margin : auto auto .5rem;
+}
+
+.button-wrap {
+	padding : 2rem 0;
+	text-align : center; 
+}
+button {
+	min-width : 5rem;
+	background : #999;
+	padding : .5rem 1rem;
+	border-radius : 3px 0 0 3px;
+	outline : none;
+	color : white;
+	cursor : pointer;
+}
+button.active {
+	background : #111;
+	color : white;
+	cursor : default;
+}
+button:active {
+	opacity : .65;
+}
+button.active:active {
+	opacity : 1;
+}
+button:nth-child(n+2) {
+	margin-left : -5px;
+	border-radius : 0;
+}
+button:last-child {
+	border-radius : 0 3px 3px 0;
+}
+
+@media screen and ( min-width : 1000px ) {
+
+	.item {
+		margin : 1rem 3rem;
+	}
+
+}
+
+@media screen and ( min-width : 1500px ) {
+
+	#container {
+		max-width : 1300px;
+	}
+
 }
