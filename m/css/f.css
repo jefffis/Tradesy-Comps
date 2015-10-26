@@ -610,28 +610,42 @@ button:active {
 	background-color : #2a2a2a;
 	color : rgba(255, 255, 255, 0.65);
 }
+button:disabled:active {
+	color : white;
+}
 #submit:active {
 	outline : none;
 }
 
 /*** item tile ***/
+.tiles {
+	border : 1px solid rgba(0, 0, 0, 0.2);
+}
 .tile {
 	display : inline-block;
-	width : 33%;
+	position : relative;
+	width : 33.3%;
 	float : left;
 	padding : 3rem 1rem 1rem;
-	border : 1px solid rgba(0, 0, 0, 0.2);
 	cursor : pointer;
 	text-align : center;
 }
 .tile:hover {
 	background : #efefef;
 }
-.tile + .tile {
-	border-left : 0;
+.tiles .tile:nth-child(n+2):before {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : -1px;
+	height : 100%;
+	width : 1px;
+	background : rgba(0, 0, 0, 0.2);
+	content : "";
 }
 .tile:last-child {
-	width : 34%;
+	width : 33.4%;
+	float : right;
 }
 .tile:active {
 	background-color : #2a2a2a;
@@ -643,6 +657,9 @@ button:active {
 .tile.checked {
 	background : #111;
 	color : white;
+}
+.tile.checked:last-child:after, .tile.checked:last-child:hover:after {
+	background-color : #111;
 }
 .tile svg {
 	display : block;
@@ -827,16 +844,12 @@ button:active {
 
 @media screen and (max-width : 500px) {
 
-	/*.toggleable input {
-		max-width : 75%;
+	h1 {
+		text-align : center;
 	}
-	.toggleable em {
-		width : 25%;
-	}*/
 	button {
 		max-width : 300px;
 		width : 100%;
-		/*margin : auto;*/
 	}
 }
 
