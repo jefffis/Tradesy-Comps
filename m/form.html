@@ -436,6 +436,17 @@
 					$('.photo-attached').removeClass('hide');
 				}, 2000);
 			}
+			function validateField(el) {
+				var par = el.parent();
+
+				if ( el.val() !== '' ) {
+					par.removeClass('bad');
+					par.find('.error').remove();
+					setTimeout(function() {
+						par.addClass('good');
+					}, 250);
+				}
+			}
 
 			var itemList = $('.select-wrap.cs');
 
@@ -467,6 +478,10 @@
 
 			$('input[type=text], input[type=password]').on('blur', function() {
 				$(this).parent().removeClass('focus');
+
+				if ( $(this).parent().hasClass('bad') ) {
+					validateField($(this));
+				}
 			});
 
 			// file upload
