@@ -448,28 +448,24 @@
 			$('input[type=radio], input[type=checkbox]').on('focus', function() {
 				if ( $(this).hasClass('no-focus') ) return;
 
-				$(this).parent().parent().addClass('focus focusable');
+				$(this).parent().parent().addClass('focusable');
 			});
 			$('input[type=radio], input[type=checkbox]').on('blur', function() {
 				if ( $(this).hasClass('no-focus') ) return;
 
-				$(this).parent().parent().removeClass('focus focusable');
+				$(this).parent().parent().removeClass('focusable');
 			});
 			$('input[type=radio], input[type=checkbox]').on('click', function() {
 				if ( $(this).hasClass('no-focus') ) return;
 
-				$(this).parent().parent().removeClass('focus focusable');
+				$(this).parent().parent().removeClass('focusable');
 			});
 
-			$('input').on('focus', function() {
-				if ( $(this).attr('type') === 'radio' || $(this).attr('type') === 'checkox' ) return;
-
+			$('input[type=text], input[type=password]').on('focus', function() {
 				$(this).parent().addClass('focus');
 			});
 
-			$('input').on('blur', function() {
-				if ( $(this).attr('type') === 'radio' || $(this).attr('type') === 'checkox' ) return;
-
+			$('input[type=text], input[type=password]').on('blur', function() {
 				$(this).parent().removeClass('focus');
 			});
 

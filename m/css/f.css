@@ -382,7 +382,7 @@ select:active {
 }
 
 /*** non-text input focus states ***/
-label.focus,
+.focusable,
 select:focus {
 	outline : 1px dotted #111;
 }
@@ -657,7 +657,7 @@ button:active {
 .tile span {
 	margin : 0;
 }
-.checked span {
+.checked span, .checked:active span {
 	color : white;
 }
 
