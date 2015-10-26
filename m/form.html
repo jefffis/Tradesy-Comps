@@ -452,11 +452,11 @@
 
 			var itemList = $('.select-wrap.cs');
 
-				itemList.each(function() {
-					var items = $(this).find('li').length,
-					itemHeight = $(this).find('li:first').outerHeight();
-					$(this).css('max-height', items * itemHeight);
-				});
+			itemList.each(function() {
+				var items = $(this).find('li').length,
+				itemHeight = $(this).find('li:first').outerHeight();
+				$(this).attr('data-max-height', items * itemHeight).attr('data-height', itemHeight);
+			});
 
 			$('input[type=radio], input[type=checkbox]').on('focus', function() {
 				if ( $(this).hasClass('no-focus') ) return;
@@ -562,23 +562,27 @@
 			// custom selects
 			$('.select-wrap li').on('click', function() {
 				var par = $(this).parent().parent(),
-					input = par.find('input');
+					input = par.find('input'),
+					ul = par.find('ul');
+					height = par.data('height'),
+					maxHeight = par.data('max-height');
 
 				if ( par.hasClass('open') ) {
 					par.removeClass('open');
 					par.find('li').removeClass('selected');
 					$(this).addClass('selected');
 					input.val($(this).text());
+					ul.css('height', height);
+					par.css('height', 'auto');
 				} else {
 					par.addClass('open');
-					// $('html, body').animate({
-					// 	scrollTop : par.offset().top - 30
-					// }, 1000)
+					ul.css('height', maxHeight);
+					par.css('height', height);
 				}
 			});
-			$('form').on('click', function (e) {
-				!$(e.target).closest($('.select-wrap')).length && $('.select-wrap').removeClass('open');
-			});
+			// $('form').on('click', function (e) {
+			// 	!$(e.target).closest($('.select-wrap')).length && $('.select-wrap').removeClass('open');
+			// });
 		});
 		</script>
 		

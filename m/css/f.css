@@ -315,33 +315,40 @@ textarea {
 /*** select ***/
 .select-wrap {
 	position : relative;
+	border : 1px solid #ccc;
 	overflow : hidden;
 	/*padding : .5rem .75rem;*/
-	border : 1px solid #ccc;
-} 
-.select-wrap:after {
+}
+.cs {
+	overflow : visible;
+	border : 0;
+}
+.select-wrap .selected:after {
+	transition : transform .25s ease-in-out;
 	display : block;
 	position : absolute;
-	top : 1.05rem;
-	right : .75rem;
+	top : 1.1rem;
+	right : .8rem;
 	z-index : 1;
 	border-top : 7px solid #111;
 	border-left : 6px solid transparent;
 	border-right : 6px solid transparent;
 	content : "";
 }
-.open:after {
+.open .selected:after {
 	transform : rotate(180deg);
 	top : 1rem;
 }
 .select-wrap ul {
 	position : relative;
 	z-index : 2;
-	overflow : auto;
+	background : white;
+	border : 1px solid #ccc;
+	/*overflow : auto;*/
 }
 .select-wrap li {
 	display : none;
-	padding : .5rem .75rem;
+	padding : .55rem .75rem;
 	cursor : pointer;
 }
 /*.open li:nth-child(n+2) {
@@ -356,10 +363,10 @@ textarea {
 .select-wrap .selected {
 	display : block;
 }
-/*.open ul {
+.open ul {
 	position : absolute;
 	width : 100%;
-}*/
+}
 .open li/*, .select-wrap:focus li*/ {
 	display : block;
 }
