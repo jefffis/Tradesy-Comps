@@ -145,7 +145,7 @@ label .cf {
 }
 
 /*** validation ***/
-.good:after, .bad:after, .prefilled:after {
+.good:after, .bad:after/*, .prefilled:after*/ {
 	display : inline-block;
 	position : absolute;
 	top : 2.7rem;
@@ -187,22 +187,16 @@ label .cf {
 	background : #fff9e2;
 	margin : 0 -1rem;
 	padding : .75rem 1rem;
-	/*color : #583c20;*/
 }
-.prefilled span {
-	/*margin-bottom : .35rem;*/
+/*.prefilled span {
 	color : #583c20;
-}
-.prefilled small {
-	margin-top : .35rem;
-}
-.prefilled:after {
-	/*display : none;*/
+}*/
+/*.prefilled:after {
 	top : 3.4rem;
 	right : 1.6rem;
 	background : url(../img/alert.svg) no-repeat center;
 	background-size : 24px;
-}
+}*/
 
 /*** text inputs ***/
 input[type=text], input[type=password], input[type=search] {
@@ -323,7 +317,7 @@ textarea {
 	overflow : hidden;
 	/*padding : .5rem .75rem;*/
 	border : 1px solid #ccc;
-}
+} 
 .select-wrap:after {
 	display : block;
 	position : absolute;
@@ -365,7 +359,7 @@ textarea {
 	position : absolute;
 	width : 100%;
 }*/
-.open li {
+.open li/*, .select-wrap:focus li*/ {
 	display : block;
 }
 select {
@@ -383,7 +377,10 @@ select:active {
 
 /*** non-text input focus states ***/
 .focusable,
-select:focus {
+select:focus,
+.select-wrap:focus,
+.tile.focus,
+#submit:focus {
 	outline : 1px dotted #111;
 }
 
@@ -869,10 +866,6 @@ button:active {
 	.tile svg {
 		max-width : 90px;
 	}
-
-	/*.prefilled {
-		margin : 0 -1rem;
-	}*/
 
 }
 
