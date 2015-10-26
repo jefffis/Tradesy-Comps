@@ -7,19 +7,13 @@
 
 		<title dir="ltr">Flexbox</title>
 
-		<link href="css/f.css" rel="stylesheet" type="text/css" />
+		<link href="css/f2.css" rel="stylesheet" type="text/css" />
 		<script>document.addEventListener("touchstart", function() {},false);</script>
 	</head>
 
 	<body>
 
-		<div class="button-wrap">
-			<button id="topppp" class="active">Top</button>
-			<button id="center">Centered</button>
-			<button id="baseline">Baseline</button>
-		</div>
-
-		<div id="container">
+		<div id="container" class="cf">
 
 			<div class="item">
 				<figure>
@@ -234,34 +228,6 @@
 			</div>
 
 		</div>
-
-		<script>
-		var container = document.getElementById('container'),
-			topppp = document.getElementById('topppp'),
-			center = document.getElementById('center'),
-			baseline = document.getElementById('baseline');
-
-		topppp.onclick = function() {
-			container.className = 'top';
-			center.className = '';
-			baseline.className = '';
-			this.className = 'active';
-		}
-
-		center.onclick = function() {
-			container.className = 'center';
-			topppp.className = '';
-			baseline.className = '';
-			this.className = 'active';
-		}
-
-		baseline.onclick = function() {
-			container.className = 'baseline';
-			topppp.className = '';
-			center.className = '';
-			this.className = 'active';
-		}
-		</script>
 
 	</body>
 </html>

@@ -21,37 +21,23 @@
 }
 
 #container {
-	/* flex stuff */
-	display : flex;
-	flex-flow : row wrap;
-	align-items : flex-start;
-	justify-content : center;
-
 	max-width : 1200px;
-	/*background : rgba(0, 0, 0, 0.125);*/
 	margin : auto;
+	padding : 1.5rem 0;
 	text-align : center;
-}
-#container.baseline {
-	align-items : baseline;
-}
-#container.center {
-	align-items : center;
-}
-#container.top {
-	align-items : flex-start;
-}
-#container .item:last-child {
-	flex : 0 0 5%;
 }
 
 .item {
+	display : inline-block;
 	height : 300px;
 	min-width : 200px;
 	max-width : 250px;
 	background : white;
 	margin : 1rem;
 	padding : 1rem;
+}
+.item:last-child {
+	float : left;
 }
 .item:hover {
 	box-shadow : 0 0 0 1px #ddd inset;
@@ -127,6 +113,18 @@ button:nth-child(n+2) {
 }
 button:last-child {
 	border-radius : 0 3px 3px 0;
+}
+
+@media screen and ( max-width : 500px ) {
+
+	.item {
+		min-width : 0;
+		width : 150px;
+	}
+	.item figure, .item .s div {
+		max-width : 100px;
+	}
+
 }
 
 @media screen and ( max-width : 567px ) {
