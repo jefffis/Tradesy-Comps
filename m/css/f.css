@@ -24,18 +24,20 @@ body {
 	margin : auto;
 	padding : 2rem;
 }
+strong {
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+}
 h1 {
-	margin-bottom : .25rem;
+	margin-bottom : 2rem;
 	font-size : 30px;
 	line-height : 1;
+	/*text-align : center;*/
 }
 h2 {
+	margin-bottom : .5rem;
 	font-size : 20px;	
 }
-h2 {
-	margin-bottom : .5rem;	
-}
-h2 {
+fieldset h2 {
 	padding-top : 2rem;
 	border-top : 1px solid #ddd;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
@@ -91,6 +93,22 @@ label {
 	float : left;
 	padding-right : .5rem;
 }
+.two .select-wrap {
+	width : 48%;
+	float : left;
+}
+.two .select-wrap + .select-wrap {
+	left : 1rem;
+	width : 20%;
+	/*float : right;*/
+}
+.two > small {
+	clear : both;
+	padding-top : .25rem;
+}
+.two .shrt {
+	width : 4rem;
+}
 .two label:last-child {
 	padding-left : .5rem;
 	padding-right : 0;	
@@ -113,6 +131,23 @@ label span {
 	display : block;
 	cursor : pointer;
 }
+
+/*** bday ***/
+.bday div {
+	border : 1px solid #ddd;
+}
+.bday input {
+	border : 0;
+}
+.bday label:last-child:before {
+	position : absolute;
+	top : .25rem;
+	left : 0;
+	color : #999;
+	content : "/";
+	font-size : 24px;
+}
+
 .toggleable em {
 	position : absolute;
 	top : 2.55rem;
@@ -130,7 +165,7 @@ label span, h3 {
 label .cf {
 	margin-bottom : 0;
 }
-.opt:after {
+.opt:after, label [data-details]:after {
 	display : inline-block;
 	position : relative;
 	top : 4px;
@@ -142,6 +177,9 @@ label .cf {
 	letter-spacing : normal;
 	text-indent : 0;
 	text-transform : none;
+}
+label [data-details]:after {
+	content : attr(data-details);
 }
 
 /*** validation ***/
@@ -177,7 +215,7 @@ label .cf {
 [data-content]:before {
 	display : block;
 	position : absolute;
-	top : 2.6rem;
+	top : 2.55rem;
 	left : .75rem;
 	color : #999;
 	content : attr(data-content);
@@ -200,7 +238,7 @@ label .cf {
 }*/
 
 /*** text inputs ***/
-input[type=text], input[type=password], input[type=search] {
+input[type=text], input[type=password], input[type=search], input[type=email] {
 	display : block;
 	width : 100%;
 	padding : .5rem .6rem;
@@ -212,16 +250,13 @@ input[type=text]:disabled {
 }
 small {
 	display : block;
-	margin-top : .25rem;
+	margin-top : .35rem;
 	color : #999;
 	font-size: 13px;
+	line-height : 1.25;
 }
 .note {
-	display : inline-block;
-	background : #efefef;
-	margin-top : .5rem;
-	padding : .5rem .75rem;
-	color : #333;
+	padding-top : .35rem;
 }
 small a {
 	color : #333;
@@ -302,12 +337,58 @@ p.error {
 	color : inherit;
 }
 
+/*** avatar ***/
+#avatar {
+	padding-bottom : .25rem;
+	text-align : right;
+}
+#avatar span {
+	display : block;
+	float : left;
+	height : 100px;
+	width : 100px;
+	background : transparent no-repeat center;
+	background-size : cover;
+	margin : auto;
+	border-radius : 100%;
+}
+#avatar div {
+	float : right;
+	max-width : 60%;
+	padding-top : .25rem;
+}
+#avatar label, button {
+	display : inline-block;
+}
+#avatar input[type=file] + em, #avatar button {
+	width : 10rem;
+	padding : .5rem;
+	font-size : 14px;
+}
+#avatar button {
+	background-color : #3b5998;
+	margin-top : 1rem;
+	letter-spacing : normal;
+	text-indent : 0;
+}
+
+/*** cover ***/
+#cover {
+	background : transparent no-repeat center;
+	background-size : cover;
+	padding : 1.5rem;
+}
+#cover label {
+	float : right;
+	font-size : 14px;
+}
+
 /*** textarea ***/
 textarea {
 	display : block;
 	min-height : 75px;
-	max-height : 300px;
-	max-width : 480px;
+	max-height : 150px;
+	max-width : 400px;
 	width : 100%;
 	padding : .5rem;
 }
@@ -376,6 +457,7 @@ select {
 	z-index: 2;
 	height : 2.5rem;
 	width : 110%;
+	min-width : 100px;
 	background : none;
 	outline : none;
 }
@@ -585,8 +667,8 @@ input[type=file]:active + em {
 /*** button ***/
 button {
 	background : #111;
-	min-width : 12.5rem;
-	padding : 1rem;
+	min-width : 8rem;
+	padding : .75rem 1rem;
 	color : white;
 	cursor : pointer;
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
@@ -861,11 +943,16 @@ button:disabled:active {
 @media screen and (max-width : 500px) {
 
 	h1 {
-		text-align : center;
+		display : none;
 	}
-	button {
-		max-width : 300px;
-		width : 100%;
+	label [data-details]:after {
+		content : attr(data-details-sm);
+	}
+	.opt:after {
+		content : "Opt";
+	}
+	#avatar input[type=file] + em, #avatar button {
+		width : 9rem;
 	}
 }
 
@@ -888,13 +975,14 @@ button:disabled:active {
 		height : 25rem;
 		width : 25%;
 		float : left;
-		background : #ddd;
+		background : rgba(0, 0, 0, 0.025);
+		box-shadow : 0 0 0 1px #efefef inset;
 		margin-right : 3rem;
 	}
 
 	section {
 		width : 60%;
-		max-width : 30rem;
+		max-width : 400px;
 		float : left;
 		padding-bottom : 2rem;
 	}

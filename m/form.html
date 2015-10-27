@@ -13,11 +13,226 @@
 
 	<body>
 
+		<h1>Manage Account Settings</h1>
+
 		<aside></aside>
 
 		<section>
 
-			<h1>Sample Form</h1>
+			<h2>Contact Information</h2>
+
+			<hr />
+
+			<form>
+				
+				<fieldset>
+
+					<p class="success hide">
+						Your changes have been saved!
+					</p>
+
+					<hr />
+					
+					<label>
+						<span>Full Name</span>
+						<input type="text" value="Jeffff" name="full-name" />
+					</label>
+
+					<hr />
+
+					<label>
+						<span>Email</span>
+						<input type="email" value="jeff@tradesy.com" name="email" />
+					</label>
+
+				</fieldset>
+
+				<fieldset>
+					
+					<button class="submittable" data-submitted="Updating">
+						Update
+					</button>
+
+				</fieldset>
+
+			</form>
+
+			<br />
+			<br />
+
+			<h2>Change Password</h2>
+
+			<hr />
+
+			<form>
+				
+				<fieldset>
+
+					<p class="success hide">
+						Your changes have been saved!
+					</p>
+
+					<hr />
+
+					<label class="toggleable">
+						<span>Current Password</span>
+						<span class="cf">
+							<input type="password" />
+							<em>Show</em>
+						</span>
+						<!-- <small>Must be at least 4 characters</small> -->
+					</label>
+
+					<hr />
+
+					<label class="toggleable">
+						<span>New Password</span>
+						<span class="cf">
+							<input type="password" />
+							<em>Show</em>
+						</span>
+						<small>At least 4 characters &amp; can&rsquo;t be your current password</small>
+					</label>
+
+				</fieldset>
+
+				<fieldset>
+					
+					<button class="submittable" data-submitted="Saving">
+						Change
+					</button>
+
+				</fieldset>
+
+			</form>
+
+			<br />
+			<br />
+
+			<h2>Edit Your Profile</h2>
+
+			<hr />
+
+			<form>
+
+				<fieldset>
+
+					<p class="success hide">
+						Your changes have been saved!
+					</p>
+
+					<hr />
+
+					<h3>Profile Image</h3>
+
+					<!-- avatar -->
+					<div id="avatar" class="cf">
+						<span style="background-image: url(https://pbs.twimg.com/profile_images/616687624284172288/-lSklU4H_400x400.jpg);"></span>
+
+						<div>
+
+							<label>
+								<input type="file" accept="image/*" />
+								<em>Upload image</em>
+							</label>
+
+							<button>From Facebook</button>
+
+						</div>
+
+					</div>
+
+					<small class="note">Upload a square pic here (we’ll resize it to 200px by 200px). A great profile pic helps you build trust with other Tradesy members!</small>
+
+					<hr />
+
+					<h3>Closet Cover Image</h3>
+
+					<div id="cover" style="background-image: url(https://item1.tradesy.com/r/4be169314e6b3154c904fddc59020f316b6342d99748952068a26edac46f56c3/1200/600/temp/temp.jpg);" class="cf">
+						<label>
+							<input type="file" accept="image/*" />
+							<em>Change</em>
+						</label>
+					</div>
+
+					<small class="note">Upload a 1200px by 600px image to make your closet stand out and attract more buyers!</small>
+
+					<hr />
+
+					<label>
+						<span>Display Name</span>
+						<input type="text" value="Jeffff" name="full-name" />
+					</label>
+
+					<hr />
+
+					<label data-content="@">
+						<span data-details="You have reserved your username; well done!" data-details-sm="Your username is reserved">Username</span>
+						<input type="text" value="jeffff" name="username" disabled />
+						<small>
+							www.tradesy.com/closet/<strong>jeffff</strong>
+						</small>
+					</label>
+
+					<hr />
+
+					<label>
+						<span class="opt">City</span>
+						<input type="text" />
+					</label>
+
+					<hr />
+
+					<div class="two cf">
+
+						<h3 class="opt">Birthday</h3>
+
+						<div class="select-wrap s" tabindex="0">
+							<select>
+								<option value="">January</option>
+								<option value="">Feburary</option>
+								<option value="">March</option>
+							</select>
+						</div>
+
+						<div class="select-wrap s" tabindex="0">
+							<select>
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+							</select>
+						</div>
+
+					</div>
+
+					<hr />
+
+					<label>
+						<span class="opt">Description</span>
+						<textarea></textarea>
+						<small>A short bio or description of yourself helps make your closet stand out and attract more buyers.</small>
+					</label>
+
+				</fieldset>
+
+				<fieldset>
+					
+					<button class="submittable" data-submitted="Saving">
+						Save
+					</button>
+
+				</fieldset>
+
+			</form>
+
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+			<br />
+
+			<h2>Sample Form</h2>
 
 			<hr />
 
@@ -449,6 +664,13 @@
 					}, 250);
 				}
 			}
+			function scrollUp(el) {
+				setTimeout(function() {
+					$('html, body').animate({
+						scrollTop : el.offset().top - 100
+					}, 500);
+				}, 250);
+			}
 
 			var itemList = $('.select-wrap.cs');
 
@@ -554,12 +776,13 @@
 				return false;
 			});
 
-			$('#submit').on('click', function() {
-				$(this).prop('disabled', true).text($(this).data('submitted'));
+			$('.submittable').on('click', function() {
+				$(this).prop('disabled', true).text($(this).data('submitted')).parent().parent().find('p').removeClass('hide');
+				scrollUp($(this).parent().parent());
 				return false;
 			});
 			$('form').on('submit', function() {
-				$('#submit').prop('disabled', true);
+				$('.submittable').prop('disabled', true);
 				return false;
 			});
 			
