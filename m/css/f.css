@@ -35,12 +35,12 @@ h1 {
 }
 h2 {
 	margin-bottom : .5rem;
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 20px;	
 }
 fieldset h2 {
 	padding-top : 2rem;
 	border-top : 1px solid #ddd;
-	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	letter-spacing : 1px;
 	text-indent : 1px;
 	text-transform : uppercase;
@@ -202,6 +202,12 @@ label [data-details]:after {
 	color : red;
 	content : "!";
 	font-size : 20px;
+}
+.toggleable.good:after {
+	right : 4.25rem;
+}
+.toggleable.bad:after {
+	right : 3.5rem;
 }
 .bad input {
 	border-color : red;

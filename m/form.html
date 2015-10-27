@@ -33,14 +33,14 @@
 					
 					<label>
 						<span>Full Name</span>
-						<input type="text" value="Jeffff" name="full-name" />
+						<input type="text" name="full-name" data-required="value" />
 					</label>
 
 					<hr />
 
 					<label>
 						<span>Email</span>
-						<input type="email" value="jeff@tradesy.com" name="email" />
+						<input type="email" value="jeff@tradesy.com" name="email" data-required="email" />
 					</label>
 
 				</fieldset>
@@ -73,7 +73,7 @@
 					<label class="toggleable">
 						<span>Current Password</span>
 						<span class="cf">
-							<input type="password" />
+							<input type="password" data-required="password" />
 							<em>Show</em>
 						</span>
 						<!-- <small>Must be at least 4 characters</small> -->
@@ -84,7 +84,7 @@
 					<label class="toggleable">
 						<span>New Password</span>
 						<span class="cf">
-							<input type="password" />
+							<input type="password" data-required="password" />
 							<em>Show</em>
 						</span>
 						<small>At least 4 characters &amp; can&rsquo;t be your current password</small>
@@ -155,7 +155,7 @@
 
 					<label>
 						<span>Display Name</span>
-						<input type="text" value="Jeffff" name="full-name" />
+						<input type="text" value="Jeffff" name="full-name" data-required="value" />
 					</label>
 
 					<hr />
@@ -258,7 +258,7 @@
 					
 					<label class="good">
 						<span>Input Label Text</span>
-						<input type="text" />
+						<input type="text" data-required="value" />
 						<small>Some contextual hints</small>
 					</label>
 
@@ -665,6 +665,41 @@
 					}, 500);
 				}, 750);
 			}
+			function checkInput(el, val, type) {
+				if ( type === 'value' ) {
+					if ( val !== '' ) {
+						el.find('.error').remove();
+						el.removeClass('bad').addClass('good');
+					} else {
+						el.find('.error').remove();
+						el.find('input').after('<small class="error">Please enter a value here.</small>');
+						el.addClass('bad').removeClass('good');
+					}
+				} else if ( type === 'password' ) {
+					if ( val !== '' && val.length > 3 ) {
+						el.find('.error').remove();
+						el.removeClass('bad').addClass('good');
+					} else if ( val.length < 4 ) {
+						el.find('.error').remove();
+						el.find('input').after('<small class="error">Password must be at least 4 characters.</small>');
+						el.addClass('bad').removeClass('good');
+					} else {
+						el.find('.error').remove();
+						el.find('input').after('<small class="error">Please enter a value here.</small>');
+						el.addClass('bad').removeClass('good');
+					}
+				} else if ( type === 'email' ) {
+
+				}
+			}
+
+			// input validation
+			$('input[data-required]').on('focus', function() {
+				if ( $(this).val() !== '' ) $(this).addClass('validatable');
+			});
+			$('input[data-required]').on('blur', function() {
+				if ( !!$(this).hasClass('validatable') || $(this).val() !== '' ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'));
+			});
 
 			var itemList = $('.select-wrap.cs');
 
