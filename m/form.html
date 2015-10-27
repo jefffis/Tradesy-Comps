@@ -641,6 +641,10 @@
 		<script>
 		$(function() {
 
+			function validateEmail(email) {
+		      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		      return re.test(email);
+		    }
 			function showLoaded() {
 				setTimeout(function() {
 					$('.photo').addClass('hide');
@@ -672,14 +676,14 @@
 						el.removeClass('bad').addClass('good');
 					} else {
 						el.find('.error').remove();
-						el.find('input').after('<small class="error">Please enter a value here.</small>');
+						el.find('input').after('<small class="error">Please enter a value.</small>');
 						el.addClass('bad').removeClass('good');
 					}
 				} else if ( type === 'password' ) {
 					if ( val !== '' && val.length > 3 ) {
 						el.find('.error').remove();
 						el.removeClass('bad').addClass('good');
-					} else if ( val.length < 4 ) {
+					} else if ( val !== '' && val.length < 4 ) {
 						el.find('.error').remove();
 						el.find('input').after('<small class="error">Password must be at least 4 characters.</small>');
 						el.addClass('bad').removeClass('good');
@@ -689,7 +693,18 @@
 						el.addClass('bad').removeClass('good');
 					}
 				} else if ( type === 'email' ) {
-
+					if ( val !== '' && !!validateEmail(val) ) {
+						el.find('.error').remove();
+						el.removeClass('bad').addClass('good');
+					} else if ( val !== '' && !validateEmail(val) ) {
+						el.find('.error').remove();
+						el.find('input').after('<small class="error">Please enter a valid email.</small>');
+						el.addClass('bad').removeClass('good');
+					} else {
+						el.find('.error').remove();
+						el.find('input').after('<small class="error">Please enter your email.</small>');
+						el.addClass('bad').removeClass('good');
+					}
 				}
 			}
 
