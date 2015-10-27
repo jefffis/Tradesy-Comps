@@ -651,59 +651,60 @@
 					$('.photo-attached').removeClass('hide');
 				}, 2000);
 			}
-			function validateField(el) {
-				var par = el.parent();
-
-				if ( el.val() !== '' ) {
-					par.removeClass('bad');
-					par.find('.error').remove();
+			function validateField(el, ctx) {
+				if ( !!ctx ) {
+					el.removeClass('bad');
 					setTimeout(function() {
-						par.addClass('good');
+						el.addClass('good');
 					}, 250);
+				} else {
+					el.removeClass('good').addClass('bad');
 				}
 			}
-			function scrollUp(el) {
+			function scrollUp(el, btn) {
+				btn.prop('disabled', true).text(btn.data('submitted'))
 				setTimeout(function() {
 					$('html, body').animate({
 						scrollTop : el.offset().top - 100
 					}, 500);
+					el.find('p').removeClass('hide');
 				}, 750);
 			}
 			function checkInput(el, val, type) {
 				if ( type === 'value' ) {
 					if ( val !== '' ) {
 						el.find('.error').remove();
-						el.removeClass('bad').addClass('good');
+						validateField(el, true);
 					} else {
 						el.find('.error').remove();
 						el.find('input').after('<small class="error">Please enter a value.</small>');
-						el.addClass('bad').removeClass('good');
+						validateField(el, false);
 					}
 				} else if ( type === 'password' ) {
 					if ( val !== '' && val.length > 3 ) {
 						el.find('.error').remove();
-						el.removeClass('bad').addClass('good');
+						validateField(el, true);
 					} else if ( val !== '' && val.length < 4 ) {
 						el.find('.error').remove();
 						el.find('input').after('<small class="error">Password must be at least 4 characters.</small>');
-						el.addClass('bad').removeClass('good');
+						validateField(el, false);
 					} else {
 						el.find('.error').remove();
 						el.find('input').after('<small class="error">Please enter a value here.</small>');
-						el.addClass('bad').removeClass('good');
+						validateField(el, false);
 					}
 				} else if ( type === 'email' ) {
 					if ( val !== '' && !!validateEmail(val) ) {
 						el.find('.error').remove();
-						el.removeClass('bad').addClass('good');
+						validateField(el, true);
 					} else if ( val !== '' && !validateEmail(val) ) {
 						el.find('.error').remove();
 						el.find('input').after('<small class="error">Please enter a valid email.</small>');
-						el.addClass('bad').removeClass('good');
+						validateField(el, false);
 					} else {
 						el.find('.error').remove();
 						el.find('input').after('<small class="error">Please enter your email.</small>');
-						el.addClass('bad').removeClass('good');
+						validateField(el, false);
 					}
 				}
 			}
@@ -712,6 +713,7 @@
 			$('input[data-required]').on('focus', function() {
 				if ( $(this).val() !== '' ) $(this).addClass('validatable');
 			});
+
 			$('input[data-required]').on('blur', function() {
 				if ( !!$(this).hasClass('validatable') || $(this).val() !== '' ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'));
 			});
@@ -744,13 +746,13 @@
 				$(this).parent().addClass('focus');
 			});
 
-			$('input[type=text], input[type=password]').on('blur', function() {
-				$(this).parent().removeClass('focus');
+			// $('input[type=text], input[type=password]').on('blur', function() {
+			// 	$(this).parent().removeClass('focus');
 
-				if ( $(this).parent().hasClass('bad') ) {
-					validateField($(this));
-				}
-			});
+			// 	if ( $(this).parent().hasClass('bad') ) {
+			// 		validateField($(this));
+			// 	}
+			// });
 
 			// file upload
 			$('input[type=file]').on('change', function() {
@@ -821,12 +823,22 @@
 			});
 
 			$('.submittable').on('click', function() {
-				$(this).prop('disabled', true).text($(this).data('submitted')).parent().parent().find('p').removeClass('hide');
-				scrollUp($(this).parent().parent());
-				return false;
+				var inputs = $(this).parents('form').find('input');
+
+				inputs.each(function() {
+					checkInput($(this).parents('label'), $(this).val(), $(this).data('required'));
+				});
+
+				if ( $(this).parents('form').find('.error').length ) {
+					$(this).parents('form').find('.error:first').prev('input').focus(); // focus on the first error
+				} else {
+					scrollUp($(this).parents('form'), $(this));
+					return false;
+				}
 			});
+
 			$('form').on('submit', function() {
-				$('.submittable').prop('disabled', true);
+				// $('.submittable').prop('disabled', true);
 				return false;
 			});
 			
