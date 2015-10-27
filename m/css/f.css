@@ -387,6 +387,7 @@ select:active {
 .focusable,
 /*select:focus,*/
 .select-wrap:focus,
+.select-wrap:active,
 .tile.focus,
 #submit:focus {
 	outline : 1px dotted #111;
@@ -702,7 +703,26 @@ button:disabled:active {
 	color : #111;
 	text-decoration : none;
 }
-.pills a:before {
+.pills a:hover {
+	color : #ee7873;
+}
+.pills a:active {
+	/*top : 1px;*/
+	background : #2a2a2a;
+	box-shadow : none;
+	color : rgba(255, 255, 255, 0.65);
+}
+.pills .active {
+	background : #111;
+	color : white;
+}
+.pills .active:hover {
+	color : white;
+}
+.pills .active:active {
+	color : rgba(255, 255, 255, 0.65);
+}
+.pills .active:before {
 	position : absolute;
 	top : .59rem;
     left : .85rem;
@@ -710,19 +730,8 @@ button:disabled:active {
 	content : "\2715";
 	font-size : 15px;
 }
-.pills a:hover, .pills .active {
-	background : #111;
-	color : white;
-}
-.pills a:hover:before {
-	color : currentColor;
-}
-.pills a:active {
-	background : #2a2a2a;
-	box-shadow : none;
-	color : rgba(255, 255, 255, 0.65);
-}
-.pills a:active:before {
+.pills .active:hover:before,
+.pills .active:active:before {
 	color : currentColor;
 }
 

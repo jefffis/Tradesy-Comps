@@ -516,7 +516,11 @@
 
 			$('.tags a').on('click', function() {
 				$(this).toggleClass('selected');
-			})
+			});
+
+			$('.pills a').on('click', function() {
+				$(this).toggleClass('active');
+			});
 
 			// $('#search').on('keyup', function() {
 			// 	if ( $(this).val() !== '' ) $('#komplete').show();
