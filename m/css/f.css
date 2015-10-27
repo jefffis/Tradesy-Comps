@@ -272,17 +272,20 @@ small + small {
 }
 p.error {
 	background : #ffedef;
+	margin-bottom : 1rem;
 	padding : .5rem;
 	text-align : center;
 }
 .success {
 	background : #d9efc2;
+	margin-bottom : 1rem;
 	padding : .5rem;
 	color : #437414;
 	text-align : center;
 }
 .warning {
 	background : #fff9e2;
+	margin-bottom : 1rem;
 	padding : .5rem;
 	color : #583c20;
 	text-align : center;
@@ -953,6 +956,10 @@ button:disabled:active {
 	}
 	#avatar input[type=file] + em, #avatar button {
 		width : 9rem;
+		font-size : 15px;
+	}
+	#cover label {
+		font-size : 15px;
 	}
 }
 
