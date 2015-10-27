@@ -120,6 +120,7 @@ button:last-child {
 	.item {
 		min-width : 0;
 		width : 150px;
+		margin : 0;
 	}
 	.item figure, .item .s div {
 		max-width : 100px;
