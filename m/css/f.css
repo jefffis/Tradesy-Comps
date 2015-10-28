@@ -88,14 +88,20 @@ label {
 	display : block;
 	position : relative;
 }
-.two label {
+.two label, .two .label {
 	width : 50%;
 	float : left;
 	padding-right : .5rem;
 }
+.two label:first-child:after {
+	right : 1.3rem;
+}
 .two .select-wrap {
 	width : 48%;
 	float : left;
+}
+.two .label .select-wrap {
+	width : 100%;
 }
 .two .select-wrap + .select-wrap {
 	left : 1rem;
@@ -209,7 +215,7 @@ label [data-details]:after {
 	right : 4.25rem;
 }
 .toggleable.bad:after {
-	right : 3.5rem;
+	right : 4rem;
 }
 .bad input {
 	border-color : #c31d17;
@@ -282,10 +288,11 @@ small + small {
 .error {
 	color : #d10b24;
 }
-p.error {
+.error-msg {
 	background : #ffedef;
 	margin-bottom : 1rem;
 	padding : .5rem;
+	color : #d10b24;
 	text-align : center;
 }
 .success {
@@ -416,11 +423,15 @@ textarea {
 	overflow : hidden;
 	/*padding : .5rem .75rem;*/
 }
+.select-wrap + small {
+	clear : left;
+	padding-top : .35rem;
+}
 .cs {
 	overflow : visible;
 	border : 0;
 }
-.select-wrap.cs .selected:after, .select-wrap.s:after {
+.select-wrap.cs .selected:before, .select-wrap.s:before {
 	transition : transform .25s ease-in-out;
 	display : block;
 	position : absolute;
@@ -432,7 +443,7 @@ textarea {
 	border-right : 6px solid transparent;
 	content : "";
 }
-.open.cs .selected:after, .open.s:after {
+.open.cs .selected:before, .open.s:before {
 	transform : rotate(180deg);
 	top : 1rem;
 }
@@ -713,6 +724,14 @@ button:disabled:before {
     border-radius : 100%;
     content: "";
 }
+/*button:disabled.disabled {
+	background : #ddd;
+	color : #777;
+	cursor : default;
+}
+button:disabled.disabled:before {
+	display : none;
+}*/
 button:active {
 	background-color : #2a2a2a;
 	color : rgba(255, 255, 255, 0.65);
@@ -994,7 +1013,7 @@ button:active {
 	
 	aside {
 		height : 25rem;
-		width : 25%;
+		width : 178px;
 		float : left;
 		background : rgba(0, 0, 0, 0.025);
 		box-shadow : 0 0 0 1px #efefef inset;
@@ -1012,25 +1031,25 @@ button:active {
 		max-width : 15rem;
 	}
 
-	.select-wrap:after {
+	.select-wrap:before {
 		right : .95rem;
 	}
 
-	.select-wrap:before {
+	/*.select-wrap:before {
 		width : 40px;
-	}
+	}*/
 
 	.tile svg {
 		max-width : 90px;
 	}
 
-	.good:after, .toggleable.good:after {
+	/*.good:after, .toggleable.good:after {
 		right : -2rem;
 	}
 
 	.bad:after, .toggleable.bad:after {
 		right : -1.75rem;
-	}
+	}*/
 
 }
 

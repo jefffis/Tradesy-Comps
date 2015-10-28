@@ -19,6 +19,52 @@
 
 		<section>
 
+			<h2>Join for Free</h2>
+
+			<hr />
+
+			<form>
+				
+				<fieldset>
+					
+					<label>
+						<span>Full Name</span>
+						<input type="text" name="full-name" data-required="text-min-length" />
+					</label>
+
+					<hr />
+
+					<label>
+						<span>Email</span>
+						<input type="email" name="email" data-required="email" />
+					</label>
+
+					<hr />
+
+					<label class="toggleable">
+						<span>Current Password</span>
+						<span class="cf">
+							<input type="password" id="passwordddd" name="passwordddd" data-required="password" />
+							<em>Show</em>
+						</span>
+						<small>Must be at least 4 characters</small>
+					</label>
+
+				</fieldset>
+
+				<fieldset>
+					
+					<button class="submittable" data-submitted="Creating Account" data-infinite>
+						Join Now
+					</button>
+
+				</fieldset>
+
+			</form>
+
+			<br />
+			<br />
+
 			<h2>Contact Information</h2>
 
 			<hr />
@@ -33,7 +79,7 @@
 					
 					<label>
 						<span>Full Name</span>
-						<input type="text" name="full-name" data-required="value" />
+						<input type="text" name="full-name" data-required="text" />
 					</label>
 
 					<hr />
@@ -73,7 +119,7 @@
 					<label class="toggleable">
 						<span>Current Password</span>
 						<span class="cf">
-							<input type="password" data-required="password" />
+							<input type="password" id="current-password" name="current-password" data-required="password" />
 							<em>Show</em>
 						</span>
 						<!-- <small>Must be at least 4 characters</small> -->
@@ -84,7 +130,7 @@
 					<label class="toggleable">
 						<span>New Password</span>
 						<span class="cf">
-							<input type="password" data-required="password" />
+							<input type="password" id="new-password" name="new-password" data-required="password" />
 							<em>Show</em>
 						</span>
 						<small>At least 4 characters &amp; can&rsquo;t be your current password</small>
@@ -96,6 +142,138 @@
 					
 					<button class="submittable" data-submitted="Saving">
 						Change
+					</button>
+
+				</fieldset>
+
+			</form>
+
+			<br />
+			<br />
+
+			<h2>Shipping Address</h2>
+
+			<hr />
+
+			<form>
+
+				<fieldset>
+
+					<p class="success hide">
+						Your changes have been saved!
+					</p>
+					
+					<div class="two cf">
+						
+						<label>
+							<span>First Name</span>
+							<input type="text" data-required="text" />
+						</label>
+
+						<label>
+							<span>Last Name</span>
+							<input type="text" data-required="text" />
+						</label>
+
+					</div>
+
+					<hr />
+
+					<label>
+						<span>Address</span>
+						<input type="text" data-required="text" />
+					</label>
+
+					<hr />
+
+					<label>
+						<span class="opt">Address (con&rsquo;t)</span>
+						<input type="text" />
+					</label>
+
+					<hr />
+
+					<div class="two cf">
+						
+						<label>
+							<span>City</span>
+							<input type="text" data-required="text" />
+						</label>
+
+						<label>
+							<span>Country</span>
+							<input type="text" value="United States" data-required="text" disabled />
+						</label>
+
+					</div>
+
+					<hr />
+
+					<div class="two cf">
+						
+						<div class="label">
+							<h3>State</h3>
+							<div class="select-wrap s" tabindex="0">
+								<select data-required>
+									<option value="">Choose your State</option>
+									<option value="CA">California (CA)</option>
+								</select>
+							</div>
+						</div>
+
+						<label>
+							<span>Zip Code</span>
+							<input type="text" data-required="number" />
+						</label>
+
+					</div>
+
+					<hr />
+
+					<label>
+						<span class="opt">Phone Number</span>
+						<input type="text" />
+					</label>
+
+				</fieldset>
+
+				<fieldset>
+					
+					<button class="submittable" data-submitted="Saving">
+						Save
+					</button>
+
+				</fieldset>
+
+			</form>
+
+			<br />
+			<br />
+
+			<h2>Redeem Coupon</h2>
+
+			<hr />
+
+			<form>
+
+				<fieldset>
+
+					<p class="error-msg hide">
+						Whoops; that code isn&rsquo;t valid.
+					</p>
+					
+					<label>
+						<span>Coupon Code</span>
+						<input type="text" data-required="text" />
+						<small>Ready for your free money?</small>
+					</label>
+
+				</fieldset>
+
+				<fieldset>
+					
+					<button class="submittable" data-submitted="Redeeming">
+						Redeem
 					</button>
 
 				</fieldset>
@@ -155,7 +333,7 @@
 
 					<label>
 						<span>Display Name</span>
-						<input type="text" value="Jeffff" name="full-name" data-required="value" />
+						<input type="text" value="Jeffff" name="full-name" data-required="text" />
 					</label>
 
 					<hr />
@@ -246,7 +424,7 @@
 
 					<hr class="min" />
 
-					<p class="error">
+					<p class="error-msg">
 						We had an issue saving your changes.
 					</p>
 
@@ -258,7 +436,7 @@
 					
 					<label class="good">
 						<span>Input Label Text</span>
-						<input type="text" data-required="value" />
+						<input type="text" data-required="text" />
 						<small>Some contextual hints</small>
 					</label>
 
@@ -691,17 +869,31 @@
 					el.removeClass('good').addClass('bad');
 				}
 			}
-			function scrollUp(el, btn) {
+			function scrollUp(el, btn, ctx) {
+				var text = btn.text();
 				btn.prop('disabled', true).text(btn.data('submitted'))
-				setTimeout(function() {
-					$('html, body').animate({
-						scrollTop : el.offset().top - 100
-					}, 500);
-					el.find('p').removeClass('hide');
-				}, 750);
+				if ( !!ctx ) {
+					setTimeout(function() {
+						$('html, body').animate({
+							scrollTop : el.offset().top - 100
+						}, 500);
+						el.find('p').removeClass('hide');
+						btn.prop('disabled', false).text(text);
+					}, 750);
+				}
+			}
+			function checkSelect(el, val) {
+				if ( val !== '' ) {
+					el.next('.error').remove();
+					validateField(el, true);
+				} else {
+					el.next('.error').remove();
+					el.after('<small class="error">Please make a selection.</small>');
+					validateField(el, false);
+				}
 			}
 			function checkInput(el, val, type) {
-				if ( type === 'value' ) {
+				if ( type === 'text' ) { // just text
 					if ( val !== '' ) {
 						el.find('.error').remove();
 						validateField(el, true);
@@ -710,7 +902,34 @@
 						el.find('input').after('<small class="error">Please enter a value.</small>');
 						validateField(el, false);
 					}
-				} else if ( type === 'password' ) {
+				} else if ( type === 'text-min-length' ) { // password
+					if ( val !== '' && val.length > 3 ) {
+						el.find('.error').remove();
+						validateField(el, true);
+					} else if ( val !== '' && val.length < 4 ) {
+						el.find('.error').remove();
+						el.find('input').after('<small class="error">Must be at least 4 characters.</small>');
+						validateField(el, false);
+					} else {
+						el.find('.error').remove();
+						el.find('input').after('<small class="error">Please enter a value here.</small>');
+						validateField(el, false);
+					}
+				} else if ( type === 'number' ) { //  numbers only
+					var reg = /^\d+$/;
+					if ( val !== '' && !!reg.test(val) ) {
+						el.find('.error').remove();
+						validateField(el, true);
+					} else if ( val !== '' && !reg.test(val) ) {
+						el.find('.error').remove();
+						el.find('input').after('<small class="error">Please enter only numbers.</small>');
+						validateField(el, false);
+					} else {
+						el.find('.error').remove();
+						el.find('input').after('<small class="error">Please enter a value.</small>');
+						validateField(el, false);
+					}
+				} else if ( type === 'password' ) { // password
 					if ( val !== '' && val.length > 3 ) {
 						el.find('.error').remove();
 						validateField(el, true);
@@ -723,7 +942,7 @@
 						el.find('input').after('<small class="error">Please enter a value here.</small>');
 						validateField(el, false);
 					}
-				} else if ( type === 'email' ) {
+				} else if ( type === 'email' ) { // email
 					if ( val !== '' && !!validateEmail(val) ) {
 						el.find('.error').remove();
 						validateField(el, true);
@@ -784,6 +1003,10 @@
 			// 	}
 			// });
 
+			$('select').on('change', function() {
+				checkSelect($(this).parent(), $(this).val());
+			});
+
 			// file upload
 			$('input[type=file]').on('change', function() {
 				var fileName = $(this).val().replace('C:\\fakepath\\', '');
@@ -839,11 +1062,11 @@
 
 				if ( $(this).text() === 'Show' ) {
 					$(this).text('Hide');
-					$(input).after('<input type="text" name="' + name + '" id="' + id + '" value="' + val + '" />');
+					$(input).after('<input type="text" name="' + name + '" id="' + id + '" value="' + val + '" data-required="password" />');
 					$(input).remove();
 				} else {
 					$(this).text('Show');
-					$(input).after('<input type="password" name="' + name + '" id="' + id + '" value="' + val + '" />');
+					$(input).after('<input type="password" name="' + name + '" id="' + id + '" value="' + val + '" data-required="password" />');
 					$(input).remove();
 				}
 			});
@@ -853,16 +1076,22 @@
 			});
 
 			$('.submittable').on('click', function() {
-				var inputs = $(this).parents('form').find('input');
+				var inputs = $(this).parents('form').find('input'),
+					selects = $(this).parents('form').find('select'),
+					ctx = $(this).data('infinite') !== undefined ? false : true;
 
 				inputs.each(function() {
-					checkInput($(this).parents('label'), $(this).val(), $(this).data('required'));
+					if ( $(this).data('required') !== undefined ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'));
+				});
+
+				selects.each(function() {
+					if ( $(this).data('required') !== undefined ) checkSelect($(this).parent(), $(this).val());
 				});
 
 				if ( $(this).parents('form').find('.error').length ) {
 					$(this).parents('form').find('.error:first').prev('input').focus(); // focus on the first error
 				} else {
-					scrollUp($(this).parents('form'), $(this));
+					scrollUp($(this).parents('form'), $(this), ctx);
 					return false;
 				}
 			});
