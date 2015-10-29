@@ -19,6 +19,118 @@
 
 		<section>
 
+			<h2 id="inline-buttom">(inline input + button)</h2>
+
+			<hr />
+
+			<form>
+				
+				<fieldset>
+					
+					<div class="inline cf">
+						
+						<label>
+							<span>Sign up for Tradesy Text Alerts</span>
+							<input type="text" data-required="number" />
+						</label>
+
+						<button class="submittable" data-submitted="Applying" data-infinite>
+							Apply
+						</button>
+
+						<small>Enter your phone number and we&rsquo;ll send you a text to verify your phone number. Once subscribed, yada yada yada&hellip;</small>
+
+					</div>
+
+				</fieldset>
+
+			</form>
+
+			<br />
+			<br />
+
+			<h2 id="cc">Billing Information</h2>
+
+			<hr />
+
+			<form>
+
+				<fieldset>
+
+					<p class="warning hide">
+						Hmm, something seems amiss.
+					</p>
+
+					<label>
+						<span>Name on Card</span>
+						<input type="text" name="full-name" data-required="text-min-length" />
+					</label>
+
+					<hr />
+
+					<label data-card>
+						<span>Credit Card Number</span>
+						<input type="text" data-required="number" minlength="18" maxlength="19" />
+					</label>
+
+					<hr />
+
+					<div class="three cf">
+
+						<div class="label">
+							<h3>Expiration Date</h3>
+							<div class="select-wrap s" tabindex="0">
+								<select data-required data-validation="Enter month.">
+									<option value="">Month</option>
+									<option value="1">1</option>
+									<option value="1">1</option>
+									<option value="1">1</option>
+									<option value="1">1</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="label">
+							<h3>&nbsp;</h3>
+							<div class="select-wrap s" tabindex="0">
+								<select data-required data-validation="Enter year.">
+									<option value="">Year</option>
+									<option value="1">2015</option>
+									<option value="1">2016</option>
+									<option value="1">2017</option>
+									<option value="1">2018</option>
+								</select>
+							</div>
+						</div>
+
+						<label>
+							<span data-tooltip tabindex="0">
+								CVN
+								<div>
+									Last 3 digit-code on back of card. AMEX: 4 digit-code on front.
+								</div>
+							</span>
+							<input type="text" data-required="number" minlength="3" maxlength="4" />
+							<small class="m">Last 3 digit-code on back of card. AMEX: 4 digit-code on front.</small>
+						</label>
+
+					</div>
+
+				</fieldset>
+
+				<fieldset>
+					
+					<button class="submittable" data-submitted="Buying Now">
+						Place Order
+					</button>
+
+				</fieldset>
+
+			</form>
+
+			<br />
+			<br />
+
 			<h2 id="faux-modal">Join for Free</h2>
 
 			<hr />
@@ -943,13 +1055,14 @@
 					}, 750);
 				}
 			}
-			function checkSelect(el, val) {
+			function checkSelect(el, val, msg) {
 				if ( val !== '' ) {
 					el.next('.error').remove();
 					validateField(el, true);
 				} else {
+					var message = msg !== undefined ? msg : 'Please make a selection.';
 					el.next('.error').remove();
-					el.after('<small class="error">Please make a selection.</small>');
+					el.after('<small class="error">' + message + '</small>');
 					validateField(el, false);
 				}
 			}
@@ -995,7 +1108,7 @@
 						validateField(el, false);
 					}
 				} else if ( type === 'number' ) { //  numbers only
-					var reg = /^\d+$/;
+					var reg = /^[\d ]*$/;
 					if ( val !== '' && !!reg.test(val) ) {
 						el.find('.error').remove();
 						validateField(el, true);
@@ -1059,7 +1172,7 @@
 				});
 
 				selects.each(function() {
-					if ( $(this).data('required') !== undefined ) checkSelect($(this).parent(), $(this).val());
+					if ( $(this).data('required') !== undefined ) checkSelect($(this).parent(), $(this).val(), $(this).data('validation'));
 				});
 
 				if ( $(this).parents('form').find('.error').length ) {
@@ -1114,6 +1227,32 @@
 
 			$('input[type=text], input[type=password]').on('focus', function() {
 				$(this).parent().addClass('focus');
+			});
+
+			$('[data-card] input').on('keyup', function() {
+				var val = $(this).val().split(' ').join('');
+				if ( val === '' ) {
+					return;
+				} else {
+					switch ( $(this).val().charAt(0) ) {
+						case '4' :
+							$(this).parent().addClass('visa').removeClass('amex mc disc');
+						break;
+						case '3' :
+							$(this).parent().addClass('amex').removeClass('visa mc disc');
+						break;
+						case '5' :
+							$(this).parent().addClass('mc').removeClass('visa amex disc');
+						break;
+						case '6' :
+							$(this).parent().addClass('disc').removeClass('visa mc amex');
+						break;
+					}
+				}
+				if ( val.length > 0) {
+					val = val.match(new RegExp('.{1,4}', 'g')).join(' ');
+				}
+				$(this).val(val);
 			});
 
 			// $('input[type=text], input[type=password]').on('blur', function() {

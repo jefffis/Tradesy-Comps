@@ -100,7 +100,7 @@ label {
 	width : 48%;
 	float : left;
 }
-.two .label .select-wrap {
+.two .label .select-wrap, .three .label .select-wrap {
 	width : 100%;
 }
 .two .select-wrap + .select-wrap {
@@ -119,12 +119,12 @@ label {
 	padding-left : .5rem;
 	padding-right : 0;	
 }
-.three label {
+.three label, .three .label {
 	width : 33%;
 	float : left;
 	padding-right : .5rem;
 }
-.three label:nth-child(n+3) {
+.three label:nth-child(n+3), .three .label:nth-child(2) {
 	padding-left : .5rem;
 	padding-right : .5rem;
 }
@@ -235,6 +235,107 @@ label [data-details]:after {
 	content : attr(data-content);
 }
 
+/*** credit card UI ***/
+[data-card] input[type=text] {
+	padding-left : 3.75rem;
+}
+[data-card]:before {
+	display : block;
+	position : absolute;
+	top : 2.7rem;
+	left : .75rem;
+	height : 1rem;
+	width : 2.5rem;
+	background : #ccc;
+	padding-top : .3rem;
+	border-radius : 3px;
+	color : white;
+	content : "";
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+	font-size : 12px;
+	letter-spacing : .5px;
+	line-height : 1;
+	text-align : center;
+	text-indent : .5px;
+}
+.visa:before {
+	background : #1b1d74;
+	content : "Visa";
+}
+.amex:before {
+	background : #2f77bf;
+	content : "Amex";
+}
+.mc:before {
+	background : #e30613;
+	content : "MC";
+}
+.disc:before {
+	background : #f78223;
+	content : "Disc";
+}
+
+/*** tooltip ***/
+[data-tooltip] {
+	position : relative;
+	padding-left : 1.75rem;
+	outline : none;
+}
+[data-tooltip] em {
+	display : none;
+}
+[data-tooltip]:focus:before {
+	background : none;
+	box-shadow : 0 0 0 1px #efefef inset;
+	outline : 1px dotted #111;
+}
+[data-tooltip]:hover:before {
+	background : none;
+	box-shadow : 0 0 0 1px #efefef inset;
+}
+[data-tooltip]:before {
+	display : inline-block;
+	position : absolute;
+	top : 2px;
+	left : 0;
+	height : 1.25rem;
+	width : 1.25rem;
+	background : #efefef;
+	border-radius : 100%;
+	content : "?";
+	font-size : 14px;
+	text-align : center;
+}
+[data-tooltip] div {
+	display : none;
+	position : absolute;
+	bottom : 50%;
+	right : 0;
+	background : #111;
+	margin-bottom : .5rem;
+	padding : .25rem .35rem;
+	opacity : 0;
+	color : white;
+	font-size : 12px;
+	line-height : 1.2;
+}
+[data-tooltip]:focus div, [data-tooltip]:hover div {
+	animation : fadeIn .25s ease-in-out;
+	display : block;
+	bottom : 100%;
+	opacity : 1;
+}
+[data-tooltip] div:before {
+	display : block;
+	position : absolute;
+	top : 100%;
+	left : 4px;
+	border-top : 6px solid #111;
+	border-left : 6px solid transparent;
+	border-right : 6px solid transparent;
+	content : "";
+}
+
 /*** prefilled ***/
 .prefilled {
 	background : #fff9e2;
@@ -273,6 +374,9 @@ small {
 	font-size: 13px;
 	line-height : 1.25;
 }
+.m {
+	display : none;
+}
 .note {
 	padding-top : .35rem;
 }
@@ -284,6 +388,9 @@ small a:active {
 }
 small + small {
 	margin-top: 0;
+}
+.three small + small {
+	margin-top : .35rem;
 }
 .error {
 	color : #d10b24;
@@ -429,6 +536,9 @@ textarea {
 .select-wrap + small {
 	clear : left;
 	padding-top : .35rem;
+}
+.three .select-wrap + small {
+	padding-top : 0;
 }
 .cs {
 	overflow : visible;
@@ -694,6 +804,27 @@ input[type=file]:active + em {
 	color : white;
 }
 
+/*** inline form & button ***/
+.inline label {
+	width : 65%;
+	float : left;
+}
+.inline button {
+	width : 35%;
+	min-width : 0;
+	float : right;
+	margin-top : 2rem;
+	padding : .5rem .6rem;
+	line-height : 1.45;
+}
+.inline small {
+	clear : both;
+	padding-top : .35rem;
+}
+.inline .error {
+	padding-top : 0;
+}
+
 /*** button ***/
 button {
 	background : #111;
@@ -941,30 +1072,6 @@ button:active {
 	top : .6rem;
 }
 
-@keyframes spin {
-	from {
-		transform : rotate(0deg);
-	}
-	to {
-		transform : rotate(360deg);
-	}
-}
-
-@keyframes grow {
-	0% {
-		transform : scale(1);
-		opacity : 0;
-	}
-	60% {
-		transform : scale(1.35);
-		opacity : .65;
-	}
-	100% {
-		transform : scale(1);
-		opacity : 1;
-	}
-}
-
 @media screen and (max-width : 374px) {
 	
 	body {
@@ -997,7 +1104,7 @@ button:active {
 	#cover label {
 		font-size : 15px;
 	}
-	.two label, .two label:last-child, .two .label {
+	.two label, .two label:last-child, .two .label, .inline label, .three label, .three .label, .three label:last-child {
 		width : 100%;
 		float : none;
 		padding : 0;
@@ -1005,8 +1112,44 @@ button:active {
 	.two label:last-child {
 		margin-top : calc(2rem + 1px);
 	}
+	.three label:last-child {
+		margin-top : 1rem;
+	}
+	.three .label:nth-child(2) {
+		margin-top : 1rem; 
+	}
+	.three .label:nth-child(2) h3 {
+		display : none;
+	}
 	.two label:first-child:after {
 		right: .3rem;
+	}
+	.three label:nth-child(n+3), .three .label:nth-child(2) {
+		padding : 0;
+	}
+	.inline button {
+		width : auto;
+		min-width : 0;
+		float : none;
+		margin-top : 1rem;
+		padding : .5rem .75rem;
+		line-height : 1.45;
+	}
+	.inline small {
+		clear : both;
+		padding-top : .35rem;
+	}
+	[data-tooltip] {
+		padding-left : 0;
+	}
+	[data-tooltip] div, [data-tooltip]:focus div, [data-tooltip]:hover div {
+		display : none;
+	}
+	[data-tooltip]:before, [data-tooltip] div:before {
+		display : none;
+	}
+	small.m {
+		display : block;
 	}
 }
 
@@ -1074,4 +1217,41 @@ button:active {
 		margin-right : -100px;
 	}
 
+}
+
+
+@keyframes spin {
+	from {
+		transform : rotate(0deg);
+	}
+	to {
+		transform : rotate(360deg);
+	}
+}
+
+@keyframes grow {
+	0% {
+		transform : scale(1);
+		opacity : 0;
+	}
+	60% {
+		transform : scale(1.35);
+		opacity : .65;
+	}
+	100% {
+		transform : scale(1);
+		opacity : 1;
+	}
+}
+@keyframes fadeIn {
+	from {
+		display : none;
+		bottom : 50%;
+		opacity : 0;
+	}
+	to {
+		display : block;
+		bottom : 100%;
+		opacity : 1;
+	}
 }
