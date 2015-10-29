@@ -50,6 +50,15 @@
 						<small>Must be at least 4 characters</small>
 					</label>
 
+					<hr />
+
+					<div class="label">
+						<label>
+							<input type="checkbox" data-required />
+							<span>Do you want to receive email updates?</span>
+						</label>
+					</div>
+
 				</fieldset>
 
 				<fieldset>
@@ -280,7 +289,7 @@
 						
 						<div class="label">
 							<label>
-								<input type="radio" name="bar" id="___" data-required="radio" />
+								<input type="radio" name="bar" id="___" data-required />
 								<span>Yes</span>
 							</label>
 						</div>
@@ -289,7 +298,7 @@
 
 						<div class="label">
 							<label>
-								<input type="radio" name="bar" id="____" data-required="radio" />
+								<input type="radio" name="bar" id="____" data-required />
 								<span>No</span>
 							</label>
 						</div>
@@ -304,7 +313,7 @@
 						
 						<div class="label">
 							<label>
-								<input type="radio" name="foo" id="_" data-required="radio" />
+								<input type="radio" name="foo" id="_" data-required />
 								&nbsp;&nbsp;<span>Yes, it definitely is!</span>
 							</label>
 						</div>
@@ -313,7 +322,7 @@
 
 						<div class="label">
 							<label>
-								<input type="radio" name="foo" id="__" data-required="radio" />
+								<input type="radio" name="foo" id="__" data-required />
 								&nbsp;&nbsp;<span>Nope</span>
 							</label>
 						</div>
@@ -952,6 +961,14 @@
 					par.find('.error').remove();
 				}
 			}
+			function checkCheckbox(el, par) {
+				if ( el.prop('checked') !== true ) {
+					par.find('.error').remove();
+					par.append('<small class="error">Please make a selection.</small>');
+				} else {
+					par.find('.error').remove();
+				}
+			}
 			function checkInput(el, val, type, msg) {
 				if ( type === 'text' ) { // just text
 					if ( val !== '' ) {
@@ -1025,10 +1042,9 @@
 			$('.submittable').on('click', function() {
 				var inputs = $(this).parents('form').find('input[type=text], input[type=email], input[type=password]'),
 					radios = $(this).parents('form').find('input[type=radio]'),
+					checkboxes = $(this).parents('form').find('input[type=checkbox]'),
 					selects = $(this).parents('form').find('select'),
 					ctx = $(this).data('infinite') !== undefined ? false : true;
-
-				console.log(radios.length);
 
 				inputs.each(function() {
 					if ( $(this).data('required') !== undefined ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'), $(this).data('validation'));
@@ -1036,6 +1052,10 @@
 
 				radios.each(function() {
 					if ( $(this).data('required') !== undefined ) checkRadio($(this), $(this).parents('.radios'), $(this).attr('name'));
+				});
+
+				checkboxes.each(function() {
+					if ( $(this).data('required') !== undefined ) checkCheckbox($(this), $(this).parents('.label'));
 				});
 
 				selects.each(function() {
@@ -1083,7 +1103,13 @@
 
 				$(this).parent().parent().removeClass('focusable');
 
-				if ( !!$(this).hasClass('validatable') ) checkRadio($(this), $(this).parents('.radios'), $(this).attr('name'));
+				if ( $(this).data('required') !== undefined ) {
+					if ( $(this).attr('name') === 'radio' ) {
+						checkRadio($(this), $(this).parents('.radios'), $(this).attr('name'));
+					} else {
+						checkCheckbox($(this), $(this).parents('.label'));
+					}
+				}
 			});
 
 			$('input[type=text], input[type=password]').on('focus', function() {
