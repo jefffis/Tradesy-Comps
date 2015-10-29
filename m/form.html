@@ -1104,7 +1104,7 @@
 				$(this).parent().parent().removeClass('focusable');
 
 				if ( $(this).data('required') !== undefined ) {
-					if ( $(this).attr('name') === 'radio' ) {
+					if ( $(this).attr('type') === 'radio' ) {
 						checkRadio($(this), $(this).parents('.radios'), $(this).attr('name'));
 					} else {
 						checkCheckbox($(this), $(this).parents('.label'));
