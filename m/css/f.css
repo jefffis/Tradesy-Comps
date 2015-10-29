@@ -423,6 +423,9 @@ textarea {
 	overflow : hidden;
 	/*padding : .5rem .75rem;*/
 }
+.select-wrap.bad {
+	border-color : #d10b24;
+}
 .select-wrap + small {
 	clear : left;
 	padding-top : .35rem;
@@ -984,15 +987,26 @@ button:active {
 	label [data-details]:after {
 		content : attr(data-details-sm);
 	}
-	.opt:after {
+	/*.opt:after {
 		content : "Opt";
-	}
+	}*/
 	#avatar input[type=file] + em, #avatar button {
 		width : 9rem;
 		font-size : 15px;
 	}
 	#cover label {
 		font-size : 15px;
+	}
+	.two label, .two label:last-child, .two .label {
+		width : 100%;
+		float : none;
+		padding : 0;
+	}
+	.two label:last-child {
+		margin-top : calc(2rem + 1px);
+	}
+	.two label:first-child:after {
+		right: .3rem;
 	}
 }
 
@@ -1053,3 +1067,11 @@ button:active {
 
 }
 
+@media screen and (min-width : 900px) {
+
+	.wide {
+		max-width : 500px;
+		margin-right : -100px;
+	}
+
+}

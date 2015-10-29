@@ -151,101 +151,105 @@
 			<br />
 			<br />
 
-			<h2>Shipping Address</h2>
+			<div class="wide">
 
-			<hr />
+				<h2>Shipping Address</h2>
 
-			<form>
+				<hr />
 
-				<fieldset>
+				<form>
 
-					<p class="success hide">
-						Your changes have been saved!
-					</p>
-					
-					<div class="two cf">
+					<fieldset>
+
+						<p class="success hide">
+							Your changes have been saved!
+						</p>
 						
-						<label>
-							<span>First Name</span>
-							<input type="text" data-required="text" />
-						</label>
+						<div class="two cf">
+							
+							<label>
+								<span>First Name</span>
+								<input type="text" data-required="text" data-validation="Please enter your first name." />
+							</label>
 
-						<label>
-							<span>Last Name</span>
-							<input type="text" data-required="text" />
-						</label>
+							<label>
+								<span>Last Name</span>
+								<input type="text" data-required="text" />
+							</label>
 
-					</div>
-
-					<hr />
-
-					<label>
-						<span>Address</span>
-						<input type="text" data-required="text" />
-					</label>
-
-					<hr />
-
-					<label>
-						<span class="opt">Address (con&rsquo;t)</span>
-						<input type="text" />
-					</label>
-
-					<hr />
-
-					<div class="two cf">
-						
-						<label>
-							<span>City</span>
-							<input type="text" data-required="text" />
-						</label>
-
-						<label>
-							<span>Country</span>
-							<input type="text" value="United States" data-required="text" disabled />
-						</label>
-
-					</div>
-
-					<hr />
-
-					<div class="two cf">
-						
-						<div class="label">
-							<h3>State</h3>
-							<div class="select-wrap s" tabindex="0">
-								<select data-required>
-									<option value="">Choose your State</option>
-									<option value="CA">California (CA)</option>
-								</select>
-							</div>
 						</div>
 
+						<hr />
+
 						<label>
-							<span>Zip Code</span>
-							<input type="text" data-required="number" />
+							<span>Address</span>
+							<input type="text" data-required="text" data-validation="Please enter your addresss." />
 						</label>
 
-					</div>
+						<hr />
 
-					<hr />
+						<label>
+							<span class="opt">Address (con&rsquo;t)</span>
+							<input type="text" />
+						</label>
 
-					<label>
-						<span class="opt">Phone Number</span>
-						<input type="text" />
-					</label>
+						<hr />
 
-				</fieldset>
+						<div class="two cf">
+							
+							<label>
+								<span>City</span>
+								<input type="text" data-required="text" />
+							</label>
 
-				<fieldset>
-					
-					<button class="submittable" data-submitted="Saving">
-						Save
-					</button>
+							<label>
+								<span>Country</span>
+								<input type="text" value="United States" data-required="text" disabled />
+							</label>
 
-				</fieldset>
+						</div>
 
-			</form>
+						<hr />
+
+						<div class="two cf">
+							
+							<div class="label">
+								<h3>State</h3>
+								<div class="select-wrap s" tabindex="0">
+									<select data-required>
+										<option value="">Choose your State</option>
+										<option value="CA">California (CA)</option>
+									</select>
+								</div>
+							</div>
+
+							<label>
+								<span>Zip Code</span>
+								<input type="text" data-required="number" />
+							</label>
+
+						</div>
+
+						<hr />
+
+						<label>
+							<span class="opt">Phone Number</span>
+							<input type="text" />
+						</label>
+
+					</fieldset>
+
+					<fieldset>
+						
+						<button class="submittable" data-submitted="Saving">
+							Save
+						</button>
+
+					</fieldset>
+
+				</form>
+
+			</div>
 
 			<br />
 			<br />
@@ -892,14 +896,15 @@
 					validateField(el, false);
 				}
 			}
-			function checkInput(el, val, type) {
+			function checkInput(el, val, type, msg) {
 				if ( type === 'text' ) { // just text
 					if ( val !== '' ) {
 						el.find('.error').remove();
 						validateField(el, true);
 					} else {
+						var message = msg !== undefined ? msg : 'Please enter a value.';
 						el.find('.error').remove();
-						el.find('input').after('<small class="error">Please enter a value.</small>');
+						el.find('input').after('<small class="error">' + message + '</small>');
 						validateField(el, false);
 					}
 				} else if ( type === 'text-min-length' ) { // password
@@ -911,8 +916,9 @@
 						el.find('input').after('<small class="error">Must be at least 4 characters.</small>');
 						validateField(el, false);
 					} else {
+						var message = msg !== undefined ? msg : 'Please enter a value.';
 						el.find('.error').remove();
-						el.find('input').after('<small class="error">Please enter a value here.</small>');
+						el.find('input').after('<small class="error">' + message + '</small>');
 						validateField(el, false);
 					}
 				} else if ( type === 'number' ) { //  numbers only
@@ -925,8 +931,9 @@
 						el.find('input').after('<small class="error">Please enter only numbers.</small>');
 						validateField(el, false);
 					} else {
+						var message = msg !== undefined ? msg : 'Please enter a value.';
 						el.find('.error').remove();
-						el.find('input').after('<small class="error">Please enter a value.</small>');
+						el.find('input').after('<small class="error">' + message + '</small>');
 						validateField(el, false);
 					}
 				} else if ( type === 'password' ) { // password
@@ -938,8 +945,9 @@
 						el.find('input').after('<small class="error">Password must be at least 4 characters.</small>');
 						validateField(el, false);
 					} else {
+						var message = msg !== undefined ? msg : 'Please enter a value.';
 						el.find('.error').remove();
-						el.find('input').after('<small class="error">Please enter a value here.</small>');
+						el.find('input').after('<small class="error">' + message + '</small>');
 						validateField(el, false);
 					}
 				} else if ( type === 'email' ) { // email
@@ -963,8 +971,9 @@
 				if ( $(this).val() !== '' ) $(this).addClass('validatable');
 			});
 
+			// this tests if there was a value before, and then it can validate on blur
 			$('input[data-required]').on('blur', function() {
-				if ( !!$(this).hasClass('validatable') || $(this).val() !== '' ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'));
+				if ( !!$(this).hasClass('validatable') || $(this).val() !== '' ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'), $(this).data('validation'));
 			});
 
 			var itemList = $('.select-wrap.cs');
@@ -1081,7 +1090,7 @@
 					ctx = $(this).data('infinite') !== undefined ? false : true;
 
 				inputs.each(function() {
-					if ( $(this).data('required') !== undefined ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'));
+					if ( $(this).data('required') !== undefined ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'), $(this).data('validation'));
 				});
 
 				selects.each(function() {
@@ -1089,7 +1098,7 @@
 				});
 
 				if ( $(this).parents('form').find('.error').length ) {
-					$(this).parents('form').find('.error:first').prev('input').focus(); // focus on the first error
+					window.scroll(0, $(this).parents('form').find('.error:first').prev('input').offset().top - 100); // focus on the first error
 				} else {
 					scrollUp($(this).parents('form'), $(this), ctx);
 					return false;
