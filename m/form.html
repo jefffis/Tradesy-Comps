@@ -272,6 +272,54 @@
 						<small>Ready for your free money?</small>
 					</label>
 
+					<hr />
+
+					<div class="toggle radios">
+
+						<h3>Does this item still have tags attached?</h3>
+						
+						<div class="label">
+							<label>
+								<input type="radio" name="bar" id="___" data-required="radio" />
+								<span>Yes</span>
+							</label>
+						</div>
+
+						&nbsp;
+
+						<div class="label">
+							<label>
+								<input type="radio" name="bar" id="____" data-required="radio" />
+								<span>No</span>
+							</label>
+						</div>
+
+					</div>
+
+					<hr />
+
+					<div class="radios">
+
+						<h3>Is this right or wrong?</h3>
+						
+						<div class="label">
+							<label>
+								<input type="radio" name="foo" id="_" data-required="radio" />
+								&nbsp;&nbsp;<span>Yes, it definitely is!</span>
+							</label>
+						</div>
+
+						<hr class="min" />
+
+						<div class="label">
+							<label>
+								<input type="radio" name="foo" id="__" data-required="radio" />
+								&nbsp;&nbsp;<span>Nope</span>
+							</label>
+						</div>
+
+					</div>
+
 				</fieldset>
 
 				<fieldset>
@@ -896,6 +944,14 @@
 					validateField(el, false);
 				}
 			}
+			function checkRadio(el, par, name) {
+				if ( $('input[name=' + name + ']:checked').length < 1 ) {
+					par.find('.error').remove();
+					par.append('<small class="error">Please make a selection.</small>');
+				} else {
+					par.find('.error').remove();
+				}
+			}
 			function checkInput(el, val, type, msg) {
 				if ( type === 'text' ) { // just text
 					if ( val !== '' ) {
@@ -966,6 +1022,34 @@
 				}
 			}
 
+			$('.submittable').on('click', function() {
+				var inputs = $(this).parents('form').find('input[type=text], input[type=email], input[type=password]'),
+					radios = $(this).parents('form').find('input[type=radio]'),
+					selects = $(this).parents('form').find('select'),
+					ctx = $(this).data('infinite') !== undefined ? false : true;
+
+				console.log(radios.length);
+
+				inputs.each(function() {
+					if ( $(this).data('required') !== undefined ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'), $(this).data('validation'));
+				});
+
+				radios.each(function() {
+					if ( $(this).data('required') !== undefined ) checkRadio($(this), $(this).parents('.radios'), $(this).attr('name'));
+				});
+
+				selects.each(function() {
+					if ( $(this).data('required') !== undefined ) checkSelect($(this).parent(), $(this).val());
+				});
+
+				if ( $(this).parents('form').find('.error').length ) {
+					window.scroll(0, $(this).parents('form').find('.error:first').prev('input').offset().top - 100); // focus on the first error
+				} else {
+					scrollUp($(this).parents('form'), $(this), ctx);
+					return false;
+				}
+			});
+
 			// input validation
 			$('input[data-required]').on('focus', function() {
 				if ( $(this).val() !== '' ) $(this).addClass('validatable');
@@ -998,6 +1082,8 @@
 				if ( $(this).hasClass('no-focus') ) return;
 
 				$(this).parent().parent().removeClass('focusable');
+
+				if ( !!$(this).hasClass('validatable') ) checkRadio($(this), $(this).parents('.radios'), $(this).attr('name'));
 			});
 
 			$('input[type=text], input[type=password]').on('focus', function() {
@@ -1082,27 +1168,6 @@
 
 			$('#search-submit').on('click', function() {
 				return false;
-			});
-
-			$('.submittable').on('click', function() {
-				var inputs = $(this).parents('form').find('input'),
-					selects = $(this).parents('form').find('select'),
-					ctx = $(this).data('infinite') !== undefined ? false : true;
-
-				inputs.each(function() {
-					if ( $(this).data('required') !== undefined ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'), $(this).data('validation'));
-				});
-
-				selects.each(function() {
-					if ( $(this).data('required') !== undefined ) checkSelect($(this).parent(), $(this).val());
-				});
-
-				if ( $(this).parents('form').find('.error').length ) {
-					window.scroll(0, $(this).parents('form').find('.error:first').prev('input').offset().top - 100); // focus on the first error
-				} else {
-					scrollUp($(this).parents('form'), $(this), ctx);
-					return false;
-				}
 			});
 
 			$('form').on('submit', function() {
