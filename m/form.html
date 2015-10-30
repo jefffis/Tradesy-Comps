@@ -161,7 +161,7 @@
 					<label class="toggleable">
 						<span>Current Password</span>
 						<span class="cf">
-							<input type="password" id="passwordddd" name="passwordddd" data-required="password" />
+							<input type="password" id="passwordddd" name="passwordddd" data-required="password" minlength="4" />
 							<em>Show</em>
 						</span>
 						<small>Must be at least 4 characters</small>
@@ -245,7 +245,7 @@
 					<label class="toggleable">
 						<span>Current Password</span>
 						<span class="cf">
-							<input type="password" id="current-password" name="current-password" data-required="password" />
+							<input type="password" id="current-password" name="current-password" data-required="password" minlength="4" />
 							<em>Show</em>
 						</span>
 						<!-- <small>Must be at least 4 characters</small> -->
@@ -256,7 +256,7 @@
 					<label class="toggleable">
 						<span>New Password</span>
 						<span class="cf">
-							<input type="password" id="new-password" name="new-password" data-required="password" />
+							<input type="password" id="new-password" name="new-password" data-required="password" minlength="4" />
 							<em>Show</em>
 						</span>
 						<small>At least 4 characters &amp; can&rsquo;t be your current password</small>
@@ -1094,6 +1094,7 @@
 				}
 			}
 			function checkInput(el, val, type, msg, minl) {
+				var minl = parseInt(minl, 10);
 				if ( type === 'text' ) { // just text
 					if ( val !== '' ) {
 						el.find('.error').remove();
@@ -1119,8 +1120,7 @@
 						validateField(el, false);
 					}
 				} else if ( type === 'number' ) { //  numbers only
-					var reg = /^[\d ]*$/,
-						minl = parseInt(minl, 10);
+					var reg = /^[\d ]*$/;
 					if ( val !== '' && !!reg.test(val) ) {
 						if ( val.length < minl ) {
 							var message = msg !== undefined ? msg : 'Please enter only numbers.';
@@ -1142,13 +1142,16 @@
 						validateField(el, false);
 					}
 				} else if ( type === 'password' ) { // password
-					if ( val !== '' && val.length > 3 ) {
-						el.find('.error').remove();
-						validateField(el, true);
-					} else if ( val !== '' && val.length < 4 ) {
-						el.find('.error').remove();
-						el.find('input').after('<small class="error">Password must be at least 4 characters.</small>');
-						validateField(el, false);
+					if ( val !== '' ) {
+						if ( val.length < minl ) {
+							var message = msg !== undefined ? msg : 'Password must be at least 4 characters.';
+							el.find('.error').remove();
+							el.find('input').after('<small class="error">' + message + '</small>');
+							validateField(el, false);
+						} else {
+							el.find('.error').remove();
+							validateField(el, true);
+						}
 					} else {
 						var message = msg !== undefined ? msg : 'Please enter a value.';
 						el.find('.error').remove();
@@ -1208,7 +1211,7 @@
 			});
 
 			// this tests if there was a value before, and then it can validate on blur
-			$('input[data-required]').on('blur', function() {
+			$('body').on('blur', 'input[data-required]', function() {
 				if ( !!$(this).hasClass('validatable') || $(this).val() !== '' ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'), $(this).data('validation'), $(this).attr('minlength'));
 			});
 
@@ -1334,18 +1337,19 @@
 			// });
 
 			$('.toggleable em').on('click', function() {
-				var input = $(this).prev(),
+				var input = $(this).parent().find('input'),
 					name = input.attr('name'),
 					id = input.attr('id'),
-					val = input.val();
+					val = input.val(),
+					cls = input.attr('class');
 
 				if ( $(this).text() === 'Show' ) {
 					$(this).text('Hide');
-					$(input).after('<input type="text" name="' + name + '" id="' + id + '" value="' + val + '" data-required="password" />');
+					$(input).after('<input type="text" name="' + name + '" id="' + id + '" value="' + val + '" data-required="password" minlength="4" class="' + cls + '" />');
 					$(input).remove();
 				} else {
 					$(this).text('Show');
-					$(input).after('<input type="password" name="' + name + '" id="' + id + '" value="' + val + '" data-required="password" />');
+					$(input).after('<input type="password" name="' + name + '" id="' + id + '" value="' + val + '" data-required="password" minlength="4" class="' + cls + '" />');
 					$(input).remove();
 				}
 			});
