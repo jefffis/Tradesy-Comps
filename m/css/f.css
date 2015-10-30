@@ -528,7 +528,11 @@ textarea {
 	background : white;
 	border : 1px solid #ccc;
 	overflow : hidden;
+	outline : none;
 	/*padding : .5rem .75rem;*/
+}
+.select-wrap:focus {
+	border-color : #111;
 }
 .select-wrap.bad {
 	border-color : #d10b24;
@@ -608,7 +612,6 @@ select:active {
 /*** non-text input focus states ***/
 .focusable,
 /*select:focus,*/
-.select-wrap:focus,
 .select-wrap:active,
 .tile.focus,
 #submit:focus {

@@ -75,7 +75,7 @@
 
 					<label data-card>
 						<span>Credit Card Number</span>
-						<input type="text" data-required="number" minlength="18" maxlength="19" />
+						<input type="text" data-required="number" data-validation="Please enter a valid card number." minlength="18" maxlength="19" />
 					</label>
 
 					<hr />
@@ -115,7 +115,7 @@
 									Last 3 digit-code on back of card. AMEX: 4 digit-code on front.
 								</div>
 							</span>
-							<input type="text" data-required="number" minlength="3" maxlength="4" />
+							<input type="text" data-required="number" data-validation="Please a valid code." minlength="3" maxlength="4" />
 							<small class="m">Last 3 digit-code on back of card. AMEX: 4 digit-code on front.</small>
 						</label>
 
@@ -1093,7 +1093,7 @@
 					par.find('.error').remove();
 				}
 			}
-			function checkInput(el, val, type, msg) {
+			function checkInput(el, val, type, msg, minl) {
 				if ( type === 'text' ) { // just text
 					if ( val !== '' ) {
 						el.find('.error').remove();
@@ -1119,10 +1119,18 @@
 						validateField(el, false);
 					}
 				} else if ( type === 'number' ) { //  numbers only
-					var reg = /^[\d ]*$/;
+					var reg = /^[\d ]*$/,
+						minl = parseInt(minl, 10);
 					if ( val !== '' && !!reg.test(val) ) {
-						el.find('.error').remove();
-						validateField(el, true);
+						if ( val.length < minl ) {
+							var message = msg !== undefined ? msg : 'Please enter only numbers.';
+							el.find('.error').remove();
+							el.find('input').after('<small class="error">' + message + '</small>');
+							validateField(el, false);
+						} else {
+							el.find('.error').remove();
+							validateField(el, true);
+						}
 					} else if ( val !== '' && !reg.test(val) ) {
 						el.find('.error').remove();
 						el.find('input').after('<small class="error">Please enter only numbers.</small>');
@@ -1171,7 +1179,7 @@
 					ctx = $(this).data('infinite') !== undefined ? false : true;
 
 				inputs.each(function() {
-					if ( $(this).data('required') !== undefined ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'), $(this).data('validation'));
+					if ( $(this).data('required') !== undefined ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'), $(this).data('validation'), $(this).attr('minlength'));
 				});
 
 				radios.each(function() {
@@ -1201,7 +1209,7 @@
 
 			// this tests if there was a value before, and then it can validate on blur
 			$('input[data-required]').on('blur', function() {
-				if ( !!$(this).hasClass('validatable') || $(this).val() !== '' ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'), $(this).data('validation'));
+				if ( !!$(this).hasClass('validatable') || $(this).val() !== '' ) checkInput($(this).parents('label'), $(this).val(), $(this).data('required'), $(this).data('validation'), $(this).attr('minlength'));
 			});
 
 			var itemList = $('.select-wrap.cs');
