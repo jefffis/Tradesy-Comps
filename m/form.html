@@ -1254,7 +1254,7 @@
 			$('[data-card] input').on('keyup', function() {
 				var val = $(this).val().split(' ').join('');
 				if ( val === '' ) {
-					return;
+					return $(this).parent().addClass('disc').removeClass('visa mc amex disc');
 				} else {
 					switch ( $(this).val().charAt(0) ) {
 						case '4' :

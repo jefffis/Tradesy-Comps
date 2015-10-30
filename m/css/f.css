@@ -237,16 +237,17 @@ label [data-details]:after {
 
 /*** credit card UI ***/
 [data-card] input[type=text] {
-	padding-left : 3.75rem;
+	padding-left : 3.25rem;
 }
 [data-card]:before {
 	display : block;
 	position : absolute;
-	top : 2.7rem;
+	top : 2.75rem;
 	left : .75rem;
-	height : 1rem;
-	width : 2.5rem;
-	background : #ccc;
+	height : 14px;
+	width : 25px;
+	background : #ccc url(../img/ccs.png) no-repeat -999px 0;
+	background-size : 100%;
 	padding-top : .3rem;
 	border-radius : 3px;
 	color : white;
@@ -256,22 +257,26 @@ label [data-details]:after {
 	letter-spacing : .5px;
 	line-height : 1;
 	text-align : center;
-	text-indent : .5px;
+	text-indent : -999px;
 }
 .visa:before {
-	background : #1b1d74;
+	background-color : white;
+	background-position : 0 0;
 	content : "Visa";
 }
 .amex:before {
-	background : #2f77bf;
+	background-color : white;
+	background-position : 0 -45px;
 	content : "Amex";
 }
 .mc:before {
-	background : #e30613;
+	background-color : white;
+	background-position : 0 -23px;
 	content : "MC";
 }
 .disc:before {
-	background : #f78223;
+	background-color : white;
+	background-position : 0 -69px;
 	content : "Disc";
 }
 
