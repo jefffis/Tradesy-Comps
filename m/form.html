@@ -76,6 +76,7 @@
 					<label data-card>
 						<span>Credit Card Number</span>
 						<input type="text" data-required="number" data-validation="Please enter a valid card number." minlength="18" maxlength="19" />
+						<small>We accept VISA, MasterCard, American Express and Discovery cards.</small>
 					</label>
 
 					<hr />
@@ -1199,6 +1200,7 @@
 
 				if ( $(this).parents('form').find('.error').length ) {
 					window.scroll(0, $(this).parents('form').find('.error:first').prev('input').offset().top - 100); // focus on the first error
+					$(this).parents('form').find('.error:first').prev('input').focus();
 				} else {
 					scrollUp($(this).parents('form'), $(this), ctx);
 					return false;
