@@ -83,31 +83,27 @@
 
 					<div class="three cf">
 
-						<div class="label">
-							<h3>Expiration Date</h3>
-							<div class="select-wrap s" tabindex="0">
-								<select data-required data-validation="Enter month.">
-									<option value="">Month</option>
-									<option value="1">1</option>
-									<option value="1">1</option>
-									<option value="1">1</option>
-									<option value="1">1</option>
-								</select>
-							</div>
-						</div>
+						<label>
+							<span>Expiration Date</span>
+							<select data-required data-validation="Enter month.">
+								<option value="">Month</option>
+								<option value="1">1</option>
+								<option value="1">1</option>
+								<option value="1">1</option>
+								<option value="1">1</option>
+							</select>
+						</label>
 
-						<div class="label">
-							<h3>&nbsp;</h3>
-							<div class="select-wrap s" tabindex="0">
-								<select data-required data-validation="Enter year.">
-									<option value="">Year</option>
-									<option value="1">2015</option>
-									<option value="1">2016</option>
-									<option value="1">2017</option>
-									<option value="1">2018</option>
-								</select>
-							</div>
-						</div>
+						<label>
+							<span>&nbsp;</span>
+							<select data-required data-validation="Enter year.">
+								<option value="">Year</option>
+								<option value="1">2015</option>
+								<option value="1">2016</option>
+								<option value="1">2017</option>
+								<option value="1">2018</option>
+							</select>
+						</label>
 
 						<label>
 							<span data-tooltip tabindex="0">
@@ -346,15 +342,13 @@
 
 						<div class="two cf">
 							
-							<div class="label">
-								<h3>State</h3>
-								<div class="select-wrap s" tabindex="0">
-									<select data-required>
-										<option value="">Choose your State</option>
-										<option value="CA">California (CA)</option>
-									</select>
-								</div>
-							</div>
+							<label>
+								<span>State</span>
+								<select data-required>
+									<option value="">Choose your State</option>
+									<option value="CA">California (CA)</option>
+								</select>
+							</label>
 
 							<label>
 								<span>Zip Code</span>
@@ -544,21 +538,23 @@
 
 						<h3 class="opt">Birthday</h3>
 
-						<div class="select-wrap s" tabindex="0">
+						<label>
 							<select>
-								<option value="">January</option>
-								<option value="">Feburary</option>
-								<option value="">March</option>
+								<option>Choose Month</option>
+								<option value="1">January</option>
+								<option value="2">Feburary</option>
+								<option value="3">March</option>
 							</select>
-						</div>
+						</label>
 
-						<div class="select-wrap s" tabindex="0">
+						<label>
 							<select>
-								<option value="">1</option>
-								<option value="">2</option>
-								<option value="">3</option>
+								<option>Choose Day</option>
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
 							</select>
-						</div>
+						</label>
 
 					</div>
 
@@ -635,25 +631,23 @@
 
 					<hr />
 
-					<div class="prefilled">
-						<h3>Please select your State:</h3>
-						<div class="select-wrap s" tabindex="0">
-							<select>
-								<option value="">California (CA)</option>
-								<option value="">California (CA)</option>
-								<option value="">California (CA)</option>
-								<option value="">California (CA)</option>
-								<option value="">California (CA)</option>
-								<option value="">California (CA)</option>
-								<option value="">California (CA)</option>
-								<option value="">California (CA)</option>
-								<option value="">California (CA)</option>
-								<option value="">California (CA)</option>
-								<option value="">California (CA)</option>
-							</select>
-						</div>
+					<label class="prefilled">
+						<span>Please select your State:</span>
+						<select>
+							<option value="1">California (CA)</option>
+							<option value="1">California (CA)</option>
+							<option value="1">California (CA)</option>
+							<option value="1">California (CA)</option>
+							<option value="1">California (CA)</option>
+							<option value="1">California (CA)</option>
+							<option value="1">California (CA)</option>
+							<option value="1">California (CA)</option>
+							<option value="1">California (CA)</option>
+							<option value="1">California (CA)</option>
+							<option value="1">California (CA)</option>
+						</select>
 						<small>Note: we prefilled this data for you</small>
-					</div>
+					</label>
 
 					<hr />
 
@@ -849,8 +843,8 @@
 
 					<hr />
 
-					<h3>Please select your State:</h3>
-					<div class="select-wrap s" tabindex="0">
+					<label>
+						<span>Please select your State:</span>
 						<select>
 							<option value="">California (CA)</option>
 							<option value="">California (CA)</option>
@@ -864,7 +858,7 @@
 							<option value="">California (CA)</option>
 							<option value="">California (CA)</option>
 						</select>
-					</div>
+					</label>
 
 					<small>We should strive to never use these unless no other option.</small>
 
@@ -1044,7 +1038,8 @@
 					$('.photo-attached').removeClass('hide');
 				}, 2000);
 			}
-			function validateField(el, ctx) {
+			function validateField(el, ctx, select) {
+				if ( !!select ) el.addClass('select');
 				if ( !!ctx ) {
 					el.removeClass('bad');
 					setTimeout(function() {
@@ -1069,13 +1064,13 @@
 			}
 			function checkSelect(el, val, msg) {
 				if ( val !== '' ) {
-					el.next('.error').remove();
-					validateField(el, true);
+					el.find('.error').remove();
+					validateField(el, true, true);
 				} else {
 					var message = msg !== undefined ? msg : 'Please make a selection.';
-					el.next('.error').remove();
-					el.after('<small class="error">' + message + '</small>');
-					validateField(el, false);
+					el.find('.error').remove();
+					el.find('select').after('<small class="error">' + message + '</small>');
+					validateField(el, false, true);
 				}
 			}
 			function checkRadio(el, par, name) {
@@ -1288,7 +1283,7 @@
 			// });
 
 			$('select').on('change', function() {
-				checkSelect($(this).parent(), $(this).val());
+				if ( $(this).data('required') !== undefined ) checkSelect($(this).parent(), $(this).val());
 			});
 
 			$('select').on('focus', function() {

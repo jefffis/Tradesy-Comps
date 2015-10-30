@@ -80,8 +80,7 @@ input, textarea, button {
 input, textarea {
 	border : 1px solid #ddd;
 }
-input:focus, textarea:focus {
-	/*box-shadow : 0 0 0 2px #BEE1ED;*/
+input:focus, textarea:focus, select:focus {
 	border-color : #111;
 }
 label {
@@ -99,6 +98,9 @@ label {
 .two .select-wrap {
 	width : 48%;
 	float : left;
+}
+.two select {
+	background-position : 96.5% center;
 }
 .two .label .select-wrap, .three .label .select-wrap {
 	width : 100%;
@@ -132,6 +134,9 @@ label {
 	width : 34%;
 	padding-left : .5rem;
 	padding-right : 0;	
+}
+.three select {
+	background-position : 95% center;
 }
 label span {
 	display : block;
@@ -217,7 +222,10 @@ label [data-details]:after {
 .toggleable.bad:after {
 	right : 4rem;
 }
-.bad input {
+.select:after {
+	display : none;
+}
+.bad input, .bad select, .bad textarea {
 	border-color : #c31d17;
 }
 [data-content] {
@@ -522,6 +530,7 @@ textarea {
 .select-wrap {
 	position : relative;
 	background : white;
+    max-width: 15rem;
 	border : 1px solid #ccc;
 	overflow : hidden;
 	outline : none;
@@ -530,9 +539,9 @@ textarea {
 .select-wrap:focus {
 	border-color : #111;
 }
-.select-wrap.focus select {
+/*.select-wrap.focus select {
 	outline : 1px dotted #111;
-}
+}*/
 .select-wrap.bad {
 	border-color : #d10b24;
 }
@@ -540,9 +549,9 @@ textarea {
 	clear : left;
 	padding-top : .35rem;
 }
-.three .select-wrap + small {
+/*.three .select-wrap + small {
 	padding-top : 0;
-}
+}*/
 .cs {
 	overflow : visible;
 	border : 0;
@@ -595,13 +604,20 @@ textarea {
 	display : block;
 }
 select {
-	position : relative;
-	left : .75rem;
-	z-index: 2;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
 	height : 2.5rem;
-	width : 110%;
-	min-width : 100px;
-	background : none;
+	width : 100%;
+    max-width: 15rem;
+	background : white url(../img/select-back.png) no-repeat 97% center;
+	background-size : 16px;
+	padding-left : .65rem;
+	border : 1px solid #ddd;
+	border-radius : 0;
 	outline : none;
 }
 select:active {
@@ -1191,10 +1207,6 @@ button:active {
 		max-width : 400px;
 		float : left;
 		padding-bottom : 2rem;
-	}
-
-	.select-wrap {
-		max-width : 15rem;
 	}
 
 	.select-wrap:before {
