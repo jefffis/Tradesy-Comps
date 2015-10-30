@@ -357,7 +357,7 @@
 
 							<label>
 								<span>Zip Code</span>
-								<input type="text" data-required="number" />
+								<input type="text" data-required="number" data-validation="Please enter a valid zip code." minlength="5" />
 							</label>
 
 						</div>
@@ -1287,6 +1287,14 @@
 
 			$('select').on('change', function() {
 				checkSelect($(this).parent(), $(this).val());
+			});
+
+			$('select').on('focus', function() {
+				$(this).parent().addClass('focus');
+			});
+
+			$('select').on('blur', function() {
+				$(this).parent().removeClass('focus');
 			});
 
 			// file upload

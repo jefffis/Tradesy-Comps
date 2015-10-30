@@ -534,6 +534,9 @@ textarea {
 .select-wrap:focus {
 	border-color : #111;
 }
+.select-wrap.focus select {
+	outline : 1px dotted #111;
+}
 .select-wrap.bad {
 	border-color : #d10b24;
 }
