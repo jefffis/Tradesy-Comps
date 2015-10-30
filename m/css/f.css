@@ -262,25 +262,25 @@ label [data-details]:after {
 	text-shadow : 0 1px 0 rgba(0, 0, 0, 0.25);
 }
 .visa:before {
-	background-color : white;
+	/*background-color : white;*/
 	background-position : 0 0;
 	/*content : "Visa";
 	text-indent : -999px;*/
 }
 .amex:before {
-	background-color : white;
+	/*background-color : white;*/
 	background-position : 0 -48px;
 	/*content : "Amex";
 	text-indent : -999px;*/
 }
 .mc:before {
-	background-color : white;
+	/*background-color : white;*/
 	background-position : 0 -24px;
 	/*content : "MC";
 	text-indent : -999px;*/
 }
 .disc:before {
-	background-color : white;
+	/*background-color : white;*/
 	background-position : 0 -69px;
 	/*content : "Disc";
 	text-indent : -999px;*/
