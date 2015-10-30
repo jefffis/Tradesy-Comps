@@ -236,30 +236,18 @@ label [data-details]:after {
 }
 
 /*** credit card UI ***/
-[data-card] {
-	padding-right : 2.5rem;
-}
-[data-card] span, [data-card] small {
-	margin-right : -2.5rem;
-}
-[data-card] .error {
-	margin-left : 0;
-}
-[data-card].good:after, [data-card].bad:after {
-	right : 2.85rem;
-}
 [data-card]:before {
 	display : block;
 	position : absolute;
-	top : 2.75rem;
-	right : .25rem;
+	top : .15rem;
+	right : 0;
 	height : 16px;
 	width : 25px;
 	background : #ccc url(../img/ccs.png) no-repeat -999px 0;
 	background-size : 100%;
 	padding-top : .175rem;
 	border-radius : 3px;
-	box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.125) inset, 0 2px 0 rgba(0, 0, 0, 0.1);
+	box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.125) inset, 0 1px 0 rgba(0, 0, 0, 0.1), , 0 2px 1px rgba(0, 0, 0, 0.05);
 	color : white;
 	content : "...";
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
@@ -271,28 +259,16 @@ label [data-details]:after {
 	text-shadow : 0 1px 0 rgba(0, 0, 0, 0.25);
 }
 .visa:before {
-	/*background-color : white;*/
 	background-position : 0 0;
-	/*content : "Visa";
-	text-indent : -999px;*/
 }
 .amex:before {
-	/*background-color : white;*/
-	background-position : 0 -48px;
-	/*content : "Amex";
-	text-indent : -999px;*/
+	background-position : 0 -46px;
 }
 .mc:before {
-	/*background-color : white;*/
 	background-position : 0 -24px;
-	/*content : "MC";
-	text-indent : -999px;*/
 }
 .disc:before {
-	/*background-color : white;*/
 	background-position : 0 -69px;
-	/*content : "Disc";
-	text-indent : -999px;*/
 }
 
 /*** tooltip ***/
