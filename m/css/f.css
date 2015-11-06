@@ -286,31 +286,32 @@ label [data-details]:after {
 }
 .disc:before {
 	background-position : 0 -68px;
+	box-shadow : 0 0 0 1px #ddd inset;
 }
 
 /*** tooltip ***/
 [data-tooltip] {
 	position : relative;
-	padding-left : 1.75rem;
+	/*padding-right : 1.75rem;*/
 	outline : none;
 }
 [data-tooltip] em {
 	display : none;
 }
-[data-tooltip]:focus:before {
+[data-tooltip]:focus:after {
 	background : none;
 	box-shadow : 0 0 0 1px #efefef inset;
 	outline : 1px dotted #111;
 }
-[data-tooltip]:hover:before {
+[data-tooltip]:hover:after {
 	background : none;
 	box-shadow : 0 0 0 1px #efefef inset;
 }
-[data-tooltip]:before {
+[data-tooltip]:after {
 	display : inline-block;
 	position : absolute;
 	top : 2px;
-	left : 0;
+	right : 0;
 	height : 1.25rem;
 	width : 1.25rem;
 	background : #efefef;
@@ -342,7 +343,7 @@ label [data-details]:after {
 	display : block;
 	position : absolute;
 	top : 100%;
-	left : 4px;
+	right : 4px;
 	border-top : 6px solid #111;
 	border-left : 6px solid transparent;
 	border-right : 6px solid transparent;
@@ -811,6 +812,50 @@ input[type=file]:active + em {
 	background : #efefef;
 	margin-right : 3px;
 	content : "";
+}
+
+/*** date fields ***/
+.date-fields div {
+	position : relative;
+	width : 7rem;
+	/*padding : .75rem;*/
+	border : 1px solid #ddd;
+}
+.date-fields div:after {
+	top : .65rem;
+	right : -2rem;
+}
+.date-fields div:before {
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 0;
+	height : 100%;
+	width : 100%;
+	color : #ccc;
+	content : "/";
+	font-size : 20px;
+	line-height : 2.125;
+	text-align : center;
+}
+.date-fields label {
+	display : inline-block;
+	z-index : 2;
+	margin : 0;
+}
+.date-fields label:after {
+	display : none;
+}
+.date-fields label + label {
+	/*float : right;*/
+	left : .65rem;
+}
+.date-fields input {
+	width : 3rem;
+	/*background : red;*/
+	padding : .5rem 0;
+	border : 0;
+	text-align : center;
 }
 
 /*** toggle ***/

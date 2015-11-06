@@ -26,6 +26,38 @@
 			<form>
 				
 				<fieldset>
+
+					<div class="date-fields">
+
+						<h3>Card Expiration Date</h3>
+
+						<div id="exp-date" data-required="exp-date">
+							
+							<label>
+								<input type="text" id="exp-month" maxlength="2" />
+							</label>
+							<label>
+								<input type="text" id="exp-year" maxlength="2" />
+							</label>
+
+						</div>
+
+					</div>
+
+				</fieldset>
+
+			</form>
+
+			<br />
+			<br />
+
+			<h2 id="inline-buttom">(inline input + button)</h2>
+
+			<hr />
+
+			<form>
+				
+				<fieldset>
 					
 					<div class="inline cf">
 						
@@ -33,7 +65,7 @@
 							<span data-tooltip tabindex="0">
 								Sign up for Tradesy Text Alerts
 								<div>
-									Something here for a tooltip
+									Add some text here for a tooltip that helps to clarify this UI.
 								</div>
 							</span>
 							<input type="text" data-required="number" />
@@ -261,8 +293,8 @@
 						<span class="cf">
 							<input type="password" id="new-password" name="new-password" data-required="password" minlength="4" />
 							<em>Show</em>
+							<small>At least 4 characters &amp; can&rsquo;t be your current password</small>
 						</span>
-						<small>At least 4 characters &amp; can&rsquo;t be your current password</small>
 					</label>
 
 				</fieldset>
@@ -335,7 +367,7 @@
 								<span data-tooltip tabindex="0">
 									Country
 									<div>
-										Tradesy is currently only in the USA.
+										Tradesy is currently only available in the USA!
 									</div>
 								</span>
 								<input type="text" value="United States" data-required="text" disabled />
@@ -1175,6 +1207,63 @@
 					}
 				}
 			}
+			function checkExpDate(el) {
+				var month = el.find('input:first').val(),
+					year = el.find('input:last').val(),
+					d = new Date(),
+					n = d.getFullYear(),
+					thisYear = n.toString().substring(2);
+					numThisYear = parseInt(thisYear, 10);
+
+				checkMonth(month);
+				checkYear(year);
+
+				if ( !!checkMonth(month) && !!checkYear(year) ) {
+					if ( year < numThisYear ) {
+						el.next('.error').remove();
+						el.after('<small class="error">Year must be at least this year, ' + n + '.</small>');
+						validateField(el, false);
+					} else {
+						el.next('.error').remove();
+						validateField(el, true);
+					}
+				} else {
+					el.next('.error').remove();
+					el.after('<small class="error">Please enter a valid expiration date.</small>');
+					validateField(el, false);
+				}
+			}
+			function checkMonth(val) {
+				var valNum = parseInt(val, 10);
+
+				if ( val !== '' && val !== '0' && val !== '00' && valNum < 13 ) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			function checkYear(val) {
+				if ( val !== '' && val !== '00' && val.length > 1 ) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			$('#exp-month, #exp-year').on('blur', function() {
+				var par = $(this).parents('#exp-date'),
+					reg = /^[\d ]*$/;
+
+				if( $('#exp-month').val() === '' || $('#exp-year').val() === '' ) return;
+
+				if ( !reg.test( $(this).val() ) ) {
+					par.next('.error').remove();
+					par.after('<small class="error">Please enter numbers only.</small>');
+				} else {
+					par.next('.error').remove();
+					checkExpDate(par);
+				}
+			});
 
 			$('.submittable').on('click', function() {
 				var inputs = $(this).parents('form').find('input[type=text], input[type=email], input[type=password]'),
