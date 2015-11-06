@@ -1254,14 +1254,13 @@
 				var par = $(this).parents('#exp-date'),
 					reg = /^[\d ]*$/;
 
-				if( $('#exp-month').val() === '' || $('#exp-year').val() === '' ) return;
-
 				if ( !reg.test( $(this).val() ) ) {
 					par.next('.error').remove();
 					par.after('<small class="error">Please enter numbers only.</small>');
 				} else {
 					par.next('.error').remove();
-					checkExpDate(par);
+
+					if ( $('#exp-month').val() !== '' && $('#exp-year').val() !== '' ) checkExpDate(par);
 				}
 			});
 
