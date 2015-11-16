@@ -20,7 +20,7 @@ html {
 }
 body {
     height : 100%;
-    background : #efefef;
+    /*background : #efefef;*/
     font : normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 }
 h1, h2, h3, strong {
