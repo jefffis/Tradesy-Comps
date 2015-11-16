@@ -134,6 +134,7 @@ hr {
     input:checked + span {
         background : #111;
         color : white;
+        border-color : #111;
         box-shadow : none;
     }
 
