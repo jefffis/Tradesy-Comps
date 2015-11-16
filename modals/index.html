@@ -114,8 +114,11 @@
 			}
 
 			function hideModalMbl() {
-				$('#main_reveal_background, #main_reveal_modal').addClass('hide').removeClass('fadeIn');
-				$('#tradesy-modal').attr('class', '');
+				$('#main_reveal_background, #main_reveal_modal').addClass('fadeOut');
+				setTimeout(function() {
+					$('#main_reveal_background, #main_reveal_modal').removeClass('fadeIn fadeOut').addClass('hide');
+					$('#tradesy-modal').attr('class', '');
+				}, 351);
 			}
 
 		});

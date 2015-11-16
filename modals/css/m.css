@@ -172,6 +172,14 @@ p {
         top : 0;
     }
 }
+@keyframes slideDown {
+    from {
+        top : 0;
+    }
+    to {
+        top : 100%;
+    }
+}
 @keyframes fadeIn {
     from {
         opacity : 0;
@@ -203,12 +211,16 @@ p {
         animation : slideUp .35s ease-in-out;
         top : 0;
     }
+    #main_reveal_modal.fadeOut {
+        animation : slideDown .35s ease-in-out;
+        top : 100%;
+    }
     #tradesy-modal.slideIn > div {
         animation : none;
         top : 0;
     }
-    #tradesy-modal.slideOut > div {
-        animation : none;
+    #tradesy-modal.fadeOut > div {
+        animation : slideDown .35s ease-in-out;
         top : 100%;
     }
     #tradesy-modal {
