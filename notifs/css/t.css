@@ -1,0 +1,154 @@
+@font-face{font-family:'proxima-nova-semi';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.svg#proxima-nova-semi") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
+* {
+    margin : 0;
+    padding : 0;
+    border : 0;
+    box-sizing : border-box;
+    font : normal 100%/1.5 'proxima-nova-regular', Arial, sans-serif;
+}
+body {
+    padding : 2rem;
+}
+h1 {
+    margin-bottom : .75rem;
+    font-family : 'proxima-nova-semi', Arial, sans-serif;
+    font-size : 1.35rem;
+}
+table {
+    max-width : 600px;
+    width : 100%;
+    border : 1px solid #ddd;
+    border-collapse : collapse;
+}
+th {
+    background : #efefef;
+    padding : .5rem;
+    border-bottom : 1px solid #ddd;
+    font-size : 13px;
+    line-height : 1.25;
+    text-align : center;
+}
+tr:nth-child(n+2) td {
+    border-top : 1px solid #ddd;
+}
+tr:nth-child(even) td {
+    background : rgba(0, 0, 0, 0.025);
+}
+td {
+    min-width : 90px;
+    padding : .75rem;
+    line-height : 1.25;
+}
+td:first-child {
+    max-width : 180px;
+    font-size : 15px;
+}
+td:nth-child(n+2) {
+    padding : .75rem 0;
+    text-align : center;
+}
+label, input {
+    cursor : pointer;
+}
+input:active {
+    opacity : .65;
+}
+label {
+    font-size : 13px;
+}
+label input {
+    display: inline-block;
+    margin-right : .35rem;
+}
+hr {
+    height : 40px;
+    background : transparent;
+    border : 0;
+}
+
+@media screen and (max-width : 414px) {
+
+    body {
+        padding : 1rem;
+    }
+
+    table {
+        border : 0;
+    }
+    thead {
+        display : none;
+    }
+    td {
+        display : block;
+        padding : 0;
+    }
+    tr:nth-child(even) td {
+        background : white;
+    }
+    td:first-child {
+        max-width : 100%;
+    }
+    tr:nth-child(n+2) td {
+        border-top : 0;
+    }
+    td:nth-child(n+2) {
+        display : block;
+        float : left;
+        min-width : 0;
+        width : 25%;
+        text-align : center;
+    }
+    tr:nth-child(n+2) td:first-child {
+        padding-top : .75rem;
+        border-top : 0;
+    }
+    input {
+        position : absolute;
+        left : -9999px;
+    }
+    input + span {
+        display : block;
+        padding : .5rem 0;
+        border : 1px solid #ddd;
+    }
+    td:nth-child(n+3) input + span {
+        border-left : 0;
+    }
+    span:after {
+        content : attr(data-th);
+    }
+    input:active + span {
+        background : rgba(0, 0, 0, 0.025);
+    }
+    input:checked + span {
+        background : #111;
+        color : white;
+    }
+
+}
+
+@media screen and (min-width : 375px) and (max-width : 414px) {
+
+    body {
+        padding : 2rem;
+    }
+
+}
+
+@media screen and (min-width : 768px) {
+
+    aside {
+        float : left;
+        height : 300px;
+        width : 135px;
+        background : rgba(0, 0, 0, 0.025);
+        box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.05) inset;
+    }
+
+    section {
+        float : left;
+        max-width : 75%;
+        margin-left : 2rem;
+    }
+
+}

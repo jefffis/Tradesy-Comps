@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">Tradesy Product Page Comp</title>
+
+		<link href="css/m.css" rel="stylesheet" type="text/css" />
+		<script>document.addEventListener('touchstart', function() {},false);</script>
+	</head>
+	<body>
+
+	<header>
+		<a href="###">
+			<img src="https://www.tradesy.com/css/images/tradesy2xwhite.png" alt="Tradesy logo" />
+		</a>
+	</header>
+
+	<section>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos ea sapiente earum rem eum minima doloribus unde, autem culpa dignissimos libero mollitia nostrum quidem, natus, esse ratione harum nemo repellendus!</p>
+		<button>Show modal</button>
+	</section>
+
+	<div id="main_reveal_background" class="hide"></div>
+	<div id="main_reveal_modal" class="hide">
+		<div id="tradesy-modal">
+			<div>
+				<h3>
+					Confirm Sale
+				</h3>
+				<div class="cnt"></div>
+				<div class="cnt-col cf">
+					<div></div>
+					<div></div>
+				</div>
+				<!-- <div class="item">
+					<img src="https://item2.tradesy.com/images/magellan-s-pink-v-neck-tunic-velvet-rose-1179756-0-0.jpg?width=203&height=307" />
+					<p>
+						<strong>Thomas Pink Cashmere Vest - Thomas Vest</strong>
+						<br />
+						Your Earnings: $27.30
+						<br />
+						Order No: #16531-233959B
+					</p>
+				</div> -->
+				<!-- <div class="shipping">
+					<p>
+						<strong>Method:</strong> We will ship you a Tradesy Shipping Kit.
+					</p>
+					<p>
+						<strong>Your Address:</strong>
+						<br />
+						1217 2nd St Ffe
+					</p>
+				</div> -->
+				<span id="close_reveal_modal"></span>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(function() {
+
+			var width = $(window).width();
+
+			$('button').on('click', function() {
+				showModal();
+			});
+
+			// $('#main_reveal_modal').on('click', function(e) {
+
+			// 	if ( !!$(e.target).closest('#tradesy-modal').length ) return console.log($(e.target));
+
+			// 	$('#tradesy-modal').addClass('slideOut');
+			// 	if ( width > 600 ) {
+			// 		hideModal();
+			// 	} else {
+			// 		hideModalMbl();
+			// 	}
+			// });
+
+			$('#close_reveal_modal').on('click', function() {
+				$('#tradesy-modal').addClass('slideOut');
+				if ( width > 600 ) {
+					hideModal();
+				} else {
+					hideModalMbl();
+				}
+			});
+
+			function showModal() {
+				$('#main_reveal_background, #main_reveal_modal').removeClass('hide').addClass('fadeIn');
+				if ( width > 600 ) {
+					showInner()
+				} else {
+					$('#tradesy-modal').addClass('slideIn');
+				}
+			}
+
+			function showInner() {
+				setTimeout(function() {
+					$('#tradesy-modal').addClass('slideIn');
+				}, 250);
+			}
+
+			function hideModal() {
+				setTimeout(function() {
+					$('#main_reveal_background, #main_reveal_modal').addClass('hide').removeClass('fadeIn');
+					$('#tradesy-modal').attr('class', '');
+				}, 500);
+			}
+
+			function hideModalMbl() {
+				$('#main_reveal_background, #main_reveal_modal').addClass('hide').removeClass('fadeIn');
+				$('#tradesy-modal').attr('class', '');
+			}
+
+		});
+	</script>
+
+	</body>
+</html>

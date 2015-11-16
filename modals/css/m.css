@@ -1,0 +1,232 @@
+* {
+    box-sizing : border-box;
+    border : 0;
+    margin : 0;
+    padding : 0;
+    -webkit-tap-highlight-color : rgba(0,0,0,0);
+    -webkit-tap-highlight-color : transparent; /* For some Androids */
+}
+@font-face{font-family:'proxima-nova-semi';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.svg#proxima-nova-semi") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
+.cf:before,
+.cf:after {
+    content : " "; /* 1 */
+    display : table; /* 2 */
+}
+.cf:after {
+    clear : both;
+}
+html {
+    height : 100%;
+}
+body {
+    height : 100%;
+    background : #efefef;
+    font : normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
+}
+h1, h2, h3, strong {
+    font-weight : normal;
+}
+h3 {
+    margin : 0 0 1rem;
+    font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+    font-size : 24px;
+    letter-spacing : .5px;
+    text-indent : .5px;
+}
+strong {
+    font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+}
+header {
+    background : #111;
+    padding : 1.5rem;
+}
+header img {
+    display : block;
+    max-width : 130px;
+    margin : auto;
+}
+section {
+    max-width : 32.5rem;
+    margin : auto;
+    padding : 3.5rem 1.5rem;
+    /*text-align : center;*/
+}
+button {
+    background : #111;
+    margin-top : 1.5rem;
+    padding : 1rem 1.25rem;
+    color : white;
+    cursor : pointer;
+    font-family : inherit;
+    font-size : 15px;
+}
+button:active {
+    opacity : .65;
+}
+
+#main_reveal_background, #main_reveal_modal {
+    position : fixed;
+    top : 0;
+    left : 0;
+    z-index : 1;
+    height : 100%;
+    width : 100%;
+    opacity : 0;
+}
+#main_reveal_background {
+    background : rgba(0, 0, 0, 0.5);
+}
+#main_reveal_modal {
+    display : table;
+    z-index : 2;
+}
+.hide {
+    display : none !important;
+}
+.fadeIn {
+    animation : fadeIn .35s ease-in-out;
+    opacity : 1 !important;
+}
+#tradesy-modal {
+    display : table-cell;
+    height : 100%;
+    width : 100%;
+    text-align : center;
+    vertical-align : middle;
+}
+#tradesy-modal > div {
+    position : relative;
+    top : -100%;
+    max-width : 500px;
+    background : white;
+    margin : auto;
+    padding : 2rem;
+}
+#tradesy-modal.slideIn > div {
+    animation : slideIn .35s ease-in-out;
+    top : 0;
+}
+#tradesy-modal.slideOut > div {
+    animation : slideOut .35s ease-in-out;
+    top : 100%;
+}
+
+#close_reveal_modal {
+    position : absolute;
+    top : 1rem;
+    right : 1rem;
+    color : #999;
+    cursor : pointer;
+    font-size : 30px;
+    line-height : 1;
+}
+#close_reveal_modal:active {
+    opacity : .65;
+}
+#close_reveal_modal:after {
+    content : "\2715";
+}
+p {
+    font-size : 15px;
+}
+.cnt {
+    height : 150px;
+    background : #efefef;
+}
+.cnt-col div {
+    float : left;
+    height : 150px;
+    width : 50%;
+    background : #efefef;
+    border-right : 10px solid white;
+}
+.cnt-col {
+    margin-top : 20px;
+}
+.cnt-col div + div {
+    border-left : 10px solid white;
+    border-right : 0;
+}
+
+@keyframes slideIn {
+    from {
+        top : -100%;
+    }
+    to {
+        top : 0;
+    }
+}
+@keyframes slideOut {
+    from {
+        top : 0;
+    }
+    to {
+        top : 100%;
+    }
+}
+@keyframes slideUp {
+    from {
+        top : 100%;
+    }
+    to {
+        top : 0;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity : 0;
+    }
+    to {
+        opacity : 0;
+    }
+}
+
+
+@media screen and ( max-width : 600px ) {
+
+    section {
+        padding : 1.5rem;
+    }
+    #main_reveal_modal {
+        position : absolute;
+        top : 100%;
+        height : 100%;
+        background : white;
+    }
+    #main_reveal_background {
+        display : none;
+    }
+    #tradesy-modal > div {
+        top : 100%;
+    }
+    #main_reveal_modal.fadeIn {
+        animation : slideUp .35s ease-in-out;
+        top : 0;
+    }
+    #tradesy-modal.slideIn > div {
+        animation : none;
+        top : 0;
+    }
+    #tradesy-modal.slideOut > div {
+        animation : none;
+        top : 100%;
+    }
+    #tradesy-modal {
+        display : block;
+        border-top : 2px solid #111;
+    }
+    .cnt-col {
+        padding-bottom : 20px;
+    }
+    .cnt-col div {
+        float : none;
+        width : 100%;
+        border-right : 0;
+    }
+    .cnt-col div + div {
+        border-left : 0;
+        margin-top : 20px;
+    }
+
+}
+
