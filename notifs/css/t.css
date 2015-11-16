@@ -47,18 +47,31 @@ td:nth-child(n+2) {
     padding : .75rem 0;
     text-align : center;
 }
+input {
+    position : absolute;
+    left : -9999px;
+}
 label, input {
     cursor : pointer;
-}
-input:active {
-    opacity : .65;
 }
 label {
     font-size : 13px;
 }
-label input {
-    display: inline-block;
-    margin-right : .35rem;
+input + span {
+    display : block;
+    height : 1.125rem;
+    width : 1.125rem;
+    background : white;
+    margin : auto;
+    border : 1px solid #111;
+    border-radius : 100%;
+}
+input:active + span {
+    opacity : .65;
+}
+input:checked + span {
+    background : #111;
+    box-shadow : 0 0 0 2px white, 0 0 0 3px #111;
 }
 hr {
     height : 40px;
@@ -102,14 +115,12 @@ hr {
         padding-top : .75rem;
         border-top : 0;
     }
-    input {
-        position : absolute;
-        left : -9999px;
-    }
     input + span {
-        display : block;
+        height : auto;
+        width : auto;
         padding : .5rem 0;
         border : 1px solid #ddd;
+        border-radius : 0;
     }
     td:nth-child(n+3) input + span {
         border-left : 0;
@@ -123,6 +134,7 @@ hr {
     input:checked + span {
         background : #111;
         color : white;
+        box-shadow : none;
     }
 
 }
