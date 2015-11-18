@@ -23,9 +23,129 @@ body {
 	margin : auto auto 4rem;
 }
 header {
+	position : relative;
+	z-index : 2;
 	background : #111;
 	height : 64px;
 	margin-bottom : 30px;
+}
+header nav {
+    max-width : 1200px;
+    margin : auto;
+}
+nav > span {
+    display : block;
+    position : relative;
+    float : right;
+    height : 64px;
+    width : 50px;
+}
+nav > span:active {
+	opacity : .65;
+}
+.show {
+	background : white;
+}
+.show:active {
+	opacity : 1;
+}
+.show:active .alerts:before {
+	opacity : .65;
+}
+.alerts {
+	display : block;
+	height : 64px;
+    width : 50px;
+	text-indent : -9999px;
+}
+.alerts:before {
+	display : block;
+	position : absolute;
+	top : 20px;
+	left : 15px;
+	height : 24px;
+	width : 20px;
+	background : white;
+	content : "";
+}
+.show .alerts:before {
+	background : #111;
+}
+.alerts:after {
+	display : block;
+	position : absolute;
+	top : 10px;
+	right : 0;
+	height : 20px;
+	width : 20px;
+	background : rgb(238, 120, 115);
+	border-radius : 100%;
+	color : white;
+	content : "3+";
+	font-size : 11px;
+	line-height : 2;
+	text-align : center;
+	text-indent : 0;
+}
+nav .notifs-wrapper {
+	display : none;
+	position : absolute;
+	top : 100%;
+	left : -249px;
+	width : 300px;
+	/*background : #efefef;*/
+	/*margin-top : 2px;*/
+	border : 1px solid #ddd;
+	/*box-shadow : 0 0 0 1px #ddd; */
+	border-top : 0;
+	/*text-indent : 0;*/
+}
+.show .notifs-wrapper {
+	display : block;
+}
+.notifs-wrapper:before, .notifs-wrapper:after {
+	display : block;
+	position : absolute;
+	top : 0;
+	right : 0;
+	z-index: 2;
+	height : 15px;
+	width : 100%;
+	background: -webkit-linear-gradient(top, white 0%, transparent 100%);
+	content : "";
+}
+.notifs-wrapper:after {
+	top : auto;
+	bottom : 41px;
+	background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.025) 100%);
+}
+/*nav .notifs-wrapper:after {
+	display : block;
+	position : absolute;
+	top : -10px;
+	right : 15px;
+	border-bottom : 10px solid #ddd;
+	border-left : 10px solid transparent;
+	border-right : 10px solid transparent;
+	content : "";
+}*/
+nav .notif:nth-child(n+2) {
+	margin-top : .5rem;
+}
+.notifs-wrapper > div {
+	max-height : 500px;
+	overflow : auto;
+	background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.025) 100%);
+	padding : 10px;
+}
+.notifs-wrapper > a {
+	display : block;
+	background : white;
+	padding : .5rem;
+	border-top : 1px solid #ddd;
+	color : inherit;
+	text-align : center;
+	/*text-decoration: */
 }
 
 h1 {

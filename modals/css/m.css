@@ -27,7 +27,9 @@ h1, h2, h3, strong {
     font-weight : normal;
 }
 h3 {
-    margin : 0 0 1rem;
+    margin : 0 0 1.25rem;
+    padding-bottom : .25rem;
+    border-bottom : 1px solid #ddd;
     font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
     font-size : 24px;
     letter-spacing : .5px;
@@ -96,19 +98,30 @@ button:active {
 }
 #tradesy-modal > div {
     position : relative;
-    top : -100%;
+    /*top : -100%;*/
     max-width : 500px;
     background : white;
     margin : auto;
-    padding : 2rem;
+    padding : 1rem 2rem 2rem;
+    opacity : 0;
+
+    transform: scale(0.25);
+    transition : all .25s ease-in-out;
 }
 #tradesy-modal.slideIn > div {
-    animation : slideIn .35s ease-in-out;
-    top : 0;
+    opacity : 1;
+
+    transform: scale(1);
+    /*animation : slideIn .35s ease-in-out;
+    top : 0;*/
 }
 #tradesy-modal.slideOut > div {
-    animation : slideOut .35s ease-in-out;
-    top : 100%;
+    opacity : 0;
+
+    transform: scale(0);
+    transform: translate3d(0, 70%, 0);
+    /*animation : slideOut .35s ease-in-out;
+    top : 100%;*/
 }
 
 #close_reveal_modal {
@@ -206,6 +219,8 @@ p {
     }
     #tradesy-modal > div {
         top : 100%;
+        
+        transform: scale(1);
     }
     #main_reveal_modal.fadeIn {
         animation : slideUp .35s ease-in-out;
@@ -214,6 +229,10 @@ p {
     #main_reveal_modal.fadeOut {
         animation : slideDown .35s ease-in-out;
         top : 100%;
+        opacity : 1;
+
+        transform: scale(1);
+        transform: translate3d(0, 0, 0);
     }
     #tradesy-modal.slideIn > div {
         animation : none;

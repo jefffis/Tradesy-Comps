@@ -11,7 +11,47 @@
 	</head>
 	<body>
 
-		<header></header>
+		<header>
+			<nav class="cf">
+				<span id="alerts">
+					<a class="alerts" href="###">
+						Your Sales
+					</a>
+					<div class="notifs-wrapper">
+						<div>
+							
+							<div class="notif action">
+								<figure>
+									<img src="https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png" />
+								</figure>
+								Quiggles Larue just purchased your item
+								<small></small>
+
+								<div></div>
+							</div>
+							<div class="notif sys">
+								<a href="">
+									You made some cash! Just <em>add a payout method</em> now to get it
+									<small></small>
+								</a>
+							</div>
+							<div class="notif read">
+								<a href="">
+									<figure>
+										<img src="https://item2.tradesy.com/images/lululemon-deep-v-1279236-0-0.jpg?width=100&height=100" />
+									</figure>
+									Quiggles &amp; 33 others loved your <em>Lululemon Black Top</em>
+									<small></small>
+								</a>
+							</div>
+
+						</div>
+
+						<a href="###">View all Notifications</a>
+					</div>
+				</span>
+			</nav>
+		</header>
 
 		<h1>
 			Notifications
@@ -103,6 +143,14 @@
 			</section>
 
 		</div>
+
+		<script>
+			var alerts = document.getElementById('alerts');
+
+			alerts.onclick = function() {
+				this.classList.toggle('show');
+			}
+		</script>
 
 	</body>
 </html>
