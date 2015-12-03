@@ -37,7 +37,7 @@ nav {
     border-bottom : 1px solid rgba(0,0,0,0.25);
     text-align : center
 }
-h2, h3, h4, h5 {
+h1, h2, h3, h4, h5 {
     font-variant : normal;
 }
 #items {
@@ -87,9 +87,9 @@ h2, h3, h4, h5 {
 #items a:active {
     opacity : .65;
 }
-#items .block .btn:active {
+/*#items .block .btn:active {
     opacity : 1;
-}
+}*/
 #items .mkt-cta {
     background : #2a2a2a;
     /*background : url(https://item1.tradesy.com/images/homepage/2283bb4e-d902-fe63-9c3d-1632607849ab_The-October-Issue-600x620.jpg) no-repeat top center;
@@ -106,7 +106,7 @@ h2, h3, h4, h5 {
     line-height : 1;
     text-decoration : none;
 }
-#items em {
+#items em, h1 {
     display : block;
     margin : .5rem 0 0;
     color : white;
@@ -114,6 +114,16 @@ h2, h3, h4, h5 {
     letter-spacing : 1.5px; 
     text-indent : 1.5px;
     text-transform : uppercase;
+}
+h1 {
+    margin : .125rem 0 .25rem;
+    color : #111;
+    font-size : 20px;
+    text-align : left;
+}
+h1 i {
+    display : none;
+    font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 }
 /*#items .mkt-cta em:after {
     display : block;
@@ -158,7 +168,12 @@ h2, h3, h4, h5 {
     text-transform : uppercase;
 }
 #items .btn:active {
-    background : rgba(0, 0, 0, 0.025);
+    /*background : rgba(0, 0, 0, 0.025);*/
+    opacity : 1;
+    color : #999;
+}
+#items .btn:active:after {
+    opacity : .35;
 }
 .btn:after, .block h2 a:after {
     display : block;
@@ -216,6 +231,15 @@ h2, h3, h4, h5 {
     text-indent : 1.5px;
     text-transform : uppercase;
 }
+#item-container > h2 {
+    margin : 1rem 0 .25rem;
+    font-size : 16px;
+    text-align : left;
+
+    letter-spacing : normal;
+    text-indent : 0;
+    text-transform : none;
+}
 #items .block h2 {
     /*letter-spacing : normal;
     text-indent : 0;
@@ -232,6 +256,9 @@ h2, h3, h4, h5 {
 #items h4 {
     font-size : 18px;
     font-weight : bold;
+}
+#items p {
+    font-size : 13px;
 }
 #items h5 {
     /*position : absolute;
@@ -261,8 +288,8 @@ h2, h3, h4, h5 {
     z-index : 2;
     height : 24px;
     width : 22px;
-    background : url(https://cdn0.iconfinder.com/data/icons/octicons/1024/heart-128.png) no-repeat center;
-    background-size : contain;
+    background : url(../img/love.png) no-repeat center;
+    background-size : 26px;
     outline : none;
     opacity : .5;
 }
@@ -275,7 +302,7 @@ h2, h3, h4, h5 {
 [data-num]:after {
     display : inline-block;
     position : absolute;
-    top : .2rem;
+    top : .3rem;
     right : -1.25rem;
     width : 1rem;
     /*color : #ccc;*/
@@ -393,7 +420,7 @@ h2, h3, h4, h5 {
 footer {
     background : #111;
     min-height : 300px;
-    margin-top : .25rem;
+    /*margin-top : .25rem;*/
 }
 #items .block {
     margin : .5rem 0;
@@ -401,8 +428,13 @@ footer {
 /*#items .block:last-child {
     margin-bottom : 0;
 }*/
-#items .btn:last-child {
+/*#items .btn:last-child {
     margin-bottom : 0;
+}*/
+
+.blank-height {
+    display : block;
+    height : 1px;
 }
 
 #item-container-tbl {
@@ -416,6 +448,10 @@ footer {
 
 @media screen and (min-width : 375px) {
 
+    h1 i {
+        display : inline;
+    }
+
     #items.collection img:nth-child(2) {
         margin-left : 3rem;
     }
@@ -426,6 +462,10 @@ footer {
 
     #items .btn, #items .block, #items .mkt-cta {
         margin-bottom : .75rem;
+    }
+
+    .blank-height {
+         margin-bottom : -.5rem;
     }
 
 }
@@ -446,6 +486,10 @@ footer {
 
     #items .btn, #items .block, #items .mkt-cta {
         margin-bottom : 1rem;
+    }
+
+    .blank-height {
+         margin-bottom : -.75rem;
     }
 
 }
