@@ -440,6 +440,11 @@ h1 i {
     border : 1px solid rgba(0, 0, 0, 0.1);
 }
 
+#items .block.full {
+    margin : -.5rem -.5rem .5rem;
+    border : 0;
+}
+
 #items .block .btn {
     box-shadow : none;
     margin : 0;
@@ -579,6 +584,10 @@ footer {
          margin-bottom : -.5rem;
     }
 
+    #items .block.full {
+        margin : -.75rem -.75rem .75rem;
+    }
+
 }
 
 @media screen and (min-width : 414px) {
@@ -601,6 +610,10 @@ footer {
 
     .blank-height {
          margin-bottom : -.75rem;
+    }
+
+    #items .block.full {
+        margin : -1rem -1rem 1rem;
     }
 
 }
