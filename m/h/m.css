@@ -45,13 +45,12 @@ h1, h2, h3, h4, h5 {
     padding : .5rem .5rem 0;
     text-align : center;
 }
-#items div {
+#items .item {
     position : relative;
     left : 0;
     background : white;
     overflow : hidden;
     padding : 1rem;
-    /*border-radius : 3px 3px 0 0;*/
 
     transition : left .3s ease-in-out;
 }
@@ -64,14 +63,12 @@ h1, h2, h3, h4, h5 {
     height : 304px;
     width : 100%;
     background : rgba(255, 255, 255, 0.95);
-    /*transform : scale(0);*/
     opacity : 0;
 
     transition : all .325s ease-in-out;
 }
 #items .confirm.show {
     top : 0;
-    /*transform : scale(1);*/
     opacity : 1;
 }
 #items .confirm h2 {
@@ -87,7 +84,8 @@ h1, h2, h3, h4, h5 {
     vertical-align : middle;
 }
 #items .btns {
-    margin-top : 1rem;
+    max-width: 80%;
+    margin: 1rem auto 0;
     padding : 0;
     border : 1px solid #ddd;
 }
@@ -101,21 +99,16 @@ h1, h2, h3, h4, h5 {
 }
 .btns a:first-child {
     border-right : 1px solid #ddd;
-    /*box-shadow : 0 0 0 1px #ddd inset;*/
 }
 #items .btns a:last-child {
     color : #ee7873;
-    /*margin-left : -1px;
-    color : white;*/
 }
 #item-container > div {
-    /*box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.1) inset;*/
-
     border : 1px solid rgba(0, 0, 0, 0.1);
 }
-#items div + div {
+/*#items div + div {
     border-top : 2px solid #efefef;
-}
+}*/
 #items.collection div + div {
     border-top : .5rem solid #efefef;
 }
@@ -203,6 +196,7 @@ h1 i {
 
     position : relative;
     left : 0;
+    z-index : 4;
 
     background : white;
     /*background : white url(img/arrow-right.png) no-repeat 95% 15px;
@@ -213,7 +207,7 @@ h1 i {
 
     /*box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.1) inset;*/
 
-    border : 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 
     color : #111;
 
@@ -302,7 +296,7 @@ h1 i {
     text-indent : 1.5px;
     text-transform : uppercase;
 }
-#item-container > h2 {
+#items > h2 {
     margin : 1rem 0 .25rem;
     font-size : 16px;
     text-align : left;
@@ -361,15 +355,12 @@ h1 i {
     width : 22px;
     background : url(https://cdn0.iconfinder.com/data/icons/octicons/1024/heart-128.png) no-repeat center;
     background-size : contain;
-    /*background : url(../img/love.png) no-repeat center;
-    background-size : 26px;*/
     outline : none;
     opacity : .5;
 }
 #items .liked {
     animation : love .175s ease-in-out;
     transform : scale(1.15);
-    /*opacity : 1;*/
 }
 #items button:last-child {
     top : .5rem;
@@ -395,19 +386,6 @@ h1 i {
     transform : scale(1.15);
     /*opacity : .25;*/
 }
-/*#items button[data-num] {
-    margin-right : 1.25rem;
-}
-[data-num]:after {
-    display : inline-block;
-    position : absolute;
-    top : .2rem;
-    right : -1.25rem;
-    width : 1rem;
-    content : attr(data-num);
-    font-size : 12px;
-    text-align : center;
-}*/
 #items.collection .title {
     background : #111;
     margin : 0 -1rem -1rem;
@@ -549,6 +527,10 @@ footer {
     padding-bottom : .5rem;
 }
 
+/*.item-wrapper {
+    border : 1px solid rgba(0, 0, 0, 0.1);
+}*/
+
 @media screen and (min-width : 375px) {
 
     h1 i {
@@ -563,7 +545,7 @@ footer {
         padding : .75rem;
     }
 
-    #items div {
+    #items .item {
         padding : 1.5rem;
     }
 
@@ -592,7 +574,7 @@ footer {
 
 @media screen and (min-width : 414px) {
 
-    #items div {
+    #items .item {
         padding : 1.5rem;
     }
     #item button {
@@ -660,6 +642,31 @@ footer {
         width : 300px;
         /*padding-top : 1.5rem;*/
     }
+
+}
+
+@media screen and ( orientation : landscape ) {
+
+    .item-wrapper {
+        width : 50%;
+        float : left;
+        padding : 0 .5rem 0 0;
+    }
+    .item-wrapper + .item-wrapper {
+        padding : 0 0 0 .5rem;
+    }
+    .item-wrapper + .item-wrapper + .item-wrapper {
+        padding : 0 .5rem 0 0;
+    }
+    .item-wrapper + .item-wrapper + .item-wrapper, .block, .mkt-cta {
+        clear : left;
+    }
+    .item-wrapper + .item-wrapper + .item-wrapper + .item-wrapper {
+        clear : none;
+        padding : 0 0 0 .5rem;
+    }
+
+    
 
 }
 
