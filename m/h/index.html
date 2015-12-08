@@ -65,6 +65,9 @@
 			                    $5,750.00
 			                </span>
 			            </h4>
+			            <p>
+			            	Size: 3.5 x 6 x 8
+			            </p>
 			        </a>
 			        <button data-num="32"></button>
 			        <button></button>
@@ -377,8 +380,9 @@
 					confirmCancel = '#items .btns a:last-child',
 					confirmHide = '#items .btns a:first-child',
 					items = $('.item'),
-					confirmWidth = $('#items .item').outerWidth(),
-					confirm = '<div class="confirm" style="width: ' + confirmWidth + 'px;"><div><h2>Not your style?</h2><div class="btns cf"><a>No, hide it</a><a>I like it</a></div></div></div>',
+					confirmHeight = $('#items .item:first').outerHeight(),
+					confirmWidth = $('#items .item:first').outerWidth(),
+					confirm = '<div class="confirm" style="width: ' + confirmWidth + 'px; height: ' + confirmHeight + 'px;"><div><h2>Not your style?</h2><div class="btns cf"><a>No, hide it</a><a>I like it</a></div></div></div>',
 					dislikeNum = 0,
 					dislikeNumTotal = 3;
 
