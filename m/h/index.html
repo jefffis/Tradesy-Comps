@@ -485,13 +485,21 @@
 				confirmCancel = '#items .btns a:last-child',
 				confirmHide = '#items .btns a:first-child',
 				items = $('.item'),
-				confirm = '<div class="confirm"><div><h2>Not your style?</h2><div class="btns"><a>No, hide it</a><a>I like it</a></div></div></div>';
+				confirm = '<div class="confirm"><div><h2>Not your style?</h2><div class="btns"><a>No, hide it</a><a>I like it</a></div></div></div>',
+				dislikeNum = 0,
+				dislikeNumTotal = 3;
 
 			like.on('click', function() {
 				$(this).toggleClass('liked');
 			});
 
 			dislike.off('click').on('click', function() {
+				if ( dislikeNum >= dislikeNumTotal ) {
+					$(this).parents('.item').addClass('fade-out');
+					$(this).parents('.item').next('.btn').addClass('fade-out');
+					removeItem($(this));
+					return;
+				}
 				$(this).parent().find('.confirm').addClass('show');
 			});
 
@@ -504,9 +512,13 @@
 			});
 
 			$('body').on('click', confirmHide, function() {
+				if ( dislikeNum >= dislikeNumTotal ) return;
+
 				$(this).parents('.item').addClass('fade-out');
 				$(this).parents('.item').next('.btn').addClass('fade-out');
 				removeItem($(this));
+				dislikeNum++;
+				console.log('disliked ' + dislikeNum + ' times');
 			});
 
 			function removeItem(el) {
