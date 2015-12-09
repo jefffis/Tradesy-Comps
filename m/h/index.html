@@ -36,7 +36,7 @@
 			            	Printed Watersnake 3jours Medium Ayers Black Multicolor Tote Bag
 			            </h3>
 			            <h4>
-			                <span class="on-sale">Sale</span>
+			                <span class="on-sale"><i>On </i>Sale</span>
 			                $99,850.00
 			                <span>
 			                    $105,750.00
@@ -395,8 +395,7 @@
 
 				dislike.off('click').on('click', function() {
 					if ( dislikeNum >= dislikeNumTotal ) {
-						$(this).parents('.item').addClass('fade-out');
-						$(this).parents('.item').next('.btn').addClass('fade-out');
+						fadeItem($(this));
 						removeItem($(this));
 						return;
 					}
@@ -414,12 +413,17 @@
 				$('body').on('click', confirmHide, function() {
 					if ( dislikeNum >= dislikeNumTotal ) return;
 
-					$(this).parents('.item').addClass('fade-out');
-					$(this).parents('.item').next('.btn').addClass('fade-out');
+					fadeItem($(this));
 					removeItem($(this));
 					dislikeNum++;
-					console.log('disliked ' + dislikeNum + ' times');
+					// console.log('disliked ' + dislikeNum + ' times');
 				});
+
+				function fadeItem(el) {
+					el.parents('.item-wrapper').addClass('no-border');
+					el.parents('.item').addClass('fade-out');
+					el.parents('.item').next('.btn').addClass('fade-out');
+				}
 
 				function removeItem(el) {
 					setTimeout(function() {
