@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5 {
     width : 50%;
     background : white;
     float : left;
-    padding : 1rem;
+    padding : 1rem 0;
     cursor : pointer;
     font-size : 1rem;
 }
@@ -136,6 +136,7 @@ h1, h2, h3, h4, h5 {
     padding : .5rem 0;
     color : #999;
     font-size : 13px;
+    line-height : 1.2;
     /*text-decoration : underline;*/
 }
 #items a {
@@ -226,14 +227,29 @@ h1 {
 
     text-align : left;
 
-    transition : left .325s ease-in-out;
+    /*transition : left .325s ease-in-out;*/
 }
 /*#items div + .btn {
     border-radius : 0 0 3px 3px;
 }*/
 
+.item-wrapper {
+    position : relative;
+    left : 0;
+
+    transition : left .5s ease-in-out;
+}
 #items .fade-out {
     left : -125%;
+
+    animation : rotateOut .5s ease-in-out;
+}
+
+.slide-up {
+    top : -278px;
+
+    animation : slideUp .325s ease-in-out;
+    /*animation-delay : .25s;*/
 }
 
 #items .cta {
@@ -306,6 +322,7 @@ h1 {
     font-size : 18px;
     /*font-weight : bold;*/
     letter-spacing : .5px;
+    line-height : 1;
     text-indent : .5px;
     /*text-transform : uppercase;*/
 }
@@ -728,5 +745,27 @@ footer {
     }
     100% {
         transform : scale(1.15);
+    }
+}
+
+@keyframes rotateOut {
+    0% {
+        opacity : 1;
+        transform : rotate(0);
+    }
+    100% {
+        /*max-height : 0;*/
+        opacity : 0;
+        /*overflow : hidden;*/
+        transform : rotate(-20deg);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        top : 0;
+    }
+    100% {
+        top : -278px);
     }
 }

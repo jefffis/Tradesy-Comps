@@ -137,8 +137,8 @@
 			</a>
 
 			<span class="block">
-		    	<a href="###"><img src="https://item1.tradesy.com/images/homepage/f8bb424a-fc3a-4f28-3894-dd5f28626303_DecIssue.jpg" /></a>
-		    	<a href="##" class="btn">The December Issue</a>
+		    	<a href="###"><img src="https://item1.tradesy.com/images/homepage/9581fe69-491d-ea58-66bc-48136085c6bb_NovIssue.jpg" /></a>
+				<a href="##" class="btn">New Arrivals</a>
 		    </span>
 
 			<div class="item-wrapper">
@@ -351,8 +351,8 @@
 			</div>
 
 			<span class="block">
-		    	<a href="###"><img src="https://item1.tradesy.com/images/homepage/9581fe69-491d-ea58-66bc-48136085c6bb_NovIssue.jpg" /></a>
-				<a href="##" class="btn">New Arrivals</a>
+		    	<a href="###"><img src="https://item1.tradesy.com/images/homepage/f8bb424a-fc3a-4f28-3894-dd5f28626303_DecIssue.jpg" /></a>
+		    	<a href="##" class="btn">The December Issue</a>
 		    </span>
 
 		    <a href="###" class="mkt-cta">
@@ -363,6 +363,10 @@
 					</em>
 				</span>
 			</a>
+
+			<small>
+				{username}, come back {time_frame} for more personal recommendations.
+			</small>
 
 			<h2 class="norm">
 				Need help?
@@ -387,7 +391,7 @@
 					confirmWidth = $('#items .item:first').outerWidth(),
 					confirm = '<div class="confirm" style="width: ' + confirmWidth + 'px; height: ' + confirmHeight + 'px;"><div><h2>Not your style?</h2><div class="btns cf"><a>No, hide it</a><a>I like it</a></div></div></div>',
 					dislikeNum = 0,
-					dislikeNumTotal = 3;
+					dislikeNumTotal = 1;
 
 				like.on('click', function() {
 					$(this).toggleClass('liked');
@@ -419,17 +423,31 @@
 					// console.log('disliked ' + dislikeNum + ' times');
 				});
 
+				// function getNextItemHeight(el) {
+				// 	var parHeight = el.parents('.item-wrapper').outerHeight();
+				// 	el.parents('.item-wrapper').next('.item-wrapper').attr('style', 'top: -' + parHeight + 'px')
+				// }
+
 				function fadeItem(el) {
-					el.parents('.item-wrapper').addClass('no-border');
-					el.parents('.item').addClass('fade-out');
-					el.parents('.item').next('.btn').addClass('fade-out');
+					el.parents('.item-wrapper').addClass('no-border fade-out');
+					// el.parents('.item').addClass('fade-out');
+					// el.parents('.item').next('.btn').addClass('fade-out');
+					setTimeout(function() {
+						el.parents('.item-wrapper').next('.item-wrapper').addClass('slide-up');
+					}, 250);
 				}
 
 				function removeItem(el) {
 					setTimeout(function() {
-						el.parents('.item').next('.btn').remove();
+						el.parents('.item-wrapper').next('.item-wrapper').removeClass('slide-up');
 						el.parents('.item-wrapper').remove();
-					}, 500);
+					}, 501);
+					// setTimeout(function() {
+					// 	var next = el.parents('.item-wrapper').next('.item-wrapper');
+
+					// 	el.parents('.item-wrapper').remove();
+					// 	next.removeClass('slide-up');
+					// }, 501);
 				}
 			});
 		</script>
