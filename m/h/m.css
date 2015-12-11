@@ -47,6 +47,11 @@ h1, h2, h3, h4, h5 {
     padding : .5rem .5rem 0;
     text-align : center;
 }
+#items .non-item {
+    margin : 0 !important;
+    padding : 0 !important;
+    border : 0;
+}
 .item-wrapper {
     margin-bottom : .5rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
@@ -237,16 +242,17 @@ h1 {
     position : relative;
     left : 0;
 
-    transition : left .5s ease-in-out;
+    transition : top .5s ease-in-out;
 }
 #items .fade-out {
-    left : -125%;
+    /*left : -125%;*/
+    opacity : 0;
 
     animation : rotateOut .5s ease-in-out;
 }
 
 .slide-up {
-    top : -278px;
+    /*top : -312px;*/
 
     animation : slideUp .325s ease-in-out;
     /*animation-delay : .25s;*/
@@ -728,6 +734,10 @@ footer {
         border : 0;
     }
 
+    .slide-up {
+        animation : none;
+    }
+
 }
 
 @keyframes love {
@@ -751,21 +761,21 @@ footer {
 @keyframes rotateOut {
     0% {
         opacity : 1;
-        transform : rotate(0);
+        /*transform : rotate(0);*/
     }
     100% {
         /*max-height : 0;*/
         opacity : 0;
         /*overflow : hidden;*/
-        transform : rotate(-20deg);
+        /*transform : rotate(-20deg);*/
     }
 }
 
-@keyframes slideUp {
+/*@keyframes slideUp {
     0% {
         top : 0;
     }
     100% {
-        top : -278px);
+        top : -312px;
     }
-}
+}*/

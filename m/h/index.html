@@ -130,11 +130,13 @@
 		        <a href="###" class="btn">Shop all {cat_name}</a>
 			</div>
 
-			<a href="###">
-				<span class="block">
-					<img src="https://item1.tradesy.com/images/banner/tradesy-gift-cards-mobile-1449359983-retina@2x.png" alt="The Tradesy Gift Card: get one now" />
-				</span>
-			</a>
+			<div class="item-wrapper non-item">
+				<a href="###">
+					<span class="block">
+						<img src="https://item1.tradesy.com/images/banner/tradesy-gift-cards-mobile-1449359983-retina@2x.png" alt="The Tradesy Gift Card: get one now" />
+					</span>
+				</a>
+			</div>
 
 			<span class="block">
 		    	<a href="###"><img src="https://item1.tradesy.com/images/homepage/9581fe69-491d-ea58-66bc-48136085c6bb_NovIssue.jpg" /></a>
@@ -241,38 +243,15 @@
 		        <a href="###" class="btn">Shop all {cat_name}</a>
 			</div>
 
-			<a href="###" class="mkt-cta">
-				<span>
-					Get $10 free: just invite a friend to Tradesy. Plus they&rsquo;ll get $20 off.
-					<em>
-						Invite Now
-					</em>
-				</span>
-			</a>
-
-			<div class="item-wrapper">
-				<div class="item">
-			        <a href="###">
-			            <figure>
-			                <div>
-			                    <img src="https://item4.tradesy.com/r/e3be91f55fb3cdd2158c1692c5cec0cc6736b7f620895e7be83cb2eeee2242b3/720/960/bags/fendi/totes/fendi-699fb17s0-tote-bag-5383393.jpg" alt="" />
-			                </div>
-			            </figure>
-			            <h2>Fendi</h2>
-			            <h3>Printed Watersnake 3jours Medium Ayers Black Multicolor Tote Bag</h3>
-			            <h4>
-			                $2,850.00
-			                <span>
-			                    $5,750.00
-			                </span>
-			            </h4>
-			        </a>
-			        <button data-num="32"></button>
-			        <button></button>
-			    </div>
-
-			    <!-- end of trend -->
-		        <a href="###" class="btn">Shop all {cat_name}</a>
+			<div class="item-wrapper non-item">
+				<a href="###" class="mkt-cta">
+					<span>
+						Get $10 free: just invite a friend to Tradesy. Plus they&rsquo;ll get $20 off.
+						<em>
+							Invite Now
+						</em>
+					</span>
+				</a>
 			</div>
 
 			<div class="item-wrapper">
@@ -350,10 +329,37 @@
 		        <a href="###" class="btn">Shop all {cat_name}</a>
 			</div>
 
-			<span class="block">
-		    	<a href="###"><img src="https://item1.tradesy.com/images/homepage/f8bb424a-fc3a-4f28-3894-dd5f28626303_DecIssue.jpg" /></a>
-		    	<a href="##" class="btn">The December Issue</a>
-		    </span>
+			<div class="item-wrapper">
+				<div class="item">
+			        <a href="###">
+			            <figure>
+			                <div>
+			                    <img src="https://item4.tradesy.com/r/e3be91f55fb3cdd2158c1692c5cec0cc6736b7f620895e7be83cb2eeee2242b3/720/960/bags/fendi/totes/fendi-699fb17s0-tote-bag-5383393.jpg" alt="" />
+			                </div>
+			            </figure>
+			            <h2>Fendi</h2>
+			            <h3>Printed Watersnake 3jours Medium Ayers Black Multicolor Tote Bag</h3>
+			            <h4>
+			                $2,850.00
+			                <span>
+			                    $5,750.00
+			                </span>
+			            </h4>
+			        </a>
+			        <button data-num="32"></button>
+			        <button></button>
+			    </div>
+
+			    <!-- end of trend -->
+		        <a href="###" class="btn">Shop all {cat_name}</a>
+			</div>
+
+			<div class="item-wrapper non-item">
+				<span class="block">
+			    	<a href="###"><img src="https://item1.tradesy.com/images/homepage/f8bb424a-fc3a-4f28-3894-dd5f28626303_DecIssue.jpg" /></a>
+			    	<a href="##" class="btn">The December Issue</a>
+			    </span>
+		    </div>
 
 		    <a href="###" class="mkt-cta">
 				<span>
@@ -391,7 +397,10 @@
 					confirmWidth = $('#items .item:first').outerWidth(),
 					confirm = '<div class="confirm" style="width: ' + confirmWidth + 'px; height: ' + confirmHeight + 'px;"><div><h2>Not your style?</h2><div class="btns cf"><a>No, hide it</a><a>I like it</a></div></div></div>',
 					dislikeNum = 0,
-					dislikeNumTotal = 1;
+					dislikeNumTotal = 1,
+					parHeight = 0,
+					keyframes = '',
+					keyframesAdded = 0;
 
 				like.on('click', function() {
 					$(this).toggleClass('liked');
@@ -423,25 +432,32 @@
 					// console.log('disliked ' + dislikeNum + ' times');
 				});
 
-				// function getNextItemHeight(el) {
-				// 	var parHeight = el.parents('.item-wrapper').outerHeight();
-				// 	el.parents('.item-wrapper').next('.item-wrapper').attr('style', 'top: -' + parHeight + 'px')
-				// }
+				function getNextItemHeight(el) {
+					parHeight = el.parents('.item-wrapper').outerHeight(true);
+					keyframes = '@keyframes slideUp {  0% { top : 0; } 100% { top : -' + parHeight + 'px; } }';
+					$('<style>' + keyframes + '</style>').appendTo('head');
+					keyframesAdded++;
+					console.log(keyframes);
+					// el.parents('.item-wrapper').next('.item-wrapper').attr('style', 'top: -' + parHeight + 'px');
+				}
 
 				function fadeItem(el) {
-					el.parents('.item-wrapper').addClass('no-border fade-out');
+					if ( keyframesAdded < 1 ) getNextItemHeight(el);
+					setTimeout(function() {
+						el.parents('.item-wrapper').addClass('no-border fade-out');
+					}, 125);
 					// el.parents('.item').addClass('fade-out');
 					// el.parents('.item').next('.btn').addClass('fade-out');
 					setTimeout(function() {
-						el.parents('.item-wrapper').next('.item-wrapper').addClass('slide-up');
-					}, 250);
+						el.parents('.item-wrapper').next('.item-wrapper').addClass('slide-up')//.attr('style', 'top: -' + parHeight + 'px');
+					}, 225);
 				}
 
 				function removeItem(el) {
 					setTimeout(function() {
 						el.parents('.item-wrapper').next('.item-wrapper').removeClass('slide-up');
 						el.parents('.item-wrapper').remove();
-					}, 501);
+					}, 526);
 					// setTimeout(function() {
 					// 	var next = el.parents('.item-wrapper').next('.item-wrapper');
 
