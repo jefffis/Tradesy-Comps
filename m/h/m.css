@@ -248,13 +248,13 @@ h1 {
     /*left : -125%;*/
     opacity : 0;
 
-    animation : rotateOut .5s ease-in-out;
+    animation : rotateOut .625s ease-in-out;
 }
 
 .slide-up {
     /*top : -312px;*/
 
-    animation : slideUp .325s ease-in-out;
+    animation : slideUp .425s ease-in-out;
     /*animation-delay : .25s;*/
 }
 

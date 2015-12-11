@@ -433,31 +433,28 @@
 				});
 
 				function getNextItemHeight(el) {
+					if ( $('#keyframes').length ) $('#keyframes').remove();
 					parHeight = el.parents('.item-wrapper').outerHeight(true);
 					keyframes = '@keyframes slideUp {  0% { top : 0; } 100% { top : -' + parHeight + 'px; } }';
-					$('<style>' + keyframes + '</style>').appendTo('head');
-					keyframesAdded++;
+					$('<style id="keyframes">' + keyframes + '</style>').appendTo('head');
 					console.log(keyframes);
-					// el.parents('.item-wrapper').next('.item-wrapper').attr('style', 'top: -' + parHeight + 'px');
 				}
 
 				function fadeItem(el) {
-					if ( keyframesAdded < 1 ) getNextItemHeight(el);
+					getNextItemHeight(el);
 					setTimeout(function() {
 						el.parents('.item-wrapper').addClass('no-border fade-out');
 					}, 125);
-					// el.parents('.item').addClass('fade-out');
-					// el.parents('.item').next('.btn').addClass('fade-out');
 					setTimeout(function() {
-						el.parents('.item-wrapper').next('.item-wrapper').addClass('slide-up')//.attr('style', 'top: -' + parHeight + 'px');
-					}, 225);
+						el.parents('.item-wrapper').next('.item-wrapper').addClass('slide-up');
+					}, 325);
 				}
 
 				function removeItem(el) {
 					setTimeout(function() {
 						el.parents('.item-wrapper').next('.item-wrapper').removeClass('slide-up');
 						el.parents('.item-wrapper').remove();
-					}, 526);
+					}, 750);
 					// setTimeout(function() {
 					// 	var next = el.parents('.item-wrapper').next('.item-wrapper');
 
