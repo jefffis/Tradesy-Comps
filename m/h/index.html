@@ -371,7 +371,7 @@
 			</a>
 
 			<small>
-				{username}, come back {time_frame} for more personal recommendations.
+				{username}, come back <span id="time-frame"></span> for more personal recommendations we have for you.
 			</small>
 
 			<h2 class="norm">
@@ -393,14 +393,12 @@
 					confirmCancel = '#items .btns a:last-child',
 					confirmHide = '#items .btns a:first-child',
 					items = $('.item'),
-					confirmHeight = $('#items .item:first').outerHeight(),
-					confirmWidth = $('#items .item:first').outerWidth(),
-					confirm = '<div class="confirm" style="width: ' + confirmWidth + 'px; height: ' + confirmHeight + 'px;"><div><h2>Not your style?</h2><div class="btns cf"><a>No, hide it</a><a>I like it</a></div></div></div>',
 					dislikeNum = 0,
 					dislikeNumTotal = 1,
 					parHeight = 0,
 					keyframes = '',
-					keyframesAdded = 0;
+					keyframesAdded = 0,
+					today = new Date();
 
 				like.on('click', function() {
 					$(this).toggleClass('liked');
@@ -416,8 +414,12 @@
 				});
 
 				items.each(function() {
+					var confirmHeight = $(this).outerHeight(),
+					confirmWidth = $(this).outerWidth(),
+					confirm = '<div class="confirm" style="width: ' + confirmWidth + 'px; height: ' + confirmHeight + 'px;"><div><h2>Not your style?</h2><div class="btns cf"><a>No, hide it</a><a>I like it</a></div></div></div>';
+
 					$(this).find('a').after(confirm);
-				})
+				});
 
 				$('body').on('click', confirmCancel, function() {
 					$(this).parents('.confirm').removeClass('show');
@@ -429,15 +431,19 @@
 					fadeItem($(this));
 					removeItem($(this));
 					dislikeNum++;
-					// console.log('disliked ' + dislikeNum + ' times');
 				});
+
+				if ( today.getHours() >= 20 ) {
+					$('#time-frame').text('tomorrow morning');
+				} else {
+					$('#time-frame').text('later today');
+				}
 
 				function getNextItemHeight(el) {
 					if ( $('#keyframes').length ) $('#keyframes').remove();
 					parHeight = el.parents('.item-wrapper').outerHeight(true);
 					keyframes = '@keyframes slideUp {  0% { top : 0; } 100% { top : -' + parHeight + 'px; } }';
 					$('<style id="keyframes">' + keyframes + '</style>').appendTo('head');
-					console.log(keyframes);
 				}
 
 				function fadeItem(el) {
@@ -455,12 +461,6 @@
 						el.parents('.item-wrapper').next('.item-wrapper').removeClass('slide-up');
 						el.parents('.item-wrapper').remove();
 					}, 750);
-					// setTimeout(function() {
-					// 	var next = el.parents('.item-wrapper').next('.item-wrapper');
-
-					// 	el.parents('.item-wrapper').remove();
-					// 	next.removeClass('slide-up');
-					// }, 501);
 				}
 			});
 		</script>
