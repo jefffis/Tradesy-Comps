@@ -249,7 +249,7 @@ h1 {
     /*left : -125%;*/
     opacity : 0;
 
-    animation : rotateOut .625s ease-in-out;
+    animation : rotateOut .675s ease-in-out;
 }
 
 .slide-up {
