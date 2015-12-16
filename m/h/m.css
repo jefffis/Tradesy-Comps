@@ -351,7 +351,8 @@ h1 {
     max-width : 90%;
     overflow : hidden;
     margin : 0 auto;
-    font-size : 18px;
+    /*padding-bottom : .125rem;*/
+    font-size : 17px;
     text-overflow : ellipsis;
     white-space : nowrap;
 }
