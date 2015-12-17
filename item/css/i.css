@@ -37,6 +37,9 @@ em {
 	/* overflow : hidden; */
 	text-align : left;
 }
+/*.item:nth-child(n+2) {
+	display : none;
+}*/
 .item:nth-child(n+5) {
 	margin-top : 3rem;
 }
@@ -194,22 +197,28 @@ button:nth-child(1) {
 	position : absolute;
 	top : .75rem;
 	right : .75rem;
-	height : 1.35rem;
-	width : 1.35rem;
-	background : url(https://cdn4.iconfinder.com/data/icons/48-bubbles/48/39.Heart-128.png) no-repeat center;
-	background-size : contain;
 	/*opacity : 1;*/
 }
 button:nth-child(1):active {
 	opacity : .5;
 }
-button[data-num] {
-	right : 1.75rem;
-}
 button:nth-child(1):before {
-	display : block;
+	display : inline-block;
+	height : 1.35rem;
+	width : 1.35rem;
+	background : url(https://cdn4.iconfinder.com/data/icons/48-bubbles/48/39.Heart-128.png) no-repeat center;
+	background-size : contain;
+	content : "";
+}
+/*button[data-num] {
+	right : 1.75rem;
+}*/
+button[data-num]:after {
+	display : inline-block;
 	position : relative;
-	right : -1.25rem;
+	top : -6px;
+	min-width: .75rem;
+	margin-left : .25rem;
 	color : #999;
 	content : attr(data-num);
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
