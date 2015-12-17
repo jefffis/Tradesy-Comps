@@ -48,7 +48,7 @@ em {
 }
 .item a {
 	display : block;
-	height : 405px;
+	/*height : 380px;*/
 	padding : 1rem;
 	border-bottom : 0;
 	color : inherit;
@@ -61,13 +61,14 @@ em {
 	opacity : .85;
 }
 .item figure {
+	min-height : 200px; 
 	margin-top : 2.5rem;
 }
 .item img {
 	display : block;
-	max-height : 180px;
-	max-width : 180px;
-	margin : 0 auto 1.5rem;
+	max-height : 160px;
+	max-width : 160px;
+	margin : auto;
 }
 .sold img {
 	opacity : .65;
@@ -101,7 +102,7 @@ h3 {
 	margin : .25rem 0 .75rem;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 }
-h3 span, h3 em em {
+h3 span, h3 em em, .drop h3 em em {
 	color : #777;
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 	font-size : 13px;
@@ -116,7 +117,7 @@ h3 em span, h3 .drop {
 	font-style : italic;
 	vertical-align : middle;
 }
-.sale h3 em, h3 .drop {
+.sale h3 em, h3 .drop, .drop h3 em {
 	color : #ee7873;
 }
 em span:before, h3 .drop:before {
@@ -172,11 +173,41 @@ p {
 	text-indent : 1px;
 	text-transform : uppercase;
 }
-.sale a > span {
+.sale a > span, .drop a > span {
 	background : #ee7873;
 }
 .sold a > span {
 	background : #ccc;
+}
+/*.drop a > span img {
+	display : inline;
+	max-height : 10px;
+	max-width : 10px;
+	margin : 0;
+	vertical-align : middle;
+}*/
+.drop a > span {
+	padding-left : 1rem;
+}
+.drop a > span:before {
+	display : block;
+	position : absolute;
+	top : 1rem;
+	left : .65rem;
+	height : .55rem;
+	width : 2px;
+	background : white; 
+	content : "";
+}
+.drop a > span:after {
+	display : block;
+	position : absolute;
+	top : 1.45rem;
+	left : .5rem;
+	border-top : 4px solid currentColor;
+	border-left : 4px solid transparent;
+	border-right : 4px solid transparent;
+	content : "";
 }
 .item a > .sold:after {
 	border-left-color : #ccc;
@@ -298,21 +329,35 @@ button:nth-child(2):active {
 	height : auto;
 	width : calc(300px - 1.5rem);
 	background : white;
-	margin-bottom : .375rem;
+	/*margin-bottom : .15rem;*/
 	padding : 1rem;
 	box-shadow : 0 0 0 1px #ddd inset, 0 1px 3px rgba(0, 0, 0, 0.125);
 	border-radius : 3px;
 	text-align : center;
 }
-.item > div div:before {
+.item > div div:before, .item > div div:after {
 	display : block;
 	position : absolute;
-	bottom : -8px;
+	bottom : -6px;
+	left : 61px;
+	z-index : 2;
+	/*height : 16px;
+	width : 16px;
+	background : white;*/
+	border-top : 7px solid white;
+	border-left : 7px solid transparent;
+	border-right : 7px solid transparent;
+	content : "";
+
+	/*transform : rotate(45deg);*/
+}
+.item > div div:before {
+	bottom : -7px;
 	left : 60px;
-	border-top : 8px solid #ddd;
+	z-index : 1;
+	border-top : 8px solid #efefef;
 	border-left : 8px solid transparent;
 	border-right : 8px solid transparent;
-	content : "";
 }
 .item > div div span {
 	display : block;
