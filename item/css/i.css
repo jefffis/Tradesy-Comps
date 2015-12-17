@@ -37,7 +37,7 @@ em {
 	/* overflow : hidden; */
 	text-align : left;
 }
-/*.item:nth-child(n+2) {
+/*.item:nth-child(n+3) {
 	display : none;
 }*/
 .item:nth-child(n+5) {
@@ -101,11 +101,12 @@ h3 {
 	margin : .25rem 0 .75rem;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 }
-h3 span {
+h3 span, h3 em em {
 	color : #777;
+	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 	font-size : 13px;
 }
-h3 em span {
+h3 em span, h3 .drop {
 	display : inline-block;
 	position : relative;
 	top : -2px;
@@ -115,13 +116,10 @@ h3 em span {
 	font-style : italic;
 	vertical-align : middle;
 }
-.sale h3 em {
+.sale h3 em, h3 .drop {
 	color : #ee7873;
 }
-/* .sale h3 em span {
-	color : #111;
-} */
-em span:before {
+em span:before, h3 .drop:before {
 	display : inline-block;
 	position : relative;
 	top : -2px;
@@ -134,7 +132,7 @@ em span:before {
 	background-size : .75rem; */
 	content : "";
 }
-em span:after {
+em span:after, h3 .drop:after {
 	display : inline-block;
 	position : absolute;
 	bottom : 3px;
