@@ -48,6 +48,7 @@ em {
 }
 .item a {
 	display : block;
+	position : relative;
 	/*height : 380px;*/
 	padding : 1rem;
 	border-bottom : 0;
@@ -147,12 +148,17 @@ p {
 	font-size : 13px;
 }
 .item-note {
-	/* position : absolute; */
+	position : absolute;
+	/*top : 225px;
+	left : 0;
+	width : 100%;
+	background : #FAF8E3;*/
 	margin : 0;
-	/* padding : .5rem; */
+	/*padding : .35rem 1rem .2rem; */
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 12px;
 	letter-spacing : 1px;
+	/*line-height : 1;*/
 	/* text-align : center; */
 	/* text-indent : 1px; */
 	text-transform : uppercase;
@@ -177,19 +183,30 @@ p {
 	background : #ee7873;
 }
 .sold a > span {
-	background : #ccc;
+	background : #999;
 }
-/*.drop a > span img {
+.drop a > span img {
 	display : inline;
 	max-height : 10px;
 	max-width : 10px;
 	margin : 0;
 	vertical-align : middle;
-}*/
+}
 .drop a > span {
-	padding-left : 1rem;
+	padding-left : 1.35rem;
 }
 .drop a > span:before {
+	display : inline-block;
+	position : absolute;
+	top : .975rem;
+	left : .55rem;
+	height : 12px;
+	width : 12px;
+	background : url(../img/arrow-down.svg) no-repeat center;
+	background-size : contain;
+	content : "";
+}
+/*.drop a > span:before {
 	display : block;
 	position : absolute;
 	top : 1rem;
@@ -208,7 +225,7 @@ p {
 	border-left : 4px solid transparent;
 	border-right : 4px solid transparent;
 	content : "";
-}
+}*/
 .item a > .sold:after {
 	border-left-color : #ccc;
 }
@@ -312,7 +329,8 @@ button:nth-child(2):active {
 	display : inline-block;
 	position : relative;
 	height : auto;
-	padding : 0;
+	margin : -1rem 0;
+	padding : 1rem 0;
 	border : 0;
 }
 .item > div a:active {
@@ -322,14 +340,14 @@ button:nth-child(2):active {
 .item > div div {
 	display : none;
 	position : absolute;
-	bottom : 50%;
+	bottom : 120%;
 	left : 0;
 	/* overflow : hidden; */
 	opacity : 0;
 	height : auto;
 	width : calc(300px - 1.5rem);
 	background : white;
-	/*margin-bottom : .15rem;*/
+	margin-bottom : -.5rem;
 	padding : 1rem;
 	box-shadow : 0 0 0 1px #ddd inset, 0 1px 3px rgba(0, 0, 0, 0.125);
 	border-radius : 3px;
@@ -339,7 +357,7 @@ button:nth-child(2):active {
 	display : block;
 	position : absolute;
 	bottom : -6px;
-	left : 61px;
+	left : 9px;
 	z-index : 2;
 	/*height : 16px;
 	width : 16px;
@@ -353,9 +371,9 @@ button:nth-child(2):active {
 }
 .item > div div:before {
 	bottom : -7px;
-	left : 60px;
+	left : 8px;
 	z-index : 1;
-	border-top : 8px solid #efefef;
+	border-top : 8px solid #ccc;
 	border-left : 8px solid transparent;
 	border-right : 8px solid transparent;
 }
@@ -377,7 +395,7 @@ button:nth-child(2):active {
 	display : inline-block;
 	max-height : 60px;
 	max-width : 60px;
-	margin : .2rem auto .65rem;
+	margin : .5rem auto 1rem;
 }
 .item > div h3 {
 	margin : 0 0 .25rem;
@@ -387,8 +405,15 @@ button:nth-child(2):active {
 	line-height : 1.2;
 }
 .item > div .link {
-	line-height : 1.5;
-	text-decoration : underline;
+	display : inline-block;
+	background : #111;
+	margin : auto auto .25rem;
+	padding : .25rem .3rem .2rem;
+	color : white;
+	/*border : 1px solid #ccc;*/
+	/*color : #ee7873;*/
+	/*line-height : 1.5;*/
+	/*text-decoration : underline;*/
 }
 .item > div img + img {
 	margin-left : 1.125rem;
@@ -420,7 +445,7 @@ button:nth-child(2):active {
 @keyframes fadeIn {
 	from {
 		display : none;
-		bottom : 50%;
+		bottom : 120%;
 		opacity : 0;
 	}
 	to {
