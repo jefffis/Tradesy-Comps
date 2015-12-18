@@ -42,6 +42,29 @@ nav {
 h1, h2, h3, h4, h5 {
     font-variant : normal;
 }
+#undo {
+    position : fixed;
+    bottom : 0;
+    left : 0;
+    z-index : 5;
+    width : 100%;
+    padding : .5rem;
+    text-align : center;
+}
+#undo p {
+    background : #fef8e7;
+    padding : .5rem;
+    border : 1px solid rgba(0, 0, 0, 0.125);
+    /*color : red;*/
+}
+#undo a {
+    /*border-bottom : 1px solid currentColor;*/
+    font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+    text-decoration : underline;
+}
+#undo a:active {
+    opacity : .65;
+}
 #items {
     background : #efefef;
     padding : .5rem .5rem 0;

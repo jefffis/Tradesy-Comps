@@ -30,7 +30,7 @@
 			                </div>
 			            </figure>
 			            <h2>
-			            	Fendi
+			            	Louis Vuitton
 			            </h2>
 			            <h3>
 			            	Printed Watersnake 3jours Medium Ayers Black Multicolor Tote Bag
@@ -404,19 +404,21 @@
 		<script>
 			$(function(){
 
-				var like = $('#items div button'),
+				var like = '#items div button:first',
 					dislike = $('#items div button:last-child'),
 					confirmCancel = '#items .btns a:last-child',
 					confirmHide = '#items .btns a:first-child',
-					items = $('.item'),
+					items = $('.item-wrapper'),
 					dislikeNum = 0,
 					dislikeNumTotal = 1,
 					parHeight = 0,
 					keyframes = '',
 					keyframesAdded = 0,
-					today = new Date();
+					today = new Date(),
+					removedHtml = '',
+					addBefore = '';
 
-				like.on('click', function() {
+				$('body').on('click', like, function() {
 					// if ($(this).hasClass('liked')) {
 					// 	$(this).removeClass('liked');
 					// 	$(this).next('button').show();
@@ -428,20 +430,28 @@
 				});
 
 				dislike.off('click').on('click', function() {
-					if ( dislikeNum >= dislikeNumTotal ) {
-						fadeItem($(this));
-						removeItem($(this));
-						return;
+					// if ( dislikeNum >= dislikeNumTotal ) {
+					// 	fadeItem($(this));
+					// 	removeItem($(this));
+					// 	return;
+					// }
+					// $(this).parent().find('.confirm').addClass('show');
+					fadeItem($(this));
+					removeItem($(this));
+
+					if ( dislikeNum === 0 ) {
+						showUndo($(this).parents('.item-wrapper').clone(), $(this).parents('.item-wrapper').next('.item-wrapper').attr('id'));
+						dislikeNum++;
 					}
-					$(this).parent().find('.confirm').addClass('show');
 				});
 
-				items.each(function() {
-					var confirmHeight = $(this).outerHeight(),
-					confirmWidth = $(this).outerWidth(),
-					confirm = '<div class="confirm" style="width: ' + confirmWidth + 'px; height: ' + confirmHeight + 'px;"><div><h2>Not your style?</h2><div class="btns cf"><a>No, hide it</a><a>I like it</a></div></div></div>';
+				items.each(function(i) {
+					// var confirmHeight = $(this).outerHeight(),
+					// confirmWidth = $(this).outerWidth(),
+					// confirm = '<div class="confirm" style="width: ' + confirmWidth + 'px; height: ' + confirmHeight + 'px;"><div><h2>Not your style?</h2><div class="btns cf"><a>No, hide it</a><a>I like it</a></div></div></div>';
 
-					$(this).find('a').after(confirm);
+					// $(this).find('a').after(confirm);
+					$(this).attr('id', 'el-' + i);
 				});
 
 				$('body').on('click', confirmCancel, function() {
@@ -454,6 +464,11 @@
 					fadeItem($(this));
 					removeItem($(this));
 					dislikeNum++;
+				});
+
+				// undo hide
+				$('body').on('click', '#undo a', function() {
+					addBackIn($(this));
 				});
 
 				if ( today.getHours() >= 20 ) {
@@ -484,6 +499,26 @@
 						el.parents('.item-wrapper').next('.item-wrapper').removeClass('slide-up');
 						el.parents('.item-wrapper').remove();
 					}, 800);
+				}
+
+				function showUndo(removed, next) {
+					var showUndo = '<div id="undo"><p>We removed this item. <a>Undo</a></p></div>'
+						removedHtml = removed,
+						addBefore = next;
+
+					setTimeout(function() {
+						$('body').append(showUndo);
+						// addBackIn(removed, next);
+					}, 925);
+				}
+
+				function addBackIn(el) {
+					setTimeout(function() {
+						$('#'+addBefore).before(removedHtml);
+					}, 125);
+					setTimeout(function() {
+						el.parents('#undo').remove();
+					}, 250);
 				}
 			});
 		</script>
