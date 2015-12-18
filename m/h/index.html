@@ -404,10 +404,11 @@
 		<script>
 			$(function(){
 
-				var like = '#items div button:first',
+				var like = '#items div a + button',
 					dislike = $('#items div button:last-child'),
-					confirmCancel = '#items .btns a:last-child',
-					confirmHide = '#items .btns a:first-child',
+					// confirmCancel = '#items .btns a:last-child',
+					// confirmHide = '#items .btns a:first-child',
+					undoAction = '#undo a',
 					items = $('.item-wrapper'),
 					dislikeNum = 0,
 					dislikeNumTotal = 1,
@@ -419,13 +420,6 @@
 					addBefore = '';
 
 				$('body').on('click', like, function() {
-					// if ($(this).hasClass('liked')) {
-					// 	$(this).removeClass('liked');
-					// 	$(this).next('button').show();
-					// } else {
-					// 	$(this).addClass('liked');
-					// 	$(this).next('button').hide();
-					// }
 					$(this).toggleClass('liked');
 				});
 
@@ -439,9 +433,12 @@
 					fadeItem($(this));
 					removeItem($(this));
 
+					if ( $('#undo').length ) $('#undo').remove();
+
 					if ( dislikeNum === 0 ) {
 						showUndo($(this).parents('.item-wrapper').clone(), $(this).parents('.item-wrapper').next('.item-wrapper').attr('id'));
 						dislikeNum++;
+						removeUndoEl();
 					}
 				});
 
@@ -454,20 +451,20 @@
 					$(this).attr('id', 'el-' + i);
 				});
 
-				$('body').on('click', confirmCancel, function() {
-					$(this).parents('.confirm').removeClass('show');
-				});
+				// $('body').on('click', confirmCancel, function() {
+				// 	$(this).parents('.confirm').removeClass('show');
+				// });
 
-				$('body').on('click', confirmHide, function() {
-					if ( dislikeNum >= dislikeNumTotal ) return;
+				// $('body').on('click', confirmHide, function() {
+				// 	if ( dislikeNum >= dislikeNumTotal ) return;
 
-					fadeItem($(this));
-					removeItem($(this));
-					dislikeNum++;
-				});
+				// 	fadeItem($(this));
+				// 	removeItem($(this));
+				// 	dislikeNum++;
+				// });
 
 				// undo hide
-				$('body').on('click', '#undo a', function() {
+				$('body').on('click', undoAction, function() {
 					addBackIn($(this));
 				});
 
@@ -520,6 +517,12 @@
 						el.parents('#undo').remove();
 					}, 250);
 				}
+
+				// function removeUndoEl() {
+				// 	setTimeout(function() {
+				// 		if ( $('#undo').length ) $('#undo').remove();
+				// 	}, 5500);
+				// }
 			});
 		</script>
 
