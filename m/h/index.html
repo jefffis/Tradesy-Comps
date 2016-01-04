@@ -424,12 +424,6 @@
 				});
 
 				dislike.off('click').on('click', function() {
-					// if ( dislikeNum >= dislikeNumTotal ) {
-					// 	fadeItem($(this));
-					// 	removeItem($(this));
-					// 	return;
-					// }
-					// $(this).parent().find('.confirm').addClass('show');
 					fadeItem($(this));
 					removeItem($(this));
 
@@ -443,25 +437,8 @@
 				});
 
 				items.each(function(i) {
-					// var confirmHeight = $(this).outerHeight(),
-					// confirmWidth = $(this).outerWidth(),
-					// confirm = '<div class="confirm" style="width: ' + confirmWidth + 'px; height: ' + confirmHeight + 'px;"><div><h2>Not your style?</h2><div class="btns cf"><a>No, hide it</a><a>I like it</a></div></div></div>';
-
-					// $(this).find('a').after(confirm);
 					$(this).attr('id', 'el-' + i);
 				});
-
-				// $('body').on('click', confirmCancel, function() {
-				// 	$(this).parents('.confirm').removeClass('show');
-				// });
-
-				// $('body').on('click', confirmHide, function() {
-				// 	if ( dislikeNum >= dislikeNumTotal ) return;
-
-				// 	fadeItem($(this));
-				// 	removeItem($(this));
-				// 	dislikeNum++;
-				// });
 
 				// undo hide
 				$('body').on('click', undoAction, function() {

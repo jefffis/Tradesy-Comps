@@ -104,6 +104,7 @@ h2 span {
 h3 {
 	margin : 0 0 .75rem;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+	/*line-height : 1.2;*/
 }
 h3 span, h3 em em, .drop h3 em em {
 	color : #777;
@@ -152,9 +153,11 @@ em span:after {
 h3 span.drop {
 	position : relative;
 	top : -1px;
-	background : #ee7873;
-	padding : .15rem .45rem .1rem 1rem;
-	color : white;
+	left : -3px;
+	/*background : #ee7873;*/
+	/*padding : .15rem .45rem .1rem 1rem;*/
+	padding-left : 1rem; 
+	/*color : white;*/
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	/*line-height : 1;*/
 	/*padding-left : .75rem;*/
@@ -162,11 +165,11 @@ h3 span.drop {
 h3 span.drop:before {
 	display : inline-block;
 	position : absolute;
-	top : 6px;
-	left : .3rem;
-	height : 10px;
-	width : 10px;
-	background : url(../img/arrow-down.svg) no-repeat center;
+	top : 3px;
+	left : 2px;
+	height : 12px;
+	width : 12px;
+	background : url(../img/arrow-down-coral.svg) no-repeat center;
 	background-size : contain;
 	content : "";
 }
@@ -179,13 +182,18 @@ h3 span.drop + em {
 p {
 	font-size : 13px;
 }
+
+.sold h3 em:before {
+	content : "Sold for ";
+}
+
 .item-note {
 	/*position : absolute;*/
 	/*top : 225px;
 	left : 0;
 	width : 100%;
 	background : #FAF8E3;*/
-	margin : .25rem 0 0;
+	margin : .125rem 0;
 	/*padding : .35rem 1rem .2rem; */
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 12px;
