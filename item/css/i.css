@@ -135,9 +135,9 @@ h3 em em {
 	margin-left : .25rem;
 	color : #777;
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
-	/*text-decoration : line-through;*/
+	text-decoration : line-through;
 }
-h3 em em:before {
+/*h3 em em:before {
 	display : block;
 	position : absolute;
 	left : -6%;
@@ -145,9 +145,8 @@ h3 em em:before {
 	height : 2px;
 	width : 112%;
 	background : currentColor;
-	/*margin : 0 -2px;*/
 	content : "";
-}
+}*/
 .sale h3 > em, h3 .drop/*, .drop h3 em*/ {
 	color : #ee7873;
 }
