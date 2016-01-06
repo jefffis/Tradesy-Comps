@@ -298,21 +298,34 @@ p {
 .sale a > span, .drop a > span {
 	background : #ee7873;
 }
+.sale a > span[data-off]:after {
+	position : absolute;
+	top : 1.05rem;
+	right : -3rem;
+	color : #ee7873;
+	content : attr(data-off) '% off';
+}
 .green-sale .sale a > span, .green-sale .drop a > span {
 	background : #7dccad;
+}
+.green-sale .sale a > span[data-off]:after {
+	color : #7dccad;
 }
 .final a > span {
 	padding : .6rem .25rem;
 }
 .reserved a > span {
 	width : auto;
-	padding : 1rem .5rem;
+	background : transparent; 
+	padding : 1rem .5rem 1rem 0;
+	color : #ee7873;
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 }
-.sold a > span, .reserved a > span {
+.sold a > span {
 	background : #999;
 	/*color : #111;*/
 }
-.green-sale .sold a > span, .green-sale .reserved a > span {
+.green-sale .sold a > span {
 	background : #ddd;
 	color : #111;
 }
