@@ -300,10 +300,14 @@ p {
 }
 .sale a > span[data-off]:after {
 	position : absolute;
-	top : 1.05rem;
-	right : -3rem;
+	top : 100%;
+	left : 0;
+	width : 100%;
+	margin-top : 5px;
 	color : #ee7873;
 	content : attr(data-off) '% off';
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+	text-align : center;
 }
 .green-sale .sale a > span, .green-sale .drop a > span {
 	background : #7dccad;
