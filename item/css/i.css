@@ -304,6 +304,10 @@ p {
 	background : #999;
 	/*color : #111;*/
 }
+.green-sale .sold a > span, .green-sale .reserved a > span {
+	background : #ddd;
+	color : #111;
+}
 .drop a > span img {
 	display : inline;
 	max-height : 10px;
