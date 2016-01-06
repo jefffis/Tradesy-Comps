@@ -73,7 +73,7 @@
 			<!-- extras for item tile, loving / sold by / etc. -->
 		</div>
 
-		<div class="item" itemscope itemtype="http://schema.org/Product">
+		<div class="item featured" itemscope itemtype="http://schema.org/Product">
 			<a href="###">
 				<!-- need this extra markup for veritcal alignment of images -->
 				<figure>
@@ -516,14 +516,18 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 		<script>
-			var html = document.getElementsByTagName('html')[0];
-			if (window.location.hash) {
-				html.className = 'green-sale';
-			}
-
 			$(function() {
-				var love = $('.item button:first-child'),
+				var html = $('html'),
+					love = $('.item button:first-child'),
 					a = $('a');
+
+				if ( window.location.hash ) {
+					html.addClass('green-sale');
+				}
+
+				if (window.location.hash === '#seller') {
+					html.addClass('seller');
+				}
 
 				love.on('click', function() {
 					$(this).toggleClass('loved');

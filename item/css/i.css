@@ -51,7 +51,7 @@ em {
 .item a {
 	display : block;
 	position : relative;
-	height : 493px;
+	height : 481px;
 	padding : 1rem;
 	border-bottom : 0;
 	color : inherit;
@@ -423,6 +423,23 @@ button:nth-child(2) {
 button:nth-child(2):active {
 	background : #efefef;
 	/* color : #999; */
+}
+.seller button:nth-child(1):before {
+	background-image : url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-128.png);
+	opacity : .5;
+}
+.seller button:nth-child(2), .seller button:nth-child(1):after {
+	display : none;
+}
+.seller .featured:after {
+	display : inline-block;
+	position : absolute;
+	bottom : .85rem;
+	right : 1rem;
+	color : #999;
+	content : "\2605  Featured";
+	font-size : 12px;
+	line-height : 1;
 }
 .item:hover button:nth-child(2) {
 	opacity : 1;
