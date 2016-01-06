@@ -411,6 +411,9 @@ button:nth-child(1):before {
 }
 button.loved:before {
 	animation : love .175s ease-in-out;
+	background-image : url(../img/loved-blk.svg);
+}
+.green-sale button.loved:before {
 	background-image : url(../img/loved.svg);
 }
 button[data-num]:after {
