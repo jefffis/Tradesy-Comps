@@ -146,6 +146,23 @@ h3 em em {
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 	text-decoration : line-through;
 }
+h3 em .was, h3 em .now {
+	margin-left : 0;
+	color : #999;
+	font-size : 12.5px;
+	/*font-style : italic;*/
+	text-decoration : none;
+}
+h3 em .was:before {
+	content : "(";
+}
+h3 em .was:after {
+	content : ")";
+}
+h3 em .now {
+	color : inherit;
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+}
 /*h3 em em:before {
 	display : block;
 	position : absolute;
@@ -426,7 +443,10 @@ button[data-num]:after {
 	content : attr(data-num);
 	/*font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;*/
 	font-size : 11px;
-} 
+}
+button.loved:after {
+	color : #111;
+}
 button:nth-child(2) {
 	position : absolute;
 	bottom : .75rem;
@@ -440,6 +460,13 @@ button:nth-child(2) {
 	color : #111;
 	line-height : 1;
 }
+/*.alt button:nth-child(2) {
+	bottom : auto;
+	top : 100%;
+	right : auto;
+	left : 0;
+	margin-top : 8px;
+}*/
 button:nth-child(2):active {
 	background : #efefef;
 	/* color : #999; */
