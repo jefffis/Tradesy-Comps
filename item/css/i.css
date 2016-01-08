@@ -755,3 +755,6 @@ button:nth-child(2):active {
 h2 span, h3 em em, p {
 	color : #787878;
 }
+.light h3 {
+	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
+}
