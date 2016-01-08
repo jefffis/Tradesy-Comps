@@ -133,7 +133,7 @@ h3 em span, h3 .drop {
 	position : relative;
 	top : -2px;
 	left : 4px;
-	color : #ee7873;
+	color : #F46E68;
 	font-family : Georgia, serif;
 	/*font-style : italic;*/
 	vertical-align : middle;
@@ -174,7 +174,7 @@ h3 em .now {
 	content : "";
 }*/
 .sale h3 > em, h3 .drop/*, .drop h3 em*/ {
-	color : #ee7873;
+	color : #F46E68;
 }
 .green-sale .sale h3 > em {
 	color : #7dccad;
@@ -206,7 +206,7 @@ h3 span.drop {
 	position : relative;
 	top : -1px;
 	left : -3px;
-	/*background : #ee7873;*/
+	/*background : #F46E68;*/
 	/*padding : .15rem .45rem .1rem 1rem;*/
 	padding-left : 1rem; 
 	/*color : white;*/
@@ -281,7 +281,7 @@ p {
 	background : white;
 	margin-left : 1rem;
 	padding : 0 .25rem;
-	color : #ee7873;
+	color : #F46E68;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 }
 .item-note.drop:before {
@@ -313,7 +313,7 @@ p {
 	/*text-transform : uppercase;*/
 }
 .sale a > span, .drop a > span {
-	background : #ee7873;
+	background : #F46E68;
 }
 .sale a > span[data-off]:after {
 	position : absolute;
@@ -321,7 +321,7 @@ p {
 	left : 0;
 	width : 100%;
 	margin-top : 5px;
-	color : #ee7873;
+	color : #F46E68;
 	content : attr(data-off) '% off';
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	text-align : center;
@@ -339,7 +339,7 @@ p {
 	width : auto;
 	background : transparent; 
 	padding : 1rem .5rem 1rem 0;
-	color : #ee7873;
+	color : #F46E68;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 }
 .sold a > span {
@@ -362,7 +362,7 @@ p {
 	max-width : 100%;
 	background : none;
 	padding : 1.125rem 0 0 .6rem;
-	color : #ee7873;
+	color : #F46E68;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 }
 .drop a > span:before {
@@ -615,7 +615,7 @@ button:nth-child(2):active {
 	padding : .25rem .3rem .2rem;
 	color : white;
 	/*border : 1px solid #ccc;*/
-	/*color : #ee7873;*/
+	/*color : #F46E68;*/
 	/*line-height : 1.5;*/
 	/*text-decoration : underline;*/
 }
@@ -750,4 +750,8 @@ button:nth-child(2):active {
     100% {
         transform : scale(1);
     }
+}
+
+h2 span, h3 em em, p {
+	color : #787878;
 }
