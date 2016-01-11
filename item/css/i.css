@@ -176,6 +176,9 @@ h3 em .now {
 .sale h3 > em, h3 .drop/*, .drop h3 em*/ {
 	color : #F46E68;
 }
+.sale h3 > em:before {
+	content : "Now ";
+}
 .green-sale .sale h3 > em {
 	color : #7dccad;
 }
