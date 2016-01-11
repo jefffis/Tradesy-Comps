@@ -761,3 +761,39 @@ h2 span, h3 em em, p {
 .light h3 {
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 }
+
+.promoted:after, .promoted:before {
+	display : block;
+	position : absolute;
+	top : 100%;
+	left : 0;
+	z-index : 3;
+	width : 100%;
+	margin-top : -9px;
+	color : #999;
+	content : "Promoted";
+	font-size : 12px;
+	text-align : center; 
+}
+.promoted:before {
+	z-index : 2;
+	background : white;
+	height : 1rem;
+	width : 4rem;
+	margin-left : calc( (100% - 4rem) / 2 );
+	content : "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
