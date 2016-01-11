@@ -342,7 +342,7 @@ p {
 }
 .reserved a > span {
 	width : auto;
-	background : #F46E68; 
+	background : #999; 
 	padding : 1rem .5rem;
 	/*color : #F46E68;*/
 	/*font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;*/
