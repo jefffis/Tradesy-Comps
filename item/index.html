@@ -9,7 +9,7 @@
 	</head>
 	<body class="light">
 
-		<div class="item _promoted" itemscope itemtype="http://schema.org/Product">
+		<div class="item promoted" itemscope itemtype="http://schema.org/Product">
 			<a href="###">
 				<!-- need this extra markup for veritcal alignment of images -->
 				<figure>
@@ -134,7 +134,7 @@
 			<!-- extras for item tile, loving / sold by / etc. -->
 		</div>
 
-		<div class="item" itemscope itemtype="http://schema.org/Product">
+		<div class="item draft" itemscope itemtype="http://schema.org/Product">
 			<a href="###">
 				<!-- need this extra markup for veritcal alignment of images -->
 				<figure>
@@ -509,7 +509,10 @@
 			$(function() {
 				var html = $('html'),
 					love = $('.item button:first-child'),
-					a = $('a');
+					a = $('a')
+					item = $('.item'),
+					sellernav = '<nav><a href="#seller">Add to Sale</a><hr /><a href="#seller">Edit</a><a href="#seller">Feature</a><a href="#seller">Remove</a></nav>',
+					promoteListing = '<button class="promote">Promote Listing</button>';
 
 				if ( window.location.hash ) {
 					html.addClass('green-sale');
@@ -517,7 +520,18 @@
 
 				if (window.location.hash === '#seller') {
 					html.addClass('seller');
+					item.append(sellernav).append(promoteListing);
 				}
+
+				$('body').on('click', '.item button:first-child', function() {
+					$('nav').removeClass('show');
+					$(this).parent().next('nav').addClass('show');
+				});
+
+				$('body').on('click', function(e) {
+					console.log($(e.target));
+					if ( !$(e.target).closest('.item').length ) $('nav').removeClass('show');
+				});
 
 				love.on('click', function() {
 					$(this).toggleClass('loved');
