@@ -328,7 +328,7 @@ p {
 }
 .seller .item a > span {
 	top : -1px;
-	left : -1px;
+	left : 2.75rem;
 }
 .sale a > span, .drop a > span {
 	background : #F46E68;
@@ -884,8 +884,35 @@ nav hr {
 	display : none;
 }
 
-
-
+label {
+	position : absolute;
+	top : .75rem;
+	left : .75rem;
+}
+input {
+	position : absolute;
+	left : -9999px;
+}
+input + span:before {
+	display : block;
+	height : 1rem;
+	width : 1rem;
+	background : white;
+	border : 1px solid #ccc;
+	box-shadow : 0 2px 0 #efefef inset;
+	color : white;
+	content : "";
+	cursor : pointer;
+	line-height : 1;
+}
+input:checked + span:before {
+	background : #111;
+	box-shadow : none;
+	border-color : #111;
+}
+label:active {
+	opacity : .65;
+}
 
 
 

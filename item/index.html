@@ -195,7 +195,7 @@
 			<!-- extras for item tile, loving / sold by / etc. -->
 		</div>
 
-		<div class="item _promoted" itemscope itemtype="http://schema.org/Product">
+		<div class="item featured" itemscope itemtype="http://schema.org/Product">
 			<a href="###">
 				<!-- need this extra markup for veritcal alignment of images -->
 				<figure>
@@ -511,7 +511,7 @@
 					love = $('.item button:first-child'),
 					a = $('a')
 					item = $('.item'),
-					sellernav = '<nav><a href="#seller">Add to Sale</a><hr /><a href="#seller">Edit</a><a href="#seller">Feature</a><a href="#seller">Remove</a></nav>',
+					sellerNav = '<nav><a href="#seller">Add to Sale</a><hr /><a href="#seller">Edit</a><a href="#seller">Feature</a><a href="#seller">Remove</a></nav>',
 					promoteListing = '<button class="promote">Promote Listing</button>';
 
 				if ( window.location.hash ) {
@@ -520,7 +520,9 @@
 
 				if (window.location.hash === '#seller') {
 					html.addClass('seller');
-					item.append(sellernav).append(promoteListing);
+					item.append(sellerNav).append(promoteListing).each(function(i) {
+						$(this).append('<label><input type="checkbox" name="checkbox-' + i + '" /><span></span></label>');
+					});
 				}
 
 				$('body').on('click', '.item button:first-child', function() {
@@ -529,7 +531,6 @@
 				});
 
 				$('body').on('click', function(e) {
-					console.log($(e.target));
 					if ( !$(e.target).closest('.item').length ) $('nav').removeClass('show');
 				});
 
