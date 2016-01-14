@@ -274,9 +274,10 @@ p {
 	display : inline-block;
 	position : relative;
 	top : 2px;
-	height : .75rem;
-	width : .85rem;
-	background : currentColor;
+	height : .8rem;
+	width : 1rem;
+	background : url(../img/check-green.svg) no-repeat center;
+	background-size : 13px;
 	margin-right : .125rem;
 	content : "";
 }
@@ -355,10 +356,12 @@ p {
 }
 .reserved a > span {
 	width : auto;
-	background : #999; 
+	background : white; 
 	padding : 1rem .5rem;
 	/*color : #F46E68;*/
+	color : #111;
 	/*font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;*/
+	box-shadow : 0 0 0 1px currentColor inset;
 }
 .sold a > span {
 	background : #999;
@@ -781,27 +784,31 @@ h2 span, h3 em em, p {
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 }
 
-.promoted:after, .promoted:before {
+.promoted:after/*, .promoted:before*/ {
 	display : block;
 	position : absolute;
 	top : 100%;
 	left : 0;
 	z-index : 3;
-	width : 100%;
-	margin-top : -9px;
-	color : #999;
+	/*width : 100%;*/
+	background : #fff9e2;
+	margin-top : 10px;
+	padding : .1rem .3rem;
+	/*color : #333;*/
 	content : "Promoted";
-	font-size : 12px;
+	font-size : 10px;
+	letter-spacing : .5px;
 	text-align : center; 
+	text-transform : uppercase;
 }
-.promoted:before {
+/*.promoted:before {
 	z-index : 2;
 	background : white;
 	height : 1rem;
 	width : 4rem;
 	margin-left : calc( (100% - 4rem) / 2 );
 	content : "";
-}
+}*/
 
 nav {
 	position : absolute;
