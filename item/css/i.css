@@ -671,72 +671,6 @@ button:nth-child(2):active {
 	opacity : 1;
 }
 
-@media screen and (min-width : 1024px) and (max-width : 1319px) {
-
-	.item:nth-child(n+4), .item:nth-child(n+5) {
-		margin-top : 1.5rem;
-	}
-
-}
-
-@media screen and (min-width : 600px) and (max-width : 1023px) {
-
-	.item:nth-child(n+3), .item:nth-child(n+5) {
-		margin-top : 1.5rem;
-	}
-
-}
-
-@media screen and (max-width : 599px) {
-
-	html {
-		padding : 0;
-	}
-	.item {
-		width : 50%;
-		float : left;
-		margin : 0 0 2rem;
-		padding : 0 .5rem;
-		border : 0;
-	}
-	.item:nth-child(n+5) {
-		margin-top : 0;
-	}
-	.item a {
-		height: 320px;
-		padding : .5rem;
-		border-bottom : 1px solid #ddd;
-	}
-	.item figure {
-		min-height : 120px;
-		margin-top : 3.5rem;
-	}
-	.item img {
-		max-height: 100px;
-		max-width: 100px;
-	}
-	.item-note {
-		font-size : 11px;
-	}
-	.item-note:before, .item:hover > div button:nth-child(2), .item > div span {
-		display : none;
-	}
-	.item a > span {
-		left : .5rem;
-	}
-	.drop a > span {
-		text-transform : capitalize;
-	}
-	.drop a > span em {
-		display : none;
-	}
-
-	.item:hover > div button:nth-child(2) {
-		display : none;
-	}
-
-}
-
 @keyframes fadeIn {
 	from {
 		display : none;
@@ -923,4 +857,107 @@ label:active {
 
 
 
+@media screen and (min-width : 1024px) and (max-width : 1319px) {
 
+	.item:nth-child(n+4), .item:nth-child(n+5) {
+		margin-top : 1.5rem;
+	}
+
+}
+
+@media screen and (min-width : 600px) and (max-width : 1023px) {
+
+	.item:nth-child(n+3), .item:nth-child(n+5) {
+		margin-top : 1.5rem;
+	}
+
+}
+
+@media screen and (max-width : 599px) {
+
+	html {
+		padding : 0;
+	}
+	.item {
+		display : block;
+		width : 100%;
+		height : auto;
+		/*width : 50%;
+		float : left;*/
+		margin : 0 0 1rem;
+		padding : 0 1rem 1rem;
+		/*border : 0;*/
+	}
+	.item:nth-child(n+5) {
+		margin-top : 0;
+	}
+	.item a {
+		height : auto;
+	}
+	.item figure {
+		width : 40%;
+		float : left;
+		/*min-height : 120px;
+		margin-top : 3.5rem;*/
+		height : 150px;
+		margin : 0 .5rem 0 0;
+	}
+	.item img {
+		max-height: 130px;
+		max-width: 130px;
+	}
+	.item h2 {
+		margin-top : 1.5rem;
+	}
+	.item a > span {
+		top : -.75rem;
+		left : -.75rem;
+	}
+	button:nth-child(1) {
+		right : .75rem;
+	}
+	.item:hover > div button:nth-child(2), .item > div span {
+		display : none;
+	}
+	.item a:before,
+	.item a:after {
+		content : " "; /* 1 */
+		display : table; /* 2 */
+	}
+	.item a:after {
+		clear : both;
+	}
+	/*.item a {
+		height: 320px;
+		padding : .5rem;
+		border-bottom : 1px solid #ddd;
+	}
+	.item figure {
+		min-height : 120px;
+		margin-top : 3.5rem;
+	}
+	.item img {
+		max-height: 100px;
+		max-width: 100px;
+	}
+	.item-note {
+		font-size : 11px;
+	}
+	.item-note:before, .item:hover > div button:nth-child(2), .item > div span {
+		display : none;
+	}
+	.item a > span {
+		left : .5rem;
+	}
+	.drop a > span {
+		text-transform : capitalize;
+	}
+	.drop a > span em {
+		display : none;
+	}
+
+	.item:hover > div button:nth-child(2) {
+		display : none;
+	}*/
+
+}
