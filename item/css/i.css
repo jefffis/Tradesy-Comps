@@ -912,6 +912,9 @@ label:active {
 	.item a > span {
 		top : -.25rem;
 		left : -.75rem;
+		width : auto;
+		padding : .5rem .25rem .45rem;
+		font-size : 10px;
 	}
 	button:nth-child(1) {
 		right : .75rem;
