@@ -895,16 +895,16 @@ label:active {
 		height : auto;
 	}
 	.item figure {
-		width : 40%;
+		width : 35%;
 		float : left;
 		/*min-height : 120px;
 		margin-top : 3.5rem;*/
-		height : 150px;
-		margin : 0 .5rem 0 0;
+		height : 125px;
+		margin : 0 .75rem 0 0;
 	}
 	.item img {
-		max-height: 130px;
-		max-width: 130px;
+		max-height: 125px;
+		max-width: 125px;
 	}
 	.item h2 {
 		margin-top : 1.5rem;
