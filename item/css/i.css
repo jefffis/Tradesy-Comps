@@ -917,7 +917,8 @@ label:active {
 		font-size : 10px;
 	}
 	button:nth-child(1) {
-		right : .75rem;
+		top : 0;
+		right : .5rem;
 	}
 	.item:hover > div button:nth-child(2), .item > div span {
 		display : none;
@@ -932,6 +933,13 @@ label:active {
 	}
 	.item-note {
 		font-size : 11px;
+	}
+	.promoted:after {
+		top : auto;
+		bottom : 0;
+		left : auto;
+		right : -1px;
+		font-size : 8px;
 	}
 	/*.item a {
 		height: 320px;
