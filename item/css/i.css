@@ -884,8 +884,8 @@ label:active {
 		height : auto;
 		/*width : 50%;
 		float : left;*/
-		margin : 0 0 1rem;
-		padding : 0 1rem 1rem;
+		margin : 0 0 .5rem;
+		padding : 0 1rem .5rem;
 		/*border : 0;*/
 	}
 	.item:nth-child(n+5) {
@@ -910,7 +910,7 @@ label:active {
 		margin-top : 1.5rem;
 	}
 	.item a > span {
-		top : -.75rem;
+		top : -.25rem;
 		left : -.75rem;
 	}
 	button:nth-child(1) {
