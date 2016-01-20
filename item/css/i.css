@@ -68,7 +68,7 @@ em {
 .item > div h4 {
 	font-size : 13px;
 }
-.item a {
+.item > a {
 	display : block;
 	position : relative;
 	height : 495px;
@@ -492,33 +492,40 @@ button.loved:after {
 button:nth-child(2) {
 	position : absolute;
 	bottom : .75rem;
-	right : 0;
+	right : 2.3rem;
 	z-index : 2;
 	opacity : 0;
 	/*width : calc(100% + 2px);*/
 	background : white;
 	/* background : -webkit-linear-gradient(top, #fff 0%,#ddd 100%); */
 	/*margin-top : 10px;*/
-	padding : .5rem .75rem .45rem;
+	padding : .5rem .5rem .45rem;
 	/*padding-top : .25rem;*/
 	border : 1px solid #eaeaea;
 	color : #111;
 	line-height : 1;
 }
-.persistent button:nth-child(2) {
-	/*right : 0;*/
-	opacity : 1;
-	padding : .35rem;
-	border : 0;
+a:nth-child(3) {
+	position : absolute;
+	bottom : .75rem;
+	right : 0;
+	/*opacity : 1;*/
+	padding : .125rem .375rem;
+	border : 1px solid white;
+	/*border : 0;*/
 	color : #999;
+	text-decoration : none;
 }
-.persistent button:nth-child(2):after {
+a:nth-child(3):after {
 	position : relative;
-	top : -1px;
+	top : -2.5px;
 	content : "...";
-	font-size : 40px;
+	font-size : 30px;
 	letter-spacing : 1px;
 	line-height : 0;
+}
+.item:hover a:nth-child(3) {
+	border-color : #eaeaea;
 }
 /*button:nth-child(2):after {
 	content : "...";
@@ -530,10 +537,47 @@ button:nth-child(2) {
 	left : 0;
 	margin-top : 8px;
 }*/
-button:nth-child(2):active {
+button:nth-child(2):active, a:nth-child(3):active {
 	background : #efefef;
 	/* color : #999; */
 }
+
+.context-menu {
+	position : absolute;
+	top : 100%;
+	right : .4rem;
+	/*margin-top : -5px;*/
+	padding : 5px 0;
+	border-color : #eaeaea;
+}
+.item:hover .context-menu:target {
+	visibility : visible;
+}
+.context-menu:before, .context-menu:after {
+	display : block;
+	position : absolute;
+	top : -8px;
+	right : 5px;
+	z-index : 2;
+	border-bottom : 8px solid white;
+	border-left : 8px solid transparent;
+	border-right : 8px solid transparent;
+	content : "";
+}
+.context-menu:after {
+	top : -10px;
+	right : 3px;
+	z-index : 1;
+	border-bottom : 10px solid #eaeaea;
+	border-left : 10px solid transparent;
+	border-right : 10px solid transparent;
+}
+.context-menu a {
+	display : block;
+	color : #111;
+	text-decoration : none;
+}
+
 .seller button:nth-child(1):before {
 	background-image : url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-128.png);
 	opacity : .5;
@@ -592,14 +636,14 @@ button:nth-child(2):active {
 	background-size : cover;
 	text-indent : -9999px;
 }
-.item > div a {
+/*.item > div a {
 	display : inline-block;
 	position : relative;
 	height : auto;
 	margin : -1rem 0;
 	padding : 1rem 0;
 	border : 0;
-}
+}*/
 .item > div a:active {
 	/* opacity : .65; */
 	color : #999;
