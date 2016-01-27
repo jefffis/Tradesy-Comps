@@ -32,16 +32,17 @@ hr {
 }
 .collection {
 	display : block;
-	overflow : hidden;
+	/*overflow : hidden;*/
 	position : relative;
-	padding : .75rem 1rem 1rem;
+	z-index : 1;
+	padding : .75rem 1rem;
 	border : 1px solid #ddd;
 	color : inherit;
 	text-decoration : none;
 }
-.collection:hover {
+/*.collection:hover {
 	box-shadow : 0 0 0 2px #efefef;
-}
+}*/
 .collection:active {
 	opacity : .65;
 }
@@ -64,7 +65,7 @@ hr {
 	height : 200px;
 	/* background : white; */
 	padding : 0 1rem;
-	vertical-align : bottom;
+	vertical-align : middle;
 }
 .collection img {
 	display : block;
@@ -75,9 +76,11 @@ hr {
 .collection hr {
 	height : 0;
 }
-/* .collection .min {
-	height : 0;
-} */
+ .collection figure + hr {
+	height : 1px;
+	background : #ddd;
+	margin : 0 -1rem .75rem;
+} 
 .collection h2, .collection h3 {
 	font-weight : normal;
 }
@@ -85,6 +88,7 @@ hr {
 	display : inline-block;
 	position : relative;
 	margin-bottom : .5rem;
+	font-family : 'proxima-nova-semi', Arial, sans-serif;
 	font-size : 20px;
 }
 .collection h2:after {
@@ -92,25 +96,27 @@ hr {
 	position : absolute;
 	top : 100%;
 	left : 0;
-	height : 1px;
+	height : 2px;
 	width : 100%;
 	background : #ddd;
 	margin-top : -1px;
 	content : "";
 }
 .collection h3 {
-	position : absolute;
+	display : inline-block;
+	position : relative;
+	/*position : absolute;
 	top : 1.25rem;
-	right : 1.25rem;
+	right : 1.25rem;*/
 	padding-right : .75rem;
 	color : #999;
 	font-size : 14px;
-	text-align : center;
+	/*text-align : center;*/
 }
 .collection h3:after {
 	display : inline-block;
 	position : absolute;
-	top : .275rem;
+	top : .3rem;
 	right : 0;
 	border-left : .5em solid currentColor;
 	border-top : .375rem solid transparent;
@@ -135,9 +141,59 @@ hr {
 	opacity : 1;
 }*/
 
+h2[data-tooltip]:before {
+	display : none;
+	position : absolute;
+	top : .4rem;
+	left : 100%;
+	height : 1.25rem;
+	width : 1.25rem;
+	/*background : #efefef;*/
+	margin-left : .5rem;
+	border : 1px solid #ddd;
+	border-radius : 100%;
+	color : #111;
+	content : "?";
+	font-family : 'proxima-nova-semi', Arial, sans-serif;
+	font-size : 15px;
+	/*font-weight : normal;*/
+	line-height : 1.5;
+	text-align : center;
+}
+h2[data-tooltip] span {
+	display : none;
+	position : absolute;
+	top : 0;
+	left : 100%;
+	width : 15rem;
+	background : #111;
+	margin-left : 2.5rem;
+	padding : 1rem;
+	border-radius : 3px;
+	color : white;
+	font-size : 13px;
+	line-height : 1.25;
+}
+/*h2[data-tooltip]:hover span {
+	display : block;
+}*/
+h2[data-tooltip] span:before {
+	display : inline-block;
+	position : absolute;
+	top : .75rem;
+	left : -5px;
+	border-right : .5em solid #111;
+	border-top : .375rem solid transparent;
+	border-bottom : .375rem solid transparent;
+	content : "";
+}
 
+
+/*.two .collection, .three .collection {
+	padding-bottom : .75rem;
+}*/
 .two .collection {
-	width : calc(50% - .5rem);
+	width : calc(50% - 1rem);
 	float : left;
 }
 .two .collection:nth-child(n+2) {
@@ -150,20 +206,24 @@ hr {
 }
 .two .collection div, .three .collection div {
 	height : 180px;
-	vertical-align : middle;
+	/*vertical-align : middle;*/
 }
+/*.two figure + hr, .three figure + hr {
+	height : 1px;
+	background : #ddd;
+	margin : 0 -1rem .75rem;
+}*/
 
 /*.two, .three {
 	text-align : center;
 }*/
 .three .collection {
-	width : calc(33.3% - .5rem);
+	width : calc(33.3% - 1.5rem);
 	float : left;
-	padding-bottom : .75rem;
 }
 .three .collection:nth-child(2) {
 	position : relative;
-	left : .75rem;
+	left : 2.275rem;
 }
 .three .collection:nth-child(n+3) {
 	float : right;
@@ -174,12 +234,29 @@ hr {
 .three .collection div {
 	height : 150px;
 }
-.two .collection hr, .three .collection hr {
-	height : 0;
-}
-.two h3, .three h3 {
+/*.two h3, .three h3 {
 	display : inline-block;
 	position : relative;
 	top : auto;
 	right : auto;
+}*/
+
+.sale:after {
+	display : inline-block;
+	position : absolute;
+	top : -1px;
+	right : -1px;
+	z-index : 2;
+	/*min-width : 3rem;*/
+	background : #ee7873;
+	padding : 1rem .75rem;
+	color : white;
+	content : "On Sale";
+	/*text-align : center;*/
+}
+.three .sale:after {
+	content : "Sale";
+}
+.sale h3 {
+	color : #ee7873;
 }
