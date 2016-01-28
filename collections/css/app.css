@@ -1,4 +1,5 @@
 @font-face{font-family:'proxima-nova-semi';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.svg#proxima-nova-semi") format("svg");font-weight:normal;font-style:normal}@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:"miller-banner-roman";src:url("https://assets.tradesy.com/css/fonts/miller-banner/roman/webfont.eot?v=32");src:url("https://assets.tradesy.com/css/fonts/miller-banner/roman/webfont.eot?v=32iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/miller-banner/roman/webfont.woff2?v=32") format("woff2"),url("https://assets.tradesy.com/css/fonts/miller-banner/roman/webfont.woff?v=32") format("woff"),url("https://assets.tradesy.com/css/fonts/miller-banner/roman/webfont.ttf?v=32") format("truetype"),url("https://assets.tradesy.com/css/fonts/miller-banner/roman/webfont.svg#miller-banner-roman?v=32") format("svg");font-weight:normal;font-style:normal}
 * {
 	margin : 0;
 	padding : 0;
@@ -88,20 +89,20 @@ hr {
 	display : inline-block;
 	position : relative;
 	margin-bottom : .5rem;
-	font-family : 'proxima-nova-semi', Arial, sans-serif;
+	font-family : 'miller-banner-roman', Arial, sans-serif;
 	font-size : 20px;
 }
-.collection h2:after {
+/*.collection h2:after {
 	display : inline-block;
 	position : absolute;
 	top : 100%;
 	left : 0;
-	height : 2px;
+	height : 1px;
 	width : 100%;
 	background : #ddd;
 	margin-top : -1px;
 	content : "";
-}
+}*/
 .collection h3 {
 	display : inline-block;
 	position : relative;
@@ -141,14 +142,13 @@ hr {
 	opacity : 1;
 }*/
 
-h2[data-tooltip]:before {
+/*h2[data-tooltip]:before {
 	display : none;
 	position : absolute;
 	top : .4rem;
 	left : 100%;
 	height : 1.25rem;
 	width : 1.25rem;
-	/*background : #efefef;*/
 	margin-left : .5rem;
 	border : 1px solid #ddd;
 	border-radius : 100%;
@@ -156,7 +156,6 @@ h2[data-tooltip]:before {
 	content : "?";
 	font-family : 'proxima-nova-semi', Arial, sans-serif;
 	font-size : 15px;
-	/*font-weight : normal;*/
 	line-height : 1.5;
 	text-align : center;
 }
@@ -174,9 +173,9 @@ h2[data-tooltip] span {
 	font-size : 13px;
 	line-height : 1.25;
 }
-/*h2[data-tooltip]:hover span {
+h2[data-tooltip]:hover span {
 	display : block;
-}*/
+}
 h2[data-tooltip] span:before {
 	display : inline-block;
 	position : absolute;
@@ -186,7 +185,7 @@ h2[data-tooltip] span:before {
 	border-top : .375rem solid transparent;
 	border-bottom : .375rem solid transparent;
 	content : "";
-}
+}*/
 
 
 /*.two .collection, .three .collection {
@@ -206,6 +205,7 @@ h2[data-tooltip] span:before {
 }
 .two .collection div, .three .collection div {
 	height : 180px;
+	padding : 0 .5rem;
 	/*vertical-align : middle;*/
 }
 /*.two figure + hr, .three figure + hr {
@@ -260,3 +260,139 @@ h2[data-tooltip] span:before {
 .sale h3 {
 	color : #ee7873;
 }
+
+
+/**** editorial ****/
+.e {
+	padding : .75rem 1rem .25rem .75rem;
+}
+.e h2 {
+	display : table;
+	width : 25%;
+	float : left;
+	/*background : #efefef;*/
+	box-shadow : 1px 0 0 #ddd;
+	font-size : 26px;
+	/*letter-spacing : .25px;*/
+	line-height : 1.2;
+}
+.e h2 span {
+	display : table-cell;
+	height : 200px;
+	padding : 0 2rem;
+	vertical-align : middle;
+}
+.e em {
+	display : inline-block;
+	/*background : #111;*/
+	margin-top : 1rem;
+	padding : .5rem .75rem .475rem;
+	/*border : 1px solid currentColor;*/
+	box-shadow : 0 0 0 1px currentColor;
+	/*color : white;*/
+	font-family : 'proxima-nova-regular', Arial, sans-serif;
+	font-size : 15px;
+	font-style : normal;
+}
+.e:hover em {
+	background : #111;
+	box-shadow : 0 0 0 1px #111;
+	color : white;
+}
+.e i {
+	display : inline-block;
+	position : relative;
+	top : .5rem;
+	color : #666;
+	font-family : 'proxima-nova-regular', Arial, sans-serif;
+	font-size : 13px;
+	font-style : normal;
+}
+.e figure {
+	position : relative;
+	top : 1rem;
+}
+.e img, .two .e img {
+	max-height : 80%;
+	max-width : 90%;
+}
+.e figure + hr {
+	display : none;
+}
+.e h3 {
+	display : block;
+	clear : left;
+	margin : 0 -1rem 0 -.75rem;
+	padding : .25rem 0 0 .5rem;
+	border-top : 1px solid #ddd;
+	text-align : center;
+}
+.e h3:after {
+	display : none;
+}
+
+.two .e h2 {
+	box-shadow : 1px 0 0 #ddd, 0 1px 0 #ddd;
+}
+.two .e figure, .two .e h2 {
+	position : static;
+	height : 200px;
+	width : 50%;
+	margin : 0;
+}
+.two .e img, .three .e img {
+	position : relative;
+	top : 1rem;
+	max-height : 90%;
+	max-width : 100%;
+}
+
+.e2 .e {
+	padding : .75rem .75rem 0;
+}
+.e2 .e h2, .e2 .e h2 span {
+	display : block;
+	height : auto;
+	width : 100%;
+	float : none;
+	padding : 1rem;
+	text-align : center;
+}
+.e2 .e h2 {
+	box-shadow : 0 1px 0 #ddd;
+}
+.e2 small {
+	display : block;
+	clear : left;
+	/*position : absolute;
+	bottom : 0;
+	left : 0;
+	width : 100%;*/
+	margin-top : -.5rem;
+	padding : 0 0 1rem;
+	color : #666;
+	font-size : 13px;
+	text-align : center;
+}
+.e2 .e figure {
+	position : static;
+	height : 200px;
+	width : 33.3%;
+	margin : 0;
+}
+.three.e2 h2 span {
+	padding-top : 0;
+}
+.three.e2 .e figure {
+	height : 150px;
+	width : 50%;
+}
+.three.e2 .e img {
+	top : .5rem;
+	max-height : 85%;
+	max-width : 90%;
+}
+
+
+
+
