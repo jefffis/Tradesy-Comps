@@ -283,17 +283,16 @@ h2[data-tooltip] span:before {
 	font-style : normal;
 }
 .three .on-sale > span {
-	/*top : auto;
-	bottom : -1px;*/
+	top : auto;
+	bottom : -1px;
 	padding : 1rem .5rem;
 }
 .three .on-sale > em {
-	/*right : auto;
-	left : 1rem;*/
-	right : 0;
+	right : auto;
+	left : 0;
 	bottom : 0;
 	background : white;
-	padding : .3rem .5rem;
+	padding : .2rem .2rem .2rem .5rem;
 }
 
 
@@ -411,6 +410,10 @@ h2[data-tooltip] span:before {
 	float : none;
 	padding : 0;
 	text-align : center;
+}
+.three.e2 .e h2 {
+	padding-left : .5rem;
+	padding-right : .5rem;
 }
 .e2 .e h2 {
 	/*min-height : 182px;*/
