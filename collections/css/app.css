@@ -261,6 +261,36 @@ h2[data-tooltip] span:before {
 	color : #ee7873;
 }
 
+.on-sale > span {
+	display : inline-block;
+	position : absolute;
+	top : -1px;
+	right : -1px;
+	z-index : 2;
+	background : #ee7873;
+	padding : 1rem .75rem;
+	color : white;
+}
+.on-sale > em {
+	display : inline-block;
+	position : absolute;
+	bottom : .85rem;
+	right : 1rem;
+	z-index : 2;
+	color : #ee7873;
+	font-family : 'proxima-nova-semi', Arial, sans-serif;
+	font-size : 13px;
+	font-style : normal;
+}
+.three .on-sale > span {
+	top : auto;
+	bottom : -1px;
+}
+.three .on-sale > em {
+	right : auto;
+	left : 1rem;
+}
+
 
 /**** editorial ****/
 .e {
@@ -282,7 +312,7 @@ h2[data-tooltip] span:before {
 	padding : 0 2rem;
 	vertical-align : middle;
 }
-.e em {
+.e h2 em {
 	display : inline-block;
 	/*background : #111;*/
 	margin-top : 1rem;
@@ -294,7 +324,7 @@ h2[data-tooltip] span:before {
 	font-size : 15px;
 	font-style : normal;
 }
-.e:hover em {
+.e:hover h2 em {
 	background : #111;
 	box-shadow : 0 0 0 1px #111;
 	color : white;
@@ -332,13 +362,26 @@ h2[data-tooltip] span:before {
 }
 
 .two .e h2 {
+	position : relative;
 	box-shadow : 1px 0 0 #ddd, 0 1px 0 #ddd;
 }
+.two .e h2:after {
+	display : block;
+	position : absolute;
+	bottom : -1px;
+	right : -1px;
+	height : 1px;
+	width : 1px;
+	background : #ddd;
+	content : "";
+}
 .two .e figure, .two .e h2 {
-	position : static;
 	height : 200px;
 	width : 50%;
 	margin : 0;
+}
+.two .e figure {
+	position : static;
 }
 .two .e img, .three .e img {
 	position : relative;
@@ -364,12 +407,7 @@ h2[data-tooltip] span:before {
 .e2 small {
 	display : block;
 	clear : left;
-	/*position : absolute;
-	bottom : 0;
-	left : 0;
-	width : 100%;*/
-	margin-top : -.5rem;
-	padding : 0 0 1rem;
+	padding : 0 0 .85rem;
 	color : #666;
 	font-size : 13px;
 	text-align : center;
