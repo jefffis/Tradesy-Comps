@@ -311,7 +311,7 @@ h2[data-tooltip] span:before {
 }*/
 .three.e2 .on-sale strong {
 	position : absolute;
-	top : .75rem;
+	top : .625rem;
 	left : 0;
 	width : 100%;
 }
@@ -363,7 +363,7 @@ h2[data-tooltip] span:before {
 	display : table-cell;
 	position : relative;
 	height : 200px;
-	padding : 0 2rem;
+	padding : 0 1.5rem;
 	vertical-align : middle;
 }
 .e h2 em {
@@ -425,6 +425,16 @@ h2[data-tooltip] span:before {
 	position : relative;
 	box-shadow : 1px 0 0 #ddd, 0 1px 0 #ddd;
 }
+.shd.two .e h2 {
+	background : #f2f3f3;
+	box-shadow : none;
+}
+.shd.two .e h2:after {
+	display : none;
+}
+.shd em {
+	background : white;
+}
 .two .e h2:after {
 	display : block;
 	position : absolute;
@@ -455,7 +465,7 @@ h2[data-tooltip] span:before {
 }
 .e2 .e h2, .e2 .e h2 span {
 	/*display : block;*/
-	height : 182px;
+	height : 170px;
 	width : 100%;
 	float : none;
 	padding : 0;
