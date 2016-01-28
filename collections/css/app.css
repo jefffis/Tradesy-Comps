@@ -283,12 +283,17 @@ h2[data-tooltip] span:before {
 	font-style : normal;
 }
 .three .on-sale > span {
-	top : auto;
-	bottom : -1px;
+	/*top : auto;
+	bottom : -1px;*/
+	padding : 1rem .5rem;
 }
 .three .on-sale > em {
-	right : auto;
-	left : 1rem;
+	/*right : auto;
+	left : 1rem;*/
+	right : 0;
+	bottom : 0;
+	background : white;
+	padding : .3rem .5rem;
 }
 
 
@@ -330,14 +335,20 @@ h2[data-tooltip] span:before {
 	color : white;
 }
 .e i {
-	display : inline-block;
-	position : relative;
-	top : .5rem;
+	display : block;
+	/*position : relative;
+	top : .5rem;*/
+	padding : .5rem 0 0;
 	color : #666;
 	font-family : 'proxima-nova-regular', Arial, sans-serif;
 	font-size : 13px;
 	font-style : normal;
 }
+/*.e2 i {
+	display : block;
+	position : static;
+	padding : .5rem 0 0;
+}*/
 .e figure {
 	position : relative;
 	top : 1rem;
@@ -394,14 +405,15 @@ h2[data-tooltip] span:before {
 	padding : .75rem .75rem 0;
 }
 .e2 .e h2, .e2 .e h2 span {
-	display : block;
-	height : auto;
+	/*display : block;*/
+	height : 182px;
 	width : 100%;
 	float : none;
-	padding : 1rem;
+	padding : 0;
 	text-align : center;
 }
 .e2 .e h2 {
+	/*min-height : 182px;*/
 	box-shadow : 0 1px 0 #ddd;
 }
 .e2 small {
