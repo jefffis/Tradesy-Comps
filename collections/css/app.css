@@ -24,12 +24,21 @@ body {
 }
 hr {
 	clear : left;
-	height : 1rem;
+	height : 2.5rem;
+}
+h4 {
+	max-width : calc(1000px - 2rem);
+	margin : auto;
+	font-family : 'proxima-nova-semi', Arial, sans-serif;
+	font-size : 18px;
+	font-weight : normal;
+	letter-spacing : 1.5px;
+	text-transform : uppercase;
 }
 .collections {
 	max-width : 1000px;
 	margin : auto;
-	padding : 1rem;
+	padding : .25rem 1rem;
 }
 .collection {
 	display : block;
@@ -261,17 +270,37 @@ h2[data-tooltip] span:before {
 	color : #ee7873;
 }
 
-.on-sale > span {
-	display : inline-block;
+/*.on-sale.e h2 span:after {
+	content : "Sale";
+}*/
+
+.on-sale strong {
+	display : block;
+	position : relative;
+	top : -.25rem;
+	
+	/*display : inline-block;
 	position : absolute;
-	top : -1px;
-	right : -1px;
+	top : calc(-.75rem - 1px);
+	left : calc(-.75rem - 1px);
 	z-index : 2;
 	background : #ee7873;
-	padding : 1rem .75rem;
-	color : white;
+	padding : 1.5rem .5rem;
+	color : white;*/
+
+	color : #ee7873;
+	font-family : 'proxima-nova-semi', Arial, sans-serif;
+	font-size : 13px;
+	font-weight : normal;
+	letter-spacing : 1px;
+	/*line-height : 0;*/
+	text-transform : uppercase;
 }
-.on-sale > em {
+.on-sale .urgent {
+	letter-spacing : normal;
+	text-transform : none; 
+}
+/*.on-sale > em {
 	display : inline-block;
 	position : absolute;
 	bottom : .85rem;
@@ -293,7 +322,7 @@ h2[data-tooltip] span:before {
 	bottom : 0;
 	background : white;
 	padding : .2rem .2rem .2rem .5rem;
-}
+}*/
 
 
 /**** editorial ****/
@@ -312,6 +341,7 @@ h2[data-tooltip] span:before {
 }
 .e h2 span {
 	display : table-cell;
+	position : relative;
 	height : 200px;
 	padding : 0 2rem;
 	vertical-align : middle;
@@ -401,7 +431,7 @@ h2[data-tooltip] span:before {
 }
 
 .e2 .e {
-	padding : .75rem .75rem 0;
+	padding : 0 .75rem 0;
 }
 .e2 .e h2, .e2 .e h2 span {
 	/*display : block;*/
@@ -410,6 +440,12 @@ h2[data-tooltip] span:before {
 	float : none;
 	padding : 0;
 	text-align : center;
+}
+.e2 .e h2 {
+	padding : .5rem 0;
+}
+.two.e2 .e h2, .two.e2 .e h2 span {
+	height : 150px;
 }
 .three.e2 .e h2 {
 	padding-left : .5rem;
