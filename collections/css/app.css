@@ -515,3 +515,89 @@ h2[data-tooltip] span:before {
 
 
 
+/**** drilldown ****/
+header {
+	height : 300px;
+	background : #f2f3f3;
+	margin-top : -3rem;
+	margin-bottom : 3rem;
+}
+#filters {
+	height : 80px;
+	max-width : 1000px;
+	margin : auto;
+	border : 1px solid #ddd;
+	text-align : center;
+}
+#filters:before {
+	position : relative;
+	top : calc(50% - .675rem);
+	opacity : .5;
+	content : "Filters & such";
+}
+
+#drilldown {
+	max-width : 1200px;
+	margin : auto;
+	text-align : center;
+}
+#drilldown h1 {
+	font-family : 'miller-banner-roman', Arial, sans-serif;
+	font-size : 34px;
+	font-weight : normal;
+}
+#drilldown .is-on-sale:before {
+	display : block;
+	padding-bottom : .25rem;
+	color : #ee7873;
+	font-family : 'proxima-nova-semi', Arial, sans-serif;
+	font-size : 13px;
+	font-weight : normal;
+	letter-spacing : 1px;
+	text-transform : uppercase;
+	content : attr(data-sale);
+}
+#drilldown small {
+	display : block;
+	padding-top : .25rem;
+	color : #999;
+	font-family : 'proxima-nova-regular', Arial, sans-serif;
+	font-size : 13px;
+}
+#drilldown small:after {
+	display : block;
+	height : 2px;
+	width : 2rem;
+	background : #111;
+	margin : 1rem auto auto;
+	content : "";
+}
+#drilldown p {
+	max-width : 30rem;
+	margin : 1rem auto auto;
+	color : #313132;
+}
+
+.item {
+	display : inline-block;
+	height : 300px;
+	width : calc(25% - 3rem);
+	background : #f2f3f3;
+	margin : 1rem 1rem 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
