@@ -275,9 +275,9 @@ h2[data-tooltip] span:before {
 }*/
 
 .on-sale strong {
-	display : inline-block;
-	position : relative;
-	top : -.25rem;
+	display : block;
+	/*position : relative;
+	top : -.25rem;*/
 	
 	/*display : inline-block;
 	position : absolute;
@@ -287,6 +287,8 @@ h2[data-tooltip] span:before {
 	background : #ee7873;
 	padding : 1.5rem .5rem;
 	color : white;*/
+
+	padding-bottom : .25rem;
 
 	color : #ee7873;
 	font-family : 'proxima-nova-semi', Arial, sans-serif;
@@ -307,8 +309,7 @@ h2[data-tooltip] span:before {
 	opacity : .5;
 	content : "";
 }*/
-.e2 .on-sale strong {
-	display : block;
+.three .e2 .on-sale strong {
 	position : absolute;
 	top : .25rem;
 	left : 0;
