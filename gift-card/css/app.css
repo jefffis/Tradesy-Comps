@@ -96,20 +96,22 @@ h2 {
 	background : white;
 	/* background : linear-gradient(to bottom, #fff 0%, #fff 50%, #ddd 100%); */
 	padding : .5rem .75rem;
-	border : 1px solid currentColor;
+	border : 1px solid #111;
 	color : #111;
 	text-decoration : none;
 }
-.half .btn:hover, .half .btn:focus {
+/*.half .btn:hover, .half .btn:focus {
 	background : #111;
 	border-color : #111;
 	color : white;
-}
-.half:nth-child(2) .btn:hover, .half:nth-child(2) .btn:focus {
+}*/
+/*.half:nth-child(2) .btn:hover, .half:nth-child(2) .btn:focus {
 	box-shadow : 0 0 0 1px white;
-}
+}*/
 .half .btn:active {
-	color : rgba(255, 255, 255, 0.75);
+	background : #efefef;
+	/*color : rgba(255, 255, 255, 0.75);*/
+	color : #666;
 }
 .half small {
 	position : absolute;
@@ -124,4 +126,7 @@ h2 {
 }
 .half a:hover {
 	text-decoration : none;
+}
+.half a:active {
+	color : #999;
 }
