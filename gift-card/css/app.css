@@ -35,10 +35,18 @@ h2 {
 	font-size : 30px;
 	font-weight : normal;
 }
+h2:after {
+	display : block;
+	height : 1px;
+	width : 2rem;
+	background : currentColor;
+	margin : .5rem auto 1rem;
+	content : "";
+}
 .half {
 	display : inline-block;
 	position : relative;
-	width : calc(45% - 2rem);
+	width : 48%;
 	padding : 1.5rem 0 2.5rem;
 }
 .half:nth-child(1):after {
@@ -52,7 +60,7 @@ h2 {
 	content : "";
 }
 .half span {
-	display : block;
+	display : none;
 	position : relative;
 	height : 125px;
 	width : 250px;
@@ -78,7 +86,7 @@ h2 {
 .half:nth-child(1) span {
 	/*width : 300px;*/
 	background : url(https://item1.tradesy.com/images/category/seo/category-seo-56a82c1096659.jpg) no-repeat -40px 0;
-	background-size : 200%;
+    background-size : 200%;
 }
 .half p {
 	max-width : 20rem;
@@ -90,43 +98,46 @@ h2 {
 }
 .half .btn {
 	display : inline-block;
-	position : relative;
-	top : -1rem;
+	/*position : relative;
+	top : -1rem;*/
 	z-index : 1;
 	background : white;
 	/* background : linear-gradient(to bottom, #fff 0%, #fff 50%, #ddd 100%); */
-	padding : .5rem .75rem;
+	padding : .5rem .875rem;
 	border : 1px solid #111;
 	color : #111;
 	text-decoration : none;
 }
-/*.half .btn:hover, .half .btn:focus {
+.half .btn:hover, .half .btn:focus {
 	background : #111;
 	border-color : #111;
 	color : white;
-}*/
-/*.half:nth-child(2) .btn:hover, .half:nth-child(2) .btn:focus {
+}
+.half:nth-child(2) .btn:hover, .half:nth-child(2) .btn:focus {
 	box-shadow : 0 0 0 1px white;
-}*/
+}
 .half .btn:active {
-	background : #efefef;
-	/*color : rgba(255, 255, 255, 0.75);*/
-	color : #666;
+	color : rgba(255, 255, 255, 0.75);
+
+	/*background : #efefef;
+	color : #666;*/
 }
 .half small {
-	position : absolute;
-	bottom : 1.25rem;
+	/*position : absolute;
+	bottom : 0;
 	left : 0;
-	width : 100%;
+	width : 100%;*/
+	display : block;
+	margin-top : 1rem;
 	color : #999;
 	font-size : 13px;
 }
 .half a {
-	color : #666;
+	color : #999;
 }
 .half a:hover {
 	text-decoration : none;
 }
 .half a:active {
-	color : #999;
+	color : #ddd;
 }
