@@ -37,7 +37,7 @@ h2 {
 }
 h2:after {
 	display : block;
-	height : 1px;
+	height : 2px;
 	width : 2rem;
 	background : currentColor;
 	margin : .5rem auto 1rem;
