@@ -45,7 +45,7 @@ h2 {
 	display : block;
 	position : absolute;
 	top : 0;
-	right : -25px;
+	right : 0;
 	height : 100%;
 	width : 1px;
 	background : #ddd;
@@ -65,9 +65,9 @@ h2 {
 	background-size : 150px;
 	margin : auto;
 }
-.half:nth-child(1) {
+/*.half:nth-child(1) {
 	left : -25px;
-}
+}*/
 .half:nth-child(2) span {
 	border-radius : 4px;
 }
@@ -84,9 +84,9 @@ h2 {
 	content : "";
 }
 .half:nth-child(1) span {
-	width : 300px;
+	/*width : 300px;*/
 	background : url(https://item1.tradesy.com/images/category/seo/category-seo-56a82c1096659.jpg) no-repeat -40px 0;
-	background-size : 150%;
+	background-size : 200%;
 }
 .half p {
 	max-width : 20rem;
