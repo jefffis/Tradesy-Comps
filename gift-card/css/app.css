@@ -25,6 +25,7 @@ section {
 .content {
 	height : 300px;
 	background : #efefef;
+	opacity : .5;
 }
 h2 {
 	max-width : 200px;
