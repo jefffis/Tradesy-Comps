@@ -103,12 +103,13 @@ h2:after {
 	z-index : 1;
 	background : white;
 	/* background : linear-gradient(to bottom, #fff 0%, #fff 50%, #ddd 100%); */
-	padding : .5rem .875rem;
+	padding : .5rem .75rem .475rem;
 	border : 1px solid #111;
 	color : #111;
+	line-height : 24px;
 	text-decoration : none;
 }
-.half .btn:hover, .half .btn:focus {
+.half .btn:hover/*, .half .btn:focus*/ {
 	background : #111;
 	border-color : #111;
 	color : white;
