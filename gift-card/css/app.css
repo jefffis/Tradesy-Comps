@@ -175,6 +175,14 @@ h2:after {
 
 }
 
+@media screen and ( min-width : 600px ) {
+
+	h2 {
+		max-width : 200px;
+	}
+
+}
+
 @media screen and ( min-width : 1000px ) {
 
 	h2 {
