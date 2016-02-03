@@ -345,8 +345,9 @@ h2[data-tooltip] span:before {
 }*/
 
 .header {
-	height : 1000px;
-	background : url(../img/closet-UI.png) no-repeat top center;
+	height : 300px;
+	background : #ddd;
+	/*background : url(../img/closet-UI.png) no-repeat top center;*/
 }
 
 
@@ -594,14 +595,80 @@ header {
 
 
 
+/* mobiles */
+@media screen and ( max-width : 500px ) {
 
+	h4 {
+		padding : 0 1rem;
+	}
+	.e {
+		padding : .5rem;
+	}
+	.e:nth-child(n+2) {
+		margin-top : 1rem;
+	}
+	.collections {
+		padding : 0 1rem 1rem;
+	}
+	.e h2, .e h2 span {
+		display : block;
+		float : none;
+		height : auto;
+		width : 100%;
+		margin-bottom : 0;
+		padding : 1.5rem .5rem;
+		box-shadow : none;
+		text-align : center;
+	}
+	.e h2 span {
+		max-width : 70vw;
+		margin : auto;
+		padding : 0;
+	}
+	.e figure {
+		display : none;
+	}
 
+}
 
+@media screen and ( min-width : 501px ) and ( max-width : 999px ) {
 
+	h4, .collection {
+		padding-left : 1rem;
+		padding-right : 1rem;
+	}
+	.e h2 {
+		width : 33%;
+	}
+	.e figure {
+		width : 33%;
+	}
+	.e figure + figure + figure {
+		display : none;
+	}
 
+}
 
+@media screen and ( min-width : 1000px ) and ( max-width : 1300px ) {
 
+	h4, .collection {
+		padding-left : 1rem;
+		padding-right : 1rem;
+	}
+	.e h2 {
+		width : 25%;
+	}
+	.e figure {
+		width : 25%;
+	}
+	.e figure + figure + figure {
+		display : table;
+	}
+	.e figure + figure + figure + figure {
+		display : none;
+	}
 
+}
 
 
 
