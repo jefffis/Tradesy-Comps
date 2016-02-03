@@ -205,10 +205,9 @@ h2:after {
 */
 .b {
 	position : relative;
-	/*background : #111;*/
-	background : #111 url(http://elegantwedding.co/wp-content/uploads/2015/10/designer-shopping-bags-tumblr-with-women-use-designer-bags-to-fend-off-jealous-would-be-man-stealers.jpg) no-repeat center;
-	background-size : cover;
-	padding : 4rem 0 3rem;
+	background : #111 url(../img/bags1.jpg) no-repeat bottom center;
+	background-size : 120%;
+	padding : 2.5rem 0;
 	color : white;
 }
 .b:before {
@@ -230,8 +229,7 @@ h2:after {
 	z-index : 1;
 	height : 100%;
 	width : 100%;
-	/*background : rgba(0, 0, 0, 0.5);*/
-	background : linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.35) 100%);
+	background : linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.45) 100%);
 	content : "";
 }
 .b * {
@@ -239,7 +237,9 @@ h2:after {
 	z-index : 2;
 }
 .b h2 {
-	font-size : 34px;
+	max-width : 100%;
+	font-size : 25px;
+	line-height : 1.2;
 	text-shadow : 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 .b h2:after {
@@ -247,8 +247,9 @@ h2:after {
 	/*opacity : .5;*/
 }
 .b p {
-	max-width : 32.5rem;
+	max-width : 75vw;
 	margin : auto;
+	font-size : 15px;
 	line-height : 1.35;
 	text-shadow : 0 1px 0 rgba(0, 0, 0, 0.2);
 }
@@ -260,13 +261,41 @@ h2:after {
 	text-decoration : none;
 }
 .b .btn:active {
-	background : rgba(255, 255, 255, 0.65);
+	background : #111;
+	color : rgba(255, 255, 255, 0.75);
 }
 .b hr {
 	background : transparent;
-	margin : 1rem auto;
+	margin : .5rem auto;
 }
 
+@media screen and ( max-width : 413px ) {
 
+	.b {
+		/*background-position : center;*/
+		background-size : 180%;
+	}
 
+}
+
+@media screen and ( min-width : 600px ) {
+
+	body {
+		padding : 0 1.5rem;
+	}
+	.b {
+		padding : 4rem 0 3rem;
+	}
+	.b h2 {
+		font-size : 34px;
+	}
+	.b p {
+		max-width : 32.5rem;
+		font-size : 16px;
+	}
+	.b hr {
+		margin : 1rem auto;
+	}
+
+}
 
