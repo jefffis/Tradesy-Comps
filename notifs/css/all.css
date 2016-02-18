@@ -58,6 +58,7 @@ nav > span:active {
 	display : block;
 	height : 64px;
     width : 50px;
+    cursor : pointer;
 	text-indent : -9999px;
 }
 .alerts:before {
@@ -83,7 +84,8 @@ nav > span:active {
 	background : rgb(238, 120, 115);
 	border-radius : 100%;
 	color : white;
-	content : "3+";
+	/*content : "3+";*/
+	content : "2"; 
 	font-size : 11px;
 	line-height : 2;
 	text-align : center;
@@ -260,9 +262,12 @@ small:before {
 .notif:nth-child(n+2) {
 	margin-top : 1rem;
 }
-.action, .sys.read {
+.action/*, .sys.read*/ {
 	padding : 1.5rem;
 }
+/*.sys.read {
+	color : #999;
+}*/
 .action div {
 	clear : left;
 	height : 200px;
@@ -309,6 +314,23 @@ a em {
 	top : auto;
 	bottom : -1px;
 	height : 2px;
+}
+
+.v2 .notif:before {
+	top : calc(50% - 3px);
+	left : .5rem;
+	height : 6px;
+	width : 6px;
+	border-radius : 100%;
+}
+.v2 .notif:after {
+	display : none;
+}
+.hide-ext > a {
+	display : none;
+}
+.hide-ext:after {
+	bottom : 0;
 }
 
 /*** read notifs ***/
