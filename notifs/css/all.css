@@ -45,7 +45,7 @@ nav > span {
 nav > span:active {
 	opacity : .65;
 }
-.show {
+.show, .show-faux {
 	background : white;
 }
 .show:active {
@@ -71,7 +71,7 @@ nav > span:active {
 	background : white;
 	content : "";
 }
-.show .alerts:before {
+.show .alerts:before, .show-faux .alerts:before {
 	background : #111;
 }
 .alerts:after {

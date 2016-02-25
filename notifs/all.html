@@ -64,103 +64,110 @@
 			</nav>
 		</header>
 
-		<h1>
-			Notifications
-			<!-- <a href="">Edit Settings</a> -->
-		</h1>
+		<div id="replace">
 
-		<div class="shtuff"></div>
+			<h1>
+				Notifications
+				<!-- <a href="">Edit Settings</a> -->
+			</h1>
 
-		<!-- <div class="wrapper cf">
+			<div class="shtuff"></div>
 
-			<aside>
-				<a href="">Notification Settings</a>
-			</aside>
+			<!-- <div class="wrapper cf">
 
-			<section>
-				
-				<h3>November XX</h3>
-				<div class="notif action">
-					<figure>
-						<img src="https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png" />
-					</figure>
-					Quiggles Larue just purchased your item
-					<small></small>
+				<aside>
+					<a href="">Notification Settings</a>
+				</aside>
 
-					<div></div>
-				</div>
-				<div class="notif sys">
-					<a href="">
-						You made some cash! Just <em>add a payout method</em> now to get it
-						<small></small>
-					</a>
-				</div>
-				<div class="notif read">
-					<a href="">
+				<section>
+					
+					<h3>November XX</h3>
+					<div class="notif action">
 						<figure>
-							<img src="https://item2.tradesy.com/images/lululemon-deep-v-1279236-0-0.jpg?width=100&height=100" />
+							<img src="https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png" />
 						</figure>
-						Quiggles &amp; 33 others loved your <em>Lululemon Black Top</em>
+						Quiggles Larue just purchased your item
 						<small></small>
-					</a>
-				</div>
-				<div class="notif">
-					<a href="">
+
+						<div></div>
+					</div>
+					<div class="notif sys">
+						<a href="">
+							You made some cash! Just <em>add a payout method</em> now to get it
+							<small></small>
+						</a>
+					</div>
+					<div class="notif read">
+						<a href="">
+							<figure>
+								<img src="https://item2.tradesy.com/images/lululemon-deep-v-1279236-0-0.jpg?width=100&height=100" />
+							</figure>
+							Quiggles &amp; 33 others loved your <em>Lululemon Black Top</em>
+							<small></small>
+						</a>
+					</div>
+					<div class="notif">
+						<a href="">
+							<figure>
+								<img src="https://item2.tradesy.com/images/lululemon-deep-v-1279236-0-0.jpg?width=100&height=100" />
+							</figure>
+							Quiggles &amp; 33 others loved your <em>Lululemon Black Top</em>
+							<small></small>
+						</a>
+					</div>
+					<div class="notif action read">
 						<figure>
-							<img src="https://item2.tradesy.com/images/lululemon-deep-v-1279236-0-0.jpg?width=100&height=100" />
+							<img src="https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png" />
 						</figure>
-						Quiggles &amp; 33 others loved your <em>Lululemon Black Top</em>
+						Quiggles Larue purchased your item seven days ago
 						<small></small>
-					</a>
-				</div>
-				<div class="notif action read">
-					<figure>
-						<img src="https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png" />
-					</figure>
-					Quiggles Larue purchased your item seven days ago
-					<small></small>
 
-					<div></div>
-				</div>
+						<div></div>
+					</div>
 
-				<hr />
+					<hr />
 
-				<h3>November XX</h3>
-				<div class="notif action read">
-					<figure>
-						<img src="https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png" />
-					</figure>
-					Quiggles Larue just purchased your item
-					<small></small>
+					<h3>November XX</h3>
+					<div class="notif action read">
+						<figure>
+							<img src="https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png" />
+						</figure>
+						Quiggles Larue just purchased your item
+						<small></small>
 
-					<div></div>
-				</div>
-				<div class="notif sys read">
-					You successfully added your shipping address
-					<small></small>
-				</div>
+						<div></div>
+					</div>
+					<div class="notif sys read">
+						You successfully added your shipping address
+						<small></small>
+					</div>
 
-				<hr />
+					<hr />
 
-				<h3>October XX</h3>
-				<div class="notif action read">
-					<figure>
-						<img src="https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png" />
-					</figure>
-					Quiggles Larue followed you
-					<small></small>
+					<h3>October XX</h3>
+					<div class="notif action read">
+						<figure>
+							<img src="https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png" />
+						</figure>
+						Quiggles Larue followed you
+						<small></small>
 
-					<button>Follow</button>
-				</div>
+						<button>Follow</button>
+					</div>
 
-			</section>
+				</section>
 
-		</div> -->
+			</div> -->
+
+		</div>
 
 		<script>
 			var alerts = document.getElementById('alerts'),
 				notifsWrapper = document.getElementById('notifs-wrapper'),
-				alertLink = document.getElementById('alert-link');
+				alertLink = document.getElementById('alert-link'),
+				replaceDiv = document.getElementById('replace'),
+				blob = '<div class="wrapper cf"><section><h3>November XX</h3><div class="notif action"><figure><img src=https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png></figure>Quiggles Larue just purchased your item <small></small><div></div></div><div class="notif sys"><a href="">You made some cash! Just <em>add a payout method</em> now to get it <small></small></a></div><div class="notif read"><a href=""><figure><img src="https://item2.tradesy.com/images/lululemon-deep-v-1279236-0-0.jpg?width=100&height=100"></figure>Quiggles &amp; 33 others loved your <em>Lululemon Black Top</em> <small></small></a></div><div class=notif><a href=""><figure><img src="https://item2.tradesy.com/images/lululemon-deep-v-1279236-0-0.jpg?width=100&height=100"></figure>Quiggles &amp; 33 others loved your <em>Lululemon Black Top</em> <small></small></a></div><div class="notif action read"><figure><img src=https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png></figure>Quiggles Larue purchased your item seven days ago <small></small><div></div></div><hr><h3>November XX</h3><div class="notif action read"><figure><img src=https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png></figure>Quiggles Larue just purchased your item <small></small><div></div></div><div class="notif sys read">You successfully added your shipping address <small></small></div><hr><h3>October XX</h3><div class="notif action read"><figure><img src=https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png></figure>Quiggles Larue followed you <small></small> <button>Follow</button></div></section></div>',
+				mobilePopState = false;
 
 
 			if ( window.location.hash === '#v2' ) {
@@ -173,6 +180,19 @@
 				}
 				alerts.onclick = function() {
 					this.classList.toggle('show');
+				}
+			} else {
+				alertLink.onclick = function(e) {
+					e.preventDefault();
+					window.history.pushState('', '', 'm-all.html');
+					alerts.onclick = function() {
+						this.classList.add('show-faux');
+					}
+					replaceDiv.innerHTML = blob;
+					mobilePopState = true;
+				}
+				window.onpopstate = function() {
+					if ( mobilePopState ) window.location.reload();
 				}
 			}
 		</script>
