@@ -13,69 +13,15 @@
 
 		<header>
 			<nav class="cf">
-				<span id="alerts">
-					<a class="alerts" href="m-all.html" id="alert-link">
+				<span id="alerts" class="show">
+					<a class="alerts">
 						Your Sales
 					</a>
-					<div class="notifs-wrapper hide-ext" id="notifs-wrapper">
-						<div>
-							
-							<!-- <div class="notif action">
-								<figure>
-									<img src="https://cdn-images-1.medium.com/fit/c/40/40/0*9ovaZopCwB0XGx1t.png" />
-								</figure>
-								Quiggles Larue just purchased your item
-								<small></small>
-
-								<div></div>
-							</div> -->
-							<div class="notif sys">
-								<a href="">
-									Prefer to get important updates via text? <em>Setup text alerts</em> now.
-								</a>
-							</div>
-							<div class="notif sys read">
-								<a href="">
-									Personalize your closet by reserving <em>your username</em> and <em>setting up your profile</em>.
-								</a>
-							</div>
-							<div class="notif sys">
-								<a href="">
-									You have <strong>$20.02</strong> in pending sales; <em>confirm &amp; ship your items</em> to get paid.
-									<!-- You made some cash! Just <em>add a payout method</em> now to get it -->
-									<!-- <small></small> -->
-								</a>
-							</div>
-							<!-- <div class="notif read">
-								<a href="">
-									<figure>
-										<img src="https://item2.tradesy.com/images/lululemon-deep-v-1279236-0-0.jpg?width=100&height=100" />
-									</figure>
-									Quiggles &amp; 33 others loved your <em>Lululemon Black Top</em>
-									<small></small>
-								</a>
-							</div> -->
-
-						</div>
-
-						<a href="###">View all Notifications</a>
-					</div>
 				</span>
 			</nav>
 		</header>
 
-		<h1>
-			Notifications
-			<!-- <a href="">Edit Settings</a> -->
-		</h1>
-
-		<div class="shtuff"></div>
-
-		<!-- <div class="wrapper cf">
-
-			<aside>
-				<a href="">Notification Settings</a>
-			</aside>
+		<div class="wrapper cf">
 
 			<section>
 				
@@ -155,25 +101,18 @@
 
 			</section>
 
-		</div> -->
+		</div>
 
 		<script>
 			var alerts = document.getElementById('alerts'),
-				notifsWrapper = document.getElementById('notifs-wrapper'),
-				alertLink = document.getElementById('alert-link');
+				notifsWrapper = document.getElementById('notifs-wrapper');
 
+			alerts.onclick = function() {
+				this.classList.toggle('show');
+			}
 
 			if ( window.location.hash === '#v2' ) {
 				notifsWrapper.classList.add('v2');
-			}
-
-			if (document.body.clientWidth > 600) {
-				alertLink.onclick = function(e) {
-					e.preventDefault();
-				}
-				alerts.onclick = function() {
-					this.classList.toggle('show');
-				}
 			}
 		</script>
 

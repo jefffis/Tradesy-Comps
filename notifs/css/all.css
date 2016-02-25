@@ -374,3 +374,36 @@ hr {
 	background : white;
 	border : 0;
 }
+
+@media screen and ( max-width : 600px ) {
+
+	header nav {
+		padding-right : 0;
+	}
+	.alerts:after {
+		left : 0;
+		right : auto;
+	}
+	nav .notifs-wrapper {
+		width : 100vw;
+	    right : 0;
+	    left : auto;
+	    background : white;
+	    border-left : 0;
+	    border-right : 0;
+	}
+
+	.shtuff {
+		height : 800px;
+		width : calc(100% - 2rem);
+		background : #efefef;
+		margin : 2rem auto;
+	}
+
+	section {
+		float : none;
+		width : auto;
+		margin-left : 0;
+	}
+
+}
