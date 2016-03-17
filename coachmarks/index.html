@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Coachmarks</title>
+	<link rel="stylesheet" href="css/app.css" />
+</head>
+	<body>
+
+		<section>
+			<aside data-coachmark="This is a coachmark here. This will be super helpful to users of Tradesy. <button type='button' data-accepted='Done'>Got it!</button>" data-coachmark-wait="2">
+				<a href="###">Link</a>
+				<a href="###">Link</a>
+				<a href="###">Link</a>
+				<a href="###">Link</a>
+			</aside>
+			<div>
+				<h1>This is content</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, corrupti placeat neque itaque in. At architecto deserunt voluptates, cumque ipsam ducimus distinctio autem. Itaque delectus, ea dolore ullam. Quia, suscipit.
+				</p>
+				<hr />
+				<button type="button" data-coachmark="This is a coachmark here. This will be super helpful to users of Tradesy. <button type='button' data-accepted='Done'>Got it!</button>" data-coachmark-next="1">Save Updates</button>
+				<hr />
+				<h1>This is content</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, corrupti placeat neque itaque in. At architecto deserunt voluptates, cumque ipsam ducimus distinctio autem. Itaque delectus, ea dolore ullam. Quia, suscipit.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, corrupti placeat neque itaque in. At architecto deserunt voluptates, cumque ipsam ducimus distinctio autem. Itaque delectus, ea dolore ullam. Quia, suscipit.
+				</p>
+				<p data-coachmark="This is a coachmark here. This will be super helpful to users of Tradesy. <button type='button' data-accepted='Done'>Got it!</button>" data-coachmark-wait="1" data-coachmark-next="2">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, corrupti placeat neque itaque in. At architecto deserunt voluptates, cumque ipsam ducimus distinctio autem. Itaque delectus, ea dolore ullam. Quia, suscipit.
+				</p>
+			</div>
+		</section>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+			
+			$(function() {
+
+				var coachmark = '[data-coachmark]',
+					coachmarkWrapper = $('<div class="coachmark-wrapper" />')
+					coachmarkWrapperClass = '.coachmark-wrapper';
+				  
+				$(coachmark).each(function() {
+
+					if ( $(this).data('coachmark-wait') !== undefined ) return;
+
+					// var coachmarkPositioning = $(this).data('coachmark-pos') !== undefined ? $(this).data('coachmark-pos') : '';
+
+					appendCoachmark($(this), coachmarkWrapper, coachmarkWrapperClass, $(this).data('coachmark'));
+					$(this).prop('disabled', true);
+				});
+
+				$('body').on('click', coachmark + ' button', function() {
+					removeCoachmark($(this), $(this).data('accepted'));
+				});
+
+				function appendCoachmark(parElement, coachmarkWrapper, coachmarkWrapperClass, coachmarkContent) {
+					setTimeout(function(){
+						parElement.append(coachmarkWrapper).find(coachmarkWrapperClass).html(coachmarkContent);
+					}, 1000);
+				}
+
+				function removeCoachmark(el, elText) {
+					el.prop('disabled', true);
+					setTimeout(function(){
+						el.parents('button').prop('disabled', false);
+						el.parent().remove();
+					}, 750);
+
+					console.log(el.parents(coachmark).data('coachmark-next'));
+
+					if ( el.parents(coachmark).data('coachmark-next') !== undefined ) {
+						var next = $('[data-coachmark-wait=' + el.parents(coachmark).data('coachmark-next') + ']');
+
+						appendCoachmark(next, coachmarkWrapper, coachmarkWrapperClass, next.data('coachmark'));
+					}
+				}
+
+			});
+
+		</script>
+
+	</body>
+</html>

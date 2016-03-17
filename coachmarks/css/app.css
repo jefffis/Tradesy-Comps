@@ -1,0 +1,171 @@
+@font-face{font-family:'proxima-nova-semi';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/semi/webfont.svg#proxima-nova-semi") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:'proxima-nova-regular';src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot");src:url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.eot?#iefix") format("embedded-opentype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff2") format("woff2"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.woff") format("woff"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.ttf") format("truetype"),url("https://assets.tradesy.com/css/fonts/proxima-nova/regular/webfont.svg#proxima-nova-regular") format("svg");font-weight:normal;font-style:normal}
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html {
+	color: #666;
+	font: normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
+}
+body {
+	background: white;
+	padding: 2rem 5rem;
+}
+h1 {
+	color: #111;
+	font-weight: normal;
+}
+section {
+	max-width: 1000px;
+	margin: auto;
+}
+section > div {
+	float: left;
+	width: 65%;
+	margin-left: 3rem;
+}
+p {
+	margin: .5rem 0 0;
+}
+hr {
+	height: 2rem;
+}
+button {
+	display: block;
+	width: auto;
+	background: #111;
+	padding: 1rem 1.5rem;
+	color: white;
+	cursor: pointer;
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+	font-size: inherit;
+	outline: none;
+}
+button:disabled:active {
+	background: #111;
+	color: white;
+}
+button:active {
+	background: #333;
+	color: rgba(255, 255, 255, 0.75);
+}
+aside {
+	float: left;
+	width: 20%;
+	padding: 1rem 1.5rem;
+	border: 1px solid #ddd;
+}
+aside a {
+	display: block;
+}
+aside a + a {
+	margin-top: 1rem;
+}
+
+/*** coachmarks ***/
+[data-coachmark] {
+	position: relative;
+	z-index: 0;
+}
+.coachmark-wrapper {
+	display: block;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1;
+	opacity: 1;
+	width: 200px;
+	background: white;
+	margin-top: 1rem;
+	/*margin-left: -100px;*/
+	padding: 1rem;
+	border: 1px solid #ddd;
+	color: #111;
+	cursor: default;
+	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	text-align: left;
+	
+	animation: fadeIn .25s ease-in-out;
+}
+
+/*.coachmark-wrapper.right {
+	top: 0;
+}*/
+
+.coachmark-wrapper:before, .coachmark-wrapper:after {
+	display: block;
+	position: absolute;
+	top: -7px;
+	left: 8px;
+	/*right: 50%;*/
+	z-index: 1;
+	/*margin-right: -4px;*/
+	border-bottom: 8px solid white;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	content: "";
+}
+.coachmark-wrapper:after {
+	top: -8px;
+	z-index: 0;
+	border-bottom-color: #ddd;
+}
+.coachmark-wrapper button {
+	position: relative;
+	background: white;
+	width: 5rem;
+	padding: .75rem 0;
+	margin: 1rem auto auto;
+	box-shadow: 0 0 0 1px #ddd inset;
+	color: inherit;
+	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
+}
+.coachmark-wrapper button:active,
+.coachmark-wrapper button:disabled {
+	background: #efefef;
+}
+
+.coachmark-wrapper button:disabled:after {
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: -1.5rem;
+	height: 10px;
+	width: 10px;
+	margin-top: -7px;
+	border-radius: 100%;
+	border-top: 2px solid #999;
+	border-left: 2px solid #999;
+	border-bottom: 2px solid #ddd;
+	border-right: 2px solid #ddd;
+	content: "";
+	
+	animation: spin 1s linear infinite;
+}
+
+@keyframes fadeIn {
+	from {
+		 display: none;
+		 top: 50%;
+		 opacity: 0;
+	}
+	to {
+		display: block;
+		top: 100%;
+		opacity: 1;
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
