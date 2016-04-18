@@ -865,6 +865,7 @@ h2 span, h3 em em {
 	background : #facf73;
 	padding : 4px;
 	border-radius : 3px;
+	cursor : default;
 	color : #fff;
 	content : "Ad";
 	font-size : 12px;
@@ -872,6 +873,10 @@ h2 span, h3 em em {
 }
 .promoted > div a em em {
 	color : #666;
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+}
+.promoted > div a:active, .promoted > div a:active em em {
+	color : #ccc;
 }
 /*.promoted:before {
 	z-index : 2;
