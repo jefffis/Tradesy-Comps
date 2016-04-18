@@ -14,7 +14,7 @@ html {
 	/*text-align : center;*/
 }
 body {
-	max-width : 1300px;
+	max-width : 1200px;
 	margin : auto;
 }
 h2, h3, h4, p, h2 span {
@@ -37,12 +37,15 @@ em {
 .item {
 	display : inline-block;
 	position : relative;
-	/* float : left; */
+	/*background : rgba(0, 0, 0, .25);*/
+	 float : left; 
 	width : 25%;
-	margin : 1rem;
+	/*max-width : 280px;*/
+	/*margin : 1rem;*/
+	padding : 10px;
 	/*padding-bottom : 1rem;*/
-	border : 1px solid white;
-	border-bottom-color : #eaeaea;
+	/*border : 1px solid white;
+	border-bottom-color : #eaeaea;*/
 	/* overflow : hidden; */
 	text-align : left;
 	vertical-align : top;
@@ -50,9 +53,9 @@ em {
 /*.item:nth-child(n+3) {
 	display : none;
 }*/
-.item:nth-child(n+5) {
+/*.item:nth-child(n+5) {
 	margin-top : 4rem;
-}
+}*/
 .seller .item:nth-child(n+5) {
 	margin-top : 5.5rem;
 }
@@ -71,9 +74,10 @@ em {
 .item > a {
 	display : block;
 	position : relative;
-	height : 495px;
-	padding : 1rem;
-	border-bottom : 0;
+	/*background : rgba(0, 0, 0, .25);*/
+	/*height : 495px;*/
+	padding-bottom : 1rem;
+	border-bottom : 1px solid #eaeaea;
 	color : inherit;
 	text-decoration : none;
 }
@@ -91,9 +95,10 @@ em {
 }
 .item figure {
 	display : table;
+	position : relative;
 	height : 300px;
 	width : 100%;
-	margin : 30px 0 20px;
+	padding : 30px 0;
 }
 .item figure div {
 	display : table-cell;
@@ -103,13 +108,15 @@ em {
 }
 .item img {
 	display : block;
-	max-height : 260px;
+	height : auto;
+	max-height : 240px;
+	width : auto;
 	max-width : 200px;
 	margin : auto;
 }
-/*.sold img {
+.sold img {
 	opacity : .65;
-}*/
+}
 .sold a:active img {
 	opacity : .5;
 }
@@ -144,10 +151,14 @@ h2 span {
     white-space : nowrap;
 }
 h3 {
-	margin : 0 0 .4rem;
+	margin : 3px 0;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 15px;
 	line-height : 1.3;
+}
+.sold h3, .reserved h3 {
+	color : #747275;
+	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 }
 h3 span {
 	color : #777;
@@ -171,6 +182,8 @@ h3 em em {
 	color : #777;
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 	text-decoration : line-through;
+
+	display : none;
 }
 h3 em .was, h3 em .now {
 	margin-left : 0;
@@ -199,12 +212,34 @@ h3 em .now {
 	background : currentColor;
 	content : "";
 }*/
-.sale h3 > em, h3 .drop/*, .drop h3 em*/ {
+.sale h3 > em, h3 .drop, .price-drop h3 > em {
 	color : #F46E68;
 }
-.sale h3 > em:before {
-	content : "Now ";
+.sale h3 > em:before, .price-drop h3 > em:before {
+	content : "Sale: ";
 }
+.price-drop h3 > em:before {
+	content : "Price Drop: ";
+}
+.reserved h3 > em:before {
+	content : "Reserved: ";
+}
+
+.new h2 > em {
+	position : relative;
+}
+.new figure:after {
+	display : block;
+	position : absolute;
+	bottom : 0;
+	left : 0;
+	color : #F46E68;
+	content : "New ";
+	font-size : 14px;
+	letter-spacing : .5px;
+	text-transform : uppercase;
+}
+
 .green-sale .sale h3 > em {
 	color : #7dccad;
 }
@@ -261,7 +296,7 @@ h3 span.drop + em {
 	margin-left : .5rem;
 }
 p {
-	margin : .35rem 0;
+	margin : 0 0 3px;
 	font-size : 13px;
 }
 
@@ -275,9 +310,9 @@ p {
 	left : 0;
 	width : 100%;
 	background : #FAF8E3;*/
-	margin : .75rem 0 0;
+	margin : 8px 0 0;
 	/*padding : .35rem 1rem .2rem; */
-	font-size : 12px;
+	font-size : 13px;
 	/*line-height : 1;*/
 	/* text-align : center; */
 	/* text-indent : 1px; */
@@ -297,7 +332,7 @@ p {
 	border-radius : 100%;
 	/*box-shadow : 0 0 0 1px #ddd inset;*/
 	/*margin-right : .075rem;*/
-	content : "";
+	/*content : "";*/
 }
 .item-note img {
 	display : inline-block;
@@ -333,10 +368,11 @@ p {
 	width : 2rem;*/
 	width : 50px;
 	background : #111;
-	padding : 1rem 0;
+	padding : .85rem 0;
 	/*border-radius : 100%;*/
 	/*border-radius : 0 0 3px 3px;*/
 	color : white;
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 13px;
 	letter-spacing : .25px;
 	line-height : 1;
@@ -377,13 +413,13 @@ p {
 	background : white; 
 	padding : 1rem .5rem;
 	/*color : #F46E68;*/
-	color : #111;
+	color : #787878;
 	/*font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;*/
-	box-shadow : 0 0 0 1px currentColor inset;
+	box-shadow : 0 0 0 1px #D6D6D6 inset;
 }
 .sold a > span {
-	background : #999;
-	/*color : #111;*/
+	background : #E8E8E8;
+	color : #787878;
 }
 .green-sale .sold a > span {
 	background : #ddd;
@@ -450,7 +486,7 @@ button {
 }
 button:nth-child(1) {
 	position : absolute;
-	top : .85rem;
+	top : 1.25rem;
 	right : .75rem;
 	/*opacity : 1;*/
 }
@@ -479,7 +515,7 @@ button[data-num]:after {
 	display : inline-block;
 	position : relative;
 	top : -7px;
-	min-width: .75rem;
+	min-width: 1rem;
 	margin-left : .075rem;
 	color : #999;
 	content : attr(data-num);
@@ -614,13 +650,12 @@ button:nth-child(2):active, a:nth-child(3):active {
 /* .item:hover > div span {
 	border-top-color : white;
 } */
-.item > div em {
+/*.item > div em {
 	display : none;
 	height : 1.5rem;
 	width : 1.5rem;
 	background : #111;
 	margin-left : .125rem;
-	/* padding : .3rem .2rem */;
 	border-radius : 100%;
 	color : white;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
@@ -635,7 +670,7 @@ button:nth-child(2):active, a:nth-child(3):active {
 	background : #111 no-repeat center;
 	background-size : cover;
 	text-indent : -9999px;
-}
+}*/
 /*.item > div a {
 	display : inline-block;
 	position : relative;
@@ -793,29 +828,50 @@ button:nth-child(2):active, a:nth-child(3):active {
     }
 }
 
-h2 span, h3 em em, p {
+h2 span, h3 em em {
 	color : #787878;
 }
 .light h3 {
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 }
 
-.promoted:after/*, .promoted:before*/ {
+.promoted a {
+	border-bottom-color : #999;
+}
+.promoted:before {
+	display : none;
+	position : absolute;
+	top : 100%;
+	left : 10px;
+	z-index : 3;
+	color : #999;
+	content : "Promoted by " attr(data-promoted-by);
+	font-size : 13px;
+}
+.promoted > div a {
 	display : block;
 	position : absolute;
-	bottom : 0;
+	width : calc(100% - 20px);
+	padding : .75rem 0;
+	color : #999;
+	font-size : 13px;
+	text-decoration : none;
+}
+.promoted > div a:after {
+	display : block;
+	position : absolute;
+	top : .65rem;
 	right : 0;
-	z-index : 3;
-	/*width : 100%;*/
-	background : #fff9e2;
-	/*margin-top : -38px;*/
-	padding : .1rem .3rem;
-	/*color : #333;*/
-	content : "Promoted";
-	font-size : 10px;
-	letter-spacing : .5px;
-	text-align : center; 
-	text-transform : uppercase;
+	background : #facf73;
+	padding : 4px;
+	border-radius : 3px;
+	color : #fff;
+	content : "Ad";
+	font-size : 12px;
+	line-height : 1;
+}
+.promoted > div a em em {
+	color : #666;
 }
 /*.promoted:before {
 	z-index : 2;
@@ -937,38 +993,77 @@ label:active {
 	opacity : .65;
 }
 
+@media screen and (min-width : 1024px) {
 
+	.item:nth-child(n+5) {
+		margin-top : 3.5rem;
+	}
+
+}
 
 @media screen and (min-width : 1024px) and (max-width : 1319px) {
 
-	.item:nth-child(n+4), .item:nth-child(n+5) {
-		margin-top : 1.5rem;
+	.item {
+		width : 25%;
+	}
+	/*.item:nth-child(n+1):after {
+		display : block;
+		position : absolute;
+		top : 100%;
+		right : -1px;
+		height : 1px;
+		width : 15px;
+		background : white; 
+		content : "";
+	}
+	.item:nth-child(4n+4):after {
+		display : none;
+	}*/
+	.item:nth-child(n+5) {
+		margin-top : 2.5rem;
 	}
 
 }
 
 @media screen and (min-width : 600px) and (max-width : 1023px) {
 
-	.item:nth-child(n+3), .item:nth-child(n+5) {
+	.item {
+		width : 33%;
+	}
+	/*.item:nth-child(n+1):after {
+		display : block;
+		position : absolute;
+		top : 100%;
+		right : -1px;
+		height : 1px;
+		width : 15px;
+		background : white; 
+		content : "";
+	}
+	.item:nth-child(3n+3):after {
+		display : none;
+	}*/
+	.item:nth-child(n+4) {
 		margin-top : 1.5rem;
 	}
 
 }
 
-@media screen and (min-width : 600px) {
+@media screen and (max-width : 501px) {
 
-	.item-note {
-		font-size : 13px;
-		/*font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
-		letter-spacing : 1px;
-		text-transform : uppercase;*/
+	.item img {
+		max-height : 200px;
+		max-width : 120px;
 	}
-	/*.item-note:before {
-		top : 1px;
-		width : 1rem;
-		background-size : 12px;
-		margin-right : .125rem;
-	}*/
+
+}
+
+@media screen and (min-width : 502px) and (max-width : 801px) {
+
+	.item img {
+		max-height : 210px;
+		max-width : 150px;
+	}
 
 }
 
@@ -980,112 +1075,39 @@ label:active {
 	.m {
 		display : block;
 	}
-	.t {
+	.t,
+	.reserved h3 > em:before {
 		display : none;
 	}
 	.item {
-		display : block;
-		width : 100%;
-		height : auto;
-		/*width : 50%;
-		float : left;*/
-		margin : 0 0 .5rem;
-		padding : 0 1rem .5rem;
-		border-bottom : 1px solid #eaeaea;
-		/*border : 0;*/
+		width : 50%;
+	    padding : 10px 15px;
 	}
-	.item:first-child {
-		margin-top : .5rem;
-	}
+	.item:nth-child(n+3),
 	.item:nth-child(n+5) {
-		margin-top : 0;
-	}
-	.item a {
-		height : auto;
-	}
-	.item > div {
-		height : auto;
-		border-top : 0;
-		padding : 0;
-	}
-	.item figure {
-		width : 100px;
-		float : left;
-		/*min-height : 120px;
-		margin-top : 3.5rem;*/
-		height : 125px;
-		margin : 0 .75rem 0 0;
-	}
-	.item img {
-		max-height: 125px;
-		max-width: 100px;
-	}
-	.item h2 {
-		margin-top : 1.5rem;
+		margin-top : 2.5rem;
 	}
 	.item a > span {
-		top : -.25rem;
-		left : -.75rem;
-		width : auto;
-		padding : .5rem .25rem .45rem;
-		font-size : 10px;
+		padding-top : .5rem;
+		padding-bottom : .5rem;
 	}
 	button:nth-child(1) {
-		top : 0;
-		right : .5rem;
+		top : .75rem;
 	}
-	.item:hover > div button:nth-child(2), .item > div span {
-		display : none;
-	}
-	.item a:before,
-	.item a:after {
-		content : " "; /* 1 */
-		display : table; /* 2 */
-	}
-	.item a:after {
-		clear : both;
-	}
-	.item-note {
-		font-size : 11px;
-	}
-	.promoted:after {
-		top : auto;
-		bottom : 0;
-		right : -1px;
-		margin-top : 0;
-		font-size : 9px;
-	}
-	/*.item a {
-		height: 320px;
-		padding : .5rem;
-		border-bottom : 1px solid #ddd;
-	}
-	.item figure {
-		min-height : 120px;
-		margin-top : 3.5rem;
-	}
-	.item img {
-		max-height: 100px;
-		max-width: 100px;
-	}
-	.item-note {
-		font-size : 11px;
-	}
-	.item-note:before, .item:hover > div button:nth-child(2), .item > div span {
-		display : none;
-	}
-	.item a > span {
-		left : .5rem;
-	}
-	.drop a > span {
-		text-transform : capitalize;
-	}
-	.drop a > span em {
+	.price-drop h3 > em:before {
 		display : none;
 	}
 
-	.item:hover > div button:nth-child(2) {
+	.promoted > div a {
+		width : calc(100% - 30px);
+	}
+
+}
+
+@media screen and (max-width : 800px) {
+
+	.promoted > div a em {
 		display : none;
-	}*/
+	}
 
 }
