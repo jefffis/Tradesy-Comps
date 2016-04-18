@@ -849,19 +849,20 @@ h2 span, h3 em em {
 	font-size : 13px;
 }
 .promoted > div a {
-	display : block;
+	display : inline-block;
 	position : absolute;
-	width : calc(100% - 20px);
-	padding : .75rem 0;
+	/*left : 0;*/
+	/*width : calc(100% - 20px);*/
+	padding-top : .75rem;
 	color : #999;
 	font-size : 13px;
 	text-decoration : none;
 }
-.promoted > div a:after {
+.promoted > div:after {
 	display : block;
 	position : absolute;
-	top : .65rem;
-	right : 0;
+	top : 100%;
+	right : 10px;
 	background : #facf73;
 	padding : 4px;
 	border-radius : 3px;
@@ -1011,22 +1012,6 @@ label:active {
 	.item {
 		width : 25%;
 	}
-	/*.item:nth-child(n+1):after {
-		display : block;
-		position : absolute;
-		top : 100%;
-		right : -1px;
-		height : 1px;
-		width : 15px;
-		background : white; 
-		content : "";
-	}
-	.item:nth-child(4n+4):after {
-		display : none;
-	}*/
-	.item:nth-child(n+5) {
-		margin-top : 2.5rem;
-	}
 
 }
 
@@ -1035,29 +1020,19 @@ label:active {
 	.item {
 		width : 33%;
 	}
-	/*.item:nth-child(n+1):after {
-		display : block;
-		position : absolute;
-		top : 100%;
-		right : -1px;
-		height : 1px;
-		width : 15px;
-		background : white; 
-		content : "";
-	}
-	.item:nth-child(3n+3):after {
-		display : none;
-	}*/
 	.item:nth-child(n+4) {
-		margin-top : 1.5rem;
+		margin-top : 2.5rem;
 	}
 
 }
 
 @media screen and (max-width : 501px) {
 
+	.item figure {
+		height : 240px;
+	}
 	.item img {
-		max-height : 200px;
+		max-height : 180px;
 		max-width : 120px;
 	}
 
@@ -1065,6 +1040,9 @@ label:active {
 
 @media screen and (min-width : 502px) and (max-width : 801px) {
 
+	.item figure {
+		height : 270px;
+	}
 	.item img {
 		max-height : 210px;
 		max-width : 150px;
