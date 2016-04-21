@@ -38,11 +38,11 @@ em {
 	display : inline-block;
 	position : relative;
 	/*background : rgba(0, 0, 0, .25);*/
-	 float : left; 
+	float : left;
 	width : 50%;
 	/*max-width : 280px;*/
 	/*margin : 1rem;*/
-	padding : 10px;
+	padding : 10px 15px;
 	/*padding-bottom : 1rem;*/
 	/*border : 1px solid white;
 	border-bottom-color : #eaeaea;*/
@@ -76,6 +76,7 @@ em {
 	position : relative;
 	/*background : rgba(0, 0, 0, .25);*/
 	/*height : 495px;*/
+	height : 403px;
 	padding-bottom : 1rem;
 	border-bottom : 1px solid #eaeaea;
 	color : inherit;
@@ -301,7 +302,7 @@ h3 span.drop + em {
 	margin-left : .5rem;
 }
 p {
-	margin : 0 0 3px;
+	margin : 8px 0 3px;
 	font-size : 13px;
 }
 
@@ -309,6 +310,9 @@ p {
 	content : "Sold for ";
 }*/
 
+p + .item-note {
+	margin-top : 5px;
+}
 .item-note {
 	/*position : absolute;*/
 	/*top : 225px;
@@ -1036,12 +1040,25 @@ label:active {
 
 	.item {
 		width : 25%;
+		/*padding-right : 15px;
+		padding-left : 15px;
+		border: 1px solid white;*/
 	}
+	/*.item:nth-child(n+2) {
+		border-left-color : #ddd;
+	}
+	.item:nth-child(4n+1) {
+		border-left-color : white;
+	}
+	.item a {
+		border : 0;
+	}*/
 	.item:nth-child(n+3), .item:nth-child(n+4) {
 		margin-top : 0;
 	}
 	.item:nth-child(n+5) {
 		margin-top : 2.5rem;
+		/*border-top-color : #ddd;*/
 	}
 
 }
@@ -1118,6 +1135,9 @@ label:active {
 	.item:nth-child(n+5) {
 		margin-top : 2.5rem;
 	}
+	.item > a {
+		height : auto;
+	}
 	/*.item a > span {
 		padding-top : .5rem;
 		padding-bottom : .5rem;
@@ -1134,9 +1154,9 @@ label:active {
 
 }
 
-/*@media screen and (max-width : 474px) {
+@media screen and (max-width : 501px) {
 
-	.promoted > div a {
+	/*.promoted > div a {
 		display : none;
 	}
 	.promoted > div:after {
@@ -1145,9 +1165,21 @@ label:active {
 		margin-top : -20px;
 		margin-left : -11px;
 		box-shadow : 0 0 0 10px white;
+	}*/
+
+	.item > a {
+		height : 344px;
 	}
 
-}*/
+}
+
+@media screen and (min-width : 502px) and (max-width : 801px) {
+
+	.item > a {
+		height : 373px;
+	}
+
+}
 
 /*@media screen and (max-width : 800px) {
 
