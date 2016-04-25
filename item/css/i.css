@@ -14,7 +14,7 @@ html {
 	/*text-align : center;*/
 }
 [role=main] {
-	max-width : 1300px;
+	max-width : 1350px;
 	margin : auto;
 }
 h2, h3, h4, p, h2 span {
@@ -1134,7 +1134,7 @@ label:active {
 
 }
 
-@media screen and (min-width : 1024px) and (max-width : 1319px) {
+@media screen and (min-width : 1024px) and (max-width : 1420px) {
 
 	.item {
 		width : 33.3%;
