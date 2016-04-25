@@ -76,7 +76,7 @@ em {
 	position : relative;
 	/*background : rgba(0, 0, 0, .25);*/
 	/*height : 495px;*/
-	height : 403px;
+	height : 432px;
 	padding-bottom : 1rem;
 	border-bottom : 1px solid #eaeaea;
 	color : inherit;
@@ -143,7 +143,8 @@ h2 span, h3 span {
 	text-transform : none;
 }
 h2 span {
-	padding : .25rem 0;
+	display : none;
+	padding : .5rem 0 .25rem;
 	font-size : 15px;
 	text-transform : capitalize;
 
@@ -1060,6 +1061,9 @@ label:active {
 		margin-top : 2.5rem;
 		/*border-top-color : #ddd;*/
 	}
+	h2 span {
+		display : inherit;
+	}
 
 }
 
@@ -1093,11 +1097,15 @@ label:active {
 
 @media screen and (max-width : 501px) {
 
+	.item > a {
+		height : 315px;
+	}
 	.item figure {
-		height : 240px;
+		height : 210px;
+		padding : 40px 0 20px;
 	}
 	.item img {
-		max-height : 180px;
+		max-height : 140px;
 		max-width : 120px;
 	}
 
@@ -1135,40 +1143,11 @@ label:active {
 	.item:nth-child(n+5) {
 		margin-top : 2.5rem;
 	}
-	.item > a {
-		height : auto;
+	.item a > span {
+		top : -.5rem;
 	}
-	/*.item a > span {
-		padding-top : .5rem;
-		padding-bottom : .5rem;
-	}*/
 	button:nth-child(1) {
 		top : .75rem;
-	}
-	/*.promoted > div a {
-		left : 15px;
-	}
-	.promoted > div:after {
-		right : 15px;
-	}*/
-
-}
-
-@media screen and (max-width : 501px) {
-
-	/*.promoted > div a {
-		display : none;
-	}
-	.promoted > div:after {
-		right : auto;
-		left : 50%;
-		margin-top : -20px;
-		margin-left : -11px;
-		box-shadow : 0 0 0 10px white;
-	}*/
-
-	.item > a {
-		height : 344px;
 	}
 
 }
