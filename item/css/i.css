@@ -981,12 +981,15 @@ promoted listings alt
 	content : "";
 }*/
 .promoted2 > div:after {
-	top : 280px;
-	left : calc(1rem - 1px);
-	right : auto;
-	margin-top : 0;
+	/*top : 280px;*/
+	right : calc(1rem - 1px);
+	/*right : auto;*/
+	margin-top : -45px;
 	line-height : 1;
 }
+/*.new.promoted2 > div:after {
+	top : 266px;
+}*/
 
 nav {
 	position : absolute;
@@ -1180,6 +1183,14 @@ label:active {
 
 }
 
+@media screen and (min-width : 802px) and (max-width : 1023px) {
+
+	.item > a {
+		height : 405px;
+	}
+
+}
+
 @media screen and (max-width : 501px) {
 
 	.item > a {
@@ -1194,9 +1205,9 @@ label:active {
 		max-width : 120px;
 	}
 
-	.promoted2 > div:after {
+	/*.promoted2 > div:after {
 		top : 190px;
-	}
+	}*/
 
 	aside:after {
 		content : "Filter";
@@ -1257,16 +1268,5 @@ label:active {
 	.item > a {
 		height : 373px;
 	}
-	.promoted2 > div:after {
-		top : 250px;
-	}
 
 }
-
-/*@media screen and (max-width : 800px) {
-
-	.promoted > div a em {
-		display : none;
-	}
-
-}*/
