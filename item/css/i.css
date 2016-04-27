@@ -959,7 +959,7 @@ promoted listings alt
 .promoted > div a {
 	display : none;
 }
-.promoted > div:after, .promoted2 > div:after {
+.promoted > div:after/*, .promoted2 > div:after*/ {
 	right : auto;
 	left : 50%;
 	margin-top : -20px;
@@ -967,7 +967,7 @@ promoted listings alt
 	box-shadow : 0 0 0 10px white;
 }
 
-.promoted2 > div:after {
+/*.promoted2 > div:after {
 	top : 0;
 }
 .promoted2:before {
@@ -979,9 +979,13 @@ promoted listings alt
 	width : calc(100% - 2rem);
 	background : #999;
 	content : "";
-}
+}*/
 .promoted2 > div:after {
-	margin-top : -10px;
+	top : 280px;
+	left : calc(1rem - 1px);
+	right : auto;
+	margin-top : 0;
+	line-height : 1;
 }
 
 nav {
@@ -1189,16 +1193,21 @@ label:active {
 		max-height : 140px;
 		max-width : 120px;
 	}
+
+	.promoted2 > div:after {
+		top : 190px;
+	}
+
 	aside:after {
 		content : "Filter";
 	}
 
-	.item.promoted2 {
+	/*.item.promoted2 {
 		padding-top : 1rem;
 	}
 	.promoted2 button:nth-child(1) {
 		top : 1.5rem;
-	}
+	}*/
 
 }
 
@@ -1247,6 +1256,9 @@ label:active {
 
 	.item > a {
 		height : 373px;
+	}
+	.promoted2 > div:after {
+		top : 250px;
 	}
 
 }
