@@ -913,7 +913,7 @@ h2 span, h3 em em {
 
     max-width : 70%;*/
 }
-.promoted > div:after {
+.promoted > div:after, .promoted2 > div:after {
 	display : block;
 	position : absolute;
 	top : 100%;
@@ -959,12 +959,29 @@ promoted listings alt
 .promoted > div a {
 	display : none;
 }
-.promoted > div:after {
+.promoted > div:after, .promoted2 > div:after {
 	right : auto;
 	left : 50%;
 	margin-top : -20px;
 	margin-left : -11px;
 	box-shadow : 0 0 0 10px white;
+}
+
+.promoted2 > div:after {
+	top : 0;
+}
+.promoted2:before {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 1rem;
+	height : 1px;
+	width : calc(100% - 2rem);
+	background : #999;
+	content : "";
+}
+.promoted2 > div:after {
+	margin-top : -10px;
 }
 
 nav {
@@ -1174,6 +1191,13 @@ label:active {
 	}
 	aside:after {
 		content : "Filter";
+	}
+
+	.item.promoted2 {
+		padding-top : 1rem;
+	}
+	.promoted2 button:nth-child(1) {
+		top : 1.5rem;
 	}
 
 }
