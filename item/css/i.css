@@ -6,6 +6,17 @@
 	border : 0;
 	box-sizing : border-box;
 }
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
 html {
 	background : white;
 	/*padding : 1rem;*/
@@ -15,7 +26,7 @@ html {
 }
 [role=main] {
 	max-width : 1350px;
-	margin : auto;
+	margin : auto auto 3rem;
 }
 h2, h3, h4, p, h2 span {
 	font-size : 16px;
@@ -1100,6 +1111,13 @@ input:checked + span:before {
 }
 label:active {
 	opacity : .65;
+}
+
+footer {
+	clear : both;
+	height : 300px;
+	background : #efefef;
+	border-top : 1px solid #ddd;
 }
 
 @media screen and (min-width : 1024px) {
