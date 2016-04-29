@@ -546,19 +546,18 @@ button {
 	font-size : 13px;
 	letter-spacing : .125px;
 }
-button:nth-child(1) {
+button:nth-of-type(1) {
 	position : absolute;
 	top : 1.25rem;
 	right : .75rem;
-	/*opacity : 1;*/
 }
-.seller button:nth-child(1) {
+.seller button:nth-of-type(1) {
 	right : .75rem;
 }
-button:nth-child(1):active {
+button:nth-of-type(1):active {
 	opacity : .5;
 }
-button:nth-child(1):before {
+button:nth-of-type(1):before {
 	display : inline-block;
 	height : 1.4rem;
 	width : 1.4rem;
@@ -587,22 +586,18 @@ button[data-num]:after {
 button.loved:after {
 	color : #111;
 }
-button:nth-child(2) {
+/*button:nth-child(2) {
 	position : absolute;
 	bottom : .75rem;
 	right : 2.3rem;
 	z-index : 2;
 	opacity : 0;
-	/*width : calc(100% + 2px);*/
 	background : white;
-	/* background : -webkit-linear-gradient(top, #fff 0%,#ddd 100%); */
-	/*margin-top : 10px;*/
 	padding : .5rem .5rem .45rem;
-	/*padding-top : .25rem;*/
 	border : 1px solid #eaeaea;
 	color : #111;
 	line-height : 1;
-}
+}*/
 a:nth-child(3) {
 	position : absolute;
 	bottom : .75rem;
@@ -625,20 +620,7 @@ a:nth-child(3):after {
 .item:hover a:nth-child(3) {
 	border-color : #eaeaea;
 }
-/*button:nth-child(2):after {
-	content : "...";
-}*/
-/*.alt button:nth-child(2) {
-	bottom : auto;
-	top : 100%;
-	right : auto;
-	left : 0;
-	margin-top : 8px;
-}*/
-button:nth-child(2):active, a:nth-child(3):active {
-	background : #efefef;
-	/* color : #999; */
-}
+
 
 .context-menu {
 	position : absolute;
@@ -676,11 +658,11 @@ button:nth-child(2):active, a:nth-child(3):active {
 	text-decoration : none;
 }
 
-.seller button:nth-child(1):before {
+.seller button:nth-of-type(1):before {
 	background-image : url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-128.png);
 	opacity : .5;
 }
-.seller button:nth-child(2), .seller button:nth-child(1):after {
+.seller button:nth-of-type(1):after {
 	display : none;
 }
 .seller .featured:after {
@@ -693,22 +675,22 @@ button:nth-child(2):active, a:nth-child(3):active {
 	font-size : 12px;
 	line-height : 1;
 }
-.item:hover button:nth-child(2) {
+/*.item:hover button:nth-child(2) {
 	opacity : 1;
-}
-.item > div span {
+}*/
+/*.item > div span {
 	display : block;
 	position : relative;
 	top : 1px;
 	z-index : 1;
-	/*padding : .75rem;*/
-	/*border-top : 1px solid #eaeaea;*/
+	padding : .75rem;
+	border-top : 1px solid #eaeaea;
 	font-size : 13px;
 
 	height : 1px;
 	overflow : hidden;
 
-}
+}*/
 /* .item:hover > div span {
 	border-top-color : white;
 } */
@@ -745,12 +727,12 @@ button:nth-child(2):active, a:nth-child(3):active {
 	/* opacity : .65; */
 	color : #999;
 }
-.item > div div {
+
+/*.item > div div {
 	display : none;
 	position : absolute;
 	bottom : 120%;
 	left : 0;
-	/* overflow : hidden; */
 	opacity : 0;
 	height : auto;
 	width : calc(300px - 1.5rem);
@@ -767,16 +749,12 @@ button:nth-child(2):active, a:nth-child(3):active {
 	bottom : -6px;
 	left : 9px;
 	z-index : 2;
-	/*height : 16px;
-	width : 16px;
-	background : white;*/
 	border-top : 7px solid white;
 	border-left : 7px solid transparent;
 	border-right : 7px solid transparent;
 	content : "";
+}*/
 
-	/*transform : rotate(45deg);*/
-}
 .item > div div:before {
 	bottom : -7px;
 	left : 8px;
@@ -1001,6 +979,55 @@ promoted listings alt
 /*.new.promoted2 > div:after {
 	top : 266px;
 }*/
+
+/***
+promoted listings alt2
+***/
+.is-promoted > div {
+	position : relative;
+}
+.is-promoted > div a {
+	color : #F46E68;
+}
+.is-promoted > div span {
+	position : absolute;
+	bottom : 15px;
+	right : 0;
+	z-index : -1;
+	background : #facf73;
+    padding : 4px;
+    border-radius : 3px;
+    color: #fff;
+    /*cursor : help;*/
+    cursor : default;
+    font-size : 12px;
+    line-height : 1;
+}
+.is-promoted > div span:hover div {
+	display : block;
+}
+.is-promoted > div div {
+	display : none;
+	position : absolute;
+	bottom : calc(100% + 8px);
+	right : 0;
+	width : 10rem;
+	background : #111;
+	padding : .5rem;
+	color : white;
+	font-size : 12px;
+}
+.is-promoted > div div:before {
+	display : block;
+	position : absolute;
+	top : 100%;
+	left : auto;
+	right : 7px;
+	border-top : 5px solid #111;
+	border-left : 5px solid transparent;
+	border-right : 5px solid transparent;
+	content : "";
+}
 
 nav {
 	position : absolute;
@@ -1234,7 +1261,7 @@ footer {
 	/*.item.promoted2 {
 		padding-top : 1rem;
 	}
-	.promoted2 button:nth-child(1) {
+	.promoted2 button:nth-of-type(1) {
 		top : 1.5rem;
 	}*/
 
@@ -1275,7 +1302,7 @@ footer {
 	.item a > span {
 		top : -.5rem;
 	}
-	button:nth-child(1) {
+	button:nth-of-type(1) {
 		top : .75rem;
 	}
 

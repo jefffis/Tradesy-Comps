@@ -17,7 +17,7 @@
 
 			<div class="items">
 
-				<div class="item promoted2 sale" itemscope itemtype="http://schema.org/Product">
+				<div class="item is-promoted sale" itemscope itemtype="http://schema.org/Product">
 					<a href="###">
 						<!-- need this extra markup for veritcal alignment of images -->
 						<figure>
@@ -46,15 +46,18 @@
 							Ships Next Day
 						</h4>
 					</a>
+					<button data-num="7"></button>
 					<div>
-						<button data-num="23"></button>
-						<!-- <a href="###">
-							Promoted<em> by <em>PennyLane</em></em>
-						</a> -->
+						<span>
+							Ad
+							<!-- <div>
+								This seller has promoted this listing. For more details, visit <a href="###">our FAQ&rsquo;s</a>.
+							</div> -->
+						</span>
 					</div>
 				</div>
 
-				<div class="item promoted2 new" itemscope itemtype="http://schema.org/Product">
+				<div class="item is-promoted new" itemscope itemtype="http://schema.org/Product">
 					<a href="###">
 						<!-- need this extra markup for veritcal alignment of images -->
 						<figure>
@@ -86,8 +89,14 @@
 							Ships Next Day
 						</h4> -->
 					</a>
+					<button data-num="15"></button>
 					<div>
-						<button data-num="31" class="loved"></button>
+						<span>
+							Ad
+							<!-- <div>
+								This seller has promoted this listing. For more details, visit <a href="###">our FAQ&rsquo;s</a>.
+							</div> -->
+						</span>
 					</div>
 				</div>
 
@@ -123,9 +132,7 @@
 							&nbsp;
 						</h4> -->
 					</a>
-					<div>
-						<button data-num="23"></button>
-					</div>
+					<button data-num="241"></button>
 				</div>
 
 				<div class="item sale" itemscope itemtype="http://schema.org/Product">
@@ -160,9 +167,7 @@
 							&nbsp;
 						</h4> -->
 					</a>
-					<div>
-						<button data-num="23"></button>
-					</div>
+					<button data-num="78"></button>
 				</div>
 
 				<div class="item new" itemscope itemtype="http://schema.org/Product">
@@ -197,9 +202,7 @@
 							Ships Next Day
 						</h4>
 					</a>
-					<div>
-						<button data-num="23"></button>
-					</div>
+					<button data-num="23"></button>
 				</div>
 
 				<div class="item price-drop" itemscope itemtype="http://schema.org/Product">
@@ -234,9 +237,7 @@
 							Ships Next Day
 						</h4>
 					</a>
-					<div>
-						<button data-num="23"></button>
-					</div>
+					<button data-num="37"></button>
 				</div>
 
 				<div class="item sold" itemscope itemtype="http://schema.org/Product">
@@ -269,9 +270,7 @@
 						</h4>
 						<span>Sold</span>
 					</a>
-					<div>
-						<button data-num="23"></button>
-					</div>
+					<button data-num="11"></button>
 				</div>
 
 				<div class="item reserved" itemscope itemtype="http://schema.org/Product">
@@ -304,9 +303,7 @@
 						</h4>
 						<span>Reserved</span>
 					</a>
-					<div>
-						<button data-num="23"></button>
-					</div>
+					<button data-num="43"></button>
 				</div>
 
 				<div class="item" itemscope itemtype="http://schema.org/Product">
@@ -338,9 +335,7 @@
 							Size: 6&rdquo; x 5&rdquo;
 						</p>
 					</a>
-					<div>
-						<button data-num="23"></button>
-					</div>
+					<button data-num="62"></button>
 				</div>
 
 				<div class="item" itemscope itemtype="http://schema.org/Product">
@@ -372,12 +367,10 @@
 							Size: 6&rdquo; x 5&rdquo;
 						</p>
 					</a>
-					<div>
-						<button data-num="23"></button>
-					</div>
+					<button data-num="112"></button>
 				</div>
 
-				<div class="item promoted2" itemscope itemtype="http://schema.org/Product">
+				<div class="item is-promoted" itemscope itemtype="http://schema.org/Product">
 					<a href="###">
 						<!-- need this extra markup for veritcal alignment of images -->
 						<figure>
@@ -409,8 +402,14 @@
 							Ships Next Day
 						</h4>
 					</a>
+					<button data-num="17"></button>
 					<div>
-						<button data-num="31" class="loved"></button>
+						<span>
+							Ad
+							<!-- <div>
+								This seller has promoted this listing. For more details, visit <a href="###">our FAQ&rsquo;s</a>.
+							</div> -->
+						</span>
 					</div>
 				</div>
 
@@ -443,9 +442,7 @@
 							Size: 6&rdquo; x 5&rdquo;
 						</p>
 					</a>
-					<div>
-						<button data-num="23"></button>
-					</div>
+					<button data-num="33"></button>
 				</div>
 
 			</div>
@@ -459,7 +456,7 @@
 		<script>
 			$(function() {
 				var html = $('html'),
-					love = $('.item button:first-child'),
+					love = $('.item > button'),
 					a = $('a')
 					item = $('.item'),
 					sellerNav = '<nav><a href="#seller">Add to Sale</a><hr /><a href="#seller">Edit</a><a href="#seller">Feature</a><a href="#seller">Remove</a></nav>',
