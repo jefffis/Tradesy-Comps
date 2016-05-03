@@ -20,7 +20,7 @@
 html {
 	background : white;
 	/*padding : 1rem;*/
-	color : #111;
+	color : #2A272B;
 	font : normal 100%/1.5 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 	/*text-align : center;*/
 }
@@ -868,9 +868,9 @@ a:nth-child(3):after {
     }
 }
 
-h2 span, h3 em em {
+/*h2 span, h3 em em {
 	color : #2A272B;
-}
+}*/
 .light h3 {
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 }
