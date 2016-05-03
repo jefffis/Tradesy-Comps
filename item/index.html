@@ -49,7 +49,7 @@
 					<button data-num="7"></button>
 					<div>
 						<span>
-							Ad
+							Promoted
 							<!-- <div>
 								This seller has promoted this listing. For more details, visit <a href="###">our FAQ&rsquo;s</a>.
 							</div> -->
@@ -424,6 +424,21 @@
 				// $('body').on('click', function(e) {
 				// 	if ( !$(e.target).closest('.item').length ) $('nav').removeClass('show');
 				// });
+
+				if ( window.innerWidth < 500 ) {
+					$('.is-promoted > div span').text('Ad');
+				} else {
+					$('.is-promoted > div span').text('Promoted');
+				}
+
+
+				$(window).resize(function() {
+					if ( window.innerWidth < 500 ) {
+						$('.is-promoted > div span').text('Ad');
+					} else {
+						$('.is-promoted > div span').text('Promoted');
+					}
+				});
 
 				love.on('click', function() {
 					$(this).toggleClass('loved');
