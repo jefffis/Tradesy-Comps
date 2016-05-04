@@ -5,6 +5,7 @@
 	padding : 0;
 	border : 0;
 	box-sizing : border-box;
+	-webkit-tap-highlight-color : rgba(0, 0, 0, 0);
 }
 
 .cf:before,
@@ -549,7 +550,7 @@ button {
 button:nth-of-type(1) {
 	position : absolute;
 	top : 1.25rem;
-	right : .75rem;
+	right : 0;
 }
 .seller button:nth-of-type(1) {
 	right : .75rem;
@@ -1304,6 +1305,12 @@ footer {
 	}
 	button:nth-of-type(1) {
 		top : .75rem;
+		right : .75rem;
+	}
+
+	.is-promoted > div span {
+		bottom : 16px;
+		padding-bottom : 3px;
 	}
 
 }
