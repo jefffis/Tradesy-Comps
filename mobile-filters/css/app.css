@@ -210,7 +210,7 @@ input:checked + span:before {
 }
 #toggle {
 	position : relative;
-	top : -2.5rem;
+	top : -2rem;
 	float : right;
 	height : 1.5rem;
 	width : 50px;
