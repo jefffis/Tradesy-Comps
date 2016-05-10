@@ -60,9 +60,9 @@ body {
 	font-family : inherit;
 	font-size : 15px;
 }
-#filter-sort button:last-child {
+/*#filter-sort button:last-child {
 	float : right;
-}
+}*/
 
 #filters {
 	position : fixed;
@@ -81,6 +81,7 @@ body {
 #filters h2 {
 	position : relative;
 	/*border-bottom : 1px solid #ddd;*/
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 18px;
 	font-weight : normal;
 }
@@ -103,8 +104,10 @@ body {
 }
 #filters h2:after {
 	display : block;
+	margin-top : -.25rem;
 	color : #999;
 	content : attr(data-selected);
+	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 	font-size : 14px;
 }
 /*[data-toggleable]:active {
