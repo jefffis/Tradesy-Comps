@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tradesy.com Filters</title>
+		<link rel="stylesheet" href="css/app.css" />
+	</head>
+	<body>
+
+		<div id="content">
+			<div id="filter-sort">
+				<button type="button" class="toggle-filters">Filter</button>
+				<button type="button">Sort By</button>
+			</div>
+		</div>
+		<div id="filters">
+			<div id="intro">
+				Filter Items
+				<button type="button" class="toggle-filters"></button>
+			</div>
+			<div id="filter-wrapper">
+				<div class="filter" data-toggleable>
+					<h2 data-selected="All">Department</h2>
+					<div>
+						<label>
+							<input type="radio" name="department" value="Clothing" />
+							<span>Clothing</span>
+						</label>
+						<label>
+							<input type="radio" name="department" value="Bags" />
+							<span>Bags</span>
+						</label>
+						<label>
+							<input type="radio" name="department" value="Shoes" />
+							<span>Shoes</span>
+						</label>
+						<label>
+							<input type="radio" name="department" value="Accessories" />
+							<span>Accessories</span>
+						</label>
+						<label>
+							<input type="radio" name="department" value="Weddings" />
+							<span>Weddings</span>
+						</label>
+					</div>
+				</div>
+				<hr />
+				<div class="filter-card">
+					<h2>Price</h2>
+					<div id="slider" data-selected="Under $25" data-selected-after="Over $500">
+						<span>Under $25</span>
+						<span>Over $500</span>
+					</div>
+					<hr />
+					<h2 data-selected="All items">Sale</h2>
+					<div id="toggle"></div>
+					<hr />
+					<h2>Availability</h2>
+					<div id="tab" class="cf">
+						<span class="active">All Items</span>
+						<span>In Stock</span>
+						<span>Sold Out</span>
+					</div>
+				</div>
+				<div class="filter">
+					<h2 data-selected="All">Designer</h2>
+				</div>
+				<hr />
+				<div class="filter">
+					<h2 data-selected="All">Color</h2>
+				</div>
+				<hr />
+				<div class="filter">
+					<h2 data-selected="All">Collection</h2>
+				</div>
+				<hr />
+				<div class="filter">
+					<h2 data-selected="All">Condition</h2>
+				</div>
+				<hr />
+				<div class="filter">
+					<h2 data-selected="All">Discount</h2>
+				</div>
+			</div>
+			<div id="apply">
+				<button type="button">Apply Filters</button>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+
+			$(function() {
+				var button = $('.toggle-filters'),
+					filters = $('#filters'),
+					tabs = $('span', '#tab'),
+					toggle = $('#toggle'),
+					apply = $('#apply'),
+					toggleableDiv = $('.filter');
+
+				button.on('click', function() {
+
+					if ( !filters.hasClass('show') ) {
+						filters.addClass('show');
+						enableStickyButton($('#apply'), filters, true);
+					} else {
+						filters.removeClass('show');
+						enableStickyButton($('#apply'), filters, false);
+					}
+
+				});
+
+				toggle.on('click', function() {
+					var ctx = $(this).hasClass('active') ? 'All items' : 'Sale items only';
+
+					toggle.toggleClass('active');
+					toggle.prev('h2').attr('data-selected', ctx);
+				});
+
+				tabs.on('click', function() {
+					tabs.removeClass('active');
+					$(this).addClass('active');
+				});
+
+				toggleableDiv.on('click', function() {
+					if ( $(this).data('toggleable') !== undefined ) {
+						$(this).find('h2').toggleClass('open');
+						$(this).find('div').toggle();
+						if ( $(this).find('input:checked').length ) {
+							setDataAttr($(this).find('h2'), $(this).find('input:checked').val());
+						}
+					}
+				})
+
+				apply.on('click', function() {
+					fuaxSubmit($(this), filters, false);
+				});
+			});
+
+			function setDataAttr(el, data) {
+				el.attr('data-selected', data);
+			}
+
+			function fuaxSubmit(el, parEl, ctx) {
+				el.find('button').text('').prop('disabled', true);
+				setTimeout(function() {
+					parEl.removeClass('show');
+					enableStickyButton(el, parEl, ctx);
+				}, 750);
+			}
+
+			function enableStickyButton(el, parEl, ctx) {
+				var css = ctx ? 'fixed' : 'absolute',
+					parCss = ctx ? 'absolute' : 'fixed';
+
+				if ( !ctx ) {
+					parEl.css('position', parCss);
+					el.css('position', css).find('button').text('Apply Filters').prop('disabled', false);
+					return;
+				}
+
+				setTimeout(function() {
+					parEl.css('position', parCss);
+					el.css('position', css);
+				}, 251);
+			}
+
+		</script>
+		
+	</body>
+</html>
