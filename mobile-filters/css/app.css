@@ -31,19 +31,25 @@ body {
 	position : absolute;
 	top : 1rem;
 	left : 1rem;
-	height : 8rem;
+	z-index : 0;
+	height : 5rem;
 	width : calc(100% - 2rem);
-	background : #f7f7f7;
-	content : "";
+	/*background : #f7f7f7;*/
+	padding-top : 3rem;
+	color : #999;
+	content : "doormat";
+	text-align : center;
 }
 #content:after {
 	position : absolute;
 	top : 15.5rem;
 	left : 1rem;
+	z-index : 0;
 	height : calc(100vh - 19.5rem);
 	width : calc(100% - 2rem);
-	background : #f7f7f7;
+	/*background : #f7f7f7;*/
 	padding-top : 3rem;
+	color : #999;
 	content : "items";
 	text-align : center;
 }
@@ -68,7 +74,7 @@ body {
 	position : fixed;
 	top : 100%;
 	left : 0;
-	z-index : 1;
+	z-index : 3;
 	height : 100%;
 	width : 100%;
 	background : white;
@@ -271,7 +277,7 @@ input:checked + span:before {
 	position : absolute;
 	bottom : 0;
 	left : 0;
-	z-index : 3;
+	z-index : 4;
 	width : 100%;
 	background : white;
 	padding : 1rem;
@@ -286,7 +292,7 @@ input:checked + span:before {
 	background : #111;
 	padding : .75rem 0;
 	color : white;
-	font-family : inherit;
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 20px;
 }
 #apply button:disabled {
@@ -300,14 +306,14 @@ input:checked + span:before {
 	background : #f7f7f7;
 	padding : .75rem;
 	border-bottom : 1px solid #ddd;
-	color : #999;
+	color : #333;
 }
 #intro button {
 	position : relative;
 	top : -5px;
 	float : right;
 	background : none;
-	color : #666;
+	/*color : #666;*/
 	font-size : 24px;
 }
 #intro button:after {
