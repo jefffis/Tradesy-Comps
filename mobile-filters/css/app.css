@@ -125,6 +125,19 @@ body {
 h2, .filter-card {
 	padding : .75rem 1.25rem;
 }
+.is-tablet h2, .is-tablet .filter-card {
+	padding : .75rem 12rem;
+}
+.is-tablet .filter > div {
+	padding : 0 12rem;
+}
+.is-tablet #filters h2:before {
+	right : 12rem;
+}
+.is-tablet #apply button {
+	max-width : 300px;
+	margin : auto;
+}
 
 .filter-card {
 	border-bottom : 1px solid #ddd;
@@ -270,6 +283,18 @@ input:checked + span:before {
 
 .filter:last-of-type {
 	margin-bottom : 80px;
+}
+
+#size {
+	display : none;
+}
+#size:before {
+	display : block;
+	background : #f7f7f7;
+	margin : .5rem auto 1.5rem;
+	padding : 3rem 0;
+	content : "Size UI";
+	text-align : center;
 }
 
 #apply {
