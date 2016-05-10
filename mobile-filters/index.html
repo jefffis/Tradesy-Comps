@@ -9,6 +9,8 @@
 	</head>
 	<body>
 
+		<header></header>
+
 		<div id="content">
 			<div id="filter-sort">
 				<button type="button" class="toggle-filters">Filter</button>
@@ -97,8 +99,8 @@
 				</div>
 				<hr />
 				<div class="filter-card">
-					<h2>Size</h2>
-					<div id="size"></div>
+					<!-- <h2>Size</h2>
+					<div id="size"></div> -->
 					<h2>Price</h2>
 					<div id="slider" data-selected="Under $25" data-selected-after="Over $500">
 						<span>Under $25</span>
@@ -150,7 +152,8 @@
 				</div>
 			</div>
 			<div id="apply">
-				<button type="button">Apply Filters</button>
+				<button>Apply Filters</button>
+				<!-- <button>Reset</button> -->
 			</div>
 		</div>
 
@@ -163,7 +166,9 @@
 					tabs = $('span', '#tab'),
 					toggle = $('#toggle'),
 					apply = $('#apply'),
-					toggleableDiv = $('.filter');
+					toggleableDiv = $('.filter'),
+					radios = $('input[type=radio]'),
+					ajaxOverlay = '<div id="ajax-overlay"></div>';
 
 				if ( window.innerWidth > 500 ) {
 					$('html').addClass('is-tablet');
@@ -187,13 +192,19 @@
 				toggle.on('click', function() {
 					var ctx = $(this).hasClass('active') ? 'All items' : 'Sale items only';
 
+					ajaxUpdateFilters(ajaxOverlay);
 					toggle.toggleClass('active');
-					toggle.prev('h2').attr('data-selected', ctx);
+					setDataAttr(toggle.prev('h2'), ctx);
 				});
 
 				tabs.on('click', function() {
+					ajaxUpdateFilters(ajaxOverlay);
 					tabs.removeClass('active');
 					$(this).addClass('active');
+				});
+
+				radios.on('click', function() {
+					ajaxUpdateFilters(ajaxOverlay);
 				});
 
 				toggleableDiv.on('click', function() {
@@ -204,15 +215,26 @@
 							setDataAttr($(this).find('h2'), $(this).find('input:checked').val());
 						}
 					}
-				})
+				});
 
 				apply.on('click', function() {
 					fuaxSubmit($(this), filters, false);
 				});
 			});
 
+			function ajaxUpdateFilters(content) {
+				setTimeout(function() {
+					$('html').append(content);
+				}, 251);
+				setTimeout(function() {
+					$('#ajax-overlay').remove();
+				}, 751);
+			}
+
 			function setDataAttr(el, data) {
-				el.attr('data-selected', data);
+				setTimeout(function() {
+					el.attr('data-selected', data);
+				}, 751);
 			}
 
 			function fuaxSubmit(el, parEl, ctx) {

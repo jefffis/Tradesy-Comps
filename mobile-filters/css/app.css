@@ -23,18 +23,31 @@ html {
 body {
 	margin : auto;
 }
+header {
+	height : 64px;
+	background : #111;
+	margin-bottom : 80px;
+}
+header:after {
+	display : block;
+	position : relative;
+	top : 64px;
+	height : 50px;
+	border-bottom : 1px solid #ddd;
+	content : "";
+}
 #content {
 	height : 100vh;
+	margin-top : 80px;
 	padding-top : 10rem;
 }
-#content:before {
+/*#content:before {
 	position : absolute;
 	top : 1rem;
 	left : 1rem;
 	z-index : 0;
 	height : 5rem;
 	width : calc(100% - 2rem);
-	/*background : #f7f7f7;*/
 	padding-top : 3rem;
 	color : #999;
 	content : "doormat";
@@ -47,12 +60,11 @@ body {
 	z-index : 0;
 	height : calc(100vh - 19.5rem);
 	width : calc(100% - 2rem);
-	/*background : #f7f7f7;*/
 	padding-top : 3rem;
 	color : #999;
 	content : "items";
 	text-align : center;
-}
+}*/
 #filter-sort {
 	background : rgba(0, 0, 0, 0.025);
 	padding : 1rem;
@@ -267,7 +279,8 @@ input:checked + span:before {
 	display : block;
 	float : left;
 	width : 33.3%;
-	padding : .5rem 0;
+	padding : .4rem 0;
+	cursor : pointer;
 	text-align : center;
 }
 #tab .active {
@@ -317,7 +330,7 @@ input:checked + span:before {
 	padding : .75rem 0;
 	color : white;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
-	font-size : 20px;
+	font-size : 17px;
 }
 #apply button:active {
 	color : rgba(255, 255, 255, 0.75);
@@ -346,3 +359,22 @@ input:checked + span:before {
 #intro button:after {
 	content : "\2715";
 }
+
+#ajax-overlay {
+	position : fixed;
+	top : 0;
+	left : 0;
+	z-index : 5;
+	height : 100vh;
+	width : 100vw;
+	background : rgba(255, 255, 255, 0.5) url(../img/loading-d.gif) no-repeat center;
+	background-size : 50px;
+}
+
+
+
+
+
+
+
+
