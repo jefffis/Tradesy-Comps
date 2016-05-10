@@ -219,7 +219,7 @@ input:checked + span:before {
 	top : -2rem;
 	float : right;
 	height : 1.5rem;
-	width : 50px;
+	width : 44px;
 	background : #f7f7f7;
 	border-radius : 20px;
 	box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.075) inset;
@@ -228,22 +228,21 @@ input:checked + span:before {
 	display : block;
 	position : absolute;
 	top : 2px;
-	right : 2px;
-	height : calc(1.5rem - 4px);
-	width : calc(1.5rem - 4px);
+	left : 2px;
+	height : 20px;
+	width : 20px;
 	background : white;
 	border-radius : 18px;
 	box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.125) inset;
 	content : "";
 	
-	transform : all .25s ease-in-out;
+	transition : left .25s ease-in-out;
 }
 #toggle.active {
 	background : #111;
 }
 #toggle.active:before {
-	left : 2px;
-	right : auto;
+	left : 22px;
 }
 #tab {
 	clear : right;
@@ -295,8 +294,11 @@ input:checked + span:before {
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 20px;
 }
+#apply button:active {
+	color : rgba(255, 255, 255, 0.75);
+}
 #apply button:disabled {
-	height : 48px;
+	height : 49px;
 	background : #111 url(../img/loading.gif) no-repeat center;
 	background-size : 24px;
 }
