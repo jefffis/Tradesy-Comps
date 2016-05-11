@@ -26,7 +26,7 @@ body {
 header {
 	height : 64px;
 	background : #111;
-	margin-bottom : 80px;
+	margin-bottom : 50px;
 }
 header:after {
 	display : block;
@@ -36,11 +36,11 @@ header:after {
 	border-bottom : 1px solid #ddd;
 	content : "";
 }
-#content {
+/*#content {
 	height : 100vh;
 	margin-top : 80px;
 	padding-top : 10rem;
-}
+}*/
 /*#content:before {
 	position : absolute;
 	top : 1rem;
@@ -65,6 +65,28 @@ header:after {
 	content : "items";
 	text-align : center;
 }*/
+
+.item {
+	position : relative;
+	float : left;
+	height : 300px;
+	width : 50%;
+	padding : 1rem;
+}
+.item:before {
+	display : block;
+	position : absolute;
+	top : 1rem;
+	left : 1rem;
+	height : calc(300px - 2rem);
+	width : calc(100% - 1.5rem);
+	background : #efefef;
+	content : "";
+}
+.item:nth-child(even):before {
+	left : .5rem;
+}
+
 #filter-sort {
 	background : rgba(0, 0, 0, 0.025);
 	padding : 1rem;
@@ -87,7 +109,7 @@ header:after {
 	top : 100%;
 	left : 0;
 	z-index : 3;
-	height : 100%;
+	/*height : 100%;*/
 	width : 100%;
 	background : white;
 
@@ -99,6 +121,7 @@ header:after {
 #filters h2 {
 	position : relative;
 	/*border-bottom : 1px solid #ddd;*/
+	background : white;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 18px;
 	font-weight : normal;
@@ -132,6 +155,10 @@ header:after {
 	opacity : .65;
 }*/
 
+/** active **/
+[data-toggleable] h2:active, label:active {
+	opacity : .65;
+}
 
 /** padding **/
 h2, .filter-card {

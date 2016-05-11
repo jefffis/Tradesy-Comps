@@ -16,6 +16,24 @@
 				<button type="button" class="toggle-filters">Filter</button>
 				<!-- <button type="button">Sort By</button> -->
 			</div>
+			<div class="cf">
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
 		</div>
 		<div id="filters">
 			<div id="intro">
@@ -183,6 +201,7 @@
 				button.on('click', function() {
 
 					if ( !filters.hasClass('show') ) {
+						// $('html').css('height', filters.height());
 						filters.addClass('show');
 						enableStickyButton($('#apply'), filters, true);
 					} else {
@@ -256,8 +275,6 @@
 			function fuaxSubmit(el, parEl, ctx) {
 				el.find('button').text('').prop('disabled', true);
 				setTimeout(function() {
-					// parEl.removeClass('show');
-					// enableStickyButton(el, parEl, ctx);
 					location.reload();
 				}, 750);
 			}
@@ -269,13 +286,16 @@
 				if ( !ctx ) {
 					parEl.css('position', parCss);
 					el.css('position', css).find('button').text('Apply Filters').prop('disabled', false);
+					$('#content').show();
 					return;
 				}
 
 				setTimeout(function() {
 					parEl.css('position', parCss);
 					el.css('position', css);
+					$('#content').hide();
 				}, 251);
+				
 			}
 
 		</script>
