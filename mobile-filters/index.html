@@ -16,6 +16,7 @@
 				<button type="button" class="toggle-filters">Filter</button>
 				<!-- <button type="button">Sort By</button> -->
 			</div>
+			<small>Viewing 1-24 of 59,291 items in <strong>Shoes</strong></small>
 			<div class="cf">
 				<div class="item"></div>
 				<div class="item"></div>
@@ -271,7 +272,7 @@
 						var multiSelected = selected.attr('name');
 
 						if ( $('input[name=' + multiSelected + ']:checked').length > 1 ) {
-							el.attr('data-selected', 'Multi');
+							el.attr('data-selected', 'Multiple');
 						} else if ( $('input[name=' + multiSelected + ']:checked').length < 1 ) {
 							el.attr('data-selected', 'All');
 						} else {
@@ -296,7 +297,7 @@
 			function fuaxSubmit(el, parEl, ctx) {
 				el.find('button').text('').prop('disabled', true);
 				setTimeout(function() {
-					location.reload();
+					location.reload(true);
 				}, 750);
 			}
 
