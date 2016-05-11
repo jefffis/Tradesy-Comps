@@ -220,6 +220,7 @@
 				apply.on('click', function() {
 					fuaxSubmit($(this), filters, false);
 				});
+
 			});
 
 			function ajaxUpdateFilters(content) {
@@ -240,8 +241,9 @@
 			function fuaxSubmit(el, parEl, ctx) {
 				el.find('button').text('').prop('disabled', true);
 				setTimeout(function() {
-					parEl.removeClass('show');
-					enableStickyButton(el, parEl, ctx);
+					// parEl.removeClass('show');
+					// enableStickyButton(el, parEl, ctx);
+					location.reload();
 				}, 750);
 			}
 
