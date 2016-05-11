@@ -298,13 +298,13 @@ input:checked + span:before {
 	margin-bottom : 80px;
 }
 
-#size {
+/*#size {
 	display : none;
-}
+}*/
 #size:before {
 	display : block;
 	background : #f7f7f7;
-	margin : .5rem auto 1.5rem;
+	margin : .5rem auto 1.25rem;
 	padding : 3rem 0;
 	content : "Size UI";
 	text-align : center;

@@ -31,7 +31,7 @@
 							<span>All</span>
 						</label>
 						<label>
-							<input type="radio" name="department" value="Clothing" />
+							<input type="radio" name="department" value="Clothing" data-sizing />
 							<span>Clothing</span>
 						</label>
 						<label>
@@ -39,7 +39,7 @@
 							<span>Bags</span>
 						</label>
 						<label>
-							<input type="radio" name="department" value="Shoes" />
+							<input type="radio" name="department" value="Shoes" data-sizing />
 							<span>Shoes</span>
 						</label>
 						<label>
@@ -56,51 +56,53 @@
 					<h2 data-selected="All">Shoes</h2>
 					<div>
 						<label>
-							<input type="radio" name="shoes" value="All" checked />
+							<input type="radio" name="shoes" value="All" data-sizing checked />
 							<span>All</span>
 						</label>
 						<label>
-							<input type="radio" name="shoes" value="Boots &amp; Booties" />
+							<input type="radio" name="shoes" value="Boots &amp; Booties" data-sizing />
 							<span>Boots &amp; Booties</span>
 						</label>
 						<label>
-							<input type="radio" name="shoes" value="Flats" />
+							<input type="radio" name="shoes" value="Flats" data-sizing />
 							<span>Flats</span>
 						</label>
 						<label>
-							<input type="radio" name="shoes" value="Mules &amp; Clogs" />
+							<input type="radio" name="shoes" value="Mules &amp; Clogs" data-sizing />
 							<span>Mules &amp; Clogs</span>
 						</label>
 						<label>
-							<input type="radio" name="shoes" value="Pumps" />
+							<input type="radio" name="shoes" value="Pumps" data-sizing />
 							<span>Pumps</span>
 						</label>
 						<label>
-							<input type="radio" name="shoes" value="Sandals" />
+							<input type="radio" name="shoes" value="Sandals" data-sizing />
 							<span>Sandals</span>
 						</label>
 						<label>
-							<input type="radio" name="shoes" value="Athletic" />
+							<input type="radio" name="shoes" value="Athletic" data-sizing />
 							<span>Athletic</span>
 						</label>
 						<label>
-							<input type="radio" name="shoes" value="Platforms" />
+							<input type="radio" name="shoes" value="Platforms" data-sizing />
 							<span>Platforms</span>
 						</label>
 						<label>
-							<input type="radio" name="shoes" value="Wedges" />
+							<input type="radio" name="shoes" value="Wedges" data-sizing />
 							<span>Wedges</span>
 						</label>
 						<label>
-							<input type="radio" name="shoes" value="Formal" />
+							<input type="radio" name="shoes" value="Formal" data-sizing />
 							<span>Formal</span>
 						</label>
 					</div>
 				</div>
 				<hr />
 				<div class="filter-card">
-					<!-- <h2>Size</h2>
-					<div id="size"></div> -->
+					<div id="sizing" style="display: none;">
+						<h2>Size</h2>
+						<div id="size"></div>
+					</div>
 					<h2>Price</h2>
 					<div id="slider" data-selected="Under $25" data-selected-after="Over $500">
 						<span>Under $25</span>
@@ -121,15 +123,15 @@
 					<h2 data-selected="All">Designer</h2>
 					<div>
 						<label>
-							<input type="radio" name="designer" value="All" checked />
+							<input type="radio" name="designer" value="All" data-return checked />
 							<span>All</span>
 						</label>
 						<label>
-							<input type="radio" name="designer" value="Louis Vuitton" />
+							<input type="radio" name="designer" value="Louis Vuitton" data-return />
 							<span>Louis Vuitton</span>
 						</label>
 						<label>
-							<input type="radio" name="designer" value="Chanel" />
+							<input type="radio" name="designer" value="Chanel" data-return />
 							<span>Chanel</span>
 						</label>
 					</div>
@@ -168,13 +170,14 @@
 					apply = $('#apply'),
 					toggleableDiv = $('.filter'),
 					radios = $('input[type=radio]'),
+					sizing = $('#sizing'),
 					ajaxOverlay = '<div id="ajax-overlay"></div>';
 
 				if ( window.innerWidth > 500 ) {
 					$('html').addClass('is-tablet');
 					$('.department:first').hide();
 					$('.department:last').show();
-					$('#size').show();
+					sizing.show();
 				}
 
 				button.on('click', function() {
@@ -212,7 +215,7 @@
 						$(this).find('h2').toggleClass('open');
 						$(this).find('div').toggle();
 						if ( $(this).find('input:checked').length ) {
-							setDataAttr($(this).find('h2'), $(this).find('input:checked').val());
+							setDataAttr($(this).find('h2'), $(this).find('input:checked'));
 						}
 					}
 				});
@@ -232,9 +235,21 @@
 				}, 751);
 			}
 
-			function setDataAttr(el, data) {
+			function setDataAttr(el, selected) {
+				var val = selected.val(),
+					size = selected.data('sizing') !== undefined ? true : false,
+					selectdReturn = selected.data('return') !== undefined ? true : false;
+
 				setTimeout(function() {
-					el.attr('data-selected', data);
+					el.attr('data-selected', val);
+					if ( selectdReturn ) {
+						return;
+					}
+					if ( size ) {
+						$('#sizing').show();
+					} else {
+						$('#sizing').hide();
+					}
 				}, 751);
 			}
 
