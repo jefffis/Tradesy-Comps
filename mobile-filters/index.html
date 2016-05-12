@@ -12,11 +12,16 @@
 		<header></header>
 
 		<div id="content">
-			<div id="filter-sort">
+			<div id="filter-sort" class="cf">
 				<button type="button" class="toggle-filters">Filter</button>
-				<!-- <button type="button">Sort By</button> -->
+				<button type="button" id="sort">
+					Sort
+				</button>
 			</div>
-			<small>Viewing 1-24 of 59,291 items in <strong>Shoes</strong></small>
+			<small>
+				Viewing 1-24 of 59,291 items<!--  in <strong>Shoes</strong> -->
+				<button type="button"><!-- Share -->&nbsp;</button>
+			</small>
 			<div class="cf">
 				<div class="item"></div>
 				<div class="item"></div>
@@ -36,8 +41,19 @@
 				<div class="item"></div>
 			</div>
 		</div>
+		<div id="sort-actions">
+			<div class="intro">
+				Sort items by:
+				<button type="button" id="close-sort"></button>
+			</div>
+			<a class="active">Relevance</a>
+			<a>New Arrivals</a>
+			<a>Most Loved</a>
+			<a>Lowest $ to Highest $$$</a>
+			<a>Highest $$$ to Lowest $</a>
+		</div>
 		<div id="filters">
-			<div id="intro">
+			<div class="intro">
 				Filter Items:
 				<button type="button" class="toggle-filters"></button>
 			</div>
@@ -128,9 +144,9 @@
 						<span>Over $500</span>
 					</div>
 					<hr />
-					<h2 data-selected="All items">Sale</h2>
+					<!-- <h2 data-selected="All items">Sale</h2>
 					<div id="toggle"></div>
-					<hr />
+					<hr /> -->
 					<h2>Availability</h2>
 					<div id="tab" class="cf">
 						<span class="active">All Items</span>
@@ -191,6 +207,8 @@
 					radios = $('input[type=radio]'),
 					checkboxes = $('input[type=checkbox]'),
 					sizing = $('#sizing'),
+					sort = $('#sort'),
+					sortActions = $('a', '#sort-actions'),
 					ajaxOverlay = '<div id="ajax-overlay"></div>';
 
 				if ( window.innerWidth > 500 ) {
@@ -211,6 +229,18 @@
 						enableStickyButton($('#apply'), filters, false);
 					}
 
+				});
+
+				sort.on('click', function() {
+					$('#sort-actions').toggleClass('show');
+				});
+
+				sortActions.on('click', function() {
+					location.reload(true);
+				});
+
+				$('#close-sort').on('click', function() {
+					$('#sort-actions').removeClass('show');
 				});
 
 				toggle.on('click', function() {

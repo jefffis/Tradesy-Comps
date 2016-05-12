@@ -39,13 +39,52 @@ header:after {
 
 small {
 	display : block;
-	padding : 1rem 1rem 0;
+	padding : 2rem 1rem 1rem;
 	color : #666;
 }
 small strong {
 	color : #111;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-weight : normal;
+}
+small button {
+	position : relative;
+	top : .65rem;
+	float : right;
+	min-width : 2.5rem;
+	background : none;
+	margin-top : -1.25rem;
+	/*padding : .5rem 2.5rem .5rem .75rem;*/
+	padding : .5rem .75rem;
+	border : 1px solid rgba(0, 0, 0, 0.15);
+	/*padding-right : 4rem;*/
+	font-family : inherit;
+	font-size : 15px;
+}
+/*small button:before {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 0;
+	height : 30px;
+	width : 30px;
+	background : #efefef;
+	border-radius : 100%;
+	content : "";
+}*/
+small button:after {
+	display : block;
+	position : absolute;
+	top : 50%;
+	right : .25rem;
+	z-index : 1;
+	height : 30px;
+	width : 30px;
+	background : url(../img/share.svg) no-repeat center;
+	background-size : 28px;
+	margin-top : -14px;
+	content : "";
 }
 
 .item {
@@ -76,15 +115,105 @@ small strong {
 	border-bottom : 1px solid rgba(0, 0, 0, 0.1);
 }
 #filter-sort button {
+	position : relative;
 	background : white;
-	padding : .5rem .75rem;
+	outline : none;
+	padding : .5rem 2rem .5rem .75rem;
 	border : 1px solid rgba(0, 0, 0, 0.15);
 	font-family : inherit;
 	font-size : 15px;
 }
-/*#filter-sort button:last-child {
+#filter-sort button:active {
+	background : #f7f7f7;
+}
+
+#filter-sort button:nth-child(2) {
 	float : right;
-}*/
+}
+
+#filter-sort button:nth-child(1):before, #filter-sort button:nth-child(1):after {
+	display : block;
+	position : absolute;
+	right : .75rem;
+	height : 1px;
+	width : .75rem;
+	background : #111;
+	content : "";
+}
+#filter-sort button:nth-child(1):before {
+	top : 40%;
+}
+#filter-sort button:nth-child(1):after {
+	top : 60%;
+}
+
+#filter-sort button:nth-child(2):after {
+	display : block;
+	position : absolute;
+	top : 50%;
+	right : .75rem;
+	border-top : 7px solid;
+	border-left : 5px solid transparent;
+	border-right : 5px solid transparent;
+	margin-top : -3px;
+	content : "";
+}
+
+#sort-actions {
+	/*display : none;*/
+	position : fixed;
+	top : 100%;
+	left : 0;
+	z-index : 6;
+	height : 100%;
+	width : 100%;
+	/*opacity : 0;*/
+	background : white;
+	/*margin-top : 10px;
+	border-top : 1px solid rgba(0, 0, 0, 0.15);
+	border-bottom : 1px solid rgba(0, 0, 0, 0.15);*/
+	text-align : left;
+
+	transition : top .25s ease-in-out;
+}
+#sort-actions.show {
+	/*display : block;
+	top : 100%;
+	opacity : 1;
+
+	animation : fadeIn .25s ease-in-out;*/
+
+	top : 0;
+}
+#sort-actions a {
+	display : block;
+	padding : 1rem;
+	color : #111;
+}
+#sort-actions a:nth-child(n+3) {
+	border-top : 1px solid #ddd;
+}
+#sort-actions a:last-child {
+	border-bottom : 1px solid #ddd;
+}
+#sort-actions .active {
+	position : relative;
+}
+#sort-actions .active:after {
+	display : block;
+	position : absolute;
+	top : 50%;
+	right : .5rem;
+	height : 40px;
+	width : 40px;
+	background : url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-checkmark-empty-256.png) no-repeat center;
+	background-size : 40px;
+	margin-top : -20px;
+	content : "";
+}
+#sort-actions a:active, #sort-actions a:focus {
+	background : #f7f7f7;
+}
 
 #filters {
 	position : fixed;
@@ -351,20 +480,20 @@ input:checked + span:before {
 }
 
 
-#intro {
+.intro {
 	background : #f7f7f7;
 	padding : .75rem;
 	border-bottom : 1px solid #ddd;
 	color : #333;
 }
-#intro button {
+.intro button {
 	position : relative;
 	top : -5px;
 	float : right;
 	background : none;
 	font-size : 24px;
 }
-#intro button:after {
+.intro button:after {
 	content : "\2715";
 }
 
@@ -406,3 +535,15 @@ iframe {
 
 
 
+@keyframes fadeIn {
+	0% {
+		display : none;
+		top : 50%;
+		opacity : 0;
+	}
+	100% {
+		display : block;
+		top : 100%;
+		opacity : 1;
+	}
+}
