@@ -90,10 +90,6 @@
 				<div class="filter" data-toggleable>
 					<h2 data-selected="All">Shoes</h2>
 					<div>
-						<!-- <label>
-							<input type="checkbox" name="shoes" value="All" data-sizing checked />
-							<span>All</span>
-						</label> -->
 						<label>
 							<input type="checkbox" name="shoes" value="Boots &amp; Booties" data-sizing />
 							<span>Boots &amp; Booties</span>
@@ -144,9 +140,9 @@
 						<span>Over $500</span>
 					</div>
 					<hr />
-					<!-- <h2 data-selected="All items">Sale</h2>
+					<h2 data-selected="All items">Sale</h2>
 					<div id="toggle"></div>
-					<hr /> -->
+					<hr />
 					<h2>Availability</h2>
 					<div id="tab" class="cf">
 						<span class="active">All Items</span>
@@ -157,18 +153,41 @@
 				<div class="filter" data-toggleable>
 					<h2 data-selected="All">Designer</h2>
 					<div>
-						<label>
-							<input type="radio" name="designer" value="All" data-return checked />
-							<span>All</span>
+						<label class="hidden">
+							<input type="checkbox" name="designer" value="Another Designer" data-return />
+							<span>Another Designer</span>
+						</label>
+						<label class="hidden">
+							<input type="checkbox" name="designer" value="And More Designer" data-return />
+							<span>And More Designer</span>
 						</label>
 						<label>
-							<input type="radio" name="designer" value="Louis Vuitton" data-return />
+							<input type="checkbox" name="designer" value="Louis Vuitton" data-return />
 							<span>Louis Vuitton</span>
 						</label>
 						<label>
-							<input type="radio" name="designer" value="Chanel" data-return />
+							<input type="checkbox" name="designer" value="Chanel" data-return />
 							<span>Chanel</span>
 						</label>
+						<label>
+							<input type="checkbox" name="designer" value="Lululemon" data-return />
+							<span>Lululemon</span>
+						</label>
+						<label>
+							<input type="checkbox" name="designer" value="Hermes" data-return />
+							<span>Hermes</span>
+						</label>
+						<label>
+							<input type="checkbox" name="designer" value="Zara" data-return />
+							<span>Zara</span>
+						</label>
+						<div class="inline cf">
+							<label>
+								<span>Find a Designer:</span>
+								<input type="text" name="search-designer" value="" />
+							</label>
+							<!-- <button type="button">Search</button> -->
+						</div>
 					</div>
 				</div>
 				<hr />
@@ -203,7 +222,7 @@
 					tabs = $('span', '#tab'),
 					toggle = $('#toggle'),
 					apply = $('#apply'),
-					toggleableDiv = $('.filter'),
+					toggleableDiv = $('h2', '.filter'),
 					radios = $('input[type=radio]'),
 					checkboxes = $('input[type=checkbox]'),
 					sizing = $('#sizing'),
@@ -229,6 +248,18 @@
 						enableStickyButton($('#apply'), filters, false);
 					}
 
+				});
+
+				// $('button', '.inline').on('click', function() {
+				// 	$(this).prop('disabled', true);
+				// });
+
+				$('input', '.inline').on('keyup', function() {
+					if ( $(this).val() !== '' ) {
+						$(this).parents('div').find('.hidden').show();
+					} else {
+						$(this).parents('div').find('.hidden').hide();
+					}
 				});
 
 				sort.on('click', function() {
@@ -259,19 +290,18 @@
 
 				radios.on('click', function() {
 					ajaxUpdateFilters(ajaxOverlay);
+					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this));
 				});
 
 				checkboxes.on('click', function() {
 					ajaxUpdateFilters(ajaxOverlay);
+					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this).parent().find('input:checked'));
 				});
 
 				toggleableDiv.on('click', function() {
-					if ( $(this).data('toggleable') !== undefined ) {
-						$(this).find('h2').toggleClass('open');
-						$(this).find('div').toggle();
-						if ( $(this).find('input:checked').length ) {
-							setDataAttr($(this).find('h2'), $(this).find('input:checked'));
-						}
+					if ( $(this).parent().data('toggleable') !== undefined ) {
+						$(this).toggleClass('open');
+						$(this).next('div').toggle();
 					}
 				});
 
@@ -295,6 +325,8 @@
 					checkbox = selected.attr('type') === 'checkbox' ? true : false,
 					size = selected.data('sizing') !== undefined ? true : false,
 					selectdReturn = selected.data('return') !== undefined ? true : false;
+
+				console.log(el, selected, val);
 
 				setTimeout(function() {
 					

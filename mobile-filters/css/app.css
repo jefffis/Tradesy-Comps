@@ -314,7 +314,82 @@ label {
 label:nth-child(n+2) {
 	margin-top : .5rem;
 }
-input {
+.hidden {
+	display : none;
+}
+.inline {
+	margin : 1rem auto 1.25rem;
+}
+/*.inline label {
+	float : left;
+	width : 75%;
+}*/
+.inline span {
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+}
+.inline label:active {
+	opacity : 1;
+}
+.inline input[type=text] {
+	background : white url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png) no-repeat calc(100% - .5rem) center;
+	background-size : 30px;
+	border-color : #999;
+}
+/*.inline input[type=text] {
+	border-right : 0;
+}
+.inline button {
+	float : right;
+	width : 25%;
+	outline : none;
+	background : white;
+	border : 1px solid;
+	margin-top : 2.1rem; 
+	padding : .75rem;
+	font-family : inherit;
+	font-size : 15px;
+}
+.inline button:active {
+	background : #f7f7f7;
+}
+.inline button:focus {
+	color : #999;
+}
+.inline button:disabled {
+	position : relative;
+	color : white;
+}
+.inline button:disabled:after {
+	display : block;
+	position : absolute;
+	left : 0;
+	top : 0;
+	height : 100%;
+	width : 100%;
+	background : url(../img/loading-d.gif) no-repeat center;
+	background-size : 30px;
+	content : "";
+}
+.inline input[type=text], .inline button {
+	border-color : #999;
+}*/
+/*.inline:focus input[type=text], .inline:focus button {
+	border-color : #111;
+}*/
+
+/** search / text **/
+input[type=text] {
+	width : 100%;
+	outline : none;
+	margin-top : .5rem;
+	padding : .75rem;
+	border : 1px solid;
+	font-family : inherit;
+	font-size : 15px;
+}
+
+/** radios/checkboxes **/
+input[type=radio], input[type=checkbox] {
 	position : absolute;
 	left : -9999px;
 }
