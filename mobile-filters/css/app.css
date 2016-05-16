@@ -384,8 +384,9 @@ input[type=text] {
 	margin-top : .5rem;
 	padding : .75rem;
 	border : 1px solid;
+	border-radius : 0;
 	font-family : inherit;
-	font-size : 15px;
+	font-size : 16px;
 }
 
 /** radios/checkboxes **/
@@ -530,7 +531,7 @@ input:checked + span:before {
 	z-index : 5;
 	width : 100%;
 	background : white;
-	padding : 1rem;
+	padding : .75rem;
 	border-top : 1px solid #ddd;
 }
 #apply.loaded {
@@ -552,6 +553,19 @@ input:checked + span:before {
 	height : 48px;
 	background : #111 url(../img/loading.gif) no-repeat center;
 	background-size : 24px;
+}
+#apply span {
+	display : block;
+	margin : .25rem 0 -.5rem;
+	color : #999;
+	font-size : 11px;
+	text-align : center;
+}
+#apply span:before {
+	content : "We found ";
+}
+#apply span:after {
+	content : " items";
 }
 
 

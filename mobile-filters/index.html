@@ -184,7 +184,7 @@
 						<div class="inline cf">
 							<label>
 								<span>Find a Designer:</span>
-								<input type="text" name="search-designer" value="" />
+								<input type="text" name="search-designer" autocomplete="off" />
 							</label>
 							<!-- <button type="button">Search</button> -->
 						</div>
@@ -210,6 +210,7 @@
 			<div id="apply">
 				<button>Apply Filters</button>
 				<!-- <button>Reset</button> -->
+				<span id="result-num">59291</span>
 			</div>
 		</div>
 
@@ -228,7 +229,8 @@
 					sizing = $('#sizing'),
 					sort = $('#sort'),
 					sortActions = $('a', '#sort-actions'),
-					ajaxOverlay = '<div id="ajax-overlay"></div>';
+					ajaxOverlay = '<div id="ajax-overlay"></div>',
+					resultNum = $('#result-num');
 
 				if ( window.innerWidth > 500 ) {
 					$('html').addClass('is-tablet');
@@ -312,11 +314,18 @@
 			});
 
 			function ajaxUpdateFilters(content) {
+				var num = parseInt($('#result-num').text(), 10),
+					numMinus = [11121, 5257, 8753][Math.floor(Math.random() * 3)],
+					newNum = num - numMinus;
+
+				console.log(num, numMinus, newNum);
+
 				setTimeout(function() {
 					$('html').append(content);
 				}, 251);
 				setTimeout(function() {
 					$('#ajax-overlay').remove();
+					$('#result-num').text(newNum);
 				}, 751);
 			}
 
