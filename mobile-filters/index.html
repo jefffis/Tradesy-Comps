@@ -202,7 +202,7 @@
 							<input type="checkbox" name="color" value="Grey" data-return />
 							<span>Grey</span>
 						</label>
-						<label class="color">
+						<label class="color white inset">
 							<input type="checkbox" name="color" value="White" data-return />
 							<span>White</span>
 						</label>
@@ -214,25 +214,45 @@
 							<input type="checkbox" name="color" value="Blue" data-return />
 							<span>Blue</span>
 						</label>
-						<label class="color">
-							<input type="checkbox" name="color" value="Grey" data-return />
-							<span>Grey</span>
+						<label class="color beige inset">
+							<input type="checkbox" name="color" value="Beige" data-return />
+							<span>Beige</span>
 						</label>
-						<label class="color">
-							<input type="checkbox" name="color" value="Grey" data-return />
-							<span>Grey</span>
+						<label class="color pink inset">
+							<input type="checkbox" name="color" value="Pink" data-return />
+							<span>Pink</span>
 						</label>
-						<label class="color">
-							<input type="checkbox" name="color" value="Grey" data-return />
-							<span>Grey</span>
+						<label class="color purple inset">
+							<input type="checkbox" name="color" value="Purple" data-return />
+							<span>Purple</span>
 						</label>
-						<label class="color">
-							<input type="checkbox" name="color" value="Grey" data-return />
-							<span>Grey</span>
+						<label class="color green inset">
+							<input type="checkbox" name="color" value="Green" data-return />
+							<span>Green</span>
 						</label>
-						<label class="color">
-							<input type="checkbox" name="color" value="Grey" data-return />
-							<span>Grey</span>
+						<label class="color orange inset">
+							<input type="checkbox" name="color" value="Orange" data-return />
+							<span>Orange</span>
+						</label>
+						<label class="color brown inset">
+							<input type="checkbox" name="color" value="Brown" data-return />
+							<span>Brown</span>
+						</label>
+						<label class="color yellow inset">
+							<input type="checkbox" name="color" value="Yellow" data-return />
+							<span>Yellow</span>
+						</label>
+						<label class="color gold inset">
+							<input type="checkbox" name="color" value="Gold" data-return />
+							<span>Gold</span>
+						</label>
+						<label class="color silver inset">
+							<input type="checkbox" name="color" value="Silver" data-return />
+							<span>Silver</span>
+						</label>
+						<label class="color multi inset">
+							<input type="checkbox" name="color" value="Multi" data-return />
+							<span>Multi</span>
 						</label>
 					</div>
 				</div>
@@ -347,6 +367,10 @@
 						$(this).toggleClass('open');
 						$(this).next('div').toggle();
 					}
+				});
+
+				$('input', '.color').on('click', function() {
+					$(this).parents('label').toggleClass('checked');
 				});
 
 				apply.on('click', function(e) {

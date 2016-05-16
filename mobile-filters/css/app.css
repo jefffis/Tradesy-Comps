@@ -514,52 +514,122 @@ input:checked + span:before {
 
 /** color UI **/
 .color-wrap {
-	margin : auto -4px .5rem !important;
+	/*margin : auto -4px .5rem !important;*/
+	padding : 0 calc(1.25rem - 10px) !important;
 }
 .color {
 	position : relative;
 	float : left;
-	width : 20%;
-	margin-bottom : .5rem;
-	padding : 0 4px;
+	width : calc(20% - 6px);
+    margin : 0 3px .5rem;
+    padding : 3px;
+    border : 1px solid white;
+    border-radius : 3px;
 	font-size : 12px;
 	text-align : center;
 }
 .color:nth-child(n+2) {
 	margin-top : 0;
 }
+.color:nth-child(n+11) {
+	margin-bottom : 0;
+}
 .color input + span:before {
 	display : block;
-	height : 44px;
-	width : calc(100% - 4px);
-	margin-bottom : .25rem;
+	height : 40px;
+	width : 40px;
+	margin : auto auto.5rem;
 	border : 0;
+	border-radius : 3px;
+	box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.125) inset;
 }
-/*.color input:checked + span:after {
+/*.checked input + span:before {
+	box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.5) inset;
+}*/
+.color input:checked + span:after {
 	display: block;
 	position : absolute;
-	top : 4px;
-	left : 5px;
+	top : 6px;
+	left : 50%;
 	z-index : 2;
-    height: 44px;
-    width: calc(100% - 12px);
-    background : rgba(255, 255, 255, 0.5) url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-checkmark-empty-256.png) no-repeat center;
+    height : 40px;
+	width : 40px;
+    background : url(../img/check-blk.png) no-repeat center;
 	background-size : 54px;
+	margin-left : -20px;
     content : "";
-}*/
+}
 
 /** colors **/
-.black input + span:before {
+.black input + span:before,
+.black input:checked + span:before {
 	background-color : #111;
 }
-.grey input + span:before {
+.white input + span:before,
+.white input:checked + span:before {
+	background-color : white;
+}
+.grey input + span:before,
+.grey input:checked + span:before {
 	background-color : grey;
 }
-.red input + span:before {
+.red input + span:before,
+.red input:checked + span:before {
 	background-color : red;
 }
-.blue input + span:before {
+.blue input + span:before,
+.blue input:checked + span:before {
 	background-color : blue;
+}
+.beige input + span:before,
+.beige input:checked + span:before {
+	background-color : beige;
+}
+.pink input + span:before,
+.pink input:checked + span:before {
+	background-color : pink;
+}
+.green input + span:before,
+.green input:checked + span:before {
+	background-color : green;
+}
+.orange input + span:before,
+.orange input:checked + span:before {
+	background-color : orange;
+}
+.purple input + span:before,
+.purple input:checked + span:before {
+	background-color : purple;
+}
+.yellow input + span:before,
+.yellow input:checked + span:before {
+	background-color : yellow;
+}
+.brown input + span:before,
+.brown input:checked + span:before {
+	background-color : brown;
+}
+.silver input + span:before,
+.silver input:checked + span:before {
+	background-color : silver;
+}
+.gold input + span:before,
+.gold input:checked + span:before {
+	background-color : gold;
+}
+.multi input + span:before,
+.multi input:checked + span:before {
+	/*background-color : purple;*/
+}
+
+/** dark checks **/
+.black input:checked + span:after,
+.blue input:checked + span:after,
+.brown input:checked + span:after,
+.purple input:checked + span:after,
+.grey input:checked + span:after,
+.green input:checked + span:after {
+	background-image : url(../img/check-wht.png);
 }
 
 /*#size {
@@ -592,7 +662,7 @@ input:checked + span:before {
 	float : left;
 	width : 60vw;
 	background : #111;
-	padding : .75rem 0;
+	padding : .75rem 0 .7rem;
 	color : white;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 17px;
