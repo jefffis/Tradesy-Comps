@@ -191,8 +191,50 @@
 					</div>
 				</div>
 				<hr />
-				<div class="filter">
+				<div class="filter" data-toggleable>
 					<h2 data-selected="All">Color</h2>
+					<div class="color-wrap cf">
+						<label class="color black">
+							<input type="checkbox" name="color" value="Black" data-return />
+							<span>Black</span>
+						</label>
+						<label class="color grey">
+							<input type="checkbox" name="color" value="Grey" data-return />
+							<span>Grey</span>
+						</label>
+						<label class="color">
+							<input type="checkbox" name="color" value="White" data-return />
+							<span>White</span>
+						</label>
+						<label class="color red">
+							<input type="checkbox" name="color" value="Red" data-return />
+							<span>Red</span>
+						</label>
+						<label class="color blue">
+							<input type="checkbox" name="color" value="Blue" data-return />
+							<span>Blue</span>
+						</label>
+						<label class="color">
+							<input type="checkbox" name="color" value="Grey" data-return />
+							<span>Grey</span>
+						</label>
+						<label class="color">
+							<input type="checkbox" name="color" value="Grey" data-return />
+							<span>Grey</span>
+						</label>
+						<label class="color">
+							<input type="checkbox" name="color" value="Grey" data-return />
+							<span>Grey</span>
+						</label>
+						<label class="color">
+							<input type="checkbox" name="color" value="Grey" data-return />
+							<span>Grey</span>
+						</label>
+						<label class="color">
+							<input type="checkbox" name="color" value="Grey" data-return />
+							<span>Grey</span>
+						</label>
+					</div>
 				</div>
 				<hr />
 				<div class="filter">
@@ -208,8 +250,8 @@
 				</div>
 			</div>
 			<div id="apply">
-				<button>Apply Filters</button>
-				<!-- <button>Reset</button> -->
+				<button data-submit>Apply Filters</button>
+				<button>Reset</button>
 				<span id="result-num">59291</span>
 			</div>
 		</div>
@@ -307,11 +349,24 @@
 					}
 				});
 
-				apply.on('click', function() {
+				apply.on('click', function(e) {
+
+					if ( $(e.target).data('submit') === undefined ) {
+						reset($(e.target));
+						return;
+					}
+
 					fuaxSubmit($(this), filters, false);
 				});
 
 			});
+
+			function reset(el) {
+				el.prop('disabled', true);
+				setTimeout(function() {
+					el.prop('disabled', false);
+				}, 750);
+			}
 
 			function ajaxUpdateFilters(content) {
 				var num = parseInt($('#result-num').text(), 10),
@@ -335,7 +390,7 @@
 					size = selected.data('sizing') !== undefined ? true : false,
 					selectdReturn = selected.data('return') !== undefined ? true : false;
 
-				console.log(el, selected, val);
+				// console.log(el, selected, val);
 
 				setTimeout(function() {
 					
@@ -366,7 +421,7 @@
 			}
 
 			function fuaxSubmit(el, parEl, ctx) {
-				el.find('button').text('').prop('disabled', true);
+				el.find('button:first').prop('disabled', true);
 				setTimeout(function() {
 					location.reload(true);
 				}, 750);
