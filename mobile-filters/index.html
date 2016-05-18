@@ -58,221 +58,439 @@
 				<button type="button" class="toggle-filters"></button>
 			</div>
 			<div id="filter-wrapper">
-				<!-- <div class="filter department" data-toggleable>
-					<h2 data-selected="All">Department</h2>
-					<div>
-						<label>
-							<input type="radio" name="department" value="All" checked />
-							<span>All</span>
-						</label>
-						<label>
-							<input type="radio" name="department" value="Clothing" data-sizing />
-							<span>Clothing</span>
-						</label>
-						<label>
-							<input type="radio" name="department" value="Bags" />
-							<span>Bags</span>
-						</label>
-						<label>
-							<input type="radio" name="department" value="Shoes" data-sizing />
-							<span>Shoes</span>
-						</label>
-						<label>
-							<input type="radio" name="department" value="Accessories" />
-							<span>Accessories</span>
-						</label>
-						<label>
-							<input type="radio" name="department" value="Weddings" />
-							<span>Weddings</span>
-						</label>
+
+				<div id="size-wrapper">
+					<div class="intro">
+						<button type="button" id="size-out">Back</button>
 					</div>
-				</div> -->
-				<div class="filter" data-toggleable>
-					<h2 data-selected="All">Shoes</h2>
-					<div>
-						<label>
-							<input type="checkbox" name="shoes" value="Boots &amp; Booties" data-sizing />
-							<span>Boots &amp; Booties</span>
-						</label>
-						<label>
-							<input type="checkbox" name="shoes" value="Flats" data-sizing />
-							<span>Flats</span>
-						</label>
-						<label>
-							<input type="checkbox" name="shoes" value="Mules &amp; Clogs" data-sizing />
-							<span>Mules &amp; Clogs</span>
-						</label>
-						<label>
-							<input type="checkbox" name="shoes" value="Pumps" data-sizing />
-							<span>Pumps</span>
-						</label>
-						<label>
-							<input type="checkbox" name="shoes" value="Sandals" data-sizing />
-							<span>Sandals</span>
-						</label>
-						<label>
-							<input type="checkbox" name="shoes" value="Athletic" data-sizing />
-							<span>Athletic</span>
-						</label>
-						<label>
-							<input type="checkbox" name="shoes" value="Platforms" data-sizing />
-							<span>Platforms</span>
-						</label>
-						<label>
-							<input type="checkbox" name="shoes" value="Wedges" data-sizing />
-							<span>Wedges</span>
-						</label>
-						<label>
-							<input type="checkbox" name="shoes" value="Formal" data-sizing />
-							<span>Formal</span>
-						</label>
-					</div>
-				</div>
-				<hr />
-				<div class="filter-card">
-					<div id="sizing">
-						<h2>Size</h2>
-						<div id="size"></div>
-					</div>
-					<h2>Price</h2>
-					<div id="slider" data-selected="Under $25" data-selected-after="Over $500">
-						<span>Under $25</span>
-						<span>Over $500</span>
-					</div>
-					<hr />
-					<h2 data-selected="All items">Sale</h2>
-					<div id="toggle"></div>
-					<hr />
-					<h2>Availability</h2>
-					<div id="tab" class="cf">
-						<span class="active">All Items</span>
-						<span>In Stock</span>
-						<span>Sold Out</span>
-					</div>
-				</div>
-				<div class="filter" data-toggleable>
-					<h2 data-selected="All">Designer</h2>
-					<div>
-						<label class="hidden">
-							<input type="checkbox" name="designer" value="Another Designer" data-return />
-							<span>Another Designer</span>
-						</label>
-						<label class="hidden">
-							<input type="checkbox" name="designer" value="And More Designer" data-return />
-							<span>And More Designer</span>
-						</label>
-						<label>
-							<input type="checkbox" name="designer" value="Louis Vuitton" data-return />
-							<span>Louis Vuitton</span>
-						</label>
-						<label>
-							<input type="checkbox" name="designer" value="Chanel" data-return />
-							<span>Chanel</span>
-						</label>
-						<label>
-							<input type="checkbox" name="designer" value="Lululemon" data-return />
-							<span>Lululemon</span>
-						</label>
-						<label>
-							<input type="checkbox" name="designer" value="Hermes" data-return />
-							<span>Hermes</span>
-						</label>
-						<label>
-							<input type="checkbox" name="designer" value="Zara" data-return />
-							<span>Zara</span>
-						</label>
-						<div class="inline cf">
+					<div class="filter">
+						<h2 data-selected="All" class="open">Size</h2>
+						<h3>Shoes</h3>
+						<div class="cf tab">
+							<span class="active">US</span>
+							<span>UK</span>
+							<span>Euro</span>
+						</div>
+						<div id="size" class="cf size">
 							<label>
-								<span>Find a Designer:</span>
-								<input type="text" name="search-designer" autocomplete="off" />
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>1</span>
 							</label>
-							<!-- <button type="button">Search</button> -->
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>1.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>2</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>2.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>3</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>3.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>4</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>4.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>6</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>6.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>7</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>7.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>8</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>8.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>9</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>9.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>10</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>10.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>11</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>11.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>12</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>12.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>13</span>
+							</label>
+						</div>
+						<hr />
+						<h3>Clothing</h3>
+						<div class="cf tab">
+							<span class="active">Regular</span>
+							<span>Petite</span>
+							<span>Plus</span>
+						</div>
+						<div id="size2" class="cf size">
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>1</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>1.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>2</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>2.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>3</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>3.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>4</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>4.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>6</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>6.5</span>
+							</label>
+						</div>
+						<hr />
+						<label class="toggle">
+							<input type="checkbox" name="save-size" />
+							<span>Save Size</span>
+						</label>
+					</div>
+				</div>
+
+				<div id="non-size-filters">
+
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All">Shoes</h2>
+						<div class="images">
+							<label>
+								<input type="checkbox" name="shoes" value="Boots &amp; Booties" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-boots-booties.jpg" />
+									<em>Boots &amp; Booties</em>
+								</span>
+							</label>
+							<label>
+								<input type="checkbox" name="shoes" value="Flats" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-flats2.jpg" />
+									<em>Flats</em>
+								</span>
+							</label>
+							<label>
+								<input type="checkbox" name="shoes" value="Mules &amp; Clogs" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-mules-clogs.jpg" />
+									<em>Mules &amp; Clogs</em>
+								</span>
+							</label>
+							<label>
+								<input type="checkbox" name="shoes" value="Pumps" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-pumps.jpg" />
+									<em>Pumps</em>
+								</span>
+							</label>
+							<label>
+								<input type="checkbox" name="shoes" value="Sandals" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-sandals.jpg" />
+									<em>Sandals</em>
+								</span>
+							</label>
+							<label>
+								<input type="checkbox" name="shoes" value="Athletic" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-athletic.jpg" />
+									<em>Athletic</em>
+								</span>
+							</label>
+							<label>
+								<input type="checkbox" name="shoes" disabled value="Platforms" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-platforms.jpg" />
+									<em>Platforms</em>
+								</span>
+							</label>
+							<label>
+								<input type="checkbox" name="shoes" value="Wedges" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-wedges.jpg" />
+									<em>Wedges</em>
+								</span>
+							</label>
+							<label>
+								<input type="checkbox" name="shoes" value="Formal" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-formal.jpg" />
+									<em>Formal</em>
+								</span>
+							</label>
+						</div>
+					</div>
+					<hr />
+					<div class="filter-card">
+						<div id="size-card">
+							<h2 data-selected="Clothing: All; Shoes: All">Size</h2>
+						</div>
+						<hr />
+						<h2>Price</h2>
+						<div id="slider" data-selected="Under $25" data-selected-after="Over $500">
+							<span>$25&mdash;$500</span>
+						</div>
+						<hr />
+						<h2>Availability</h2>
+						<div id="tab" class="cf tab">
+							<span class="active">All</span>
+							<span>In Stock</span>
+							<span>Sold</span>
+						</div>
+						<hr />
+						<h2 data-selected="All items">Sale</h2>
+						<div id="toggle"></div>
+					</div>
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All">Designer</h2>
+						<div>
+							<label class="vis">
+								<input type="checkbox" name="designer" value="Louis Vuitton" data-return />
+								<span>Louis Vuitton</span>
+							</label>
+							<label class="vis">
+								<input type="checkbox" name="designer" disabled value="Chanel" data-return />
+								<span>Chanel</span>
+							</label>
+							<label class="vis">
+								<input type="checkbox" name="designer" value="Lululemon" data-return />
+								<span>Lululemon</span>
+							</label>
+							<label class="vis">
+								<input type="checkbox" name="designer" value="Hermes" data-return />
+								<span>Hermes</span>
+							</label class="vis">
+							<label>
+								<input type="checkbox" name="designer" value="Zara" data-return />
+								<span>Zara</span>
+							</label>
+							<label class="hidden">
+								<input type="checkbox" name="designer" value="Another Designer" data-return />
+								<span>Another Designer</span>
+							</label>
+							<label class="hidden">
+								<input type="checkbox" name="designer" value="And More Designer" data-return />
+								<span>And More Designer</span>
+							</label>
+							<div class="inline cf">
+								<label>
+									<span>Find a Designer:</span>
+									<input type="text" name="search-designer" autocomplete="off" />
+								</label>
+								<!-- <button type="button">Search</button> -->
+							</div>
+						</div>
+					</div>
+					<hr />
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All">Color</h2>
+						<div class="color-wrap cf">
+							<label class="color black">
+								<input type="checkbox" name="color" value="Black" data-return />
+								<span>Black</span>
+							</label>
+							<label class="color grey">
+								<input type="checkbox" name="color" value="Grey" data-return />
+								<span>Grey</span>
+							</label>
+							<label class="color white inset">
+								<input type="checkbox" name="color" value="White" data-return />
+								<span>White</span>
+							</label>
+							<label class="color red">
+								<input type="checkbox" name="color" value="Red" data-return />
+								<span>Red</span>
+							</label>
+							<label class="color blue">
+								<input type="checkbox" name="color" value="Blue" data-return />
+								<span>Blue</span>
+							</label>
+							<label class="color beige inset">
+								<input type="checkbox" name="color" value="Beige" data-return />
+								<span>Beige</span>
+							</label>
+							<label class="color pink inset">
+								<input type="checkbox" name="color" value="Pink" data-return />
+								<span>Pink</span>
+							</label>
+							<label class="color purple inset">
+								<input type="checkbox" name="color" value="Purple" data-return />
+								<span>Purple</span>
+							</label>
+							<label class="color green inset">
+								<input type="checkbox" name="color" value="Green" data-return />
+								<span>Green</span>
+							</label>
+							<label class="color orange inset">
+								<input type="checkbox" name="color" disabled value="Orange" data-return />
+								<span>Orange</span>
+							</label>
+							<label class="color brown inset">
+								<input type="checkbox" name="color" value="Brown" data-return />
+								<span>Brown</span>
+							</label>
+							<label class="color yellow inset">
+								<input type="checkbox" name="color" value="Yellow" data-return />
+								<span>Yellow</span>
+							</label>
+							<label class="color gold inset">
+								<input type="checkbox" name="color" value="Gold" data-return />
+								<span>Gold</span>
+							</label>
+							<label class="color silver inset">
+								<input type="checkbox" name="color" value="Silver" data-return />
+								<span>Silver</span>
+							</label>
+							<label class="color multi inset">
+								<input type="checkbox" name="color" value="Multi" data-return />
+								<span>Multi</span>
+							</label>
+						</div>
+					</div>
+					<hr />
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All">Collection</h2>
+						<div>
+							<label>
+								<input type="radio" name="collection" value="Shoesday: Under $300" data-return />
+								<span>Shoesday: Under $300</span>
+							</label>
+							<label>
+								<input type="radio" name="collection" value="Luxury Boutique" data-return />
+								<span>Luxury Boutique</span>
+							</label>
+							<label>
+								<input type="radio" name="collection" disabled value="Shoesday: Under $100" data-return />
+								<span>Shoesday: Under $100</span>
+							</label>
+							<label>
+								<input type="radio" name="collection" value="Shoesday: All Under $500" data-return />
+								<span>Shoesday: All Under $500</span>
+							</label>
+							<label>
+								<input type="radio" name="collection" value="Chanel x Christian Louboutin" data-return />
+								<span>Chanel x Christian Louboutin</span>
+							</label>
+						</div>
+					</div>
+					<hr />
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All">Condition</h2>
+						<div>
+							<label>
+								<input type="radio" name="condition" disabled value="Gently Used" data-return />
+								<span>Gently Used</span>
+							</label>
+							<label>
+								<input type="radio" name="condition" value="Like New" data-return />
+								<span>Like New</span>
+							</label>
+							<label>
+								<input type="radio" name="condition" value="New With Tags" data-return />
+								<span>New With Tags</span>
+							</label>
+						</div>
+					</div>
+					<hr />
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All">Discount</h2>
+						<div>
+							<label>
+								<input type="radio" name="discount" disabled value="90% Off or More" data-return />
+								<span>90% Off or More</span>
+							</label>
+							<label>
+								<input type="radio" name="discount" value="75% Off or More" data-return />
+								<span>75% Off or More</span>
+							</label>
+							<label>
+								<input type="radio" name="discount" value="50% Off or More" data-return />
+								<span>50% Off or More</span>
+							</label>
+							<label>
+								<input type="radio" name="discount" value="30% Off or More" data-return />
+								<span>30% Off or More</span>
+							</label>
 						</div>
 					</div>
 				</div>
-				<hr />
-				<div class="filter" data-toggleable>
-					<h2 data-selected="All">Color</h2>
-					<div class="color-wrap cf">
-						<label class="color black">
-							<input type="checkbox" name="color" value="Black" data-return />
-							<span>Black</span>
-						</label>
-						<label class="color grey">
-							<input type="checkbox" name="color" value="Grey" data-return />
-							<span>Grey</span>
-						</label>
-						<label class="color white inset">
-							<input type="checkbox" name="color" value="White" data-return />
-							<span>White</span>
-						</label>
-						<label class="color red">
-							<input type="checkbox" name="color" value="Red" data-return />
-							<span>Red</span>
-						</label>
-						<label class="color blue">
-							<input type="checkbox" name="color" value="Blue" data-return />
-							<span>Blue</span>
-						</label>
-						<label class="color beige inset">
-							<input type="checkbox" name="color" value="Beige" data-return />
-							<span>Beige</span>
-						</label>
-						<label class="color pink inset">
-							<input type="checkbox" name="color" value="Pink" data-return />
-							<span>Pink</span>
-						</label>
-						<label class="color purple inset">
-							<input type="checkbox" name="color" value="Purple" data-return />
-							<span>Purple</span>
-						</label>
-						<label class="color green inset">
-							<input type="checkbox" name="color" value="Green" data-return />
-							<span>Green</span>
-						</label>
-						<label class="color orange inset">
-							<input type="checkbox" name="color" value="Orange" data-return />
-							<span>Orange</span>
-						</label>
-						<label class="color brown inset">
-							<input type="checkbox" name="color" value="Brown" data-return />
-							<span>Brown</span>
-						</label>
-						<label class="color yellow inset">
-							<input type="checkbox" name="color" value="Yellow" data-return />
-							<span>Yellow</span>
-						</label>
-						<label class="color gold inset">
-							<input type="checkbox" name="color" value="Gold" data-return />
-							<span>Gold</span>
-						</label>
-						<label class="color silver inset">
-							<input type="checkbox" name="color" value="Silver" data-return />
-							<span>Silver</span>
-						</label>
-						<label class="color multi inset">
-							<input type="checkbox" name="color" value="Multi" data-return />
-							<span>Multi</span>
-						</label>
-					</div>
+
+				<div id="apply">
+					<button data-submit>Apply Filters</button>
 				</div>
-				<hr />
-				<div class="filter">
-					<h2 data-selected="All">Collection</h2>
-				</div>
-				<hr />
-				<div class="filter">
-					<h2 data-selected="All">Condition</h2>
-				</div>
-				<hr />
-				<div class="filter">
-					<h2 data-selected="All">Discount</h2>
-				</div>
-			</div>
-			<div id="apply">
-				<button data-submit>Apply Filters</button>
-				<button>Reset</button>
-				<span id="result-num">59291</span>
+
 			</div>
 		</div>
 
@@ -282,7 +500,7 @@
 			$(function() {
 				var button = $('.toggle-filters'),
 					filters = $('#filters'),
-					tabs = $('span', '#tab'),
+					tabs = $('span', '.tab'),
 					toggle = $('#toggle'),
 					apply = $('#apply'),
 					toggleableDiv = $('h2', '.filter'),
@@ -321,8 +539,10 @@
 				$('input', '.inline').on('keyup', function() {
 					if ( $(this).val() !== '' ) {
 						$(this).parents('div').find('.hidden').show();
+						$(this).parents('div').find('.vis').hide();
 					} else {
 						$(this).parents('div').find('.hidden').hide();
+						$(this).parents('div').find('.vis').show();
 					}
 				});
 
@@ -347,8 +567,15 @@
 				});
 
 				tabs.on('click', function() {
+
+					var thisTabs = $(this).siblings('span');
+
+					if ( $(this).hasClass('disabled') ) {
+						return;
+					}
+
 					ajaxUpdateFilters(ajaxOverlay);
-					tabs.removeClass('active');
+					thisTabs.removeClass('active');
 					$(this).addClass('active');
 				});
 
@@ -364,12 +591,27 @@
 
 				toggleableDiv.on('click', function() {
 					if ( $(this).parent().data('toggleable') !== undefined ) {
+
+						if ( !$(this).hasClass('open') ) {
+							$('html, body').animate({
+								scrollTop : $(this).offset().top
+							}, 500);
+						}
+
 						$(this).toggleClass('open');
 						$(this).next('div').toggle();
 					}
 				});
 
 				$('input', '.color').on('click', function() {
+					$(this).parents('label').toggleClass('checked');
+				});
+
+				$('input', '.images').on('click', function() {
+					$(this).parents('label').toggleClass('checked');
+				});
+
+				$('input', '.size').on('click', function() {
 					$(this).parents('label').toggleClass('checked');
 				});
 
@@ -382,6 +624,28 @@
 
 					fuaxSubmit($(this), filters, false);
 				});
+
+				$('#size-card').on('click', function() {
+					$('html, body').animate({
+						scrollTop : $('html, body').offset().top
+					}, 125);
+					setTimeout(function() {
+						$('#size-wrapper').addClass('left');
+					}, 126);
+					setTimeout(function() {
+						$('#size-wrapper').css('position', 'absolute');
+						$('#non-size-filters').hide();
+					}, 376);
+				});
+
+				$('#size-out').on('click', function() {
+					$('#size-wrapper').removeClass('left');
+					$('#non-size-filters').show();
+					$('#size-wrapper').css('position', 'fixed');
+					$('h2', '#size-card').attr('data-selected', 'Clothing: S; Shoes: 7');
+				});
+
+				$('input:disabled').parents('label').addClass('disabled');
 
 			});
 
@@ -397,14 +661,14 @@
 					numMinus = [11121, 5257, 8753][Math.floor(Math.random() * 3)],
 					newNum = num - numMinus;
 
-				console.log(num, numMinus, newNum);
+				// console.log(num, numMinus, newNum);
 
 				setTimeout(function() {
 					$('html').append(content);
 				}, 251);
 				setTimeout(function() {
 					$('#ajax-overlay').remove();
-					$('#result-num').text(newNum);
+					// $('#result-num').text(newNum);
 				}, 751);
 			}
 
