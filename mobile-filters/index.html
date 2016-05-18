@@ -65,11 +65,61 @@
 					</div>
 					<div class="filter">
 						<h2 data-selected="All" class="open">Size</h2>
-						<h3>Shoes</h3>
+						<h3>Clothing</h3>
 						<div class="cf tab">
+							<span class="active">Regular</span>
+							<span>Petite</span>
+							<span>Plus</span>
+						</div>
+						<div id="size2" class="cf size">
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>00</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>0</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>2</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>4</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>6</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>8</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>10</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>12</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>14</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>OS</span>
+							</label>
+						</div>
+						<hr />
+						<h3>Shoes</h3>
+						<div class="cf tab four">
 							<span class="active">US</span>
 							<span>UK</span>
 							<span>Euro</span>
+							<span>??</span>
 						</div>
 						<div id="size" class="cf size">
 							<label>
@@ -166,58 +216,9 @@
 							</label>
 						</div>
 						<hr />
-						<h3>Clothing</h3>
-						<div class="cf tab">
-							<span class="active">Regular</span>
-							<span>Petite</span>
-							<span>Plus</span>
-						</div>
-						<div id="size2" class="cf size">
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>1</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>1.5</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>2</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>2.5</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>3</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>3.5</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>4</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>4.5</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>6</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>6.5</span>
-							</label>
-						</div>
-						<hr />
 						<label class="toggle">
 							<input type="checkbox" name="save-size" />
-							<span>Save Size</span>
+							<span>Save Sizes</span>
 						</label>
 					</div>
 				</div>
@@ -349,7 +350,6 @@
 									<span>Find a Designer:</span>
 									<input type="text" name="search-designer" autocomplete="off" />
 								</label>
-								<!-- <button type="button">Search</button> -->
 							</div>
 						</div>
 					</div>
@@ -631,6 +631,7 @@
 					}, 125);
 					setTimeout(function() {
 						$('#size-wrapper').addClass('left');
+						$('#non-size-filters').addClass('transitioning opaque');
 					}, 126);
 					setTimeout(function() {
 						$('#size-wrapper').css('position', 'absolute');
@@ -639,10 +640,16 @@
 				});
 
 				$('#size-out').on('click', function() {
-					$('#size-wrapper').removeClass('left');
 					$('#non-size-filters').show();
-					$('#size-wrapper').css('position', 'fixed');
 					$('h2', '#size-card').attr('data-selected', 'Clothing: S; Shoes: 7');
+					$('#size-wrapper').removeClass('left').css('position', 'fixed');
+
+					setTimeout(function() {
+						$('#non-size-filters').removeClass('transitioning');
+					}, 75);
+					setTimeout(function() {
+						$('#non-size-filters').removeClass('opaque');
+					}, 251);
 				});
 
 				$('input:disabled').parents('label').addClass('disabled');
