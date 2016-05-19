@@ -561,7 +561,7 @@ input:checked + span img {
 	margin-top : .5rem;
 	margin-bottom : .5rem;
 	/*padding : 1px;*/
-	border : 1px solid;
+	/*border : 1px solid;*/
 }
 .filter > .tab {
 	margin-left : 1.25rem;
@@ -570,11 +570,13 @@ input:checked + span img {
 }
 .tab span {
 	display : block;
+	position : relative;
 	float : left;
 	width : 33%;
 	background : white;
 	padding : .4rem 0;
-	color : #111;
+	border-bottom : 1px solid #ddd;
+	color : #666;
 	cursor : pointer;
 	text-align : center;
 }
@@ -588,12 +590,21 @@ input:checked + span img {
 	width : 25%;
 }
 .tab .active {
+	color : inherit;
+}
+.tab .active:after {
+	display : block;
+	position : absolute;
+	top : calc(100% - 4px);
+	left : 0;
+	height : 5px;
+	width : 100%;
 	background : #111;
-	color : white;
+	content : "";
 }
-.tab span:nth-child(n+2) {
+/*.tab span:nth-child(n+2) {
 	border-left : 1px solid;
-}
+}*/
 /*.tab span.disabled, .tab span.disabled:active {
 	background : #f7f7f7;
 	border-left-color : #111;
