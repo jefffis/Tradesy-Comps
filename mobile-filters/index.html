@@ -726,17 +726,22 @@
 				});
 
 				$('#size-out').on('click', function() {
-					$('#non-size-filters').show();
-					$('h2', '#size-card').attr('data-selected', 'Clothing: S; Shoes: 7');
-					$('#size-wrapper').removeClass('left').css('position', 'fixed');
+					$('html, body').animate({
+						scrollTop : $('html, body').offset().top
+					}, 125);
 
+					setTimeout(function() {
+						$('#non-size-filters').show();
+						$('h2', '#size-card').attr('data-selected', 'Clothing: S; Shoes: 7');
+						$('#size-wrapper').removeClass('left').css('position', 'fixed');
+					}, 126);
 					setTimeout(function() {
 						$('#non-size-filters').removeClass('transitioning');
 						$('.intro:first', '#filters').removeClass('left');
-					}, 75);
+					}, 201);
 					setTimeout(function() {
 						$('#non-size-filters').removeClass('opaque');
-					}, 251);
+					}, 376);
 				});
 
 				$('input:disabled').parents('label').addClass('disabled');
