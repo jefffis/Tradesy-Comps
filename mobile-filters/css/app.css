@@ -1005,10 +1005,17 @@ input:checked + span img {
 
 
 .intro {
+	position : relative;
+	left : 0; 
 	background : #f7f7f7;
 	padding : .75rem 1.25rem;
 	border-bottom : 1px solid #ddd;
 	color : #333;
+
+	transition : left .25s ease-in-out;
+}
+.intro.left {
+	left : -20vw;
 }
 .intro button {
 	position : relative;

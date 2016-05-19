@@ -632,6 +632,7 @@
 					setTimeout(function() {
 						$('#size-wrapper').addClass('left');
 						$('#non-size-filters').addClass('transitioning opaque');
+						$('.intro:first', '#filters').addClass('left');
 					}, 126);
 					setTimeout(function() {
 						$('#size-wrapper').css('position', 'absolute');
@@ -646,6 +647,7 @@
 
 					setTimeout(function() {
 						$('#non-size-filters').removeClass('transitioning');
+						$('.intro:first', '#filters').removeClass('left');
 					}, 75);
 					setTimeout(function() {
 						$('#non-size-filters').removeClass('opaque');
