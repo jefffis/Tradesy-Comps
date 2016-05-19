@@ -422,7 +422,7 @@
 					<hr />
 					<div class="filter" data-toggleable>
 						<h2 data-selected="All">Collection</h2>
-						<div>
+						<div class="collections">
 							<label>
 								<input type="radio" name="collection" value="Shoesday: Under $300" data-return />
 								<span>Shoesday: Under $300</span>
@@ -439,7 +439,8 @@
 								<input type="radio" name="collection" value="Shoesday: All Under $500" data-return />
 								<span>Shoesday: All Under $500</span>
 							</label>
-							<label>
+
+							<label class="hidden">
 								<input type="radio" name="collection" value="Chanel x Christian Louboutin" data-return />
 								<span>Chanel x Christian Louboutin</span>
 							</label>
@@ -455,6 +456,7 @@
 								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
 								<span>Another Christian Louboutin Collection</span>
 							</label>
+
 							<label class="hidden">
 								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
 								<span>Christian Louboutin 4eva</span>
@@ -471,6 +473,7 @@
 								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
 								<span>Another Christian Louboutin Collection</span>
 							</label>
+
 							<label class="hidden">
 								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
 								<span>Christian Louboutin 4eva</span>
@@ -487,10 +490,8 @@
 								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
 								<span>Another Christian Louboutin Collection</span>
 							</label>
-							<label class="hidden">
-								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
-								<span>Christian Louboutin 4eva</span>
-							</label>
+
+							<hr />
 							<button type="button" id="load-collections" class="light-btn">Load More</button>
 						</div>
 					</div>
@@ -596,21 +597,23 @@
 				});
 
 				$('#load-collections').on('click', function() {
-					var nextFive = $(this).parents('div').find('.hidden'),
+					var nextFour = $(this).parents('.collections').find('.hidden'),
 						i = 0,
 						last = false;
 
-					if ( nextFive.length <= 4 ) {
+					if ( nextFour.length <= 4 ) {
 						last = true;
 					}
+
+					// console.log(nextFour.length);
 
 					$('html, body').animate({
 						scrollTop : $(this).offset().top
 					}, 500);
 
-					nextFive.each(function(i) {
+					nextFour.each(function(i) {
 
-						if ( i > 4 ) {
+						if ( i > 3 ) {
 							return;
 						}
 
@@ -686,6 +689,11 @@
 
 				$('input', '.images').on('click', function() {
 					$(this).parents('label').toggleClass('checked');
+				});
+
+				$('input', '.collections').on('click', function() {
+					$(this).parents('div').find('label').removeClass('checked');
+					$(this).parents('label').addClass('checked');
 				});
 
 				$('input', '.size').on('click', function() {

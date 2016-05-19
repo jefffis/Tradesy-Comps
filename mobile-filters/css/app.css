@@ -773,6 +773,66 @@ input:checked + span img {
 	background-image : url(../img/check-wht.png);
 }
 
+/** collection radios **/
+.filter > .collections {
+	margin-top : -.5rem;
+	padding : 0 .75rem;
+}
+.collections label {
+	display : table;
+	float : left;
+	height : 100px;
+	width : 50%;
+	padding : .5rem;
+}
+.collections .hidden {
+	display : none;
+}
+.collections label:nth-child(n+2) {
+	margin-top : 0;
+}
+/*.collections label:nth-child(n+3) {
+	margin-bottom : 1rem;
+}*/
+.collections span {
+	display : table-cell;
+	height : 100px;
+	padding : 0 .75rem;
+	border : 1px solid;
+	font-size : 15px;
+	line-height : 1.25;
+	text-align : center;
+	vertical-align : middle;
+}
+.collections .checked span {
+	background : #111;
+	color : white;
+}
+.collections input + span:before {
+	display : none;
+}
+
+.collections hr {
+	clear : left;
+}
+
+/** light button **/
+.light-btn {
+	display : block;
+	clear : left;
+	width : calc(100% - 1rem);
+	background : white;
+	outline : none;
+	margin : auto .5rem .5rem;
+	padding : .4rem .5rem .35rem;
+	border : 1px solid;
+	font-family : inherit;
+	font-size : 16px;
+}
+.light-btn:active {
+	background : #ddd;
+}
+
 /** non-size-wrapper **/
 #non-size-filters {
 	position : relative;
@@ -1001,19 +1061,6 @@ input:checked + span img {
 }
 #apply span:after {
 	content : " items";
-}
-
-/** light button **/
-.light-btn {
-	background : white;
-	margin : 1rem auto .5rem;
-	padding : .4rem .5rem .35rem;
-	border : 1px solid;
-	font-family : inherit;
-	font-size : 16px;
-}
-.light-btn:active {
-	background : #f7f7f7;
 }
 
 .intro {
