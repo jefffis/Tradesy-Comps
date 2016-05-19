@@ -443,6 +443,55 @@
 								<input type="radio" name="collection" value="Chanel x Christian Louboutin" data-return />
 								<span>Chanel x Christian Louboutin</span>
 							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
+								<span>Christian Louboutin 4eva</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
+								<span>Christian Louboutin 4eva</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
+								<span>Christian Louboutin 4eva</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
+								<span>Christian Louboutin 4eva</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
+								<span>Christian Louboutin 4eva</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
+								<span>Christian Louboutin 4eva</span>
+							</label>
+							<button type="button" id="load-collections" class="light-btn">Load More</button>
 						</div>
 					</div>
 					<hr />
@@ -544,6 +593,34 @@
 						$(this).parents('div').find('.hidden').hide();
 						$(this).parents('div').find('.vis').show();
 					}
+				});
+
+				$('#load-collections').on('click', function() {
+					var nextFive = $(this).parents('div').find('.hidden'),
+						i = 0,
+						last = false;
+
+					if ( nextFive.length <= 4 ) {
+						last = true;
+					}
+
+					$('html, body').animate({
+						scrollTop : $(this).offset().top
+					}, 500);
+
+					nextFive.each(function(i) {
+
+						if ( i > 4 ) {
+							return;
+						}
+
+						if ( last ) {
+							$('#load-collections').remove();
+						}
+
+						$(this).removeClass('hidden');
+						i++;
+					});
 				});
 
 				sort.on('click', function() {

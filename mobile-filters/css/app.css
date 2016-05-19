@@ -1003,6 +1003,18 @@ input:checked + span img {
 	content : " items";
 }
 
+/** light button **/
+.light-btn {
+	background : white;
+	margin : 1rem auto .5rem;
+	padding : .4rem .5rem .35rem;
+	border : 1px solid;
+	font-family : inherit;
+	font-size : 16px;
+}
+.light-btn:active {
+	background : #f7f7f7;
+}
 
 .intro {
 	position : relative;
