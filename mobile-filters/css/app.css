@@ -323,11 +323,14 @@ hr {
 	margin : auto auto 1rem;
 	padding : 0 1.25rem;
 }
+.filter > .last {
+	padding-bottom : 1rem;
+}
 label {
 	display : block;
 }
 label:nth-child(n+2) {
-	margin-top : .5rem;
+	margin-top : .75rem;
 }
 .hidden {
 	display : none;
@@ -412,9 +415,9 @@ input[type=radio], input[type=checkbox] {
 input + span:before {
 	display : inline-block;
 	position : relative;
-	top : 3px;
-	height : .95rem;
-	width : .95rem;
+	top : 4px;
+	height : 18px;
+	width : 18px;
 	margin-right : .5rem;
 	border : 1px solid;
 	content : "";
@@ -425,9 +428,13 @@ input[type=radio] + span:before {
 input:checked + span:before {
 	background : #111;
 }
-/*input[type=radio]:checked + span:before {
-	box-shadow : 0 0 0 2px white, 0 0 0 3px #111;
-}*/
+input[type=checkbox]:checked + span:before {
+	background : #111 url(https://assets.tradesy.com/images/forms/check-white.svg) no-repeat center;
+	background-size : 80%;
+}
+input[type=radio]:checked + span:before {
+	box-shadow : 0 0 0 1px #111 inset, 0 0 0 2px white inset, 0 0 0 3px white inset;
+}
 
 /** disabled **/
 input:disabled + span {
@@ -461,8 +468,8 @@ input:disabled + span img {
 	/*position : relative;
 	top : -3px; */
 	float : left;
-	max-width : 45px;
-    margin : auto .75rem auto auto;
+	max-width : 55px;
+    margin : auto 15px auto auto;
     padding : 4px;
     border : 1px solid #ddd;
 }
@@ -474,7 +481,7 @@ input:checked + span img {
 .images em {
 	display : inline-block;
 	float : left;
-	padding-top : 10px;
+	padding-top : 15px;
 	font-style : normal;
 }
 
@@ -674,16 +681,20 @@ input:checked + span img {
 /*.checked input + span:before {
 	box-shadow : 0 0 0 1px rgba(0, 0, 0, 0.5) inset;
 }*/
+.color input:checked + span:before {
+	background-image : none;
+}
 .color input:checked + span:after {
 	display: block;
 	position : absolute;
-	top : 6px;
+	top : 8px;
 	left : 50%;
-	z-index : 2;
+	z-index : 3;
     height : 40px;
 	width : 40px;
-    background : url(../img/check-blk.png) no-repeat center;
-	background-size : 54px;
+	background : url(../img/check-blk.png) no-repeat center;
+	background-size : 66%;
+	border-radius : 100%;
 	margin-left : -20px;
     content : "";
 }
