@@ -658,6 +658,7 @@ input:checked + span img {
 
 .toggle input:checked + span:before {
 	right : calc(1.25rem - 5px);
+	background : white;
 }
 .toggle input:checked + span:after {
 	background : currentColor;
