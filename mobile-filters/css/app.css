@@ -267,7 +267,7 @@ small button:after {
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 	font-size : 14px;
 }
-/*[data-toggleable]:active {
+/*[data-tappable]:active {
 	opacity : .65;
 }*/
 
@@ -563,6 +563,9 @@ input:checked + span img {
 	/*padding : 1px;*/
 	/*border : 1px solid;*/
 }
+.filter-card > .tab {
+	margin-top : .25rem;
+}
 .filter > .tab {
 	margin-left : 1.25rem;
 	margin-right : 1.25rem;
@@ -849,6 +852,21 @@ input:checked + span img {
 .light-btn:active {
 	background : #ddd;
 }
+.light-btn:disabled {
+	position : relative;
+	border-color : #f7f7f7;
+}
+.light-btn:disabled:after {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 0;
+	height : 100%;
+	width : 100%;
+	background : #f7f7f7 url(../img/loading-d.gif) no-repeat center;
+	background-size : 24px;
+	content : "";
+}
 
 /** non-size-wrapper **/
 #non-size-filters {
@@ -928,7 +946,7 @@ input:checked + span img {
 	text-transform : uppercase;
 }
 #size-wrapper .tab {
-	margin-top : .25rem;
+	/*margin-top : .25rem;*/
 	margin-bottom : .85rem;
 }
 
@@ -962,33 +980,44 @@ input:checked + span img {
 
 #size, #size2 {
 	display : block;
-	background : #ddd;
-	margin : auto 1.25rem 1.25rem;
+	/*background : #ddd;*/
+	margin : auto 1rem 1rem;
 	padding : 1px 0;
 	/*border-collapse : collapse;*/
+}
+#size {
+	margin-bottom : 1.5rem;
 }
 #size label, #size2 label {
 	display : block;
 	float : left;
 	width : calc(20% - 1px);
 	background : white;
-	margin : 0 .5px;
-	padding : .5rem 0 .45rem;
-	/*border : 1px solid #ddd;*/
-	/*border-right : 0;
-	border-bottom : 0;*/
+	/*margin : 0 .5px;*/
+	padding : .25rem;
 	text-align : center;
 }
-#size label:nth-child(n+6), #size2 label:nth-child(n+6) {
+.size label:nth-child(n+2) {
+	margin-top : 0;
+}
+/*#size label:nth-child(n+6), #size2 label:nth-child(n+6) {
 	margin-top : 1px;
+}*/
+.size span {
+	display : block;
+	padding : .5rem;
+	border : 1px solid;
 }
 #size span:before, #size2 span:before {
 	display : none;
 }
-#size .checked, #size2 .checked {
+/*#size .checked, #size2 .checked {
 	background : #111;
-	/*border-color : #111;*/
 	box-shadow : 0 0 0 1px #111;
+	color : white;
+}*/
+.size .checked span {
+	background : #111;
 	color : white;
 }
 

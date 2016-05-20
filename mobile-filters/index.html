@@ -215,7 +215,7 @@
 								<span>13</span>
 							</label>
 						</div>
-						<hr />
+						<!-- <hr /> -->
 						<label class="toggle">
 							<input type="checkbox" name="save-size" />
 							<span>Save Sizes</span>
@@ -605,11 +605,13 @@
 						last = true;
 					}
 
-					// console.log(nextFour.length);
+					$(this).prop('disabled', true);
 
 					$('html, body').animate({
 						scrollTop : $(this).offset().top
 					}, 500);
+
+					enableButton($(this));
 
 					nextFour.each(function(i) {
 
@@ -747,6 +749,12 @@
 				$('input:disabled').parents('label').addClass('disabled');
 
 			});
+
+			function enableButton(el) {
+				setTimeout(function() {
+					el.prop('disabled', false);
+				}, 500);
+			}
 
 			function reset(el) {
 				el.prop('disabled', true);
