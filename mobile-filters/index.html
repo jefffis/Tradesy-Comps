@@ -64,56 +64,7 @@
 						<button type="button" id="size-out">Back</button>
 					</div>
 					<div class="filter">
-						<h2 data-selected="Clothing: All; Shoes: All">Size</h2>
-						<h3>Clothing</h3>
-						<div class="cf tab">
-							<span class="active">Regular</span>
-							<span>Petite</span>
-							<span>Plus</span>
-						</div>
-						<div id="size2" class="cf size">
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>00</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>0</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>2</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>4</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>6</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>8</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>10</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>12</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>14</span>
-							</label>
-							<label>
-								<input type="checkbox" name="sizec" value="1" data-return />
-								<span>OS</span>
-							</label>
-						</div>
-						<hr />
+						<h2 _data-selected="Clothing: All; Shoes: All">Size</h2>
 						<h3>Shoes</h3>
 						<div class="cf tab four">
 							<span class="active">US</span>
@@ -216,6 +167,54 @@
 							</label>
 						</div>
 						<!-- <hr /> -->
+						<h3>Clothing</h3>
+						<div class="cf tab">
+							<span class="active">Regular</span>
+							<span>Petite</span>
+							<span>Plus</span>
+						</div>
+						<div id="size2" class="cf size">
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>00</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>0</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>2</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>4</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>6</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>8</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>10</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>12</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>14</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>OS</span>
+							</label>
+						</div>
 						<label class="toggle">
 							<input type="checkbox" name="save-size" />
 							<span>Save Sizes</span>
@@ -439,20 +438,19 @@
 								<input type="radio" name="collection" value="Shoesday: All Under $500" data-return />
 								<span>Shoesday: All Under $500</span>
 							</label>
-
-							<label class="hidden">
+							<label>
 								<input type="radio" name="collection" value="Chanel x Christian Louboutin" data-return />
 								<span>Chanel x Christian Louboutin</span>
 							</label>
-							<label class="hidden">
+							<label>
 								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
 								<span>Another Christian Louboutin Collection</span>
 							</label>
-							<label class="hidden">
+							<label>
 								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
 								<span>Christian Louboutin 4eva</span>
 							</label>
-							<label class="hidden">
+							<label>
 								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
 								<span>Another Christian Louboutin Collection</span>
 							</label>
@@ -645,7 +643,7 @@
 
 					ajaxUpdateFilters(ajaxOverlay);
 					toggle.toggleClass('active');
-					setDataAttr(toggle.prev('h2'), ctx);
+					setDataAttrNonVal(toggle.prev('h2'), ctx);
 				});
 
 				tabs.on('click', function() {
@@ -807,11 +805,16 @@
 					if ( selectdReturn ) {
 						return;
 					}
-					if ( size ) {
-						$('#sizing').show();
-					} else {
-						$('#sizing').hide();
-					}
+				}, 751);
+			}
+
+			function setDataAttrNonVal(el, text) {
+				var selectdReturn = el.data('return') !== undefined ? true : false;
+
+				setTimeout(function() {
+					
+					el.attr('data-selected', text);
+
 				}, 751);
 			}
 

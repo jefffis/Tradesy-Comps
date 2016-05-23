@@ -982,12 +982,8 @@ input:checked + span img {
 #size, #size2 {
 	display : block;
 	/*background : #ddd;*/
-	margin : auto 1rem 1rem;
+	margin : auto 1rem 1.5rem;
 	padding : 1px 0;
-	/*border-collapse : collapse;*/
-}
-#size {
-	margin-bottom : 1.5rem;
 }
 #size label, #size2 label {
 	display : block;
