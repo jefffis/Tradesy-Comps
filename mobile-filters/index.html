@@ -310,7 +310,7 @@
 							<span>Sold</span>
 						</div>
 						<hr />
-						<h2 data-selected="All items">Sale</h2>
+						<h2 data-selected="All items">On Sale</h2>
 						<div id="toggle"></div>
 					</div>
 					<div class="filter" data-toggleable>
@@ -498,6 +498,10 @@
 						<h2 data-selected="All">Condition</h2>
 						<div>
 							<label>
+								<input type="radio" name="condition" checked value="All" data-return />
+								<span>All Items</span>
+							</label>
+							<label>
 								<input type="radio" name="condition" disabled value="Gently Used" data-return />
 								<span>Gently Used</span>
 							</label>
@@ -515,6 +519,10 @@
 					<div class="filter" data-toggleable>
 						<h2 data-selected="All">Discount</h2>
 						<div class="last">
+							<label>
+								<input type="radio" name="discount" checked value="All" data-return />
+								<span>All Items</span>
+							</label>
 							<label>
 								<input type="radio" name="discount" disabled value="90% Off or More" data-return />
 								<span>90% Off or More</span>
