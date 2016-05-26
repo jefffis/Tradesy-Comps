@@ -33,12 +33,12 @@
 			<div id="main">
 
 				<div class="solo">
-					<h2 data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">How Returns Work</h2>
+					<h2 data-content="What the Returns process is, and everything else related to Returns through Tradesy.">How Returns Work</h2>
 					<a href="#">The Returns Process</a>
 					<a href="#">How To Initiate A Return</a>
 					<a href="#">Past the 4 Day Window</a>
-					<a href="#">Returns for International Buyers</a>
-					<a href="#">Affirm Returns</a>
+					<a href="#" data-short-content="International buyers are responsible for return shipping fees. Tradesy does not cover the cost. You can return any non-wedding item for Tradesy site credit. This includes items that may have been misrepresented. Due to the delivery timeline for international shipping, we cannot offer refunds for items that were not as described. All international returns will be processed as site credit.">Returns for International Buyers</a>
+					<a href="#" data-short-content="Think of Affirm as another credit card - you qualify for a line of credit and pay on an installment plan like with a Mastercard or Visa. In the same way, purchases made using Affirm qualify for the same  Refund and Credit Guidelines.">Affirm Returns</a>
 					<a href="#">Wedding Returns</a>
 					<a href="#">Returns In Person</a>
 				</div>
@@ -69,12 +69,13 @@
 				links.on('click', function(e) {
 					e.preventDefault();
 
-					var insertedContent = '<div id="short-answer" class="cf"><h3>' + $(this).text() + '</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae consectetur aliquid non inventore officia ducimus error amet delectus distinctio nisi iste, modi accusantium aut quo quaerat ut laboriosam impedit velit.</p><button>Contact Us</button><a href="' + $(this).attr('href') + '">Read Article</a></div>';
+					var content = $(this).data('short-content') !== undefined ? $(this).data('short-content') : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae consectetur aliquid non inventore officia ducimus error amet delectus distinctio nisi iste, modi accusantium aut quo quaerat ut laboriosam impedit velit.',
+						insertedContentDiv = '<div id="short-answer" class="cf"><h3>' + $(this).text() + '</h3><p>' + content + '</p><div class="divider">Was this helpful?</div><button>Contact Us</button><a href="' + $(this).attr('href') + '">Read the full article</a></div>';
 
 					links.removeClass(hidden.substr(1));
 					$(this).addClass(hidden.substr(1));
 					$('body').find(shortAnswer).remove();
-					$(this).after(insertedContent);
+					$(this).after(insertedContentDiv);
 				});
 
 			});

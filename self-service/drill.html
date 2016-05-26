@@ -33,15 +33,15 @@
 			<div id="main" class="hidden">
 
 				<div>
-					<h2 data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">Your Tradesy Inbox</h2>
-					<a href="#">Tradesy Messaging</a>
+					<h2 data-content="Messaging members, managing your messages, and everything else related to Messaging.">Your Tradesy Inbox</h2>
+					<a href="#" class="first" data-short-content="Tradesy messaging allows our members to learn more about the items for sale on the site. Since we're peer-to-peer, this is a great way to find out more details, negotiate price, or - if an item has sold - see if the seller has another similar item.">Tradesy Messaging</a>
 					<a href="#">Contact Your Buyer</a>
 					<a href="#">Contact Your Seller</a>
 				</div>
 
 				<div>
 					<h2 data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">Tradesy Basics</h2>
-					<a href="#">Anatomy of a Listing</a>
+					<a href="#" class="first">Anatomy of a Listing</a>
 					<a href="#">Tradesy 101</a>
 					<a href="#">Logging In</a>
 					<a href="#">Still Can't Log In?</a>
@@ -50,7 +50,7 @@
 
 				<div>
 					<h2 data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">Your Account</h2>
-					<a href="#">Community Guidelines</a>
+					<a href="#" class="first">Community Guidelines</a>
 					<a href="#">Navigating Your Account</a>
 					<a href="#">Tradesy Text Alerts</a>
 					<a href="#">Refer a Friend to Tradesy</a>
@@ -58,24 +58,12 @@
 
 				<div>
 					<h2 data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">Policies and Authenticity</h2>
-					<a href="#">The Authentication Process</a>
+					<a href="#" class="first">The Authentication Process</a>
 					<a href="#">Tradesy Guarantee</a>
 					<a href="#">Our Policies</a>
 				</div>
 
 			</div>
-
-			<!-- <aside>
-				<a href="##" class="active">How Tradesy Works</a>
-				<a href="##">Buying</a>
-				<a href="##">Selling</a>
-				<a href="##">Shipping</a>
-				<a href="##">Returns</a>
-				<a href="##">Earnings &amp; Payouts</a>
-				<a href="##">Tradesy for iOS</a>
-				<a href="##">Tradesy for Android</a>
-				<a href="##">Troubleshooting</a>
-			</aside> -->
 
 		</section>
 
@@ -89,17 +77,25 @@
 				links.on('click', function(e) {
 					e.preventDefault();
 
-					var insertedContent = '<div id="short-answer" class="cf"><h3>' + $(this).text() + '</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae consectetur aliquid non inventore officia ducimus error amet delectus distinctio nisi iste, modi accusantium aut quo quaerat ut laboriosam impedit velit.</p><button>Contact Us</button><a href="' + $(this).attr('href') + '">Read Article</a></div>';
+					var content = $(this).data('short-content') !== undefined ? $(this).data('short-content') : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae consectetur aliquid non inventore officia ducimus error amet delectus distinctio nisi iste, modi accusantium aut quo quaerat ut laboriosam impedit velit.',
+						insertedContentDiv = '<div id="short-answer" class="cf"><h3>' + $(this).text() + '</h3><p>' + content + '</p><div class="divider">Was this helpful?<span>👍</span><span>👎</span></div><button>Contact Us</button><a href="' + $(this).attr('href') + '">Read the full article</a></div>';
 
 					links.removeClass(hidden.substr(1));
 					$(this).addClass(hidden.substr(1));
 					$('body').find(shortAnswer).remove();
-					$(this).after(insertedContent);
+					$(this).after(insertedContentDiv);
 				});
 
 				var sectionToggles = $('h2');
 
 				sectionToggles.on('click', function() {
+
+					if ( $(this).parent().hasClass('shown') ) {
+						$('body').find(shortAnswer).remove();
+						$(this).parent().removeClass('shown');
+						return
+					}
+
 					sectionToggles.parent().removeClass('shown');
 					$(this).parent().addClass('shown');
 					links.removeClass(hidden.substr(1));

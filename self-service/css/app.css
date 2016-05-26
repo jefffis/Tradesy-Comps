@@ -57,7 +57,7 @@ aside {
 
 }
 nav {
-	padding-bottom: 2rem;
+	padding: 0 0 2rem .75rem;
 	/*border-bottom : 1px solid #ddd;*/
 }
 nav a {
@@ -82,11 +82,12 @@ h2 {
 }
 h3 {
 	margin-bottom : .5rem;
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 17px;
 }
 p {
 	margin-bottom : 1rem;
-	color : #333;
+	/*color : #333;*/
 	font-size : 14px;
 }
 a {
@@ -97,11 +98,16 @@ a {
 }
 button {
 	float : left;
-	background : white;
-	padding : .5rem .75rem .45rem;
-	border : 1px solid;
-	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+	outline : none;
+	background : #111;
+	padding : .5rem .75rem;
+	/*border : 1px solid;*/
+	color : white;
+	font-family : inherit;
 	font-size : 14px;
+}
+button:active {
+	color : rgba(255, 255, 255, 0.75);
 }
 
 #main {
@@ -120,6 +126,9 @@ button {
 	padding : 0 .5rem 1rem;
 	border-bottom : 1px solid #ddd;
 	cursor : pointer;
+}
+.hidden h2:active, a:active {
+	opacity : .65;
 }
 .solo h2 {
 	margin-bottom : 1rem;
@@ -171,20 +180,42 @@ div .hidden {
 	font-size : 13px;
 }
 
+/*a.first + #short-answer {
+	margin-top : -.5rem;
+}*/
 #short-answer {
 	max-width : 600px;
-	margin : .5rem .25rem;
+	margin : .5rem .25rem 1rem;
 	padding : 1rem 1.5rem;
     border-left : 5px solid #ddd;
 }
 #short-answer a {
 	display : inline-block;
 	float : left;
-	margin-left : 2rem;
+	margin-left : 1rem;
 	padding-top : .35rem;
 	color : #111;
 	font-size : 14px;
 	text-decoration : underline;
+}
+#short-answer a:before {
+	display : inline-block;
+	margin-right : 1rem;
+	color : #999;
+	content : "or";
+}
+#short-answer .divider {
+	margin-left : calc(-1rem - 10px);
+	padding : 1rem 0 1rem calc(1rem + 10px);
+	border-top : 1px solid #ddd;
+}
+.divider span {
+	display : inline-block;
+	margin : 0 1rem;
+	cursor : pointer;
+}
+.divider span + span {
+	margin : 0;
 }
 
 /*div a:nth-child(n+3) {
