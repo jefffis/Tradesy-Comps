@@ -39,22 +39,53 @@ header:after {
 	content : "";
 }
 
-#tlc a {
+[type=search] {
+	display : block;
+	width : 500px;
+	background : white url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-128.png) no-repeat calc(100% - 1rem) center;
+	background-size : 30px;
+	margin : 2rem auto 1rem;
+	padding : 1rem;
+	border : 1px solid;
+	border-radius : 30px; 
+}
+
+#tlc {
+	padding-bottom : 2rem;
+}
+#tlc div a {
 	display : block;
 	float : left;
 	width : calc(33% - 1rem);
 	margin : 0 .5rem 1rem;
 	padding : 4rem 1rem;
 	border : 1px solid;
+	color : inherit;
 	font-size : 20px;
 	text-align : center;
 }
-#tlc a:nth-child(3n+3) {
+#tlc div a:nth-child(3n+3) {
 	float : right;
 }
 
-aside {
-
+#faqs {
+	position : relative;
+	height : 300px;
+	background : #ddd;
+	margin-bottom : 4rem;
+	text-align : center;
+}
+#faqs:after {
+	display : block;
+	position : absolute;
+	top : 50%;
+	left : 0;
+	height : 1rem;
+	width : 100%;
+	margin-top : -.5rem;
+	color : #666;
+	content : "Instant Answers";
+	line-height : 1;
 }
 nav {
 	padding: 0 0 2rem .75rem;
