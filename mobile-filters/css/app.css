@@ -242,6 +242,9 @@ small button:after {
 	font-size : 18px;
 	font-weight : normal;
 }
+#filters .none {
+	padding-bottom : .35rem;
+}
 #filters h2:before {
 	display : block;
 	position : absolute;
@@ -267,6 +270,11 @@ small button:after {
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 	font-size : 14px;
 }
+
+#filters .none:before {
+	display : none;
+}
+
 /*[data-tappable]:active {
 	opacity : .65;
 }*/
@@ -336,7 +344,13 @@ label:nth-child(n+2) {
 	display : none;
 }
 .inline {
-	margin : 1rem auto 1.25rem;
+	margin : auto auto 1.25rem;
+}
+.inline input[type=text] {
+	margin-top : 0;
+}
+.inline small {
+	padding : .35rem 0 0;
 }
 /*.inline label {
 	float : left;
@@ -448,10 +462,69 @@ input:disabled + span img {
 	opacity : .125;
 }
 
+.filter > .images {
+	display : block;
+	margin-bottom : 0;
+}
 .images input + span:before {
 	display : none;
 }
-.images .checked {
+.images label {
+	position : relative;
+	/*z-index : 1;*/
+	float : left;
+	width : 33.3%;
+	padding : .75rem .35rem;
+	border : 1px solid #ddd;
+	/*box-shadow : 0 0 0 1px #ddd inset;*/
+	text-align : center;
+}
+.images label:nth-child(3n+3) {
+	width : 33.4%;
+}
+.images label:nth-child(n+2) {
+	margin-top : 0;
+	border-left : 0;
+}
+.images label:nth-child(n+4) {
+	border-top : 0;
+}
+.images label:nth-child(4), .images label:nth-child(7) {
+	border-left : 1px solid #ddd;
+}
+.images .checked img {
+	opacity : .5;
+}
+.images .checked:after {
+	display: block;
+	position : absolute;
+	top : 50%;
+	left : 50%;
+	z-index : 3;
+	height : 50px;
+	width : 50px;
+    /*height : calc(100% + 2px);
+	width : calc(100% + 2px);*/
+	/*box-shadow : 0 0 0 1px #111 inset;*/
+	/*background : red;*/
+	background : url(../img/check-blk.png) no-repeat center;
+	background-size : 66%;
+	border-radius : 100%;
+	/*box-shadow : 0 0 0 1px #111 inset;*/
+	margin-top : -33px;
+	margin-left : -25px;
+    content : "";
+}
+.images img {
+	height : 45px;
+}
+.images em {
+	display : block;
+	padding-top : .35rem;
+	font-size : 11px;
+	font-style : normal;
+}
+/*.images .checked {
 	background : url(https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-checkmark-empty-256.png) no-repeat calc(100% - .25rem) center;
 	background-size : 50px;
 	box-shadow : 0 0 0 1px #111 inset;
@@ -462,11 +535,9 @@ input:disabled + span img {
 .images label:last-child {
 	margin-bottom : .5rem;
 }
-/*.images label img */
+
 .images img {
 	display : inline-block;
-	/*position : relative;
-	top : -3px; */
 	float : left;
 	max-width : 55px;
     margin : auto 15px auto auto;
@@ -475,15 +546,13 @@ input:disabled + span img {
 }
 input:checked + span img {
 	border-color : inherit;
-	/*border-right-color : transparent;*/
-	/*box-shadow : 0 0 0 1px currentColor;*/
 }
 .images em {
 	display : inline-block;
 	float : left;
 	padding-top : 15px;
 	font-style : normal;
-}
+}*/
 
 #filters .filter-card h2 {
 	padding : 0;
@@ -985,7 +1054,7 @@ input:checked + span img {
 	margin : auto 1rem 1.5rem;
 	padding : 1px 0;
 }
-#size label, #size2 label {
+#size label, #size2 label, .size label {
 	display : block;
 	float : left;
 	width : calc(20% - 1px);
@@ -994,6 +1063,14 @@ input:checked + span img {
 	padding : .25rem;
 	text-align : center;
 }
+
+.three.size label {
+	width : calc(33.3% - 1px);
+}
+.three.size {
+	margin : .25rem -.25rem auto;
+}
+
 .size label:nth-child(n+2) {
 	margin-top : 0;
 }
@@ -1005,7 +1082,7 @@ input:checked + span img {
 	padding : .5rem;
 	border : 1px solid;
 }
-#size span:before, #size2 span:before {
+#size span:before, #size2 span:before, .size span:before {
 	display : none;
 }
 /*#size .checked, #size2 .checked {
@@ -1137,8 +1214,31 @@ input:checked + span img {
 	z-index : 5;
 	height : 100vh;
 	width : 100vw;
-	background : rgba(255, 255, 255, 0.5) url(../img/loading-d.gif) no-repeat center;
-	background-size : 50px;
+	background : rgba(255, 255, 255, 0.5);
+	/*background : rgba(255, 255, 255, 0.5) url(../img/loading-d.gif) no-repeat center;
+	background-size : 50px;*/
+}
+/*#ajax-overlay:before {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 0;
+	height : 5px;
+	width : 100vw;
+	background : rgba(0, 0, 0, 0.5);
+	content : "";
+}*/
+#ajax-overlay:after {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 0;
+	height : 5px;
+	width : 0;
+	background : #ee7873;
+	content : "";
+
+	animation : fullWidth .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 
@@ -1178,5 +1278,13 @@ iframe {
 		display : block;
 		top : 100%;
 		opacity : 1;
+	}
+}
+@keyframes fullWidth {
+	0% {
+		width : 0;
+	}
+	100% {
+		width : 100vw;
 	}
 }

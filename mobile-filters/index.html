@@ -224,9 +224,9 @@
 
 				<div id="non-size-filters">
 
-					<div class="filter" data-toggleable>
-						<h2 data-selected="All">Shoes</h2>
-						<div class="images">
+					<div class="filter" _data-toggleable>
+						<h2 data-selected="All" class="none">Shoes</h2>
+						<div class="images cf">
 							<label>
 								<input type="checkbox" name="shoes" value="Boots &amp; Booties" data-sizing />
 								<span class="cf">
@@ -292,7 +292,7 @@
 							</label>
 						</div>
 					</div>
-					<hr />
+					<!-- <hr /> -->
 					<div class="filter-card">
 						<div id="size-card">
 							<h2 data-selected="Clothing: All; Shoes: All">Size</h2>
@@ -304,10 +304,19 @@
 						</div>
 						<hr />
 						<h2>Availability</h2>
-						<div id="tab" class="cf tab">
-							<span class="active">All</span>
-							<span>In Stock</span>
-							<span>Sold</span>
+						<div id="tab" class="cf three size">
+							<label>
+								<input type="radio" name="availability" value="All" data-return />
+								<span>All items</span>
+							</label>
+							<label>
+								<input type="radio" name="availability" value="In Stock" data-return />
+								<span>In Stock</span>
+							</label>
+							<label>
+								<input type="radio" name="availability" value="Sold" data-return />
+								<span>Sold</span>
+							</label>
 						</div>
 						<hr />
 						<h2 data-selected="All items">On Sale</h2>
@@ -316,6 +325,13 @@
 					<div class="filter" data-toggleable>
 						<h2 data-selected="All">Designer</h2>
 						<div>
+							<div class="inline cf">
+								<label>
+									<!-- <span>Find a Designer:</span> -->
+									<input type="text" name="search-designer" autocomplete="off" />
+									<small>Search for a specific Designer</small>
+								</label>
+							</div>
 							<label class="vis">
 								<input type="checkbox" name="designer" value="Louis Vuitton" data-return />
 								<span>Louis Vuitton</span>
@@ -344,12 +360,6 @@
 								<input type="checkbox" name="designer" value="And More Designer" data-return />
 								<span>And More Designer</span>
 							</label>
-							<div class="inline cf">
-								<label>
-									<span>Find a Designer:</span>
-									<input type="text" name="search-designer" autocomplete="off" />
-								</label>
-							</div>
 						</div>
 					</div>
 					<hr />
@@ -418,7 +428,7 @@
 							</label>
 						</div>
 					</div>
-					<hr />
+					<!-- <hr />
 					<div class="filter" data-toggleable>
 						<h2 data-selected="All">Collection</h2>
 						<div class="collections">
@@ -492,7 +502,7 @@
 							<hr />
 							<button type="button" id="load-collections" class="light-btn">Load More</button>
 						</div>
-					</div>
+					</div> -->
 					<hr />
 					<div class="filter" data-toggleable>
 						<h2 data-selected="All">Condition</h2>
@@ -705,6 +715,12 @@
 				});
 
 				$('input', '.size').on('click', function() {
+					var radio = $(this).attr('type') === 'radio' ? true : false;
+
+					if ( radio ) {
+						$(this).parents('div').find('label').removeClass('checked');
+					}
+
 					$(this).parents('label').toggleClass('checked');
 				});
 
