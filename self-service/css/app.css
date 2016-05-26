@@ -39,6 +39,20 @@ header:after {
 	content : "";
 }
 
+#tlc a {
+	display : block;
+	float : left;
+	width : calc(33% - 1rem);
+	margin : 0 .5rem 1rem;
+	padding : 4rem 1rem;
+	border : 1px solid;
+	font-size : 20px;
+	text-align : center;
+}
+#tlc a:nth-child(3n+3) {
+	float : right;
+}
+
 aside {
 
 }
@@ -92,7 +106,7 @@ button {
 #main {
 	float : right;
 	width : 80%;
-	padding-top : 2rem;
+	padding-top : 0;
 	padding-bottom: 2rem;
 	padding-left : 5%;
 	border-left : 1px solid #ddd;
