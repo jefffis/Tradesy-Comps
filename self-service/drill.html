@@ -30,17 +30,17 @@
 				<a href="##">Troubleshooting</a>
 			</aside>
 
-			<div id="main">
+			<div id="main" class="hidden">
 
 				<div>
-					<h2>Your Tradesy Inbox</h2>
+					<h2 data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">Your Tradesy Inbox</h2>
 					<a href="#">Tradesy Messaging</a>
 					<a href="#">Contact Your Buyer</a>
 					<a href="#">Contact Your Seller</a>
 				</div>
 
 				<div>
-					<h2>Tradesy Basics</h2>
+					<h2 data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">Tradesy Basics</h2>
 					<a href="#">Anatomy of a Listing</a>
 					<a href="#">Tradesy 101</a>
 					<a href="#">Logging In</a>
@@ -49,7 +49,7 @@
 				</div>
 
 				<div>
-					<h2>Your Account</h2>
+					<h2 data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">Your Account</h2>
 					<a href="#">Community Guidelines</a>
 					<a href="#">Navigating Your Account</a>
 					<a href="#">Tradesy Text Alerts</a>
@@ -57,7 +57,7 @@
 				</div>
 
 				<div>
-					<h2>Policies and Authenticity</h2>
+					<h2 data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">Policies and Authenticity</h2>
 					<a href="#">The Authentication Process</a>
 					<a href="#">Tradesy Guarantee</a>
 					<a href="#">Our Policies</a>
@@ -97,18 +97,14 @@
 					$(this).after(insertedContent);
 				});
 
-				if (window.location.hash) {
-					var sectionToggles = $('h2');
+				var sectionToggles = $('h2');
 
-					$('#main').addClass('hidden');
-
-					sectionToggles.on('click', function() {
-						sectionToggles.parent().removeClass('shown');
-						$(this).parent().addClass('shown');
-						links.removeClass(hidden.substr(1));
-						$('body').find(shortAnswer).remove();
-					});
-				}
+				sectionToggles.on('click', function() {
+					sectionToggles.parent().removeClass('shown');
+					$(this).parent().addClass('shown');
+					links.removeClass(hidden.substr(1));
+					$('body').find(shortAnswer).remove();
+				});
 
 			});
 		</script>

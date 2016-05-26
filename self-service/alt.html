@@ -14,8 +14,8 @@
 		<section>
 
 			<nav>
-				<a href="#">Help</a>
-				<span>How Tradesy Works</span>
+				<a href="index.html">Help</a>
+				<span>Returns</span>
 			</nav>
 
 			<aside>
@@ -30,37 +30,17 @@
 				<a href="##">Troubleshooting</a>
 			</aside>
 
-			<div id="main" class="hidden">
+			<div id="main">
 
-				<div>
-					<h2>Your Tradesy Inbox</h2>
-					<a href="#">Tradesy Messaging</a>
-					<a href="#">Contact Your Buyer</a>
-					<a href="#">Contact Your Seller</a>
-				</div>
-
-				<div>
-					<h2>Tradesy Basics</h2>
-					<a href="#">Anatomy of a Listing</a>
-					<a href="#">Tradesy 101</a>
-					<a href="#">Logging In</a>
-					<a href="#">Still Can't Log In?</a>
-					<a href="#">Your Closet Guide</a>
-				</div>
-
-				<div>
-					<h2>Your Account</h2>
-					<a href="#">Community Guidelines</a>
-					<a href="#">Navigating Your Account</a>
-					<a href="#">Tradesy Text Alerts</a>
-					<a href="#">Refer a Friend to Tradesy</a>
-				</div>
-
-				<div>
-					<h2>Policies and Authenticity</h2>
-					<a href="#">The Authentication Process</a>
-					<a href="#">Tradesy Guarantee</a>
-					<a href="#">Our Policies</a>
+				<div class="solo">
+					<h2 data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit.">How Returns Work</h2>
+					<a href="#">The Returns Process</a>
+					<a href="#">How To Initiate A Return</a>
+					<a href="#">Past the 4 Day Window</a>
+					<a href="#">Returns for International Buyers</a>
+					<a href="#">Affirm Returns</a>
+					<a href="#">Wedding Returns</a>
+					<a href="#">Returns In Person</a>
 				</div>
 
 			</div>
@@ -95,15 +75,6 @@
 					$(this).addClass(hidden.substr(1));
 					$('body').find(shortAnswer).remove();
 					$(this).after(insertedContent);
-				});
-
-				var sectionToggles = $('h2');
-
-				sectionToggles.on('click', function() {
-					sectionToggles.parent().removeClass('shown');
-					$(this).parent().addClass('shown');
-					links.removeClass(hidden.substr(1));
-					$('body').find(shortAnswer).remove();
 				});
 
 			});
