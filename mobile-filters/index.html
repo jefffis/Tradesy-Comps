@@ -224,72 +224,109 @@
 
 				<div id="non-size-filters">
 
-					<div class="filter" _data-toggleable>
-						<h2 data-selected="All" class="none">Shoes</h2>
-						<div class="images cf">
-							<label>
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All" id="department" class="none">Shoes</h2>
+						<div id="images" class="images cf">
+							<label class="shoes">
 								<input type="checkbox" name="shoes" value="Boots &amp; Booties" data-sizing />
 								<span class="cf">
 									<img src="https://images.tradesy.com/images/grid/product/shoes-boots-booties.jpg" />
 									<em>Boots &amp; Booties</em>
 								</span>
 							</label>
-							<label>
+							<label class="shoes">
 								<input type="checkbox" name="shoes" value="Flats" data-sizing />
 								<span class="cf">
 									<img src="https://images.tradesy.com/images/grid/product/shoes-flats2.jpg" />
 									<em>Flats</em>
 								</span>
 							</label>
-							<label>
+							<label class="shoes">
 								<input type="checkbox" name="shoes" value="Mules &amp; Clogs" data-sizing />
 								<span class="cf">
 									<img src="https://images.tradesy.com/images/grid/product/shoes-mules-clogs.jpg" />
 									<em>Mules &amp; Clogs</em>
 								</span>
 							</label>
-							<label>
+							<label class="shoes">
 								<input type="checkbox" name="shoes" value="Pumps" data-sizing />
 								<span class="cf">
 									<img src="https://images.tradesy.com/images/grid/product/shoes-pumps.jpg" />
 									<em>Pumps</em>
 								</span>
 							</label>
-							<label>
+							<label class="shoes">
 								<input type="checkbox" name="shoes" value="Sandals" data-sizing />
 								<span class="cf">
 									<img src="https://images.tradesy.com/images/grid/product/shoes-sandals.jpg" />
 									<em>Sandals</em>
 								</span>
 							</label>
-							<label>
+							<label class="shoes">
 								<input type="checkbox" name="shoes" value="Athletic" data-sizing />
 								<span class="cf">
 									<img src="https://images.tradesy.com/images/grid/product/shoes-athletic.jpg" />
 									<em>Athletic</em>
 								</span>
 							</label>
-							<label>
+							<label class="shoes">
 								<input type="checkbox" name="shoes" disabled value="Platforms" data-sizing />
 								<span class="cf">
 									<img src="https://images.tradesy.com/images/grid/product/shoes-platforms.jpg" />
 									<em>Platforms</em>
 								</span>
 							</label>
-							<label>
+							<label class="shoes">
 								<input type="checkbox" name="shoes" value="Wedges" data-sizing />
 								<span class="cf">
 									<img src="https://images.tradesy.com/images/grid/product/shoes-wedges.jpg" />
 									<em>Wedges</em>
 								</span>
 							</label>
-							<label>
+							<label class="shoes">
 								<input type="checkbox" name="shoes" value="Formal" data-sizing />
 								<span class="cf">
 									<img src="https://images.tradesy.com/images/grid/product/shoes-formal.jpg" />
 									<em>Formal</em>
 								</span>
 							</label>
+
+							<label class="hidden dept">
+								<input type="checkbox" name="department" value="Clothing" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/clothing.jpg" />
+									<em>Clothing</em>
+								</span>
+							</label>
+							<label class="hidden dept">
+								<input type="checkbox" name="department" value="Bags" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/bags.jpg" />
+									<em>Bags</em>
+								</span>
+							</label>
+							<label class="hidden dept">
+								<input type="checkbox" name="department" value="Shoes" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes.jpg" />
+									<em>Shoes</em>
+								</span>
+							</label>
+							<label class="hidden dept">
+								<input type="checkbox" name="department" value="Accessories" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/accessories.jpg" />
+									<em>Accessories</em>
+								</span>
+							</label>
+							<label class="hidden dept">
+								<input type="checkbox" name="department" value="Wedding" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/weddings.png" />
+									<em>Wedding</em>
+								</span>
+							</label>
+
 						</div>
 					</div>
 					<!-- <hr /> -->
@@ -585,6 +622,12 @@
 					sizing.show();
 				}
 
+				if ( window.location.hash ) {
+					$('#department').text('Department');
+					$('label.shoes', '#images').remove();
+					$('label.dept', '#images').removeClass('hidden');
+				}
+
 				button.on('click', function() {
 
 					if ( !filters.hasClass('show') ) {
@@ -672,7 +715,7 @@
 						return;
 					}
 
-					ajaxUpdateFilters(ajaxOverlay);
+					// ajaxUpdateFilters(ajaxOverlay);
 					thisTabs.removeClass('active');
 					$(this).addClass('active');
 				});
