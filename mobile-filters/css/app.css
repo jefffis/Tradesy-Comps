@@ -275,16 +275,15 @@ small button:after {
 	display : none;
 }
 
-label:active {
-	opacity : .65;
-}
-
 /** active **/
 [data-toggleable] h2:active, label:active {
 	opacity : .65;
 }
 .disabled:active {
 	opacity : inherit;
+}
+[data-not] h2:active {
+	opacity : 1;
 }
 
 /** padding **/

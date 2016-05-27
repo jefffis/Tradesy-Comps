@@ -64,7 +64,7 @@
 					<div class="intro">
 						<button type="button" id="size-out">Back</button>
 					</div>
-					<div class="filter" data-toggleable>
+					<div class="filter" data-toggleable data-not>
 						<h2 data-selected="All">Size</h2>
 						<!-- <h3>Shoes</h3>
 						<div class="cf tab four">
@@ -235,7 +235,7 @@
 					<div id="size-card" class="first">
 						<h2 data-selected="All">Size</h2>
 					</div>
-					<div class="filter" data-toggleable>
+					<div class="filter" data-toggleable data-not>
 						<h2 data-selected="All" id="department" class="none">Style</h2>
 						<div id="images" class="images cf">
 							<label class="shoes">
@@ -736,7 +736,7 @@
 				radios.on('click', function() {
 					var checked = $(this).prop('checked') === true ? true : false;
 
-					console.log(checked);
+					// console.log(checked);
 
 					ajaxUpdateFilters(ajaxOverlay);
 					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this), checked);
@@ -745,7 +745,7 @@
 				checkboxes.on('click', function() {
 					var checked = $(this).prop('checked') === true ? true : false;
 
-					console.log(checked);
+					// console.log(checked);
 
 					ajaxUpdateFilters(ajaxOverlay);
 					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this).parent().find('input'), checked);
@@ -753,6 +753,10 @@
 
 				toggleableDiv.on('click', function() {
 					if ( $(this).parent().data('toggleable') !== undefined ) {
+
+						if ($(this).parent().data('not') !== undefined) {
+							return;
+						}
 
 						if ( !$(this).hasClass('open') ) {
 							$('html, body').animate({
