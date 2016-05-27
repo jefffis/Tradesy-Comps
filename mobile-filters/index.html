@@ -63,111 +63,119 @@
 					<div class="intro">
 						<button type="button" id="size-out">Back</button>
 					</div>
-					<div class="filter">
-						<h2 _data-selected="Clothing: All; Shoes: All">Size</h2>
-						<h3>Shoes</h3>
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All">Size</h2>
+						<!-- <h3>Shoes</h3>
 						<div class="cf tab four">
 							<span class="active">US</span>
 							<span>UK</span>
 							<span>Euro</span>
 							<span>??</span>
-						</div>
+						</div> -->
 						<div id="size" class="cf size">
 							<label>
 								<input type="checkbox" name="size" value="1" data-return />
 								<span>1</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="1.5" data-return />
 								<span>1.5</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="2" data-return />
 								<span>2</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="2.5" data-return />
 								<span>2.5</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="3" data-return />
 								<span>3</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="3.5" data-return />
 								<span>3.5</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="4" data-return />
 								<span>4</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="4.5" data-return />
 								<span>4.5</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="5" data-return />
+								<span>5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="5" data-return />
+								<span>5.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="6" data-return />
 								<span>6</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="6.5" data-return />
 								<span>6.5</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="7" data-return data-disablable />
 								<span>7</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="7.5" data-return />
 								<span>7.5</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="8" data-return />
 								<span>8</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="8.5" data-return />
 								<span>8.5</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="9" data-return data-disablable />
 								<span>9</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="9.5" data-return />
 								<span>9.5</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="10" data-return />
 								<span>10</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="10.5" data-return />
 								<span>10.5</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="11" data-return />
 								<span>11</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="11.5" data-return />
 								<span>11.5</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="12" data-return data-disablable />
 								<span>12</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="12.5" data-return />
 								<span>12.5</span>
 							</label>
 							<label>
-								<input type="checkbox" name="size" value="1" data-return />
+								<input type="checkbox" name="size" value="13" data-return />
 								<span>13</span>
 							</label>
 						</div>
-						<!-- <hr /> -->
-						<h3>Clothing</h3>
+
+						<!-- <h3>Clothing</h3>
 						<div class="cf tab">
 							<span class="active">Regular</span>
 							<span>Petite</span>
@@ -214,7 +222,7 @@
 								<input type="checkbox" name="sizec" value="1" data-return />
 								<span>OS</span>
 							</label>
-						</div>
+						</div> -->
 						<label class="toggle">
 							<input type="checkbox" name="save-size" />
 							<span>Save Sizes</span>
@@ -332,7 +340,7 @@
 					<!-- <hr /> -->
 					<div class="filter-card">
 						<div id="size-card">
-							<h2 data-selected="Clothing: All; Shoes: All">Size</h2>
+							<h2 data-selected="All">Size</h2>
 						</div>
 						<hr />
 						<h2>Price</h2>
@@ -382,7 +390,7 @@
 								<span>Lululemon</span>
 							</label>
 							<label class="vis">
-								<input type="checkbox" name="designer" value="Hermes" data-return />
+								<input type="checkbox" name="designer" value="Hermes" data-return data-disablable />
 								<span>Hermes</span>
 							</label class="vis">
 							<label>
@@ -416,7 +424,7 @@
 								<span>White</span>
 							</label>
 							<label class="color red">
-								<input type="checkbox" name="color" value="Red" data-return />
+								<input type="checkbox" name="color" value="Red" data-return data-disablable />
 								<span>Red</span>
 							</label>
 							<label class="color blue">
@@ -428,7 +436,7 @@
 								<span>Beige</span>
 							</label>
 							<label class="color pink inset">
-								<input type="checkbox" name="color" value="Pink" data-return />
+								<input type="checkbox" name="color" value="Pink" data-return data-disablable />
 								<span>Pink</span>
 							</label>
 							<label class="color purple inset">
@@ -553,7 +561,7 @@
 								<span>Gently Used</span>
 							</label>
 							<label>
-								<input type="radio" name="condition" value="Like New" data-return />
+								<input type="radio" name="condition" value="Like New" data-return data-disablable />
 								<span>Like New</span>
 							</label>
 							<label>
@@ -579,7 +587,7 @@
 								<span>75% Off or More</span>
 							</label>
 							<label>
-								<input type="radio" name="discount" value="50% Off or More" data-return />
+								<input type="radio" name="discount" value="50% Off or More" data-return data-disablable />
 								<span>50% Off or More</span>
 							</label>
 							<label>
@@ -721,13 +729,21 @@
 				});
 
 				radios.on('click', function() {
+					var checked = $(this).prop('checked') === true ? true : false;
+
+					console.log(checked);
+
 					ajaxUpdateFilters(ajaxOverlay);
-					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this));
+					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this), checked);
 				});
 
 				checkboxes.on('click', function() {
+					var checked = $(this).prop('checked') === true ? true : false;
+
+					console.log(checked);
+
 					ajaxUpdateFilters(ajaxOverlay);
-					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this).parent().find('input:checked'));
+					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this).parent().find('input'), checked);
 				});
 
 				toggleableDiv.on('click', function() {
@@ -798,8 +814,25 @@
 					}, 125);
 
 					setTimeout(function() {
+						var sizes = $('[name=size]:checked'),
+							sizePref = '';
+
+						if (sizes.length > 1) {
+							var vals = '',
+								valsCount = 0;
+
+							sizes.each(function() {
+								vals += (valsCount === 0) ? $(this).val() : ' + ' + $(this).val();
+								valsCount++;
+							});
+
+							sizePref = vals;
+						} else {
+							sizePref = sizes.val();
+						}
+
 						$('#non-size-filters').show();
-						$('h2', '#size-card').attr('data-selected', 'Clothing: S; Shoes: 7');
+						$('h2', '#size-card').attr('data-selected', sizePref);
 						$('#size-wrapper').removeClass('left').css('position', 'fixed');
 					}, 126);
 					setTimeout(function() {
@@ -844,28 +877,49 @@
 				}, 1001);
 			}
 
-			function setDataAttr(el, selected) {
+			function setDataAttr(el, selected, addDisabled) {
 				var val = selected.val(),
 					checkbox = selected.attr('type') === 'checkbox' ? true : false,
 					size = selected.data('sizing') !== undefined ? true : false,
-					selectdReturn = selected.data('return') !== undefined ? true : false;
-
-				// console.log(el, selected, val);
+					selectdReturn = selected.data('return') !== undefined ? true : false,
+					disablable = el.next('div').find('input[data-disablable]');
 
 				setTimeout(function() {
+
+					// if (addDisabled) {
+					// 	disablable.prop('disabled', true);
+					// } else {
+					// 	disablable.prop('disabled', false);
+					// }
 					
 					if ( checkbox ) {
 						var multiSelected = selected.attr('name');
 
+						// console.log(selected.length, $('input[name=' + multiSelected + ']:checked').length);
+
 						if ( $('input[name=' + multiSelected + ']:checked').length > 1 ) {
-							el.attr('data-selected', 'Multiple');
+							var vals = '',
+								valsCount = 0;
+
+							$('input[name=' + multiSelected + ']:checked').each(function() {
+								vals += (valsCount === 0) ? $(this).val() : ' + ' + $(this).val();
+								valsCount++;
+							});
+
+							el.attr('data-selected', vals);
 						} else if ( $('input[name=' + multiSelected + ']:checked').length < 1 ) {
 							el.attr('data-selected', 'All');
 						} else {
-							el.attr('data-selected', val);
+							el.attr('data-selected', $('input[name=' + multiSelected + ']:checked').val());
 						}
 
 					} else {
+
+						if (selected.length < 1) {
+							el.attr('data-selected', 'All');
+							return;
+						}
+
 						el.attr('data-selected', val);
 					}
 
