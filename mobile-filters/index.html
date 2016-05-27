@@ -814,22 +814,22 @@
 					var radio = $(this).attr('type') === 'radio' ? true : false;
 
 					if ( radio ) {
-						$(this).parents('div').find('label').removeClass('checked');
+						$(this).parents('.images').find('label').removeClass('checked');
 					}
 
 					$(this).parents('label').toggleClass('checked');
 				});
 
-				$('input', '.collections').on('click', function() {
-					$(this).parents('div').find('label').removeClass('checked');
-					$(this).parents('label').addClass('checked');
-				});
+				// $('input', '.collections').on('click', function() {
+				// 	$(this).parents('div').find('label').removeClass('checked');
+				// 	$(this).parents('label').addClass('checked');
+				// });
 
 				$('input', '.size').on('click', function() {
 					var radio = $(this).attr('type') === 'radio' ? true : false;
 
 					if ( radio ) {
-						$(this).parents('div').find('label').removeClass('checked');
+						$(this).parents('.size').find('label').removeClass('checked');
 					}
 
 					$(this).parents('label').toggleClass('checked');
