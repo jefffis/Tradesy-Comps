@@ -370,12 +370,7 @@
 
 						</div>
 					</div>
-					<!-- <hr /> -->
-					<div class="filter-card">
-						<!-- <div id="size-card">
-							<h2 data-selected="All">Size</h2>
-						</div>
-						<hr /> -->
+					<div class="filter-card cf">
 						<h2>Price</h2>
 						<div id="slider" data-selected="Under $25" data-selected-after="Over $500">
 							<em draggable="true"></em>
@@ -400,9 +395,9 @@
 						</div>
 						<hr />
 						<h2 data-selected="All items">On Sale</h2>
-						<div id="toggle"></div>
+						<div id="toggle" class="cf"></div>
 					</div>
-					<div class="filter" data-toggleable>
+					<div class="filter no-mar-top" data-toggleable>
 						<h2 data-selected="All">Designer</h2>
 						<div>
 							<div class="inline cf">
@@ -879,7 +874,14 @@
 								valsCount = 0;
 
 							sizes.each(function() {
-								vals += (valsCount === 0) ? $(this).val() : ' + ' + $(this).val();
+								if ( valsCount > 1 ) {
+									if (valsCount > 2 ) {
+										vals = vals.slice(0, -8);
+									}
+									vals += ' + ' + (valsCount - 1) + ' more';
+								} else {
+									vals += (valsCount === 0) ? $(this).val() : ' + ' + $(this).val();
+								}
 								valsCount++;
 							});
 
@@ -967,7 +969,14 @@
 								valsCount = 0;
 
 							$('input[name=' + multiSelected + ']:checked').each(function() {
-								vals += (valsCount === 0) ? $(this).val() : ' + ' + $(this).val();
+								if ( valsCount > 1 ) {
+									if (valsCount > 2 ) {
+										vals = vals.slice(0, -8);
+									}
+									vals += ' + ' + (valsCount - 1) + ' more';
+								} else {
+									vals += (valsCount === 0) ? $(this).val() : ' + ' + $(this).val();
+								}
 								valsCount++;
 							});
 
