@@ -493,7 +493,7 @@ input:disabled + span img {
 	border-left : 1px solid #ddd;
 }
 .images .checked img {
-	opacity : .5;
+	opacity : .35;
 }
 .images .checked:after {
 	display: block;
@@ -503,18 +503,24 @@ input:disabled + span img {
 	z-index : 3;
 	height : 50px;
 	width : 50px;
-    /*height : calc(100% + 2px);
-	width : calc(100% + 2px);*/
-	/*box-shadow : 0 0 0 1px #111 inset;*/
-	/*background : red;*/
 	background : url(../img/check-blk.png) no-repeat center;
 	background-size : 66%;
 	border-radius : 100%;
-	/*box-shadow : 0 0 0 1px #111 inset;*/
 	margin-top : -33px;
 	margin-left : -25px;
     content : "";
 }
+/*.images .checked:before {
+	display: block;
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 2;
+	height : 100%;
+	width : 100%;
+	background : linear-gradient(to top, rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0.5) 100%);
+    content : "";
+}*/
 .images img {
 	height : 45px;
 }
@@ -567,7 +573,7 @@ input:checked + span img {
 	padding : 1rem 0 0;
 	border-bottom : 3px solid #111
 }
-#slider:before, #slider:after {
+#slider em {
 	display : block;
 	position : absolute;
 	top : 7px;
@@ -578,9 +584,9 @@ input:checked + span img {
 	border : 1px solid #111;
 	border-radius : 100%;
 	box-shadow : 0 1px 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.075);
-	content : "";
+	/*content : "";*/
 }
-#slider:after {
+#slider em:nth-of-type(2) {
 	right : 0;
 }
 #slider span {
@@ -1026,6 +1032,15 @@ input:checked + span img {
 	margin-top : .5rem;
 	padding : .5rem .75rem;
 	border : 1px solid #ddd;
+}
+#size-card.first {
+	margin : 1.25rem 1rem .25rem;
+}
+#size-card.first h2 {
+	padding : 0;
+}
+#size-card.first h2:before {
+	display : none;
 }
 #size-card:active {
 	background : #f7f7f7;
