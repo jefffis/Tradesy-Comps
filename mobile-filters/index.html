@@ -6,6 +6,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Tradesy.com Filters</title>
 		<link rel="stylesheet" href="css/app.css" />
+		<script>document.addEventListener("touchstart", function() {},false);</script>
 	</head>
 	<body>
 
@@ -224,7 +225,7 @@
 							</label>
 						</div> -->
 						<label class="toggle">
-							<input type="checkbox" name="save-size" />
+							<input type="checkbox" name="save-size" data-dont />
 							<span>Save Sizes</span>
 						</label>
 					</div>
@@ -887,6 +888,10 @@
 					size = selected.data('sizing') !== undefined ? true : false,
 					selectdReturn = selected.data('return') !== undefined ? true : false,
 					disablable = el.next('div').find('input[data-disablable]');
+
+				if (selected.data('dont') !== undefined) {
+					return;
+				}
 
 				setTimeout(function() {
 

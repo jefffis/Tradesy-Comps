@@ -275,9 +275,9 @@ small button:after {
 	display : none;
 }
 
-/*[data-tappable]:active {
+label:active {
 	opacity : .65;
-}*/
+}
 
 /** active **/
 [data-toggleable] h2:active, label:active {
