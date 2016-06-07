@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tradesy.com Filters</title>
+		<link rel="stylesheet" href="css/app.css" />
+		<script>document.addEventListener("touchstart", function() {},false);</script>
+	</head>
+	<body>
+
+		<header></header>
+
+		<div id="content">
+			<div id="filter-sort" class="cf">
+				<button type="button" class="toggle-filters">
+					<img src="img/filter.png" />
+					Filter
+				</button>
+				<button type="button" id="sort">
+					<img src="img/sort.png" />
+					Sort
+				</button>
+				<!-- <h3>Applied Filters</h3>
+				<div id="applied-filters">
+					<div>
+						<button type="button" data-filter="size">
+							Size 7
+						</button>
+						<button type="button" data-filter="department">
+							Shoes
+						</button>
+						<button type="button" data-filter="sale">
+							On Sale
+						</button>
+						<button type="button" data-filter="designer">
+							Louis Vuitton
+						</button>
+						<button type="button" data-filter="color">
+							Red
+						</button>
+						<button type="button" data-filter="color-2">
+							Multi
+						</button>
+					</div>
+				</div> -->
+			</div>
+			<small>
+				Viewing 1-24 of 59,291 items<!--  in <strong>Shoes</strong> -->
+				<button type="button"><!-- Share -->&nbsp;</button>
+			</small>
+			<div class="cf">
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+				<div class="item"></div>
+			</div>
+		</div>
+		<div id="sort-actions">
+			<div class="intro">
+				Sort items by:
+				<button type="button" id="close-sort"></button>
+			</div>
+			<a class="active">Relevance</a>
+			<a>New Arrivals</a>
+			<a>Most Loved</a>
+			<a>Lowest $ to Highest $$$</a>
+			<a>Highest $$$ to Lowest $</a>
+		</div>
+		<div id="filters">
+			<div class="intro">
+				Filter Items:
+				<button type="button" class="toggle-filters"></button>
+			</div>
+			<div id="filter-wrapper">
+
+				<div id="size-wrapper">
+					<div class="intro">
+						<button type="button" id="size-out">Back</button>
+					</div>
+					<div class="filter" data-toggleable data-not>
+						<h2 data-selected="All">Size</h2>
+						<!-- <h3>Shoes</h3>
+						<div class="cf tab four">
+							<span class="active">US</span>
+							<span>UK</span>
+							<span>Euro</span>
+							<span>??</span>
+						</div> -->
+						<div id="size" class="cf size">
+							<label>
+								<input type="checkbox" name="size" value="1" data-return />
+								<span>1</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="1.5" data-return />
+								<span>1.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="2" data-return />
+								<span>2</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="2.5" data-return />
+								<span>2.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="3" data-return />
+								<span>3</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="3.5" data-return />
+								<span>3.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="4" data-return />
+								<span>4</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="4.5" data-return />
+								<span>4.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="5" data-return />
+								<span>5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="5" data-return />
+								<span>5.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="6" data-return />
+								<span>6</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="6.5" data-return />
+								<span>6.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="7" data-return data-disablable />
+								<span>7</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="7.5" data-return />
+								<span>7.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="8" data-return />
+								<span>8</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="8.5" data-return />
+								<span>8.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="9" data-return data-disablable />
+								<span>9</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="9.5" data-return />
+								<span>9.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="10" data-return />
+								<span>10</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="10.5" data-return />
+								<span>10.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="11" data-return />
+								<span>11</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="11.5" data-return />
+								<span>11.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="12" data-return data-disablable />
+								<span>12</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="12.5" data-return />
+								<span>12.5</span>
+							</label>
+							<label>
+								<input type="checkbox" name="size" value="13" data-return />
+								<span>13</span>
+							</label>
+						</div>
+
+						<!-- <h3>Clothing</h3>
+						<div class="cf tab">
+							<span class="active">Regular</span>
+							<span>Petite</span>
+							<span>Plus</span>
+						</div>
+						<div id="size2" class="cf size">
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>00</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>0</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>2</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>4</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>6</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>8</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>10</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>12</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>14</span>
+							</label>
+							<label>
+								<input type="checkbox" name="sizec" value="1" data-return />
+								<span>OS</span>
+							</label>
+						</div> -->
+						<label class="toggle">
+							<input type="checkbox" name="save-size" data-dont />
+							<span>Save Sizes</span>
+						</label>
+					</div>
+				</div>
+
+				<div id="non-size-filters">
+					<div id="size-card" class="first">
+						<h2 data-selected="All">Size</h2>
+					</div>
+					<div class="filter" data-toggleable data-not>
+						<h2 data-selected="All" id="department" class="none">Style</h2>
+						<div id="images" class="images cf">
+							<label class="shoes">
+								<input type="checkbox" name="shoes" value="Boots &amp; Booties" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-boots-booties.jpg" />
+									<em>Boots &amp; Booties</em>
+								</span>
+							</label>
+							<label class="shoes">
+								<input type="checkbox" name="shoes" value="Flats" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-flats2.jpg" />
+									<em>Flats</em>
+								</span>
+							</label>
+							<label class="shoes">
+								<input type="checkbox" name="shoes" value="Mules &amp; Clogs" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-mules-clogs.jpg" />
+									<em>Mules &amp; Clogs</em>
+								</span>
+							</label>
+							<label class="shoes">
+								<input type="checkbox" name="shoes" value="Pumps" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-pumps.jpg" />
+									<em>Pumps</em>
+								</span>
+							</label>
+							<label class="shoes">
+								<input type="checkbox" name="shoes" value="Sandals" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-sandals.jpg" />
+									<em>Sandals</em>
+								</span>
+							</label>
+							<label class="shoes">
+								<input type="checkbox" name="shoes" value="Athletic" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-athletic.jpg" />
+									<em>Athletic</em>
+								</span>
+							</label>
+							<label class="shoes">
+								<input type="checkbox" name="shoes" disabled value="Platforms" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-platforms.jpg" />
+									<em>Platforms</em>
+								</span>
+							</label>
+							<label class="shoes">
+								<input type="checkbox" name="shoes" value="Wedges" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-wedges.jpg" />
+									<em>Wedges</em>
+								</span>
+							</label>
+							<label class="shoes">
+								<input type="checkbox" name="shoes" value="Formal" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes-formal.jpg" />
+									<em>Formal</em>
+								</span>
+							</label>
+
+							<label class="hidden dept checked">
+								<input type="radio" name="department" checked value="All" data-sizing />
+								<span class="cf">
+									<img src="https://pbs.twimg.com/profile_images/689870656075202560/iyQ4bQ7D_400x400.png" />
+									<em>All Items</em>
+								</span>
+							</label>
+							<label class="hidden dept">
+								<input type="radio" name="department" value="Clothing" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/clothing.jpg" />
+									<em>Clothing</em>
+								</span>
+							</label>
+							<label class="hidden dept">
+								<input type="radio" name="department" value="Bags" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/bags.jpg" />
+									<em>Bags</em>
+								</span>
+							</label>
+							<label class="hidden dept">
+								<input type="radio" name="department" value="Shoes" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/shoes.jpg" />
+									<em>Shoes</em>
+								</span>
+							</label>
+							<label class="hidden dept">
+								<input type="radio" name="department" value="Accessories" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/accessories.jpg" />
+									<em>Accessories</em>
+								</span>
+							</label>
+							<label class="hidden dept">
+								<input type="radio" name="department" value="Wedding" data-sizing />
+								<span class="cf">
+									<img src="https://images.tradesy.com/images/grid/product/weddings.png" />
+									<em>Wedding</em>
+								</span>
+							</label>
+
+						</div>
+					</div>
+					<div class="filter-card cf">
+						<h2>Price</h2>
+						<div id="slider" data-selected="Under $25" data-selected-after="Over $500">
+							<em draggable="true"></em>
+							<em draggable="true"></em>
+							<span>$25&mdash;$500</span>
+						</div>
+						<hr />
+						<h2>Availability</h2>
+						<div id="tab" class="cf three size">
+							<label class="checked">
+								<input type="radio" name="availability" value="All" checked data-return />
+								<span>All items</span>
+							</label>
+							<label>
+								<input type="radio" name="availability" value="In Stock" data-return />
+								<span>In Stock</span>
+							</label>
+							<label>
+								<input type="radio" name="availability" value="Sold" data-return />
+								<span>Sold</span>
+							</label>
+						</div>
+						<hr />
+						<h2 data-selected="All items">On Sale</h2>
+						<div id="toggle" class="cf"></div>
+					</div>
+					<div class="filter no-mar-top" data-toggleable>
+						<h2 data-selected="All">Designer</h2>
+						<div>
+							<div class="inline cf">
+								<label>
+									<!-- <span>Find a Designer:</span> -->
+									<input type="text" name="search-designer" autocomplete="off" />
+									<small>Search for a specific Designer</small>
+								</label>
+							</div>
+							<h3>Popular Designers</h3>
+							<label class="vis">
+								<input type="checkbox" name="designer" value="Louis Vuitton" data-return />
+								<span>Louis Vuitton</span>
+							</label>
+							<label class="vis">
+								<input type="checkbox" name="designer" value="Chanel" data-return />
+								<span>Chanel</span>
+							</label>
+							<label class="vis">
+								<input type="checkbox" name="designer" value="Lululemon" data-return />
+								<span>Lululemon</span>
+							</label>
+							<label class="vis">
+								<input type="checkbox" name="designer" value="Hermes" data-return />
+								<span>Hermes</span>
+							</label class="vis">
+							<label>
+								<input type="checkbox" name="designer" value="Zara" data-return />
+								<span>Zara</span>
+							</label>
+							<label class="hidden">
+								<input type="checkbox" name="designer" value="Another Designer" data-return />
+								<span>Another Designer</span>
+							</label>
+							<label class="hidden">
+								<input type="checkbox" name="designer" value="And More Designer" data-return />
+								<span>And More Designer</span>
+							</label>
+						</div>
+					</div>
+					<hr />
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All">Color</h2>
+						<div class="color-wrap cf">
+							<label class="color black">
+								<input type="checkbox" name="color" value="Black" data-return />
+								<span>Black</span>
+							</label>
+							<label class="color grey">
+								<input type="checkbox" name="color" value="Grey" data-return />
+								<span>Grey</span>
+							</label>
+							<label class="color white inset">
+								<input type="checkbox" name="color" value="White" data-return />
+								<span>White</span>
+							</label>
+							<label class="color red">
+								<input type="checkbox" name="color" value="Red" data-return data-disablable />
+								<span>Red</span>
+							</label>
+							<label class="color blue">
+								<input type="checkbox" name="color" value="Blue" data-return />
+								<span>Blue</span>
+							</label>
+							<label class="color beige inset">
+								<input type="checkbox" name="color" value="Beige" data-return />
+								<span>Beige</span>
+							</label>
+							<label class="color pink inset">
+								<input type="checkbox" name="color" value="Pink" data-return data-disablable />
+								<span>Pink</span>
+							</label>
+							<label class="color purple inset">
+								<input type="checkbox" name="color" value="Purple" data-return />
+								<span>Purple</span>
+							</label>
+							<label class="color green inset">
+								<input type="checkbox" name="color" value="Green" data-return />
+								<span>Green</span>
+							</label>
+							<label class="color orange inset">
+								<input type="checkbox" name="color" disabled value="Orange" data-return />
+								<span>Orange</span>
+							</label>
+							<label class="color brown inset">
+								<input type="checkbox" name="color" value="Brown" data-return />
+								<span>Brown</span>
+							</label>
+							<label class="color yellow inset">
+								<input type="checkbox" name="color" value="Yellow" data-return />
+								<span>Yellow</span>
+							</label>
+							<label class="color gold inset">
+								<input type="checkbox" name="color" value="Gold" data-return />
+								<span>Gold</span>
+							</label>
+							<label class="color silver inset">
+								<input type="checkbox" name="color" value="Silver" data-return />
+								<span>Silver</span>
+							</label>
+							<label class="color multi inset">
+								<input type="checkbox" name="color" value="Multi" data-return />
+								<span>Multi</span>
+							</label>
+						</div>
+					</div>
+					<hr />
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All">Collection</h2>
+						<div class="collections">
+							<label>
+								<input type="radio" name="collection" value="Shoesday: Under $300" data-return />
+								<span>Shoesday: Under $300</span>
+							</label>
+							<label>
+								<input type="radio" name="collection" value="Luxury Boutique" data-return />
+								<span>Luxury Boutique</span>
+							</label>
+							<label>
+								<input type="radio" name="collection" disabled value="Shoesday: Under $100" data-return />
+								<span>Shoesday: Under $100</span>
+							</label>
+							<label>
+								<input type="radio" name="collection" value="Shoesday: All Under $500" data-return />
+								<span>Shoesday: All Under $500</span>
+							</label>
+							<label>
+								<input type="radio" name="collection" value="Chanel x Christian Louboutin" data-return />
+								<span>Chanel x Christian Louboutin</span>
+							</label>
+							<label>
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+							<label>
+								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
+								<span>Christian Louboutin 4eva</span>
+							</label>
+							<label>
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+
+							<label class="hidden">
+								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
+								<span>Christian Louboutin 4eva</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
+								<span>Christian Louboutin 4eva</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+
+							<label class="hidden">
+								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
+								<span>Christian Louboutin 4eva</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Christian Louboutin 4eva" data-return />
+								<span>Christian Louboutin 4eva</span>
+							</label>
+							<label class="hidden">
+								<input type="radio" name="collection" value="Another Christian Louboutin Collection" data-return />
+								<span>Another Christian Louboutin Collection</span>
+							</label>
+
+							<hr />
+							<button type="button" id="load-collections" class="light-btn">Load More</button>
+						</div>
+					</div>
+					<hr />
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All">Condition</h2>
+						<div>
+							<label>
+								<input type="radio" name="condition" checked value="All" data-return />
+								<span>All Items</span>
+							</label>
+							<label>
+								<input type="radio" name="condition" disabled value="Gently Used" data-return />
+								<span>Gently Used</span>
+							</label>
+							<label>
+								<input type="radio" name="condition" value="Like New" data-return data-disablable />
+								<span>Like New</span>
+							</label>
+							<label>
+								<input type="radio" name="condition" value="New With Tags" data-return />
+								<span>New With Tags</span>
+							</label>
+						</div>
+					</div>
+					<hr />
+					<div class="filter" data-toggleable>
+						<h2 data-selected="All">Discount</h2>
+						<div class="last">
+							<label>
+								<input type="radio" name="discount" checked value="All" data-return />
+								<span>All Items</span>
+							</label>
+							<label>
+								<input type="radio" name="discount" disabled value="90% Off or More" data-return />
+								<span>90% Off or More</span>
+							</label>
+							<label>
+								<input type="radio" name="discount" value="75% Off or More" data-return />
+								<span>75% Off or More</span>
+							</label>
+							<label>
+								<input type="radio" name="discount" value="50% Off or More" data-return data-disablable />
+								<span>50% Off or More</span>
+							</label>
+							<label>
+								<input type="radio" name="discount" value="30% Off or More" data-return />
+								<span>30% Off or More</span>
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div id="apply">
+					<button data-submit>Apply Filters</button>
+				</div>
+
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script>
+
+			$(function() {
+				var button = $('.toggle-filters'),
+					filters = $('#filters'),
+					tabs = $('span', '.tab'),
+					toggle = $('#toggle'),
+					apply = $('#apply'),
+					toggleableDiv = $('h2', '.filter'),
+					radios = $('input[type=radio]'),
+					checkboxes = $('input[type=checkbox]'),
+					sizing = $('#sizing'),
+					sort = $('#sort'),
+					sortActions = $('a', '#sort-actions'),
+					ajaxOverlay = '<div id="ajax-overlay"></div>',
+					resultNum = $('#result-num');
+
+				if ( window.innerWidth > 500 ) {
+					$('html').addClass('is-tablet');
+					$('.department:first').hide();
+					$('.department:last').show();
+					sizing.show();
+				}
+
+				if ( window.location.hash ) {
+					$('#department').text('Department');
+					$('label.shoes', '#images').remove();
+					$('label.dept', '#images').removeClass('hidden');
+
+					if (window.location.hash.indexOf('removed') > -1) {
+						// window.location.reload(true);
+						var filterRemoved = window.location.hash.replace('#removed=', '');
+						$('[data-filter=' + filterRemoved + ']').remove();
+					}
+				}
+
+				button.on('click', function() {
+
+					if ( !filters.hasClass('show') ) {
+						// $('html').css('height', filters.height());
+						filters.addClass('show');
+						enableStickyButton($('#apply'), filters, true);
+					} else {
+						filters.removeClass('show');
+						enableStickyButton($('#apply'), filters, false);
+					}
+
+				});
+
+				// $('button', '.inline').on('click', function() {
+				// 	$(this).prop('disabled', true);
+				// });
+
+				$('input', '.inline').on('keyup', function() {
+					if ( $(this).val() !== '' ) {
+						$(this).parent().parent().parent().find('.hidden').show();
+						$(this).parent().parent().parent().find('.vis').hide();
+					} else {
+						$(this).parent().parent().parent().find('.hidden').hide();
+						$(this).parent().parent().parent().find('.vis').show();
+					}
+				});
+
+				$('#load-collections').on('click', function() {
+					var nextFour = $(this).parents('.collections').find('.hidden'),
+						i = 0,
+						last = false;
+
+					if ( nextFour.length <= 4 ) {
+						last = true;
+					}
+
+					$(this).prop('disabled', true);
+
+					$('html, body').animate({
+						scrollTop : $(this).offset().top
+					}, 500);
+
+					enableButton($(this));
+
+					nextFour.each(function(i) {
+
+						if ( i > 3 ) {
+							return;
+						}
+
+						if ( last ) {
+							$('#load-collections').remove();
+						}
+
+						$(this).removeClass('hidden');
+						i++;
+					});
+				});
+
+				sort.on('click', function() {
+					$('#sort-actions').toggleClass('show');
+				});
+
+				sortActions.on('click', function() {
+					location.reload(true);
+				});
+
+				$('#close-sort').on('click', function() {
+					$('#sort-actions').removeClass('show');
+				});
+
+				toggle.on('click', function() {
+					var ctx = $(this).hasClass('active') ? 'All items' : 'Sale items only';
+
+					ajaxUpdateFilters(ajaxOverlay);
+					toggle.toggleClass('active');
+					setDataAttrNonVal(toggle.prev('h2'), ctx);
+				});
+
+				tabs.on('click', function() {
+
+					var thisTabs = $(this).siblings('span');
+
+					if ( $(this).hasClass('disabled') ) {
+						return;
+					}
+
+					// ajaxUpdateFilters(ajaxOverlay);
+					thisTabs.removeClass('active');
+					$(this).addClass('active');
+				});
+
+				radios.on('click', function() {
+					var checked = $(this).prop('checked') === true ? true : false;
+
+					// console.log(checked);
+
+					ajaxUpdateFilters(ajaxOverlay);
+					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this), checked);
+				});
+
+				checkboxes.on('click', function() {
+					var checked = $(this).prop('checked') === true ? true : false;
+
+					// console.log(checked);
+
+					ajaxUpdateFilters(ajaxOverlay);
+					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this).parent().find('input'), checked);
+				});
+
+				toggleableDiv.on('click', function() {
+					if ( $(this).parent().data('toggleable') !== undefined ) {
+
+						if ($(this).parent().data('not') !== undefined) {
+							return;
+						}
+
+						if ( !$(this).hasClass('open') ) {
+							$('html, body').animate({
+								scrollTop : $(this).offset().top
+							}, 500);
+						}
+
+						$(this).toggleClass('open');
+						$(this).next('div').toggle();
+					}
+				});
+
+				$('input', '.color').on('click', function() {
+					$(this).parents('label').toggleClass('checked');
+				});
+
+				$('input', '.images').on('click', function() {
+					var radio = $(this).attr('type') === 'radio' ? true : false;
+
+					if ( radio ) {
+						$(this).parents('.images').find('label').removeClass('checked');
+					}
+
+					$(this).parents('label').toggleClass('checked');
+				});
+
+				// $('input', '.collections').on('click', function() {
+				// 	$(this).parents('div').find('label').removeClass('checked');
+				// 	$(this).parents('label').addClass('checked');
+				// });
+
+				$('input', '.size').on('click', function() {
+					var radio = $(this).attr('type') === 'radio' ? true : false;
+
+					if ( radio ) {
+						$(this).parents('.size').find('label').removeClass('checked');
+					}
+
+					$(this).parents('label').toggleClass('checked');
+				});
+
+				apply.on('click', function(e) {
+
+					if ( $(e.target).data('submit') === undefined ) {
+						reset($(e.target));
+						return;
+					}
+
+					fuaxSubmit($(this), filters, false);
+				});
+
+				$('button', '#applied-filters').on('click', function() {
+					var filter = $(this).data('filter');
+					window.location.href = window.location.pathname + '#removed=' + filter;
+				});
+
+				$('#size-card').on('click', function() {
+					$('html, body').animate({
+						scrollTop : $('html, body').offset().top
+					}, 125);
+					setTimeout(function() {
+						$('#size-wrapper').addClass('left');
+						$('#non-size-filters').addClass('transitioning opaque');
+						$('.intro:first', '#filters').addClass('left');
+					}, 126);
+					setTimeout(function() {
+						$('#size-wrapper').css('position', 'absolute');
+						$('#non-size-filters').hide();
+					}, 376);
+				});
+
+				$('#size-out').on('click', function() {
+					$('html, body').animate({
+						scrollTop : $('html, body').offset().top
+					}, 125);
+
+					setTimeout(function() {
+						var sizes = $('[name=size]:checked'),
+							sizePref = '';
+
+						if (sizes.length > 1) {
+							var vals = '',
+								valsCount = 0;
+
+							sizes.each(function() {
+								if ( valsCount > 1 ) {
+									if (valsCount > 2 ) {
+										vals = vals.slice(0, -8);
+									}
+									vals += ' + ' + (valsCount - 1) + ' more';
+								} else {
+									vals += (valsCount === 0) ? $(this).val() : ' + ' + $(this).val();
+								}
+								valsCount++;
+							});
+
+							sizePref = vals;
+						} else {
+							sizePref = sizes.val();
+						}
+
+						$('#non-size-filters').show();
+						$('h2', '#size-card').attr('data-selected', sizePref);
+						$('#size-wrapper').removeClass('left').css('position', 'fixed');
+					}, 126);
+					setTimeout(function() {
+						$('#non-size-filters').removeClass('transitioning');
+						$('.intro:first', '#filters').removeClass('left');
+					}, 201);
+					setTimeout(function() {
+						$('#non-size-filters').removeClass('opaque');
+					}, 376);
+				});
+
+				$('input:disabled').parents('label').addClass('disabled');
+
+			});
+
+			function enableButton(el) {
+				setTimeout(function() {
+					el.prop('disabled', false);
+				}, 500);
+			}
+
+			function reset(el) {
+				el.prop('disabled', true);
+				setTimeout(function() {
+					el.prop('disabled', false);
+				}, 750);
+			}
+
+			function ajaxUpdateFilters(content) {
+				var num = parseInt($('#result-num').text(), 10),
+					numMinus = [11121, 5257, 8753][Math.floor(Math.random() * 3)],
+					newNum = num - numMinus;
+
+				// console.log(num, numMinus, newNum);
+
+				setTimeout(function() {
+					$('html').append(content);
+				}, 125);
+				setTimeout(function() {
+					$('#ajax-overlay').remove();
+					// $('#result-num').text(newNum);
+				}, 701);
+			}
+
+			function setDataAttr(el, selected, addDisabled) {
+				var val = selected.val(),
+					checkbox = selected.attr('type') === 'checkbox' ? true : false,
+					size = selected.data('sizing') !== undefined ? true : false,
+					selectdReturn = selected.data('return') !== undefined ? true : false,
+					disablable = $('#filters').find('input[data-disablable]');
+
+				if (selected.data('dont') !== undefined) {
+					return;
+				}
+
+				setTimeout(function() {
+
+					// if (window.location.hash) {
+						if (el.next('div').attr('id') === 'images') {
+							if (addDisabled) {
+								disablable.prop('disabled', true);
+							} else {
+								disablable.prop('disabled', false);
+							}
+						}
+					// }
+					
+					if ( checkbox ) {
+						var multiSelected = selected.attr('name');
+
+						// console.log(selected.length, $('input[name=' + multiSelected + ']:checked').length);
+
+						if ( $('input[name=' + multiSelected + ']:checked').length > 1 ) {
+							var vals = '',
+								valsCount = 0;
+
+							$('input[name=' + multiSelected + ']:checked').each(function() {
+								if ( valsCount > 1 ) {
+									if (valsCount > 2 ) {
+										vals = vals.slice(0, -8);
+									}
+									vals += ' + ' + (valsCount - 1) + ' more';
+								} else {
+									vals += (valsCount === 0) ? $(this).val() : ' + ' + $(this).val();
+								}
+								valsCount++;
+							});
+
+							el.attr('data-selected', vals);
+						} else if ( $('input[name=' + multiSelected + ']:checked').length < 1 ) {
+							el.attr('data-selected', 'All');
+						} else {
+							el.attr('data-selected', $('input[name=' + multiSelected + ']:checked').val());
+						}
+
+					} else {
+
+						if (selected.length < 1) {
+							el.attr('data-selected', 'All');
+							return;
+						}
+
+						el.attr('data-selected', val);
+					}
+
+					if ( selectdReturn ) {
+						return;
+					}
+				}, 751);
+			}
+
+			function setDataAttrNonVal(el, text) {
+				var selectdReturn = el.data('return') !== undefined ? true : false;
+
+				setTimeout(function() {
+					
+					el.attr('data-selected', text);
+
+				}, 751);
+			}
+
+			function fuaxSubmit(el, parEl, ctx) {
+				el.find('button:first').prop('disabled', true);
+				setTimeout(function() {
+					location.reload(true);
+				}, 750);
+			}
+
+			function enableStickyButton(el, parEl, ctx) {
+				var css = ctx ? 'fixed' : 'absolute',
+					parCss = ctx ? 'absolute' : 'fixed';
+
+				if ( !ctx ) {
+					parEl.css('position', parCss);
+					el.css('position', css).find('button').text('Apply Filters').prop('disabled', false);
+					$('#content').show();
+					return;
+				}
+
+				setTimeout(function() {
+					parEl.css('position', parCss);
+					el.css('position', css);
+					$('#content').hide();
+				}, 251);
+
+			}
+
+		</script>
+		
+	</body>
+</html>
