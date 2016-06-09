@@ -107,45 +107,37 @@
 
 					<div class="radios-as-checks">
 						<label>
-							<input type="checkbox" name="department" value="Clothing" data-sizing />
+							<input type="radio" name="department" value="Clothing" data-sizing />
 							<span>
 								Clothing
 							</span>
 						</label>
 						<label>
-							<input type="checkbox" name="department" value="Bags" data-sizing />
+							<input type="radio" name="department" value="Bags" data-sizing />
 							<span>
 								Bags
 							</span>
 						</label>
 						<label>
-							<input type="checkbox" name="department" value="Shoes" data-sizing />
+							<input type="radio" name="department" value="Shoes" data-sizing />
 							<span>
 								Shoes
 							</span>
 						</label>
 						<label>
-							<input type="checkbox" name="department" value="Accessories" data-sizing />
+							<input type="radio" name="department" value="Accessories" data-sizing />
 							<span>
 								Accessories
 							</span>
 						</label>
 						<label>
-							<input type="checkbox" name="department" value="Wedding" data-sizing />
+							<input type="radio" name="department" value="Wedding" data-sizing />
 							<span>
 								Weddings
 							</span>
 						</label>
 					</div>
 
-				</div>
-
-				<div class="filter" data-toggleable>
-					<h2>
-						<span>
-							Color
-						</span>
-					</h2>
 				</div>
 
 				<div class="filter" data-slideable>
@@ -156,6 +148,113 @@
 					</h2>
 				</div>
 
+				<div class="filter no-border-when-open" data-toggleable>
+					<h2>
+						<span>
+							Color
+						</span>
+					</h2>
+					<div class="color-wrap cf">
+						<label class="color black">
+							<input type="checkbox" name="color" value="Black" data-return />
+							<span>Black</span>
+						</label>
+						<label class="color grey">
+							<input type="checkbox" name="color" value="Grey" data-return />
+							<span>Grey</span>
+						</label>
+						<label class="color white inset">
+							<input type="checkbox" name="color" value="White" data-return />
+							<span>White</span>
+						</label>
+						<label class="color red">
+							<input type="checkbox" name="color" value="Red" data-return data-disablable />
+							<span>Red</span>
+						</label>
+						<label class="color blue">
+							<input type="checkbox" name="color" value="Blue" data-return />
+							<span>Blue</span>
+						</label>
+						<label class="color beige inset">
+							<input type="checkbox" name="color" value="Beige" data-return />
+							<span>Beige</span>
+						</label>
+						<label class="color pink inset">
+							<input type="checkbox" name="color" value="Pink" data-return data-disablable />
+							<span>Pink</span>
+						</label>
+						<label class="color purple inset">
+							<input type="checkbox" name="color" value="Purple" data-return />
+							<span>Purple</span>
+						</label>
+						<label class="color green inset">
+							<input type="checkbox" name="color" value="Green" data-return />
+							<span>Green</span>
+						</label>
+						<label class="color orange inset">
+							<input type="checkbox" name="color" disabled value="Orange" data-return />
+							<span>Orange</span>
+						</label>
+						<label class="color brown inset">
+							<input type="checkbox" name="color" value="Brown" data-return />
+							<span>Brown</span>
+						</label>
+						<label class="color yellow inset">
+							<input type="checkbox" name="color" value="Yellow" data-return />
+							<span>Yellow</span>
+						</label>
+						<label class="color gold inset">
+							<input type="checkbox" name="color" value="Gold" data-return />
+							<span>Gold</span>
+						</label>
+						<label class="color silver inset">
+							<input type="checkbox" name="color" value="Silver" data-return />
+							<span>Silver</span>
+						</label>
+						<label class="color multi inset">
+							<input type="checkbox" name="color" value="Multi" data-return />
+							<span>Multi</span>
+						</label>
+					</div>
+				</div>
+
+				<div class="filter-card">
+
+					<h2>Availability</h2>
+					<div id="tab" class="cf three size">
+						<label class="checked">
+							<input type="radio" name="availability" value="All" checked data-return />
+							<span>All items</span>
+						</label>
+						<label>
+							<input type="radio" name="availability" value="In Stock" data-return />
+							<span>In Stock</span>
+						</label>
+						<label>
+							<input type="radio" name="availability" value="Sold" data-return />
+							<span>Sold</span>
+						</label>
+					</div>
+
+					<hr />
+
+					<h2>Price</h2>
+					<div id="slider">
+						<em draggable="true"></em>
+						<em draggable="true"></em>
+						<!-- <span>$25&mdash;$500</span> -->
+					</div>
+
+					<hr />
+
+					<label class="toggle">
+						<input type="checkbox" name="on-save" data-dont />
+						<span>On Sale</span>
+					</label>
+
+
+				</div>
+
 				<div class="filter" data-slideable>
 					<h2>
 						<span>
@@ -163,6 +262,67 @@
 							<em>Shoesday: Under $100</em>
 						</span>
 					</h2>
+				</div>
+
+
+				<div class="filter no-border-when-open" data-toggleable>
+					<h2>
+						<span>
+							Condition
+						</span>
+					</h2>
+					
+					<div class="radios-as-checks border-bot">
+						<!-- <label>
+							<input type="radio" name="condition" checked value="All" data-return />
+							<span>All Items</span>
+						</label> -->
+						<label>
+							<input type="radio" name="condition" value="Gently Used" data-return />
+							<span>Gently Used</span>
+						</label>
+						<label>
+							<input type="radio" name="condition" value="Like New" data-return data-disablable />
+							<span>Like New</span>
+						</label>
+						<label>
+							<input type="radio" name="condition" value="New With Tags" data-return />
+							<span>New With Tags</span>
+						</label>
+					</div>
+
+				</div>
+
+				<div class="filter no-border-when-open last" data-toggleable>
+					<h2>
+						<span>
+							Discount
+						</span>
+					</h2>
+
+					<div class="radios-as-checks border-bot">
+						<!-- <label>
+							<input type="radio" name="discount" checked value="All" data-return />
+							<span>All Items</span>
+						</label> -->
+						<label>
+							<input type="radio" name="discount" disabled value="90% Off or More" data-return />
+							<span>90% Off or More</span>
+						</label>
+						<label>
+							<input type="radio" name="discount" value="75% Off or More" data-return />
+							<span>75% Off or More</span>
+						</label>
+						<label>
+							<input type="radio" name="discount" value="50% Off or More" data-return data-disablable />
+							<span>50% Off or More</span>
+						</label>
+						<label>
+							<input type="radio" name="discount" value="30% Off or More" data-return />
+							<span>30% Off or More</span>
+						</label>
+					</div>
+
 				</div>
 				
 
@@ -338,6 +498,10 @@
 					}
 				});
 
+				$('input', '.radios-as-checks').each(function() {
+					$(this).attr('type', 'checkbox'); // change this with JS so the native functionality still works
+				});
+
 				$('input', '.radios-as-checks').on('click', function() {
 					var relatedInputs = $(this).parents('.radios-as-checks').find('input'),
 						thisInputChecked = $(this).prop('checked') ? true : false;
@@ -486,7 +650,8 @@
 					checkbox = selected.attr('type') === 'checkbox' ? true : false,
 					size = selected.data('sizing') !== undefined ? true : false,
 					selectdReturn = selected.data('return') !== undefined ? true : false,
-					disablable = $('#filters').find('input[data-disablable]');
+					disablable = $('#filters').find('input[data-disablable]'),
+					em = el.find('span');
 
 				if (selected.data('dont') !== undefined) {
 					return;
@@ -525,21 +690,29 @@
 								valsCount++;
 							});
 
-							el.attr('data-selected', vals);
+							// el.attr('data-selected', vals);
+							em.find('em').remove();
+							em.append('<em>' + vals + '</em>');
 						} else if ( $('input[name=' + multiSelected + ']:checked').length < 1 ) {
-							el.attr('data-selected', 'All');
+							// el.attr('data-selected', 'All');
+							em.find('em').remove();
 						} else {
-							el.attr('data-selected', $('input[name=' + multiSelected + ']:checked').val());
+							// el.attr('data-selected', $('input[name=' + multiSelected + ']:checked').val());
+							em.find('em').remove();
+							em.append('<em>' + $('input[name=' + multiSelected + ']:checked').val() + '</em>')
 						}
 
 					} else {
 
 						if (selected.length < 1) {
-							el.attr('data-selected', 'All');
+							// el.attr('data-selected', 'All');
+							em.find('em').remove();
 							return;
 						}
 
-						el.attr('data-selected', val);
+						// el.attr('data-selected', val);
+						em.find('em').remove();
+						em.append('<em>' + val + '</em>');
 					}
 
 					if ( selectdReturn ) {

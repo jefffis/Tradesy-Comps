@@ -311,6 +311,9 @@ small button {
 	padding-bottom : 0;
 	border-bottom : 0;
 }
+#filters .no-border-when-open .open {
+	border-bottom : 0;
+}
 #filters .filter-open h2:before {
 	display : none;
 }
@@ -389,7 +392,7 @@ small button {
 
 /** padding **/
 .filter-card {
-	padding : 1rem 1.25rem;
+	padding : 1.25rem;
 }
 .is-tablet h2, .is-tablet .filter-card {
 	padding : .75rem 12rem;
@@ -414,11 +417,15 @@ hr {
 	border : 0;
 }
 .filter-card hr {
-	height : 1.25rem;
+	height : 1.5rem;
 }
 .filter + hr {
 	height : 1px;
 	background : #ddd;
+}
+
+.filter.last {
+    margin-bottom : 67px;
 }
 
 /** hidden content **/
@@ -686,6 +693,9 @@ input:checked + span img {
 #filters .filter-card h2:before {
 	display : none;
 }
+#filters .filter-card h2:active {
+	background : inherit;
+}
 #slider {
 	position : relative;
 	margin-bottom : 1rem;
@@ -821,6 +831,9 @@ input:checked + span img {
 	position : relative;
 	padding : 0 1.25rem 1.25rem;
 }
+.filter-card .toggle {
+	padding : 0;
+}
 .toggle span {
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 17px;
@@ -851,6 +864,13 @@ input:checked + span img {
 	content : "";
 }
 
+.filter-card .toggle input + span:before {
+	right : -4px;
+}
+.filter-card .toggle input + span:after {
+	right : 0;
+}
+
 .toggle input:checked + span:before {
 	right : calc(1.25rem - 5px);
 	background : white;
@@ -866,12 +886,18 @@ input:checked + span img {
 /** color UI **/
 .color-wrap {
 	/*margin : auto -4px .5rem !important;*/
-	padding : 0 calc(1.25rem - 10px) !important;
+	padding : 0 calc(1.25rem - 10px) 1.25rem !important;
+	border-bottom : 1px solid #ddd;
+}
+.border-bot {
+	margin-bottom : 0 !important;
+	padding-bottom : 1.25rem !important;
+	border-bottom : 1px solid #ddd;	
 }
 .color {
 	position : relative;
 	float : left;
-	width : calc(20% - 6px);
+	width : calc(25% - 6px);
     margin : 0 3px .5rem;
     padding : 3px;
     border : 1px solid white;
@@ -882,13 +908,13 @@ input:checked + span img {
 .color:nth-child(n+2) {
 	margin-top : 0;
 }
-.color:nth-child(n+11) {
+.color:nth-child(n+9) {
 	margin-bottom : 0;
 }
 .color input + span:before {
 	display : block;
-	height : 40px;
-	width : 40px;
+	height : 50px;
+	width : 50px;
 	margin : auto auto.5rem;
 	border : 0;
 	border-radius : 100%;
@@ -903,7 +929,7 @@ input:checked + span img {
 .color input:checked + span:after {
 	display: block;
 	position : absolute;
-	top : 8px;
+	top : 13px;
 	left : 50%;
 	z-index : 3;
     height : 40px;
