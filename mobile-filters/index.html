@@ -47,7 +47,7 @@
 				</div> -->
 			</div>
 			<small>
-				Viewing 1-24 of 59,291 items<!--  in <strong>Shoes</strong> -->
+				Viewing 1-24 of 59,291 items
 				<button type="button"><!-- Share -->&nbsp;</button>
 			</small>
 			<div class="cf">
@@ -71,8 +71,10 @@
 		</div>
 		<div id="sort-actions">
 			<div class="intro">
-				Sort items by:
-				<button type="button" id="close-sort"></button>
+				Sort
+				<button type="button" id="close-sort">
+					<img src="img/close.svg" />
+				</button>
 			</div>
 			<a class="active">Relevance</a>
 			<a>New Arrivals</a>
@@ -83,25 +85,412 @@
 		<div id="filters">
 			<div class="intro">
 				Filters
-				<button type="button" class="toggle-filters"></button>
+				<button type="button" class="toggle-filters">
+					<img src="img/close.svg" />
+				</button>
 			</div>
+
+			<!-- slideable div -->
+			<div class="filter-open slide-to" id="choose-sizes" data-filter>
+				<div class="intro">
+					<button type="button">Back</button>
+					<button type="button" class="toggle-filters">
+						<img src="img/close.svg" />
+					</button>
+				</div>
+				<h2>
+					<span>
+						Size
+						<em>All</em>
+					</span>
+				</h2>
+
+				<div class="toggle-wrapper">
+					<label class="toggle">
+						<input type="checkbox" name="on-save" data-dont />
+						<span>Save Sizes</span>
+					</label>
+					<small>Saving your sizes to save time</small>
+				</div>
+
+				<!-- <div class="cf tab four">
+					<span class="active">US</span>
+					<span>UK</span>
+					<span>Euro</span>
+					<span>??</span>
+				</div> -->
+				<div id="size" class="cf size">
+					<label>
+						<input type="checkbox" name="size" value="1" data-return />
+						<span>1</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="1.5" data-return />
+						<span>1.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="2" data-return />
+						<span>2</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="2.5" data-return />
+						<span>2.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="3" data-return />
+						<span>3</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="3.5" data-return />
+						<span>3.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="4" data-return />
+						<span>4</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="4.5" data-return />
+						<span>4.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="5" data-return />
+						<span>5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="5" data-return />
+						<span>5.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="6" data-return />
+						<span>6</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="6.5" data-return />
+						<span>6.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="7" data-return data-disablable />
+						<span>7</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="7.5" data-return />
+						<span>7.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="8" data-return />
+						<span>8</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="8.5" data-return />
+						<span>8.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="9" data-return data-disablable />
+						<span>9</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="9.5" data-return />
+						<span>9.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="10" data-return />
+						<span>10</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="10.5" data-return />
+						<span>10.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="11" data-return />
+						<span>11</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="11.5" data-return />
+						<span>11.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="12" data-return data-disablable />
+						<span>12</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="12.5" data-return />
+						<span>12.5</span>
+					</label>
+					<label>
+						<input type="checkbox" name="size" value="13" data-return />
+						<span>13</span>
+					</label>
+				</div>
+			</div>
+			<!--\ slideable div -->
+
+			<!-- slideable div -->
+			<div class="filter-open slide-to" id="choose-designer" data-filter>
+				<div class="intro">
+					<button type="button">Back</button>
+					<button type="button" class="toggle-filters">
+						<img src="img/close.svg" />
+					</button>
+				</div>
+				<h2>
+					<span>
+						Designer
+						<em>All</em>
+					</span>
+				</h2>
+				<div data-inputs>
+					<div class="inline cf">
+						<label>
+							<input type="text" name="search-designer" autocomplete="off" />
+							<small>Search for a specific Designer</small>
+						</label>
+					</div>
+					<h3>Popular Designers</h3>
+					<label class="vis">
+						<input type="checkbox" name="designer" value="Louis Vuitton" data-return />
+						<span>Louis Vuitton</span>
+					</label>
+					<label class="vis">
+						<input type="checkbox" name="designer" value="Chanel" data-return />
+						<span>Chanel</span>
+					</label>
+					<label class="vis">
+						<input type="checkbox" name="designer" value="Lululemon" data-return />
+						<span>Lululemon</span>
+					</label>
+					<label class="vis">
+						<input type="checkbox" name="designer" value="Hermes" data-return />
+						<span>Hermes</span>
+					</label class="vis">
+					<label>
+						<input type="checkbox" name="designer" value="Zara" data-return />
+						<span>Zara</span>
+					</label>
+					
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="Another Designer" data-return />
+						<span>Another Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="And More Designer" data-return />
+						<span>And More Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="Another Designer" data-return />
+						<span>Another Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="And More Designer" data-return />
+						<span>And More Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="Another Designer" data-return />
+						<span>Another Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="And More Designer" data-return />
+						<span>And More Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="Another Designer" data-return />
+						<span>Another Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="And More Designer" data-return />
+						<span>And More Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="Another Designer" data-return />
+						<span>Another Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="And More Designer" data-return />
+						<span>And More Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="Another Designer" data-return />
+						<span>Another Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="And More Designer" data-return />
+						<span>And More Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="Another Designer" data-return />
+						<span>Another Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="And More Designer" data-return />
+						<span>And More Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="Another Designer" data-return />
+						<span>Another Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="And More Designer" data-return />
+						<span>And More Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="Another Designer" data-return />
+						<span>Another Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="And More Designer" data-return />
+						<span>And More Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="Another Designer" data-return />
+						<span>Another Designer</span>
+					</label>
+					<label class="hidden">
+						<input type="checkbox" name="designer" value="And More Designer" data-return />
+						<span>And More Designer</span>
+					</label>
+
+					<button type="button" class="light-btn">Load 10 More Designers</button>
+				</div>
+			</div>
+			<!--\ slideable div -->
+
+			<!-- slideable div -->
+			<div class="filter-open slide-to" id="choose-colletion" data-filter>
+				<div class="intro">
+					<button type="button">Back</button>
+					<button type="button" class="toggle-filters">
+						<img src="img/close.svg" />
+					</button>
+				</div>
+				<h2>
+					<span>
+						Collection
+						<em>All</em>
+					</span>
+				</h2>
+				<div class="radios-as-checks" data-inputs>
+					<label>
+						<input type="radio" name="collection" value="Shoesday: Under $300" data-return />
+						<span>Shoesday: Under $300</span>
+					</label>
+					<label>
+						<input type="radio" name="collection" value="Luxury Boutique" data-return />
+						<span>Luxury Boutique</span>
+					</label>
+					<label>
+						<input type="radio" name="collection" value="Shoesday: Under $100" data-return />
+						<span>Shoesday: Under $100</span>
+					</label>
+					<label>
+						<input type="radio" name="collection" value="Shoesday: All Under $500" data-return />
+						<span>Shoesday: All Under $500</span>
+					</label>
+					<label>
+						<input type="radio" name="collection" value="Chanel x Christian Louboutin" data-return />
+						<span>Chanel x Christian Louboutin</span>
+					</label>
+					
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: Under $300" data-return />
+						<span>Shoesday: Under $300</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Luxury Boutique" data-return />
+						<span>Luxury Boutique</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: Under $100" data-return />
+						<span>Shoesday: Under $100</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: All Under $500" data-return />
+						<span>Shoesday: All Under $500</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Chanel x Christian Louboutin" data-return />
+						<span>Chanel x Christian Louboutin</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: Under $300" data-return />
+						<span>Shoesday: Under $300</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Luxury Boutique" data-return />
+						<span>Luxury Boutique</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: Under $100" data-return />
+						<span>Shoesday: Under $100</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: All Under $500" data-return />
+						<span>Shoesday: All Under $500</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Chanel x Christian Louboutin" data-return />
+						<span>Chanel x Christian Louboutin</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: Under $300" data-return />
+						<span>Shoesday: Under $300</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Luxury Boutique" data-return />
+						<span>Luxury Boutique</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: Under $100" data-return />
+						<span>Shoesday: Under $100</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: All Under $500" data-return />
+						<span>Shoesday: All Under $500</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Chanel x Christian Louboutin" data-return />
+						<span>Chanel x Christian Louboutin</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: Under $300" data-return />
+						<span>Shoesday: Under $300</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Luxury Boutique" data-return />
+						<span>Luxury Boutique</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: Under $100" data-return />
+						<span>Shoesday: Under $100</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Shoesday: All Under $500" data-return />
+						<span>Shoesday: All Under $500</span>
+					</label>
+					<label class="hidden">
+						<input type="radio" name="collection" value="Chanel x Christian Louboutin" data-return />
+						<span>Chanel x Christian Louboutin</span>
+					</label>
+
+					<button type="button" class="light-btn">Load 10 More Collection</button>
+				</div>
+			</div>
+			<!--\ slideable div -->
 			
 			<div id="filter-wrapper">
 
-				
-				<div class="filter" data-slideable>
+				<div class="filter" data-slideable="#choose-sizes" data-filter>
 					<h2>
 						<span>
 							Size
-							<em>5, 5.5 and 6</em>
+							<em>All</em>
 						</span>
 					</h2>
 				</div>
 
-				<div class="filter-open">
+				<div class="filter-open" data-filter>
 					<h2>
 						<span>
 							Department
+							<em>All</em>
 						</span>
 					</h2>
 
@@ -140,18 +529,20 @@
 
 				</div>
 
-				<div class="filter" data-slideable>
+				<div class="filter" data-slideable="#choose-designer">
 					<h2>
 						<span>
 							Designer
+							<em>All</em>
 						</span>
 					</h2>
 				</div>
 
-				<div class="filter no-border-when-open" data-toggleable>
+				<div class="filter no-border-when-open" data-toggleable data-filter>
 					<h2>
 						<span>
 							Color
+							<em>All</em>
 						</span>
 					</h2>
 					<div class="color-wrap cf">
@@ -242,7 +633,8 @@
 					<div id="slider">
 						<em draggable="true"></em>
 						<em draggable="true"></em>
-						<!-- <span>$25&mdash;$500</span> -->
+						<span>Under $25</span>
+						<span>$500+</span>
 					</div>
 
 					<hr />
@@ -255,20 +647,21 @@
 
 				</div>
 
-				<div class="filter" data-slideable>
+				<div class="filter" data-slideable="#choose-colletion">
 					<h2>
 						<span>
 							Collection
-							<em>Shoesday: Under $100</em>
+							<em>All</em>
 						</span>
 					</h2>
 				</div>
 
 
-				<div class="filter no-border-when-open" data-toggleable>
+				<div class="filter no-border-when-open" data-toggleable data-filter>
 					<h2>
 						<span>
 							Condition
+							<em>All</em>
 						</span>
 					</h2>
 					
@@ -293,10 +686,11 @@
 
 				</div>
 
-				<div class="filter no-border-when-open last" data-toggleable>
+				<div class="filter no-border-when-open last" data-toggleable data-filter>
 					<h2>
 						<span>
 							Discount
+							<em>All</em>
 						</span>
 					</h2>
 
@@ -324,440 +718,17 @@
 					</div>
 
 				</div>
-				
-
-				<div id="apply">
-					<button data-submit>Apply Filters</button>
-				</div>
-
 			</div>
+			<!--\ filter-wrap -->
+
+			<div id="apply">
+				<button data-submit>Apply Filters</button>
+			</div>
+
 		</div>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-		<script>
-
-			$(function() {
-				var button = $('.toggle-filters'),
-					filters = $('#filters'),
-					tabs = $('span', '.tab'),
-					toggle = $('#toggle'),
-					apply = $('#apply'),
-					toggleableDiv = $('h2', '.filter'),
-					radios = $('input[type=radio]'),
-					checkboxes = $('input[type=checkbox]'),
-					sizing = $('#sizing'),
-					sort = $('#sort'),
-					sortActions = $('a', '#sort-actions'),
-					ajaxOverlay = '<div id="ajax-overlay"></div>',
-					resultNum = $('#result-num');
-
-				if ( window.innerWidth > 500 ) {
-					$('html').addClass('is-tablet');
-					$('.department:first').hide();
-					$('.department:last').show();
-					sizing.show();
-				}
-
-				if ( window.location.hash ) {
-					$('#department').text('Department');
-					$('label.shoes', '#images').remove();
-					$('label.dept', '#images').removeClass('hidden');
-
-					if (window.location.hash.indexOf('removed') > -1) {
-						// window.location.reload(true);
-						var filterRemoved = window.location.hash.replace('#removed=', '');
-						$('[data-filter=' + filterRemoved + ']').remove();
-					}
-				}
-
-				button.on('click', function() {
-
-					if ( !filters.hasClass('show') ) {
-						// $('html').css('height', filters.height());
-						filters.addClass('show');
-						enableStickyButton($('#apply'), filters, true);
-					} else {
-						filters.removeClass('show');
-						enableStickyButton($('#apply'), filters, false);
-					}
-
-				});
-
-				// $('button', '.inline').on('click', function() {
-				// 	$(this).prop('disabled', true);
-				// });
-
-				$('input', '.inline').on('keyup', function() {
-					if ( $(this).val() !== '' ) {
-						$(this).parent().parent().parent().find('.hidden').show();
-						$(this).parent().parent().parent().find('.vis').hide();
-					} else {
-						$(this).parent().parent().parent().find('.hidden').hide();
-						$(this).parent().parent().parent().find('.vis').show();
-					}
-				});
-
-				$('#load-collections').on('click', function() {
-					var nextFour = $(this).parents('.collections').find('.hidden'),
-						i = 0,
-						last = false;
-
-					if ( nextFour.length <= 4 ) {
-						last = true;
-					}
-
-					$(this).prop('disabled', true);
-
-					$('html, body').animate({
-						scrollTop : $(this).offset().top
-					}, 500);
-
-					enableButton($(this));
-
-					nextFour.each(function(i) {
-
-						if ( i > 3 ) {
-							return;
-						}
-
-						if ( last ) {
-							$('#load-collections').remove();
-						}
-
-						$(this).removeClass('hidden');
-						i++;
-					});
-				});
-
-				sort.on('click', function() {
-					$('#sort-actions').toggleClass('show');
-				});
-
-				sortActions.on('click', function() {
-					location.reload(true);
-				});
-
-				$('#close-sort').on('click', function() {
-					$('#sort-actions').removeClass('show');
-				});
-
-				toggle.on('click', function() {
-					var ctx = $(this).hasClass('active') ? 'All items' : 'Sale items only';
-
-					ajaxUpdateFilters(ajaxOverlay);
-					toggle.toggleClass('active');
-					setDataAttrNonVal(toggle.prev('h2'), ctx);
-				});
-
-				tabs.on('click', function() {
-
-					var thisTabs = $(this).siblings('span');
-
-					if ( $(this).hasClass('disabled') ) {
-						return;
-					}
-
-					// ajaxUpdateFilters(ajaxOverlay);
-					thisTabs.removeClass('active');
-					$(this).addClass('active');
-				});
-
-				radios.on('click', function() {
-					var checked = $(this).prop('checked') === true ? true : false;
-
-					// console.log(checked);
-
-					ajaxUpdateFilters(ajaxOverlay);
-					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this), checked);
-				});
-
-				checkboxes.on('click', function() {
-					var checked = $(this).prop('checked') === true ? true : false;
-
-					// console.log(checked);
-
-					ajaxUpdateFilters(ajaxOverlay);
-					setDataAttr($(this).parents('[data-toggleable]').find('h2'), $(this).parent().find('input'), checked);
-				});
-
-				toggleableDiv.on('click', function() {
-					if ( $(this).parent().data('toggleable') !== undefined ) {
-
-						if ($(this).parent().data('not') !== undefined) {
-							return;
-						}
-
-						if ( !$(this).hasClass('open') ) {
-							$('html, body').animate({
-								scrollTop : $(this).offset().top
-							}, 500);
-						}
-
-						$(this).toggleClass('open');
-						$(this).next('div').toggle();
-					}
-				});
-
-				$('input', '.radios-as-checks').each(function() {
-					$(this).attr('type', 'checkbox'); // change this with JS so the native functionality still works
-				});
-
-				$('input', '.radios-as-checks').on('click', function() {
-					var relatedInputs = $(this).parents('.radios-as-checks').find('input'),
-						thisInputChecked = $(this).prop('checked') ? true : false;
-
-					relatedInputs.prop('checked', false);
-					$(this).prop('checked', thisInputChecked);
-				});
-
-				$('input', '.color').on('click', function() {
-					$(this).parents('label').toggleClass('checked');
-				});
-
-				$('input', '.images').on('click', function() {
-					var radio = $(this).attr('type') === 'radio' ? true : false;
-
-					if ( radio ) {
-						$(this).parents('.images').find('label').removeClass('checked');
-					}
-
-					$(this).parents('label').toggleClass('checked');
-				});
-
-				// $('input', '.collections').on('click', function() {
-				// 	$(this).parents('div').find('label').removeClass('checked');
-				// 	$(this).parents('label').addClass('checked');
-				// });
-
-				$('input', '.size').on('click', function() {
-					var radio = $(this).attr('type') === 'radio' ? true : false;
-
-					if ( radio ) {
-						$(this).parents('.size').find('label').removeClass('checked');
-					}
-
-					$(this).parents('label').toggleClass('checked');
-				});
-
-				apply.on('click', function(e) {
-
-					if ( $(e.target).data('submit') === undefined ) {
-						reset($(e.target));
-						return;
-					}
-
-					fuaxSubmit($(this), filters, false);
-				});
-
-				$('button', '#applied-filters').on('click', function() {
-					var filter = $(this).data('filter');
-					window.location.href = window.location.pathname + '#removed=' + filter;
-				});
-
-				$('#size-card').on('click', function() {
-					$('html, body').animate({
-						scrollTop : $('html, body').offset().top
-					}, 125);
-					setTimeout(function() {
-						$('#size-wrapper').addClass('left');
-						$('#non-size-filters').addClass('transitioning opaque');
-						$('.intro:first', '#filters').addClass('left');
-					}, 126);
-					setTimeout(function() {
-						$('#size-wrapper').css('position', 'absolute');
-						$('#non-size-filters').hide();
-					}, 376);
-				});
-
-				$('#size-out').on('click', function() {
-					$('html, body').animate({
-						scrollTop : $('html, body').offset().top
-					}, 125);
-
-					setTimeout(function() {
-						var sizes = $('[name=size]:checked'),
-							sizePref = '';
-
-						if (sizes.length > 1) {
-							var vals = '',
-								valsCount = 0;
-
-							sizes.each(function() {
-								if ( valsCount > 1 ) {
-									if (valsCount > 2 ) {
-										vals = vals.slice(0, -8);
-									}
-									vals += ' + ' + (valsCount - 1) + ' more';
-								} else {
-									vals += (valsCount === 0) ? $(this).val() : ' + ' + $(this).val();
-								}
-								valsCount++;
-							});
-
-							sizePref = vals;
-						} else {
-							sizePref = sizes.val();
-						}
-
-						$('#non-size-filters').show();
-						$('h2', '#size-card').attr('data-selected', sizePref);
-						$('#size-wrapper').removeClass('left').css('position', 'fixed');
-					}, 126);
-					setTimeout(function() {
-						$('#non-size-filters').removeClass('transitioning');
-						$('.intro:first', '#filters').removeClass('left');
-					}, 201);
-					setTimeout(function() {
-						$('#non-size-filters').removeClass('opaque');
-					}, 376);
-				});
-
-				$('input:disabled').parents('label').addClass('disabled');
-
-			});
-
-			function enableButton(el) {
-				setTimeout(function() {
-					el.prop('disabled', false);
-				}, 500);
-			}
-
-			function reset(el) {
-				el.prop('disabled', true);
-				setTimeout(function() {
-					el.prop('disabled', false);
-				}, 750);
-			}
-
-			function ajaxUpdateFilters(content) {
-				var num = parseInt($('#result-num').text(), 10),
-					numMinus = [11121, 5257, 8753][Math.floor(Math.random() * 3)],
-					newNum = num - numMinus;
-
-				// console.log(num, numMinus, newNum);
-
-				setTimeout(function() {
-					$('html').append(content);
-				}, 125);
-				setTimeout(function() {
-					$('#ajax-overlay').remove();
-					// $('#result-num').text(newNum);
-				}, 701);
-			}
-
-			function setDataAttr(el, selected, addDisabled) {
-				var val = selected.val(),
-					checkbox = selected.attr('type') === 'checkbox' ? true : false,
-					size = selected.data('sizing') !== undefined ? true : false,
-					selectdReturn = selected.data('return') !== undefined ? true : false,
-					disablable = $('#filters').find('input[data-disablable]'),
-					em = el.find('span');
-
-				if (selected.data('dont') !== undefined) {
-					return;
-				}
-
-				setTimeout(function() {
-
-					// if (window.location.hash) {
-						if (el.next('div').attr('id') === 'images') {
-							if (addDisabled) {
-								disablable.prop('disabled', true);
-							} else {
-								disablable.prop('disabled', false);
-							}
-						}
-					// }
-					
-					if ( checkbox ) {
-						var multiSelected = selected.attr('name');
-
-						// console.log(selected.length, $('input[name=' + multiSelected + ']:checked').length);
-
-						if ( $('input[name=' + multiSelected + ']:checked').length > 1 ) {
-							var vals = '',
-								valsCount = 0;
-
-							$('input[name=' + multiSelected + ']:checked').each(function() {
-								if ( valsCount > 1 ) {
-									if (valsCount > 2 ) {
-										vals = vals.slice(0, -8);
-									}
-									vals += ' + ' + (valsCount - 1) + ' more';
-								} else {
-									vals += (valsCount === 0) ? $(this).val() : ' + ' + $(this).val();
-								}
-								valsCount++;
-							});
-
-							// el.attr('data-selected', vals);
-							em.find('em').remove();
-							em.append('<em>' + vals + '</em>');
-						} else if ( $('input[name=' + multiSelected + ']:checked').length < 1 ) {
-							// el.attr('data-selected', 'All');
-							em.find('em').remove();
-						} else {
-							// el.attr('data-selected', $('input[name=' + multiSelected + ']:checked').val());
-							em.find('em').remove();
-							em.append('<em>' + $('input[name=' + multiSelected + ']:checked').val() + '</em>')
-						}
-
-					} else {
-
-						if (selected.length < 1) {
-							// el.attr('data-selected', 'All');
-							em.find('em').remove();
-							return;
-						}
-
-						// el.attr('data-selected', val);
-						em.find('em').remove();
-						em.append('<em>' + val + '</em>');
-					}
-
-					if ( selectdReturn ) {
-						return;
-					}
-				}, 751);
-			}
-
-			function setDataAttrNonVal(el, text) {
-				var selectdReturn = el.data('return') !== undefined ? true : false;
-
-				setTimeout(function() {
-					
-					el.attr('data-selected', text);
-
-				}, 751);
-			}
-
-			function fuaxSubmit(el, parEl, ctx) {
-				el.find('button:first').prop('disabled', true);
-				setTimeout(function() {
-					location.reload(true);
-				}, 750);
-			}
-
-			function enableStickyButton(el, parEl, ctx) {
-				var css = ctx ? 'fixed' : 'absolute',
-					parCss = ctx ? 'absolute' : 'fixed';
-
-				if ( !ctx ) {
-					parEl.css('position', parCss);
-					el.css('position', css).find('button').text('Apply Filters').prop('disabled', false);
-					$('#content').show();
-					return;
-				}
-
-				setTimeout(function() {
-					parEl.css('position', parCss);
-					el.css('position', css);
-					$('#content').hide();
-				}, 251);
-
-			}
-
-		</script>
+		<script src="js/app.js"></script>
 		
 	</body>
 </html>
