@@ -852,7 +852,7 @@ input:checked + span img {
 }
 .toggle-wrapper {
 	margin : .5rem auto 1.25rem;
-	padding : .5rem 1.25rem 1rem !important;
+	padding : .5rem 1.25rem 1.25rem !important;
 	border-top : 1px solid #ddd;
 	border-bottom : 1px solid #ddd !important;
 }
@@ -1273,7 +1273,6 @@ h3 {
 
 #size, #size2 {
 	display : block;
-	/*background : #ddd;*/
 	margin : auto 1rem 1.5rem;
 	padding : 1px 0;
 	border-bottom : 0;
@@ -1281,18 +1280,23 @@ h3 {
 #size label, #size2 label, .size label {
 	display : block;
 	float : left;
-	width : calc(25% - 1px);
+	width : calc(25% - 16px);
 	background : white;
-	margin : .35px;
-    padding : .35rem;
+	margin : 0 8px 16px;
+    /*padding : .35rem;*/
 	text-align : center;
 }
 
+/*.size label:nth-child(n+4) {
+	margin-top : .7
+}*/
+
 .three.size label {
-	width : calc(33.3% - 1px);
+	width : calc(33.3% - 8px);
+	margin : 0 4px;
 }
 .three.size {
-	margin : .25rem -.25rem auto;
+	margin : .35rem -.25rem auto;
 }
 
 .size label:nth-of-type(n+2) {
@@ -1303,7 +1307,7 @@ h3 {
 }*/
 .size span {
 	display : block;
-	padding : .5rem;
+	padding : .5rem 0;
 	border : 1px solid;
 }
 #size span:before, #size2 span:before, .size span:before {
