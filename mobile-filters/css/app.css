@@ -1368,28 +1368,28 @@ h3 {
 }
 #apply button {
 	display : block;
-	/*float : left;
-	width : 60vw;*/
-	width : 100%;
+	float : left;
+	/*width : 60vw;*/
+	width : calc(50% - .5rem);
 	background : #111;
+	margin-left : .5rem;
 	padding : .75rem 0 .7rem;
 	color : white;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 17px;
 }
-/*#apply button:nth-child(2) {
-	float : right;
-	width : 30vw;
+#apply button:first-child {
 	background : white;
-	box-shadow : 0 0 0 1px #999 inset;
-	color : #111;
-}*/
+	margin-right : .5rem;
+	margin-left : 0;
+	color : #666;
+}
 #apply button:active {
 	color : rgba(255, 255, 255, 0.75);
 }
-/*#apply button:nth-child(2):active {
+#apply button:first-child:active {
 	background : #efefef;
-}*/
+}
 #apply button:disabled {
 	position : relative;
 }
@@ -1404,7 +1404,7 @@ h3 {
 	background-size : 24px;
 	content : "";
 }
-#apply button:nth-child(2):disabled:after {
+#apply button:first-child:disabled:after {
 	background : #efefef url(../img/loading-d.gif) no-repeat center;
 	background-size : 24px;
 	/*box-shadow : 0 0 0 1px currentColor inset;*/

@@ -42,6 +42,7 @@ $(function() {
         } else {
             filters.removeClass('show');
             enableStickyButton($('#apply'), filters, false);
+            // resetFilterUI();
         }
 
     });
@@ -202,8 +203,10 @@ $(function() {
 
     apply.on('click', function(e) {
 
+        console.log($(e.target).data('submit'));
+
         if ( $(e.target).data('submit') === undefined ) {
-            reset($(e.target));
+            reset($(e.target), ajaxOverlay);
             return;
         }
 
@@ -316,14 +319,22 @@ $(function() {
 
 });
 
+// function resetFilterUI() {
+//     setTimeout(function() {
+//         $('.slide-to').removeClass('left absolute padding-bottom');
+//         $('#filter-wrapper').show().removeClass('opaque');
+//     }, 500);
+// }
+
 function enableButton(el) {
     setTimeout(function() {
         el.prop('disabled', false);
     }, 500);
 }
 
-function reset(el) {
+function reset(el, content) {
     el.prop('disabled', true);
+    ajaxUpdateFilters(content);
     setTimeout(function() {
         el.prop('disabled', false);
     }, 750);
@@ -353,7 +364,7 @@ function setDataAttr(el, selected, addDisabled) {
         disablable = $('#filters').find('input[data-disablable]'),
         em = el.find('span');
 
-    console.log(val, checkbox, size, selectdReturn, disablable, em, selected.data('dont'));
+    // console.log(val, checkbox, size, selectdReturn, disablable, em, selected.data('dont'));
 
     if (selected.data('dont') !== undefined) {
         return;
@@ -432,7 +443,7 @@ function setDataAttrNonVal(el, text) {
 }
 
 function fuaxSubmit(el, parEl, ctx) {
-    el.find('button:first').prop('disabled', true);
+    el.find('button:nth-child(2)').prop('disabled', true);
     setTimeout(function() {
         location.reload(true);
     }, 750);
