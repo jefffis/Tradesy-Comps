@@ -1382,14 +1382,14 @@ h3 {
 	background : white;
 	margin-right : .5rem;
 	margin-left : 0;
-	color : #666;
+	color : #111;
 	font-family : inherit;
 }
 #apply button:active {
 	color : rgba(255, 255, 255, 0.75);
 }
 #apply button:first-child:active {
-	background : #efefef;
+	background : white;
 }
 #apply button:disabled {
 	position : relative;
@@ -1406,7 +1406,7 @@ h3 {
 	content : "";
 }
 #apply button:first-child:disabled:after {
-	background : #efefef url(../img/loading-d.gif) no-repeat center;
+	background : white url(../img/loading-d.gif) no-repeat center;
 	background-size : 24px;
 	/*box-shadow : 0 0 0 1px currentColor inset;*/
 }
