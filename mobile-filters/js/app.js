@@ -244,6 +244,7 @@ $(function() {
             setTimeout(function() {
                 $(target).addClass('absolute');
                 $('#filter-wrapper').hide();
+                window.scroll(0, 0);
             }, 376);
             setTimeout(function() {
                 $(target).removeAttr('style').addClass('padding-bottom');
