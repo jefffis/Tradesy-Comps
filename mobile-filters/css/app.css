@@ -461,11 +461,18 @@ hr {
 	border-bottom : 1px solid #ddd;
 }
 .filter-open > .tab {
-	padding : 0 1.25rem 1rem;
+	padding : 0 1.25rem;
 	border-bottom : 0;
+}
+.filter-open .tab span {
+	padding-top : 0;
 }
 .slide-to > div {
 	border-bottom : 0;
+}
+.slide-to > .size {
+	margin-left : auto;
+	margin-right : auto;
 }
 .slide-to > .intro {
 	border-bottom : 1px solid #ddd;
@@ -851,10 +858,16 @@ input:checked + span img {
 	padding-bottom : .5rem;
 }
 .toggle-wrapper {
-	margin : .5rem auto 1.25rem;
+	margin : .5rem auto;
 	padding : .5rem 1.25rem 1.25rem !important;
 	border-top : 1px solid #ddd;
 	border-bottom : 1px solid #ddd !important;
+}
+.toggle-wrapper + .tab {
+	margin : 1.5rem auto;
+}
+.toggle-wrapper + .size {
+	margin-top : 1.5rem;
 }
 .toggle-wrapper small {
 	padding : 0;
@@ -903,11 +916,11 @@ input:checked + span img {
 	content : "";
 }
 .toggle-wrapper input + span:before {
-	top : 6px;
+	top : 11px;
 	/*right : -4px;*/
 }
 .toggle-wrapper input + span:after {
-	top : 3px;
+	top : 8px;
 	/*right : 0;*/
 }
 
@@ -1202,6 +1215,8 @@ input:checked + span img {
 	padding-left : 1rem;
 	font-family : inherit;
 	font-size : 15px;
+	letter-spacing : 1.5px;
+	text-transform : uppercase;
 }
 .slide-to .intro button:first-child:after {
 	display : block;
@@ -1211,8 +1226,8 @@ input:checked + span img {
 	height : 1rem;
 	width : 1rem;
 	background : url(https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_keyboard_arrow_down_48px-256.png) no-repeat center;
-	background-size : 30px;
-	margin-top : -.5rem;
+	background-size : 25px;
+	margin-top : calc(-.5rem - 1px);
 	content : "";
 
 	transform : rotate(90deg);
@@ -1271,13 +1286,13 @@ h3 {
 	background : none;
 }
 
-#size, #size2 {
+.size {
 	display : block;
 	margin : auto 1rem 1.5rem;
 	padding : 1px 0;
 	border-bottom : 0;
 }
-#size label, #size2 label, .size label {
+.size label {
 	display : block;
 	float : left;
 	width : calc(25% - 16px);
