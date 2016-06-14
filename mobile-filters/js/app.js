@@ -334,6 +334,19 @@ function enableButton(el) {
 
 function reset(el, content) {
     el.prop('disabled', true);
+    $('input').each(function() {
+        $(this).prop('checked', false);
+    });
+    $('label.checked').each(function() {
+        $(this).removeClass('checked');
+    });
+    $('input[data-default]').each(function() {
+        $(this).prop('checked', true);
+        $(this).parent().addClass('checked');
+    });
+    $('em', 'h2').each(function() {
+        $(this).text('All');
+    });
     ajaxUpdateFilters(content);
     setTimeout(function() {
         el.prop('disabled', false);

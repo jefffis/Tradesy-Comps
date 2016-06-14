@@ -1383,6 +1383,7 @@ h3 {
 	margin-right : .5rem;
 	margin-left : 0;
 	color : #666;
+	font-family : inherit;
 }
 #apply button:active {
 	color : rgba(255, 255, 255, 0.75);
