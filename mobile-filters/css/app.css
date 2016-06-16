@@ -302,10 +302,13 @@ small button {
 	/*width : 95%;*/
 	background : white;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
-	font-size : 18px;
+	font-size : 16px;
 	font-weight : normal;
 	/*overflow : hidden;
 	white-space: nowrap;*/
+
+	letter-spacing : 1.5px;
+	text-transform : uppercase;
 }
 #filters .filter-open h2 {
 	padding-bottom : 0;
@@ -372,6 +375,9 @@ small button {
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 	font-style : normal;
 	font-size : 14px;
+
+	letter-spacing : normal;
+	text-transform : none;
 }
 
 /*** push over ***/
@@ -582,20 +588,23 @@ input + span:before {
 	border : 1px solid;
 	content : "";
 }
-/*input[type=radio] + span:before {
+.radios-as-checks input + span:before {
 	border-radius : 100%;
-}*/
+}
+.radios-as-checks input[type=checkbox]:checked + span:before {
+	background-size : 65%;
+}
 input:checked + span:before {
 	background : #111;
 }
 input[type=radio]:checked + span:before,
 input[type=checkbox]:checked + span:before {
-	background : #111 url(https://assets.tradesy.com/images/forms/check-white.svg) no-repeat center;
+	background : #111 url(https://assets.tradesy.com/images/forms/check-white.svg) no-repeat 50% calc(50% + 1px);
 	background-size : 80%;
 }
-/*input[type=radio]:checked + span:before {
+input[type=radio]:checked + span:before {
 	box-shadow : 0 0 0 1px #111 inset, 0 0 0 2px white inset, 0 0 0 3px white inset;
-}*/
+}
 
 /** disabled **/
 input:disabled + span {
@@ -719,19 +728,19 @@ input:checked + span img {
 }
 #slider {
 	position : relative;
-	margin-bottom : 2rem;
-	padding : 1rem 0 0;
+	margin-bottom : 2.75rem;
+	padding : 1.25rem 0 0;
 	border-bottom : 3px solid #111
 }
 #slider em {
 	display : block;
 	position : absolute;
-	top : 4px;
+	top : calc(.25rem + 4px);
 	z-index : 2;
 	height : 26px;
 	width : 26px;
 	background : white;
-	border : 1px solid #111;
+	border : 1px solid #999;
 	border-radius : 100%;
 	box-shadow : 0 1px 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.075);
 	/*content : "";*/
@@ -743,8 +752,8 @@ input:checked + span img {
 	display : block;
 	position : absolute;
 	top : 100%;
-	margin-top : 1rem;
-	color : #999;
+	margin-top : 1.25rem;
+	/*color : #999;*/
 	font-size : 14px;
 }
 #slider span:last-child {
@@ -752,7 +761,7 @@ input:checked + span img {
 }
 #toggle {
 	position : relative;
-	top : -2.375rem;
+	top : -2.125rem;
 	float : right;
 	height : 30px;
 	width : 50px;
@@ -808,6 +817,7 @@ input:checked + span img {
 	color : #666;
 	cursor : pointer;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+	font-size : 15px;
 	text-align : center;
 }
 .tab span:active {
@@ -863,6 +873,15 @@ input:checked + span img {
 	border-top : 1px solid #ddd;
 	border-bottom : 1px solid #ddd !important;
 }
+.toggle-wrapper.card {
+	margin : 0 !important;
+	padding : 0 !important;
+	border : 0 !important;
+}
+.card span {
+	letter-spacing : 1.5px;
+	text-transform : uppercase;
+}
 .toggle-wrapper + .tab {
 	margin : 1.5rem auto;
 }
@@ -894,7 +913,7 @@ input:checked + span img {
 	display : block;
 	position : absolute;
 	top : -1px;
-	right : -5px;
+	right : calc(24px - 9px);
 	z-index : 2;
 	height : 24px;
 	width : 24px;
@@ -932,7 +951,7 @@ input:checked + span img {
 }*/
 
 .toggle input:checked + span:before {
-	right : calc(1.25rem - 5px);
+	right : -5px;
 	background : white;
 }
 .toggle input:checked + span:after {
@@ -945,8 +964,8 @@ input:checked + span img {
 
 /** color UI **/
 .color-wrap {
-	margin : auto -5px !important;
-	padding : 0 calc(1.25rem - 10px) 1.25rem !important;
+	margin : auto !important;
+	padding : 0 .5rem 1.25rem !important;
 	border-bottom : 1px solid #ddd;
 }
 .border-bot {
@@ -995,7 +1014,7 @@ input:checked + span img {
     height : 34px;
 	width : 34px;
 	background : url(../img/check-blk.png) no-repeat center;
-	background-size : 66%;
+	background-size : 60%;
 	border-radius : 100%;
 	margin-left : -17px;
     content : "";
@@ -1133,7 +1152,7 @@ input:checked + span img {
 	/*margin : auto auto .5rem;*/
 	margin-top : 1.5rem;
 	padding : .65rem .5rem .6rem;
-	border : 1px solid;
+	border : 1px solid #ccc;
 	font-family : inherit;
 	font-size : 16px;
 }
@@ -1236,9 +1255,9 @@ h3 {
 	margin : 0 0 .25rem;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-weight : normal;
-	font-size : 13px;
-	letter-spacing : 1.25px;
-	text-transform : uppercase;
+	font-size : 15px;
+	/*letter-spacing : 1.25px;
+	text-transform : uppercase;*/
 }
 #size-wrapper h3 {
 	margin-bottom : 0;
@@ -1311,7 +1330,7 @@ h3 {
 	margin : 0 4px;
 }
 .three.size {
-	margin : .35rem -.25rem auto;
+	margin : .75rem -.25rem auto;
 }
 
 .size label:nth-of-type(n+2) {
@@ -1382,6 +1401,7 @@ h3 {
 	background : white;
 	margin-right : .5rem;
 	margin-left : 0;
+	border : 1px solid #ccc;
 	color : #111;
 	font-family : inherit;
 }
@@ -1445,13 +1465,13 @@ h3 {
 }
 .intro button {
 	position : relative;
-	top : 1px;
+	top : -4px;
 	float : right;
 	background : none;
 	font-size : 24px;
 }
 .intro img {
-	height : 23px;
+	height : 14px;
 }
 .intro button:active {
 	opacity : .5;
