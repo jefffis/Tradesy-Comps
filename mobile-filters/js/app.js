@@ -203,7 +203,7 @@ $(function() {
 
     apply.on('click', function(e) {
 
-        console.log($(e.target).data('submit'));
+        // console.log($(e.target).data('submit'));
 
         if ( $(e.target).data('submit') === undefined ) {
             reset($(e.target), ajaxOverlay);
