@@ -602,15 +602,15 @@ input + span:before {
 	border-radius : 100%;
 }
 .radios-as-checks input[type=checkbox]:checked + span:before {
-	background-size : 65%;
+	background-size : 16px;
 }
 input:checked + span:before {
 	background : #111;
 }
 input[type=radio]:checked + span:before,
 input[type=checkbox]:checked + span:before {
-	background : #111 url(https://assets.tradesy.com/images/forms/check-white.svg) no-repeat 50% calc(50% + 1px);
-	background-size : 80%;
+	background : #111 url(../img/check-wht.svg) no-repeat 50% calc(50% + .5px);
+	background-size : 18px;
 }
 input[type=radio]:checked + span:before {
 	box-shadow : 0 0 0 1px #111 inset, 0 0 0 2px white inset, 0 0 0 3px white inset;
@@ -669,7 +669,7 @@ input:disabled + span img {
 	z-index : 3;
 	height : 50px;
 	width : 50px;
-	background : url(../img/check-blk.png) no-repeat center;
+	background : url(../img/check-blk.svg) no-repeat center;
 	background-size : 66%;
 	border-radius : 100%;
 	margin-top : -33px;
@@ -740,7 +740,7 @@ input:checked + span img {
 	position : relative;
 	margin-bottom : 2.5rem;
 	padding : 1.25rem 0 0;
-	border-bottom : 3px solid #111
+	border-bottom : 3px solid #93CE52;
 }
 #slider em {
 	display : block;
@@ -750,7 +750,7 @@ input:checked + span img {
 	height : 26px;
 	width : 26px;
 	background : white;
-	border : 1px solid #999;
+	border : 1px solid #ccc;
 	border-radius : 100%;
 	box-shadow : 0 1px 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.075);
 	/*content : "";*/
@@ -1023,8 +1023,8 @@ input:checked + span img {
 	z-index : 3;
     height : 34px;
 	width : 34px;
-	background : url(../img/check-blk.png) no-repeat center;
-	background-size : 60%;
+	background : url(../img/check-blk.svg) no-repeat center;
+	background-size : 30px;
 	border-radius : 100%;
 	margin-left : -17px;
     content : "";
@@ -1102,7 +1102,7 @@ input:checked + span img {
 .grey input:checked + span:after,
 .green input:checked + span:after,
 .multi input:checked + span:after {
-	background-image : url(../img/check-wht.png);
+	background-image : url(../img/check-wht.svg);
 }
 
 /** collection radios **/
