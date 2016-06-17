@@ -91,6 +91,10 @@ small button {
 	content : "";
 }*/
 
+#filters h2, .intro, .slide-to .intro button:first-child {
+	font-size : 17px;
+}
+
 .item {
 	position : relative;
 	float : left;
@@ -302,7 +306,7 @@ small button {
 	/*width : 95%;*/
 	background : white;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
-	font-size : 16px;
+	/*font-size : 1px;*/
 	font-weight : normal;
 	/*overflow : hidden;
 	white-space: nowrap;*/
@@ -429,7 +433,7 @@ hr {
 	border : 0;
 }
 .filter-card hr {
-	height : 1.5rem;
+	height : 2rem;
 }
 .filter + hr {
 	height : 1px;
@@ -971,7 +975,7 @@ input:checked + span img {
 /** color UI **/
 .color-wrap {
 	margin : auto !important;
-	padding : 0 .5rem 1.25rem !important;
+	padding : 0 0 1.25rem !important;
 	border-bottom : 1px solid #ddd;
 }
 .border-bot {
@@ -1352,7 +1356,7 @@ h3 {
 .size span {
 	display : block;
 	padding : .5rem 0;
-	border : 1px solid #ddd;
+	border : 1px solid;
 }
 #size span:before, #size2 span:before, .size span:before {
 	display : none;
@@ -1364,7 +1368,7 @@ h3 {
 }*/
 .size .checked span {
 	background : #111;
-	border-color : #111;
+	/*border-color : #111;*/
 	color : white;
 }
 
