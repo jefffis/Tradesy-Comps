@@ -139,6 +139,12 @@ $(function() {
         // console.log(checked);
 
         ajaxUpdateFilters(ajaxOverlay);
+        
+        if ($(this).data('small') !== undefined) {
+            setToggleDataAttr($(this));
+            return;
+        }
+
         setDataAttr($(this).parents('[data-filter]').find('h2'), $(this).parent().find('input'), checked);
     });
 
@@ -367,6 +373,13 @@ function ajaxUpdateFilters(content) {
         $('#ajax-overlay').remove();
         // $('#result-num').text(newNum);
     }, 701);
+}
+
+function setToggleDataAttr(el) {
+    setTimeout(function() {
+        var onOrOff = el.prop('checked') ? el.data('on') : el.data('off');
+        el.parent().next('small').text(onOrOff);
+    }, 751);
 }
 
 function setDataAttr(el, selected, addDisabled) {
