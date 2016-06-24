@@ -12,7 +12,24 @@ $(function() {
         sortActions = $('a', '#sort-actions'),
         ajaxOverlay = '<div id="ajax-overlay"></div>',
         resultNum = $('#result-num'),
-        scrollPos = null;
+        scrollPos = null,
+        windowScrollPos = null,
+
+        // sticky header for filter / sort
+        filterSortDiv = $('#filter-sort'),
+        filterSortDivTop = filterSortDiv.offset().top,
+        win = $(window);
+    
+    win.scroll(function(e){
+        var scrollTop = win.scrollTop();
+        if(scrollTop > (filterSortDivTop + 100)){
+            $('#content').css('padding-top', filterSortDiv.outerHeight());
+            filterSortDiv.addClass('sticky');
+        } else if (scrollTop <= filterSortDivTop) {
+            $('#content').css('padding-top', 0);
+            filterSortDiv.removeClass('sticky');
+        }
+    });
 
     if ( window.innerWidth > 500 ) {
         $('html').addClass('is-tablet');
@@ -36,10 +53,11 @@ $(function() {
     button.on('click', function() {
 
         if ( !filters.hasClass('show') ) {
-            // $('html').css('height', filters.height());
+            windowScrollPos = $(window).scrollTop();
             filters.addClass('show');
             enableStickyButton($('#apply'), filters, true);
         } else {
+            window.scroll(0, windowScrollPos);
             filters.removeClass('show');
             enableStickyButton($('#apply'), filters, false);
             // resetFilterUI();
@@ -490,6 +508,7 @@ function enableStickyButton(el, parEl, ctx) {
         parEl.css('position', parCss);
         el.css('position', css);
         $('#content').hide();
+        window.scroll(0, 0);
     }, 251);
 
 }
