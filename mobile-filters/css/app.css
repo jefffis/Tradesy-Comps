@@ -297,10 +297,33 @@ small button {
 	width : 100%;
 	background : white;
 
-	transition : all .25s ease-in-out;
+	transition : top .25s ease-in-out;
 }
+.is-tablet #filters {
+	top : 0;
+	left : 100%;
+	width : 300px;
+	transition : left .25s ease-in-out;
+}
+/*.is-tablet h2, .is-tablet .filter-card {
+	padding : .75rem 12rem;
+}
+.is-tablet .filter > div {
+	padding : 0 12rem;
+}
+.is-tablet #filters h2:before {
+	right : 12rem;
+}
+.is-tablet #apply button {
+	max-width : 300px;
+	margin : auto;
+}*/
+
 #filters.show {
 	top : 0;
+}
+.is-tablet #filters.show {
+	left : calc(100% - 300px);
 }
 #filters.left {
 	left : -100%;
@@ -417,19 +440,6 @@ small button {
 /** padding **/
 .filter-card {
 	padding : 1.25rem;
-}
-.is-tablet h2, .is-tablet .filter-card {
-	padding : .75rem 12rem;
-}
-.is-tablet .filter > div {
-	padding : 0 12rem;
-}
-.is-tablet #filters h2:before {
-	right : 12rem;
-}
-.is-tablet #apply button {
-	max-width : 300px;
-	margin : auto;
 }
 
 .filter-card {

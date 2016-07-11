@@ -18,7 +18,7 @@
 
 			<div class="items">
 
-				<div class="item is-promoted sale" itemscope itemtype="http://schema.org/Product">
+				<div class="item _is-promoted _sale ships-next-day" itemscope itemtype="http://schema.org/Product">
 					<a href="###">
 						<!-- need this extra markup for veritcal alignment of images -->
 						<figure>
@@ -41,24 +41,24 @@
 							</em>
 						</h3>
 						<p>
-							Size: 4.5 x 1.5 x 7.75
+							Measurements: 4.5 x 1.5 x 7.75
 						</p>
-						<h4 class="item-note">
+						<!-- <h4 class="item-note">
 							Ships Next Day
-						</h4>
+						</h4> -->
 					</a>
 					<button data-num="7"></button>
-					<div>
+					<!-- <div>
 						<span>
 							Promoted
-							<!-- <div>
+							<div>
 								This seller has promoted this listing. For more details, visit <a href="###">our FAQ&rsquo;s</a>.
-							</div> -->
+							</div>
 						</span>
-					</div>
+					</div> -->
 				</div>
 
-				<div class="item _is-promoted new" itemscope itemtype="http://schema.org/Product">
+				<div class="item _is-promoted _new" itemscope itemtype="http://schema.org/Product">
 					<a href="###">
 						<!-- need this extra markup for veritcal alignment of images -->
 						<figure>
@@ -80,6 +80,9 @@
 								$1,799.00
 							</em>
 						</h3>
+						<p>
+							Size: Large
+						</p>
 					</a>
 					<button data-num="15"></button>
 					<!-- <div>
@@ -89,7 +92,7 @@
 					</div> -->
 				</div>
 
-				<div class="item" itemscope itemtype="http://schema.org/Product">
+				<div class="item sale" itemscope itemtype="http://schema.org/Product">
 					<a href="###">
 						<!-- need this extra markup for veritcal alignment of images -->
 						<figure>
@@ -121,7 +124,7 @@
 					<button data-num="241"></button>
 				</div>
 
-				<div class="item sale" itemscope itemtype="http://schema.org/Product">
+				<div class="item sold" itemscope itemtype="http://schema.org/Product">
 					<a href="###">
 						<!-- need this extra markup for veritcal alignment of images -->
 						<figure>
@@ -149,11 +152,12 @@
 						<!-- <h4 class="item-note">
 							&nbsp;
 						</h4> -->
+						<span>Sold</span>
 					</a>
 					<button data-num="78"></button>
 				</div>
 
-				<div class="item new" itemscope itemtype="http://schema.org/Product">
+				<div class="item reserved" itemscope itemtype="http://schema.org/Product">
 					<a href="###">
 						<!-- need this extra markup for veritcal alignment of images -->
 						<figure>
@@ -175,9 +179,13 @@
 								$312.90
 							</em>
 						</h3>
-						<h4 class="item-note">
+						<p>
+							Measurements: 7.9 x 4.7 x 2.4
+						</p>
+						<!-- <h4 class="item-note">
 							Ships Next Day
-						</h4>
+						</h4> -->
+						<span>Reserved</span>
 					</a>
 					<button data-num="23"></button>
 				</div>
@@ -204,189 +212,196 @@
 								$2,299.00
 							</em>
 						</h3>
+						<p>
+							Measurements: 7.9 x 4.7 x 2.4
+						</p>
 					</a>
 					<button data-num="37"></button>
 				</div>
 
-				<div class="item sold" itemscope itemtype="http://schema.org/Product">
-					<a href="###">
-						<!-- need this extra markup for veritcal alignment of images -->
-						<figure>
-							<div>
-								<img src="https://item2.tradesy.com/images/chanel-shoulder-bag-10815241-0-1.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
-							</div>
-						</figure>
-						<!--/ need this extra markup for veritcal alignment of images -->
-						<h2>
-							<em itemprop="brand">
-								Chanel
-							</em>
-							<span>
-								Black Quilted Caviar Jumbo Classic Double Flap Shoulder Bag
-							</span>
-						</h2>
-						<h3 itemprop="price" content="{price}">
-							<em itemprop="priceCurrency" content="USD">
-								$7,000.00
-							</em>
-						</h3>
-						<span>Sold</span>
-					</a>
-					<button data-num="11"></button>
-				</div>
+				<div id="hide">
 
-				<div class="item reserved" itemscope itemtype="http://schema.org/Product">
-					<a href="###">
-						<!-- need this extra markup for veritcal alignment of images -->
-						<figure>
-							<div>
-								<img src="https://item4.tradesy.com/images/chanel-boy-shoulder-bag-5873248-0-2.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
-							</div>
-						</figure>
-						<!--/ need this extra markup for veritcal alignment of images -->
-						<h2>
-							<em itemprop="brand">
-								Chanel
-							</em>
-							<span>
-								Runway Gold Metallic Cc Embellished Lambskin Small Boy Shoulder Bag
-							</span>
-						</h2>
-						<h3 itemprop="price" content="{price}">
-							<em itemprop="priceCurrency" content="USD">
-								$7,100.00
-							</em>
-						</h3>
-						<p>
-							Size: 7.9 x 4.7 x 2.4
-						</p>
-						<span>Reserved</span>
-					</a>
-					<button data-num="43"></button>
-				</div>
+					<div class="item sold" itemscope itemtype="http://schema.org/Product">
+						<a href="###">
+							<!-- need this extra markup for veritcal alignment of images -->
+							<figure>
+								<div>
+									<img src="https://item2.tradesy.com/images/chanel-shoulder-bag-10815241-0-1.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
+								</div>
+							</figure>
+							<!--/ need this extra markup for veritcal alignment of images -->
+							<h2>
+								<em itemprop="brand">
+									Chanel
+								</em>
+								<span>
+									Black Quilted Caviar Jumbo Classic Double Flap Shoulder Bag
+								</span>
+							</h2>
+							<h3 itemprop="price" content="{price}">
+								<em itemprop="priceCurrency" content="USD">
+									$7,000.00
+								</em>
+							</h3>
+							<span>Sold</span>
+						</a>
+						<button data-num="11"></button>
+					</div>
 
-				<div class="item" itemscope itemtype="http://schema.org/Product">
-					<a href="###">
-						<!-- need this extra markup for veritcal alignment of images -->
-						<figure>
-							<div>
-								<img src="https://item4.tradesy.com/images/chanel-boy-woc-shoulder-bag-5951218-0-0.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
-							</div>
-						</figure>
-						<!--/ need this extra markup for veritcal alignment of images -->
-						<h2>
-							<em itemprop="brand">
-								Chanel
-							</em>
-							<span>
-								Quilted Lambskin Boy Wallet On Chain Shoulder Bag
-							</span>
-						</h2>
-						<h3 itemprop="price" content="{price}">
-							<em itemprop="priceCurrency" content="USD">
-								$$,499.00
-							</em>
-						</h3>
-						<p>
-							Size: 7.5 x 5 x 1.5
-						</p>
-					</a>
-					<button data-num="62"></button>
-				</div>
+					<div class="item reserved" itemscope itemtype="http://schema.org/Product">
+						<a href="###">
+							<!-- need this extra markup for veritcal alignment of images -->
+							<figure>
+								<div>
+									<img src="https://item4.tradesy.com/images/chanel-boy-shoulder-bag-5873248-0-2.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
+								</div>
+							</figure>
+							<!--/ need this extra markup for veritcal alignment of images -->
+							<h2>
+								<em itemprop="brand">
+									Chanel
+								</em>
+								<span>
+									Runway Gold Metallic Cc Embellished Lambskin Small Boy Shoulder Bag
+								</span>
+							</h2>
+							<h3 itemprop="price" content="{price}">
+								<em itemprop="priceCurrency" content="USD">
+									$7,100.00
+								</em>
+							</h3>
+							<p>
+								Size: 7.9 x 4.7 x 2.4
+							</p>
+							<span>Reserved</span>
+						</a>
+						<button data-num="43"></button>
+					</div>
 
-				<div class="item" itemscope itemtype="http://schema.org/Product">
-					<a href="###">
-						<!-- need this extra markup for veritcal alignment of images -->
-						<figure>
-							<div>
-								<img src="https://item4.tradesy.com/images/chanel-shoulder-bag-gold-2317388-0-0.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
-							</div>
-						</figure>
-						<!--/ need this extra markup for veritcal alignment of images -->
-						<h2>
-							<em itemprop="brand">
-								Chanel
-							</em>
-							<span>
-								Metallic Leather Lucky Reissue 224 Handbag 15p Shoulder Bag
-							</span>
-						</h2>
-						<h3 itemprop="price" content="{price}">
-							<em itemprop="priceCurrency" content="USD">
-								$7,995.00
-							</em>
-						</h3>
-						<p>
-							Size: 7.75 x 5.75 x 3
-						</p>
-					</a>
-					<button data-num="112"></button>
-				</div>
+					<div class="item" itemscope itemtype="http://schema.org/Product">
+						<a href="###">
+							<!-- need this extra markup for veritcal alignment of images -->
+							<figure>
+								<div>
+									<img src="https://item4.tradesy.com/images/chanel-boy-woc-shoulder-bag-5951218-0-0.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
+								</div>
+							</figure>
+							<!--/ need this extra markup for veritcal alignment of images -->
+							<h2>
+								<em itemprop="brand">
+									Chanel
+								</em>
+								<span>
+									Quilted Lambskin Boy Wallet On Chain Shoulder Bag
+								</span>
+							</h2>
+							<h3 itemprop="price" content="{price}">
+								<em itemprop="priceCurrency" content="USD">
+									$$,499.00
+								</em>
+							</h3>
+							<p>
+								Size: 7.5 x 5 x 1.5
+							</p>
+						</a>
+						<button data-num="62"></button>
+					</div>
 
-				<div class="item _is-promoted" itemscope itemtype="http://schema.org/Product">
-					<a href="###">
-						<!-- need this extra markup for veritcal alignment of images -->
-						<figure>
-							<div>
-								<img src="https://item4.tradesy.com/images/chanel-vintage-shoulder-bag-pink-4270288-0-0.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
-							</div>
-						</figure>
-						<!--/ need this extra markup for veritcal alignment of images -->
-						<h2>
-							<em itemprop="brand">
-								Chanel
-							</em>
-							<span>
-								Vintage Mini Flap Shoulder Bag
-							</span>
-						</h2>
-						<h3 itemprop="price" content="{price}">
-							<em itemprop="priceCurrency" content="USD">
-								$2,769.00
-							</em>
-						</h3>
-						<p>
-							Size: 9 x 5.5 x 3
-						</p>
-						<h4 class="item-note">
-							Ships Next Day
-						</h4>
-					</a>
-					<button data-num="17"></button>
-					<!-- <div>
-						<span>
-							Ad
-						</span>
-					</div> -->
-				</div>
+					<div class="item" itemscope itemtype="http://schema.org/Product">
+						<a href="###">
+							<!-- need this extra markup for veritcal alignment of images -->
+							<figure>
+								<div>
+									<img src="https://item4.tradesy.com/images/chanel-shoulder-bag-gold-2317388-0-0.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
+								</div>
+							</figure>
+							<!--/ need this extra markup for veritcal alignment of images -->
+							<h2>
+								<em itemprop="brand">
+									Chanel
+								</em>
+								<span>
+									Metallic Leather Lucky Reissue 224 Handbag 15p Shoulder Bag
+								</span>
+							</h2>
+							<h3 itemprop="price" content="{price}">
+								<em itemprop="priceCurrency" content="USD">
+									$7,995.00
+								</em>
+							</h3>
+							<p>
+								Size: 7.75 x 5.75 x 3
+							</p>
+						</a>
+						<button data-num="112"></button>
+					</div>
 
-				<div class="item" itemscope itemtype="http://schema.org/Product">
-					<a href="###">
-						<!-- need this extra markup for veritcal alignment of images -->
-						<figure>
-							<div>
-								<img src="https://item2.tradesy.com/images/chanel-shoulder-bag-10590451-0-1.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
-							</div>
-						</figure>
-						<!--/ need this extra markup for veritcal alignment of images -->
-						<h2>
-							<em itemprop="brand">
-								Chanel
-							</em>
+					<div class="item _is-promoted" itemscope itemtype="http://schema.org/Product">
+						<a href="###">
+							<!-- need this extra markup for veritcal alignment of images -->
+							<figure>
+								<div>
+									<img src="https://item4.tradesy.com/images/chanel-vintage-shoulder-bag-pink-4270288-0-0.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
+								</div>
+							</figure>
+							<!--/ need this extra markup for veritcal alignment of images -->
+							<h2>
+								<em itemprop="brand">
+									Chanel
+								</em>
+								<span>
+									Vintage Mini Flap Shoulder Bag
+								</span>
+							</h2>
+							<h3 itemprop="price" content="{price}">
+								<em itemprop="priceCurrency" content="USD">
+									$2,769.00
+								</em>
+							</h3>
+							<p>
+								Size: 9 x 5.5 x 3
+							</p>
+							<h4 class="item-note">
+								Ships Next Day
+							</h4>
+						</a>
+						<button data-num="17"></button>
+						<!-- <div>
 							<span>
-								Navy Quilted Lambskin Medium Boy Shoulder Bag
+								Ad
 							</span>
-						</h2>
-						<h3 itemprop="price" content="{price}">
-							<em itemprop="priceCurrency" content="USD">
-								$6,550.00
-							</em>
-						</h3>
-						<p>
-							Size: 9.8 x 5.7 x 3.5
-						</p>
-					</a>
-					<button data-num="33"></button>
+						</div> -->
+					</div>
+
+					<div class="item" itemscope itemtype="http://schema.org/Product">
+						<a href="###">
+							<!-- need this extra markup for veritcal alignment of images -->
+							<figure>
+								<div>
+									<img src="https://item2.tradesy.com/images/chanel-shoulder-bag-10590451-0-1.jpg?width=203&height=307" alt="{designer} {title sans designer}" />
+								</div>
+							</figure>
+							<!--/ need this extra markup for veritcal alignment of images -->
+							<h2>
+								<em itemprop="brand">
+									Chanel
+								</em>
+								<span>
+									Navy Quilted Lambskin Medium Boy Shoulder Bag
+								</span>
+							</h2>
+							<h3 itemprop="price" content="{price}">
+								<em itemprop="priceCurrency" content="USD">
+									$6,550.00
+								</em>
+							</h3>
+							<p>
+								Size: 9.8 x 5.7 x 3.5
+							</p>
+						</a>
+						<button data-num="33"></button>
+					</div>
+
 				</div>
 
 			</div>

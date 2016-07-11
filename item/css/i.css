@@ -215,7 +215,10 @@ h3 {
 	text-overflow : ellipsis;
     white-space : nowrap;
 }
-.sold h3, .reserved h3 {
+.sold h3 {
+	color : #c2c2c2;
+}
+.reserved h3 {
 	color : #747275;
 	font-family : 'proxima-nova-regular', 'Helvetica Neue', sans-serif;
 }
@@ -279,7 +282,7 @@ h3 em .now {
 	content : "Sale: ";
 }
 .price-drop h3 > em:before {
-	content : "Price Drop: ";
+	content : "Reduced: ";
 }
 .reserved h3 > em:before {
 	content : "Reserved: ";
@@ -291,13 +294,23 @@ h3 em .now {
 .new figure:after {
 	display : block;
 	position : absolute;
-	bottom : 0;
+	bottom : 5px;
 	left : 0;
 	color : #F46E68;
 	content : "New ";
 	font-size : 14px;
 	letter-spacing : .5px;
 	text-transform : uppercase;
+}
+.ships-next-day figure:after {
+	display : block;
+	position : absolute;
+	bottom : 5px;
+	left : 0;
+	color : #868686;
+	content : "Ships Next Day";
+	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
+	font-size : 14px;
 }
 
 .green-sale .sale h3 > em {
@@ -360,9 +373,9 @@ p {
 	font-size : 13px;
 }
 
-/*.sold h3 em:before {
+.sold h3 em:before {
 	content : "Sold for ";
-}*/
+}
 
 p + .item-note {
 	margin-top : 5px;
@@ -429,9 +442,9 @@ p + .item-note {
 	left : -1px;
 	/*height : 2rem;
 	width : 2rem;*/
-	width : 50px;
+	/*width : 50px;*/
 	background : #111;
-	padding : .85rem 0;
+	padding : .6rem .5rem .5rem;
 	/*border-radius : 100%;*/
 	/*border-radius : 0 0 3px 3px;*/
 	color : white;
@@ -472,9 +485,9 @@ p + .item-note {
 	padding : .6rem .25rem;
 }
 .reserved a > span {
-	width : auto;
+	/*width : auto;*/
 	background : white; 
-	padding : 1rem .5rem;
+	/*padding : 1rem .5rem;*/
 	/*color : #F46E68;*/
 	color : #787878;
 	/*font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;*/
@@ -1321,4 +1334,8 @@ footer {
 		height : 373px;
 	}
 
+}
+
+#hide {
+	display : none;
 }
