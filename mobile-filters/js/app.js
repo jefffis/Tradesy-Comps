@@ -1,3 +1,5 @@
+var isiPad = navigator.userAgent.match(/iPad/i) != null;
+
 $(function() {
     var button = $('.toggle-filters'),
         filters = $('#filters'),
@@ -19,6 +21,10 @@ $(function() {
         filterSortDiv = $('#filter-sort'),
         filterSortDivTop = filterSortDiv.offset().top,
         win = $(window);
+
+    if ( location.hash || isiPad ) {
+        html = $('html').addClass('is-tablet');
+    }
     
     win.scroll(function(e){
         var scrollTop = win.scrollTop();
@@ -173,7 +179,7 @@ $(function() {
                 return;
             }
 
-            if ( !$(this).hasClass('open') ) {
+            if ( !$(this).hasClass('open') && !isiPad ) {
                 $('html, body').animate({
                     scrollTop : $(this).offset().top
                 }, 500);
@@ -271,7 +277,7 @@ $(function() {
             setTimeout(function() {
                 $(target).addClass('absolute');
                 $('#filter-wrapper').hide();
-                window.scroll(0, 0);
+                if (!isiPad) window.scroll(0, 0);
             }, 376);
             setTimeout(function() {
                 $(target).removeAttr('style').addClass('padding-bottom');
@@ -332,7 +338,7 @@ $(function() {
             parent.removeClass('left absolute padding-bottom');
             // $('html').removeAttr('style');
             $('#filter-wrapper').show().removeClass('opaque');
-            window.scroll(0, scrollPos);
+            if (!isiPad) window.scroll(0, scrollPos);
         }, 126);
         // setTimeout(function() {
         //  $('#non-size-filters').removeClass('opaque');
@@ -500,14 +506,26 @@ function enableStickyButton(el, parEl, ctx) {
     if ( !ctx ) {
         parEl.css('position', parCss);
         el.css('position', css).find('button').text('Apply Filters').prop('disabled', false);
-        $('#content').show();
+        if (!isiPad) {
+            $('#content').show();
+        } else {
+            $('#filters').removeClass('hiddenUi');
+            setTimeout(function() {
+                $('html, body').removeClass('hiddenUi');
+            }, 251);
+        }
         return;
     }
 
     setTimeout(function() {
         parEl.css('position', parCss);
         el.css('position', css);
-        $('#content').hide();
+        if (!isiPad) {
+            $('#content').hide();
+        } else {
+            $('html, body').addClass('hiddenUi');
+            $('#filters').addClass('hiddenUi');
+        }
         window.scroll(0, 0);
     }, 251);
 

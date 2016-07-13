@@ -299,31 +299,58 @@ small button {
 
 	transition : top .25s ease-in-out;
 }
+html.is-tablet.hiddenUi, .is-tablet body.hiddenUi {
+	position : relative;
+	overflow : hidden;
+	height : 100vh;
+}
+.is-tablet.hiddenUi body:before {
+	display : block;
+	position : absolute;
+	top : 0;
+	left : 0;
+	z-index : 2;
+	height : 100%;
+	width : 100%;
+	background : rgba(0, 0, 0, 0.5);
+	content : "";
+}
 .is-tablet #filters {
 	top : 0;
 	left : 100%;
-	width : 300px;
+	width : 400px;
+	border-left: 2px solid rgba(0, 0, 0, 0.125);
+	/*box-shadow : 2px 0 2px rgba(0, 0, 0, 0.25);*/
 	transition : left .25s ease-in-out;
 }
-/*.is-tablet h2, .is-tablet .filter-card {
-	padding : .75rem 12rem;
+.is-tablet #filters.hiddenUi {
+	overflow : auto;
+	height : 100vh;
 }
-.is-tablet .filter > div {
-	padding : 0 12rem;
+.is-tablet #apply {
+	left : calc(100% - 400px);
+	width : 400px;
 }
-.is-tablet #filters h2:before {
-	right : 12rem;
-}
-.is-tablet #apply button {
-	max-width : 300px;
-	margin : auto;
+/*.is-tablet .filter:last-of-type {
+	margin-bottom : 20px;
 }*/
+.is-tablet .slide-to {
+	left : auto;
+	right : -402px;
+	width : 402px;
+
+	transition: right .25s ease-in-out;
+}
+.is-tablet .slide-to.left {
+	left : auto;
+	right : 0;
+}
 
 #filters.show {
 	top : 0;
 }
 .is-tablet #filters.show {
-	left : calc(100% - 300px);
+	left : calc(100% - 400px);
 }
 #filters.left {
 	left : -100%;
