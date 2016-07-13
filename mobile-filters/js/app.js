@@ -1,4 +1,4 @@
-var isiPad = navigator.userAgent.match(/iPad/i) != null;
+var isiPad = navigator.userAgent.match(/iPad/i) != null || location.hash;
 
 $(function() {
     var button = $('.toggle-filters'),
