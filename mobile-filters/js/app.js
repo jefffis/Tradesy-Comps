@@ -505,7 +505,7 @@ function enableStickyButton(el, parEl, ctx) {
 
     if ( !ctx ) {
         parEl.css('position', parCss);
-        el.css('position', css).find('button').text('Apply Filters').prop('disabled', false);
+        el.css('position', css).find('#apply-filters-button').text('Apply Filters').prop('disabled', false);
         if (!isiPad) {
             $('#content').show();
         } else {
