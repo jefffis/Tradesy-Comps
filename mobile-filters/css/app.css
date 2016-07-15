@@ -156,6 +156,25 @@ small button {
 	vertical-align : middle;
 }
 
+[data-applied]:after {
+	display : inline-block;
+	margin-left : .25rem;
+	color : #999;
+	content : '(' attr(data-applied) ')';
+	/*position : absolute;
+	top : .5rem;
+	right : -1rem;
+	height : .85rem;
+	width : 1rem;
+	background : #333;
+	padding-top : .125rem;
+	border-radius : 100%;
+	color : white;
+	content : attr(data-applied);
+	font-size : 11px;
+	vertical-align : middle;*/
+}
+
 /*#filter-sort > button:nth-child(1):before, #filter-sort > button:nth-child(1):after {
 	display : block;
 	position : absolute;

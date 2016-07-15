@@ -58,6 +58,11 @@ $(function() {
 
     button.on('click', function() {
 
+        if ($(this).data('back') !== undefined) {
+
+            return;
+        }
+
         if ( !filters.hasClass('show') ) {
             windowScrollPos = $(window).scrollTop();
             filters.addClass('show');
@@ -298,12 +303,11 @@ $(function() {
         // }, 376);
     });
 
-    $('button:first', '.slide-to').on('click', function() {
+    $('button', '.slide-to').on('click', function() {
 
         var parent = $(this).parents('.slide-to'),
             parentId = parent.attr('id'),
             selectedText = parent.find('h2 em').text();
-
         
         $('[data-slideable=#' + parentId + ']').find('h2 em').text(selectedText);
 
