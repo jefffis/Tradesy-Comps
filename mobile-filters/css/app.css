@@ -641,10 +641,15 @@ input[type=text] {
 	outline : none;
 	margin-top : .5rem;
 	padding : .75rem;
-	border : 1px solid;
+	border : 1px solid #ccc;
 	border-radius : 0;
 	font-family : inherit;
 	font-size : 16px;
+
+	-webkit-appearance : none;
+}
+input[type=text]:focus {
+	border-color : #111;
 }
 
 /** radios/checkboxes **/
@@ -1562,6 +1567,43 @@ h3 {
 .intro button:active {
 	opacity : .5;
 }
+
+
+/*** price inputs ***/
+#inline-inputs > span, #inline-inputs label {
+	display : inline-block;
+}
+#inline-inputs label {
+	width : 42.5%;
+}
+[data-context] {
+	position : relative;
+}
+[data-context]:before {
+	position : absolute;
+	top : .65rem;
+	left : 1rem;
+	color : #999;
+	content : attr(data-context);
+}
+[data-context] input[type=text] {
+	padding-left : 1.75rem;
+}
+#inline-inputs > span {
+	/*position : relative;
+	top : -35px;*/
+	width : 10%;
+	color : #999;
+	text-align : center;
+	vertical-align : middle;
+}
+#inline-inputs input {
+	margin-top : 0;
+}
+#inline-inputs label span:before {
+	display : none;
+}
+
 /*.intro button:after {
 	content : "\2715";
 }*/
@@ -1617,7 +1659,7 @@ iframe {
 	border-radius : 8px; 
 	box-shadow : 0 0 0 2px #999;
 }
-.is-tablet iframe {
+iframe.is-tablet {
 	height : 1084px;
 	width : 780px;
 }
