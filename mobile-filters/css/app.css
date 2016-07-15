@@ -1570,11 +1570,18 @@ h3 {
 
 
 /*** price inputs ***/
+#inline-inputs {
+	padding-top : 10px;
+}
 #inline-inputs > span, #inline-inputs label {
-	display : inline-block;
+	display : block;
+	float : left;
 }
 #inline-inputs label {
 	width : 42.5%;
+}
+#inline-inputs label:nth-of-type(n+2) {
+	margin-top : 0;
 }
 [data-context] {
 	position : relative;
@@ -1592,7 +1599,8 @@ h3 {
 #inline-inputs > span {
 	/*position : relative;
 	top : -35px;*/
-	width : 10%;
+	width : 15%;
+	padding-top : 10px;
 	color : #999;
 	text-align : center;
 	vertical-align : middle;
