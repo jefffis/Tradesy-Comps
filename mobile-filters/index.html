@@ -667,17 +667,60 @@
 					</div>
 				</div>
 
+				<div class="filter no-border-when-open" data-toggleable data-filter>
+					<h2>
+						<span>
+							Price
+							<em>All</em>
+						</span>
+					</h2>
+					
+					<div id="inline-inputs" class="cf border-bot">
+						<label data-context="$">
+							<input type="text" name="price_min_filter" pattern="[0-9]*" placeholder="Low" data-number data-currency="$" />
+						</label>
+						<span>to</span>
+						<label data-context="$">
+							<input type="text" name="price_max_filter" pattern="[0-9]*" placeholder="High" data-number data-currency="$" />
+						</label>
+					</div>
+
+				</div>
+
+				<div class="filter no-border-when-open" data-toggleable data-filter>
+					<h2>
+						<span>
+							Availability
+							<em>All</em>
+						</span>
+					</h2>
+					
+					<div class="radios-as-checks border-bot">
+						<label>
+							<input type="radio" name="availability" value="All" checked data-default data-return />
+							<span>All items</span>
+						</label>
+						<label>
+							<input type="radio" name="availability" value="In Stock" data-return />
+							<span>In Stock</span>
+						</label>
+						<label>
+							<input type="radio" name="availability" value="Sold" data-return />
+							<span>Sold</span>
+						</label>
+					</div>
+
+				</div>
+
 				<div class="filter-card">
 
-					<h2>Price</h2>
+					<!-- <h2>Price</h2>
 					<div id="inline-inputs" class="cf">
 						<label data-context="$">
-							<!-- <span>Low</span> -->
 							<input type="text" name="price_min_filter" pattern="[0-9]*" placeholder="Low" />
 						</label>
 						<span>to</span>
 						<label data-context="$">
-							<!-- <span>High</span> -->
 							<input type="text" name="price_max_filter" pattern="[0-9]*" placeholder="High" />
 						</label>
 					</div>
@@ -698,7 +741,7 @@
 							<input type="radio" name="availability" value="Sold" data-return />
 							<span>Sold</span>
 						</label>
-					</div>
+					</div> -->
 
 					<!-- <hr />
 
@@ -710,7 +753,7 @@
 						<span>$500+</span>
 					</div> -->
 
-					<hr />
+					<!-- <hr /> -->
 
 					<!-- <label class="toggle">
 						<input type="checkbox" name="on-save" data-dont />

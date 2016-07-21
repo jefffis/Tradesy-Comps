@@ -1574,9 +1574,9 @@ h3 {
 
 
 /*** price inputs ***/
-#inline-inputs {
+/*#inline-inputs {
 	padding-top : 10px;
-}
+}*/
 #inline-inputs > span, #inline-inputs label {
 	display : block;
 	float : left;

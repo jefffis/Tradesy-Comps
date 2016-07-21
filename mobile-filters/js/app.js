@@ -192,6 +192,29 @@ $(function() {
         setDataAttr($(this).parents('[data-filter]').find('h2'), $(this).parent().find('input'), checked);
     });
 
+    $('input[type=text][data-number]').on('blur', function() {
+        if ($(this).val() === '') {
+            return;
+        }
+
+        var priceMinFilter = $('input[name=price_min_filter]').val(),
+            priceMaxFilter = $('input[name=price_max_filter]').val(),
+            priceMinFilterExists = priceMinFilter !== '' ? true : false,
+            priceMaxFilterExists = priceMaxFilter !== '' ? true : false,
+            currency = $(this).data('currency'),
+            attrText = '';
+
+        if (priceMinFilterExists && priceMaxFilterExists) {
+            attrText = currency + priceMinFilter + ' to ' + currency + priceMaxFilter;
+        } else if(priceMinFilterExists) {
+            attrText = 'Items over ' + currency + priceMinFilter;
+        } else if(priceMaxFilterExists) {
+            attrText = 'Items under' + currency + priceMinFilter;
+        }
+
+        setTextDataAttr($(this).parents('[data-filter]').find('h2'), attrText);
+    });
+
     toggleableDiv.on('click', function() {
         if ( $(this).parent().data('toggleable') !== undefined ) {
 
@@ -429,6 +452,13 @@ function setToggleDataAttr(el) {
         var onOrOff = el.prop('checked') ? el.data('on') : el.data('off');
         el.parent().next('small').text(onOrOff);
     }, 751);
+}
+
+function setTextDataAttr(el, text) {
+    var textWrapper = el.find('span');
+
+    textWrapper.find('em').remove();
+    textWrapper.append('<em>' + text + '</em>');
 }
 
 function setDataAttr(el, selected, addDisabled) {
