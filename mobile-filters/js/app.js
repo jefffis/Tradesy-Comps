@@ -292,6 +292,7 @@ $(function() {
         if (target) {
             setTimeout(function() {
                 $(target).addClass('left').height(targetHeight - 67).css('overflow', 'hidden');
+                $('#apply').hide();
                 $('#filter-wrapper').addClass('opaque');
             }, 126);
             setTimeout(function() {
@@ -359,9 +360,10 @@ $(function() {
             $('#filter-wrapper').show().removeClass('opaque');
             if (!isiPad) window.scroll(0, scrollPos);
         }, 126);
-        // setTimeout(function() {
-        //  $('#non-size-filters').removeClass('opaque');
-        // }, 376);
+        setTimeout(function() {
+            $('#apply').show();
+         // $('#non-size-filters').removeClass('opaque');
+        }, 376);
     });
 
     $('input:disabled').parents('label').addClass('disabled');
