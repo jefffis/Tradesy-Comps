@@ -292,7 +292,7 @@ $(function() {
         if (target) {
             setTimeout(function() {
                 $(target).addClass('left').height(targetHeight - 67).css('overflow', 'hidden');
-                $('#apply').hide();
+                $('#apply').addClass('off-screen');
                 $('#filter-wrapper').addClass('opaque');
             }, 126);
             setTimeout(function() {
@@ -320,6 +320,10 @@ $(function() {
     });
 
     $('button', '.slide-to').on('click', function() {
+
+        if ( $(this).hasClass('light-btn') ) {
+            return;
+        }
 
         var parent = $(this).parents('.slide-to'),
             parentId = parent.attr('id'),
@@ -356,14 +360,11 @@ $(function() {
             // $('#non-size-filters').show();
             // $('h2', '#size-card').attr('data-selected', sizePref);
             parent.removeClass('left absolute padding-bottom');
+            $('#apply').removeClass('off-screen');
             // $('html').removeAttr('style');
             $('#filter-wrapper').show().removeClass('opaque');
             if (!isiPad) window.scroll(0, scrollPos);
         }, 126);
-        setTimeout(function() {
-            $('#apply').show();
-         // $('#non-size-filters').removeClass('opaque');
-        }, 376);
     });
 
     $('input:disabled').parents('label').addClass('disabled');

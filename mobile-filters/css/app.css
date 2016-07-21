@@ -1457,7 +1457,8 @@ h3 {
 	padding : .75rem;
 	border-top : 1px solid #ddd;
 
-	transition : left .25s ease-in-out;
+	/*transition : left .25s ease-in-out;*/
+	transition : bottom .25s ease-in-out;
 }
 #apply:before {
 	display : block;
@@ -1471,6 +1472,9 @@ h3 {
 }
 #apply.loaded {
 	position : fixed;
+}
+#apply.off-screen {
+	bottom : -5rem;
 }
 #apply.left {
 	left : -100%;
