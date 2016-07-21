@@ -193,16 +193,22 @@ $(function() {
     });
 
     $('input[type=text][data-number]').on('blur', function() {
-        if ($(this).val() === '') {
-            return;
-        }
+        // if ($(this).val() === '') {
+        //     return;
+        // }
 
         var priceMinFilter = $('input[name=price_min_filter]').val(),
             priceMaxFilter = $('input[name=price_max_filter]').val(),
+            priceMinFilterNum = parseInt(priceMinFilter, 10),
+            priceMaxFilterNum = parseInt(priceMaxFilter, 10),
             priceMinFilterExists = priceMinFilter !== '' ? true : false,
             priceMaxFilterExists = priceMaxFilter !== '' ? true : false,
             currency = $(this).data('currency'),
             attrText = '';
+
+            if (priceMinFilterNum > priceMaxFilterNum) {
+                console.log('Error!');
+            }
 
         if (priceMinFilterExists && priceMaxFilterExists) {
             attrText = currency + priceMinFilter + ' to ' + currency + priceMaxFilter;
