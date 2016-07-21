@@ -129,7 +129,7 @@ aside:before {
 	position : relative;
 	/*background : rgba(0, 0, 0, .25);*/
 	/*height : 495px;*/
-	height : 432px;
+	height : 410px;
 	padding-bottom : 1rem;
 	border-bottom : 1px solid #eaeaea;
 	color : inherit;
@@ -206,7 +206,7 @@ h2 span {
     white-space : nowrap;
 }
 h3 {
-	margin : 3px 0;
+	margin : 8px 0 3px;
 	font-family : 'proxima-nova-semi', 'Helvetica Neue', sans-serif;
 	font-size : 15px;
 	line-height : 1.3;
@@ -371,6 +371,10 @@ h3 span.drop + em {
 p {
 	margin : 8px 0 3px;
 	font-size : 13px;
+
+	overflow : hidden;
+	text-overflow : ellipsis;
+    white-space : nowrap;
 }
 
 .sold h3 em:before {
@@ -1005,7 +1009,7 @@ promoted listings alt2
 }
 .is-promoted > div span {
 	position : absolute;
-	bottom : 15px;
+	bottom : 19px;
 	right : 0;
 	z-index : -1;
 	background : #facf73;
@@ -1178,6 +1182,9 @@ footer {
 	h2 span {
 		display : inherit;
 	}
+	h3 {
+		margin-top : 3px;
+	}
 	[role=main] {
 		padding-top : 3rem;
 		padding-left : 1rem;
@@ -1245,7 +1252,7 @@ footer {
 @media screen and (min-width : 802px) and (max-width : 1023px) {
 
 	.item > a {
-		height : 405px;
+		height : 388px;
 	}
 
 }
@@ -1253,7 +1260,7 @@ footer {
 @media screen and (max-width : 501px) {
 
 	.item > a {
-		height : 315px;
+		height : 295px;
 	}
 	.item figure {
 		height : 210px;
@@ -1331,7 +1338,7 @@ footer {
 @media screen and (min-width : 502px) and (max-width : 801px) {
 
 	.item > a {
-		height : 373px;
+		height : 355px;
 	}
 
 }
